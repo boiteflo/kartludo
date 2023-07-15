@@ -41,6 +41,16 @@
           <span class="mr-2">Discord</span>
         </v-btn>
       </a>
+      
+      <a href="/api/cards">
+        <v-btn
+          target=""
+          text
+        >
+          <v-icon>mdi-database-arrow-down</v-icon>
+          <span class="mr-2">BDD</span>
+        </v-btn>
+      </a>
     </v-app-bar>
 </template>
 
