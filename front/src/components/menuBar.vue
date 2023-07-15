@@ -1,5 +1,5 @@
 <template>
-
+  <div>
     <v-app-bar
       app
       color="#212A3C"
@@ -16,7 +16,8 @@
       </router-link>
 
       <v-spacer></v-spacer>
-      <v-text-field class="flex-grow"
+      <v-text-field v-if="$vuetify.breakpoint.width >= 800"
+                    class="flex-grow"
                     hide-details
                     label="Chercher une carte (FR ou EN)"
                     @input="$emit('search', $event)">
@@ -52,10 +53,17 @@
         </v-btn>
       </a>
     </v-app-bar>
+      <v-text-field v-if="$vuetify.breakpoint.width < 800"
+                    class="flex-grow m5px"
+                    hide-details
+                    label="Chercher une carte (FR ou EN)"
+                    @input="$emit('search', $event)">
+      </v-text-field>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'menuBar',
+    name: 'menuBar'
   }
 </script>

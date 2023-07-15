@@ -3,7 +3,7 @@
   <v-app>
     <v-main>
 
-      <menuBar v-on:search="search"></menuBar>
+      <menuBar :database="databaseFront" v-on:search="search"></menuBar>
       <panelSearchCard v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards">
       </panelSearchCard>
       <router-view v-else>
@@ -17,7 +17,7 @@
 </style>
 
 <script>
-import ServiceBack from './services/serviceBack'
+import DatabaseFront from "./data/databaseFront.json";
 
 import menuBar from './components/menuBar';
 import panelSearchCard from './components/panelSearchCard';
@@ -31,23 +31,20 @@ export default {
 
   data: () => ({
     cards: null,
-    selectedCards: []
+    selectedCards: [],
+    databaseFront : DatabaseFront
   }),
   
-  mounted() {
-    ServiceBack.getAll('cards').then(res => {
-      let result = res;
-      result.filter(x=> x.LimitFriends).forEach(x => {
-        let ids = x.LimitFriends.split(',');
-        x.LimitFriendsCards = result.filter(x=> ids.includes(x.Id));
-      });
-      this.cards = result;
-    });
+  mounted() {    
+    this.databaseFront.cards.filter(x=> x.LimitFriends).forEach(x => {
+      let ids = x.LimitFriends.split(',');
+      x.LimitFriendsCards = this.databaseFront.cards.filter(x=> ids.includes(x.Id));
+    });    
   },
   methods: {
     search(value){
       this.selectedCards = !value || value.length < 3 ? []
-        : this.cards.filter(x=> 
+        : this.databaseFront.cards.filter(x=> 
           x.NameEn.toLowerCase().includes(value.toLowerCase())
           || (x.NameFr && x.NameFr.toLowerCase().includes(value.toLowerCase()))).slice(0, 50);
     },
