@@ -8,13 +8,13 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/deck',
-        name: 'deck',
+        name: 'V1 MSOS Deck',
         component: () =>
             import ('../pages/pageDeck.vue')
     },
     {
         path: '/*',
-        name: 'home',
+        name: 'V1 MS Old School',
         component: () =>
             import ('../pages/pageHome.vue')
     },
@@ -26,6 +26,11 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 })
+
+router.beforeEach((to, from, next) => {
+    document.title = to.name;
+    next();
+  });
 
 
 export default router
