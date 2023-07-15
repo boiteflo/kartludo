@@ -35,7 +35,14 @@ export default {
   }),
   
   mounted() {
-    ServiceBack.getAll('cards').then(res => this.cards = res);
+    ServiceBack.getAll('cards').then(res => {
+      let result = res;
+      result.filter(x=> x.LimitFriends).forEach(x => {
+        let ids = x.LimitFriends.split(',');
+        x.LimitFriendsCards = result.filter(x=> ids.includes(x.Id));
+      });
+      this.cards = result;
+    });
   },
   methods: {
     search(value){

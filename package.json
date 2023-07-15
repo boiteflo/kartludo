@@ -5,6 +5,7 @@
   "author": "",
   "scripts": {
     "dev": "nodemon back/index.js",
+    "font": "cd front && npm run serve",
     "build": "cd front && npm i && npm run build",
     "start": "node back/index.js"
   },
