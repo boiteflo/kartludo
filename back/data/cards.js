@@ -32133,5 +32133,15 @@ module.exports =
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/Hecatrice-SR05-EN-C-1E.png",
       "IdName":"hecatrice"
+   },
+   {
+      "Id":null,
+      "RefId":null,
+      "NameEn":"Hecatrice",
+      "NameFr":null,
+      "Limit":"",
+      "LimitFriends":null,
+      "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/Hecatrice-SR05-EN-C-1E.png",
+      "IdName":"hecatrice"
    }
 ];

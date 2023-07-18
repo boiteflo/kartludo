@@ -32,6 +32,9 @@ app.use('/api/refresh', refreshRoute)
 var refreshCards = require('./routes/cards');
 app.use('/api/cards', refreshCards)
 
+var refreshCards = require('./routes/extensions');
+app.use('/api/extensions', refreshCards)
+
 var refreshDecks = require('./routes/decks');
 app.use('/api/decks', refreshDecks)
 

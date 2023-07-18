@@ -72,6 +72,21 @@ class helperArray {
         let element = this.getElementByProperty(array, value, property);
         this.removeElement(array, element);
     }
+
+    static removeDuplicates = (array, property)=> {
+        let result = [];
+        let ids = [];
+
+        array.forEach(x=> {
+            let id = x[property];
+            if(!ids.includes(id)){
+                ids.push(id);
+                result.push(x);
+            }
+        });
+
+        return result;
+    }
   }
  
   module.exports = helperArray;

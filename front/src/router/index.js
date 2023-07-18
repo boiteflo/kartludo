@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+let version = 'V1.4 ';
 
 Vue.use(VueRouter)
 
@@ -8,13 +9,25 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/deck',
-        name: 'V1.3 MSOS Deck',
+        name: version + 'MSOS Deck',
         component: () =>
             import ('../pages/pageDeck.vue')
     },
     {
+        path: '/duel',
+        name: version + 'MSOS Duel',
+        component: () =>
+            import ('../pages/pageDuel.vue')
+    },
+    {
+        path: '/boosters',
+        name: version + 'MSOS Boosters',
+        component: () =>
+            import ('../pages/pageBoosters.vue')
+    },
+    {
         path: '/*',
-        name: 'V1.3 MS Old School',
+        name: version + 'MS Old School',
         component: () =>
             import ('../pages/pageHome.vue')
     },
