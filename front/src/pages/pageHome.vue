@@ -1,37 +1,22 @@
 <template>
-    <div>
-        <div class="flex m5px" style="justify-content:center">  
-          <a href="https://www.duelingbook.com/deck?id=13483731">
-            <v-btn class="m5px">
-                <v-icon>mdi-cancel</v-icon>
-                <span class="mr-2">Cartes Interdites</span>
-            </v-btn>
-          </a>
-          <a href="https://www.duelingbook.com/deck?id=13483763">
-            <v-btn class="m5px">
-                <v-icon>mdi-alert</v-icon>
-                <span class="mr-2">Cartes Limités</span>
-            </v-btn>
-          </a>
-          <a href="https://www.duelingbook.com/deck?id=13483774">
-            <v-btn class="m5px">
-                <v-icon>mdi-star</v-icon>
-                <span class="mr-2">Cartes Joker 1</span>
-            </v-btn>
-          </a>
-          <a href="https://www.duelingbook.com/deck?id=13483808">
-            <v-btn class="m5px">
-                <v-icon>mdi-star</v-icon>
-                <span class="mr-2">Cartes Joker 2</span>
-            </v-btn>
-          </a>
-        </div>
-        <v-img
-          :src="require('../assets/rules.jpg')"
-        />
-        <v-card>
+    <div class="pageTop">
+        <v-img :src="require('../assets/RulesTopOnly.jpg')" />
+        <h1>BANLIST</h1>
+        <h2><v-icon color="red">mdi-cancel</v-icon> CARTES INTERDITES</h2>
+        <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="false">
+        </panel-cards>
+      
+        <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉS</h2>
+        <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="false">
+        </panel-cards>
+      
+        <h2><v-icon color="yellow">mdi-star</v-icon> CARTES JOKER</h2>
+        <panel-cards :cards="filterLimit(store.cards,'K')" >
+        </panel-cards>
+
+        <v-card class="bg">
           <v-card-title>Remerciement</v-card-title>
-          <v-card-text>Ce format/concept/ban list a été inventé par Zouloux (07/2023). Le Site Web a été créé par FlorentOutan. (Contactez moi sur le discord). Avec la participation de Aelle et Lockai. Utilisation de la base de données : https://db.ygoprodeck.com.</v-card-text>
+          <v-card-text class="bg">Ce format a été inventé par Zouloux (07/2023). Le Site Web a été créé par FlorentOutan. (Contactez moi sur le discord). Avec la participation de Aelle et Lockai. Utilisation de la base de données : https://db.ygoprodeck.com.</v-card-text>
         </v-card>
           
     </div>
@@ -39,7 +24,19 @@
 
 
 <script>
+import { store } from '../data/store.js'
+import panelCards from '../components/panelCards';
+
 export default {
-  name: 'pageDeck'
+  name: 'pageDeck',
+  components: {panelCards},
+  data: () => ({
+    store: store
+  }),
+  methods: {
+    filterLimit(cards, key){
+      return cards.filter(x=> x.Limit===key);
+    }
+  }
 };
 </script>

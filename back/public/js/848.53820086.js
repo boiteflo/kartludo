@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkfront"]=self["webpackChunkfront"]||[]).push([[848],{9848:function(n,e,t){t.r(e),t.d(e,{default:function(){return o}});var s=function(){var n=this;n._self._c;return n._m(0)},r=[function(){var n=this,e=n._self._c;return e("div",[e("div",[e("h1",{staticClass:"m5px"},[n._v("Voir les decks de la communauté")]),e("p",{staticClass:"flex-center"},[n._v(" Work In Progress")])])])}],u={name:"pageDeck",components:{},data:()=>({})},a=u,c=t(1001),l=(0,c.Z)(a,s,r,!1,null,null,null),o=l.exports}}]);
-//# sourceMappingURL=848.53820086.js.map

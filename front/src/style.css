@@ -20,6 +20,10 @@
     flex-direction: row-reverse;
 }
 
+.flex-space-around{
+    justify-content: space-around
+}
+
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +88,8 @@
 
 .w25 { width: 25px !important;}
 .w32 { width: 32px !important;}
+.w40 { width: 40px !important;}
+.w45 { width: 45px !important;}
 .w50 { width: 50px !important;}
 .w100 { width: 100px !important;}
 .w150 { width: 150px !important;}
@@ -214,4 +220,32 @@
 
 .darkBg {
     background-color: rgba(0,0,0,.05)
+}
+
+.bg {
+    background-color: #212A3C !important;
+    color:white !important
+}
+
+h1 {
+    background-color: #212A3C;
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px 50px 0px 40px;
+}
+h2 {
+    background-color: #212A3C;
+    color:white;
+    font-size: 30px;
+    padding: 20px 20px 20px 80px;
+}
+
+.sCard{
+    width: 50px !important;
+    height: 72px !important;
+}
+
+.pageTop{
+    margin-top:-30px;
 }
