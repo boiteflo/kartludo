@@ -8,13 +8,13 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/deck',
-        name: 'V1.2 MSOS Deck',
+        name: 'V1.3 MSOS Deck',
         component: () =>
             import ('../pages/pageDeck.vue')
     },
     {
         path: '/*',
-        name: 'V1.2 MS Old School',
+        name: 'V1.3 MS Old School',
         component: () =>
             import ('../pages/pageHome.vue')
     },

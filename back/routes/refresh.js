@@ -5,10 +5,12 @@ const helperGoogleApi = require("../helper/helperGoogleApi");
 const helperJsonFile = require("../helper/helperJsonFile");
 
 let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
+const cardsNotFound = `Les cartes suivantes n'ont pas été trouvées : `;
+const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
-const generateCards= async function(sheetData){
+const generateCards= async function(sheetData, sheets){
     let errors=[];
-    let cards = await helperJsonFile.readPath('./cards.json');
+    let cards = require("../data/cards");
 
     // Bonus
     if(sheetData.Bonus && sheetData.Bonus.length > 0){
@@ -22,23 +24,57 @@ const generateCards= async function(sheetData){
       });
     }          
 
-    // Limit
-    const limit0 = sheetData.Limit0.map(x=> x[0].cleanup());
-    const limit1 = sheetData.Limit1.map(x=> x[0].cleanup());
-    const joker = sheetData.Joker.map(x=> x[0].cleanup());
+    cards.forEach(card => card.Limit = '');
 
-    cards.forEach(card => {
-        card.IdName= card.NameEn.cleanup();
-        card.Limit = limit0.includes(card.IdName) ? '0'
-          : limit1.includes(card.IdName) ? '1'
-          : joker.includes(card.IdName) ? 'K'
-          :'';
-    });
-    
-    cards.filter(x=> x.LimitFriends).forEach(x => {
-      let ids = x.LimitFriends.split(',').map(x=> x.cleanup());
-      x.LimitFriendsCards = cards.filter(x=> ids.includes(x.Id)).map(x=> {return {IdName:x.IdName, Image:x.Image}});
-    });
+    // Limit0
+    for(let i =0 ; i< sheetData.Limit0.length; i++)
+    {
+        let idName = sheetData.Limit0[i][0].cleanup();
+        let card = cards.find(x=> x.IdName === idName);
+        if(card) {
+          card.Limit = '0';
+          card.OrderIndex = i;
+        }
+        else {
+          errors.push({Index: i, From:'Limit0', Errors: cardNotFound + ' ' +  sheetData.Limit0[i][0]});
+          helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Limit0!A' + (i+2), cardNotFound);
+        }
+    }
+
+    // Limit1
+    for(let i =0 ; i< sheetData.Limit1.length; i++)
+    {
+      let idName = sheetData.Limit1[i][0].cleanup();
+      let card = cards.find(x=> x.IdName === idName);
+      if(card) {
+        card.Limit = '1';
+        card.OrderIndex = i;
+        
+        let limitFriends = sheetData.Limit1[i][1];
+        if(limitFriends){
+          limitFriends = limitFriends.split(',');
+        }
+      }
+      else {
+        errors.push({Index: i, From:'Limit1', Errors: cardNotFound + ' ' +  sheetData.Limit1[i][0] });
+        helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Limit1!A' + (i+2), cardNotFound);
+      }
+    }
+
+    // Joker
+    for(let i =0 ; i< sheetData.Joker.length; i++)
+    {
+      let idName = sheetData.Joker[i][0].cleanup();
+      let card = cards.find(x=> x.IdName === idName);
+      if(card) {
+        card.Limit = 'K';
+        card.OrderIndex = i;
+      }
+      else {
+        errors.push({Index: i, From:'Joker', Errors: cardNotFound + ' ' +  sheetData.Joker[i][0] });
+        helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Joker!A' + (i+2), cardNotFound);
+      }
+    }
     
     helperJsonFile.savePath('./cards.json', cards);
     return {cards: cards, errors: errors };
@@ -81,8 +117,8 @@ const generateDecks= function(sheetData, cards, sheets){
     }
         
     if(errorsCards.length > 0){
-      let errorMessage = `Les cartes suivantes n'ont pas été trouvées : ` + errorsCards.join(', ');
-      errors.push({Index: deckIndex, From:'Deck', Errors: errorsCards.join(', ') });
+      let errorMessage = cardsNotFound + errorsCards.join(', ');
+      errors.push({Index: deckIndex, From:'Deck', Errors: cardsNotFound + ' ' + errorsCards.join(', ') });
       let sheetLine = deckIndex+2;
       helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks!A' + sheetLine, errorMessage);
     }
@@ -100,7 +136,7 @@ router
     let requestsPages = ['Bonus!B2:D','Limit0!B2:B', 'Limit1!B2:C', 'Joker!B2:B', 'Decks!B2:I'];    
     const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
     
-    let cardsResult = await generateCards(sheetData);
+    let cardsResult = await generateCards(sheetData, sheets);
     let cards = cardsResult.cards;
     errors = errors.concat(cardsResult.errors);
 
@@ -108,7 +144,7 @@ router
     errors = errors.concat(deckErrrors);
 
     res.send(errors.length < 1 ? 'Importation réussie' : 'Des erreurs sont survenues : ' + errors
-      .map(x=> `${x.From}!Ligne${x.Index+2} : Les cartes suivantes n'ont pas été trouvées : ${x.Errors}`));  
+      .map(x=> `${x.From}!Ligne${x.Index+2} ${x.Errors}`).join('..................'));  
     });
   
 module.exports = router;
