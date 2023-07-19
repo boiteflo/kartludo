@@ -19,8 +19,10 @@
       <v-text-field v-if="$vuetify.breakpoint.width >= 800"
                     class="flex-grow"
                     hide-details
+                    v-model="searchString"
                     label="Chercher une carte (FR ou EN)"
-                    @input="$emit('search', $event)">
+                    @input="$emit('search', $event)"
+                    @blur="unselect">
       </v-text-field>
 
       <router-link to="/deck">
@@ -66,14 +68,25 @@
     <v-text-field v-if="$vuetify.breakpoint.width < 800"
                   class="flex-grow m5px"
                   hide-details
+                  v-model="searchString"
                   label="Chercher une carte (FR ou EN)"
-                  @input="$emit('search', $event)">
+                  @input="$emit('search', $event)"
+                  @blur="unselect">
     </v-text-field>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'menuBar'
+    name: 'menuBar',
+    data: () => ({
+        searchString: '',
+    }),
+    methods:{
+      unselect(){
+        this.searchString = '';
+        this.$emit('search', '');
+      }
+    }
   }
 </script>

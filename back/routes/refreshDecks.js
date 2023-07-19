@@ -3,10 +3,12 @@ const helperJsonFile = require("../helper/helperJsonFile");
 const cardsNotFound = `Les cartes suivantes n'ont pas été trouvées : `;
 
 class refreshDecks {
-    
-    static refresh= (sheetData, cards, sheets, spreedSheetId) => {
-        let errors=[];
-        let decks = sheetData.Decks.map(x=> {
+
+    static rebuildDecks(deckData, errors, cards, sheets, spreedSheetId){
+        if(!deckData)
+            return [];
+
+        let decks = deckData.map(x=> {
             return {
             "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Autor": x[4], "MainCards": x[5], "Combo": x[6], "DeckList": x[7] 
             };
@@ -47,8 +49,16 @@ class refreshDecks {
                 helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks!A' + sheetLine, errorMessage);
             }
         } 
+
+        return decks;
+    }
+    
+    static refresh= (sheetData, cards, sheets, spreedSheetId) => {
+        let errors=[];
+        let decks = this.rebuildDecks(sheetData.Decks, errors, cards, sheets, spreedSheetId);
+        let decksCommunity = this.rebuildDecks(sheetData.Decks2, errors, cards, sheets, spreedSheetId);
         
-        helperJsonFile.save('decks', decks);
+        helperJsonFile.save('decks', {Decks: decks, DecksCommunity: decksCommunity});
         return errors;
     }
 }

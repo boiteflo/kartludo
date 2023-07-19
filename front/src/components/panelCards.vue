@@ -1,15 +1,15 @@
 <template>
-        <v-expand-transition>
-            <div v-show="cards && cards.length > 0" class="m5px" style="min-height:450px">
-                <div class="flex-wrap flex-space-around">
-                    <card-image v-for="card in cards" 
-                        v-bind:key="card.IdName" 
-                        :card="card"
-                        :badgeoff="badgeoff">
-                    </card-image>
-                </div>
-            </div>
-        </v-expand-transition>
+    <div v-if="cards && cards.length > 0"  class="p5px" >
+        <div class="flex-wrap">
+            <card-image v-for="card in cards" 
+                v-bind:key="card.IdName" 
+                :card="card"
+                :badgeoff="badgeoff"
+                :size="size"
+                v-on:select="$emit('select', $event)">
+            </card-image>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ import cardImage from './cardImage';
 
   export default {
     name: 'panel-cards',
-    props: ['cards', 'badgeoff'],
+    props: ['cards', 'badgeoff', 'size'],
     components: {cardImage},
   }
 </script>

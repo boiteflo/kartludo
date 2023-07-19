@@ -6,6 +6,9 @@ const helperRouteJsonDal = require("./helper/helperRouteJsonDal");
 String.prototype.cleanup = function() {
     return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
 }
+String.prototype.onlyAlphaNumericAndSpace = function() {
+    return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
+}
 String.prototype.removeX2 = function() {
     if(this.toLowerCase().startsWith("x2"))
         return this.substring(2);

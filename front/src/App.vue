@@ -3,7 +3,7 @@
   <v-app>
     <v-main>
       <menuBar v-on:search="search"></menuBar>
-      <panel-cards v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards">
+      <panel-cards class="bg" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards">
       </panel-cards>
       <router-view v-else>
       </router-view>
@@ -45,7 +45,8 @@ export default {
     search(value){
       this.selectedCards = !value || value.length < 3 ? []
         : this.cards.filter(x=> 
-          x.NameEn.toLowerCase().includes(value.toLowerCase())
+          x.IdName.includes(value.toLowerCase())
+          || x.NameEn.toLowerCase().includes(value.toLowerCase())
           || (x.NameFr && x.NameFr.toLowerCase().includes(value.toLowerCase()))).slice(0, 50);
     },
   }
