@@ -8,7 +8,7 @@ class refreshCards {
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
         let cards = require("../data/cards");
-
+        console.log('cards'+cards.length);
         // Bonus
         if(sheetData.Bonus && sheetData.Bonus.length > 0){
             sheetData.Bonus.forEach(cardArray=> {
