@@ -8,7 +8,7 @@ class refreshCards {
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
         let cards = require("../data/cards");
-        console.log('cards'+cards.length);
+        
         // Bonus
         if(sheetData.Bonus && sheetData.Bonus.length > 0){
             sheetData.Bonus.forEach(cardArray=> {
@@ -21,7 +21,10 @@ class refreshCards {
             });
         }          
 
-        cards.forEach(card => card.Limit = '');
+        cards.forEach(card => {
+            card.Limit = '';
+            card.IdName = card.NameEn.cleanup();
+        });
 
         // Limit0
         for(let i =0 ; i< sheetData.Limit0.length; i++)
