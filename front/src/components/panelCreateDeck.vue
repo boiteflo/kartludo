@@ -28,13 +28,26 @@
                             v-model="deck.Title">
                 </v-text-field>
                 <v-text-field class="m5px" label="Auteur"
-                            v-model="deck.Autor">
+                            v-model="deck.Author">
+                </v-text-field>
+                <div class="tooltip">
+                    <v-icon >
+                        mdi-alert
+                    </v-icon>
+                    <div class="tooltiptext">
+                        Ce mot de passe sera demandé pour effectuer des changements sur ce deck
+                    </div>
+                </div>
+                <v-text-field class="m5px" label="Mot de passe"
+                            v-model="deck.Password"
+                            @blue="cryptPassword">
                 </v-text-field>
             </div>
             <div v-if="$vuetify.breakpoint.width >= 800" class="flex">
                 <div class="bg" style="flex-grow:3">
                     <panel-deck-cards :cards="deck.DeckListCards"
                                 :size="50"
+                                tooltip="image"
                                 @select="selectCardToRemove"
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
@@ -51,6 +64,7 @@
                     </v-text-field>
                     <panel-cards v-if="selectedCards && selectedCards.length > 0"
                                 :size="50" 
+                                tooltip="image"
                                 :cards="selectedCards"
                                 @select="selectCard">
                     </panel-cards>
@@ -69,12 +83,14 @@
                     </v-text-field>
                     <panel-cards v-if="selectedCards && selectedCards.length > 0" 
                                 :size="50" 
+                                tooltip="image"
                                 :cards="selectedCards"
                                 @select="selectCard">
                     </panel-cards>
                 </div>
                 <panel-deck-cards :cards="deck.DeckListCards"
                             @select="selectCardToRemove"
+                            tooltip="image"
                             :size="50" 
                             v-bind:key="refreshCards">
                 </panel-deck-cards>
@@ -123,8 +139,6 @@ import panelDeckCards from './panelDeckCards.vue'
                 .slice(0, 50);
         },
         selectCard(card){
-            this.searchString= '';
-            this.selectedCards = [];
             let alreadyExist = this.deck.DeckListCards.find(x=> x.Card.IdName == card.IdName);
             if(alreadyExist){
                 alreadyExist.Quantity = "2";
@@ -155,6 +169,9 @@ import panelDeckCards from './panelDeckCards.vue'
         selectFavToRemove(card){
             this.deck.MainCards = this.deck.MainCards.filter(x=> x.IdName !== card.IdName);
             this.refreshFavCards++;
+        },
+        cryptPassword(){
+            
         }
     }
   }

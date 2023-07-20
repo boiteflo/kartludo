@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!B' + lastRow, deck.Title.cleanup());
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!D' + lastRow, deck.Title);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!E' + lastRow, new Date().toLocaleDateString("fr"));
-  helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!F' + lastRow, deck.Autor);
+  helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!F' + lastRow, deck.Author);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!G' + lastRow, mainCards);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!H' + lastRow, '');//Combo
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!I' + lastRow, deckList.join(', '));

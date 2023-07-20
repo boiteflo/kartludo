@@ -6,6 +6,7 @@
         <card-image :card="cardObject.Card" 
                     :badgeoff="false" 
                     :size="size"
+                    :tooltip="tooltip"
                     v-on:select="$emit('select', $event)">
         </card-image>
         <img :style="{ width: (size ? size : 150)+ 'px' }" 
@@ -22,7 +23,7 @@ import cardImage from './cardImage';
 
   export default {
     name: 'panel-deck-cards',
-    props: ['cards', 'size'],
+    props: ['cards', 'size', 'tooltip'],
     components: {cardImage},
   }
 </script>

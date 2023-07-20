@@ -10,7 +10,7 @@ class refreshDecks {
 
         let decks = deckData.map(x=> {
             return {
-            "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Autor": x[4], "MainCards": x[5], "Combo": x[6], "DeckList": x[7] 
+            "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Password": x[6], "DeckList": x[7] 
             };
         });
 

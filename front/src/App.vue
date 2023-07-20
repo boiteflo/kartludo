@@ -3,7 +3,7 @@
   <v-app>
     <v-main>
       <menuBar v-on:search="search"></menuBar>
-      <panel-cards class="bg" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards">
+      <panel-cards class="bg" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards"  tooltip="text">
       </panel-cards>
       <router-view v-else>
       </router-view>

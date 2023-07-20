@@ -1,16 +1,16 @@
 <template>
     <div class="pageTop">
-        <v-img :src="require('../assets/rules.jpg')" />
+        <v-img :src="require('../assets/RulesTopOnly.jpg')" />
         <h1>BANLIST</h1>
         <h2><v-icon color="red">mdi-cancel</v-icon> CARTES INTERDITES</h2>
-        <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true">
+        <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
         <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉS</h2>
-        <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true">
+        <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
       
         <h2><v-icon color="yellow">mdi-star</v-icon> CARTES JOKER</h2>
-        <panel-cards :cards="filterLimit(store.cards,'K')" :badgeoff="true" >
+        <panel-cards :cards="filterLimit(store.cards,'K')" :badgeoff="true" :center="true" tooltip="text" >
         </panel-cards>
         <v-card class="bg">
           <v-card-title>Remerciement</v-card-title>
