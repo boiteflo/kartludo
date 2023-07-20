@@ -8,7 +8,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67048711.jpg",
-      "IdName":"7"
+      "References":null
    },
    {
       "Id":"39719977",
@@ -18,7 +18,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39719977.jpg",
-      "IdName":"deltaattacker"
+      "References":null
    },
    {
       "Id":"16226786",
@@ -28,7 +28,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16226786.jpg",
-      "IdName":"nightassailant"
+      "References":null
    },
    {
       "Id":"303660",
@@ -38,7 +38,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/303660.jpg",
-      "IdName":"amplifier"
+      "References":null
    },
    {
       "Id":"88236094",
@@ -48,7 +48,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88236094.jpg",
-      "IdName":"aswanapparition"
+      "References":null
    },
    {
       "Id":"50823978",
@@ -58,7 +58,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50823978.jpg",
-      "IdName":"piranhaarmy"
+      "References":null
    },
    {
       "Id":"44762290",
@@ -68,7 +68,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44762290.jpg",
-      "IdName":"opticamouflagearmor"
+      "References":null
    },
    {
       "Id":"70861343",
@@ -78,7 +78,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70861343.jpg",
-      "IdName":"ninjitsuartoftransformation"
+      "References":null
    },
    {
       "Id":"2314238",
@@ -88,7 +88,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2314238.jpg",
-      "IdName":"darkmagicattack"
+      "References":null
    },
    {
       "Id":"99284890",
@@ -98,7 +98,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99284890.jpg",
-      "IdName":"avatarofthepot"
+      "References":null
    },
    {
       "Id":"31476755",
@@ -108,7 +108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31476755.jpg",
-      "IdName":"dustbarrier"
+      "References":null
    },
    {
       "Id":"43250041",
@@ -118,7 +118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43250041.jpg",
-      "IdName":"drainingshield"
+      "References":null
    },
    {
       "Id":"84550200",
@@ -128,7 +128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84550200.jpg",
-      "IdName":"sonicjammer"
+      "References":null
    },
    {
       "Id":"51838385",
@@ -138,7 +138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51838385.jpg",
-      "IdName":"thebannightmare"
+      "References":null
    },
    {
       "Id":"11448373",
@@ -148,7 +148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11448373.jpg",
-      "IdName":"graveprotector"
+      "References":null
    },
    {
       "Id":"10035717",
@@ -158,7 +158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10035717.jpg",
-      "IdName":"weaponchange"
+      "References":null
    },
    {
       "Id":"78986941",
@@ -168,7 +168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78986941.jpg",
-      "IdName":"ordertocharge"
+      "References":null
    },
    {
       "Id":"87010442",
@@ -178,7 +178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87010442.jpg",
-      "IdName":"legacyhunter"
+      "References":null
    },
    {
       "Id":"24435369",
@@ -188,7 +188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24435369.jpg",
-      "IdName":"mermaidknight"
+      "References":null
    },
    {
       "Id":"52768103",
@@ -198,7 +198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52768103.jpg",
-      "IdName":"ka2desscissors"
+      "References":null
    },
    {
       "Id":"39131963",
@@ -208,7 +208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39131963.jpg",
-      "IdName":"descounterblow"
+      "References":null
    },
    {
       "Id":"98045062",
@@ -218,7 +218,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98045062.jpg",
-      "IdName":"enemycontroller"
+      "References":null
    },
    {
       "Id":"82005435",
@@ -228,7 +228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82005435.jpg",
-      "IdName":"ladyninjayae"
+      "References":null
    },
    {
       "Id":"26495087",
@@ -238,7 +238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26495087.jpg",
-      "IdName":"vampirelady"
+      "References":null
    },
    {
       "Id":"6133894",
@@ -248,7 +248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6133894.jpg",
-      "IdName":"mazeradeville"
+      "References":null
    },
    {
       "Id":"13409151",
@@ -258,7 +258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13409151.jpg",
-      "IdName":"desertapir"
+      "References":null
    },
    {
       "Id":"83228073",
@@ -268,7 +268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83228073.jpg",
-      "IdName":"twothousandneedles"
+      "References":null
    },
    {
       "Id":"4081094",
@@ -278,7 +278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4081094.jpg",
-      "IdName":"thesecondsarcophagus"
+      "References":null
    },
    {
       "Id":"44436472",
@@ -288,7 +288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44436472.jpg",
-      "IdName":"doublecoston"
+      "References":null
    },
    {
       "Id":"25551951",
@@ -298,7 +298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25551951.jpg",
-      "IdName":"blowbackdragon"
+      "References":null
    },
    {
       "Id":"45985838",
@@ -308,7 +308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45985838.jpg",
-      "IdName":"solarflaredragon"
+      "References":null
    },
    {
       "Id":"6103294",
@@ -318,7 +318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6103294.jpg",
-      "IdName":"emissaryoftheoasis"
+      "References":null
    },
    {
       "Id":"75043725",
@@ -328,7 +328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75043725.jpg",
-      "IdName":"emissaryoftheafterlife"
+      "References":null
    },
    {
       "Id":"5371656",
@@ -338,7 +338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5371656.jpg",
-      "IdName":"swordofthesouleater"
+      "References":null
    },
    {
       "Id":"25343280",
@@ -348,7 +348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25343280.jpg",
-      "IdName":"spiritofthepharaoh"
+      "References":null
    },
    {
       "Id":"30653113",
@@ -358,7 +358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30653113.jpg",
-      "IdName":"blessingsofthenile"
+      "References":null
    },
    {
       "Id":"17655904",
@@ -368,7 +368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17655904.jpg",
-      "IdName":"burststreamofdestruction"
+      "References":null
    },
    {
       "Id":"79649195",
@@ -378,7 +378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79649195.jpg",
-      "IdName":"armorbreak"
+      "References":null
    },
    {
       "Id":"51616747",
@@ -388,7 +388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51616747.jpg",
-      "IdName":"nubianguard"
+      "References":null
    },
    {
       "Id":"30190809",
@@ -398,7 +398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30190809.jpg",
-      "IdName":"geargolemthemovingfortress"
+      "References":null
    },
    {
       "Id":"53776525",
@@ -408,7 +408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53776525.jpg",
-      "IdName":"gigobyte"
+      "References":null
    },
    {
       "Id":"39674352",
@@ -418,7 +418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39674352.jpg",
-      "IdName":"gogigagagagigo"
+      "References":null
    },
    {
       "Id":"67464807",
@@ -428,7 +428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67464807.jpg",
-      "IdName":"doraoffate"
+      "References":null
    },
    {
       "Id":"66073051",
@@ -438,7 +438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66073051.jpg",
-      "IdName":"warriorofzera"
+      "References":null
    },
    {
       "Id":"19612721",
@@ -448,7 +448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19612721.jpg",
-      "IdName":"discfighter"
+      "References":null
    },
    {
       "Id":"43714890",
@@ -458,7 +458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43714890.jpg",
-      "IdName":"manthrotro"
+      "References":null
    },
    {
       "Id":"48659020",
@@ -468,7 +468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48659020.jpg",
-      "IdName":"spiritcaller"
+      "References":null
    },
    {
       "Id":"65957473",
@@ -478,7 +478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65957473.jpg",
-      "IdName":"metalarmoredbug"
+      "References":null
    },
    {
       "Id":"4869446",
@@ -488,7 +488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4869446.jpg",
-      "IdName":"judgmentofthedesert"
+      "References":null
    },
    {
       "Id":"99171160",
@@ -498,7 +498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99171160.jpg",
-      "IdName":"kozaky"
+      "References":null
    },
    {
       "Id":"55001420",
@@ -508,7 +508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55001420.jpg",
-      "IdName":"arcanearcheroftheforest"
+      "References":null
    },
    {
       "Id":"49771608",
@@ -518,7 +518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49771608.jpg",
-      "IdName":"absorbingkidfromthesky"
+      "References":null
    },
    {
       "Id":"65403020",
@@ -528,7 +528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65403020.jpg",
-      "IdName":"theendofanubis"
+      "References":null
    },
    {
       "Id":"27618634",
@@ -538,7 +538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27618634.jpg",
-      "IdName":"theunhappygirl"
+      "References":null
    },
    {
       "Id":"66926224",
@@ -548,7 +548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66926224.jpg",
-      "IdName":"thelawofthenormal"
+      "References":null
    },
    {
       "Id":"66526672",
@@ -558,7 +558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66526672.jpg",
-      "IdName":"labyrinthofnightmare"
+      "References":null
    },
    {
       "Id":"86988864",
@@ -568,7 +568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86988864.jpg",
-      "IdName":"3humplacooda"
+      "References":null
    },
    {
       "Id":"90407382",
@@ -578,7 +578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90407382.jpg",
-      "IdName":"thekickman"
+      "References":null
    },
    {
       "Id":"13386503",
@@ -588,7 +588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13386503.jpg",
-      "IdName":"ghostknightofjackal"
+      "References":null
    },
    {
       "Id":"56433456",
@@ -598,7 +598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56433456.jpg",
-      "IdName":"thesanctuaryinthesky"
+      "References":null
    },
    {
       "Id":"3136426",
@@ -608,7 +608,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3136426.jpg",
-      "IdName":"levellimitareab"
+      "References":null
    },
    {
       "Id":"87340664",
@@ -618,7 +618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87340664.jpg",
-      "IdName":"atomicfirefly"
+      "References":null
    },
    {
       "Id":"16255442",
@@ -628,7 +628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16255442.jpg",
-      "IdName":"beckoninglight"
+      "References":null
    },
    {
       "Id":"44595286",
@@ -638,7 +638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44595286.jpg",
-      "IdName":"lightofjudgment"
+      "References":null
    },
    {
       "Id":"81383947",
@@ -648,7 +648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81383947.jpg",
-      "IdName":"whitemagicianpikeru"
+      "References":null
    },
    {
       "Id":"4259068",
@@ -658,7 +658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4259068.jpg",
-      "IdName":"spelleconomics"
+      "References":null
    },
    {
       "Id":"25773409",
@@ -668,7 +668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25773409.jpg",
-      "IdName":"legendaryjujitsumaster"
+      "References":null
    },
    {
       "Id":"66742250",
@@ -678,7 +678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66742250.jpg",
-      "IdName":"curseofanubis"
+      "References":null
    },
    {
       "Id":"91123920",
@@ -688,7 +688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91123920.jpg",
-      "IdName":"theagentofforcemars"
+      "References":null
    },
    {
       "Id":"2468169",
@@ -698,7 +698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2468169.jpg",
-      "IdName":"sealmastermeisei"
+      "References":null
    },
    {
       "Id":"38730226",
@@ -708,7 +708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38730226.jpg",
-      "IdName":"theagentofwisdommercury"
+      "References":null
    },
    {
       "Id":"18190572",
@@ -718,7 +718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18190572.jpg",
-      "IdName":"microray"
+      "References":null
    },
    {
       "Id":"5703682",
@@ -728,7 +728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5703682.jpg",
-      "IdName":"thousandenergy"
+      "References":null
    },
    {
       "Id":"27288416",
@@ -738,7 +738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27288416.jpg",
-      "IdName":"mokeymokey"
+      "References":null
    },
    {
       "Id":"70821187",
@@ -748,7 +748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70821187.jpg",
-      "IdName":"regeneratingmummy"
+      "References":null
    },
    {
       "Id":"17078030",
@@ -758,7 +758,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17078030.jpg",
-      "IdName":"wallofrevealinglight"
+      "References":null
    },
    {
       "Id":"39019325",
@@ -768,7 +768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39019325.jpg",
-      "IdName":"ordertosmash"
+      "References":null
    },
    {
       "Id":"42598242",
@@ -778,7 +778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42598242.jpg",
-      "IdName":"specialhurricane"
+      "References":null
    },
    {
       "Id":"50593156",
@@ -788,7 +788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50593156.jpg",
-      "IdName":"sandgambler"
+      "References":null
    },
    {
       "Id":"98162242",
@@ -798,7 +798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98162242.jpg",
-      "IdName":"needleburrower"
+      "References":null
    },
    {
       "Id":"43040603",
@@ -808,7 +808,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43040603.jpg",
-      "IdName":"monstergate"
+      "References":null
    },
    {
       "Id":"31076103",
@@ -818,7 +818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31076103.jpg",
-      "IdName":"thefirstsarcophagus"
+      "References":null
    },
    {
       "Id":"24221739",
@@ -828,7 +828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24221739.jpg",
-      "IdName":"protectorofthesanctuary"
+      "References":null
    },
    {
       "Id":"89959682",
@@ -838,7 +838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89959682.jpg",
-      "IdName":"pharaonicprotector"
+      "References":null
    },
    {
       "Id":"32298781",
@@ -848,7 +848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32298781.jpg",
-      "IdName":"trianglepower"
+      "References":null
    },
    {
       "Id":"30531525",
@@ -858,7 +858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30531525.jpg",
-      "IdName":"enchantingfittingroom"
+      "References":null
    },
    {
       "Id":"44472639",
@@ -868,7 +868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44472639.jpg",
-      "IdName":"solarray"
+      "References":null
    },
    {
       "Id":"92924317",
@@ -878,7 +878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92924317.jpg",
-      "IdName":"soulresurrection"
+      "References":null
    },
    {
       "Id":"82705573",
@@ -888,7 +888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82705573.jpg",
-      "IdName":"backfire"
+      "References":null
    },
    {
       "Id":"78864369",
@@ -898,7 +898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78864369.jpg",
-      "IdName":"soulreversal"
+      "References":null
    },
    {
       "Id":"53890795",
@@ -908,7 +908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53890795.jpg",
-      "IdName":"rocketjumper"
+      "References":null
    },
    {
       "Id":"79109599",
@@ -918,7 +918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79109599.jpg",
-      "IdName":"kingoftheswamp"
+      "References":null
    },
    {
       "Id":"18590133",
@@ -928,7 +928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18590133.jpg",
-      "IdName":"goblinking"
+      "References":null
    },
    {
       "Id":"91345518",
@@ -938,7 +938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91345518.jpg",
-      "IdName":"theagentofjudgmentsaturn"
+      "References":null
    },
    {
       "Id":"26566878",
@@ -948,7 +948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26566878.jpg",
-      "IdName":"fiendscorpion"
+      "References":null
    },
    {
       "Id":"18378582",
@@ -958,7 +958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18378582.jpg",
-      "IdName":"archlordzerato"
+      "References":null
    },
    {
       "Id":"52550973",
@@ -968,7 +968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52550973.jpg",
-      "IdName":"pharaohsservant"
+      "References":null
    },
    {
       "Id":"93747864",
@@ -978,7 +978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93747864.jpg",
-      "IdName":"desertsunlight"
+      "References":null
    },
    {
       "Id":"39552864",
@@ -988,7 +988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39552864.jpg",
-      "IdName":"mysticalshineball"
+      "References":null
    },
    {
       "Id":"85166216",
@@ -998,7 +998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85166216.jpg",
-      "IdName":"elephantstatueofblessing"
+      "References":null
    },
    {
       "Id":"12160911",
@@ -1008,7 +1008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12160911.jpg",
-      "IdName":"elephantstatueofdisaster"
+      "References":null
    },
    {
       "Id":"31812496",
@@ -1018,7 +1018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31812496.jpg",
-      "IdName":"stonestatueoftheaztecs"
+      "References":null
    },
    {
       "Id":"30353551",
@@ -1028,7 +1028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30353551.jpg",
-      "IdName":"humanwavetactics"
+      "References":null
    },
    {
       "Id":"71983925",
@@ -1038,7 +1038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71983925.jpg",
-      "IdName":"talismanofspellsealing"
+      "References":null
    },
    {
       "Id":"19312169",
@@ -1048,7 +1048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19312169.jpg",
-      "IdName":"talismanoftrapsealing"
+      "References":null
    },
    {
       "Id":"63012333",
@@ -1058,7 +1058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63012333.jpg",
-      "IdName":"soulabsorbingbonetower"
+      "References":null
    },
    {
       "Id":"82828051",
@@ -1068,7 +1068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82828051.jpg",
-      "IdName":"earthquake"
+      "References":null
    },
    {
       "Id":"78697395",
@@ -1078,7 +1078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78697395.jpg",
-      "IdName":"thethirdsarcophagus"
+      "References":null
    },
    {
       "Id":"64734921",
@@ -1088,7 +1088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64734921.jpg",
-      "IdName":"theagentofcreationvenus"
+      "References":null
    },
    {
       "Id":"45311864",
@@ -1098,7 +1098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45311864.jpg",
-      "IdName":"goblinthief"
+      "References":null
    },
    {
       "Id":"80161395",
@@ -1108,7 +1108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80161395.jpg",
-      "IdName":"mystikwok"
+      "References":null
    },
    {
       "Id":"51945556",
@@ -1118,7 +1118,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51945556.jpg",
-      "IdName":"zaborgthethundermonarch"
+      "References":null
    },
    {
       "Id":"78193831",
@@ -1128,7 +1128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78193831.jpg",
-      "IdName":"busterblader"
+      "References":null
    },
    {
       "Id":"91998119",
@@ -1138,7 +1138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91998119.jpg",
-      "IdName":"xyzdragoncannon"
+      "References":null
    },
    {
       "Id":"89631139",
@@ -1148,7 +1148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89631139.jpg",
-      "IdName":"blueeyeswhitedragon"
+      "References":null
    },
    {
       "Id":"423705",
@@ -1158,7 +1158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/423705.jpg",
-      "IdName":"gearfriedtheironknight"
+      "References":null
    },
    {
       "Id":"77585513",
@@ -1168,7 +1168,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77585513.jpg",
-      "IdName":"jinzo"
+      "References":null
    },
    {
       "Id":"36996508",
@@ -1178,7 +1178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36996508.jpg",
-      "IdName":"darkmagician"
+      "References":null
    },
    {
       "Id":"12694768",
@@ -1188,7 +1188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12694768.jpg",
-      "IdName":"abaki"
+      "References":null
    },
    {
       "Id":"99532708",
@@ -1198,7 +1198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99532708.jpg",
-      "IdName":"alienmars"
+      "References":null
    },
    {
       "Id":"24838456",
@@ -1208,7 +1208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24838456.jpg",
-      "IdName":"vanityscall"
+      "References":null
    },
    {
       "Id":"86209650",
@@ -1218,7 +1218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86209650.jpg",
-      "IdName":"strayasmodian"
+      "References":null
    },
    {
       "Id":"11685347",
@@ -1228,7 +1228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11685347.jpg",
-      "IdName":"blastasmodian"
+      "References":null
    },
    {
       "Id":"38834303",
@@ -1238,7 +1238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38834303.jpg",
-      "IdName":"countercleaner"
+      "References":null
    },
    {
       "Id":"64238008",
@@ -1248,7 +1248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64238008.jpg",
-      "IdName":"linearacceleratorcannon"
+      "References":null
    },
    {
       "Id":"2561846",
@@ -1258,7 +1258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2561846.jpg",
-      "IdName":"corruptioncella"
+      "References":null
    },
    {
       "Id":"84290642",
@@ -1268,7 +1268,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84290642.jpg",
-      "IdName":"snipehunter"
+      "References":null
    },
    {
       "Id":"36995273",
@@ -1278,7 +1278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36995273.jpg",
-      "IdName":"degeneratecircuit"
+      "References":null
    },
    {
       "Id":"63394872",
@@ -1288,7 +1288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63394872.jpg",
-      "IdName":"senetswitch"
+      "References":null
    },
    {
       "Id":"50323155",
@@ -1298,7 +1298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50323155.jpg",
-      "IdName":"blackhornofheaven"
+      "References":null
    },
    {
       "Id":"41230939",
@@ -1308,7 +1308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41230939.jpg",
-      "IdName":"cyberdarkhorn"
+      "References":null
    },
    {
       "Id":"91663373",
@@ -1318,7 +1318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91663373.jpg",
-      "IdName":"cyberesper"
+      "References":null
    },
    {
       "Id":"64268668",
@@ -1328,7 +1328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64268668.jpg",
-      "IdName":"cyberogre"
+      "References":null
    },
    {
       "Id":"37057012",
@@ -1338,7 +1338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37057012.jpg",
-      "IdName":"cyberogre2"
+      "References":null
    },
    {
       "Id":"47084486",
@@ -1348,7 +1348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47084486.jpg",
-      "IdName":"vanitysfiend"
+      "References":null
    },
    {
       "Id":"51449743",
@@ -1358,7 +1358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51449743.jpg",
-      "IdName":"chaindetonation"
+      "References":null
    },
    {
       "Id":"99788587",
@@ -1368,7 +1368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99788587.jpg",
-      "IdName":"blastingfuse"
+      "References":null
    },
    {
       "Id":"40418351",
@@ -1378,7 +1378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40418351.jpg",
-      "IdName":"cyberdarkdragon"
+      "References":null
    },
    {
       "Id":"39956951",
@@ -1388,7 +1388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39956951.jpg",
-      "IdName":"flashoftheforbiddenspell"
+      "References":null
    },
    {
       "Id":"63323539",
@@ -1398,7 +1398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63323539.jpg",
-      "IdName":"trojanblast"
+      "References":null
    },
    {
       "Id":"98444741",
@@ -1408,7 +1408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98444741.jpg",
-      "IdName":"accumulatedfortune"
+      "References":null
    },
    {
       "Id":"91623717",
@@ -1418,7 +1418,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91623717.jpg",
-      "IdName":"chainstrike"
+      "References":null
    },
    {
       "Id":"1845204",
@@ -1428,7 +1428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1845204.jpg",
-      "IdName":"instantfusion"
+      "References":null
    },
    {
       "Id":"71411377",
@@ -1438,7 +1438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71411377.jpg",
-      "IdName":"queensbodyguard"
+      "References":null
    },
    {
       "Id":"90440725",
@@ -1448,7 +1448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90440725.jpg",
-      "IdName":"cybershadowgardna"
+      "References":null
    },
    {
       "Id":"8806072",
@@ -1458,7 +1458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8806072.jpg",
-      "IdName":"combofighter"
+      "References":null
    },
    {
       "Id":"71395725",
@@ -1468,7 +1468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71395725.jpg",
-      "IdName":"manbeastofares"
+      "References":null
    },
    {
       "Id":"76573247",
@@ -1478,7 +1478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76573247.jpg",
-      "IdName":"alieninfiltrator"
+      "References":null
    },
    {
       "Id":"98666339",
@@ -1488,7 +1488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98666339.jpg",
-      "IdName":"dimensionalinversion"
+      "References":null
    },
    {
       "Id":"9628664",
@@ -1498,7 +1498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9628664.jpg",
-      "IdName":"iristheearthmother"
+      "References":null
    },
    {
       "Id":"62271284",
@@ -1508,7 +1508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62271284.jpg",
-      "IdName":"justibreak"
+      "References":null
    },
    {
       "Id":"85313220",
@@ -1518,7 +1518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85313220.jpg",
-      "IdName":"darkluciuslv4"
+      "References":null
    },
    {
       "Id":"12817939",
@@ -1528,7 +1528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12817939.jpg",
-      "IdName":"darkluciuslv6"
+      "References":null
    },
    {
       "Id":"58206034",
@@ -1538,7 +1538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58206034.jpg",
-      "IdName":"darkluciuslv8"
+      "References":null
    },
    {
       "Id":"72634965",
@@ -1548,7 +1548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72634965.jpg",
-      "IdName":"vanitysruler"
+      "References":null
    },
    {
       "Id":"44800181",
@@ -1558,7 +1558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44800181.jpg",
-      "IdName":"combomaster"
+      "References":null
    },
    {
       "Id":"58098303",
@@ -1568,7 +1568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58098303.jpg",
-      "IdName":"flameogre"
+      "References":null
    },
    {
       "Id":"90500169",
@@ -1578,7 +1578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90500169.jpg",
-      "IdName":"leveldown"
+      "References":null
    },
    {
       "Id":"45023678",
@@ -1588,7 +1588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45023678.jpg",
-      "IdName":"lightningpunisher"
+      "References":null
    },
    {
       "Id":"3019642",
@@ -1598,7 +1598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3019642.jpg",
-      "IdName":"cyberdarkkeel"
+      "References":null
    },
    {
       "Id":"87257460",
@@ -1608,7 +1608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87257460.jpg",
-      "IdName":"allurequeenlv3"
+      "References":null
    },
    {
       "Id":"23756165",
@@ -1618,7 +1618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23756165.jpg",
-      "IdName":"allurequeenlv5"
+      "References":null
    },
    {
       "Id":"50140163",
@@ -1628,7 +1628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50140163.jpg",
-      "IdName":"allurequeenlv7"
+      "References":null
    },
    {
       "Id":"37011715",
@@ -1638,7 +1638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37011715.jpg",
-      "IdName":"miraculousrebirth"
+      "References":null
    },
    {
       "Id":"3784434",
@@ -1648,7 +1648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3784434.jpg",
-      "IdName":"rampagingrhynos"
+      "References":null
    },
    {
       "Id":"65450690",
@@ -1658,7 +1658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65450690.jpg",
-      "IdName":"ritualforegone"
+      "References":null
    },
    {
       "Id":"36935434",
@@ -1668,7 +1668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36935434.jpg",
-      "IdName":"byroadsacrifice"
+      "References":null
    },
    {
       "Id":"25050038",
@@ -1678,7 +1678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25050038.jpg",
-      "IdName":"chainhealing"
+      "References":null
    },
    {
       "Id":"19740112",
@@ -1688,7 +1688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19740112.jpg",
-      "IdName":"barrierstatueofthedrought"
+      "References":null
    },
    {
       "Id":"84478195",
@@ -1698,7 +1698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84478195.jpg",
-      "IdName":"barrierstatueoftheabyss"
+      "References":null
    },
    {
       "Id":"47961808",
@@ -1708,7 +1708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47961808.jpg",
-      "IdName":"barrierstatueoftheinferno"
+      "References":null
    },
    {
       "Id":"73356503",
@@ -1718,7 +1718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73356503.jpg",
-      "IdName":"barrierstatueofthestormwinds"
+      "References":null
    },
    {
       "Id":"46145256",
@@ -1728,7 +1728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46145256.jpg",
-      "IdName":"barrierstatueoftheheavens"
+      "References":null
    },
    {
       "Id":"10963799",
@@ -1738,7 +1738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10963799.jpg",
-      "IdName":"barrierstatueofthetorrent"
+      "References":null
    },
    {
       "Id":"25173686",
@@ -1748,7 +1748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25173686.jpg",
-      "IdName":"straightflush"
+      "References":null
    },
    {
       "Id":"39188539",
@@ -1758,7 +1758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39188539.jpg",
-      "IdName":"stormshooter"
+      "References":null
    },
    {
       "Id":"77625948",
@@ -1768,7 +1768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77625948.jpg",
-      "IdName":"cyberdarkedge"
+      "References":null
    },
    {
       "Id":"63516460",
@@ -1778,7 +1778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63516460.jpg",
-      "IdName":"mysticalwindtyphoon"
+      "References":null
    },
    {
       "Id":"17185260",
@@ -1788,7 +1788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17185260.jpg",
-      "IdName":"infernohammer"
+      "References":null
    },
    {
       "Id":"18318842",
@@ -1798,7 +1798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18318842.jpg",
-      "IdName":"abysssoldier"
+      "References":null
    },
    {
       "Id":"16469012",
@@ -1808,7 +1808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16469012.jpg",
-      "IdName":"teva"
+      "References":null
    },
    {
       "Id":"56120475",
@@ -1818,7 +1818,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56120475.jpg",
-      "IdName":"sakuretsuarmor"
+      "References":null
    },
    {
       "Id":"69279219",
@@ -1828,7 +1828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69279219.jpg",
-      "IdName":"mybodyasashield"
+      "References":null
    },
    {
       "Id":"50400231",
@@ -1838,7 +1838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50400231.jpg",
-      "IdName":"satellitecannon"
+      "References":null
    },
    {
       "Id":"95308449",
@@ -1848,7 +1848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95308449.jpg",
-      "IdName":"finalcountdown"
+      "References":null
    },
    {
       "Id":"1347977",
@@ -1858,7 +1858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1347977.jpg",
-      "IdName":"mysteriousguard"
+      "References":null
    },
    {
       "Id":"15510988",
@@ -1868,7 +1868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15510988.jpg",
-      "IdName":"thunderkid"
+      "References":null
    },
    {
       "Id":"41420027",
@@ -1878,7 +1878,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41420027.jpg",
-      "IdName":"solemnjudgment"
+      "References":null
    },
    {
       "Id":"14087893",
@@ -1888,7 +1888,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14087893.jpg",
-      "IdName":"bookofmoon"
+      "References":null
    },
    {
       "Id":"23171610",
@@ -1898,7 +1898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23171610.jpg",
-      "IdName":"limiterremoval"
+      "References":null
    },
    {
       "Id":"46411259",
@@ -1908,7 +1908,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46411259.jpg",
-      "IdName":"metamorphosis"
+      "References":null
    },
    {
       "Id":"82108372",
@@ -1918,7 +1918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82108372.jpg",
-      "IdName":"mudora"
+      "References":null
    },
    {
       "Id":"3510565",
@@ -1928,7 +1928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3510565.jpg",
-      "IdName":"stealthbird"
+      "References":null
    },
    {
       "Id":"67169062",
@@ -1938,7 +1938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67169062.jpg",
-      "IdName":"potofavarice"
+      "References":null
    },
    {
       "Id":"2851070",
@@ -1948,7 +1948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2851070.jpg",
-      "IdName":"reflectbounder"
+      "References":null
    },
    {
       "Id":"36361633",
@@ -1958,7 +1958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36361633.jpg",
-      "IdName":"threateningroar"
+      "References":null
    },
    {
       "Id":"65240384",
@@ -1968,7 +1968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65240384.jpg",
-      "IdName":"bigshieldgardna"
+      "References":null
    },
    {
       "Id":"83986578",
@@ -1978,7 +1978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83986578.jpg",
-      "IdName":"kingtigerwanghu"
+      "References":null
    },
    {
       "Id":"60764581",
@@ -1988,7 +1988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60764581.jpg",
-      "IdName":"straylambs"
+      "References":null
    },
    {
       "Id":"83555666",
@@ -1998,7 +1998,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83555666.jpg",
-      "IdName":"ringofdestruction"
+      "References":null
    },
    {
       "Id":"43586926",
@@ -2008,7 +2008,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43586926.jpg",
-      "IdName":"twinheadedbehemoth"
+      "References":null
    },
    {
       "Id":"61127349",
@@ -2018,7 +2018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61127349.jpg",
-      "IdName":"bigbangshot"
+      "References":null
    },
    {
       "Id":"36468556",
@@ -2028,7 +2028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36468556.jpg",
-      "IdName":"ceasefire"
+      "References":null
    },
    {
       "Id":"70046172",
@@ -2038,7 +2038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70046172.jpg",
-      "IdName":"rushrecklessly"
+      "References":null
    },
    {
       "Id":"97169186",
@@ -2048,7 +2048,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97169186.jpg",
-      "IdName":"smashingground"
+      "References":null
    },
    {
       "Id":"28553439",
@@ -2058,7 +2058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28553439.jpg",
-      "IdName":"magicaldimension"
+      "References":null
    },
    {
       "Id":"31786629",
@@ -2068,7 +2068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31786629.jpg",
-      "IdName":"thunderdragon"
+      "References":null
    },
    {
       "Id":"98494543",
@@ -2078,7 +2078,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98494543.jpg",
-      "IdName":"magicalstoneexcavation"
+      "References":null
    },
    {
       "Id":"99030164",
@@ -2088,7 +2088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99030164.jpg",
-      "IdName":"happylover"
+      "References":null
    },
    {
       "Id":"40640057",
@@ -2098,7 +2098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40640057.jpg",
-      "IdName":"kuriboh"
+      "References":null
    },
    {
       "Id":"38699854",
@@ -2108,7 +2108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38699854.jpg",
-      "IdName":"bookoftaiyou"
+      "References":null
    },
    {
       "Id":"31560081",
@@ -2118,7 +2118,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31560081.jpg",
-      "IdName":"magicianoffaith"
+      "References":null
    },
    {
       "Id":"22567609",
@@ -2128,7 +2128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22567609.jpg",
-      "IdName":"nimblemomonga"
+      "References":null
    },
    {
       "Id":"33508719",
@@ -2138,7 +2138,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33508719.jpg",
-      "IdName":"morphingjar"
+      "References":null
    },
    {
       "Id":"73628505",
@@ -2148,7 +2148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73628505.jpg",
-      "IdName":"terraforming"
+      "References":null
    },
    {
       "Id":"77044671",
@@ -2158,7 +2158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77044671.jpg",
-      "IdName":"pyramidturtle"
+      "References":null
    },
    {
       "Id":"97642679",
@@ -2168,7 +2168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97642679.jpg",
-      "IdName":"darkmasterzorc"
+      "References":null
    },
    {
       "Id":"70074904",
@@ -2178,7 +2178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70074904.jpg",
-      "IdName":"ddassailant"
+      "References":null
    },
    {
       "Id":"22790789",
@@ -2188,7 +2188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22790789.jpg",
-      "IdName":"bescrystalcore"
+      "References":null
    },
    {
       "Id":"74270067",
@@ -2198,7 +2198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74270067.jpg",
-      "IdName":"pikeruscircleofenchantment"
+      "References":null
    },
    {
       "Id":"62473983",
@@ -2208,7 +2208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62473983.jpg",
-      "IdName":"gravekeeperschief"
+      "References":null
    },
    {
       "Id":"16956455",
@@ -2218,7 +2218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16956455.jpg",
-      "IdName":"chironthemage"
+      "References":null
    },
    {
       "Id":"69035382",
@@ -2228,7 +2228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69035382.jpg",
-      "IdName":"contractwiththeabyss"
+      "References":null
    },
    {
       "Id":"20315854",
@@ -2238,7 +2238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20315854.jpg",
-      "IdName":"fairydragon"
+      "References":null
    },
    {
       "Id":"24317029",
@@ -2248,7 +2248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24317029.jpg",
-      "IdName":"gravekeepersspy"
+      "References":null
    },
    {
       "Id":"93554166",
@@ -2258,7 +2258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93554166.jpg",
-      "IdName":"darkworldlightning"
+      "References":null
    },
    {
       "Id":"78004197",
@@ -2268,7 +2268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78004197.jpg",
-      "IdName":"golddwulordofdarkworld"
+      "References":null
    },
    {
       "Id":"34627841",
@@ -2278,7 +2278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34627841.jpg",
-      "IdName":"kaibaman"
+      "References":null
    },
    {
       "Id":"61166988",
@@ -2288,7 +2288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61166988.jpg",
-      "IdName":"wildnaturesrelease"
+      "References":null
    },
    {
       "Id":"77121851",
@@ -2298,7 +2298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77121851.jpg",
-      "IdName":"manticoreofdarkness"
+      "References":null
    },
    {
       "Id":"23205979",
@@ -2308,7 +2308,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23205979.jpg",
-      "IdName":"spiritreaper"
+      "References":null
    },
    {
       "Id":"77754944",
@@ -2318,7 +2318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77754944.jpg",
-      "IdName":"widespreadruin"
+      "References":null
    },
    {
       "Id":"49140998",
@@ -2328,7 +2328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49140998.jpg",
-      "IdName":"afeatherofthephoenix"
+      "References":null
    },
    {
       "Id":"36045450",
@@ -2338,7 +2338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36045450.jpg",
-      "IdName":"magiciansunite"
+      "References":null
    },
    {
       "Id":"47355498",
@@ -2348,7 +2348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47355498.jpg",
-      "IdName":"necrovalley"
+      "References":null
    },
    {
       "Id":"9156135",
@@ -2358,7 +2358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9156135.jpg",
-      "IdName":"apprenticemagician"
+      "References":null
    },
    {
       "Id":"68005187",
@@ -2368,7 +2368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68005187.jpg",
-      "IdName":"soulexchange"
+      "References":null
    },
    {
       "Id":"50755",
@@ -2378,7 +2378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50755.jpg",
-      "IdName":"magicianscircle"
+      "References":null
    },
    {
       "Id":"17375316",
@@ -2388,7 +2388,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17375316.jpg",
-      "IdName":"confiscation"
+      "References":null
    },
    {
       "Id":"16556849",
@@ -2398,7 +2398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16556849.jpg",
-      "IdName":"freedthebravewanderer"
+      "References":null
    },
    {
       "Id":"77936940",
@@ -2408,7 +2408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77936940.jpg",
-      "IdName":"gernia"
+      "References":null
    },
    {
       "Id":"47606319",
@@ -2418,7 +2418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47606319.jpg",
-      "IdName":"gigantes"
+      "References":null
    },
    {
       "Id":"88279736",
@@ -2428,7 +2428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88279736.jpg",
-      "IdName":"robbingoblin"
+      "References":null
    },
    {
       "Id":"13676474",
@@ -2438,7 +2438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13676474.jpg",
-      "IdName":"grandtikielder"
+      "References":null
    },
    {
       "Id":"12538374",
@@ -2448,7 +2448,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12538374.jpg",
-      "IdName":"treebornfrog"
+      "References":null
    },
    {
       "Id":"22587018",
@@ -2458,7 +2458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22587018.jpg",
-      "IdName":"hydrogeddon"
+      "References":null
    },
    {
       "Id":"31423101",
@@ -2468,7 +2468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31423101.jpg",
-      "IdName":"divineswordphoenixblade"
+      "References":null
    },
    {
       "Id":"95492061",
@@ -2478,7 +2478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95492061.jpg",
-      "IdName":"manjuofthetenthousandhands"
+      "References":null
    },
    {
       "Id":"57839750",
@@ -2488,7 +2488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57839750.jpg",
-      "IdName":"mothergrizzly"
+      "References":null
    },
    {
       "Id":"80604091",
@@ -2498,7 +2498,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80604091.jpg",
-      "IdName":"ultimateoffering"
+      "References":null
    },
    {
       "Id":"27174286",
@@ -2508,7 +2508,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27174286.jpg",
-      "IdName":"returnfromthedifferentdimension"
+      "References":null
    },
    {
       "Id":"98446407",
@@ -2518,7 +2518,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98446407.jpg",
-      "IdName":"handofnephthys"
+      "References":null
    },
    {
       "Id":"79853073",
@@ -2528,7 +2528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79853073.jpg",
-      "IdName":"ciphersoldier"
+      "References":null
    },
    {
       "Id":"48092532",
@@ -2538,7 +2538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48092532.jpg",
-      "IdName":"ddsurvivor"
+      "References":null
    },
    {
       "Id":"29401950",
@@ -2548,7 +2548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29401950.jpg",
-      "IdName":"bottomlesstraphole"
+      "References":null
    },
    {
       "Id":"17968114",
@@ -2558,7 +2558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17968114.jpg",
-      "IdName":"amazonoftheseas"
+      "References":null
    },
    {
       "Id":"53239672",
@@ -2568,7 +2568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53239672.jpg",
-      "IdName":"spiritbarrier"
+      "References":null
    },
    {
       "Id":"38992735",
@@ -2578,7 +2578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38992735.jpg",
-      "IdName":"wavemotioncannon"
+      "References":null
    },
    {
       "Id":"14878871",
@@ -2588,7 +2588,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14878871.jpg",
-      "IdName":"rescuecat"
+      "References":null
    },
    {
       "Id":"64697231",
@@ -2598,7 +2598,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64697231.jpg",
-      "IdName":"trapdustshoot"
+      "References":null
    },
    {
       "Id":"24508238",
@@ -2608,7 +2608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24508238.jpg",
-      "IdName":"ddcrow"
+      "References":null
    },
    {
       "Id":"26412047",
@@ -2618,7 +2618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26412047.jpg",
-      "IdName":"hammershot"
+      "References":null
    },
    {
       "Id":"34717238",
@@ -2628,7 +2628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34717238.jpg",
-      "IdName":"pullingtherug"
+      "References":null
    },
    {
       "Id":"95178994",
@@ -2638,7 +2638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95178994.jpg",
-      "IdName":"giantgerm"
+      "References":null
    },
    {
       "Id":"53982768",
@@ -2648,7 +2648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53982768.jpg",
-      "IdName":"darkrulerhades"
+      "References":null
    },
    {
       "Id":"32362575",
@@ -2658,7 +2658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32362575.jpg",
-      "IdName":"magicalmerchant"
+      "References":null
    },
    {
       "Id":"63391643",
@@ -2668,7 +2668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63391643.jpg",
-      "IdName":"thousandknives"
+      "References":null
    },
    {
       "Id":"31829185",
@@ -2678,7 +2678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31829185.jpg",
-      "IdName":"darknecrofear"
+      "References":null
    },
    {
       "Id":"58921041",
@@ -2688,7 +2688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58921041.jpg",
-      "IdName":"antispellfragrance"
+      "References":null
    },
    {
       "Id":"24874630",
@@ -2698,7 +2698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24874630.jpg",
-      "IdName":"fiendssanctuary"
+      "References":null
    },
    {
       "Id":"58851034",
@@ -2708,7 +2708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58851034.jpg",
-      "IdName":"cursedsealoftheforbiddenspell"
+      "References":null
    },
    {
       "Id":"35027493",
@@ -2718,7 +2718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35027493.jpg",
-      "IdName":"deckdevastationvirus"
+      "References":null
    },
    {
       "Id":"69537999",
@@ -2728,7 +2728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69537999.jpg",
-      "IdName":"blazeaccelerator"
+      "References":null
    },
    {
       "Id":"40044918",
@@ -2738,7 +2738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40044918.jpg",
-      "IdName":"elementalherostratos"
+      "References":null
    },
    {
       "Id":"77527210",
@@ -2748,7 +2748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77527210.jpg",
-      "IdName":"soulofpurityandlight"
+      "References":null
    },
    {
       "Id":"78637313",
@@ -2758,7 +2758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78637313.jpg",
-      "IdName":"callofdarkness"
+      "References":null
    },
    {
       "Id":"81210420",
@@ -2768,7 +2768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81210420.jpg",
-      "IdName":"magicalhats"
+      "References":null
    },
    {
       "Id":"39507162",
@@ -2778,7 +2778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39507162.jpg",
-      "IdName":"bladeknight"
+      "References":null
    },
    {
       "Id":"20529766",
@@ -2788,7 +2788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20529766.jpg",
-      "IdName":"superelectromagneticvoltechdragon"
+      "References":null
    },
    {
       "Id":"80887952",
@@ -2798,7 +2798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80887952.jpg",
-      "IdName":"heliosduomegistus"
+      "References":null
    },
    {
       "Id":"63142001",
@@ -2808,7 +2808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63142001.jpg",
-      "IdName":"batterymanaa"
+      "References":null
    },
    {
       "Id":"80744121",
@@ -2818,7 +2818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80744121.jpg",
-      "IdName":"destinyherofearmonger"
+      "References":null
    },
    {
       "Id":"67095270",
@@ -2828,7 +2828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67095270.jpg",
-      "IdName":"dimensionwall"
+      "References":null
    },
    {
       "Id":"69303178",
@@ -2838,7 +2838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69303178.jpg",
-      "IdName":"majesticmechohka"
+      "References":null
    },
    {
       "Id":"60682203",
@@ -2848,7 +2848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60682203.jpg",
-      "IdName":"coldwave"
+      "References":null
    },
    {
       "Id":"39180960",
@@ -2858,7 +2858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39180960.jpg",
-      "IdName":"rigorousreaver"
+      "References":null
    },
    {
       "Id":"83746708",
@@ -2868,7 +2868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83746708.jpg",
-      "IdName":"magepower"
+      "References":null
    },
    {
       "Id":"85448931",
@@ -2878,7 +2878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85448931.jpg",
-      "IdName":"sentineloftheseas"
+      "References":null
    },
    {
       "Id":"63356631",
@@ -2888,7 +2888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63356631.jpg",
-      "IdName":"phoenixwingwindblast"
+      "References":null
    },
    {
       "Id":"45141844",
@@ -2898,7 +2898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45141844.jpg",
-      "IdName":"oldvindictivemagician"
+      "References":null
    },
    {
       "Id":"25573054",
@@ -2908,7 +2908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25573054.jpg",
-      "IdName":"transcendentwings"
+      "References":null
    },
    {
       "Id":"11678191",
@@ -2918,7 +2918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11678191.jpg",
-      "IdName":"protectivesoulailin"
+      "References":null
    },
    {
       "Id":"6540606",
@@ -2928,7 +2928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6540606.jpg",
-      "IdName":"spiritualwaterartaoi"
+      "References":null
    },
    {
       "Id":"79979666",
@@ -2938,7 +2938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79979666.jpg",
-      "IdName":"elementalherobubbleman"
+      "References":null
    },
    {
       "Id":"97362768",
@@ -2948,7 +2948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97362768.jpg",
-      "IdName":"sparkblaster"
+      "References":null
    },
    {
       "Id":"33875961",
@@ -2958,7 +2958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33875961.jpg",
-      "IdName":"darkcatapulter"
+      "References":null
    },
    {
       "Id":"22512237",
@@ -2968,7 +2968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22512237.jpg",
-      "IdName":"mechanicalhound"
+      "References":null
    },
    {
       "Id":"44883830",
@@ -2978,7 +2978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44883830.jpg",
-      "IdName":"descroaking"
+      "References":null
    },
    {
       "Id":"31000575",
@@ -2988,7 +2988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31000575.jpg",
-      "IdName":"conscription"
+      "References":null
    },
    {
       "Id":"46128076",
@@ -2998,7 +2998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46128076.jpg",
-      "IdName":"ebonmagiciancurran"
+      "References":null
    },
    {
       "Id":"59907935",
@@ -3008,7 +3008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59907935.jpg",
-      "IdName":"cyberarchfiend"
+      "References":null
    },
    {
       "Id":"70095154",
@@ -3018,7 +3018,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70095154.jpg",
-      "IdName":"cyberdragon"
+      "References":null
    },
    {
       "Id":"96428622",
@@ -3028,7 +3028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96428622.jpg",
-      "IdName":"cyberneticcyclopean"
+      "References":null
    },
    {
       "Id":"45945685",
@@ -3038,7 +3038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45945685.jpg",
-      "IdName":"cycroid"
+      "References":null
    },
    {
       "Id":"82112775",
@@ -3048,7 +3048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82112775.jpg",
-      "IdName":"ddmdifferentdimensionmaster"
+      "References":null
    },
    {
       "Id":"32723153",
@@ -3058,7 +3058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32723153.jpg",
-      "IdName":"magicalexplosion"
+      "References":null
    },
    {
       "Id":"57062206",
@@ -3068,7 +3068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57062206.jpg",
-      "IdName":"doitsu"
+      "References":null
    },
    {
       "Id":"74157028",
@@ -3078,7 +3078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74157028.jpg",
-      "IdName":"cybertwindragon"
+      "References":null
    },
    {
       "Id":"1546123",
@@ -3088,7 +3088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1546123.jpg",
-      "IdName":"cyberenddragon"
+      "References":null
    },
    {
       "Id":"71218746",
@@ -3098,7 +3098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71218746.jpg",
-      "IdName":"drillroid"
+      "References":null
    },
    {
       "Id":"78211862",
@@ -3108,7 +3108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78211862.jpg",
-      "IdName":"risingenergy"
+      "References":null
    },
    {
       "Id":"7672244",
@@ -3118,7 +3118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7672244.jpg",
-      "IdName":"shiensspy"
+      "References":null
    },
    {
       "Id":"43061293",
@@ -3128,7 +3128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43061293.jpg",
-      "IdName":"firedarts"
+      "References":null
    },
    {
       "Id":"45906428",
@@ -3138,7 +3138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45906428.jpg",
-      "IdName":"miraclefusion"
+      "References":null
    },
    {
       "Id":"63035430",
@@ -3148,7 +3148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63035430.jpg",
-      "IdName":"skyscraper"
+      "References":null
    },
    {
       "Id":"84451804",
@@ -3158,7 +3158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84451804.jpg",
-      "IdName":"desfrog"
+      "References":null
    },
    {
       "Id":"56840658",
@@ -3168,7 +3168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56840658.jpg",
-      "IdName":"poisondrawfrog"
+      "References":null
    },
    {
       "Id":"32752319",
@@ -3178,7 +3178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32752319.jpg",
-      "IdName":"uforoidfighter"
+      "References":null
    },
    {
       "Id":"18325492",
@@ -3188,7 +3188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18325492.jpg",
-      "IdName":"gyroid"
+      "References":null
    },
    {
       "Id":"97240270",
@@ -3198,7 +3198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97240270.jpg",
-      "IdName":"madlobster"
+      "References":null
    },
    {
       "Id":"23635815",
@@ -3208,7 +3208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23635815.jpg",
-      "IdName":"jerrybeansman"
+      "References":null
    },
    {
       "Id":"19733961",
@@ -3218,7 +3218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19733961.jpg",
-      "IdName":"batterymanc"
+      "References":null
    },
    {
       "Id":"43697559",
@@ -3228,7 +3228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43697559.jpg",
-      "IdName":"jetroid"
+      "References":null
    },
    {
       "Id":"58185394",
@@ -3238,7 +3238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58185394.jpg",
-      "IdName":"giantkozaky"
+      "References":null
    },
    {
       "Id":"42945701",
@@ -3248,7 +3248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42945701.jpg",
-      "IdName":"spiritualfireartkurenai"
+      "References":null
    },
    {
       "Id":"98585345",
@@ -3258,7 +3258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98585345.jpg",
-      "IdName":"wingedkuribohlv10"
+      "References":null
    },
    {
       "Id":"70156997",
@@ -3268,7 +3268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70156997.jpg",
-      "IdName":"spiritualearthartkurogane"
+      "References":null
    },
    {
       "Id":"84173492",
@@ -3278,7 +3278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84173492.jpg",
-      "IdName":"indomitablefighterleilei"
+      "References":null
    },
    {
       "Id":"37630732",
@@ -3288,7 +3288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37630732.jpg",
-      "IdName":"powerbond"
+      "References":null
    },
    {
       "Id":"59023523",
@@ -3298,7 +3298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59023523.jpg",
-      "IdName":"cyberneticmagician"
+      "References":null
    },
    {
       "Id":"71490127",
@@ -3308,7 +3308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71490127.jpg",
-      "IdName":"dragonsmirror"
+      "References":null
    },
    {
       "Id":"79333300",
@@ -3318,7 +3318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79333300.jpg",
-      "IdName":"spiritualwindartmiyabi"
+      "References":null
    },
    {
       "Id":"5728014",
@@ -3328,7 +3328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5728014.jpg",
-      "IdName":"arivalappears"
+      "References":null
    },
    {
       "Id":"71930383",
@@ -3338,7 +3338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71930383.jpg",
-      "IdName":"patroid"
+      "References":null
    },
    {
       "Id":"70278545",
@@ -3348,7 +3348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70278545.jpg",
-      "IdName":"potofgenerosity"
+      "References":null
    },
    {
       "Id":"4483989",
@@ -3358,7 +3358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4483989.jpg",
-      "IdName":"preparetostrikeback"
+      "References":null
    },
    {
       "Id":"18511384",
@@ -3368,7 +3368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18511384.jpg",
-      "IdName":"fusionrecovery"
+      "References":null
    },
    {
       "Id":"61968753",
@@ -3378,7 +3378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61968753.jpg",
-      "IdName":"bubbleshuffle"
+      "References":null
    },
    {
       "Id":"60246171",
@@ -3388,7 +3388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60246171.jpg",
-      "IdName":"soitsu"
+      "References":null
    },
    {
       "Id":"5368615",
@@ -3398,7 +3398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5368615.jpg",
-      "IdName":"steamgyroid"
+      "References":null
    },
    {
       "Id":"44729197",
@@ -3408,7 +3408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44729197.jpg",
-      "IdName":"steamroid"
+      "References":null
    },
    {
       "Id":"18895832",
@@ -3418,7 +3418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18895832.jpg",
-      "IdName":"systemdown"
+      "References":null
    },
    {
       "Id":"10456559",
@@ -3428,7 +3428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10456559.jpg",
-      "IdName":"tadpole"
+      "References":null
    },
    {
       "Id":"5606466",
@@ -3438,7 +3438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5606466.jpg",
-      "IdName":"ddtraphole"
+      "References":null
    },
    {
       "Id":"85306040",
@@ -3448,7 +3448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85306040.jpg",
-      "IdName":"goblineliteattackforce"
+      "References":null
    },
    {
       "Id":"83235263",
@@ -3458,7 +3458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83235263.jpg",
-      "IdName":"tyrannoinfinity"
+      "References":null
    },
    {
       "Id":"7602840",
@@ -3468,7 +3468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7602840.jpg",
-      "IdName":"uforoid"
+      "References":null
    },
    {
       "Id":"6480253",
@@ -3478,7 +3478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6480253.jpg",
-      "IdName":"wroughtweiler"
+      "References":null
    },
    {
       "Id":"32491822",
@@ -3488,7 +3488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32491822.jpg",
-      "IdName":"hamonlordofstrikingthunder"
+      "References":null
    },
    {
       "Id":"25366484",
@@ -3498,7 +3498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25366484.jpg",
-      "IdName":"elementalheroshiningflarewingman"
+      "References":null
    },
    {
       "Id":"6007213",
@@ -3508,7 +3508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6007213.jpg",
-      "IdName":"urialordofsearingflames"
+      "References":null
    },
    {
       "Id":"60493189",
@@ -3518,7 +3518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60493189.jpg",
-      "IdName":"elementalheroplasmavice"
+      "References":null
    },
    {
       "Id":"79856792",
@@ -3528,7 +3528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79856792.jpg",
-      "IdName":"rainbowdragon"
+      "References":null
    },
    {
       "Id":"32543380",
@@ -3538,7 +3538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32543380.jpg",
-      "IdName":"volcanicdoomfire"
+      "References":null
    },
    {
       "Id":"10375182",
@@ -3548,7 +3548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10375182.jpg",
-      "IdName":"commandknight"
+      "References":null
    },
    {
       "Id":"16589042",
@@ -3558,7 +3558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16589042.jpg",
-      "IdName":"swiftgaiathefierceknight"
+      "References":null
    },
    {
       "Id":"52077741",
@@ -3568,7 +3568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52077741.jpg",
-      "IdName":"obnoxiouscelticguard"
+      "References":null
    },
    {
       "Id":"91512835",
@@ -3578,7 +3578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91512835.jpg",
-      "IdName":"insectqueen"
+      "References":null
    },
    {
       "Id":"75372290",
@@ -3588,7 +3588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75372290.jpg",
-      "IdName":"totaldefenseshogun"
+      "References":null
    },
    {
       "Id":"36354007",
@@ -3598,7 +3598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36354007.jpg",
-      "IdName":"gilfordthelightning"
+      "References":null
    },
    {
       "Id":"42035044",
@@ -3608,7 +3608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42035044.jpg",
-      "IdName":"pantherwarrior"
+      "References":null
    },
    {
       "Id":"30860696",
@@ -3618,7 +3618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30860696.jpg",
-      "IdName":"rocketwarrior"
+      "References":null
    },
    {
       "Id":"38033121",
@@ -3628,7 +3628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38033121.jpg",
-      "IdName":"darkmagiciangirl"
+      "References":null
    },
    {
       "Id":"14898066",
@@ -3638,7 +3638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14898066.jpg",
-      "IdName":"vorseraider"
+      "References":null
    },
    {
       "Id":"63749102",
@@ -3648,7 +3648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63749102.jpg",
-      "IdName":"exarionuniverse"
+      "References":null
    },
    {
       "Id":"77910045",
@@ -3658,7 +3658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77910045.jpg",
-      "IdName":"fatalabacus"
+      "References":null
    },
    {
       "Id":"29618570",
@@ -3668,7 +3668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29618570.jpg",
-      "IdName":"graywing"
+      "References":null
    },
    {
       "Id":"52860176",
@@ -3678,7 +3678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52860176.jpg",
-      "IdName":"possesseddarksoul"
+      "References":null
    },
    {
       "Id":"82085619",
@@ -3688,7 +3688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82085619.jpg",
-      "IdName":"shiningfriendship"
+      "References":null
    },
    {
       "Id":"20436034",
@@ -3698,7 +3698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20436034.jpg",
-      "IdName":"ringofmagnetism"
+      "References":null
    },
    {
       "Id":"80741828",
@@ -3708,7 +3708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80741828.jpg",
-      "IdName":"witchsapprentice"
+      "References":null
    },
    {
       "Id":"25345186",
@@ -3718,7 +3718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25345186.jpg",
-      "IdName":"afterthestruggle"
+      "References":null
    },
    {
       "Id":"87322377",
@@ -3728,7 +3728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87322377.jpg",
-      "IdName":"launcherspider"
+      "References":null
    },
    {
       "Id":"99173029",
@@ -3738,7 +3738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99173029.jpg",
-      "IdName":"spiritualenergysettlemachine"
+      "References":null
    },
    {
       "Id":"37576645",
@@ -3748,7 +3748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37576645.jpg",
-      "IdName":"recklessgreed"
+      "References":null
    },
    {
       "Id":"48305365",
@@ -3758,7 +3758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48305365.jpg",
-      "IdName":"axeraider"
+      "References":null
    },
    {
       "Id":"70344351",
@@ -3768,7 +3768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70344351.jpg",
-      "IdName":"riryokufield"
+      "References":null
    },
    {
       "Id":"40133511",
@@ -3778,7 +3778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40133511.jpg",
-      "IdName":"bazoothesouleater"
+      "References":null
    },
    {
       "Id":"88819587",
@@ -3788,7 +3788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88819587.jpg",
-      "IdName":"babydragon"
+      "References":null
    },
    {
       "Id":"25880422",
@@ -3798,7 +3798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25880422.jpg",
-      "IdName":"blockattack"
+      "References":null
    },
    {
       "Id":"18246479",
@@ -3808,7 +3808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18246479.jpg",
-      "IdName":"battlesteer"
+      "References":null
    },
    {
       "Id":"71107816",
@@ -3818,7 +3818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71107816.jpg",
-      "IdName":"thebistrobutcher"
+      "References":null
    },
    {
       "Id":"52097679",
@@ -3828,7 +3828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52097679.jpg",
-      "IdName":"shieldsword"
+      "References":null
    },
    {
       "Id":"77414722",
@@ -3838,7 +3838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77414722.jpg",
-      "IdName":"magicjammer"
+      "References":null
    },
    {
       "Id":"2460565",
@@ -3848,7 +3848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2460565.jpg",
-      "IdName":"maraudingcaptain"
+      "References":null
    },
    {
       "Id":"94905343",
@@ -3858,7 +3858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94905343.jpg",
-      "IdName":"rabidhorseman"
+      "References":null
    },
    {
       "Id":"68516705",
@@ -3868,7 +3868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68516705.jpg",
-      "IdName":"mystichorseman"
+      "References":null
    },
    {
       "Id":"1804528",
@@ -3878,7 +3878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1804528.jpg",
-      "IdName":"darkcoffin"
+      "References":null
    },
    {
       "Id":"98239899",
@@ -3888,7 +3888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98239899.jpg",
-      "IdName":"blastwithchain"
+      "References":null
    },
    {
       "Id":"79571449",
@@ -3898,21 +3898,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"79571449,55144522,33904024",
       "Image":"https://images.ygoprodeck.com/images/cards/79571449.jpg",
-      "IdName":"gracefulcharity",
-      "LimitFriendsCards":[
-         {
-            "IdName":"gracefulcharity",
-            "Image":"https://images.ygoprodeck.com/images/cards/79571449.jpg"
-         },
-         {
-            "IdName":"potofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/55144522.jpg"
-         },
-         {
-            "IdName":"shardofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/33904024.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"55763552",
@@ -3922,7 +3908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55763552.jpg",
-      "IdName":"dragonpiper"
+      "References":null
    },
    {
       "Id":"7359741",
@@ -3932,7 +3918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7359741.jpg",
-      "IdName":"mechanicalchaser"
+      "References":null
    },
    {
       "Id":"28563545",
@@ -3942,7 +3928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28563545.jpg",
-      "IdName":"dragonseeker"
+      "References":null
    },
    {
       "Id":"13215230",
@@ -3952,7 +3938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13215230.jpg",
-      "IdName":"dreamclown"
+      "References":null
    },
    {
       "Id":"93889755",
@@ -3962,7 +3948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93889755.jpg",
-      "IdName":"crassclown"
+      "References":null
    },
    {
       "Id":"64801562",
@@ -3972,7 +3958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64801562.jpg",
-      "IdName":"heartofclearwater"
+      "References":null
    },
    {
       "Id":"62966332",
@@ -3982,7 +3968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62966332.jpg",
-      "IdName":"convulsionofnature"
+      "References":null
    },
    {
       "Id":"98069388",
@@ -3992,7 +3978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98069388.jpg",
-      "IdName":"hornofheaven"
+      "References":null
    },
    {
       "Id":"5616412",
@@ -4002,7 +3988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5616412.jpg",
-      "IdName":"destructionpunch"
+      "References":null
    },
    {
       "Id":"15653824",
@@ -4012,7 +3998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15653824.jpg",
-      "IdName":"skullknight2"
+      "References":null
    },
    {
       "Id":"61622107",
@@ -4022,7 +4008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61622107.jpg",
-      "IdName":"bubblecrash"
+      "References":null
    },
    {
       "Id":"75285069",
@@ -4032,7 +4018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75285069.jpg",
-      "IdName":"moisturecreature"
+      "References":null
    },
    {
       "Id":"69015963",
@@ -4042,7 +4028,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69015963.jpg",
-      "IdName":"cyberstein"
+      "References":null
    },
    {
       "Id":"75953262",
@@ -4052,7 +4038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75953262.jpg",
-      "IdName":"warriordaigrepher"
+      "References":null
    },
    {
       "Id":"80071763",
@@ -4062,7 +4048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80071763.jpg",
-      "IdName":"darkbaltertheterrible"
+      "References":null
    },
    {
       "Id":"95286165",
@@ -4072,7 +4058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95286165.jpg",
-      "IdName":"defusion"
+      "References":null
    },
    {
       "Id":"51452091",
@@ -4082,7 +4068,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51452091.jpg",
-      "IdName":"royaldecree"
+      "References":null
    },
    {
       "Id":"53493204",
@@ -4092,7 +4078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53493204.jpg",
-      "IdName":"goddesswiththethirdeye"
+      "References":null
    },
    {
       "Id":"43509019",
@@ -4102,7 +4088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43509019.jpg",
-      "IdName":"toondefense"
+      "References":null
    },
    {
       "Id":"76297408",
@@ -4112,7 +4098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76297408.jpg",
-      "IdName":"souldemolition"
+      "References":null
    },
    {
       "Id":"16475472",
@@ -4122,7 +4108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16475472.jpg",
-      "IdName":"lesserfiend"
+      "References":null
    },
    {
       "Id":"28566710",
@@ -4132,7 +4118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28566710.jpg",
-      "IdName":"lastturn"
+      "References":null
    },
    {
       "Id":"32015116",
@@ -4142,7 +4128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32015116.jpg",
-      "IdName":"blinddestruction"
+      "References":null
    },
    {
       "Id":"36562627",
@@ -4152,7 +4138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36562627.jpg",
-      "IdName":"secondcointoss"
+      "References":null
    },
    {
       "Id":"24623598",
@@ -4162,7 +4148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24623598.jpg",
-      "IdName":"disappear"
+      "References":null
    },
    {
       "Id":"76922029",
@@ -4172,7 +4158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76922029.jpg",
-      "IdName":"donzaloog"
+      "References":null
    },
    {
       "Id":"3682106",
@@ -4182,7 +4168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3682106.jpg",
-      "IdName":"doublesnare"
+      "References":null
    },
    {
       "Id":"66235877",
@@ -4192,7 +4178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66235877.jpg",
-      "IdName":"fiendskulldragon"
+      "References":null
    },
    {
       "Id":"93220472",
@@ -4202,7 +4188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93220472.jpg",
-      "IdName":"cavedragon"
+      "References":null
    },
    {
       "Id":"87564352",
@@ -4212,7 +4198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87564352.jpg",
-      "IdName":"blacklandfiredragon"
+      "References":null
    },
    {
       "Id":"54752875",
@@ -4222,7 +4208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54752875.jpg",
-      "IdName":"twinheadedthunderdragon"
+      "References":null
    },
    {
       "Id":"17658803",
@@ -4232,7 +4218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17658803.jpg",
-      "IdName":"lusterdragon2"
+      "References":null
    },
    {
       "Id":"41462083",
@@ -4242,7 +4228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41462083.jpg",
-      "IdName":"thousanddragon"
+      "References":null
    },
    {
       "Id":"94568601",
@@ -4252,7 +4238,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94568601.jpg",
-      "IdName":"tyrantdragon"
+      "References":null
    },
    {
       "Id":"76862289",
@@ -4262,7 +4248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76862289.jpg",
-      "IdName":"yamatadragon"
+      "References":null
    },
    {
       "Id":"63018132",
@@ -4272,7 +4258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63018132.jpg",
-      "IdName":"dragonmanipulator"
+      "References":null
    },
    {
       "Id":"37620434",
@@ -4282,7 +4268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37620434.jpg",
-      "IdName":"shadowtamer"
+      "References":null
    },
    {
       "Id":"81385346",
@@ -4292,7 +4278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81385346.jpg",
-      "IdName":"stampingdestruction"
+      "References":null
    },
    {
       "Id":"40633297",
@@ -4302,7 +4288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40633297.jpg",
-      "IdName":"badreactiontosimochi"
+      "References":null
    },
    {
       "Id":"69954399",
@@ -4312,7 +4298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69954399.jpg",
-      "IdName":"ekibyodrakmord"
+      "References":null
    },
    {
       "Id":"27324313",
@@ -4322,7 +4308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27324313.jpg",
-      "IdName":"wattkid"
+      "References":null
    },
    {
       "Id":"42386471",
@@ -4332,7 +4318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42386471.jpg",
-      "IdName":"toongeminielf"
+      "References":null
    },
    {
       "Id":"76754619",
@@ -4342,7 +4328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76754619.jpg",
-      "IdName":"pyramidenergy"
+      "References":null
    },
    {
       "Id":"53119267",
@@ -4352,7 +4338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53119267.jpg",
-      "IdName":"magicalthorn"
+      "References":null
    },
    {
       "Id":"89111398",
@@ -4362,7 +4348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89111398.jpg",
-      "IdName":"darkdustspirit"
+      "References":null
    },
    {
       "Id":"93599951",
@@ -4372,7 +4358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93599951.jpg",
-      "IdName":"darkspiritofthesilent"
+      "References":null
    },
    {
       "Id":"67957315",
@@ -4382,7 +4368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67957315.jpg",
-      "IdName":"spiritryu"
+      "References":null
    },
    {
       "Id":"6979239",
@@ -4392,7 +4378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6979239.jpg",
-      "IdName":"woodlandsprite"
+      "References":null
    },
    {
       "Id":"46918794",
@@ -4402,7 +4388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46918794.jpg",
-      "IdName":"tremendousfire"
+      "References":null
    },
    {
       "Id":"78706415",
@@ -4412,7 +4398,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78706415.jpg",
-      "IdName":"fiberjar"
+      "References":null
    },
    {
       "Id":"44095762",
@@ -4422,21 +4408,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"44095762,69162969,53129443",
       "Image":"https://images.ygoprodeck.com/images/cards/44095762.jpg",
-      "IdName":"mirrorforce",
-      "LimitFriendsCards":[
-         {
-            "IdName":"mirrorforce",
-            "Image":"https://images.ygoprodeck.com/images/cards/44095762.jpg"
-         },
-         {
-            "IdName":"darkhole",
-            "Image":"https://images.ygoprodeck.com/images/cards/53129443.jpg"
-         },
-         {
-            "IdName":"lightningvortex",
-            "Image":"https://images.ygoprodeck.com/images/cards/69162969.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"6343408",
@@ -4446,7 +4418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6343408.jpg",
-      "IdName":"miracledig"
+      "References":null
    },
    {
       "Id":"49681811",
@@ -4456,7 +4428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49681811.jpg",
-      "IdName":"freedthematchlessgeneral"
+      "References":null
    },
    {
       "Id":"63789924",
@@ -4466,7 +4438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63789924.jpg",
-      "IdName":"smokegrenadeofthethief"
+      "References":null
    },
    {
       "Id":"38538445",
@@ -4476,7 +4448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38538445.jpg",
-      "IdName":"fushinotori"
+      "References":null
    },
    {
       "Id":"39711336",
@@ -4486,7 +4458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39711336.jpg",
-      "IdName":"fushiohrichie"
+      "References":null
    },
    {
       "Id":"8201910",
@@ -4496,7 +4468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8201910.jpg",
-      "IdName":"starboy"
+      "References":null
    },
    {
       "Id":"16509093",
@@ -4506,7 +4478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16509093.jpg",
-      "IdName":"royalkeeper"
+      "References":null
    },
    {
       "Id":"5818798",
@@ -4516,7 +4488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5818798.jpg",
-      "IdName":"gazellethekingofmythicalbeasts"
+      "References":null
    },
    {
       "Id":"69140098",
@@ -4526,7 +4498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69140098.jpg",
-      "IdName":"geminielf"
+      "References":null
    },
    {
       "Id":"99510761",
@@ -4536,7 +4508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99510761.jpg",
-      "IdName":"lordofthelamp"
+      "References":null
    },
    {
       "Id":"45894482",
@@ -4546,7 +4518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45894482.jpg",
-      "IdName":"gilasaurus"
+      "References":null
    },
    {
       "Id":"30778711",
@@ -4556,7 +4528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30778711.jpg",
-      "IdName":"shadowghoul"
+      "References":null
    },
    {
       "Id":"88989706",
@@ -4566,7 +4538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88989706.jpg",
-      "IdName":"greatdezard"
+      "References":null
    },
    {
       "Id":"48579379",
@@ -4576,7 +4548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48579379.jpg",
-      "IdName":"perfectlyultimategreatmoth"
+      "References":null
    },
    {
       "Id":"14141448",
@@ -4586,7 +4558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14141448.jpg",
-      "IdName":"greatmoth"
+      "References":null
    },
    {
       "Id":"75745607",
@@ -4596,7 +4568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75745607.jpg",
-      "IdName":"hinokagutsuchi"
+      "References":null
    },
    {
       "Id":"67629977",
@@ -4606,7 +4578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67629977.jpg",
-      "IdName":"hoshiningen"
+      "References":null
    },
    {
       "Id":"77084837",
@@ -4616,7 +4588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77084837.jpg",
-      "IdName":"inabawhiterabbit"
+      "References":null
    },
    {
       "Id":"42364374",
@@ -4626,7 +4598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42364374.jpg",
-      "IdName":"arsenalbug"
+      "References":null
    },
    {
       "Id":"92394653",
@@ -4636,7 +4608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92394653.jpg",
-      "IdName":"spiritsinvitation"
+      "References":null
    },
    {
       "Id":"3549275",
@@ -4646,7 +4618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3549275.jpg",
-      "IdName":"dicejar"
+      "References":null
    },
    {
       "Id":"94773007",
@@ -4656,7 +4628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94773007.jpg",
-      "IdName":"jiraigumo"
+      "References":null
    },
    {
       "Id":"41855169",
@@ -4666,7 +4638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41855169.jpg",
-      "IdName":"jowgenthespiritualist"
+      "References":null
    },
    {
       "Id":"17444133",
@@ -4676,7 +4648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17444133.jpg",
-      "IdName":"kaiserseahorse"
+      "References":null
    },
    {
       "Id":"61831093",
@@ -4686,7 +4658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61831093.jpg",
-      "IdName":"greenkappa"
+      "References":null
    },
    {
       "Id":"82642348",
@@ -4696,7 +4668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82642348.jpg",
-      "IdName":"kryuel"
+      "References":null
    },
    {
       "Id":"88240808",
@@ -4706,7 +4678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88240808.jpg",
-      "IdName":"kycootheghostdestroyer"
+      "References":null
    },
    {
       "Id":"47852924",
@@ -4716,7 +4688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47852924.jpg",
-      "IdName":"soulofthepure"
+      "References":null
    },
    {
       "Id":"4861205",
@@ -4726,7 +4698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4861205.jpg",
-      "IdName":"callofthemummy"
+      "References":null
    },
    {
       "Id":"40916023",
@@ -4736,7 +4708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40916023.jpg",
-      "IdName":"aquaspirit"
+      "References":null
    },
    {
       "Id":"76305638",
@@ -4746,7 +4718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76305638.jpg",
-      "IdName":"therockspirit"
+      "References":null
    },
    {
       "Id":"95220856",
@@ -4756,7 +4728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95220856.jpg",
-      "IdName":"vengefulbogspirit"
+      "References":null
    },
    {
       "Id":"84926738",
@@ -4766,7 +4738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84926738.jpg",
-      "IdName":"theimmortalofthunder"
+      "References":null
    },
    {
       "Id":"86099788",
@@ -4776,7 +4748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86099788.jpg",
-      "IdName":"thelastwarriorfromanotherplanet"
+      "References":null
    },
    {
       "Id":"54178050",
@@ -4786,7 +4758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54178050.jpg",
-      "IdName":"dragonsrage"
+      "References":null
    },
    {
       "Id":"51275027",
@@ -4796,7 +4768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51275027.jpg",
-      "IdName":"theunhappymaiden"
+      "References":null
    },
    {
       "Id":"92408984",
@@ -4806,7 +4778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92408984.jpg",
-      "IdName":"thedragonsbead"
+      "References":null
    },
    {
       "Id":"30606547",
@@ -4816,7 +4788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30606547.jpg",
-      "IdName":"thedarkdoor"
+      "References":null
    },
    {
       "Id":"74131780",
@@ -4826,7 +4798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74131780.jpg",
-      "IdName":"exiledforce"
+      "References":null
    },
    {
       "Id":"55773067",
@@ -4836,7 +4808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55773067.jpg",
-      "IdName":"dropoff"
+      "References":null
    },
    {
       "Id":"28470714",
@@ -4846,7 +4818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28470714.jpg",
-      "IdName":"bladefly"
+      "References":null
    },
    {
       "Id":"31553716",
@@ -4856,7 +4828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31553716.jpg",
-      "IdName":"speardragon"
+      "References":null
    },
    {
       "Id":"5494820",
@@ -4866,7 +4838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5494820.jpg",
-      "IdName":"cyclonlaser"
+      "References":null
    },
    {
       "Id":"28596933",
@@ -4876,7 +4848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28596933.jpg",
-      "IdName":"awingbeatofgiantdragon"
+      "References":null
    },
    {
       "Id":"95281259",
@@ -4886,7 +4858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95281259.jpg",
-      "IdName":"thewarriorreturningalive"
+      "References":null
    },
    {
       "Id":"2204140",
@@ -4896,7 +4868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2204140.jpg",
-      "IdName":"bookoflife"
+      "References":null
    },
    {
       "Id":"6733059",
@@ -4906,7 +4878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6733059.jpg",
-      "IdName":"skulllair"
+      "References":null
    },
    {
       "Id":"41925941",
@@ -4916,7 +4888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41925941.jpg",
-      "IdName":"barkofdarkruler"
+      "References":null
    },
    {
       "Id":"38742075",
@@ -4926,7 +4898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38742075.jpg",
-      "IdName":"frontierwiseman"
+      "References":null
    },
    {
       "Id":"99351431",
@@ -4936,7 +4908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99351431.jpg",
-      "IdName":"thesecretofthebandit"
+      "References":null
    },
    {
       "Id":"55991637",
@@ -4946,7 +4918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55991637.jpg",
-      "IdName":"dragonsgunfire"
+      "References":null
    },
    {
       "Id":"6285791",
@@ -4956,7 +4928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6285791.jpg",
-      "IdName":"thewickedwormbeast"
+      "References":null
    },
    {
       "Id":"403847",
@@ -4966,7 +4938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/403847.jpg",
-      "IdName":"theaforces"
+      "References":null
    },
    {
       "Id":"68400115",
@@ -4976,7 +4948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68400115.jpg",
-      "IdName":"theemperorsholiday"
+      "References":null
    },
    {
       "Id":"79575620",
@@ -4986,7 +4958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79575620.jpg",
-      "IdName":"injectionfairylily"
+      "References":null
    },
    {
       "Id":"2356994",
@@ -4996,7 +4968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2356994.jpg",
-      "IdName":"greatlongnose"
+      "References":null
    },
    {
       "Id":"88132637",
@@ -5006,7 +4978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88132637.jpg",
-      "IdName":"twinheadedwolf"
+      "References":null
    },
    {
       "Id":"45895206",
@@ -5016,7 +4988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45895206.jpg",
-      "IdName":"darkpiercinglight"
+      "References":null
    },
    {
       "Id":"5257687",
@@ -5026,7 +4998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5257687.jpg",
-      "IdName":"jowlsofdarkdemise"
+      "References":null
    },
    {
       "Id":"28546905",
@@ -5036,7 +5008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28546905.jpg",
-      "IdName":"illusionistfacelessmage"
+      "References":null
    },
    {
       "Id":"71625222",
@@ -5046,7 +5018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71625222.jpg",
-      "IdName":"timewizard"
+      "References":null
    },
    {
       "Id":"40695128",
@@ -5056,7 +5028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40695128.jpg",
-      "IdName":"maharaghi"
+      "References":null
    },
    {
       "Id":"2926176",
@@ -5066,7 +5038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2926176.jpg",
-      "IdName":"curseofroyal"
+      "References":null
    },
    {
       "Id":"71466592",
@@ -5076,7 +5048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71466592.jpg",
-      "IdName":"maryokutai"
+      "References":null
    },
    {
       "Id":"3149764",
@@ -5086,7 +5058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3149764.jpg",
-      "IdName":"tutanmask"
+      "References":null
    },
    {
       "Id":"94772232",
@@ -5096,7 +5068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94772232.jpg",
-      "IdName":"spiritmessagea"
+      "References":null
    },
    {
       "Id":"31893528",
@@ -5106,7 +5078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31893528.jpg",
-      "IdName":"spiritmessagei"
+      "References":null
    },
    {
       "Id":"30170981",
@@ -5116,7 +5088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30170981.jpg",
-      "IdName":"spiritmessagel"
+      "References":null
    },
    {
       "Id":"67287533",
@@ -5126,7 +5098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67287533.jpg",
-      "IdName":"spiritmessagen"
+      "References":null
    },
    {
       "Id":"7489323",
@@ -5136,7 +5108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7489323.jpg",
-      "IdName":"milusradiant"
+      "References":null
    },
    {
       "Id":"89258225",
@@ -5146,7 +5118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89258225.jpg",
-      "IdName":"wingedminion"
+      "References":null
    },
    {
       "Id":"41482598",
@@ -5156,7 +5128,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41482598.jpg",
-      "IdName":"mirageofnightmare"
+      "References":null
    },
    {
       "Id":"78266168",
@@ -5166,7 +5138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78266168.jpg",
-      "IdName":"giantaxemummy"
+      "References":null
    },
    {
       "Id":"42994702",
@@ -5176,7 +5148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42994702.jpg",
-      "IdName":"wanderingmummy"
+      "References":null
    },
    {
       "Id":"46657337",
@@ -5186,7 +5158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46657337.jpg",
-      "IdName":"mukamuka"
+      "References":null
    },
    {
       "Id":"38299233",
@@ -5196,7 +5168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38299233.jpg",
-      "IdName":"needlewall"
+      "References":null
    },
    {
       "Id":"37684215",
@@ -5206,7 +5178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37684215.jpg",
-      "IdName":"fusionswordmurasameblade"
+      "References":null
    },
    {
       "Id":"41872150",
@@ -5216,7 +5188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41872150.jpg",
-      "IdName":"swarmoflocusts"
+      "References":null
    },
    {
       "Id":"15383415",
@@ -5226,7 +5198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15383415.jpg",
-      "IdName":"swarmofscarabs"
+      "References":null
    },
    {
       "Id":"70797118",
@@ -5236,7 +5208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70797118.jpg",
-      "IdName":"thundernyannyan"
+      "References":null
    },
    {
       "Id":"295517",
@@ -5246,7 +5218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/295517.jpg",
-      "IdName":"alegendaryocean"
+      "References":null
    },
    {
       "Id":"71283180",
@@ -5256,7 +5228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71283180.jpg",
-      "IdName":"tornadobird"
+      "References":null
    },
    {
       "Id":"93016201",
@@ -5266,7 +5238,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93016201.jpg",
-      "IdName":"royaloppression"
+      "References":null
    },
    {
       "Id":"14531242",
@@ -5276,7 +5248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14531242.jpg",
-      "IdName":"opticlops"
+      "References":null
    },
    {
       "Id":"14291024",
@@ -5286,7 +5258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14291024.jpg",
-      "IdName":"gradiusoption"
+      "References":null
    },
    {
       "Id":"39537362",
@@ -5296,7 +5268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39537362.jpg",
-      "IdName":"ordealofatraveler"
+      "References":null
    },
    {
       "Id":"33950246",
@@ -5306,7 +5278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33950246.jpg",
-      "IdName":"royalcommand"
+      "References":null
    },
    {
       "Id":"39751093",
@@ -5316,7 +5288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39751093.jpg",
-      "IdName":"otohime"
+      "References":null
    },
    {
       "Id":"18036057",
@@ -5326,7 +5298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18036057.jpg",
-      "IdName":"airknightparshath"
+      "References":null
    },
    {
       "Id":"56830749",
@@ -5336,7 +5308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56830749.jpg",
-      "IdName":"sharethepain"
+      "References":null
    },
    {
       "Id":"77876207",
@@ -5346,7 +5318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77876207.jpg",
-      "IdName":"secretpasstothetreasures"
+      "References":null
    },
    {
       "Id":"19153634",
@@ -5356,7 +5328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19153634.jpg",
-      "IdName":"patricianofdarkness"
+      "References":null
    },
    {
       "Id":"31036355",
@@ -5366,7 +5338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31036355.jpg",
-      "IdName":"creatureswap"
+      "References":null
    },
    {
       "Id":"68658728",
@@ -5376,7 +5348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68658728.jpg",
-      "IdName":"littlechimera"
+      "References":null
    },
    {
       "Id":"40933924",
@@ -5386,7 +5358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40933924.jpg",
-      "IdName":"darkscorpionburglars"
+      "References":null
    },
    {
       "Id":"38411870",
@@ -5396,7 +5368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38411870.jpg",
-      "IdName":"needleceiling"
+      "References":null
    },
    {
       "Id":"33550694",
@@ -5406,7 +5378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33550694.jpg",
-      "IdName":"fusiongate"
+      "References":null
    },
    {
       "Id":"40703393",
@@ -5416,7 +5388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40703393.jpg",
-      "IdName":"thepuppetmagicofdarkruler"
+      "References":null
    },
    {
       "Id":"2134346",
@@ -5426,7 +5398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2134346.jpg",
-      "IdName":"asurapriest"
+      "References":null
    },
    {
       "Id":"51371017",
@@ -5436,7 +5408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51371017.jpg",
-      "IdName":"princessoftsurugi"
+      "References":null
    },
    {
       "Id":"71829750",
@@ -5446,7 +5418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71829750.jpg",
-      "IdName":"serpentineprincess"
+      "References":null
    },
    {
       "Id":"94425169",
@@ -5456,7 +5428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94425169.jpg",
-      "IdName":"springofrebirth"
+      "References":null
    },
    {
       "Id":"53046408",
@@ -5466,7 +5438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53046408.jpg",
-      "IdName":"emergencyprovisions"
+      "References":null
    },
    {
       "Id":"33737664",
@@ -5476,7 +5448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33737664.jpg",
-      "IdName":"graverobbersretribution"
+      "References":null
    },
    {
       "Id":"61844784",
@@ -5486,7 +5458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61844784.jpg",
-      "IdName":"magicreflector"
+      "References":null
    },
    {
       "Id":"32807846",
@@ -5496,7 +5468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32807846.jpg",
-      "IdName":"reinforcementofthearmy"
+      "References":null
    },
    {
       "Id":"99518961",
@@ -5506,7 +5478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99518961.jpg",
-      "IdName":"restructerrevolution"
+      "References":null
    },
    {
       "Id":"81480460",
@@ -5516,7 +5488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81480460.jpg",
-      "IdName":"barreldragon"
+      "References":null
    },
    {
       "Id":"41426869",
@@ -5526,7 +5498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41426869.jpg",
-      "IdName":"blackillusionritual"
+      "References":null
    },
    {
       "Id":"69455834",
@@ -5536,7 +5508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69455834.jpg",
-      "IdName":"kingofyamimakai"
+      "References":null
    },
    {
       "Id":"46700124",
@@ -5546,7 +5518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46700124.jpg",
-      "IdName":"machineking"
+      "References":null
    },
    {
       "Id":"94119974",
@@ -5556,7 +5528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94119974.jpg",
-      "IdName":"twoheadedkingrex"
+      "References":null
    },
    {
       "Id":"49868263",
@@ -5566,7 +5538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49868263.jpg",
-      "IdName":"ryusenshi"
+      "References":null
    },
    {
       "Id":"24611934",
@@ -5576,7 +5548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24611934.jpg",
-      "IdName":"ryukishinpowered"
+      "References":null
    },
    {
       "Id":"76532077",
@@ -5586,7 +5558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76532077.jpg",
-      "IdName":"bottomlessshiftingsand"
+      "References":null
    },
    {
       "Id":"26902560",
@@ -5596,7 +5568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26902560.jpg",
-      "IdName":"fusionsage"
+      "References":null
    },
    {
       "Id":"66602787",
@@ -5606,7 +5578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66602787.jpg",
-      "IdName":"saggithedarkclown"
+      "References":null
    },
    {
       "Id":"16222645",
@@ -5616,7 +5588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16222645.jpg",
-      "IdName":"sasukesamurai"
+      "References":null
    },
    {
       "Id":"26202165",
@@ -5626,7 +5598,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26202165.jpg",
-      "IdName":"sangan"
+      "References":null
    },
    {
       "Id":"53839837",
@@ -5636,7 +5608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53839837.jpg",
-      "IdName":"vampirelord"
+      "References":null
    },
    {
       "Id":"3819470",
@@ -5646,7 +5618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3819470.jpg",
-      "IdName":"seventoolsofthebandit"
+      "References":null
    },
    {
       "Id":"17214465",
@@ -5656,7 +5628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17214465.jpg",
-      "IdName":"maidenoftheaqua"
+      "References":null
    },
    {
       "Id":"56995655",
@@ -5666,7 +5638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56995655.jpg",
-      "IdName":"ominousfortunetelling"
+      "References":null
    },
    {
       "Id":"11384280",
@@ -5676,7 +5648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11384280.jpg",
-      "IdName":"cannonsoldier"
+      "References":null
    },
    {
       "Id":"79875176",
@@ -5686,7 +5658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79875176.jpg",
-      "IdName":"tooncannonsoldier"
+      "References":null
    },
    {
       "Id":"57482479",
@@ -5696,7 +5668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57482479.jpg",
-      "IdName":"luminoussoldier"
+      "References":null
    },
    {
       "Id":"93920745",
@@ -5706,7 +5678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93920745.jpg",
-      "IdName":"penguinsoldier"
+      "References":null
    },
    {
       "Id":"40473581",
@@ -5716,7 +5688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40473581.jpg",
-      "IdName":"susasoldier"
+      "References":null
    },
    {
       "Id":"16392422",
@@ -5726,7 +5698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16392422.jpg",
-      "IdName":"toonmaskedsorcerer"
+      "References":null
    },
    {
       "Id":"78010363",
@@ -5736,7 +5708,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78010363.jpg",
-      "IdName":"witchoftheblackforest"
+      "References":null
    },
    {
       "Id":"80163754",
@@ -5746,7 +5718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80163754.jpg",
-      "IdName":"burstbreath"
+      "References":null
    },
    {
       "Id":"40659562",
@@ -5756,7 +5728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40659562.jpg",
-      "IdName":"guardiansphinx"
+      "References":null
    },
    {
       "Id":"15866454",
@@ -5766,7 +5738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15866454.jpg",
-      "IdName":"spiritualism"
+      "References":null
    },
    {
       "Id":"10262698",
@@ -5776,7 +5748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10262698.jpg",
-      "IdName":"thestatueofeasterisland"
+      "References":null
    },
    {
       "Id":"65810489",
@@ -5786,7 +5758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65810489.jpg",
-      "IdName":"statueofthewicked"
+      "References":null
    },
    {
       "Id":"27770341",
@@ -5796,7 +5768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27770341.jpg",
-      "IdName":"superrejuvenation"
+      "References":null
    },
    {
       "Id":"89997728",
@@ -5806,7 +5778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89997728.jpg",
-      "IdName":"toontableofcontents"
+      "References":null
    },
    {
       "Id":"94212438",
@@ -5816,7 +5788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94212438.jpg",
-      "IdName":"destinyboard"
+      "References":null
    },
    {
       "Id":"69296555",
@@ -5826,7 +5798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69296555.jpg",
-      "IdName":"arrayofrevealinglight"
+      "References":null
    },
    {
       "Id":"49791927",
@@ -5836,7 +5808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49791927.jpg",
-      "IdName":"tigeraxe"
+      "References":null
    },
    {
       "Id":"40350910",
@@ -5846,7 +5818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40350910.jpg",
-      "IdName":"timidity"
+      "References":null
    },
    {
       "Id":"95727991",
@@ -5856,7 +5828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95727991.jpg",
-      "IdName":"catapultturtle"
+      "References":null
    },
    {
       "Id":"80233946",
@@ -5866,7 +5838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80233946.jpg",
-      "IdName":"goraturtle"
+      "References":null
    },
    {
       "Id":"63571750",
@@ -5876,7 +5848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63571750.jpg",
-      "IdName":"pharaohstreasure"
+      "References":null
    },
    {
       "Id":"15270885",
@@ -5886,7 +5858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15270885.jpg",
-      "IdName":"toongoblinattackforce"
+      "References":null
    },
    {
       "Id":"55013285",
@@ -5896,7 +5868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55013285.jpg",
-      "IdName":"troopdragon"
+      "References":null
    },
    {
       "Id":"81843628",
@@ -5906,7 +5878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81843628.jpg",
-      "IdName":"needleworm"
+      "References":null
    },
    {
       "Id":"19613556",
@@ -5916,17 +5888,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"19613556,1224927",
       "Image":"https://images.ygoprodeck.com/images/cards/19613556.jpg",
-      "IdName":"heavystorm",
-      "LimitFriendsCards":[
-         {
-            "IdName":"heavystorm",
-            "Image":"https://images.ygoprodeck.com/images/cards/19613556.jpg"
-         },
-         {
-            "IdName":"malevolentcatastrophe",
-            "Image":"https://images.ygoprodeck.com/images/cards/1224927.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"45547649",
@@ -5936,7 +5898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45547649.jpg",
-      "IdName":"birdface"
+      "References":null
    },
    {
       "Id":"70307656",
@@ -5946,7 +5908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70307656.jpg",
-      "IdName":"mucusyolk"
+      "References":null
    },
    {
       "Id":"3078576",
@@ -5956,7 +5918,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3078576.jpg",
-      "IdName":"yatagarasu"
+      "References":null
    },
    {
       "Id":"88472456",
@@ -5966,7 +5928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88472456.jpg",
-      "IdName":"zombyrathedark"
+      "References":null
    },
    {
       "Id":"87303357",
@@ -5976,7 +5938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87303357.jpg",
-      "IdName":"shiningabyss"
+      "References":null
    },
    {
       "Id":"95174353",
@@ -5986,7 +5948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95174353.jpg",
-      "IdName":"ameba"
+      "References":null
    },
    {
       "Id":"95956346",
@@ -5996,7 +5958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95956346.jpg",
-      "IdName":"shiningangel"
+      "References":null
    },
    {
       "Id":"97077563",
@@ -6006,7 +5968,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97077563.jpg",
-      "IdName":"callofthehaunted"
+      "References":null
    },
    {
       "Id":"85639257",
@@ -6016,7 +5978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85639257.jpg",
-      "IdName":"aquamadoor"
+      "References":null
    },
    {
       "Id":"65570596",
@@ -6026,7 +5988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65570596.jpg",
-      "IdName":"redarcherygirl"
+      "References":null
    },
    {
       "Id":"96890582",
@@ -6036,7 +5998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96890582.jpg",
-      "IdName":"flashassailant"
+      "References":null
    },
    {
       "Id":"23615409",
@@ -6046,7 +6008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23615409.jpg",
-      "IdName":"insectbarrier"
+      "References":null
    },
    {
       "Id":"56387350",
@@ -6056,7 +6018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56387350.jpg",
-      "IdName":"vampirebaby"
+      "References":null
    },
    {
       "Id":"67371383",
@@ -6066,7 +6028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67371383.jpg",
-      "IdName":"amphibianbeast"
+      "References":null
    },
    {
       "Id":"79870141",
@@ -6076,7 +6038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79870141.jpg",
-      "IdName":"madswordbeast"
+      "References":null
    },
    {
       "Id":"21598948",
@@ -6086,7 +6048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21598948.jpg",
-      "IdName":"fairybox"
+      "References":null
    },
    {
       "Id":"70903634",
@@ -6096,7 +6058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70903634.jpg",
-      "IdName":"rightarmoftheforbiddenone"
+      "References":null
    },
    {
       "Id":"7902349",
@@ -6106,7 +6068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7902349.jpg",
-      "IdName":"leftarmoftheforbiddenone"
+      "References":null
    },
    {
       "Id":"21237481",
@@ -6116,7 +6078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21237481.jpg",
-      "IdName":"typezeromagiccrusher"
+      "References":null
    },
    {
       "Id":"98299011",
@@ -6126,7 +6088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98299011.jpg",
-      "IdName":"giftofthemysticalelf"
+      "References":null
    },
    {
       "Id":"57953380",
@@ -6136,7 +6098,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57953380.jpg",
-      "IdName":"cardofsafereturn"
+      "References":null
    },
    {
       "Id":"94163677",
@@ -6146,7 +6108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94163677.jpg",
-      "IdName":"infinitecards"
+      "References":null
    },
    {
       "Id":"18807108",
@@ -6156,7 +6118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18807108.jpg",
-      "IdName":"spellbindingcircle"
+      "References":null
    },
    {
       "Id":"4031928",
@@ -6166,7 +6128,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4031928.jpg",
-      "IdName":"changeofheart"
+      "References":null
    },
    {
       "Id":"15150365",
@@ -6176,7 +6138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15150365.jpg",
-      "IdName":"whitemagicalhat"
+      "References":null
    },
    {
       "Id":"91869203",
@@ -6186,7 +6148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91869203.jpg",
-      "IdName":"amazonessarcher"
+      "References":null
    },
    {
       "Id":"51345461",
@@ -6196,7 +6158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51345461.jpg",
-      "IdName":"swordhunter"
+      "References":null
    },
    {
       "Id":"61528025",
@@ -6206,7 +6168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61528025.jpg",
-      "IdName":"banisherofthelight"
+      "References":null
    },
    {
       "Id":"21015833",
@@ -6216,7 +6178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21015833.jpg",
-      "IdName":"hayabusaknight"
+      "References":null
    },
    {
       "Id":"36039163",
@@ -6226,7 +6188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36039163.jpg",
-      "IdName":"penguinknight"
+      "References":null
    },
    {
       "Id":"5434080",
@@ -6236,7 +6198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5434080.jpg",
-      "IdName":"headlessknight"
+      "References":null
    },
    {
       "Id":"74701381",
@@ -6246,7 +6208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74701381.jpg",
-      "IdName":"dnasurgery"
+      "References":null
    },
    {
       "Id":"81380218",
@@ -6256,7 +6218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81380218.jpg",
-      "IdName":"chorusofsanctuary"
+      "References":null
    },
    {
       "Id":"74191942",
@@ -6266,7 +6228,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74191942.jpg",
-      "IdName":"painfulchoice"
+      "References":null
    },
    {
       "Id":"40374923",
@@ -6276,7 +6238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40374923.jpg",
-      "IdName":"mammothgraveyard"
+      "References":null
    },
    {
       "Id":"20228463",
@@ -6286,7 +6248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20228463.jpg",
-      "IdName":"ceremonialbell"
+      "References":null
    },
    {
       "Id":"83994646",
@@ -6296,7 +6258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83994646.jpg",
-      "IdName":"4starredladybugofdoom"
+      "References":null
    },
    {
       "Id":"40240595",
@@ -6306,7 +6268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40240595.jpg",
-      "IdName":"cocoonofevolution"
+      "References":null
    },
    {
       "Id":"64047146",
@@ -6316,7 +6278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64047146.jpg",
-      "IdName":"hornoftheunicorn"
+      "References":null
    },
    {
       "Id":"38552107",
@@ -6326,7 +6288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38552107.jpg",
-      "IdName":"hornoflight"
+      "References":null
    },
    {
       "Id":"45778932",
@@ -6336,7 +6298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45778932.jpg",
-      "IdName":"risingaircurrent"
+      "References":null
    },
    {
       "Id":"70781052",
@@ -6346,7 +6308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70781052.jpg",
-      "IdName":"summonedskull"
+      "References":null
    },
    {
       "Id":"91842653",
@@ -6356,7 +6318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91842653.jpg",
-      "IdName":"toonsummonedskull"
+      "References":null
    },
    {
       "Id":"32274490",
@@ -6366,7 +6328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32274490.jpg",
-      "IdName":"skullservant"
+      "References":null
    },
    {
       "Id":"90357090",
@@ -6376,7 +6338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90357090.jpg",
-      "IdName":"silverfang"
+      "References":null
    },
    {
       "Id":"34124316",
@@ -6386,7 +6348,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34124316.jpg",
-      "IdName":"cyberjar"
+      "References":null
    },
    {
       "Id":"76812113",
@@ -6396,7 +6358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76812113.jpg",
-      "IdName":"harpielady"
+      "References":null
    },
    {
       "Id":"33066139",
@@ -6406,7 +6368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33066139.jpg",
-      "IdName":"reaperofthecards"
+      "References":null
    },
    {
       "Id":"66362965",
@@ -6416,7 +6378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66362965.jpg",
-      "IdName":"thefiendmegacyber"
+      "References":null
    },
    {
       "Id":"18591904",
@@ -6426,7 +6388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18591904.jpg",
-      "IdName":"finaldestiny"
+      "References":null
    },
    {
       "Id":"19384334",
@@ -6436,7 +6398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19384334.jpg",
-      "IdName":"moltendestruction"
+      "References":null
    },
    {
       "Id":"1248895",
@@ -6446,7 +6408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1248895.jpg",
-      "IdName":"chaindestruction"
+      "References":null
    },
    {
       "Id":"87796900",
@@ -6456,7 +6418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87796900.jpg",
-      "IdName":"wingeddragonguardianofthefortress1"
+      "References":null
    },
    {
       "Id":"11901678",
@@ -6466,7 +6428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11901678.jpg",
-      "IdName":"blackskulldragon"
+      "References":null
    },
    {
       "Id":"74677422",
@@ -6476,7 +6438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74677422.jpg",
-      "IdName":"redeyesblackdragon"
+      "References":null
    },
    {
       "Id":"53183600",
@@ -6486,7 +6448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53183600.jpg",
-      "IdName":"blueeyestoondragon"
+      "References":null
    },
    {
       "Id":"59344077",
@@ -6496,7 +6458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59344077.jpg",
-      "IdName":"magicdrain"
+      "References":null
    },
    {
       "Id":"44763025",
@@ -6506,7 +6468,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44763025.jpg",
-      "IdName":"delinquentduo"
+      "References":null
    },
    {
       "Id":"90502999",
@@ -6516,7 +6478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90502999.jpg",
-      "IdName":"groundcollapse"
+      "References":null
    },
    {
       "Id":"5556668",
@@ -6526,7 +6488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5556668.jpg",
-      "IdName":"exchange"
+      "References":null
    },
    {
       "Id":"81863068",
@@ -6536,7 +6498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81863068.jpg",
-      "IdName":"hirosshadowscout"
+      "References":null
    },
    {
       "Id":"30532390",
@@ -6546,7 +6508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30532390.jpg",
-      "IdName":"skyscout"
+      "References":null
    },
    {
       "Id":"81777047",
@@ -6556,7 +6518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81777047.jpg",
-      "IdName":"luminousspark"
+      "References":null
    },
    {
       "Id":"90219263",
@@ -6566,7 +6528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90219263.jpg",
-      "IdName":"elegantegotist"
+      "References":null
    },
    {
       "Id":"15025844",
@@ -6576,7 +6538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15025844.jpg",
-      "IdName":"mysticalelf"
+      "References":null
    },
    {
       "Id":"63689843",
@@ -6586,7 +6548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63689843.jpg",
-      "IdName":"attackandreceive"
+      "References":null
    },
    {
       "Id":"79323590",
@@ -6596,7 +6558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79323590.jpg",
-      "IdName":"chainenergy"
+      "References":null
    },
    {
       "Id":"70828912",
@@ -6606,7 +6568,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70828912.jpg",
-      "IdName":"prematureburial"
+      "References":null
    },
    {
       "Id":"49587034",
@@ -6616,7 +6578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49587034.jpg",
-      "IdName":"lightforcesword"
+      "References":null
    },
    {
       "Id":"72302403",
@@ -6626,7 +6588,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72302403.jpg",
-      "IdName":"swordsofrevealinglight"
+      "References":null
    },
    {
       "Id":"67105242",
@@ -6636,7 +6598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67105242.jpg",
-      "IdName":"earthboundspirit"
+      "References":null
    },
    {
       "Id":"33396948",
@@ -6646,7 +6608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33396948.jpg",
-      "IdName":"exodiatheforbiddenone"
+      "References":null
    },
    {
       "Id":"21297224",
@@ -6656,7 +6618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21297224.jpg",
-      "IdName":"hystericfairy"
+      "References":null
    },
    {
       "Id":"90925163",
@@ -6666,7 +6628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90925163.jpg",
-      "IdName":"dancingfairy"
+      "References":null
    },
    {
       "Id":"85742772",
@@ -6676,7 +6638,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85742772.jpg",
-      "IdName":"gravitybind"
+      "References":null
    },
    {
       "Id":"66788016",
@@ -6686,7 +6648,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66788016.jpg",
-      "IdName":"fissure"
+      "References":null
    },
    {
       "Id":"1918087",
@@ -6696,7 +6658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1918087.jpg",
-      "IdName":"minorgoblinofficial"
+      "References":null
    },
    {
       "Id":"6368038",
@@ -6706,7 +6668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6368038.jpg",
-      "IdName":"gaiathefierceknight"
+      "References":null
    },
    {
       "Id":"66889139",
@@ -6716,7 +6678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66889139.jpg",
-      "IdName":"gaiathedragonchampion"
+      "References":null
    },
    {
       "Id":"37313786",
@@ -6726,7 +6688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37313786.jpg",
-      "IdName":"gamble"
+      "References":null
    },
    {
       "Id":"91152256",
@@ -6736,7 +6698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91152256.jpg",
-      "IdName":"celticguardian"
+      "References":null
    },
    {
       "Id":"76184692",
@@ -6746,7 +6708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76184692.jpg",
-      "IdName":"hitotsumegiant"
+      "References":null
    },
    {
       "Id":"46821314",
@@ -6756,7 +6718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46821314.jpg",
-      "IdName":"humanoidslime"
+      "References":null
    },
    {
       "Id":"70368879",
@@ -6766,7 +6728,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70368879.jpg",
-      "IdName":"upstartgoblin"
+      "References":null
    },
    {
       "Id":"10992251",
@@ -6776,7 +6738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10992251.jpg",
-      "IdName":"gradius"
+      "References":null
    },
    {
       "Id":"95744531",
@@ -6786,7 +6748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95744531.jpg",
-      "IdName":"griggle"
+      "References":null
    },
    {
       "Id":"16768387",
@@ -6796,7 +6758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16768387.jpg",
-      "IdName":"bigeye"
+      "References":null
    },
    {
       "Id":"93108433",
@@ -6806,7 +6768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93108433.jpg",
-      "IdName":"monsterrecovery"
+      "References":null
    },
    {
       "Id":"2130625",
@@ -6816,7 +6778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2130625.jpg",
-      "IdName":"numinoushealer"
+      "References":null
    },
    {
       "Id":"32452818",
@@ -6826,7 +6788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32452818.jpg",
-      "IdName":"beaverwarrior"
+      "References":null
    },
    {
       "Id":"24128274",
@@ -6836,7 +6798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24128274.jpg",
-      "IdName":"deepseawarrior"
+      "References":null
    },
    {
       "Id":"40619825",
@@ -6846,7 +6808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40619825.jpg",
-      "IdName":"axeofdespair"
+      "References":null
    },
    {
       "Id":"7089711",
@@ -6856,7 +6818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7089711.jpg",
-      "IdName":"hanehane"
+      "References":null
    },
    {
       "Id":"46130346",
@@ -6866,7 +6828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46130346.jpg",
-      "IdName":"hinotama"
+      "References":null
    },
    {
       "Id":"79759861",
@@ -6876,7 +6838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79759861.jpg",
-      "IdName":"tributetothedoomed"
+      "References":null
    },
    {
       "Id":"53582587",
@@ -6886,7 +6848,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53582587.jpg",
-      "IdName":"torrentialtribute"
+      "References":null
    },
    {
       "Id":"62397231",
@@ -6896,7 +6858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62397231.jpg",
-      "IdName":"hyozanryu"
+      "References":null
    },
    {
       "Id":"27125110",
@@ -6906,7 +6868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27125110.jpg",
-      "IdName":"thousandeyesidol"
+      "References":null
    },
    {
       "Id":"97687912",
@@ -6916,7 +6878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97687912.jpg",
-      "IdName":"fairymeteorcrush"
+      "References":null
    },
    {
       "Id":"54652250",
@@ -6926,7 +6888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54652250.jpg",
-      "IdName":"maneaterbug"
+      "References":null
    },
    {
       "Id":"88733579",
@@ -6936,7 +6898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88733579.jpg",
-      "IdName":"drillbug"
+      "References":null
    },
    {
       "Id":"8124921",
@@ -6946,7 +6908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8124921.jpg",
-      "IdName":"rightlegoftheforbiddenone"
+      "References":null
    },
    {
       "Id":"44519536",
@@ -6956,7 +6918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44519536.jpg",
-      "IdName":"leftlegoftheforbiddenone"
+      "References":null
    },
    {
       "Id":"50045299",
@@ -6966,7 +6928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50045299.jpg",
-      "IdName":"dragoncapturejar"
+      "References":null
    },
    {
       "Id":"83968380",
@@ -6976,7 +6938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83968380.jpg",
-      "IdName":"jarofgreed"
+      "References":null
    },
    {
       "Id":"96355986",
@@ -6986,7 +6948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96355986.jpg",
-      "IdName":"enchantedjavelin"
+      "References":null
    },
    {
       "Id":"32809211",
@@ -6996,7 +6958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32809211.jpg",
-      "IdName":"jinzo7"
+      "References":null
    },
    {
       "Id":"70138455",
@@ -7006,7 +6968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70138455.jpg",
-      "IdName":"blastjuggler"
+      "References":null
    },
    {
       "Id":"8951260",
@@ -7016,7 +6978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8951260.jpg",
-      "IdName":"respectplay"
+      "References":null
    },
    {
       "Id":"84834865",
@@ -7026,7 +6988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84834865.jpg",
-      "IdName":"flyingkamakiri1"
+      "References":null
    },
    {
       "Id":"23289281",
@@ -7036,7 +6998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23289281.jpg",
-      "IdName":"karateman"
+      "References":null
    },
    {
       "Id":"62340868",
@@ -7046,7 +7008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62340868.jpg",
-      "IdName":"kazejin"
+      "References":null
    },
    {
       "Id":"4266839",
@@ -7056,7 +7018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4266839.jpg",
-      "IdName":"kiseitai"
+      "References":null
    },
    {
       "Id":"1184620",
@@ -7066,7 +7028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1184620.jpg",
-      "IdName":"kojikocy"
+      "References":null
    },
    {
       "Id":"19406822",
@@ -7076,7 +7038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19406822.jpg",
-      "IdName":"kotodama"
+      "References":null
    },
    {
       "Id":"98139712",
@@ -7086,7 +7048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98139712.jpg",
-      "IdName":"skullinvitation"
+      "References":null
    },
    {
       "Id":"21888494",
@@ -7096,7 +7058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21888494.jpg",
-      "IdName":"chosenone"
+      "References":null
    },
    {
       "Id":"53530069",
@@ -7106,7 +7068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53530069.jpg",
-      "IdName":"spiritofthebreeze"
+      "References":null
    },
    {
       "Id":"34694160",
@@ -7116,7 +7078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34694160.jpg",
-      "IdName":"theeyeoftruth"
+      "References":null
    },
    {
       "Id":"58621589",
@@ -7126,7 +7088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58621589.jpg",
-      "IdName":"shadowofeyes"
+      "References":null
    },
    {
       "Id":"56747793",
@@ -7136,7 +7098,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56747793.jpg",
-      "IdName":"unitedwestand"
+      "References":null
    },
    {
       "Id":"49064413",
@@ -7146,7 +7108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49064413.jpg",
-      "IdName":"themaskedbeast"
+      "References":null
    },
    {
       "Id":"42829885",
@@ -7156,7 +7118,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42829885.jpg",
-      "IdName":"theforcefulsentry"
+      "References":null
    },
    {
       "Id":"84080938",
@@ -7166,7 +7128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84080938.jpg",
-      "IdName":"theforgivingmaiden"
+      "References":null
    },
    {
       "Id":"55226821",
@@ -7176,7 +7138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55226821.jpg",
-      "IdName":"lightningblade"
+      "References":null
    },
    {
       "Id":"98049915",
@@ -7186,7 +7148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98049915.jpg",
-      "IdName":"mysticlamp"
+      "References":null
    },
    {
       "Id":"87756343",
@@ -7196,7 +7158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87756343.jpg",
-      "IdName":"larvaemoth"
+      "References":null
    },
    {
       "Id":"41142615",
@@ -7206,7 +7168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41142615.jpg",
-      "IdName":"thecheerfulcoffin"
+      "References":null
    },
    {
       "Id":"66989694",
@@ -7216,7 +7178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66989694.jpg",
-      "IdName":"theearlofdemise"
+      "References":null
    },
    {
       "Id":"68049471",
@@ -7226,7 +7188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68049471.jpg",
-      "IdName":"thegrossghostoffleddreams"
+      "References":null
    },
    {
       "Id":"16430187",
@@ -7236,7 +7198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16430187.jpg",
-      "IdName":"thereliableguardian"
+      "References":null
    },
    {
       "Id":"3643300",
@@ -7246,7 +7208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3643300.jpg",
-      "IdName":"thelegendaryfisherman"
+      "References":null
    },
    {
       "Id":"64631466",
@@ -7256,7 +7218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64631466.jpg",
-      "IdName":"relinquished"
+      "References":null
    },
    {
       "Id":"63519819",
@@ -7266,7 +7228,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63519819.jpg",
-      "IdName":"thousandeyesrestrict"
+      "References":null
    },
    {
       "Id":"19827717",
@@ -7276,7 +7238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19827717.jpg",
-      "IdName":"returnofthedoomed"
+      "References":null
    },
    {
       "Id":"32541773",
@@ -7286,7 +7248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32541773.jpg",
-      "IdName":"theportraitssecret"
+      "References":null
    },
    {
       "Id":"3573512",
@@ -7296,7 +7258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3573512.jpg",
-      "IdName":"swordsmanoflandstar"
+      "References":null
    },
    {
       "Id":"43434803",
@@ -7306,7 +7268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43434803.jpg",
-      "IdName":"theshallowgrave"
+      "References":null
    },
    {
       "Id":"15480588",
@@ -7316,7 +7278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15480588.jpg",
-      "IdName":"armoredlizard"
+      "References":null
    },
    {
       "Id":"5758500",
@@ -7326,7 +7288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5758500.jpg",
-      "IdName":"soulrelease"
+      "References":null
    },
    {
       "Id":"62867251",
@@ -7336,7 +7298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62867251.jpg",
-      "IdName":"lightofintervention"
+      "References":null
    },
    {
       "Id":"41392891",
@@ -7346,7 +7308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41392891.jpg",
-      "IdName":"feralimp"
+      "References":null
    },
    {
       "Id":"3797883",
@@ -7356,7 +7318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3797883.jpg",
-      "IdName":"slotmachine"
+      "References":null
    },
    {
       "Id":"21770260",
@@ -7366,7 +7328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21770260.jpg",
-      "IdName":"jambreedingmachine"
+      "References":null
    },
    {
       "Id":"93013676",
@@ -7376,7 +7338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93013676.jpg",
-      "IdName":"mahavailo"
+      "References":null
    },
    {
       "Id":"21593977",
@@ -7386,7 +7348,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21593977.jpg",
-      "IdName":"makyurathedestructor"
+      "References":null
    },
    {
       "Id":"94377247",
@@ -7396,7 +7358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94377247.jpg",
-      "IdName":"curseofthemaskedbeast"
+      "References":null
    },
    {
       "Id":"28279543",
@@ -7406,7 +7368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28279543.jpg",
-      "IdName":"curseofdragon"
+      "References":null
    },
    {
       "Id":"38369349",
@@ -7416,7 +7378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38369349.jpg",
-      "IdName":"mangaryuran"
+      "References":null
    },
    {
       "Id":"34460851",
@@ -7426,7 +7388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34460851.jpg",
-      "IdName":"flamemanipulator"
+      "References":null
    },
    {
       "Id":"57579381",
@@ -7436,7 +7398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57579381.jpg",
-      "IdName":"darklordmarie"
+      "References":null
    },
    {
       "Id":"44287299",
@@ -7446,7 +7408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44287299.jpg",
-      "IdName":"masakithelegendaryswordsman"
+      "References":null
    },
    {
       "Id":"82432018",
@@ -7456,7 +7418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82432018.jpg",
-      "IdName":"maskofbrutality"
+      "References":null
    },
    {
       "Id":"20765952",
@@ -7466,7 +7428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20765952.jpg",
-      "IdName":"maskofdispel"
+      "References":null
    },
    {
       "Id":"57882509",
@@ -7476,7 +7438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57882509.jpg",
-      "IdName":"maskofweakness"
+      "References":null
    },
    {
       "Id":"29549364",
@@ -7486,7 +7448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29549364.jpg",
-      "IdName":"maskofrestrict"
+      "References":null
    },
    {
       "Id":"28933734",
@@ -7496,7 +7458,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28933734.jpg",
-      "IdName":"maskofdarkness"
+      "References":null
    },
    {
       "Id":"56948373",
@@ -7506,7 +7468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56948373.jpg",
-      "IdName":"maskoftheaccursed"
+      "References":null
    },
    {
       "Id":"38199696",
@@ -7516,7 +7478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38199696.jpg",
-      "IdName":"redmedicine"
+      "References":null
    },
    {
       "Id":"22046459",
@@ -7526,7 +7488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22046459.jpg",
-      "IdName":"megamorph"
+      "References":null
    },
    {
       "Id":"86569121",
@@ -7536,7 +7498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86569121.jpg",
-      "IdName":"melchidthefourfacebeast"
+      "References":null
    },
    {
       "Id":"44656491",
@@ -7546,7 +7508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44656491.jpg",
-      "IdName":"messengerofpeace"
+      "References":null
    },
    {
       "Id":"32539892",
@@ -7556,7 +7518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32539892.jpg",
-      "IdName":"minar"
+      "References":null
    },
    {
       "Id":"17653779",
@@ -7566,7 +7528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17653779.jpg",
-      "IdName":"fairyshandmirror"
+      "References":null
    },
    {
       "Id":"15259703",
@@ -7576,7 +7538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15259703.jpg",
-      "IdName":"toonworld"
+      "References":null
    },
    {
       "Id":"83764718",
@@ -7586,7 +7548,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83764718.jpg",
-      "IdName":"monsterreborn"
+      "References":null
    },
    {
       "Id":"79106360",
@@ -7596,7 +7558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79106360.jpg",
-      "IdName":"morphingjar2"
+      "References":null
    },
    {
       "Id":"67284908",
@@ -7606,7 +7568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67284908.jpg",
-      "IdName":"labyrinthwall"
+      "References":null
    },
    {
       "Id":"22359980",
@@ -7616,7 +7578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22359980.jpg",
-      "IdName":"mirrorwall"
+      "References":null
    },
    {
       "Id":"18605135",
@@ -7626,7 +7588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18605135.jpg",
-      "IdName":"tornadowall"
+      "References":null
    },
    {
       "Id":"9076207",
@@ -7636,7 +7598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9076207.jpg",
-      "IdName":"armedninja"
+      "References":null
    },
    {
       "Id":"12953226",
@@ -7646,7 +7608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12953226.jpg",
-      "IdName":"nuviathewicked"
+      "References":null
    },
    {
       "Id":"99597615",
@@ -7656,7 +7618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99597615.jpg",
-      "IdName":"malevolentnuzzler"
+      "References":null
    },
    {
       "Id":"57617178",
@@ -7666,7 +7628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57617178.jpg",
-      "IdName":"sonicbird"
+      "References":null
    },
    {
       "Id":"61740673",
@@ -7676,7 +7638,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61740673.jpg",
-      "IdName":"imperialorder"
+      "References":null
    },
    {
       "Id":"27911549",
@@ -7686,7 +7648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27911549.jpg",
-      "IdName":"parasiteparacide"
+      "References":null
    },
    {
       "Id":"10352095",
@@ -7696,7 +7658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10352095.jpg",
-      "IdName":"scrollofbewitchment"
+      "References":null
    },
    {
       "Id":"82003859",
@@ -7706,7 +7668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82003859.jpg",
-      "IdName":"toll"
+      "References":null
    },
    {
       "Id":"65169794",
@@ -7716,7 +7678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65169794.jpg",
-      "IdName":"blackpendant"
+      "References":null
    },
    {
       "Id":"58192742",
@@ -7726,7 +7688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58192742.jpg",
-      "IdName":"petitmoth"
+      "References":null
    },
    {
       "Id":"3027001",
@@ -7736,7 +7698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3027001.jpg",
-      "IdName":"faketrap"
+      "References":null
    },
    {
       "Id":"66719324",
@@ -7746,7 +7708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66719324.jpg",
-      "IdName":"rainofmercy"
+      "References":null
    },
    {
       "Id":"24094653",
@@ -7756,7 +7718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24094653.jpg",
-      "IdName":"polymerization"
+      "References":null
    },
    {
       "Id":"55144522",
@@ -7766,21 +7728,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"79571449,55144522,33904024",
       "Image":"https://images.ygoprodeck.com/images/cards/55144522.jpg",
-      "IdName":"potofgreed",
-      "LimitFriendsCards":[
-         {
-            "IdName":"gracefulcharity",
-            "Image":"https://images.ygoprodeck.com/images/cards/79571449.jpg"
-         },
-         {
-            "IdName":"potofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/55144522.jpg"
-         },
-         {
-            "IdName":"shardofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/33904024.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"64752646",
@@ -7790,7 +7738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64752646.jpg",
-      "IdName":"fireprincess"
+      "References":null
    },
    {
       "Id":"61705417",
@@ -7800,7 +7748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61705417.jpg",
-      "IdName":"graverobber"
+      "References":null
    },
    {
       "Id":"56594520",
@@ -7810,7 +7758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56594520.jpg",
-      "IdName":"gaiapower"
+      "References":null
    },
    {
       "Id":"12580477",
@@ -7820,7 +7768,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12580477.jpg",
-      "IdName":"raigeki"
+      "References":null
    },
    {
       "Id":"97017120",
@@ -7830,7 +7778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97017120.jpg",
-      "IdName":"giantrat"
+      "References":null
    },
    {
       "Id":"95051344",
@@ -7840,7 +7788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95051344.jpg",
-      "IdName":"eternalrest"
+      "References":null
    },
    {
       "Id":"74923978",
@@ -7850,7 +7798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74923978.jpg",
-      "IdName":"forcedrequisition"
+      "References":null
    },
    {
       "Id":"54109233",
@@ -7860,7 +7808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54109233.jpg",
-      "IdName":"infinitedismissal"
+      "References":null
    },
    {
       "Id":"53375573",
@@ -7870,7 +7818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53375573.jpg",
-      "IdName":"darkkingoftheabyss"
+      "References":null
    },
    {
       "Id":"92377303",
@@ -7880,7 +7828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92377303.jpg",
-      "IdName":"darksage"
+      "References":null
    },
    {
       "Id":"25955164",
@@ -7890,7 +7838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25955164.jpg",
-      "IdName":"sangaofthethunder"
+      "References":null
    },
    {
       "Id":"57409948",
@@ -7900,7 +7848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57409948.jpg",
-      "IdName":"bombardmentbeetle"
+      "References":null
    },
    {
       "Id":"35316708",
@@ -7910,7 +7858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35316708.jpg",
-      "IdName":"timeseal"
+      "References":null
    },
    {
       "Id":"17449108",
@@ -7920,7 +7868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17449108.jpg",
-      "IdName":"noblemanofextermination"
+      "References":null
    },
    {
       "Id":"71044499",
@@ -7930,7 +7878,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71044499.jpg",
-      "IdName":"noblemanofcrossout"
+      "References":null
    },
    {
       "Id":"23401839",
@@ -7940,7 +7888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23401839.jpg",
-      "IdName":"senjuofthethousandhands"
+      "References":null
    },
    {
       "Id":"11324436",
@@ -7950,7 +7898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11324436.jpg",
-      "IdName":"electricsnake"
+      "References":null
    },
    {
       "Id":"16762927",
@@ -7960,7 +7908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16762927.jpg",
-      "IdName":"gravekeepersservant"
+      "References":null
    },
    {
       "Id":"85802526",
@@ -7970,7 +7918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85802526.jpg",
-      "IdName":"curemermaid"
+      "References":null
    },
    {
       "Id":"65458948",
@@ -7980,7 +7928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65458948.jpg",
-      "IdName":"toonmermaid"
+      "References":null
    },
    {
       "Id":"12206212",
@@ -7990,7 +7938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12206212.jpg",
-      "IdName":"harpieladysisters"
+      "References":null
    },
    {
       "Id":"36280194",
@@ -8000,7 +7948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36280194.jpg",
-      "IdName":"backupsoldier"
+      "References":null
    },
    {
       "Id":"13039848",
@@ -8010,7 +7958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13039848.jpg",
-      "IdName":"giantsoldierofstone"
+      "References":null
    },
    {
       "Id":"10189126",
@@ -8020,7 +7968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10189126.jpg",
-      "IdName":"maskedsorcerer"
+      "References":null
    },
    {
       "Id":"45231177",
@@ -8030,7 +7978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45231177.jpg",
-      "IdName":"flameswordsman"
+      "References":null
    },
    {
       "Id":"21558682",
@@ -8040,7 +7988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21558682.jpg",
-      "IdName":"jamdefender"
+      "References":null
    },
    {
       "Id":"31709826",
@@ -8050,7 +7998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31709826.jpg",
-      "IdName":"revivaljam"
+      "References":null
    },
    {
       "Id":"21175632",
@@ -8060,7 +8008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21175632.jpg",
-      "IdName":"stjoan"
+      "References":null
    },
    {
       "Id":"63102017",
@@ -8070,7 +8018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63102017.jpg",
-      "IdName":"stopdefense"
+      "References":null
    },
    {
       "Id":"98434877",
@@ -8080,7 +8028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98434877.jpg",
-      "IdName":"suijin"
+      "References":null
    },
    {
       "Id":"43641473",
@@ -8090,7 +8038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43641473.jpg",
-      "IdName":"tailorofthefickle"
+      "References":null
    },
    {
       "Id":"24294108",
@@ -8100,7 +8048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24294108.jpg",
-      "IdName":"burningland"
+      "References":null
    },
    {
       "Id":"83011277",
@@ -8110,7 +8058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83011277.jpg",
-      "IdName":"mystictomato"
+      "References":null
    },
    {
       "Id":"60082869",
@@ -8120,7 +8068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60082869.jpg",
-      "IdName":"dusttornado"
+      "References":null
    },
    {
       "Id":"42703248",
@@ -8130,7 +8078,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42703248.jpg",
-      "IdName":"gianttrunade"
+      "References":null
    },
    {
       "Id":"60806437",
@@ -8140,7 +8088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60806437.jpg",
-      "IdName":"ufoturtle"
+      "References":null
    },
    {
       "Id":"59560625",
@@ -8150,7 +8098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59560625.jpg",
-      "IdName":"shift"
+      "References":null
    },
    {
       "Id":"4206964",
@@ -8160,7 +8108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4206964.jpg",
-      "IdName":"traphole"
+      "References":null
    },
    {
       "Id":"22959079",
@@ -8170,7 +8118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22959079.jpg",
-      "IdName":"dimensionhole"
+      "References":null
    },
    {
       "Id":"53129443",
@@ -8180,21 +8128,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"44095762,69162969,53129443",
       "Image":"https://images.ygoprodeck.com/images/cards/53129443.jpg",
-      "IdName":"darkhole",
-      "LimitFriendsCards":[
-         {
-            "IdName":"mirrorforce",
-            "Image":"https://images.ygoprodeck.com/images/cards/44095762.jpg"
-         },
-         {
-            "IdName":"darkhole",
-            "Image":"https://images.ygoprodeck.com/images/cards/53129443.jpg"
-         },
-         {
-            "IdName":"lightningvortex",
-            "Image":"https://images.ygoprodeck.com/images/cards/69162969.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"78658564",
@@ -8204,7 +8138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78658564.jpg",
-      "IdName":"goblinattackforce"
+      "References":null
    },
    {
       "Id":"5318639",
@@ -8214,7 +8148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5318639.jpg",
-      "IdName":"mysticalspacetyphoon"
+      "References":null
    },
    {
       "Id":"22702055",
@@ -8224,7 +8158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22702055.jpg",
-      "IdName":"umi"
+      "References":null
    },
    {
       "Id":"82999629",
@@ -8234,7 +8168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82999629.jpg",
-      "IdName":"umiiruka"
+      "References":null
    },
    {
       "Id":"1784619",
@@ -8244,7 +8178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1784619.jpg",
-      "IdName":"uraby"
+      "References":null
    },
    {
       "Id":"3056267",
@@ -8254,7 +8188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3056267.jpg",
-      "IdName":"invaderofthethrone"
+      "References":null
    },
    {
       "Id":"73216412",
@@ -8264,7 +8198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73216412.jpg",
-      "IdName":"wormdrake"
+      "References":null
    },
    {
       "Id":"5600127",
@@ -8274,7 +8208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5600127.jpg",
-      "IdName":"humanoidwormdrake"
+      "References":null
    },
    {
       "Id":"6104968",
@@ -8284,7 +8218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6104968.jpg",
-      "IdName":"bubonicvermin"
+      "References":null
    },
    {
       "Id":"35346968",
@@ -8294,7 +8228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35346968.jpg",
-      "IdName":"solemnwishes"
+      "References":null
    },
    {
       "Id":"45986603",
@@ -8304,7 +8238,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45986603.jpg",
-      "IdName":"snatchsteal"
+      "References":null
    },
    {
       "Id":"20277860",
@@ -8314,7 +8248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20277860.jpg",
-      "IdName":"armoredzombie"
+      "References":null
    },
    {
       "Id":"18161786",
@@ -8324,7 +8258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18161786.jpg",
-      "IdName":"mysticplasmazone"
+      "References":null
    },
    {
       "Id":"82035781",
@@ -8334,7 +8268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82035781.jpg",
-      "IdName":"twinheadedbeast"
+      "References":null
    },
    {
       "Id":"43580269",
@@ -8344,7 +8278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43580269.jpg",
-      "IdName":"emestheinfinity"
+      "References":null
    },
    {
       "Id":"82732705",
@@ -8354,7 +8288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82732705.jpg",
-      "IdName":"skilldrain"
+      "References":null
    },
    {
       "Id":"6850209",
@@ -8364,7 +8298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6850209.jpg",
-      "IdName":"adealwithdarkruler"
+      "References":null
    },
    {
       "Id":"16135253",
@@ -8374,7 +8308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16135253.jpg",
-      "IdName":"agido"
+      "References":null
    },
    {
       "Id":"57069605",
@@ -8384,7 +8318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57069605.jpg",
-      "IdName":"frozensoul"
+      "References":null
    },
    {
       "Id":"94463200",
@@ -8394,7 +8328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94463200.jpg",
-      "IdName":"battlescarred"
+      "References":null
    },
    {
       "Id":"49881766",
@@ -8404,7 +8338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49881766.jpg",
-      "IdName":"archfiendsoldier"
+      "References":null
    },
    {
       "Id":"60365591",
@@ -8414,7 +8348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60365591.jpg",
-      "IdName":"shinatosark"
+      "References":null
    },
    {
       "Id":"68191243",
@@ -8424,7 +8358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68191243.jpg",
-      "IdName":"musteringofthedarkscorpions"
+      "References":null
    },
    {
       "Id":"21070956",
@@ -8434,7 +8368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21070956.jpg",
-      "IdName":"altarfortribute"
+      "References":null
    },
    {
       "Id":"94793422",
@@ -8444,7 +8378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94793422.jpg",
-      "IdName":"rodofthemindseye"
+      "References":null
    },
    {
       "Id":"68427465",
@@ -8454,7 +8388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68427465.jpg",
-      "IdName":"wickedbreakingflambergebaou"
+      "References":null
    },
    {
       "Id":"56460688",
@@ -8464,7 +8398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56460688.jpg",
-      "IdName":"differentdimensiongate"
+      "References":null
    },
    {
       "Id":"95638658",
@@ -8474,7 +8408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95638658.jpg",
-      "IdName":"shootingstarbowceal"
+      "References":null
    },
    {
       "Id":"28106077",
@@ -8484,7 +8418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28106077.jpg",
-      "IdName":"cestusofdagla"
+      "References":null
    },
    {
       "Id":"9603356",
@@ -8494,7 +8428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9603356.jpg",
-      "IdName":"shadowknightarchfiend"
+      "References":null
    },
    {
       "Id":"13722870",
@@ -8504,7 +8438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13722870.jpg",
-      "IdName":"darkflareknight"
+      "References":null
    },
    {
       "Id":"49217579",
@@ -8514,7 +8448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49217579.jpg",
-      "IdName":"mirageknight"
+      "References":null
    },
    {
       "Id":"61587183",
@@ -8524,7 +8458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61587183.jpg",
-      "IdName":"darkscorpionchicktheyellow"
+      "References":null
    },
    {
       "Id":"11548522",
@@ -8534,7 +8468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11548522.jpg",
-      "IdName":"outstandingdogmarron"
+      "References":null
    },
    {
       "Id":"11987744",
@@ -8544,7 +8478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11987744.jpg",
-      "IdName":"ninkendog"
+      "References":null
    },
    {
       "Id":"20858318",
@@ -8554,7 +8488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20858318.jpg",
-      "IdName":"darkscorpioncombination"
+      "References":null
    },
    {
       "Id":"33244944",
@@ -8564,7 +8498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33244944.jpg",
-      "IdName":"contractwithexodia"
+      "References":null
    },
    {
       "Id":"96420087",
@@ -8574,7 +8508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96420087.jpg",
-      "IdName":"contractwiththedarkmaster"
+      "References":null
    },
    {
       "Id":"89041555",
@@ -8584,7 +8518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89041555.jpg",
-      "IdName":"blastheldbyatribute"
+      "References":null
    },
    {
       "Id":"34193084",
@@ -8594,7 +8528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34193084.jpg",
-      "IdName":"fearfromthedark"
+      "References":null
    },
    {
       "Id":"61370518",
@@ -8604,7 +8538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61370518.jpg",
-      "IdName":"skullarchfiendoflightning"
+      "References":null
    },
    {
       "Id":"39978267",
@@ -8614,7 +8548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39978267.jpg",
-      "IdName":"cyberraider"
+      "References":null
    },
    {
       "Id":"7572887",
@@ -8624,7 +8558,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7572887.jpg",
-      "IdName":"ddwarriorlady"
+      "References":null
    },
    {
       "Id":"92854392",
@@ -8634,7 +8568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92854392.jpg",
-      "IdName":"staunchdefender"
+      "References":null
    },
    {
       "Id":"52503575",
@@ -8644,7 +8578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52503575.jpg",
-      "IdName":"finalattackorders"
+      "References":null
    },
    {
       "Id":"71200730",
@@ -8654,7 +8588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71200730.jpg",
-      "IdName":"despairfromthedark"
+      "References":null
    },
    {
       "Id":"29735721",
@@ -8664,7 +8598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29735721.jpg",
-      "IdName":"spellvanishing"
+      "References":null
    },
    {
       "Id":"50939127",
@@ -8674,7 +8608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50939127.jpg",
-      "IdName":"differentdimensiondragon"
+      "References":null
    },
    {
       "Id":"85605684",
@@ -8684,7 +8618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85605684.jpg",
-      "IdName":"berserkdragon"
+      "References":null
    },
    {
       "Id":"29228529",
@@ -8694,7 +8628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29228529.jpg",
-      "IdName":"spellreproduction"
+      "References":null
    },
    {
       "Id":"69313735",
@@ -8704,7 +8638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69313735.jpg",
-      "IdName":"checkmate"
+      "References":null
    },
    {
       "Id":"32919136",
@@ -8714,7 +8648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32919136.jpg",
-      "IdName":"fallingdown"
+      "References":null
    },
    {
       "Id":"69243953",
@@ -8724,7 +8658,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69243953.jpg",
-      "IdName":"butterflydaggerelma"
+      "References":null
    },
    {
       "Id":"16435215",
@@ -8734,7 +8668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16435215.jpg",
-      "IdName":"draggeddownintothegrave"
+      "References":null
    },
    {
       "Id":"86498013",
@@ -8744,7 +8678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86498013.jpg",
-      "IdName":"ddtrainer"
+      "References":null
    },
    {
       "Id":"33031674",
@@ -8754,7 +8688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33031674.jpg",
-      "IdName":"incandescentordeal"
+      "References":null
    },
    {
       "Id":"12600382",
@@ -8764,7 +8698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12600382.jpg",
-      "IdName":"exodianecross"
+      "References":null
    },
    {
       "Id":"20188127",
@@ -8774,7 +8708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20188127.jpg",
-      "IdName":"fairyofthespring"
+      "References":null
    },
    {
       "Id":"48094997",
@@ -8784,7 +8718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48094997.jpg",
-      "IdName":"battlefootballer"
+      "References":null
    },
    {
       "Id":"73431236",
@@ -8794,7 +8728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73431236.jpg",
-      "IdName":"ironblacksmithkotetsu"
+      "References":null
    },
    {
       "Id":"35798491",
@@ -8804,7 +8738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35798491.jpg",
-      "IdName":"darkbishoparchfiend"
+      "References":null
    },
    {
       "Id":"49003308",
@@ -8814,7 +8748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49003308.jpg",
-      "IdName":"gagagigo"
+      "References":null
    },
    {
       "Id":"73544866",
@@ -8824,7 +8758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73544866.jpg",
-      "IdName":"guardianbaou"
+      "References":null
    },
    {
       "Id":"10755153",
@@ -8834,7 +8768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10755153.jpg",
-      "IdName":"guardianceal"
+      "References":null
    },
    {
       "Id":"74367458",
@@ -8844,7 +8778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74367458.jpg",
-      "IdName":"guardianelma"
+      "References":null
    },
    {
       "Id":"47150851",
@@ -8854,7 +8788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47150851.jpg",
-      "IdName":"guardiangrarl"
+      "References":null
    },
    {
       "Id":"9633505",
@@ -8864,7 +8798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9633505.jpg",
-      "IdName":"guardiankayest"
+      "References":null
    },
    {
       "Id":"46037213",
@@ -8874,7 +8808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46037213.jpg",
-      "IdName":"guardiantryce"
+      "References":null
    },
    {
       "Id":"35215622",
@@ -8884,7 +8818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35215622.jpg",
-      "IdName":"blindlyloyalgoblin"
+      "References":null
    },
    {
       "Id":"425934",
@@ -8894,7 +8828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/425934.jpg",
-      "IdName":"goblinofgreed"
+      "References":null
    },
    {
       "Id":"48768179",
@@ -8904,7 +8838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48768179.jpg",
-      "IdName":"darkscorpiongorgthestrong"
+      "References":null
    },
    {
       "Id":"47942531",
@@ -8914,7 +8848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47942531.jpg",
-      "IdName":"greatmajugarzett"
+      "References":null
    },
    {
       "Id":"32022366",
@@ -8924,7 +8858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32022366.jpg",
-      "IdName":"gravityaxegrarl"
+      "References":null
    },
    {
       "Id":"93671934",
@@ -8934,7 +8868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93671934.jpg",
-      "IdName":"moraleboost"
+      "References":null
    },
    {
       "Id":"85489096",
@@ -8944,7 +8878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85489096.jpg",
-      "IdName":"arsenalsummoner"
+      "References":null
    },
    {
       "Id":"57182235",
@@ -8954,7 +8888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57182235.jpg",
-      "IdName":"tokenthanksgiving"
+      "References":null
    },
    {
       "Id":"55256016",
@@ -8964,7 +8898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55256016.jpg",
-      "IdName":"judgmentofanubis"
+      "References":null
    },
    {
       "Id":"95515060",
@@ -8974,7 +8908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95515060.jpg",
-      "IdName":"rodofsilencekayest"
+      "References":null
    },
    {
       "Id":"54878498",
@@ -8984,7 +8918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54878498.jpg",
-      "IdName":"kelbek"
+      "References":null
    },
    {
       "Id":"80441106",
@@ -8994,7 +8928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80441106.jpg",
-      "IdName":"keldo"
+      "References":null
    },
    {
       "Id":"82529174",
@@ -9004,7 +8938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82529174.jpg",
-      "IdName":"rayofhope"
+      "References":null
    },
    {
       "Id":"7369217",
@@ -9014,7 +8948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7369217.jpg",
-      "IdName":"metallizingparasitelunatite"
+      "References":null
    },
    {
       "Id":"81985784",
@@ -9024,7 +8958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81985784.jpg",
-      "IdName":"desferalimp"
+      "References":null
    },
    {
       "Id":"8794435",
@@ -9034,7 +8968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8794435.jpg",
-      "IdName":"majugarzett"
+      "References":null
    },
    {
       "Id":"74153887",
@@ -9044,7 +8978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74153887.jpg",
-      "IdName":"darkscorpionmeanaethethorn"
+      "References":null
    },
    {
       "Id":"46820049",
@@ -9054,7 +8988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46820049.jpg",
-      "IdName":"mefisttheinfernalgeneral"
+      "References":null
    },
    {
       "Id":"33977496",
@@ -9064,7 +8998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33977496.jpg",
-      "IdName":"thousandneedles"
+      "References":null
    },
    {
       "Id":"12482652",
@@ -9074,7 +9008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12482652.jpg",
-      "IdName":"ojamagreen"
+      "References":null
    },
    {
       "Id":"75375465",
@@ -9084,7 +9018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75375465.jpg",
-      "IdName":"pandemoniumwatchbear"
+      "References":null
    },
    {
       "Id":"9817927",
@@ -9094,7 +9028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9817927.jpg",
-      "IdName":"gyakugirepanda"
+      "References":null
    },
    {
       "Id":"94585852",
@@ -9104,7 +9038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94585852.jpg",
-      "IdName":"pandemonium"
+      "References":null
    },
    {
       "Id":"90790253",
@@ -9114,7 +9048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90790253.jpg",
-      "IdName":"littlewinguard"
+      "References":null
    },
    {
       "Id":"73219648",
@@ -9124,7 +9058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73219648.jpg",
-      "IdName":"vilepawnarchfiend"
+      "References":null
    },
    {
       "Id":"52824910",
@@ -9134,7 +9068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52824910.jpg",
-      "IdName":"kaiserglider"
+      "References":null
    },
    {
       "Id":"68304813",
@@ -9144,7 +9078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68304813.jpg",
-      "IdName":"preciouscardsfrombeyond"
+      "References":null
    },
    {
       "Id":"8581705",
@@ -9154,7 +9088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8581705.jpg",
-      "IdName":"infernalqueenarchfiend"
+      "References":null
    },
    {
       "Id":"83241722",
@@ -9164,7 +9098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83241722.jpg",
-      "IdName":"dicereroll"
+      "References":null
    },
    {
       "Id":"28121403",
@@ -9174,7 +9108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28121403.jpg",
-      "IdName":"reallyeternalrest"
+      "References":null
    },
    {
       "Id":"23265313",
@@ -9184,7 +9118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23265313.jpg",
-      "IdName":"costdown"
+      "References":null
    },
    {
       "Id":"35975813",
@@ -9194,7 +9128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35975813.jpg",
-      "IdName":"terrorkingarchfiend"
+      "References":null
    },
    {
       "Id":"56246017",
@@ -9204,7 +9138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56246017.jpg",
-      "IdName":"archfiendsroar"
+      "References":null
    },
    {
       "Id":"11760174",
@@ -9214,7 +9148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11760174.jpg",
-      "IdName":"sasukesamurai2"
+      "References":null
    },
    {
       "Id":"60258960",
@@ -9224,7 +9158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60258960.jpg",
-      "IdName":"legendaryflamelord"
+      "References":null
    },
    {
       "Id":"22796548",
@@ -9234,7 +9168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22796548.jpg",
-      "IdName":"archfiendsoath"
+      "References":null
    },
    {
       "Id":"86327225",
@@ -9244,7 +9178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86327225.jpg",
-      "IdName":"shinatokingofahigherplane"
+      "References":null
    },
    {
       "Id":"47372349",
@@ -9254,7 +9188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47372349.jpg",
-      "IdName":"acrobatmonkey"
+      "References":null
    },
    {
       "Id":"72192100",
@@ -9264,7 +9198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72192100.jpg",
-      "IdName":"desrookarchfiend"
+      "References":null
    },
    {
       "Id":"36261276",
@@ -9274,7 +9208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36261276.jpg",
-      "IdName":"interdimensionalmattertransporter"
+      "References":null
    },
    {
       "Id":"29843091",
@@ -9284,7 +9218,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29843091.jpg",
-      "IdName":"ojamatrio"
+      "References":null
    },
    {
       "Id":"21900719",
@@ -9294,7 +9228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21900719.jpg",
-      "IdName":"twinswordsofflashinglighttryce"
+      "References":null
    },
    {
       "Id":"34853266",
@@ -9304,7 +9238,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34853266.jpg",
-      "IdName":"tsukuyomi"
+      "References":null
    },
    {
       "Id":"55348096",
@@ -9314,7 +9248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55348096.jpg",
-      "IdName":"arsenalrobber"
+      "References":null
    },
    {
       "Id":"16268841",
@@ -9324,7 +9258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16268841.jpg",
-      "IdName":"zolga"
+      "References":null
    },
    {
       "Id":"20065549",
@@ -9334,7 +9268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20065549.jpg",
-      "IdName":"nonspellcastingarea"
+      "References":null
    },
    {
       "Id":"32268901",
@@ -9344,7 +9278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32268901.jpg",
-      "IdName":"salamandra"
+      "References":null
    },
    {
       "Id":"6740720",
@@ -9354,7 +9288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6740720.jpg",
-      "IdName":"seiyaryu"
+      "References":null
    },
    {
       "Id":"41356845",
@@ -9364,7 +9298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41356845.jpg",
-      "IdName":"acidtraphole"
+      "References":null
    },
    {
       "Id":"20101223",
@@ -9374,7 +9308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20101223.jpg",
-      "IdName":"breathoflight"
+      "References":null
    },
    {
       "Id":"21323861",
@@ -9384,7 +9318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21323861.jpg",
-      "IdName":"acidrain"
+      "References":null
    },
    {
       "Id":"90330453",
@@ -9394,7 +9328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90330453.jpg",
-      "IdName":"lastdayofwitch"
+      "References":null
    },
    {
       "Id":"98502113",
@@ -9404,7 +9338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98502113.jpg",
-      "IdName":"darkpaladin"
+      "References":null
    },
    {
       "Id":"48642904",
@@ -9414,7 +9348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48642904.jpg",
-      "IdName":"mesmericcontrol"
+      "References":null
    },
    {
       "Id":"99785935",
@@ -9424,7 +9358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99785935.jpg",
-      "IdName":"alphathemagnetwarrior"
+      "References":null
    },
    {
       "Id":"39256679",
@@ -9434,7 +9368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39256679.jpg",
-      "IdName":"betathemagnetwarrior"
+      "References":null
    },
    {
       "Id":"11549357",
@@ -9444,7 +9378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11549357.jpg",
-      "IdName":"gammathemagnetwarrior"
+      "References":null
    },
    {
       "Id":"14772491",
@@ -9454,7 +9388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14772491.jpg",
-      "IdName":"commonsoul"
+      "References":null
    },
    {
       "Id":"44676200",
@@ -9464,7 +9398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44676200.jpg",
-      "IdName":"herobarrier"
+      "References":null
    },
    {
       "Id":"29612557",
@@ -9474,7 +9408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29612557.jpg",
-      "IdName":"cycloneboomerang"
+      "References":null
    },
    {
       "Id":"86188410",
@@ -9484,7 +9418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86188410.jpg",
-      "IdName":"elementalherowildheart"
+      "References":null
    },
    {
       "Id":"16616620",
@@ -9494,7 +9428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16616620.jpg",
-      "IdName":"contact"
+      "References":null
    },
    {
       "Id":"17955766",
@@ -9504,7 +9438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17955766.jpg",
-      "IdName":"neospacianaquadolphin"
+      "References":null
    },
    {
       "Id":"42682609",
@@ -9514,7 +9448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42682609.jpg",
-      "IdName":"chrysalisdolphin"
+      "References":null
    },
    {
       "Id":"213326",
@@ -9524,7 +9458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/213326.jpg",
-      "IdName":"eemergencycall"
+      "References":null
    },
    {
       "Id":"48976825",
@@ -9534,7 +9468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48976825.jpg",
-      "IdName":"burialfromadifferentdimension"
+      "References":null
    },
    {
       "Id":"78387742",
@@ -9544,7 +9478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78387742.jpg",
-      "IdName":"fakehero"
+      "References":null
    },
    {
       "Id":"191749",
@@ -9554,7 +9488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/191749.jpg",
-      "IdName":"heroflash"
+      "References":null
    },
    {
       "Id":"10759529",
@@ -9564,7 +9498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10759529.jpg",
-      "IdName":"kidguard"
+      "References":null
    },
    {
       "Id":"55985014",
@@ -9574,7 +9508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55985014.jpg",
-      "IdName":"miraclekids"
+      "References":null
    },
    {
       "Id":"32679370",
@@ -9584,7 +9518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32679370.jpg",
-      "IdName":"herokid"
+      "References":null
    },
    {
       "Id":"74825788",
@@ -9594,7 +9528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74825788.jpg",
-      "IdName":"hheatedheart"
+      "References":null
    },
    {
       "Id":"55615891",
@@ -9604,7 +9538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55615891.jpg",
-      "IdName":"elementalherowildwingman"
+      "References":null
    },
    {
       "Id":"11471117",
@@ -9614,7 +9548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11471117.jpg",
-      "IdName":"lightlaser"
+      "References":null
    },
    {
       "Id":"42015635",
@@ -9624,7 +9558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42015635.jpg",
-      "IdName":"neospace"
+      "References":null
    },
    {
       "Id":"55171412",
@@ -9634,7 +9568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55171412.jpg",
-      "IdName":"elementalheroaquaneos"
+      "References":null
    },
    {
       "Id":"28677304",
@@ -9644,7 +9578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28677304.jpg",
-      "IdName":"elementalherodarkneos"
+      "References":null
    },
    {
       "Id":"81566151",
@@ -9654,7 +9588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81566151.jpg",
-      "IdName":"elementalheroflareneos"
+      "References":null
    },
    {
       "Id":"89943723",
@@ -9664,7 +9598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89943723.jpg",
-      "IdName":"elementalheroneos"
+      "References":null
    },
    {
       "Id":"63703130",
@@ -9674,7 +9608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63703130.jpg",
-      "IdName":"ooversoul"
+      "References":null
    },
    {
       "Id":"43237273",
@@ -9684,7 +9618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43237273.jpg",
-      "IdName":"neospaciandarkpanther"
+      "References":null
    },
    {
       "Id":"37318031",
@@ -9694,7 +9628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37318031.jpg",
-      "IdName":"rrighteousjustice"
+      "References":null
    },
    {
       "Id":"89621922",
@@ -9704,7 +9638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89621922.jpg",
-      "IdName":"neospacianflarescarab"
+      "References":null
    },
    {
       "Id":"85087012",
@@ -9714,7 +9648,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85087012.jpg",
-      "IdName":"cardtrooper"
+      "References":null
    },
    {
       "Id":"84361420",
@@ -9724,7 +9658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84361420.jpg",
-      "IdName":"edgehammer"
+      "References":null
    },
    {
       "Id":"10526791",
@@ -9734,7 +9668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10526791.jpg",
-      "IdName":"elementalherowildedge"
+      "References":null
    },
    {
       "Id":"59793705",
@@ -9744,7 +9678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59793705.jpg",
-      "IdName":"elementalherobladedge"
+      "References":null
    },
    {
       "Id":"19252988",
@@ -9754,7 +9688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19252988.jpg",
-      "IdName":"trapjammer"
+      "References":null
    },
    {
       "Id":"11961740",
@@ -9764,7 +9698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11961740.jpg",
-      "IdName":"differentdimensioncapsule"
+      "References":null
    },
    {
       "Id":"64599569",
@@ -9774,7 +9708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64599569.jpg",
-      "IdName":"chimeratechoverdragon"
+      "References":null
    },
    {
       "Id":"26439287",
@@ -9784,7 +9718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26439287.jpg",
-      "IdName":"protocyberdragon"
+      "References":null
    },
    {
       "Id":"76986005",
@@ -9794,7 +9728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76986005.jpg",
-      "IdName":"cyberkirin"
+      "References":null
    },
    {
       "Id":"3370104",
@@ -9804,7 +9738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3370104.jpg",
-      "IdName":"cyberphoenix"
+      "References":null
    },
    {
       "Id":"47754278",
@@ -9814,7 +9748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47754278.jpg",
-      "IdName":"infernaldragon"
+      "References":null
    },
    {
       "Id":"68774379",
@@ -9824,7 +9758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68774379.jpg",
-      "IdName":"cyberbarrierdragon"
+      "References":null
    },
    {
       "Id":"4162088",
@@ -9834,7 +9768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4162088.jpg",
-      "IdName":"cyberlaserdragon"
+      "References":null
    },
    {
       "Id":"77565204",
@@ -9844,7 +9778,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77565204.jpg",
-      "IdName":"futurefusion"
+      "References":null
    },
    {
       "Id":"3659803",
@@ -9854,7 +9788,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3659803.jpg",
-      "IdName":"overloadfusion"
+      "References":null
    },
    {
       "Id":"73026394",
@@ -9864,7 +9798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73026394.jpg",
-      "IdName":"fusionguard"
+      "References":null
    },
    {
       "Id":"46031686",
@@ -9874,7 +9808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46031686.jpg",
-      "IdName":"damagepolarizer"
+      "References":null
    },
    {
       "Id":"73148972",
@@ -9884,7 +9818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73148972.jpg",
-      "IdName":"ruthlessdenial"
+      "References":null
    },
    {
       "Id":"10537981",
@@ -9894,7 +9828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10537981.jpg",
-      "IdName":"returnsoul"
+      "References":null
    },
    {
       "Id":"66607691",
@@ -9904,7 +9838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66607691.jpg",
-      "IdName":"photongeneratorunit"
+      "References":null
    },
    {
       "Id":"91989718",
@@ -9914,7 +9848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91989718.jpg",
-      "IdName":"attackreflectorunit"
+      "References":null
    },
    {
       "Id":"62868900",
@@ -9924,7 +9858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62868900.jpg",
-      "IdName":"dshield"
+      "References":null
    },
    {
       "Id":"77608643",
@@ -9934,7 +9868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77608643.jpg",
-      "IdName":"destinyherocaptaintenacious"
+      "References":null
    },
    {
       "Id":"43405287",
@@ -9944,7 +9878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43405287.jpg",
-      "IdName":"dchain"
+      "References":null
    },
    {
       "Id":"8698851",
@@ -9954,7 +9888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8698851.jpg",
-      "IdName":"dcounter"
+      "References":null
    },
    {
       "Id":"13093792",
@@ -9964,7 +9898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13093792.jpg",
-      "IdName":"destinyherodiamonddude"
+      "References":null
    },
    {
       "Id":"54749427",
@@ -9974,7 +9908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54749427.jpg",
-      "IdName":"destinyherodefender"
+      "References":null
    },
    {
       "Id":"72204747",
@@ -9984,7 +9918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72204747.jpg",
-      "IdName":"overdestiny"
+      "References":null
    },
    {
       "Id":"62980542",
@@ -9994,7 +9928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62980542.jpg",
-      "IdName":"destructionofdestiny"
+      "References":null
    },
    {
       "Id":"17132130",
@@ -10004,7 +9938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17132130.jpg",
-      "IdName":"destinyherodogma"
+      "References":null
    },
    {
       "Id":"28355718",
@@ -10014,7 +9948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28355718.jpg",
-      "IdName":"destinyherodoubledude"
+      "References":null
    },
    {
       "Id":"89899996",
@@ -10024,7 +9958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89899996.jpg",
-      "IdName":"dspirit"
+      "References":null
    },
    {
       "Id":"88820235",
@@ -10034,7 +9968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88820235.jpg",
-      "IdName":"elementalheroshiningphoenixenforcer"
+      "References":null
    },
    {
       "Id":"41436536",
@@ -10044,7 +9978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41436536.jpg",
-      "IdName":"elementalherophoenixenforcer"
+      "References":null
    },
    {
       "Id":"55461064",
@@ -10054,7 +9988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55461064.jpg",
-      "IdName":"destinyheroblademaster"
+      "References":null
    },
    {
       "Id":"81866673",
@@ -10064,7 +9998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81866673.jpg",
-      "IdName":"destinyherodasher"
+      "References":null
    },
    {
       "Id":"22147147",
@@ -10074,7 +10008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22147147.jpg",
-      "IdName":"cycloneblade"
+      "References":null
    },
    {
       "Id":"40591390",
@@ -10084,7 +10018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40591390.jpg",
-      "IdName":"destinyherodreadmaster"
+      "References":null
    },
    {
       "Id":"1036974",
@@ -10094,7 +10028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1036974.jpg",
-      "IdName":"misfortune"
+      "References":null
    },
    {
       "Id":"9411399",
@@ -10104,7 +10038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9411399.jpg",
-      "IdName":"destinyheromalicious"
+      "References":null
    },
    {
       "Id":"15294090",
@@ -10114,7 +10048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15294090.jpg",
-      "IdName":"destinymirage"
+      "References":null
    },
    {
       "Id":"99075257",
@@ -10124,7 +10058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99075257.jpg",
-      "IdName":"dtime"
+      "References":null
    },
    {
       "Id":"45809008",
@@ -10134,7 +10068,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45809008.jpg",
-      "IdName":"destinydraw"
+      "References":null
    },
    {
       "Id":"75041269",
@@ -10144,7 +10078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75041269.jpg",
-      "IdName":"clocktowerprison"
+      "References":null
    },
    {
       "Id":"48653261",
@@ -10154,7 +10088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48653261.jpg",
-      "IdName":"guardpenalty"
+      "References":null
    },
    {
       "Id":"36586443",
@@ -10164,7 +10098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36586443.jpg",
-      "IdName":"elementalrecharge"
+      "References":null
    },
    {
       "Id":"41613948",
@@ -10174,7 +10108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41613948.jpg",
-      "IdName":"destinyherodoomlord"
+      "References":null
    },
    {
       "Id":"35464895",
@@ -10184,7 +10118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35464895.jpg",
-      "IdName":"destinysignal"
+      "References":null
    },
    {
       "Id":"35787450",
@@ -10194,7 +10128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35787450.jpg",
-      "IdName":"eternaldread"
+      "References":null
    },
    {
       "Id":"53527835",
@@ -10204,7 +10138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53527835.jpg",
-      "IdName":"darkcity"
+      "References":null
    },
    {
       "Id":"96765646",
@@ -10214,7 +10148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96765646.jpg",
-      "IdName":"swingofmemories"
+      "References":null
    },
    {
       "Id":"87798440",
@@ -10224,7 +10158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87798440.jpg",
-      "IdName":"armorbreaker"
+      "References":null
    },
    {
       "Id":"80908502",
@@ -10234,7 +10168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80908502.jpg",
-      "IdName":"elementalherocaptaingold"
+      "References":null
    },
    {
       "Id":"95943058",
@@ -10244,7 +10178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95943058.jpg",
-      "IdName":"evilheroinfernalgainer"
+      "References":null
    },
    {
       "Id":"54959865",
@@ -10254,7 +10188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54959865.jpg",
-      "IdName":"neospacianairhummingbird"
+      "References":null
    },
    {
       "Id":"82639107",
@@ -10264,7 +10198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82639107.jpg",
-      "IdName":"convertcontact"
+      "References":null
    },
    {
       "Id":"19024706",
@@ -10274,7 +10208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19024706.jpg",
-      "IdName":"herocounterattack"
+      "References":null
    },
    {
       "Id":"12071500",
@@ -10284,7 +10218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12071500.jpg",
-      "IdName":"darkcalling"
+      "References":null
    },
    {
       "Id":"13293158",
@@ -10294,7 +10228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13293158.jpg",
-      "IdName":"evilherowildcyclone"
+      "References":null
    },
    {
       "Id":"86676862",
@@ -10304,7 +10238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86676862.jpg",
-      "IdName":"evilheromaliciousfiend"
+      "References":null
    },
    {
       "Id":"94820406",
@@ -10314,7 +10248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94820406.jpg",
-      "IdName":"darkfusion"
+      "References":null
    },
    {
       "Id":"58332301",
@@ -10324,7 +10258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58332301.jpg",
-      "IdName":"evilherodarkgaia"
+      "References":null
    },
    {
       "Id":"47596607",
@@ -10334,7 +10268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47596607.jpg",
-      "IdName":"skyscraper2herocity"
+      "References":null
    },
    {
       "Id":"58554959",
@@ -10344,7 +10278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58554959.jpg",
-      "IdName":"evilheromaliciousedge"
+      "References":null
    },
    {
       "Id":"23282832",
@@ -10354,7 +10288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23282832.jpg",
-      "IdName":"overlimit"
+      "References":null
    },
    {
       "Id":"17732278",
@@ -10364,7 +10298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17732278.jpg",
-      "IdName":"neospacianglowmoss"
+      "References":null
    },
    {
       "Id":"10489311",
@@ -10374,7 +10308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10489311.jpg",
-      "IdName":"heromedal"
+      "References":null
    },
    {
       "Id":"69884162",
@@ -10384,7 +10318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69884162.jpg",
-      "IdName":"elementalheroneosalius"
+      "References":null
    },
    {
       "Id":"43452193",
@@ -10394,7 +10328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43452193.jpg",
-      "IdName":"mirrorgate"
+      "References":null
    },
    {
       "Id":"50304345",
@@ -10404,7 +10338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50304345.jpg",
-      "IdName":"evilheroinfernalprodigy"
+      "References":null
    },
    {
       "Id":"85854214",
@@ -10414,7 +10348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85854214.jpg",
-      "IdName":"herosrule2"
+      "References":null
    },
    {
       "Id":"18302224",
@@ -10424,7 +10358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18302224.jpg",
-      "IdName":"reverseofneos"
+      "References":null
    },
    {
       "Id":"49469105",
@@ -10434,7 +10368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49469105.jpg",
-      "IdName":"revokefusion"
+      "References":null
    },
    {
       "Id":"50282757",
@@ -10444,7 +10378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50282757.jpg",
-      "IdName":"evilheroinfernalsniper"
+      "References":null
    },
    {
       "Id":"80344569",
@@ -10454,7 +10388,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80344569.jpg",
-      "IdName":"neospaciangrandmole"
+      "References":null
    },
    {
       "Id":"72881007",
@@ -10464,7 +10398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72881007.jpg",
-      "IdName":"crystalabundance"
+      "References":null
    },
    {
       "Id":"47408488",
@@ -10474,7 +10408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47408488.jpg",
-      "IdName":"crystaltree"
+      "References":null
    },
    {
       "Id":"95326659",
@@ -10484,7 +10418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95326659.jpg",
-      "IdName":"crystalbeacon"
+      "References":null
    },
    {
       "Id":"35486099",
@@ -10494,7 +10428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35486099.jpg",
-      "IdName":"crystalblessing"
+      "References":null
    },
    {
       "Id":"21698716",
@@ -10504,7 +10438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21698716.jpg",
-      "IdName":"crystalbeastcobalteagle"
+      "References":null
    },
    {
       "Id":"32933942",
@@ -10514,7 +10448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32933942.jpg",
-      "IdName":"crystalbeastamethystcat"
+      "References":null
    },
    {
       "Id":"32710364",
@@ -10524,7 +10458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32710364.jpg",
-      "IdName":"crystalbeastrubycarbuncle"
+      "References":null
    },
    {
       "Id":"69937550",
@@ -10534,7 +10468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69937550.jpg",
-      "IdName":"crystalbeastambermammoth"
+      "References":null
    },
    {
       "Id":"95600067",
@@ -10544,7 +10478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95600067.jpg",
-      "IdName":"crystalbeasttopaztiger"
+      "References":null
    },
    {
       "Id":"68215963",
@@ -10554,7 +10488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68215963.jpg",
-      "IdName":"crystalbeastemeraldtortoise"
+      "References":null
    },
    {
       "Id":"12958919",
@@ -10564,7 +10498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12958919.jpg",
-      "IdName":"phantomskyblaster"
+      "References":null
    },
    {
       "Id":"11136371",
@@ -10574,7 +10508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11136371.jpg",
-      "IdName":"countergem"
+      "References":null
    },
    {
       "Id":"96331676",
@@ -10584,7 +10518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96331676.jpg",
-      "IdName":"crystalraigeki"
+      "References":null
    },
    {
       "Id":"74519184",
@@ -10594,7 +10528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74519184.jpg",
-      "IdName":"handdestruction"
+      "References":null
    },
    {
       "Id":"9391354",
@@ -10604,7 +10538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9391354.jpg",
-      "IdName":"gravicrushdragon"
+      "References":null
    },
    {
       "Id":"72903645",
@@ -10614,7 +10548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72903645.jpg",
-      "IdName":"magnaslashdragon"
+      "References":null
    },
    {
       "Id":"97970833",
@@ -10624,7 +10558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97970833.jpg",
-      "IdName":"lastresort"
+      "References":null
    },
    {
       "Id":"48343627",
@@ -10634,7 +10568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48343627.jpg",
-      "IdName":"gravesquirmer"
+      "References":null
    },
    {
       "Id":"75732622",
@@ -10644,7 +10578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75732622.jpg",
-      "IdName":"grindergolem"
+      "References":null
    },
    {
       "Id":"96148285",
@@ -10654,7 +10588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96148285.jpg",
-      "IdName":"triggeredsummon"
+      "References":null
    },
    {
       "Id":"10004783",
@@ -10664,7 +10598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10004783.jpg",
-      "IdName":"crystalrelease"
+      "References":null
    },
    {
       "Id":"47121070",
@@ -10674,7 +10608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47121070.jpg",
-      "IdName":"crystalpair"
+      "References":null
    },
    {
       "Id":"8275702",
@@ -10684,7 +10618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8275702.jpg",
-      "IdName":"crystalpromise"
+      "References":null
    },
    {
       "Id":"34487429",
@@ -10694,7 +10628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34487429.jpg",
-      "IdName":"ancientcityrainbowruins"
+      "References":null
    },
    {
       "Id":"45939841",
@@ -10704,7 +10638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45939841.jpg",
-      "IdName":"twister"
+      "References":null
    },
    {
       "Id":"14315573",
@@ -10714,7 +10648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14315573.jpg",
-      "IdName":"negateattack"
+      "References":null
    },
    {
       "Id":"47737087",
@@ -10724,7 +10658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47737087.jpg",
-      "IdName":"elementalherorampartblaster"
+      "References":null
    },
    {
       "Id":"21844576",
@@ -10734,7 +10668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21844576.jpg",
-      "IdName":"elementalheroavian"
+      "References":null
    },
    {
       "Id":"53586134",
@@ -10744,7 +10678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53586134.jpg",
-      "IdName":"bubbleblaster"
+      "References":null
    },
    {
       "Id":"58932615",
@@ -10754,7 +10688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58932615.jpg",
-      "IdName":"elementalheroburstinatrix"
+      "References":null
    },
    {
       "Id":"22479888",
@@ -10764,7 +10698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22479888.jpg",
-      "IdName":"claycharge"
+      "References":null
    },
    {
       "Id":"84327329",
@@ -10774,7 +10708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84327329.jpg",
-      "IdName":"elementalheroclayman"
+      "References":null
    },
    {
       "Id":"61204971",
@@ -10784,7 +10718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61204971.jpg",
-      "IdName":"elementalherothundergiant"
+      "References":null
    },
    {
       "Id":"35809262",
@@ -10794,7 +10728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35809262.jpg",
-      "IdName":"elementalheroflamewingman"
+      "References":null
    },
    {
       "Id":"57116033",
@@ -10804,7 +10738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57116033.jpg",
-      "IdName":"wingedkuriboh"
+      "References":null
    },
    {
       "Id":"19394153",
@@ -10814,7 +10748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19394153.jpg",
-      "IdName":"feathershot"
+      "References":null
    },
    {
       "Id":"27191436",
@@ -10824,7 +10758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27191436.jpg",
-      "IdName":"burstreturn"
+      "References":null
    },
    {
       "Id":"22020907",
@@ -10834,7 +10768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22020907.jpg",
-      "IdName":"herosignal"
+      "References":null
    },
    {
       "Id":"80075749",
@@ -10844,7 +10778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80075749.jpg",
-      "IdName":"bubbleillusion"
+      "References":null
    },
    {
       "Id":"20721928",
@@ -10854,7 +10788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20721928.jpg",
-      "IdName":"elementalherosparkman"
+      "References":null
    },
    {
       "Id":"21597117",
@@ -10864,7 +10798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21597117.jpg",
-      "IdName":"aheroemerges"
+      "References":null
    },
    {
       "Id":"81197327",
@@ -10874,7 +10808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81197327.jpg",
-      "IdName":"elementalherosteamhealer"
+      "References":null
    },
    {
       "Id":"71060915",
@@ -10884,7 +10818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71060915.jpg",
-      "IdName":"featherwind"
+      "References":null
    },
    {
       "Id":"46910446",
@@ -10894,7 +10828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46910446.jpg",
-      "IdName":"chthonianalliance"
+      "References":null
    },
    {
       "Id":"58641905",
@@ -10904,7 +10838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58641905.jpg",
-      "IdName":"ringofdefense"
+      "References":null
    },
    {
       "Id":"84243274",
@@ -10914,7 +10848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84243274.jpg",
-      "IdName":"vwxyzdragoncatapultcannon"
+      "References":null
    },
    {
       "Id":"96300057",
@@ -10924,7 +10858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96300057.jpg",
-      "IdName":"wwingcatapult"
+      "References":null
    },
    {
       "Id":"90374791",
@@ -10934,7 +10868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90374791.jpg",
-      "IdName":"armedchanger"
+      "References":null
    },
    {
       "Id":"59464593",
@@ -10944,7 +10878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59464593.jpg",
-      "IdName":"armeddragonlv10"
+      "References":null
    },
    {
       "Id":"980973",
@@ -10954,7 +10888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/980973.jpg",
-      "IdName":"armeddragonlv3"
+      "References":null
    },
    {
       "Id":"46384672",
@@ -10964,7 +10898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46384672.jpg",
-      "IdName":"armeddragonlv5"
+      "References":null
    },
    {
       "Id":"73879377",
@@ -10974,7 +10908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73879377.jpg",
-      "IdName":"armeddragonlv7"
+      "References":null
    },
    {
       "Id":"18271561",
@@ -10984,7 +10918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18271561.jpg",
-      "IdName":"chthonianblast"
+      "References":null
    },
    {
       "Id":"23309606",
@@ -10994,7 +10928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23309606.jpg",
-      "IdName":"infernalincinerator"
+      "References":null
    },
    {
       "Id":"12247206",
@@ -11004,7 +10938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12247206.jpg",
-      "IdName":"infernorecklesssummon"
+      "References":null
    },
    {
       "Id":"84136000",
@@ -11014,7 +10948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84136000.jpg",
-      "IdName":"thegraveofenkindling"
+      "References":null
    },
    {
       "Id":"85852291",
@@ -11024,7 +10958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85852291.jpg",
-      "IdName":"magicalmallet"
+      "References":null
    },
    {
       "Id":"61850482",
@@ -11034,7 +10968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61850482.jpg",
-      "IdName":"levelmodulation"
+      "References":null
    },
    {
       "Id":"42941100",
@@ -11044,7 +10978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42941100.jpg",
-      "IdName":"ojamayellow"
+      "References":null
    },
    {
       "Id":"79335209",
@@ -11054,7 +10988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79335209.jpg",
-      "IdName":"ojamablack"
+      "References":null
    },
    {
       "Id":"90140980",
@@ -11064,7 +10998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90140980.jpg",
-      "IdName":"ojamaking"
+      "References":null
    },
    {
       "Id":"24643836",
@@ -11074,7 +11008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24643836.jpg",
-      "IdName":"ojamagic"
+      "References":null
    },
    {
       "Id":"98259197",
@@ -11084,7 +11018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98259197.jpg",
-      "IdName":"ojamuscle"
+      "References":null
    },
    {
       "Id":"8251996",
@@ -11094,7 +11028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8251996.jpg",
-      "IdName":"ojamadeltahurricane"
+      "References":null
    },
    {
       "Id":"72287557",
@@ -11104,7 +11038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72287557.jpg",
-      "IdName":"chthonianpolymer"
+      "References":null
    },
    {
       "Id":"64500000",
@@ -11114,7 +11048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64500000.jpg",
-      "IdName":"zmetaltank"
+      "References":null
    },
    {
       "Id":"62651957",
@@ -11124,7 +11058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62651957.jpg",
-      "IdName":"xheadcannon"
+      "References":null
    },
    {
       "Id":"65622692",
@@ -11134,7 +11068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65622692.jpg",
-      "IdName":"ydragonhead"
+      "References":null
    },
    {
       "Id":"58859575",
@@ -11144,7 +11078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58859575.jpg",
-      "IdName":"vwtigercatapult"
+      "References":null
    },
    {
       "Id":"51638941",
@@ -11154,7 +11088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51638941.jpg",
-      "IdName":"vtigerjet"
+      "References":null
    },
    {
       "Id":"89312388",
@@ -11164,7 +11098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89312388.jpg",
-      "IdName":"elementalheroprisma"
+      "References":null
    },
    {
       "Id":"54762426",
@@ -11174,7 +11108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54762426.jpg",
-      "IdName":"treasuremap"
+      "References":null
    },
    {
       "Id":"81167171",
@@ -11184,7 +11118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81167171.jpg",
-      "IdName":"herospirit"
+      "References":null
    },
    {
       "Id":"48115277",
@@ -11194,7 +11128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48115277.jpg",
-      "IdName":"blockman"
+      "References":null
    },
    {
       "Id":"94253609",
@@ -11204,7 +11138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94253609.jpg",
-      "IdName":"elementalabsorber"
+      "References":null
    },
    {
       "Id":"32296881",
@@ -11214,7 +11148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32296881.jpg",
-      "IdName":"bountifulartemis"
+      "References":null
    },
    {
       "Id":"14255590",
@@ -11224,7 +11158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14255590.jpg",
-      "IdName":"maliceascendant"
+      "References":null
    },
    {
       "Id":"53567095",
@@ -11234,7 +11168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53567095.jpg",
-      "IdName":"icarusattack"
+      "References":null
    },
    {
       "Id":"31887905",
@@ -11244,7 +11178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31887905.jpg",
-      "IdName":"familiarpossessedaussa"
+      "References":null
    },
    {
       "Id":"29139104",
@@ -11254,7 +11188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29139104.jpg",
-      "IdName":"avalanchingaussa"
+      "References":null
    },
    {
       "Id":"15317640",
@@ -11264,7 +11198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15317640.jpg",
-      "IdName":"bescoveredcore"
+      "References":null
    },
    {
       "Id":"94853057",
@@ -11274,7 +11208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94853057.jpg",
-      "IdName":"banisheroftheradiance"
+      "References":null
    },
    {
       "Id":"6924874",
@@ -11284,7 +11218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6924874.jpg",
-      "IdName":"harpiespetbabydragon"
+      "References":null
    },
    {
       "Id":"33731070",
@@ -11294,7 +11228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33731070.jpg",
-      "IdName":"beiigevanguardofdarkworld"
+      "References":null
    },
    {
       "Id":"93730409",
@@ -11304,7 +11238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93730409.jpg",
-      "IdName":"whirlwindweasel"
+      "References":null
    },
    {
       "Id":"79126789",
@@ -11314,7 +11248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79126789.jpg",
-      "IdName":"browwhuntsmanofdarkworld"
+      "References":null
    },
    {
       "Id":"48700891",
@@ -11324,7 +11258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48700891.jpg",
-      "IdName":"memorycrusher"
+      "References":null
    },
    {
       "Id":"6214884",
@@ -11334,7 +11268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6214884.jpg",
-      "IdName":"brronmadkingofdarkworld"
+      "References":null
    },
    {
       "Id":"66947414",
@@ -11344,7 +11278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66947414.jpg",
-      "IdName":"bossrush"
+      "References":null
    },
    {
       "Id":"80045583",
@@ -11354,7 +11288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80045583.jpg",
-      "IdName":"ancientgearcannon"
+      "References":null
    },
    {
       "Id":"54289683",
@@ -11364,7 +11298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54289683.jpg",
-      "IdName":"powercapsule"
+      "References":null
    },
    {
       "Id":"94940436",
@@ -11374,7 +11308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94940436.jpg",
-      "IdName":"magnetcirclelv2"
+      "References":null
    },
    {
       "Id":"81003500",
@@ -11384,7 +11318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81003500.jpg",
-      "IdName":"elementalheronecroidshaman"
+      "References":null
    },
    {
       "Id":"76039636",
@@ -11394,7 +11328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76039636.jpg",
-      "IdName":"doomdozer"
+      "References":null
    },
    {
       "Id":"33248692",
@@ -11404,7 +11338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33248692.jpg",
-      "IdName":"optionhunter"
+      "References":null
    },
    {
       "Id":"92001300",
@@ -11414,7 +11348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92001300.jpg",
-      "IdName":"ancientgearcastle"
+      "References":null
    },
    {
       "Id":"25652259",
@@ -11424,7 +11358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25652259.jpg",
-      "IdName":"queensknight"
+      "References":null
    },
    {
       "Id":"64788463",
@@ -11434,7 +11368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64788463.jpg",
-      "IdName":"kingsknight"
+      "References":null
    },
    {
       "Id":"90876561",
@@ -11444,7 +11378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90876561.jpg",
-      "IdName":"jacksknight"
+      "References":null
    },
    {
       "Id":"68280530",
@@ -11454,7 +11388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68280530.jpg",
-      "IdName":"royalknight"
+      "References":null
    },
    {
       "Id":"57346400",
@@ -11464,7 +11398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57346400.jpg",
-      "IdName":"guarddog"
+      "References":null
    },
    {
       "Id":"80551130",
@@ -11474,7 +11408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80551130.jpg",
-      "IdName":"miraculousdescent"
+      "References":null
    },
    {
       "Id":"67951831",
@@ -11484,7 +11418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67951831.jpg",
-      "IdName":"heroheart"
+      "References":null
    },
    {
       "Id":"28378427",
@@ -11494,7 +11428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28378427.jpg",
-      "IdName":"damagecondenser"
+      "References":null
    },
    {
       "Id":"29590905",
@@ -11504,7 +11438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29590905.jpg",
-      "IdName":"superjuniorconfrontation"
+      "References":null
    },
    {
       "Id":"38430673",
@@ -11514,7 +11448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38430673.jpg",
-      "IdName":"grandconvergence"
+      "References":null
    },
    {
       "Id":"76763417",
@@ -11524,7 +11458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76763417.jpg",
-      "IdName":"cybergymnast"
+      "References":null
    },
    {
       "Id":"2158562",
@@ -11534,7 +11468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2158562.jpg",
-      "IdName":"cyberprima"
+      "References":null
    },
    {
       "Id":"10248389",
@@ -11544,7 +11478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10248389.jpg",
-      "IdName":"cyberblader"
+      "References":null
    },
    {
       "Id":"49375719",
@@ -11554,7 +11488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49375719.jpg",
-      "IdName":"cybertutu"
+      "References":null
    },
    {
       "Id":"11460577",
@@ -11564,7 +11498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11460577.jpg",
-      "IdName":"etoilecyber"
+      "References":null
    },
    {
       "Id":"15595052",
@@ -11574,7 +11508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15595052.jpg",
-      "IdName":"discipleoftheforbiddenspell"
+      "References":null
    },
    {
       "Id":"30548775",
@@ -11584,7 +11518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30548775.jpg",
-      "IdName":"branch"
+      "References":null
    },
    {
       "Id":"85066822",
@@ -11594,7 +11528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85066822.jpg",
-      "IdName":"waterdragon"
+      "References":null
    },
    {
       "Id":"6137095",
@@ -11604,7 +11538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6137095.jpg",
-      "IdName":"malfunction"
+      "References":null
    },
    {
       "Id":"65824822",
@@ -11614,7 +11548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65824822.jpg",
-      "IdName":"darkdeal"
+      "References":null
    },
    {
       "Id":"17178486",
@@ -11624,7 +11558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17178486.jpg",
-      "IdName":"lifeequalizer"
+      "References":null
    },
    {
       "Id":"68881649",
@@ -11634,7 +11568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68881649.jpg",
-      "IdName":"familiarpossessederia"
+      "References":null
    },
    {
       "Id":"56524813",
@@ -11644,7 +11578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56524813.jpg",
-      "IdName":"ragingeria"
+      "References":null
    },
    {
       "Id":"10032958",
@@ -11654,7 +11588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10032958.jpg",
-      "IdName":"divinedragonexcelion"
+      "References":null
    },
    {
       "Id":"53828396",
@@ -11664,7 +11598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53828396.jpg",
-      "IdName":"adhesiveexplosive"
+      "References":null
    },
    {
       "Id":"28604635",
@@ -11674,7 +11608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28604635.jpg",
-      "IdName":"weedout"
+      "References":null
    },
    {
       "Id":"41249545",
@@ -11684,7 +11618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41249545.jpg",
-      "IdName":"grassphantom"
+      "References":null
    },
    {
       "Id":"93224848",
@@ -11694,7 +11628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93224848.jpg",
-      "IdName":"phantasmalmartyrs"
+      "References":null
    },
    {
       "Id":"8198712",
@@ -11704,7 +11638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8198712.jpg",
-      "IdName":"endoftheworld"
+      "References":null
    },
    {
       "Id":"81674782",
@@ -11714,7 +11648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81674782.jpg",
-      "IdName":"dimensionalfissure"
+      "References":null
    },
    {
       "Id":"13250922",
@@ -11724,7 +11658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13250922.jpg",
-      "IdName":"anteatereatingant"
+      "References":null
    },
    {
       "Id":"69632396",
@@ -11734,7 +11668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69632396.jpg",
-      "IdName":"goblinoutofthefryingpan"
+      "References":null
    },
    {
       "Id":"14472500",
@@ -11744,7 +11678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14472500.jpg",
-      "IdName":"gokipon"
+      "References":null
    },
    {
       "Id":"95701283",
@@ -11754,7 +11688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95701283.jpg",
-      "IdName":"majesticmechgoryu"
+      "References":null
    },
    {
       "Id":"9910360",
@@ -11764,7 +11698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9910360.jpg",
-      "IdName":"d3sfrog"
+      "References":null
    },
    {
       "Id":"49522489",
@@ -11774,7 +11708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49522489.jpg",
-      "IdName":"beelzefrog"
+      "References":null
    },
    {
       "Id":"52702748",
@@ -11784,7 +11718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52702748.jpg",
-      "IdName":"ddguide"
+      "References":null
    },
    {
       "Id":"12117532",
@@ -11794,7 +11728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12117532.jpg",
-      "IdName":"shatteredaxe"
+      "References":null
    },
    {
       "Id":"94689635",
@@ -11804,7 +11738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94689635.jpg",
-      "IdName":"heraldofpurplelight"
+      "References":null
    },
    {
       "Id":"21074344",
@@ -11814,7 +11748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21074344.jpg",
-      "IdName":"heraldofgreenlight"
+      "References":null
    },
    {
       "Id":"4376658",
@@ -11824,7 +11758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4376658.jpg",
-      "IdName":"familiarpossessedhiita"
+      "References":null
    },
    {
       "Id":"92518817",
@@ -11834,7 +11768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92518817.jpg",
-      "IdName":"blazinghiita"
+      "References":null
    },
    {
       "Id":"55401221",
@@ -11844,7 +11778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55401221.jpg",
-      "IdName":"batterymand"
+      "References":null
    },
    {
       "Id":"67646312",
@@ -11854,7 +11788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67646312.jpg",
-      "IdName":"searchlightman"
+      "References":null
    },
    {
       "Id":"40867519",
@@ -11864,7 +11798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40867519.jpg",
-      "IdName":"silentinsect"
+      "References":null
    },
    {
       "Id":"77252217",
@@ -11874,7 +11808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77252217.jpg",
-      "IdName":"chainsawinsect"
+      "References":null
    },
    {
       "Id":"81896370",
@@ -11884,7 +11818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81896370.jpg",
-      "IdName":"swiftbirdmanjoe"
+      "References":null
    },
    {
       "Id":"55008284",
@@ -11894,7 +11828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55008284.jpg",
-      "IdName":"theleagueofuniformnomenclature"
+      "References":null
    },
    {
       "Id":"91597389",
@@ -11904,7 +11838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91597389.jpg",
-      "IdName":"rollout"
+      "References":null
    },
    {
       "Id":"88190453",
@@ -11914,7 +11848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88190453.jpg",
-      "IdName":"chainthrasher"
+      "References":null
    },
    {
       "Id":"67468948",
@@ -11924,7 +11858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67468948.jpg",
-      "IdName":"layardtheliberator"
+      "References":null
    },
    {
       "Id":"29826127",
@@ -11934,7 +11868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29826127.jpg",
-      "IdName":"theforcesofdarkness"
+      "References":null
    },
    {
       "Id":"45898858",
@@ -11944,7 +11878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45898858.jpg",
-      "IdName":"bondingh2o"
+      "References":null
    },
    {
       "Id":"54976796",
@@ -11954,7 +11888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54976796.jpg",
-      "IdName":"levellimitareaa"
+      "References":null
    },
    {
       "Id":"30241314",
@@ -11964,7 +11898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30241314.jpg",
-      "IdName":"macrocosmos"
+      "References":null
    },
    {
       "Id":"6337436",
@@ -11974,7 +11908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6337436.jpg",
-      "IdName":"rapidfiremagician"
+      "References":null
    },
    {
       "Id":"14225239",
@@ -11984,7 +11918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14225239.jpg",
-      "IdName":"elementalheromariner"
+      "References":null
    },
    {
       "Id":"70948327",
@@ -11994,7 +11928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70948327.jpg",
-      "IdName":"nanobreaker"
+      "References":null
    },
    {
       "Id":"5285665",
@@ -12004,7 +11938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5285665.jpg",
-      "IdName":"elementalheroneobubbleman"
+      "References":null
    },
    {
       "Id":"58071123",
@@ -12014,7 +11948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58071123.jpg",
-      "IdName":"oxygeddon"
+      "References":null
    },
    {
       "Id":"93431518",
@@ -12024,7 +11958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93431518.jpg",
-      "IdName":"gatewaytodarkworld"
+      "References":null
    },
    {
       "Id":"97023549",
@@ -12034,7 +11968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97023549.jpg",
-      "IdName":"bladeskater"
+      "References":null
    },
    {
       "Id":"72426662",
@@ -12044,7 +11978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72426662.jpg",
-      "IdName":"demisekingofarmageddon"
+      "References":null
    },
    {
       "Id":"67829249",
@@ -12054,7 +11988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67829249.jpg",
-      "IdName":"ancientgeardrill"
+      "References":null
    },
    {
       "Id":"92219931",
@@ -12064,7 +11998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92219931.jpg",
-      "IdName":"simultaneousloss"
+      "References":null
    },
    {
       "Id":"73648243",
@@ -12074,7 +12008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73648243.jpg",
-      "IdName":"sandmoth"
+      "References":null
    },
    {
       "Id":"2316186",
@@ -12084,7 +12018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2316186.jpg",
-      "IdName":"princesscurran"
+      "References":null
    },
    {
       "Id":"75917088",
@@ -12094,7 +12028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75917088.jpg",
-      "IdName":"princesspikeru"
+      "References":null
    },
    {
       "Id":"6859683",
@@ -12104,7 +12038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6859683.jpg",
-      "IdName":"successprobability0"
+      "References":null
    },
    {
       "Id":"72709014",
@@ -12114,7 +12048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72709014.jpg",
-      "IdName":"trialoftheprincesses"
+      "References":null
    },
    {
       "Id":"7076131",
@@ -12124,7 +12058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7076131.jpg",
-      "IdName":"nexttobelost"
+      "References":null
    },
    {
       "Id":"69890967",
@@ -12134,7 +12068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69890967.jpg",
-      "IdName":"raviellordofphantasms"
+      "References":null
    },
    {
       "Id":"43340443",
@@ -12144,7 +12078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43340443.jpg",
-      "IdName":"forcedback"
+      "References":null
    },
    {
       "Id":"71587526",
@@ -12154,7 +12088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71587526.jpg",
-      "IdName":"karmacut"
+      "References":null
    },
    {
       "Id":"89222931",
@@ -12164,7 +12098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89222931.jpg",
-      "IdName":"machinekingprototype"
+      "References":null
    },
    {
       "Id":"34460239",
@@ -12174,7 +12108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34460239.jpg",
-      "IdName":"generationshift"
+      "References":null
    },
    {
       "Id":"31557782",
@@ -12184,7 +12118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31557782.jpg",
-      "IdName":"ancientgear"
+      "References":null
    },
    {
       "Id":"46427957",
@@ -12194,7 +12128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46427957.jpg",
-      "IdName":"ruinqueenofoblivion"
+      "References":null
    },
    {
       "Id":"70865988",
@@ -12204,7 +12138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70865988.jpg",
-      "IdName":"fullsalvo"
+      "References":null
    },
    {
       "Id":"44182827",
@@ -12214,7 +12148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44182827.jpg",
-      "IdName":"samsara"
+      "References":null
    },
    {
       "Id":"49645921",
@@ -12224,7 +12158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49645921.jpg",
-      "IdName":"saberbeetle"
+      "References":null
    },
    {
       "Id":"5498296",
@@ -12234,7 +12168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5498296.jpg",
-      "IdName":"scarrscoutofdarkworld"
+      "References":null
    },
    {
       "Id":"32918479",
@@ -12244,7 +12178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32918479.jpg",
-      "IdName":"majesticmechsenku"
+      "References":null
    },
    {
       "Id":"32619583",
@@ -12254,7 +12188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32619583.jpg",
-      "IdName":"sillvawarlordofdarkworld"
+      "References":null
    },
    {
       "Id":"50916353",
@@ -12264,7 +12198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50916353.jpg",
-      "IdName":"chthoniansoldier"
+      "References":null
    },
    {
       "Id":"45305419",
@@ -12274,7 +12208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45305419.jpg",
-      "IdName":"symbolofheritage"
+      "References":null
    },
    {
       "Id":"83121692",
@@ -12284,7 +12218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83121692.jpg",
-      "IdName":"elementalherotempest"
+      "References":null
    },
    {
       "Id":"41589166",
@@ -12294,7 +12228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41589166.jpg",
-      "IdName":"tenkabitoshien"
+      "References":null
    },
    {
       "Id":"44954628",
@@ -12304,7 +12238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44954628.jpg",
-      "IdName":"bestetran"
+      "References":null
    },
    {
       "Id":"87978805",
@@ -12314,7 +12248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87978805.jpg",
-      "IdName":"parasiticticky"
+      "References":null
    },
    {
       "Id":"28890974",
@@ -12324,7 +12258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28890974.jpg",
-      "IdName":"celestialtransformation"
+      "References":null
    },
    {
       "Id":"30435145",
@@ -12334,7 +12268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30435145.jpg",
-      "IdName":"ancientgearfactory"
+      "References":null
    },
    {
       "Id":"93130021",
@@ -12344,7 +12278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93130021.jpg",
-      "IdName":"victoryviperxx03"
+      "References":null
    },
    {
       "Id":"20951752",
@@ -12354,7 +12288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20951752.jpg",
-      "IdName":"voltanistheadjudicator"
+      "References":null
    },
    {
       "Id":"31764353",
@@ -12364,7 +12298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31764353.jpg",
-      "IdName":"familiarpossessedwynn"
+      "References":null
    },
    {
       "Id":"29013526",
@@ -12374,7 +12308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29013526.jpg",
-      "IdName":"stormingwynn"
+      "References":null
    },
    {
       "Id":"23421244",
@@ -12384,7 +12318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23421244.jpg",
-      "IdName":"rebornzombie"
+      "References":null
    },
    {
       "Id":"27581098",
@@ -12394,7 +12328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27581098.jpg",
-      "IdName":"nonfusionarea"
+      "References":null
    },
    {
       "Id":"7459013",
@@ -12404,7 +12338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7459013.jpg",
-      "IdName":"zureknightofdarkworld"
+      "References":null
    },
    {
       "Id":"99517131",
@@ -12414,7 +12348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99517131.jpg",
-      "IdName":"thespellabsorbinglife"
+      "References":null
    },
    {
       "Id":"19086954",
@@ -12424,7 +12358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19086954.jpg",
-      "IdName":"secondgoblin"
+      "References":null
    },
    {
       "Id":"48202661",
@@ -12434,7 +12368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48202661.jpg",
-      "IdName":"aitsu"
+      "References":null
    },
    {
       "Id":"90669991",
@@ -12444,7 +12378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90669991.jpg",
-      "IdName":"pineappleblast"
+      "References":null
    },
    {
       "Id":"11813953",
@@ -12454,7 +12388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11813953.jpg",
-      "IdName":"greatangus"
+      "References":null
    },
    {
       "Id":"84636823",
@@ -12464,7 +12398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84636823.jpg",
-      "IdName":"spellcanceller"
+      "References":null
    },
    {
       "Id":"94739788",
@@ -12474,7 +12408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94739788.jpg",
-      "IdName":"removebrainwashing"
+      "References":null
    },
    {
       "Id":"53112492",
@@ -12484,7 +12418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53112492.jpg",
-      "IdName":"antispell"
+      "References":null
    },
    {
       "Id":"67987611",
@@ -12494,7 +12428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67987611.jpg",
-      "IdName":"amazonessarchers"
+      "References":null
    },
    {
       "Id":"33114323",
@@ -12504,7 +12438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33114323.jpg",
-      "IdName":"metalsilverarmor"
+      "References":null
    },
    {
       "Id":"7625614",
@@ -12514,7 +12448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7625614.jpg",
-      "IdName":"raregoldarmor"
+      "References":null
    },
    {
       "Id":"7180418",
@@ -12524,7 +12458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7180418.jpg",
-      "IdName":"armorexe"
+      "References":null
    },
    {
       "Id":"25262697",
@@ -12534,7 +12468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25262697.jpg",
-      "IdName":"gravekeepersassailant"
+      "References":null
    },
    {
       "Id":"8964854",
@@ -12544,7 +12478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8964854.jpg",
-      "IdName":"combinationattack"
+      "References":null
    },
    {
       "Id":"10012614",
@@ -12554,7 +12488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10012614.jpg",
-      "IdName":"bannerofcourage"
+      "References":null
    },
    {
       "Id":"46181000",
@@ -12564,7 +12498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46181000.jpg",
-      "IdName":"frontlinebase"
+      "References":null
    },
    {
       "Id":"51534754",
@@ -12574,7 +12508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51534754.jpg",
-      "IdName":"yomiship"
+      "References":null
    },
    {
       "Id":"48148828",
@@ -12584,7 +12518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48148828.jpg",
-      "IdName":"ddcrazybeast"
+      "References":null
    },
    {
       "Id":"85359414",
@@ -12594,7 +12528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85359414.jpg",
-      "IdName":"freezingbeast"
+      "References":null
    },
    {
       "Id":"59364406",
@@ -12604,7 +12538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59364406.jpg",
-      "IdName":"burningbeast"
+      "References":null
    },
    {
       "Id":"70791313",
@@ -12614,7 +12548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70791313.jpg",
-      "IdName":"royalmagicallibrary"
+      "References":null
    },
    {
       "Id":"84696266",
@@ -12624,7 +12558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84696266.jpg",
-      "IdName":"sonicduck"
+      "References":null
    },
    {
       "Id":"78783370",
@@ -12634,7 +12568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78783370.jpg",
-      "IdName":"barrelbehindthedoor"
+      "References":null
    },
    {
       "Id":"2111707",
@@ -12644,7 +12578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2111707.jpg",
-      "IdName":"xydragoncannon"
+      "References":null
    },
    {
       "Id":"32062913",
@@ -12654,7 +12588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32062913.jpg",
-      "IdName":"megatonmagicalcannon"
+      "References":null
    },
    {
       "Id":"34906152",
@@ -12664,7 +12598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34906152.jpg",
-      "IdName":"massdriver"
+      "References":null
    },
    {
       "Id":"99724761",
@@ -12674,7 +12608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99724761.jpg",
-      "IdName":"xztankcannon"
+      "References":null
    },
    {
       "Id":"99877698",
@@ -12684,7 +12618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99877698.jpg",
-      "IdName":"gravekeeperscannonholder"
+      "References":null
    },
    {
       "Id":"85562745",
@@ -12694,7 +12628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85562745.jpg",
-      "IdName":"darkroomofnightmare"
+      "References":null
    },
    {
       "Id":"50412166",
@@ -12704,7 +12638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50412166.jpg",
-      "IdName":"charmofshabti"
+      "References":null
    },
    {
       "Id":"8634636",
@@ -12714,7 +12648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8634636.jpg",
-      "IdName":"darkcatwithwhitetail"
+      "References":null
    },
    {
       "Id":"59290628",
@@ -12724,7 +12658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59290628.jpg",
-      "IdName":"nightmarehorse"
+      "References":null
    },
    {
       "Id":"35429292",
@@ -12734,7 +12668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35429292.jpg",
-      "IdName":"pixieknight"
+      "References":null
    },
    {
       "Id":"98745000",
@@ -12744,7 +12678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98745000.jpg",
-      "IdName":"mysticalknightofjackal"
+      "References":null
    },
    {
       "Id":"11743119",
@@ -12754,7 +12688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11743119.jpg",
-      "IdName":"unionrider"
+      "References":null
    },
    {
       "Id":"17597059",
@@ -12764,7 +12698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17597059.jpg",
-      "IdName":"bysershock"
+      "References":null
    },
    {
       "Id":"6967870",
@@ -12774,7 +12708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6967870.jpg",
-      "IdName":"darkscorpioncliffthetrapremover"
+      "References":null
    },
    {
       "Id":"63442604",
@@ -12784,7 +12718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63442604.jpg",
-      "IdName":"physicaldouble"
+      "References":null
    },
    {
       "Id":"70231910",
@@ -12794,7 +12728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70231910.jpg",
-      "IdName":"darkcore"
+      "References":null
    },
    {
       "Id":"10209545",
@@ -12804,7 +12738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10209545.jpg",
-      "IdName":"decayedcommander"
+      "References":null
    },
    {
       "Id":"73574678",
@@ -12814,7 +12748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73574678.jpg",
-      "IdName":"amazonessblowpiper"
+      "References":null
    },
    {
       "Id":"12965761",
@@ -12824,7 +12758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12965761.jpg",
-      "IdName":"desdendle"
+      "References":null
    },
    {
       "Id":"20727787",
@@ -12834,7 +12768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20727787.jpg",
-      "IdName":"disarmament"
+      "References":null
    },
    {
       "Id":"78053598",
@@ -12844,7 +12778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78053598.jpg",
-      "IdName":"darkdesignator"
+      "References":null
    },
    {
       "Id":"87880531",
@@ -12854,7 +12788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87880531.jpg",
-      "IdName":"diffusionwavemotion"
+      "References":null
    },
    {
       "Id":"24096228",
@@ -12864,7 +12798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24096228.jpg",
-      "IdName":"doublespell"
+      "References":null
    },
    {
       "Id":"11091375",
@@ -12874,7 +12808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11091375.jpg",
-      "IdName":"lusterdragon"
+      "References":null
    },
    {
       "Id":"47415292",
@@ -12884,7 +12818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47415292.jpg",
-      "IdName":"pitchdarkdragon"
+      "References":null
    },
    {
       "Id":"25119460",
@@ -12894,7 +12828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25119460.jpg",
-      "IdName":"yztankdragon"
+      "References":null
    },
    {
       "Id":"6390406",
@@ -12904,7 +12838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6390406.jpg",
-      "IdName":"emblemofdragondestroyer"
+      "References":null
    },
    {
       "Id":"5990062",
@@ -12914,7 +12848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5990062.jpg",
-      "IdName":"reversalquiz"
+      "References":null
    },
    {
       "Id":"94004268",
@@ -12924,7 +12858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94004268.jpg",
-      "IdName":"amazonessswordswoman"
+      "References":null
    },
    {
       "Id":"60519422",
@@ -12934,7 +12868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60519422.jpg",
-      "IdName":"kishidospirit"
+      "References":null
    },
    {
       "Id":"12143771",
@@ -12944,7 +12878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12143771.jpg",
-      "IdName":"peoplerunningabout"
+      "References":null
    },
    {
       "Id":"87523462",
@@ -12954,7 +12888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87523462.jpg",
-      "IdName":"wingedsagefalcos"
+      "References":null
    },
    {
       "Id":"93382620",
@@ -12964,7 +12898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93382620.jpg",
-      "IdName":"ropeoflife"
+      "References":null
    },
    {
       "Id":"71413901",
@@ -12974,7 +12908,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71413901.jpg",
-      "IdName":"breakerthemagicalwarrior"
+      "References":null
    },
    {
       "Id":"68057622",
@@ -12984,7 +12918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68057622.jpg",
-      "IdName":"continuousdestructionpunch"
+      "References":null
    },
    {
       "Id":"37101832",
@@ -12994,7 +12928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37101832.jpg",
-      "IdName":"gravekeepersguard"
+      "References":null
    },
    {
       "Id":"33184167",
@@ -13004,7 +12938,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33184167.jpg",
-      "IdName":"tribeinfectingvirus"
+      "References":null
    },
    {
       "Id":"102380",
@@ -13014,7 +12948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/102380.jpg",
-      "IdName":"lavagolem"
+      "References":null
    },
    {
       "Id":"10809984",
@@ -13024,7 +12958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10809984.jpg",
-      "IdName":"greatphantomthief"
+      "References":null
    },
    {
       "Id":"55821894",
@@ -13034,7 +12968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55821894.jpg",
-      "IdName":"amazonessfighter"
+      "References":null
    },
    {
       "Id":"76052811",
@@ -13044,7 +12978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76052811.jpg",
-      "IdName":"helpoemer"
+      "References":null
    },
    {
       "Id":"97923414",
@@ -13054,7 +12988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97923414.jpg",
-      "IdName":"inpachi"
+      "References":null
    },
    {
       "Id":"4178474",
@@ -13064,7 +12998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4178474.jpg",
-      "IdName":"raigekibreak"
+      "References":null
    },
    {
       "Id":"86801871",
@@ -13074,7 +13008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86801871.jpg",
-      "IdName":"cobrajar"
+      "References":null
    },
    {
       "Id":"73414375",
@@ -13084,7 +13018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73414375.jpg",
-      "IdName":"dimensionjar"
+      "References":null
    },
    {
       "Id":"90980792",
@@ -13094,7 +13028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90980792.jpg",
-      "IdName":"darkjeroid"
+      "References":null
    },
    {
       "Id":"51934376",
@@ -13104,7 +13038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51934376.jpg",
-      "IdName":"kabazauls"
+      "References":null
    },
    {
       "Id":"35059553",
@@ -13114,7 +13048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35059553.jpg",
-      "IdName":"kaisercolosseum"
+      "References":null
    },
    {
       "Id":"84814897",
@@ -13124,7 +13058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84814897.jpg",
-      "IdName":"kiryu"
+      "References":null
    },
    {
       "Id":"69579761",
@@ -13134,7 +13068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69579761.jpg",
-      "IdName":"deskoala"
+      "References":null
    },
    {
       "Id":"69456283",
@@ -13144,7 +13078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69456283.jpg",
-      "IdName":"koitsu"
+      "References":null
    },
    {
       "Id":"63695531",
@@ -13154,7 +13088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63695531.jpg",
-      "IdName":"gravekeepersspearsoldier"
+      "References":null
    },
    {
       "Id":"10248192",
@@ -13164,7 +13098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10248192.jpg",
-      "IdName":"hieroglyphlithograph"
+      "References":null
    },
    {
       "Id":"21840375",
@@ -13174,7 +13108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21840375.jpg",
-      "IdName":"hiddenspellbook"
+      "References":null
    },
    {
       "Id":"46363422",
@@ -13184,7 +13118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46363422.jpg",
-      "IdName":"skilledwhitemagician"
+      "References":null
    },
    {
       "Id":"72630549",
@@ -13194,7 +13128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72630549.jpg",
-      "IdName":"chaoscommandmagician"
+      "References":null
    },
    {
       "Id":"73752131",
@@ -13204,7 +13138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73752131.jpg",
-      "IdName":"skilleddarkmagician"
+      "References":null
    },
    {
       "Id":"81325903",
@@ -13214,7 +13148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81325903.jpg",
-      "IdName":"amazonessspellcaster"
+      "References":null
    },
    {
       "Id":"24530661",
@@ -13224,7 +13158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24530661.jpg",
-      "IdName":"masterkyonshee"
+      "References":null
    },
    {
       "Id":"50712728",
@@ -13234,7 +13168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50712728.jpg",
-      "IdName":"gravekeeperscurse"
+      "References":null
    },
    {
       "Id":"41398771",
@@ -13244,7 +13178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41398771.jpg",
-      "IdName":"curseofaging"
+      "References":null
    },
    {
       "Id":"7802006",
@@ -13254,7 +13188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7802006.jpg",
-      "IdName":"magicalplantmandragola"
+      "References":null
    },
    {
       "Id":"8034697",
@@ -13264,7 +13198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8034697.jpg",
-      "IdName":"magicalmarionette"
+      "References":null
    },
    {
       "Id":"12183332",
@@ -13274,7 +13208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12183332.jpg",
-      "IdName":"cardshuffle"
+      "References":null
    },
    {
       "Id":"34236961",
@@ -13284,7 +13218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34236961.jpg",
-      "IdName":"ante"
+      "References":null
    },
    {
       "Id":"85684223",
@@ -13294,7 +13228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85684223.jpg",
-      "IdName":"reaperonthenightmare"
+      "References":null
    },
    {
       "Id":"4335645",
@@ -13304,7 +13238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4335645.jpg",
-      "IdName":"newdoria"
+      "References":null
    },
    {
       "Id":"32240937",
@@ -13314,7 +13248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32240937.jpg",
-      "IdName":"ultimateobedientfiend"
+      "References":null
    },
    {
       "Id":"60391791",
@@ -13324,7 +13258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60391791.jpg",
-      "IdName":"senrieye"
+      "References":null
    },
    {
       "Id":"73698349",
@@ -13334,7 +13268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73698349.jpg",
-      "IdName":"giantorc"
+      "References":null
    },
    {
       "Id":"46571052",
@@ -13344,7 +13278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46571052.jpg",
-      "IdName":"vampiricorchis"
+      "References":null
    },
    {
       "Id":"47480070",
@@ -13354,7 +13288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47480070.jpg",
-      "IdName":"amazonesspaladin"
+      "References":null
    },
    {
       "Id":"73398797",
@@ -13364,7 +13298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73398797.jpg",
-      "IdName":"paladinofwhitedragon"
+      "References":null
    },
    {
       "Id":"40172183",
@@ -13374,7 +13308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40172183.jpg",
-      "IdName":"narrowpass"
+      "References":null
    },
    {
       "Id":"58538870",
@@ -13384,7 +13318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58538870.jpg",
-      "IdName":"oppressedpeople"
+      "References":null
    },
    {
       "Id":"3055837",
@@ -13394,7 +13328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3055837.jpg",
-      "IdName":"trapofboarderaser"
+      "References":null
    },
    {
       "Id":"34029630",
@@ -13404,7 +13338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34029630.jpg",
-      "IdName":"pitchblackpowerstone"
+      "References":null
    },
    {
       "Id":"64274292",
@@ -13414,7 +13348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64274292.jpg",
-      "IdName":"meteorain"
+      "References":null
    },
    {
       "Id":"8842266",
@@ -13424,7 +13358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8842266.jpg",
-      "IdName":"poisonoftheoldman"
+      "References":null
    },
    {
       "Id":"2903036",
@@ -13434,7 +13368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2903036.jpg",
-      "IdName":"tributedoll"
+      "References":null
    },
    {
       "Id":"38723936",
@@ -13444,7 +13378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38723936.jpg",
-      "IdName":"question"
+      "References":null
    },
    {
       "Id":"58577036",
@@ -13454,7 +13388,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58577036.jpg",
-      "IdName":"reasoning"
+      "References":null
    },
    {
       "Id":"84740193",
@@ -13464,7 +13398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84740193.jpg",
-      "IdName":"busterrancher"
+      "References":null
    },
    {
       "Id":"96677818",
@@ -13474,7 +13408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96677818.jpg",
-      "IdName":"spellbookorganization"
+      "References":null
    },
    {
       "Id":"7512044",
@@ -13484,7 +13418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7512044.jpg",
-      "IdName":"gatheryourmind"
+      "References":null
    },
    {
       "Id":"85936485",
@@ -13494,7 +13428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85936485.jpg",
-      "IdName":"unitedresistance"
+      "References":null
    },
    {
       "Id":"68334074",
@@ -13504,7 +13438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68334074.jpg",
-      "IdName":"miraclerestoring"
+      "References":null
    },
    {
       "Id":"72575145",
@@ -13514,7 +13448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72575145.jpg",
-      "IdName":"demotion"
+      "References":null
    },
    {
       "Id":"65396880",
@@ -13524,7 +13458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65396880.jpg",
-      "IdName":"hugerevolution"
+      "References":null
    },
    {
       "Id":"30450531",
@@ -13534,7 +13468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30450531.jpg",
-      "IdName":"riteofspirit"
+      "References":null
    },
    {
       "Id":"9786492",
@@ -13544,7 +13478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9786492.jpg",
-      "IdName":"whitedragonritual"
+      "References":null
    },
    {
       "Id":"90846359",
@@ -13554,7 +13488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90846359.jpg",
-      "IdName":"rivalryofwarlords"
+      "References":null
    },
    {
       "Id":"47025270",
@@ -13564,7 +13498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47025270.jpg",
-      "IdName":"helpingroboforcombat"
+      "References":null
    },
    {
       "Id":"11021521",
@@ -13574,7 +13508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11021521.jpg",
-      "IdName":"nekomaneking"
+      "References":null
    },
    {
       "Id":"54704216",
@@ -13584,7 +13518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54704216.jpg",
-      "IdName":"nightmarewheel"
+      "References":null
    },
    {
       "Id":"46303688",
@@ -13594,7 +13528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46303688.jpg",
-      "IdName":"roulettebarrel"
+      "References":null
    },
    {
       "Id":"72405967",
@@ -13604,7 +13538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72405967.jpg",
-      "IdName":"royaltribute"
+      "References":null
    },
    {
       "Id":"80193355",
@@ -13614,7 +13548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80193355.jpg",
-      "IdName":"dramaticrescue"
+      "References":null
    },
    {
       "Id":"34206604",
@@ -13624,7 +13558,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34206604.jpg",
-      "IdName":"magicalscientist"
+      "References":null
    },
    {
       "Id":"26084285",
@@ -13634,7 +13568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26084285.jpg",
-      "IdName":"gravekeeperswatcher"
+      "References":null
    },
    {
       "Id":"11321183",
@@ -13644,7 +13578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11321183.jpg",
-      "IdName":"darkblade"
+      "References":null
    },
    {
       "Id":"95451366",
@@ -13654,7 +13588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95451366.jpg",
-      "IdName":"exhaustingspell"
+      "References":null
    },
    {
       "Id":"38275183",
@@ -13664,7 +13598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38275183.jpg",
-      "IdName":"spellshieldtype8"
+      "References":null
    },
    {
       "Id":"77561728",
@@ -13674,7 +13608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77561728.jpg",
-      "IdName":"disturbancestrategy"
+      "References":null
    },
    {
       "Id":"47233801",
@@ -13684,7 +13618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47233801.jpg",
-      "IdName":"darksnakesyndrome"
+      "References":null
    },
    {
       "Id":"47693640",
@@ -13694,7 +13628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47693640.jpg",
-      "IdName":"zombietiger"
+      "References":null
    },
    {
       "Id":"10979723",
@@ -13704,7 +13638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10979723.jpg",
-      "IdName":"amazonesstiger"
+      "References":null
    },
    {
       "Id":"27053506",
@@ -13714,7 +13648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27053506.jpg",
-      "IdName":"secretbarrel"
+      "References":null
    },
    {
       "Id":"91781589",
@@ -13724,7 +13658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91781589.jpg",
-      "IdName":"thunderofruler"
+      "References":null
    },
    {
       "Id":"62325062",
@@ -13734,7 +13668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62325062.jpg",
-      "IdName":"adhesiontraphole"
+      "References":null
    },
    {
       "Id":"2833249",
@@ -13744,7 +13678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2833249.jpg",
-      "IdName":"dtribe"
+      "References":null
    },
    {
       "Id":"95841282",
@@ -13754,7 +13688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95841282.jpg",
-      "IdName":"catseartribe"
+      "References":null
    },
    {
       "Id":"24140059",
@@ -13764,7 +13698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24140059.jpg",
-      "IdName":"acatofillomen"
+      "References":null
    },
    {
       "Id":"23927567",
@@ -13774,7 +13708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23927567.jpg",
-      "IdName":"anowlofluck"
+      "References":null
    },
    {
       "Id":"51351302",
@@ -13784,7 +13718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51351302.jpg",
-      "IdName":"amanwithwdjat"
+      "References":null
    },
    {
       "Id":"26931058",
@@ -13794,7 +13728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26931058.jpg",
-      "IdName":"formationunion"
+      "References":null
    },
    {
       "Id":"71453557",
@@ -13804,7 +13738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71453557.jpg",
-      "IdName":"autonomousactionunit"
+      "References":null
    },
    {
       "Id":"99690140",
@@ -13814,7 +13748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99690140.jpg",
-      "IdName":"gravekeepersvassal"
+      "References":null
    },
    {
       "Id":"65830223",
@@ -13824,7 +13758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65830223.jpg",
-      "IdName":"coffinseller"
+      "References":null
    },
    {
       "Id":"33784505",
@@ -13834,7 +13768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33784505.jpg",
-      "IdName":"jarrobber"
+      "References":null
    },
    {
       "Id":"76848240",
@@ -13844,7 +13778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76848240.jpg",
-      "IdName":"nonaggressionarea"
+      "References":null
    },
    {
       "Id":"68073522",
@@ -13854,7 +13788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68073522.jpg",
-      "IdName":"soulabsorption"
+      "References":null
    },
    {
       "Id":"41859700",
@@ -13864,7 +13798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41859700.jpg",
-      "IdName":"burningalgae"
+      "References":null
    },
    {
       "Id":"15734813",
@@ -13874,7 +13808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15734813.jpg",
-      "IdName":"soultiger"
+      "References":null
    },
    {
       "Id":"68007326",
@@ -13884,7 +13818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68007326.jpg",
-      "IdName":"guardianangeljoan"
+      "References":null
    },
    {
       "Id":"21219755",
@@ -13894,7 +13828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21219755.jpg",
-      "IdName":"destructionring"
+      "References":null
    },
    {
       "Id":"95214051",
@@ -13904,7 +13838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95214051.jpg",
-      "IdName":"jadeinsectwhistle"
+      "References":null
    },
    {
       "Id":"3773196",
@@ -13914,7 +13848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3773196.jpg",
-      "IdName":"ddscoutplane"
+      "References":null
    },
    {
       "Id":"76909279",
@@ -13924,7 +13858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76909279.jpg",
-      "IdName":"enragedbattleox"
+      "References":null
    },
    {
       "Id":"4542651",
@@ -13934,7 +13868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4542651.jpg",
-      "IdName":"yellowlustershield"
+      "References":null
    },
    {
       "Id":"57585212",
@@ -13944,7 +13878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57585212.jpg",
-      "IdName":"selfdestructbutton"
+      "References":null
    },
    {
       "Id":"52090844",
@@ -13954,7 +13888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52090844.jpg",
-      "IdName":"bowganian"
+      "References":null
    },
    {
       "Id":"64342551",
@@ -13964,7 +13898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64342551.jpg",
-      "IdName":"amphibiousbugrothmk3"
+      "References":null
    },
    {
       "Id":"95472621",
@@ -13974,7 +13908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95472621.jpg",
-      "IdName":"bigburn"
+      "References":null
    },
    {
       "Id":"59820352",
@@ -13984,7 +13918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59820352.jpg",
-      "IdName":"earthchant"
+      "References":null
    },
    {
       "Id":"79182538",
@@ -13994,7 +13928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79182538.jpg",
-      "IdName":"maddogofdarkness"
+      "References":null
    },
    {
       "Id":"40884383",
@@ -14004,7 +13938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40884383.jpg",
-      "IdName":"chopmanthedesperateoutlaw"
+      "References":null
    },
    {
       "Id":"64306248",
@@ -14014,7 +13948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64306248.jpg",
-      "IdName":"skullmarkladybug"
+      "References":null
    },
    {
       "Id":"35762283",
@@ -14024,7 +13958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35762283.jpg",
-      "IdName":"heartoftheunderdog"
+      "References":null
    },
    {
       "Id":"69542930",
@@ -14034,7 +13968,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69542930.jpg",
-      "IdName":"dedicationthroughlightanddarkness"
+      "References":null
    },
    {
       "Id":"95614612",
@@ -14044,7 +13978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95614612.jpg",
-      "IdName":"cannonballspearshellfish"
+      "References":null
    },
    {
       "Id":"69196160",
@@ -14054,7 +13988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69196160.jpg",
-      "IdName":"thundercrash"
+      "References":null
    },
    {
       "Id":"30914564",
@@ -14064,7 +13998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30914564.jpg",
-      "IdName":"sacredcrane"
+      "References":null
    },
    {
       "Id":"97439308",
@@ -14074,7 +14008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97439308.jpg",
-      "IdName":"chaosgreed"
+      "References":null
    },
    {
       "Id":"33423043",
@@ -14084,7 +14018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33423043.jpg",
-      "IdName":"dddesignator"
+      "References":null
    },
    {
       "Id":"57139487",
@@ -14094,7 +14028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57139487.jpg",
-      "IdName":"chaindisappearance"
+      "References":null
    },
    {
       "Id":"94192409",
@@ -14104,7 +14038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94192409.jpg",
-      "IdName":"compulsoryevacuationdevice"
+      "References":null
    },
    {
       "Id":"95194279",
@@ -14114,7 +14048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95194279.jpg",
-      "IdName":"dimensiondistortion"
+      "References":null
    },
    {
       "Id":"3493978",
@@ -14124,7 +14058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3493978.jpg",
-      "IdName":"donturtle"
+      "References":null
    },
    {
       "Id":"82301904",
@@ -14134,7 +14068,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82301904.jpg",
-      "IdName":"chaosemperordragonenvoyoftheend"
+      "References":null
    },
    {
       "Id":"37721209",
@@ -14144,7 +14078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37721209.jpg",
-      "IdName":"leviadragondaedalus"
+      "References":null
    },
    {
       "Id":"56916805",
@@ -14154,7 +14088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56916805.jpg",
-      "IdName":"energydrain"
+      "References":null
    },
    {
       "Id":"65287621",
@@ -14164,7 +14098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65287621.jpg",
-      "IdName":"darkdriceratops"
+      "References":null
    },
    {
       "Id":"99050989",
@@ -14174,7 +14108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99050989.jpg",
-      "IdName":"drillago"
+      "References":null
    },
    {
       "Id":"20644748",
@@ -14184,7 +14118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20644748.jpg",
-      "IdName":"spatialcollapse"
+      "References":null
    },
    {
       "Id":"42541548",
@@ -14194,7 +14128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42541548.jpg",
-      "IdName":"coachgoblin"
+      "References":null
    },
    {
       "Id":"56647086",
@@ -14204,7 +14138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56647086.jpg",
-      "IdName":"invaderofdarkness"
+      "References":null
    },
    {
       "Id":"4896788",
@@ -14214,7 +14148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4896788.jpg",
-      "IdName":"spiritofthepotofgreed"
+      "References":null
    },
    {
       "Id":"34646691",
@@ -14224,7 +14158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34646691.jpg",
-      "IdName":"stumbling"
+      "References":null
    },
    {
       "Id":"91559748",
@@ -14234,7 +14168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91559748.jpg",
-      "IdName":"pricklefairy"
+      "References":null
    },
    {
       "Id":"218704",
@@ -14244,7 +14178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/218704.jpg",
-      "IdName":"fenrir"
+      "References":null
    },
    {
       "Id":"61044390",
@@ -14254,7 +14188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61044390.jpg",
-      "IdName":"chaosend"
+      "References":null
    },
    {
       "Id":"65064143",
@@ -14264,7 +14198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65064143.jpg",
-      "IdName":"antiaircraftflower"
+      "References":null
    },
    {
       "Id":"20522190",
@@ -14274,7 +14208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20522190.jpg",
-      "IdName":"darkmirrorforce"
+      "References":null
    },
    {
       "Id":"60912752",
@@ -14284,7 +14218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60912752.jpg",
-      "IdName":"ddborderline"
+      "References":null
    },
    {
       "Id":"9373534",
@@ -14294,7 +14228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9373534.jpg",
-      "IdName":"fuhmashuriken"
+      "References":null
    },
    {
       "Id":"23557835",
@@ -14304,7 +14238,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23557835.jpg",
-      "IdName":"dimensionfusion"
+      "References":null
    },
    {
       "Id":"23701465",
@@ -14314,7 +14248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23701465.jpg",
-      "IdName":"primalseed"
+      "References":null
    },
    {
       "Id":"21887179",
@@ -14324,7 +14258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21887179.jpg",
-      "IdName":"getsufuhma"
+      "References":null
    },
    {
       "Id":"43793530",
@@ -14334,7 +14268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43793530.jpg",
-      "IdName":"gigagagagigo"
+      "References":null
    },
    {
       "Id":"42868711",
@@ -14344,7 +14278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42868711.jpg",
-      "IdName":"goraturtleofillusion"
+      "References":null
    },
    {
       "Id":"39168895",
@@ -14354,7 +14288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39168895.jpg",
-      "IdName":"berserkgorilla"
+      "References":null
    },
    {
       "Id":"13944422",
@@ -14364,7 +14298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13944422.jpg",
-      "IdName":"granadora"
+      "References":null
    },
    {
       "Id":"83133491",
@@ -14374,7 +14308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83133491.jpg",
-      "IdName":"zerogravity"
+      "References":null
    },
    {
       "Id":"36584821",
@@ -14384,7 +14318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36584821.jpg",
-      "IdName":"grenmajudaeiza"
+      "References":null
    },
    {
       "Id":"42071342",
@@ -14394,7 +14328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42071342.jpg",
-      "IdName":"seaserpentwarriorofdarkness"
+      "References":null
    },
    {
       "Id":"47829960",
@@ -14404,7 +14338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47829960.jpg",
-      "IdName":"chaosridergustaph"
+      "References":null
    },
    {
       "Id":"20374520",
@@ -14414,7 +14348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20374520.jpg",
-      "IdName":"begoneknave"
+      "References":null
    },
    {
       "Id":"2671330",
@@ -14424,7 +14358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2671330.jpg",
-      "IdName":"hyperhammerhead"
+      "References":null
    },
    {
       "Id":"74823665",
@@ -14434,7 +14368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74823665.jpg",
-      "IdName":"inferno"
+      "References":null
    },
    {
       "Id":"5464695",
@@ -14444,7 +14378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5464695.jpg",
-      "IdName":"blazinginpachi"
+      "References":null
    },
    {
       "Id":"78613627",
@@ -14454,7 +14388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78613627.jpg",
-      "IdName":"deskangaroo"
+      "References":null
    },
    {
       "Id":"42129512",
@@ -14464,7 +14398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42129512.jpg",
-      "IdName":"bigkoala"
+      "References":null
    },
    {
       "Id":"78243409",
@@ -14474,7 +14408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78243409.jpg",
-      "IdName":"thethinginthecrater"
+      "References":null
    },
    {
       "Id":"62543393",
@@ -14484,7 +14418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62543393.jpg",
-      "IdName":"lekunga"
+      "References":null
    },
    {
       "Id":"39892082",
@@ -14494,7 +14428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39892082.jpg",
-      "IdName":"balloonlizard"
+      "References":null
    },
    {
       "Id":"77491079",
@@ -14504,7 +14438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77491079.jpg",
-      "IdName":"galelizard"
+      "References":null
    },
    {
       "Id":"40737112",
@@ -14514,7 +14448,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40737112.jpg",
-      "IdName":"darkmagicianofchaos"
+      "References":null
    },
    {
       "Id":"84970821",
@@ -14524,7 +14458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84970821.jpg",
-      "IdName":"curseofdarkness"
+      "References":null
    },
    {
       "Id":"22609617",
@@ -14534,7 +14468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22609617.jpg",
-      "IdName":"matazathezapper"
+      "References":null
    },
    {
       "Id":"75946257",
@@ -14544,7 +14478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75946257.jpg",
-      "IdName":"witchdoctorofchaos"
+      "References":null
    },
    {
       "Id":"21466326",
@@ -14554,7 +14488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21466326.jpg",
-      "IdName":"blastingtheruins"
+      "References":null
    },
    {
       "Id":"58607704",
@@ -14564,7 +14498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58607704.jpg",
-      "IdName":"fiendshandmirror"
+      "References":null
    },
    {
       "Id":"22493811",
@@ -14574,7 +14508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22493811.jpg",
-      "IdName":"multiplicationofants"
+      "References":null
    },
    {
       "Id":"1434352",
@@ -14584,7 +14518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1434352.jpg",
-      "IdName":"chaosnecromancer"
+      "References":null
    },
    {
       "Id":"16587243",
@@ -14594,7 +14528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16587243.jpg",
-      "IdName":"neobug"
+      "References":null
    },
    {
       "Id":"14618326",
@@ -14604,7 +14538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14618326.jpg",
-      "IdName":"crimsonninja"
+      "References":null
    },
    {
       "Id":"41006930",
@@ -14614,7 +14548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41006930.jpg",
-      "IdName":"strikeninja"
+      "References":null
    },
    {
       "Id":"63120904",
@@ -14624,7 +14558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63120904.jpg",
-      "IdName":"orcamegafortressofdarkness"
+      "References":null
    },
    {
       "Id":"22431243",
@@ -14634,7 +14568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22431243.jpg",
-      "IdName":"ultraevolutionpill"
+      "References":null
    },
    {
       "Id":"26185991",
@@ -14644,7 +14578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26185991.jpg",
-      "IdName":"pinchhopper"
+      "References":null
    },
    {
       "Id":"34370473",
@@ -14654,7 +14588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34370473.jpg",
-      "IdName":"gryphonsfeatherduster"
+      "References":null
    },
    {
       "Id":"90337190",
@@ -14664,7 +14598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90337190.jpg",
-      "IdName":"torpedofish"
+      "References":null
    },
    {
       "Id":"37957847",
@@ -14674,7 +14608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37957847.jpg",
-      "IdName":"insectprincess"
+      "References":null
    },
    {
       "Id":"22589918",
@@ -14684,7 +14618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22589918.jpg",
-      "IdName":"reload"
+      "References":null
    },
    {
       "Id":"96316857",
@@ -14694,7 +14628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96316857.jpg",
-      "IdName":"recycle"
+      "References":null
    },
    {
       "Id":"57281778",
@@ -14704,7 +14638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57281778.jpg",
-      "IdName":"ryukokki"
+      "References":null
    },
    {
       "Id":"77379481",
@@ -14714,7 +14648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77379481.jpg",
-      "IdName":"sasukesamurai3"
+      "References":null
    },
    {
       "Id":"78060096",
@@ -14724,7 +14658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78060096.jpg",
-      "IdName":"terrorkingsalmon"
+      "References":null
    },
    {
       "Id":"96947648",
@@ -14734,7 +14668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96947648.jpg",
-      "IdName":"salvage"
+      "References":null
    },
    {
       "Id":"40320754",
@@ -14744,7 +14678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40320754.jpg",
-      "IdName":"lordpoison"
+      "References":null
    },
    {
       "Id":"73001017",
@@ -14754,7 +14688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73001017.jpg",
-      "IdName":"silpheed"
+      "References":null
    },
    {
       "Id":"72989439",
@@ -14764,7 +14698,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72989439.jpg",
-      "IdName":"blacklustersoldierenvoyofthebeginning"
+      "References":null
    },
    {
       "Id":"9596126",
@@ -14774,7 +14708,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9596126.jpg",
-      "IdName":"chaossorcerer"
+      "References":null
    },
    {
       "Id":"94256039",
@@ -14784,7 +14718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94256039.jpg",
-      "IdName":"towerofbabel"
+      "References":null
    },
    {
       "Id":"56769674",
@@ -14794,7 +14728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56769674.jpg",
-      "IdName":"dnatransplant"
+      "References":null
    },
    {
       "Id":"38670435",
@@ -14804,7 +14738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38670435.jpg",
-      "IdName":"blacktyranno"
+      "References":null
    },
    {
       "Id":"83258273",
@@ -14814,7 +14748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83258273.jpg",
-      "IdName":"robbinzombie"
+      "References":null
    },
    {
       "Id":"4732017",
@@ -14824,7 +14758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4732017.jpg",
-      "IdName":"moltenzombie"
+      "References":null
    },
    {
       "Id":"89718302",
@@ -14834,7 +14768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89718302.jpg",
-      "IdName":"abareushioni"
+      "References":null
    },
    {
       "Id":"51481927",
@@ -14844,7 +14778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51481927.jpg",
-      "IdName":"spellabsorption"
+      "References":null
    },
    {
       "Id":"37231841",
@@ -14854,7 +14788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37231841.jpg",
-      "IdName":"lightentheload"
+      "References":null
    },
    {
       "Id":"51355346",
@@ -14864,7 +14798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51355346.jpg",
-      "IdName":"gaiasoulthecombustiblecollective"
+      "References":null
    },
    {
       "Id":"27967615",
@@ -14874,7 +14808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27967615.jpg",
-      "IdName":"fusionweapon"
+      "References":null
    },
    {
       "Id":"54351224",
@@ -14884,7 +14818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54351224.jpg",
-      "IdName":"ritualweapon"
+      "References":null
    },
    {
       "Id":"89628781",
@@ -14894,7 +14828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89628781.jpg",
-      "IdName":"ninjitsuartofdecoy"
+      "References":null
    },
    {
       "Id":"62633180",
@@ -14904,7 +14838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62633180.jpg",
-      "IdName":"assaultonghq"
+      "References":null
    },
    {
       "Id":"57270476",
@@ -14914,7 +14848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57270476.jpg",
-      "IdName":"gravelure"
+      "References":null
    },
    {
       "Id":"37970940",
@@ -14924,7 +14858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37970940.jpg",
-      "IdName":"aussatheearthcharmer"
+      "References":null
    },
    {
       "Id":"89405199",
@@ -14934,7 +14868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89405199.jpg",
-      "IdName":"greed"
+      "References":null
    },
    {
       "Id":"14148099",
@@ -14944,7 +14878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14148099.jpg",
-      "IdName":"besbigcore"
+      "References":null
    },
    {
       "Id":"242146",
@@ -14954,7 +14888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/242146.jpg",
-      "IdName":"ballistaoframpartsmashing"
+      "References":null
    },
    {
       "Id":"37053871",
@@ -14964,7 +14898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37053871.jpg",
-      "IdName":"astralbarrier"
+      "References":null
    },
    {
       "Id":"88789641",
@@ -14974,7 +14908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88789641.jpg",
-      "IdName":"hallowedlifebarrier"
+      "References":null
    },
    {
       "Id":"92084010",
@@ -14984,7 +14918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92084010.jpg",
-      "IdName":"unshavenangler"
+      "References":null
    },
    {
       "Id":"22996376",
@@ -14994,7 +14928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22996376.jpg",
-      "IdName":"behemoththekingofallanimals"
+      "References":null
    },
    {
       "Id":"84430950",
@@ -15004,7 +14938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84430950.jpg",
-      "IdName":"armedsamuraibenkei"
+      "References":null
    },
    {
       "Id":"23965037",
@@ -15014,7 +14948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23965037.jpg",
-      "IdName":"doriadosblessing"
+      "References":null
    },
    {
       "Id":"10509340",
@@ -15024,7 +14958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10509340.jpg",
-      "IdName":"ancientgearbeast"
+      "References":null
    },
    {
       "Id":"8715625",
@@ -15034,7 +14968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8715625.jpg",
-      "IdName":"bokoichithefreighteningcar"
+      "References":null
    },
    {
       "Id":"20781762",
@@ -15044,7 +14978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20781762.jpg",
-      "IdName":"rockbombardment"
+      "References":null
    },
    {
       "Id":"51394546",
@@ -15054,7 +14988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51394546.jpg",
-      "IdName":"cemetarybomb"
+      "References":null
    },
    {
       "Id":"21908319",
@@ -15064,7 +14998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21908319.jpg",
-      "IdName":"kozakysselfdestructbutton"
+      "References":null
    },
    {
       "Id":"26022485",
@@ -15074,7 +15008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26022485.jpg",
-      "IdName":"enervatingmist"
+      "References":null
    },
    {
       "Id":"45159319",
@@ -15084,7 +15018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45159319.jpg",
-      "IdName":"moaiinterceptorcannons"
+      "References":null
    },
    {
       "Id":"56058888",
@@ -15094,7 +15028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56058888.jpg",
-      "IdName":"royalsurrender"
+      "References":null
    },
    {
       "Id":"42664989",
@@ -15104,7 +15038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42664989.jpg",
-      "IdName":"cardofsanctity"
+      "References":null
    },
    {
       "Id":"96458440",
@@ -15114,7 +15048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96458440.jpg",
-      "IdName":"legendaryblackbelt"
+      "References":null
    },
    {
       "Id":"25578802",
@@ -15124,7 +15058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25578802.jpg",
-      "IdName":"twomancellbattle"
+      "References":null
    },
    {
       "Id":"97806240",
@@ -15134,7 +15068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97806240.jpg",
-      "IdName":"forcedceasefire"
+      "References":null
    },
    {
       "Id":"13179332",
@@ -15144,7 +15078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13179332.jpg",
-      "IdName":"charcoalinpachi"
+      "References":null
    },
    {
       "Id":"49328340",
@@ -15154,7 +15088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49328340.jpg",
-      "IdName":"spiralspearstrike"
+      "References":null
    },
    {
       "Id":"61181383",
@@ -15164,7 +15098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61181383.jpg",
-      "IdName":"batterycharger"
+      "References":null
    },
    {
       "Id":"96501677",
@@ -15174,7 +15108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96501677.jpg",
-      "IdName":"catnippedkitty"
+      "References":null
    },
    {
       "Id":"35052053",
@@ -15184,7 +15118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35052053.jpg",
-      "IdName":"insectknight"
+      "References":null
    },
    {
       "Id":"94667532",
@@ -15194,7 +15128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94667532.jpg",
-      "IdName":"mechadogmarron"
+      "References":null
    },
    {
       "Id":"86652646",
@@ -15204,7 +15138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86652646.jpg",
-      "IdName":"skulldogmarron"
+      "References":null
    },
    {
       "Id":"8508055",
@@ -15214,7 +15148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8508055.jpg",
-      "IdName":"chuskethemousefighter"
+      "References":null
    },
    {
       "Id":"15800838",
@@ -15224,7 +15158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15800838.jpg",
-      "IdName":"mindcrush"
+      "References":null
    },
    {
       "Id":"49010598",
@@ -15234,7 +15168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49010598.jpg",
-      "IdName":"divinewrath"
+      "References":null
    },
    {
       "Id":"48576971",
@@ -15244,7 +15178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48576971.jpg",
-      "IdName":"necklaceofcommand"
+      "References":null
    },
    {
       "Id":"89801755",
@@ -15254,7 +15188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89801755.jpg",
-      "IdName":"abyssaldesignator"
+      "References":null
    },
    {
       "Id":"37083210",
@@ -15264,7 +15198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37083210.jpg",
-      "IdName":"crosscounter"
+      "References":null
    },
    {
       "Id":"87910978",
@@ -15274,7 +15208,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87910978.jpg",
-      "IdName":"braincontrol"
+      "References":null
    },
    {
       "Id":"52417194",
@@ -15284,7 +15218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52417194.jpg",
-      "IdName":"heavyslump"
+      "References":null
    },
    {
       "Id":"18654201",
@@ -15294,7 +15228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18654201.jpg",
-      "IdName":"criosphinx"
+      "References":null
    },
    {
       "Id":"76539047",
@@ -15304,7 +15238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76539047.jpg",
-      "IdName":"poisonfangs"
+      "References":null
    },
    {
       "Id":"91932350",
@@ -15314,7 +15248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91932350.jpg",
-      "IdName":"harpielady1"
+      "References":null
    },
    {
       "Id":"27927359",
@@ -15324,7 +15258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27927359.jpg",
-      "IdName":"harpielady2"
+      "References":null
    },
    {
       "Id":"54415063",
@@ -15334,7 +15268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54415063.jpg",
-      "IdName":"harpielady3"
+      "References":null
    },
    {
       "Id":"75417459",
@@ -15344,7 +15278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75417459.jpg",
-      "IdName":"releaserestraint"
+      "References":null
    },
    {
       "Id":"51562916",
@@ -15354,7 +15288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51562916.jpg",
-      "IdName":"bigwavesmallwave"
+      "References":null
    },
    {
       "Id":"87621407",
@@ -15364,7 +15298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87621407.jpg",
-      "IdName":"dekoichithebattlechantedlocomotive"
+      "References":null
    },
    {
       "Id":"23118924",
@@ -15374,7 +15308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23118924.jpg",
-      "IdName":"elementdoom"
+      "References":null
    },
    {
       "Id":"58392024",
@@ -15384,7 +15318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58392024.jpg",
-      "IdName":"mispolymerization"
+      "References":null
    },
    {
       "Id":"13626450",
@@ -15394,7 +15328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13626450.jpg",
-      "IdName":"malicedispersion"
+      "References":null
    },
    {
       "Id":"98792570",
@@ -15404,7 +15338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98792570.jpg",
-      "IdName":"giftofthemartyr"
+      "References":null
    },
    {
       "Id":"99414168",
@@ -15414,7 +15348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99414168.jpg",
-      "IdName":"elementalmistressdoriado"
+      "References":null
    },
    {
       "Id":"34187685",
@@ -15424,7 +15358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34187685.jpg",
-      "IdName":"doubleattack"
+      "References":null
    },
    {
       "Id":"58015506",
@@ -15434,7 +15368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58015506.jpg",
-      "IdName":"pikerussecondsight"
+      "References":null
    },
    {
       "Id":"62113340",
@@ -15444,7 +15378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62113340.jpg",
-      "IdName":"divinedragonragnarok"
+      "References":null
    },
    {
       "Id":"30314994",
@@ -15454,7 +15388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30314994.jpg",
-      "IdName":"elementdragon"
+      "References":null
    },
    {
       "Id":"51632798",
@@ -15464,7 +15398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51632798.jpg",
-      "IdName":"fusilierdragonthedualmodebeast"
+      "References":null
    },
    {
       "Id":"87751584",
@@ -15474,7 +15408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87751584.jpg",
-      "IdName":"gatlingdragon"
+      "References":null
    },
    {
       "Id":"39191307",
@@ -15484,7 +15418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39191307.jpg",
-      "IdName":"maskeddragon"
+      "References":null
    },
    {
       "Id":"71544954",
@@ -15494,7 +15428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71544954.jpg",
-      "IdName":"megarockdragon"
+      "References":null
    },
    {
       "Id":"15960641",
@@ -15504,7 +15438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15960641.jpg",
-      "IdName":"miragedragon"
+      "References":null
    },
    {
       "Id":"8628798",
@@ -15514,7 +15448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8628798.jpg",
-      "IdName":"dddynamite"
+      "References":null
    },
    {
       "Id":"35149085",
@@ -15524,7 +15458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35149085.jpg",
-      "IdName":"beastsoulswap"
+      "References":null
    },
    {
       "Id":"97342942",
@@ -15534,7 +15468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97342942.jpg",
-      "IdName":"ectoplasmer"
+      "References":null
    },
    {
       "Id":"66690411",
@@ -15544,7 +15478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66690411.jpg",
-      "IdName":"mindonair"
+      "References":null
    },
    {
       "Id":"12923641",
@@ -15554,7 +15488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12923641.jpg",
-      "IdName":"swordsofconcealinglight"
+      "References":null
    },
    {
       "Id":"13026402",
@@ -15564,7 +15498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13026402.jpg",
-      "IdName":"ateamtrapdisposalunit"
+      "References":null
    },
    {
       "Id":"74364659",
@@ -15574,7 +15508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74364659.jpg",
-      "IdName":"eriathewatercharmer"
+      "References":null
    },
    {
       "Id":"85519211",
@@ -15584,7 +15518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85519211.jpg",
-      "IdName":"minefielderuption"
+      "References":null
    },
    {
       "Id":"12181376",
@@ -15594,7 +15528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12181376.jpg",
-      "IdName":"triangleecstasyspark"
+      "References":null
    },
    {
       "Id":"48206762",
@@ -15604,7 +15538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48206762.jpg",
-      "IdName":"fulfillmentofthecontract"
+      "References":null
    },
    {
       "Id":"89698120",
@@ -15614,7 +15548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89698120.jpg",
-      "IdName":"tacticalespionageexpert"
+      "References":null
    },
    {
       "Id":"1965724",
@@ -15624,7 +15558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1965724.jpg",
-      "IdName":"mokeymokeysmackdown"
+      "References":null
    },
    {
       "Id":"61411502",
@@ -15634,7 +15568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61411502.jpg",
-      "IdName":"elementalburst"
+      "References":null
    },
    {
       "Id":"48276469",
@@ -15644,7 +15578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48276469.jpg",
-      "IdName":"chainburst"
+      "References":null
    },
    {
       "Id":"34100324",
@@ -15654,7 +15588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34100324.jpg",
-      "IdName":"harpiegirl"
+      "References":null
    },
    {
       "Id":"75560629",
@@ -15664,7 +15598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75560629.jpg",
-      "IdName":"flint"
+      "References":null
    },
    {
       "Id":"96631852",
@@ -15674,7 +15608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96631852.jpg",
-      "IdName":"impenetrableformation"
+      "References":null
    },
    {
       "Id":"97570038",
@@ -15684,7 +15618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97570038.jpg",
-      "IdName":"kaminoteblow"
+      "References":null
    },
    {
       "Id":"49998907",
@@ -15694,7 +15628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49998907.jpg",
-      "IdName":"fruitsofkozakysstudies"
+      "References":null
    },
    {
       "Id":"1781310",
@@ -15704,7 +15638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1781310.jpg",
-      "IdName":"fuhrinkazan"
+      "References":null
    },
    {
       "Id":"83675475",
@@ -15714,7 +15648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83675475.jpg",
-      "IdName":"tokenfeastevil"
+      "References":null
    },
    {
       "Id":"62327910",
@@ -15724,7 +15658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62327910.jpg",
-      "IdName":"mightyguard"
+      "References":null
    },
    {
       "Id":"75487237",
@@ -15734,7 +15668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75487237.jpg",
-      "IdName":"midshieldgardna"
+      "References":null
    },
    {
       "Id":"45871897",
@@ -15744,7 +15678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45871897.jpg",
-      "IdName":"lostguardian"
+      "References":null
    },
    {
       "Id":"57046845",
@@ -15754,7 +15688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57046845.jpg",
-      "IdName":"gearfriedtheswordmaster"
+      "References":null
    },
    {
       "Id":"12057781",
@@ -15764,7 +15698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12057781.jpg",
-      "IdName":"goblincalligrapher"
+      "References":null
    },
    {
       "Id":"9744376",
@@ -15774,7 +15708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9744376.jpg",
-      "IdName":"goodgoblinhousekeeping"
+      "References":null
    },
    {
       "Id":"76321376",
@@ -15784,7 +15718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76321376.jpg",
-      "IdName":"minegolem"
+      "References":null
    },
    {
       "Id":"13532663",
@@ -15794,7 +15728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13532663.jpg",
-      "IdName":"dummygolem"
+      "References":null
    },
    {
       "Id":"83104731",
@@ -15804,7 +15738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83104731.jpg",
-      "IdName":"ancientgeargolem"
+      "References":null
    },
    {
       "Id":"52323207",
@@ -15814,7 +15748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52323207.jpg",
-      "IdName":"golemsentry"
+      "References":null
    },
    {
       "Id":"67934141",
@@ -15824,7 +15758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67934141.jpg",
-      "IdName":"ultimatebaseballkid"
+      "References":null
    },
    {
       "Id":"60229110",
@@ -15834,7 +15768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60229110.jpg",
-      "IdName":"granmargtherockmonarch"
+      "References":null
    },
    {
       "Id":"28357177",
@@ -15844,7 +15778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28357177.jpg",
-      "IdName":"hadehane"
+      "References":null
    },
    {
       "Id":"82260502",
@@ -15854,7 +15788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82260502.jpg",
-      "IdName":"hieracosphinx"
+      "References":null
    },
    {
       "Id":"759393",
@@ -15864,7 +15798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/759393.jpg",
-      "IdName":"hiitathefirecharmer"
+      "References":null
    },
    {
       "Id":"40410110",
@@ -15874,7 +15808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40410110.jpg",
-      "IdName":"homunculusthealchemicbeing"
+      "References":null
    },
    {
       "Id":"75830094",
@@ -15884,7 +15818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75830094.jpg",
-      "IdName":"horustheblackflamedragonlv4"
+      "References":null
    },
    {
       "Id":"11224103",
@@ -15894,7 +15828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11224103.jpg",
-      "IdName":"horustheblackflamedragonlv6"
+      "References":null
    },
    {
       "Id":"48229808",
@@ -15904,7 +15838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48229808.jpg",
-      "IdName":"horustheblackflamedragonlv8"
+      "References":null
    },
    {
       "Id":"22873798",
@@ -15914,7 +15848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22873798.jpg",
-      "IdName":"hyena"
+      "References":null
    },
    {
       "Id":"74713516",
@@ -15924,7 +15858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74713516.jpg",
-      "IdName":"darkmimiclv1"
+      "References":null
    },
    {
       "Id":"1102515",
@@ -15934,7 +15868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1102515.jpg",
-      "IdName":"darkmimiclv3"
+      "References":null
    },
    {
       "Id":"35322812",
@@ -15944,7 +15878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35322812.jpg",
-      "IdName":"woodborginpachi"
+      "References":null
    },
    {
       "Id":"65878864",
@@ -15954,7 +15888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65878864.jpg",
-      "IdName":"noblemaneaterbug"
+      "References":null
    },
    {
       "Id":"93107608",
@@ -15964,7 +15898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93107608.jpg",
-      "IdName":"howlinginsect"
+      "References":null
    },
    {
       "Id":"49441499",
@@ -15974,7 +15908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49441499.jpg",
-      "IdName":"ultimateinsectlv1"
+      "References":null
    },
    {
       "Id":"34088136",
@@ -15984,7 +15918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34088136.jpg",
-      "IdName":"ultimateinsectlv3"
+      "References":null
    },
    {
       "Id":"34830502",
@@ -15994,7 +15928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34830502.jpg",
-      "IdName":"ultimateinsectlv5"
+      "References":null
    },
    {
       "Id":"19877898",
@@ -16004,7 +15938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19877898.jpg",
-      "IdName":"ultimateinsectlv7"
+      "References":null
    },
    {
       "Id":"80863132",
@@ -16014,7 +15948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80863132.jpg",
-      "IdName":"muko"
+      "References":null
    },
    {
       "Id":"26082229",
@@ -16024,7 +15958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26082229.jpg",
-      "IdName":"invasionofflames"
+      "References":null
    },
    {
       "Id":"27744077",
@@ -16034,7 +15968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27744077.jpg",
-      "IdName":"absoluteend"
+      "References":null
    },
    {
       "Id":"95789089",
@@ -16044,7 +15978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95789089.jpg",
-      "IdName":"kangaroochamp"
+      "References":null
    },
    {
       "Id":"15717011",
@@ -16054,7 +15988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15717011.jpg",
-      "IdName":"thelighthexsealedfusion"
+      "References":null
    },
    {
       "Id":"1689516",
@@ -16064,7 +15998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1689516.jpg",
-      "IdName":"thebigmarchofanimals"
+      "References":null
    },
    {
       "Id":"88696724",
@@ -16074,7 +16008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88696724.jpg",
-      "IdName":"theearthhexsealedfusion"
+      "References":null
    },
    {
       "Id":"84397023",
@@ -16084,7 +16018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84397023.jpg",
-      "IdName":"levelconversionlab"
+      "References":null
    },
    {
       "Id":"86805855",
@@ -16094,7 +16028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86805855.jpg",
-      "IdName":"darkbladethedragonknight"
+      "References":null
    },
    {
       "Id":"58268433",
@@ -16104,7 +16038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58268433.jpg",
-      "IdName":"bladerabbit"
+      "References":null
    },
    {
       "Id":"38479725",
@@ -16114,7 +16048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38479725.jpg",
-      "IdName":"thetrojanhorse"
+      "References":null
    },
    {
       "Id":"88089103",
@@ -16124,7 +16058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88089103.jpg",
-      "IdName":"thegraveyardinthefourthdimension"
+      "References":null
    },
    {
       "Id":"61505339",
@@ -16134,7 +16068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61505339.jpg",
-      "IdName":"thecreator"
+      "References":null
    },
    {
       "Id":"97093037",
@@ -16144,7 +16078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97093037.jpg",
-      "IdName":"thecreatorincarnate"
+      "References":null
    },
    {
       "Id":"21051146",
@@ -16154,7 +16088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21051146.jpg",
-      "IdName":"blastmagician"
+      "References":null
    },
    {
       "Id":"52101615",
@@ -16164,7 +16098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52101615.jpg",
-      "IdName":"thedarkhexsealedfusion"
+      "References":null
    },
    {
       "Id":"10069180",
@@ -16174,7 +16108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10069180.jpg",
-      "IdName":"spellstoppingstatute"
+      "References":null
    },
    {
       "Id":"88975532",
@@ -16184,7 +16118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88975532.jpg",
-      "IdName":"pitchblackwarwolf"
+      "References":null
    },
    {
       "Id":"82452993",
@@ -16194,7 +16128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82452993.jpg",
-      "IdName":"lonewolf"
+      "References":null
    },
    {
       "Id":"90810762",
@@ -16204,7 +16138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90810762.jpg",
-      "IdName":"ragingflamesprite"
+      "References":null
    },
    {
       "Id":"63995093",
@@ -16214,7 +16148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63995093.jpg",
-      "IdName":"machineduplication"
+      "References":null
    },
    {
       "Id":"4041838",
@@ -16224,7 +16158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4041838.jpg",
-      "IdName":"ninjagrandmastersasuke"
+      "References":null
    },
    {
       "Id":"65260293",
@@ -16234,7 +16168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65260293.jpg",
-      "IdName":"elementmagician"
+      "References":null
    },
    {
       "Id":"49398568",
@@ -16244,7 +16178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49398568.jpg",
-      "IdName":"serialspell"
+      "References":null
    },
    {
       "Id":"27134689",
@@ -16254,7 +16188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27134689.jpg",
-      "IdName":"masterofoz"
+      "References":null
    },
    {
       "Id":"41089128",
@@ -16264,7 +16198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41089128.jpg",
-      "IdName":"flameruler"
+      "References":null
    },
    {
       "Id":"49814180",
@@ -16274,7 +16208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49814180.jpg",
-      "IdName":"mastermonk"
+      "References":null
    },
    {
       "Id":"59380081",
@@ -16284,7 +16218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59380081.jpg",
-      "IdName":"bigtuskedmammoth"
+      "References":null
    },
    {
       "Id":"52571838",
@@ -16294,7 +16228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52571838.jpg",
-      "IdName":"creepingdoommanta"
+      "References":null
    },
    {
       "Id":"52817046",
@@ -16304,7 +16238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52817046.jpg",
-      "IdName":"mindwipe"
+      "References":null
    },
    {
       "Id":"12503902",
@@ -16314,7 +16248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12503902.jpg",
-      "IdName":"raremetalmorph"
+      "References":null
    },
    {
       "Id":"33767325",
@@ -16324,7 +16258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33767325.jpg",
-      "IdName":"meteorofdestruction"
+      "References":null
    },
    {
       "Id":"4929256",
@@ -16334,7 +16268,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4929256.jpg",
-      "IdName":"mobiusthefrostmonarch"
+      "References":null
    },
    {
       "Id":"3810071",
@@ -16344,7 +16278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3810071.jpg",
-      "IdName":"monkfighter"
+      "References":null
    },
    {
       "Id":"25290459",
@@ -16354,7 +16288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25290459.jpg",
-      "IdName":"levelup"
+      "References":null
    },
    {
       "Id":"90740329",
@@ -16364,7 +16298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90740329.jpg",
-      "IdName":"taunt"
+      "References":null
    },
    {
       "Id":"91862578",
@@ -16374,7 +16308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91862578.jpg",
-      "IdName":"enragedmukamuka"
+      "References":null
    },
    {
       "Id":"49563947",
@@ -16384,7 +16318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49563947.jpg",
-      "IdName":"neoaquamadoor"
+      "References":null
    },
    {
       "Id":"1571945",
@@ -16394,7 +16328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1571945.jpg",
-      "IdName":"whiteninja"
+      "References":null
    },
    {
       "Id":"53693416",
@@ -16404,7 +16338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53693416.jpg",
-      "IdName":"eagleeye"
+      "References":null
    },
    {
       "Id":"52648457",
@@ -16414,7 +16348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52648457.jpg",
-      "IdName":"gorgonseye"
+      "References":null
    },
    {
       "Id":"40937767",
@@ -16424,7 +16358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40937767.jpg",
-      "IdName":"graveohja"
+      "References":null
    },
    {
       "Id":"87473172",
@@ -16434,7 +16368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87473172.jpg",
-      "IdName":"firebird"
+      "References":null
    },
    {
       "Id":"59237154",
@@ -16444,7 +16378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59237154.jpg",
-      "IdName":"shiftingshadows"
+      "References":null
    },
    {
       "Id":"60102563",
@@ -16454,7 +16388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60102563.jpg",
-      "IdName":"majigirepanda"
+      "References":null
    },
    {
       "Id":"967928",
@@ -16464,7 +16398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/967928.jpg",
-      "IdName":"penaltygame"
+      "References":null
    },
    {
       "Id":"64751286",
@@ -16474,7 +16408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64751286.jpg",
-      "IdName":"penumbralsoldierlady"
+      "References":null
    },
    {
       "Id":"61441708",
@@ -16484,7 +16418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61441708.jpg",
-      "IdName":"sacredphoenixofnephthys"
+      "References":null
    },
    {
       "Id":"81306586",
@@ -16494,7 +16428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81306586.jpg",
-      "IdName":"nightmarepenguin"
+      "References":null
    },
    {
       "Id":"75392615",
@@ -16504,7 +16438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75392615.jpg",
-      "IdName":"mindhaxorz"
+      "References":null
    },
    {
       "Id":"23265594",
@@ -16514,7 +16448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23265594.jpg",
-      "IdName":"heavymechsupportplatform"
+      "References":null
    },
    {
       "Id":"36119641",
@@ -16524,7 +16458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36119641.jpg",
-      "IdName":"spacemambo"
+      "References":null
    },
    {
       "Id":"73578229",
@@ -16534,7 +16468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73578229.jpg",
-      "IdName":"poleposition"
+      "References":null
    },
    {
       "Id":"72657739",
@@ -16544,7 +16478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72657739.jpg",
-      "IdName":"malicedollofdemise"
+      "References":null
    },
    {
       "Id":"36262024",
@@ -16554,7 +16488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36262024.jpg",
-      "IdName":"blackdragonschick"
+      "References":null
    },
    {
       "Id":"15090429",
@@ -16564,7 +16498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15090429.jpg",
-      "IdName":"whirlwindprodigy"
+      "References":null
    },
    {
       "Id":"1669772",
@@ -16574,7 +16508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1669772.jpg",
-      "IdName":"spellpurification"
+      "References":null
    },
    {
       "Id":"31440542",
@@ -16584,7 +16518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31440542.jpg",
-      "IdName":"rafflesiaseduction"
+      "References":null
    },
    {
       "Id":"74694807",
@@ -16594,7 +16528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74694807.jpg",
-      "IdName":"refusion"
+      "References":null
    },
    {
       "Id":"74848038",
@@ -16604,7 +16538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74848038.jpg",
-      "IdName":"monsterreincarnation"
+      "References":null
    },
    {
       "Id":"88753985",
@@ -16614,7 +16548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88753985.jpg",
-      "IdName":"foxfire"
+      "References":null
    },
    {
       "Id":"62420419",
@@ -16624,7 +16558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62420419.jpg",
-      "IdName":"reshefthedarkbeing"
+      "References":null
    },
    {
       "Id":"47453433",
@@ -16634,7 +16568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47453433.jpg",
-      "IdName":"backtosquareone"
+      "References":null
    },
    {
       "Id":"28143906",
@@ -16644,7 +16578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28143906.jpg",
-      "IdName":"rocfromthevalleyofhaze"
+      "References":null
    },
    {
       "Id":"36021814",
@@ -16654,7 +16588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36021814.jpg",
-      "IdName":"kingoftheskullservants"
+      "References":null
    },
    {
       "Id":"13756293",
@@ -16664,7 +16598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13756293.jpg",
-      "IdName":"kingdragun"
+      "References":null
    },
    {
       "Id":"13803864",
@@ -16674,7 +16608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13803864.jpg",
-      "IdName":"mokeymokeyking"
+      "References":null
    },
    {
       "Id":"18891691",
@@ -16684,7 +16618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18891691.jpg",
-      "IdName":"perfectmachineking"
+      "References":null
    },
    {
       "Id":"64538655",
@@ -16694,7 +16628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64538655.jpg",
-      "IdName":"sasukesamurai4"
+      "References":null
    },
    {
       "Id":"53539634",
@@ -16704,7 +16638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53539634.jpg",
-      "IdName":"sanwitch"
+      "References":null
    },
    {
       "Id":"92755808",
@@ -16714,7 +16648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92755808.jpg",
-      "IdName":"elementsaurus"
+      "References":null
    },
    {
       "Id":"82482194",
@@ -16724,7 +16658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82482194.jpg",
-      "IdName":"millenniumscorpion"
+      "References":null
    },
    {
       "Id":"9264485",
@@ -16734,7 +16668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9264485.jpg",
-      "IdName":"horusservant"
+      "References":null
    },
    {
       "Id":"66712593",
@@ -16744,7 +16678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66712593.jpg",
-      "IdName":"elementsoldier"
+      "References":null
    },
    {
       "Id":"56094445",
@@ -16754,7 +16688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56094445.jpg",
-      "IdName":"ancientgearsoldier"
+      "References":null
    },
    {
       "Id":"52684508",
@@ -16764,7 +16698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52684508.jpg",
-      "IdName":"infernofireblast"
+      "References":null
    },
    {
       "Id":"47507260",
@@ -16774,7 +16708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47507260.jpg",
-      "IdName":"mysticswordsmanlv2"
+      "References":null
    },
    {
       "Id":"74591968",
@@ -16784,7 +16718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74591968.jpg",
-      "IdName":"mysticswordsmanlv4"
+      "References":null
    },
    {
       "Id":"60482781",
@@ -16794,7 +16728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60482781.jpg",
-      "IdName":"mysticswordsmanlv6"
+      "References":null
    },
    {
       "Id":"1995985",
@@ -16804,7 +16738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1995985.jpg",
-      "IdName":"silentswordsmanlv3"
+      "References":null
    },
    {
       "Id":"74388798",
@@ -16814,7 +16748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74388798.jpg",
-      "IdName":"silentswordsmanlv5"
+      "References":null
    },
    {
       "Id":"75209824",
@@ -16824,7 +16758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75209824.jpg",
-      "IdName":"guardianstatue"
+      "References":null
    },
    {
       "Id":"75782277",
@@ -16834,7 +16768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75782277.jpg",
-      "IdName":"harpieshuntingground"
+      "References":null
    },
    {
       "Id":"26205777",
@@ -16844,7 +16778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26205777.jpg",
-      "IdName":"thestalosthefirestormmonarch"
+      "References":null
    },
    {
       "Id":"74458486",
@@ -16854,7 +16788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74458486.jpg",
-      "IdName":"coveringfire"
+      "References":null
    },
    {
       "Id":"35686187",
@@ -16864,7 +16798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35686187.jpg",
-      "IdName":"tragedy"
+      "References":null
    },
    {
       "Id":"20939559",
@@ -16874,7 +16808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20939559.jpg",
-      "IdName":"shadowslayer"
+      "References":null
    },
    {
       "Id":"60369732",
@@ -16884,7 +16818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60369732.jpg",
-      "IdName":"finalritualoftheancients"
+      "References":null
    },
    {
       "Id":"1801154",
@@ -16894,7 +16828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1801154.jpg",
-      "IdName":"centrifugalfield"
+      "References":null
    },
    {
       "Id":"40267580",
@@ -16904,7 +16838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40267580.jpg",
-      "IdName":"brainjacker"
+      "References":null
    },
    {
       "Id":"23842445",
@@ -16914,7 +16848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23842445.jpg",
-      "IdName":"nitrounit"
+      "References":null
    },
    {
       "Id":"90928333",
@@ -16924,7 +16858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90928333.jpg",
-      "IdName":"darkfactoryofmassproduction"
+      "References":null
    },
    {
       "Id":"2694423",
@@ -16934,7 +16868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2694423.jpg",
-      "IdName":"medusaworm"
+      "References":null
    },
    {
       "Id":"69162969",
@@ -16944,21 +16878,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"44095762,69162969,53129443",
       "Image":"https://images.ygoprodeck.com/images/cards/69162969.jpg",
-      "IdName":"lightningvortex",
-      "LimitFriendsCards":[
-         {
-            "IdName":"mirrorforce",
-            "Image":"https://images.ygoprodeck.com/images/cards/44095762.jpg"
-         },
-         {
-            "IdName":"darkhole",
-            "Image":"https://images.ygoprodeck.com/images/cards/53129443.jpg"
-         },
-         {
-            "IdName":"lightningvortex",
-            "Image":"https://images.ygoprodeck.com/images/cards/69162969.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"97623219",
@@ -16968,7 +16888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97623219.jpg",
-      "IdName":"elementvalkyrie"
+      "References":null
    },
    {
       "Id":"9637706",
@@ -16978,7 +16898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9637706.jpg",
-      "IdName":"deswombat"
+      "References":null
    },
    {
       "Id":"37744402",
@@ -16988,7 +16908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37744402.jpg",
-      "IdName":"wynnthewindcharmer"
+      "References":null
    },
    {
       "Id":"76515293",
@@ -16998,7 +16918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76515293.jpg",
-      "IdName":"xingzhenhu"
+      "References":null
    },
    {
       "Id":"74137509",
@@ -17008,7 +16928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74137509.jpg",
-      "IdName":"gracefuldice"
+      "References":null
    },
    {
       "Id":"126218",
@@ -17018,7 +16938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/126218.jpg",
-      "IdName":"skulldice"
+      "References":null
    },
    {
       "Id":"52040216",
@@ -17028,7 +16948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52040216.jpg",
-      "IdName":"harpiespetdragon"
+      "References":null
    },
    {
       "Id":"64335804",
@@ -17038,7 +16958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64335804.jpg",
-      "IdName":"redeyesblackmetaldragon"
+      "References":null
    },
    {
       "Id":"68540058",
@@ -17048,7 +16968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68540058.jpg",
-      "IdName":"metalmorph"
+      "References":null
    },
    {
       "Id":"70969517",
@@ -17058,7 +16978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70969517.jpg",
-      "IdName":"phantombeastrocklizard"
+      "References":null
    },
    {
       "Id":"18430390",
@@ -17068,7 +16988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18430390.jpg",
-      "IdName":"wingedrhynos"
+      "References":null
    },
    {
       "Id":"7736719",
@@ -17078,7 +16998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7736719.jpg",
-      "IdName":"vortextrooper"
+      "References":null
    },
    {
       "Id":"30312361",
@@ -17088,7 +17008,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30312361.jpg",
-      "IdName":"phantomofchaos"
+      "References":null
    },
    {
       "Id":"47529357",
@@ -17098,7 +17018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47529357.jpg",
-      "IdName":"mistbody"
+      "References":null
    },
    {
       "Id":"2326738",
@@ -17108,7 +17028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2326738.jpg",
-      "IdName":"deslacooda"
+      "References":null
    },
    {
       "Id":"25236056",
@@ -17118,7 +17038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25236056.jpg",
-      "IdName":"raremetaldragon"
+      "References":null
    },
    {
       "Id":"23995346",
@@ -17128,7 +17048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23995346.jpg",
-      "IdName":"blueeyesultimatedragon"
+      "References":null
    },
    {
       "Id":"83039729",
@@ -17138,7 +17058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83039729.jpg",
-      "IdName":"grandmasterofthesixsamurai"
+      "References":null
    },
    {
       "Id":"14644902",
@@ -17148,7 +17068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14644902.jpg",
-      "IdName":"summonerofillusions"
+      "References":null
    },
    {
       "Id":"19230407",
@@ -17158,7 +17078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19230407.jpg",
-      "IdName":"offeringstothedoomed"
+      "References":null
    },
    {
       "Id":"23771716",
@@ -17168,7 +17088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23771716.jpg",
-      "IdName":"7coloredfish"
+      "References":null
    },
    {
       "Id":"82213171",
@@ -17178,7 +17098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82213171.jpg",
-      "IdName":"prometheuskingoftheshadows"
+      "References":null
    },
    {
       "Id":"14261867",
@@ -17188,7 +17108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14261867.jpg",
-      "IdName":"8clawsscorpion"
+      "References":null
    },
    {
       "Id":"57728570",
@@ -17198,7 +17118,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57728570.jpg",
-      "IdName":"crushcardvirus"
+      "References":null
    },
    {
       "Id":"71181155",
@@ -17208,7 +17128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71181155.jpg",
-      "IdName":"phantombeastcrosswing"
+      "References":null
    },
    {
       "Id":"7576264",
@@ -17218,7 +17138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7576264.jpg",
-      "IdName":"phantombeastwildhorn"
+      "References":null
    },
    {
       "Id":"34961968",
@@ -17228,7 +17148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34961968.jpg",
-      "IdName":"phantombeastthunderpegasus"
+      "References":null
    },
    {
       "Id":"81919143",
@@ -17238,7 +17158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81919143.jpg",
-      "IdName":"braincrusher"
+      "References":null
    },
    {
       "Id":"51962254",
@@ -17248,7 +17168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51962254.jpg",
-      "IdName":"hunterowl"
+      "References":null
    },
    {
       "Id":"87350908",
@@ -17258,7 +17178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87350908.jpg",
-      "IdName":"maskedchopper"
+      "References":null
    },
    {
       "Id":"4923662",
@@ -17268,7 +17188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4923662.jpg",
-      "IdName":"chaosburst"
+      "References":null
    },
    {
       "Id":"77538567",
@@ -17278,7 +17198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77538567.jpg",
-      "IdName":"darkbribe"
+      "References":null
    },
    {
       "Id":"31034919",
@@ -17288,7 +17208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31034919.jpg",
-      "IdName":"madreloader"
+      "References":null
    },
    {
       "Id":"3701074",
@@ -17298,7 +17218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3701074.jpg",
-      "IdName":"darkcure"
+      "References":null
    },
    {
       "Id":"67316075",
@@ -17308,7 +17228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67316075.jpg",
-      "IdName":"darklordnursereficule"
+      "References":null
    },
    {
       "Id":"30155789",
@@ -17318,7 +17238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30155789.jpg",
-      "IdName":"brutalpotion"
+      "References":null
    },
    {
       "Id":"26647858",
@@ -17328,7 +17248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26647858.jpg",
-      "IdName":"heroring"
+      "References":null
    },
    {
       "Id":"89252153",
@@ -17338,7 +17258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89252153.jpg",
-      "IdName":"elementalheronecroshade"
+      "References":null
    },
    {
       "Id":"73891874",
@@ -17348,7 +17268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73891874.jpg",
-      "IdName":"whitehorneddragon"
+      "References":null
    },
    {
       "Id":"73915051",
@@ -17358,7 +17278,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73915051.jpg",
-      "IdName":"scapegoat"
+      "References":null
    },
    {
       "Id":"13839120",
@@ -17368,7 +17288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13839120.jpg",
-      "IdName":"yellowgadget"
+      "References":null
    },
    {
       "Id":"62279055",
@@ -17378,7 +17298,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62279055.jpg",
-      "IdName":"magiccylinder"
+      "References":null
    },
    {
       "Id":"39439590",
@@ -17388,7 +17308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39439590.jpg",
-      "IdName":"cyberdinosaur"
+      "References":null
    },
    {
       "Id":"47297616",
@@ -17398,7 +17318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47297616.jpg",
-      "IdName":"lightanddarknessdragon"
+      "References":null
    },
    {
       "Id":"96851799",
@@ -17408,7 +17328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96851799.jpg",
-      "IdName":"hinotamasoul"
+      "References":null
    },
    {
       "Id":"9159938",
@@ -17418,7 +17338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9159938.jpg",
-      "IdName":"darkgray"
+      "References":null
    },
    {
       "Id":"39004808",
@@ -17428,7 +17348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39004808.jpg",
-      "IdName":"rootwater"
+      "References":null
    },
    {
       "Id":"1557499",
@@ -17438,7 +17358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1557499.jpg",
-      "IdName":"silverbowandarrow"
+      "References":null
    },
    {
       "Id":"53153481",
@@ -17448,7 +17368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53153481.jpg",
-      "IdName":"armaill"
+      "References":null
    },
    {
       "Id":"77007920",
@@ -17458,7 +17378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77007920.jpg",
-      "IdName":"lasercannonarmor"
+      "References":null
    },
    {
       "Id":"83887306",
@@ -17468,7 +17388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83887306.jpg",
-      "IdName":"twoprongedattack"
+      "References":null
    },
    {
       "Id":"45042329",
@@ -17478,7 +17398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45042329.jpg",
-      "IdName":"tripwirebeast"
+      "References":null
    },
    {
       "Id":"37421579",
@@ -17488,7 +17408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37421579.jpg",
-      "IdName":"charubinthefireknight"
+      "References":null
    },
    {
       "Id":"76211194",
@@ -17498,7 +17418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76211194.jpg",
-      "IdName":"medabat"
+      "References":null
    },
    {
       "Id":"55291359",
@@ -17508,7 +17428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55291359.jpg",
-      "IdName":"succubusknight"
+      "References":null
    },
    {
       "Id":"15052462",
@@ -17518,7 +17438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15052462.jpg",
-      "IdName":"violetcrystal"
+      "References":null
    },
    {
       "Id":"46009906",
@@ -17528,7 +17448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46009906.jpg",
-      "IdName":"beastfangs"
+      "References":null
    },
    {
       "Id":"20060230",
@@ -17538,7 +17458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20060230.jpg",
-      "IdName":"hardarmor"
+      "References":null
    },
    {
       "Id":"40826495",
@@ -17548,7 +17468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40826495.jpg",
-      "IdName":"dissolverock"
+      "References":null
    },
    {
       "Id":"39111158",
@@ -17558,7 +17478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39111158.jpg",
-      "IdName":"trihorneddragon"
+      "References":null
    },
    {
       "Id":"33064647",
@@ -17568,7 +17488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33064647.jpg",
-      "IdName":"oneeyedshielddragon"
+      "References":null
    },
    {
       "Id":"17881964",
@@ -17578,7 +17498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17881964.jpg",
-      "IdName":"darkfiredragon"
+      "References":null
    },
    {
       "Id":"55444629",
@@ -17588,7 +17508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55444629.jpg",
-      "IdName":"lesserdragon"
+      "References":null
    },
    {
       "Id":"9293977",
@@ -17598,7 +17518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9293977.jpg",
-      "IdName":"metaldragon"
+      "References":null
    },
    {
       "Id":"70681994",
@@ -17608,7 +17528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70681994.jpg",
-      "IdName":"dragonessthewickedknight"
+      "References":null
    },
    {
       "Id":"37820550",
@@ -17618,7 +17538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37820550.jpg",
-      "IdName":"electrowhip"
+      "References":null
    },
    {
       "Id":"51267887",
@@ -17628,7 +17548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51267887.jpg",
-      "IdName":"raisebodyheat"
+      "References":null
    },
    {
       "Id":"4614116",
@@ -17638,7 +17558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4614116.jpg",
-      "IdName":"darkenergy"
+      "References":null
    },
    {
       "Id":"61854111",
@@ -17648,7 +17568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61854111.jpg",
-      "IdName":"legendarysword"
+      "References":null
    },
    {
       "Id":"43500484",
@@ -17658,7 +17578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43500484.jpg",
-      "IdName":"darkworldthorns"
+      "References":null
    },
    {
       "Id":"80770678",
@@ -17668,7 +17588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80770678.jpg",
-      "IdName":"spiritoftheharp"
+      "References":null
    },
    {
       "Id":"76103675",
@@ -17678,7 +17598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76103675.jpg",
-      "IdName":"sparks"
+      "References":null
    },
    {
       "Id":"17535588",
@@ -17688,7 +17608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17535588.jpg",
-      "IdName":"armoredstarfish"
+      "References":null
    },
    {
       "Id":"58528964",
@@ -17698,7 +17618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58528964.jpg",
-      "IdName":"flameghost"
+      "References":null
    },
    {
       "Id":"36304921",
@@ -17708,7 +17628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36304921.jpg",
-      "IdName":"wittyphantom"
+      "References":null
    },
    {
       "Id":"71407486",
@@ -17718,7 +17638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71407486.jpg",
-      "IdName":"fireyarou"
+      "References":null
    },
    {
       "Id":"73134081",
@@ -17728,7 +17648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73134081.jpg",
-      "IdName":"finalflame"
+      "References":null
    },
    {
       "Id":"87430998",
@@ -17738,7 +17658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87430998.jpg",
-      "IdName":"forest"
+      "References":null
    },
    {
       "Id":"1641882",
@@ -17748,7 +17668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1641882.jpg",
-      "IdName":"fusionist"
+      "References":null
    },
    {
       "Id":"39774685",
@@ -17758,7 +17678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39774685.jpg",
-      "IdName":"vilegerms"
+      "References":null
    },
    {
       "Id":"82542267",
@@ -17768,7 +17688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82542267.jpg",
-      "IdName":"gravediggerghoul"
+      "References":null
    },
    {
       "Id":"73051941",
@@ -17778,7 +17698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73051941.jpg",
-      "IdName":"sandstone"
+      "References":null
    },
    {
       "Id":"54541900",
@@ -17788,7 +17708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54541900.jpg",
-      "IdName":"karbonalawarrior"
+      "References":null
    },
    {
       "Id":"89091579",
@@ -17798,7 +17718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89091579.jpg",
-      "IdName":"basicinsect"
+      "References":null
    },
    {
       "Id":"77827521",
@@ -17808,7 +17728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77827521.jpg",
-      "IdName":"trialofnightmare"
+      "References":null
    },
    {
       "Id":"15401633",
@@ -17818,7 +17738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15401633.jpg",
-      "IdName":"kagemushaoftheblueflame"
+      "References":null
    },
    {
       "Id":"56283725",
@@ -17828,7 +17748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56283725.jpg",
-      "IdName":"kumootoko"
+      "References":null
    },
    {
       "Id":"85705804",
@@ -17838,7 +17758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85705804.jpg",
-      "IdName":"kurama"
+      "References":null
    },
    {
       "Id":"32864",
@@ -17848,7 +17768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32864.jpg",
-      "IdName":"the13thgrave"
+      "References":null
    },
    {
       "Id":"94675535",
@@ -17858,7 +17778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94675535.jpg",
-      "IdName":"larvas"
+      "References":null
    },
    {
       "Id":"18710707",
@@ -17868,7 +17788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18710707.jpg",
-      "IdName":"thefuriousseaking"
+      "References":null
    },
    {
       "Id":"16353197",
@@ -17878,7 +17798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16353197.jpg",
-      "IdName":"droolinglizard"
+      "References":null
    },
    {
       "Id":"91595718",
@@ -17888,7 +17808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91595718.jpg",
-      "IdName":"bookofsecretarts"
+      "References":null
    },
    {
       "Id":"95952802",
@@ -17898,7 +17818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95952802.jpg",
-      "IdName":"flowerwolf"
+      "References":null
    },
    {
       "Id":"36607978",
@@ -17908,7 +17828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36607978.jpg",
-      "IdName":"mysticalmoon"
+      "References":null
    },
    {
       "Id":"56342351",
@@ -17918,7 +17838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56342351.jpg",
-      "IdName":"mwarrior1"
+      "References":null
    },
    {
       "Id":"92731455",
@@ -17928,7 +17848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92731455.jpg",
-      "IdName":"mwarrior2"
+      "References":null
    },
    {
       "Id":"93553943",
@@ -17938,7 +17858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93553943.jpg",
-      "IdName":"maneater"
+      "References":null
    },
    {
       "Id":"33178416",
@@ -17948,7 +17868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33178416.jpg",
-      "IdName":"misairuzame"
+      "References":null
    },
    {
       "Id":"50913601",
@@ -17958,7 +17878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50913601.jpg",
-      "IdName":"mountain"
+      "References":null
    },
    {
       "Id":"83464209",
@@ -17968,7 +17888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83464209.jpg",
-      "IdName":"mysticalsheep2"
+      "References":null
    },
    {
       "Id":"90963488",
@@ -17978,7 +17898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90963488.jpg",
-      "IdName":"nemuriko"
+      "References":null
    },
    {
       "Id":"36121917",
@@ -17988,7 +17908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36121917.jpg",
-      "IdName":"monsteregg"
+      "References":null
    },
    {
       "Id":"29172562",
@@ -17998,7 +17918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29172562.jpg",
-      "IdName":"steelogregrotto1"
+      "References":null
    },
    {
       "Id":"10202894",
@@ -18008,7 +17928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10202894.jpg",
-      "IdName":"skullredbird"
+      "References":null
    },
    {
       "Id":"98818516",
@@ -18018,7 +17938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98818516.jpg",
-      "IdName":"frenziedpanda"
+      "References":null
    },
    {
       "Id":"38142739",
@@ -18028,7 +17948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38142739.jpg",
-      "IdName":"petitangel"
+      "References":null
    },
    {
       "Id":"75356564",
@@ -18038,7 +17958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75356564.jpg",
-      "IdName":"petitdragon"
+      "References":null
    },
    {
       "Id":"51482758",
@@ -18048,7 +17968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51482758.jpg",
-      "IdName":"removetrap"
+      "References":null
    },
    {
       "Id":"53293545",
@@ -18058,7 +17978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53293545.jpg",
-      "IdName":"firegrass"
+      "References":null
    },
    {
       "Id":"77027445",
@@ -18068,7 +17988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77027445.jpg",
-      "IdName":"powerofkaishin"
+      "References":null
    },
    {
       "Id":"85309439",
@@ -18078,7 +17998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85309439.jpg",
-      "IdName":"raytemperature"
+      "References":null
    },
    {
       "Id":"2863439",
@@ -18088,7 +18008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2863439.jpg",
-      "IdName":"fiendreflection2"
+      "References":null
    },
    {
       "Id":"11868825",
@@ -18098,7 +18018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11868825.jpg",
-      "IdName":"goblinssecretremedy"
+      "References":null
    },
    {
       "Id":"84686841",
@@ -18108,7 +18028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84686841.jpg",
-      "IdName":"kingfog"
+      "References":null
    },
    {
       "Id":"22910685",
@@ -18118,7 +18038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22910685.jpg",
-      "IdName":"greenphantomking"
+      "References":null
    },
    {
       "Id":"85326399",
@@ -18128,7 +18048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85326399.jpg",
-      "IdName":"spikeseadra"
+      "References":null
    },
    {
       "Id":"57305373",
@@ -18138,7 +18058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57305373.jpg",
-      "IdName":"twomouthdarkruler"
+      "References":null
    },
    {
       "Id":"75376965",
@@ -18148,7 +18068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75376965.jpg",
-      "IdName":"enchantingmermaid"
+      "References":null
    },
    {
       "Id":"86318356",
@@ -18158,7 +18078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86318356.jpg",
-      "IdName":"sogen"
+      "References":null
    },
    {
       "Id":"98252586",
@@ -18168,7 +18088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98252586.jpg",
-      "IdName":"followwind"
+      "References":null
    },
    {
       "Id":"63308047",
@@ -18178,7 +18098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63308047.jpg",
-      "IdName":"terratheterrible"
+      "References":null
    },
    {
       "Id":"23424603",
@@ -18188,7 +18108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23424603.jpg",
-      "IdName":"wasteland"
+      "References":null
    },
    {
       "Id":"37313348",
@@ -18198,7 +18118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37313348.jpg",
-      "IdName":"turtletiger"
+      "References":null
    },
    {
       "Id":"1435851",
@@ -18208,7 +18128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1435851.jpg",
-      "IdName":"dragontreasure"
+      "References":null
    },
    {
       "Id":"72842870",
@@ -18218,7 +18138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72842870.jpg",
-      "IdName":"tyhone"
+      "References":null
    },
    {
       "Id":"25769732",
@@ -18228,7 +18148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25769732.jpg",
-      "IdName":"machineconversionfactory"
+      "References":null
    },
    {
       "Id":"59197169",
@@ -18238,7 +18158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59197169.jpg",
-      "IdName":"yami"
+      "References":null
    },
    {
       "Id":"14318794",
@@ -18248,7 +18168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14318794.jpg",
-      "IdName":"lifeabsorbingmachine"
+      "References":null
    },
    {
       "Id":"44203504",
@@ -18258,7 +18178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44203504.jpg",
-      "IdName":"roboticknight"
+      "References":null
    },
    {
       "Id":"42647539",
@@ -18268,7 +18188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42647539.jpg",
-      "IdName":"ryukishinclown"
+      "References":null
    },
    {
       "Id":"93346024",
@@ -18278,7 +18198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93346024.jpg",
-      "IdName":"thedragondwellinginthecave"
+      "References":null
    },
    {
       "Id":"83764996",
@@ -18288,7 +18208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83764996.jpg",
-      "IdName":"theillusorygentleman"
+      "References":null
    },
    {
       "Id":"56369281",
@@ -18298,7 +18218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56369281.jpg",
-      "IdName":"wolfaxwielder"
+      "References":null
    },
    {
       "Id":"37406863",
@@ -18308,7 +18228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37406863.jpg",
-      "IdName":"fengshengmirror"
+      "References":null
    },
    {
       "Id":"31785398",
@@ -18318,7 +18238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31785398.jpg",
-      "IdName":"readyforintercepting"
+      "References":null
    },
    {
       "Id":"29389368",
@@ -18328,7 +18248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29389368.jpg",
-      "IdName":"nutrientz"
+      "References":null
    },
    {
       "Id":"75923050",
@@ -18338,7 +18258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75923050.jpg",
-      "IdName":"superrobolady"
+      "References":null
    },
    {
       "Id":"1412158",
@@ -18348,7 +18268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1412158.jpg",
-      "IdName":"superroboyarou"
+      "References":null
    },
    {
       "Id":"57666212",
@@ -18358,7 +18278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57666212.jpg",
-      "IdName":"kurazthelightmonarch"
+      "References":null
    },
    {
       "Id":"37383714",
@@ -18368,7 +18288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37383714.jpg",
-      "IdName":"soulrope"
+      "References":null
    },
    {
       "Id":"90147755",
@@ -18378,7 +18298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90147755.jpg",
-      "IdName":"ladyassailantofflames"
+      "References":null
    },
    {
       "Id":"58696829",
@@ -18388,7 +18308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58696829.jpg",
-      "IdName":"biomage"
+      "References":null
    },
    {
       "Id":"98456117",
@@ -18398,7 +18318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98456117.jpg",
-      "IdName":"boneheimer"
+      "References":null
    },
    {
       "Id":"27671321",
@@ -18408,7 +18328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27671321.jpg",
-      "IdName":"lightningconger"
+      "References":null
    },
    {
       "Id":"38480590",
@@ -18418,7 +18338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38480590.jpg",
-      "IdName":"ladypanther"
+      "References":null
    },
    {
       "Id":"12883044",
@@ -18428,7 +18348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12883044.jpg",
-      "IdName":"flamedancer"
+      "References":null
    },
    {
       "Id":"69832741",
@@ -18438,7 +18358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69832741.jpg",
-      "IdName":"spiritelimination"
+      "References":null
    },
    {
       "Id":"22419772",
@@ -18448,7 +18368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22419772.jpg",
-      "IdName":"fairyguardian"
+      "References":null
    },
    {
       "Id":"12800777",
@@ -18458,7 +18378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12800777.jpg",
-      "IdName":"garudathewindspirit"
+      "References":null
    },
    {
       "Id":"65475294",
@@ -18468,7 +18388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65475294.jpg",
-      "IdName":"theunfriendlyamazon"
+      "References":null
    },
    {
       "Id":"32437102",
@@ -18478,7 +18398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32437102.jpg",
-      "IdName":"dragonicattack"
+      "References":null
    },
    {
       "Id":"13522325",
@@ -18488,7 +18408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13522325.jpg",
-      "IdName":"spiritofflames"
+      "References":null
    },
    {
       "Id":"28358902",
@@ -18498,7 +18418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28358902.jpg",
-      "IdName":"crimsonsentry"
+      "References":null
    },
    {
       "Id":"52121290",
@@ -18508,7 +18428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52121290.jpg",
-      "IdName":"spherouslady"
+      "References":null
    },
    {
       "Id":"69122763",
@@ -18518,7 +18438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69122763.jpg",
-      "IdName":"dealofphantom"
+      "References":null
    },
    {
       "Id":"8687195",
@@ -18528,7 +18448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8687195.jpg",
-      "IdName":"dreamsprite"
+      "References":null
    },
    {
       "Id":"58818411",
@@ -18538,7 +18458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58818411.jpg",
-      "IdName":"empressmantis"
+      "References":null
    },
    {
       "Id":"31987274",
@@ -18548,7 +18468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31987274.jpg",
-      "IdName":"flyingfish"
+      "References":null
    },
    {
       "Id":"7165085",
@@ -18558,7 +18478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7165085.jpg",
-      "IdName":"baitdoll"
+      "References":null
    },
    {
       "Id":"7565547",
@@ -18568,7 +18488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7565547.jpg",
-      "IdName":"collectedpower"
+      "References":null
    },
    {
       "Id":"44072894",
@@ -18578,7 +18498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44072894.jpg",
-      "IdName":"supply"
+      "References":null
    },
    {
       "Id":"86281779",
@@ -18588,7 +18508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86281779.jpg",
-      "IdName":"gadgetsoldier"
+      "References":null
    },
    {
       "Id":"27132350",
@@ -18598,7 +18518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27132350.jpg",
-      "IdName":"firesorcerer"
+      "References":null
    },
    {
       "Id":"87997872",
@@ -18608,7 +18528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87997872.jpg",
-      "IdName":"theinenthegreatsphinx"
+      "References":null
    },
    {
       "Id":"40173854",
@@ -18618,7 +18538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40173854.jpg",
-      "IdName":"amphibiousbugroth"
+      "References":null
    },
    {
       "Id":"86164529",
@@ -18628,7 +18548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86164529.jpg",
-      "IdName":"aquadragon"
+      "References":null
    },
    {
       "Id":"68171737",
@@ -18638,7 +18558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68171737.jpg",
-      "IdName":"stonedragon"
+      "References":null
    },
    {
       "Id":"94566432",
@@ -18648,7 +18568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94566432.jpg",
-      "IdName":"kaiserdragon"
+      "References":null
    },
    {
       "Id":"64271667",
@@ -18658,7 +18578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64271667.jpg",
-      "IdName":"meteordragon"
+      "References":null
    },
    {
       "Id":"29343734",
@@ -18668,7 +18588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29343734.jpg",
-      "IdName":"elementalheroelectrum"
+      "References":null
    },
    {
       "Id":"45909477",
@@ -18678,7 +18598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45909477.jpg",
-      "IdName":"moonenvoy"
+      "References":null
    },
    {
       "Id":"20065322",
@@ -18688,7 +18608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20065322.jpg",
-      "IdName":"thefluteofsummoningkuriboh"
+      "References":null
    },
    {
       "Id":"68339286",
@@ -18698,7 +18618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68339286.jpg",
-      "IdName":"metalguardian"
+      "References":null
    },
    {
       "Id":"15367030",
@@ -18708,7 +18628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15367030.jpg",
-      "IdName":"gokibore"
+      "References":null
    },
    {
       "Id":"97590747",
@@ -18718,7 +18638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97590747.jpg",
-      "IdName":"lajinnthemysticalgenieofthelamp"
+      "References":null
    },
    {
       "Id":"86100785",
@@ -18728,7 +18648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86100785.jpg",
-      "IdName":"zoneeater"
+      "References":null
    },
    {
       "Id":"52031567",
@@ -18738,7 +18658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52031567.jpg",
-      "IdName":"elementalheromudballman"
+      "References":null
    },
    {
       "Id":"33691040",
@@ -18748,7 +18668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33691040.jpg",
-      "IdName":"pragtical"
+      "References":null
    },
    {
       "Id":"42348802",
@@ -18758,7 +18678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42348802.jpg",
-      "IdName":"trakodon"
+      "References":null
    },
    {
       "Id":"51228280",
@@ -18768,7 +18688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51228280.jpg",
-      "IdName":"dungeonworm"
+      "References":null
    },
    {
       "Id":"2830619",
@@ -18778,7 +18698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2830619.jpg",
-      "IdName":"flameviper"
+      "References":null
    },
    {
       "Id":"53347303",
@@ -18788,7 +18708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53347303.jpg",
-      "IdName":"blueeyesshiningdragon"
+      "References":null
    },
    {
       "Id":"53569894",
@@ -18798,7 +18718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53569894.jpg",
-      "IdName":"pyramidoflight"
+      "References":null
    },
    {
       "Id":"88619463",
@@ -18808,7 +18728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88619463.jpg",
-      "IdName":"sorcererofdarkmagic"
+      "References":null
    },
    {
       "Id":"87774234",
@@ -18818,7 +18738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87774234.jpg",
-      "IdName":"watapon"
+      "References":null
    },
    {
       "Id":"71068263",
@@ -18828,7 +18748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71068263.jpg",
-      "IdName":"stuffedanimal"
+      "References":null
    },
    {
       "Id":"32012841",
@@ -18838,7 +18758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32012841.jpg",
-      "IdName":"millenniumshield"
+      "References":null
    },
    {
       "Id":"68401546",
@@ -18848,7 +18768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68401546.jpg",
-      "IdName":"fairysgift"
+      "References":null
    },
    {
       "Id":"38999506",
@@ -18858,7 +18778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38999506.jpg",
-      "IdName":"cosmoqueen"
+      "References":null
    },
    {
       "Id":"68638985",
@@ -18868,7 +18788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68638985.jpg",
-      "IdName":"slimetoad"
+      "References":null
    },
    {
       "Id":"67959180",
@@ -18878,7 +18798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67959180.jpg",
-      "IdName":"goddessofwhim"
+      "References":null
    },
    {
       "Id":"7562372",
@@ -18888,7 +18808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7562372.jpg",
-      "IdName":"megasoniceye"
+      "References":null
    },
    {
       "Id":"5628232",
@@ -18898,7 +18818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5628232.jpg",
-      "IdName":"flyingpenguin"
+      "References":null
    },
    {
       "Id":"44073668",
@@ -18908,7 +18828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44073668.jpg",
-      "IdName":"takriminos"
+      "References":null
    },
    {
       "Id":"48649353",
@@ -18918,7 +18838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48649353.jpg",
-      "IdName":"ushioni"
+      "References":null
    },
    {
       "Id":"70345785",
@@ -18928,7 +18848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70345785.jpg",
-      "IdName":"yamadron"
+      "References":null
    },
    {
       "Id":"71280811",
@@ -18938,7 +18858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71280811.jpg",
-      "IdName":"yaranzo"
+      "References":null
    },
    {
       "Id":"33734439",
@@ -18948,7 +18868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33734439.jpg",
-      "IdName":"threeleggedzombies"
+      "References":null
    },
    {
       "Id":"74703140",
@@ -18958,7 +18878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74703140.jpg",
-      "IdName":"punishedeagle"
+      "References":null
    },
    {
       "Id":"43230671",
@@ -18968,7 +18888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43230671.jpg",
-      "IdName":"ancientlizardwarrior"
+      "References":null
    },
    {
       "Id":"80141480",
@@ -18978,7 +18898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80141480.jpg",
-      "IdName":"hunterspider"
+      "References":null
    },
    {
       "Id":"58314394",
@@ -18988,7 +18908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58314394.jpg",
-      "IdName":"groundattackerbugroth"
+      "References":null
    },
    {
       "Id":"9653271",
@@ -18998,7 +18918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9653271.jpg",
-      "IdName":"kaminariattack"
+      "References":null
    },
    {
       "Id":"25655502",
@@ -19008,7 +18928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25655502.jpg",
-      "IdName":"bickuribox"
+      "References":null
    },
    {
       "Id":"60862676",
@@ -19018,7 +18938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60862676.jpg",
-      "IdName":"flamecerebrus"
+      "References":null
    },
    {
       "Id":"42431843",
@@ -19028,7 +18948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42431843.jpg",
-      "IdName":"ancientbrain"
+      "References":null
    },
    {
       "Id":"93900406",
@@ -19038,7 +18958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93900406.jpg",
-      "IdName":"mushroomman2"
+      "References":null
    },
    {
       "Id":"99551425",
@@ -19048,7 +18968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99551425.jpg",
-      "IdName":"labyrinthtank"
+      "References":null
    },
    {
       "Id":"62121",
@@ -19058,7 +18978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62121.jpg",
-      "IdName":"castleofdarkillusions"
+      "References":null
    },
    {
       "Id":"41396436",
@@ -19068,7 +18988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41396436.jpg",
-      "IdName":"bluewingedcrown"
+      "References":null
    },
    {
       "Id":"2504891",
@@ -19078,7 +18998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2504891.jpg",
-      "IdName":"skullknight"
+      "References":null
    },
    {
       "Id":"89112729",
@@ -19088,7 +19008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89112729.jpg",
-      "IdName":"cybersaurus"
+      "References":null
    },
    {
       "Id":"17358176",
@@ -19098,7 +19018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17358176.jpg",
-      "IdName":"ladyoffaith"
+      "References":null
    },
    {
       "Id":"88979991",
@@ -19108,7 +19028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88979991.jpg",
-      "IdName":"killerneedle"
+      "References":null
    },
    {
       "Id":"16972957",
@@ -19118,7 +19038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16972957.jpg",
-      "IdName":"domatheangelofsilence"
+      "References":null
    },
    {
       "Id":"67494157",
@@ -19128,7 +19048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67494157.jpg",
-      "IdName":"crawlingdragon"
+      "References":null
    },
    {
       "Id":"93221206",
@@ -19138,7 +19058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93221206.jpg",
-      "IdName":"ancientelf"
+      "References":null
    },
    {
       "Id":"21417692",
@@ -19148,7 +19068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21417692.jpg",
-      "IdName":"darkelf"
+      "References":null
    },
    {
       "Id":"98495314",
@@ -19158,7 +19078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98495314.jpg",
-      "IdName":"swordofdeepseated"
+      "References":null
    },
    {
       "Id":"21347810",
@@ -19168,7 +19088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21347810.jpg",
-      "IdName":"rainbowflower"
+      "References":null
    },
    {
       "Id":"20394040",
@@ -19178,7 +19098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20394040.jpg",
-      "IdName":"lavabattleguard"
+      "References":null
    },
    {
       "Id":"40453765",
@@ -19188,7 +19108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40453765.jpg",
-      "IdName":"swampbattleguard"
+      "References":null
    },
    {
       "Id":"25833572",
@@ -19198,7 +19118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25833572.jpg",
-      "IdName":"gateguardian"
+      "References":null
    },
    {
       "Id":"89272878",
@@ -19208,7 +19128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89272878.jpg",
-      "IdName":"guardianofthelabyrinth"
+      "References":null
    },
    {
       "Id":"49888191",
@@ -19218,7 +19138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49888191.jpg",
-      "IdName":"garneciaelefantis"
+      "References":null
    },
    {
       "Id":"51828629",
@@ -19228,7 +19148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51828629.jpg",
-      "IdName":"giltiathedknight"
+      "References":null
    },
    {
       "Id":"73481154",
@@ -19238,7 +19158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73481154.jpg",
-      "IdName":"destroyergolem"
+      "References":null
    },
    {
       "Id":"81386177",
@@ -19248,7 +19168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81386177.jpg",
-      "IdName":"bottomdweller"
+      "References":null
    },
    {
       "Id":"64501875",
@@ -19258,7 +19178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64501875.jpg",
-      "IdName":"hibikime"
+      "References":null
    },
    {
       "Id":"2118022",
@@ -19268,7 +19188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2118022.jpg",
-      "IdName":"hyosube"
+      "References":null
    },
    {
       "Id":"15237615",
@@ -19278,7 +19198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15237615.jpg",
-      "IdName":"empressjudge"
+      "References":null
    },
    {
       "Id":"24668830",
@@ -19288,7 +19208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24668830.jpg",
-      "IdName":"germinfection"
+      "References":null
    },
    {
       "Id":"7019529",
@@ -19298,7 +19218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7019529.jpg",
-      "IdName":"insectsoldiersofthesky"
+      "References":null
    },
    {
       "Id":"25109950",
@@ -19308,7 +19228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25109950.jpg",
-      "IdName":"thelittleswordsmanofaile"
+      "References":null
    },
    {
       "Id":"12472242",
@@ -19318,7 +19238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12472242.jpg",
-      "IdName":"leghul"
+      "References":null
    },
    {
       "Id":"10538007",
@@ -19328,7 +19248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10538007.jpg",
-      "IdName":"leogun"
+      "References":null
    },
    {
       "Id":"55875323",
@@ -19338,7 +19258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55875323.jpg",
-      "IdName":"electriclizard"
+      "References":null
    },
    {
       "Id":"8471389",
@@ -19348,7 +19268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8471389.jpg",
-      "IdName":"gigatechwolf"
+      "References":null
    },
    {
       "Id":"76446915",
@@ -19358,7 +19278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76446915.jpg",
-      "IdName":"diskmagician"
+      "References":null
    },
    {
       "Id":"14851496",
@@ -19368,7 +19288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14851496.jpg",
-      "IdName":"jellyfish"
+      "References":null
    },
    {
       "Id":"21817254",
@@ -19378,7 +19298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21817254.jpg",
-      "IdName":"megathunderball"
+      "References":null
    },
    {
       "Id":"21263083",
@@ -19388,7 +19308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21263083.jpg",
-      "IdName":"palebeast"
+      "References":null
    },
    {
       "Id":"55784832",
@@ -19398,7 +19318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55784832.jpg",
-      "IdName":"morinphen"
+      "References":null
    },
    {
       "Id":"7805359",
@@ -19408,7 +19328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7805359.jpg",
-      "IdName":"niwatori"
+      "References":null
    },
    {
       "Id":"86088138",
@@ -19418,7 +19338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86088138.jpg",
-      "IdName":"ocubeam"
+      "References":null
    },
    {
       "Id":"68846917",
@@ -19428,7 +19348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68846917.jpg",
-      "IdName":"rockogregrotto1"
+      "References":null
    },
    {
       "Id":"2483611",
@@ -19438,7 +19358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2483611.jpg",
-      "IdName":"wateromotics"
+      "References":null
    },
    {
       "Id":"58861941",
@@ -19448,7 +19368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58861941.jpg",
-      "IdName":"ooguchi"
+      "References":null
    },
    {
       "Id":"50152549",
@@ -19458,7 +19378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50152549.jpg",
-      "IdName":"paralyzingpotion"
+      "References":null
    },
    {
       "Id":"10071456",
@@ -19468,7 +19388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10071456.jpg",
-      "IdName":"protectorofthethrone"
+      "References":null
    },
    {
       "Id":"5901497",
@@ -19478,7 +19398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5901497.jpg",
-      "IdName":"queensdouble"
+      "References":null
    },
    {
       "Id":"549481",
@@ -19488,7 +19408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/549481.jpg",
-      "IdName":"preventrat"
+      "References":null
    },
    {
       "Id":"28593363",
@@ -19498,7 +19418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28593363.jpg",
-      "IdName":"deepseashark"
+      "References":null
    },
    {
       "Id":"29155212",
@@ -19508,7 +19428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29155212.jpg",
-      "IdName":"pumpkingthekingofghosts"
+      "References":null
    },
    {
       "Id":"56907389",
@@ -19518,7 +19438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56907389.jpg",
-      "IdName":"musicianking"
+      "References":null
    },
    {
       "Id":"28725004",
@@ -19528,7 +19448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28725004.jpg",
-      "IdName":"taintedwisdom"
+      "References":null
    },
    {
       "Id":"13599884",
@@ -19538,7 +19458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13599884.jpg",
-      "IdName":"steelscorpion"
+      "References":null
    },
    {
       "Id":"19066538",
@@ -19548,7 +19468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19066538.jpg",
-      "IdName":"roaringoceansnake"
+      "References":null
    },
    {
       "Id":"83225447",
@@ -19558,7 +19478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83225447.jpg",
-      "IdName":"stimpack"
+      "References":null
    },
    {
       "Id":"69572024",
@@ -19568,7 +19488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69572024.jpg",
-      "IdName":"tongyo"
+      "References":null
    },
    {
       "Id":"78780140",
@@ -19578,7 +19498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78780140.jpg",
-      "IdName":"trent"
+      "References":null
    },
    {
       "Id":"29380133",
@@ -19588,7 +19508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29380133.jpg",
-      "IdName":"yadokaru"
+      "References":null
    },
    {
       "Id":"80168720",
@@ -19598,7 +19518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80168720.jpg",
-      "IdName":"darknessapproaches"
+      "References":null
    },
    {
       "Id":"93108297",
@@ -19608,7 +19528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93108297.jpg",
-      "IdName":"liquidbeast"
+      "References":null
    },
    {
       "Id":"72053645",
@@ -19618,7 +19538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72053645.jpg",
-      "IdName":"weatherreport"
+      "References":null
    },
    {
       "Id":"30243636",
@@ -19628,7 +19548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30243636.jpg",
-      "IdName":"hungryburger"
+      "References":null
    },
    {
       "Id":"13723605",
@@ -19638,7 +19558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13723605.jpg",
-      "IdName":"maneatingtreasurechest"
+      "References":null
    },
    {
       "Id":"91996584",
@@ -19648,7 +19568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91996584.jpg",
-      "IdName":"whiptailcrow"
+      "References":null
    },
    {
       "Id":"91782219",
@@ -19658,7 +19578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91782219.jpg",
-      "IdName":"crabturtle"
+      "References":null
    },
    {
       "Id":"596051",
@@ -19668,7 +19588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/596051.jpg",
-      "IdName":"snakefang"
+      "References":null
    },
    {
       "Id":"43417563",
@@ -19678,7 +19598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43417563.jpg",
-      "IdName":"commencementdance"
+      "References":null
    },
    {
       "Id":"35565537",
@@ -19688,7 +19608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35565537.jpg",
-      "IdName":"darkwitch"
+      "References":null
    },
    {
       "Id":"66516792",
@@ -19698,7 +19618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66516792.jpg",
-      "IdName":"serpentnightdragon"
+      "References":null
    },
    {
       "Id":"34442949",
@@ -19708,7 +19628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34442949.jpg",
-      "IdName":"mechanicalsnail"
+      "References":null
    },
    {
       "Id":"58551308",
@@ -19718,7 +19638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58551308.jpg",
-      "IdName":"spearcretin"
+      "References":null
    },
    {
       "Id":"47879985",
@@ -19728,7 +19648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47879985.jpg",
-      "IdName":"guardianofthethroneroom"
+      "References":null
    },
    {
       "Id":"54579801",
@@ -19738,7 +19658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54579801.jpg",
-      "IdName":"hightidegyojin"
+      "References":null
    },
    {
       "Id":"90020065",
@@ -19748,7 +19668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90020065.jpg",
-      "IdName":"jigenbakudan"
+      "References":null
    },
    {
       "Id":"7892180",
@@ -19758,7 +19678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7892180.jpg",
-      "IdName":"psychickappa"
+      "References":null
    },
    {
       "Id":"46534755",
@@ -19768,7 +19688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46534755.jpg",
-      "IdName":"firekraken"
+      "References":null
    },
    {
       "Id":"14015067",
@@ -19778,7 +19698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14015067.jpg",
-      "IdName":"ancientoneofthedeepforest"
+      "References":null
    },
    {
       "Id":"64389297",
@@ -19788,7 +19708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64389297.jpg",
-      "IdName":"magicallabyrinth"
+      "References":null
    },
    {
       "Id":"15083728",
@@ -19798,7 +19718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15083728.jpg",
-      "IdName":"houseofadhesivetape"
+      "References":null
    },
    {
       "Id":"12470447",
@@ -19808,7 +19728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12470447.jpg",
-      "IdName":"curseoffiend"
+      "References":null
    },
    {
       "Id":"42578427",
@@ -19818,7 +19738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42578427.jpg",
-      "IdName":"eatgaboon"
+      "References":null
    },
    {
       "Id":"50930991",
@@ -19828,7 +19748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50930991.jpg",
-      "IdName":"neothemagicswordsman"
+      "References":null
    },
    {
       "Id":"74637266",
@@ -19838,7 +19758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74637266.jpg",
-      "IdName":"octoberser"
+      "References":null
    },
    {
       "Id":"15023985",
@@ -19848,7 +19768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15023985.jpg",
-      "IdName":"stoneogregrotto"
+      "References":null
    },
    {
       "Id":"63162310",
@@ -19858,7 +19778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63162310.jpg",
-      "IdName":"wallshadow"
+      "References":null
    },
    {
       "Id":"19523799",
@@ -19868,7 +19788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19523799.jpg",
-      "IdName":"ookazi"
+      "References":null
    },
    {
       "Id":"20624263",
@@ -19878,7 +19798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20624263.jpg",
-      "IdName":"peacock"
+      "References":null
    },
    {
       "Id":"4849037",
@@ -19888,7 +19808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4849037.jpg",
-      "IdName":"performanceofsword"
+      "References":null
    },
    {
       "Id":"55998462",
@@ -19898,7 +19818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55998462.jpg",
-      "IdName":"metalfish"
+      "References":null
    },
    {
       "Id":"80811661",
@@ -19908,7 +19828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80811661.jpg",
-      "IdName":"hamburgerrecipe"
+      "References":null
    },
    {
       "Id":"73081602",
@@ -19918,7 +19838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73081602.jpg",
-      "IdName":"queenbird"
+      "References":null
    },
    {
       "Id":"2964201",
@@ -19928,7 +19848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2964201.jpg",
-      "IdName":"ryuran"
+      "References":null
    },
    {
       "Id":"21340051",
@@ -19938,7 +19858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21340051.jpg",
-      "IdName":"boarsoldier"
+      "References":null
    },
    {
       "Id":"76806714",
@@ -19948,7 +19868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76806714.jpg",
-      "IdName":"turtleoath"
+      "References":null
    },
    {
       "Id":"96981563",
@@ -19958,7 +19878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96981563.jpg",
-      "IdName":"giantturtlewhofeedsonflames"
+      "References":null
    },
    {
       "Id":"29692206",
@@ -19968,7 +19888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29692206.jpg",
-      "IdName":"twinlongrods2"
+      "References":null
    },
    {
       "Id":"56789759",
@@ -19978,7 +19898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56789759.jpg",
-      "IdName":"tyhone2"
+      "References":null
    },
    {
       "Id":"59784896",
@@ -19988,7 +19908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59784896.jpg",
-      "IdName":"darkzebra"
+      "References":null
    },
    {
       "Id":"73665146",
@@ -19998,7 +19918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73665146.jpg",
-      "IdName":"silentmagicianlv4"
+      "References":null
    },
    {
       "Id":"72443568",
@@ -20008,7 +19928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72443568.jpg",
-      "IdName":"silentmagicianlv8"
+      "References":null
    },
    {
       "Id":"22537443",
@@ -20018,7 +19938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22537443.jpg",
-      "IdName":"sebeksblessing"
+      "References":null
    },
    {
       "Id":"61405855",
@@ -20028,7 +19948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61405855.jpg",
-      "IdName":"swordofdragonssoul"
+      "References":null
    },
    {
       "Id":"95132338",
@@ -20038,7 +19958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95132338.jpg",
-      "IdName":"aquachorus"
+      "References":null
    },
    {
       "Id":"97809599",
@@ -20048,7 +19968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97809599.jpg",
-      "IdName":"sealoftheancients"
+      "References":null
    },
    {
       "Id":"59744639",
@@ -20058,7 +19978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59744639.jpg",
-      "IdName":"windstormofetaqua"
+      "References":null
    },
    {
       "Id":"4035199",
@@ -20068,7 +19988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4035199.jpg",
-      "IdName":"shapesnatch"
+      "References":null
    },
    {
       "Id":"1082946",
@@ -20078,7 +19998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1082946.jpg",
-      "IdName":"pyroclockofdestiny"
+      "References":null
    },
    {
       "Id":"44913552",
@@ -20088,7 +20008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44913552.jpg",
-      "IdName":"timeater"
+      "References":null
    },
    {
       "Id":"43716289",
@@ -20098,7 +20018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43716289.jpg",
-      "IdName":"poisonmummy"
+      "References":null
    },
    {
       "Id":"2792265",
@@ -20108,7 +20028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2792265.jpg",
-      "IdName":"servantofcatabolism"
+      "References":null
    },
    {
       "Id":"62437709",
@@ -20118,7 +20038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62437709.jpg",
-      "IdName":"aliengrey"
+      "References":null
    },
    {
       "Id":"98927491",
@@ -20128,7 +20048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98927491.jpg",
-      "IdName":"ambulancerescueroid"
+      "References":null
    },
    {
       "Id":"36378213",
@@ -20138,7 +20058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36378213.jpg",
-      "IdName":"ambulanceroid"
+      "References":null
    },
    {
       "Id":"41160595",
@@ -20148,7 +20068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41160595.jpg",
-      "IdName":"spellcalling"
+      "References":null
    },
    {
       "Id":"36042004",
@@ -20158,7 +20078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36042004.jpg",
-      "IdName":"babycerasaurus"
+      "References":null
    },
    {
       "Id":"96875080",
@@ -20168,7 +20088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96875080.jpg",
-      "IdName":"orbitalbombardment"
+      "References":null
    },
    {
       "Id":"24082387",
@@ -20178,7 +20098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24082387.jpg",
-      "IdName":"cropcircles"
+      "References":null
    },
    {
       "Id":"62315111",
@@ -20188,7 +20108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62315111.jpg",
-      "IdName":"alienhunter"
+      "References":null
    },
    {
       "Id":"25920413",
@@ -20198,7 +20118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25920413.jpg",
-      "IdName":"alienskull"
+      "References":null
    },
    {
       "Id":"63477921",
@@ -20208,7 +20128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63477921.jpg",
-      "IdName":"cybersummonblaster"
+      "References":null
    },
    {
       "Id":"23869735",
@@ -20218,7 +20138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23869735.jpg",
-      "IdName":"fossilexcavation"
+      "References":null
    },
    {
       "Id":"51192573",
@@ -20228,7 +20148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51192573.jpg",
-      "IdName":"cosmichorrorgangiel"
+      "References":null
    },
    {
       "Id":"50684552",
@@ -20238,7 +20158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50684552.jpg",
-      "IdName":"wondergarage"
+      "References":null
    },
    {
       "Id":"98719226",
@@ -20248,7 +20168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98719226.jpg",
-      "IdName":"alienwarrior"
+      "References":null
    },
    {
       "Id":"50470982",
@@ -20258,7 +20178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50470982.jpg",
-      "IdName":"thepathsofdestiny"
+      "References":null
    },
    {
       "Id":"25034083",
@@ -20268,7 +20188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25034083.jpg",
-      "IdName":"decoyroid"
+      "References":null
    },
    {
       "Id":"80921533",
@@ -20278,7 +20198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80921533.jpg",
-      "IdName":"mausoleumoftheemperor"
+      "References":null
    },
    {
       "Id":"24104865",
@@ -20288,7 +20208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24104865.jpg",
-      "IdName":"alienmother"
+      "References":null
    },
    {
       "Id":"44702857",
@@ -20298,7 +20218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44702857.jpg",
-      "IdName":"bitelon"
+      "References":null
    },
    {
       "Id":"97697678",
@@ -20308,7 +20228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97697678.jpg",
-      "IdName":"flyingsaucermuusiki"
+      "References":null
    },
    {
       "Id":"63259351",
@@ -20318,7 +20238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63259351.jpg",
-      "IdName":"miraclejurassicegg"
+      "References":null
    },
    {
       "Id":"86742443",
@@ -20328,7 +20248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86742443.jpg",
-      "IdName":"royalwritoftaxation"
+      "References":null
    },
    {
       "Id":"90654356",
@@ -20338,7 +20258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90654356.jpg",
-      "IdName":"blackptera"
+      "References":null
    },
    {
       "Id":"41382147",
@@ -20348,7 +20268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41382147.jpg",
-      "IdName":"rallisthestarbird"
+      "References":null
    },
    {
       "Id":"59258334",
@@ -20358,7 +20278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59258334.jpg",
-      "IdName":"brainwashingbeam"
+      "References":null
    },
    {
       "Id":"37265642",
@@ -20368,7 +20288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37265642.jpg",
-      "IdName":"sabersaurus"
+      "References":null
    },
    {
       "Id":"24311595",
@@ -20378,7 +20298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24311595.jpg",
-      "IdName":"rescueroid"
+      "References":null
    },
    {
       "Id":"16946849",
@@ -20388,7 +20308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16946849.jpg",
-      "IdName":"syntheticseraphim"
+      "References":null
    },
    {
       "Id":"99861526",
@@ -20398,7 +20318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99861526.jpg",
-      "IdName":"submarineroid"
+      "References":null
    },
    {
       "Id":"79409334",
@@ -20408,7 +20328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79409334.jpg",
-      "IdName":"blackstego"
+      "References":null
    },
    {
       "Id":"97705809",
@@ -20418,7 +20338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97705809.jpg",
-      "IdName":"supercharge"
+      "References":null
    },
    {
       "Id":"36256625",
@@ -20428,7 +20348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36256625.jpg",
-      "IdName":"supervehicroidjumbodrill"
+      "References":null
    },
    {
       "Id":"15894048",
@@ -20438,7 +20358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15894048.jpg",
-      "IdName":"ultimatetyranno"
+      "References":null
    },
    {
       "Id":"23299957",
@@ -20448,7 +20368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23299957.jpg",
-      "IdName":"vehicroidconnectionzone"
+      "References":null
    },
    {
       "Id":"30461781",
@@ -20458,7 +20378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30461781.jpg",
-      "IdName":"legacyofyatagarasu"
+      "References":null
    },
    {
       "Id":"67688478",
@@ -20468,7 +20388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67688478.jpg",
-      "IdName":"geminiimps"
+      "References":null
    },
    {
       "Id":"30683373",
@@ -20478,7 +20398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30683373.jpg",
-      "IdName":"shieldcrush"
+      "References":null
    },
    {
       "Id":"66865880",
@@ -20488,7 +20408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66865880.jpg",
-      "IdName":"marshmallonglasses"
+      "References":null
    },
    {
       "Id":"30208479",
@@ -20498,7 +20418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30208479.jpg",
-      "IdName":"magicianofblackchaos"
+      "References":null
    },
    {
       "Id":"31305911",
@@ -20508,7 +20428,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31305911.jpg",
-      "IdName":"marshmallon"
+      "References":null
    },
    {
       "Id":"41182875",
@@ -20518,7 +20438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41182875.jpg",
-      "IdName":"javelinbeetlepact"
+      "References":null
    },
    {
       "Id":"3072077",
@@ -20528,7 +20448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3072077.jpg",
-      "IdName":"returnzombie"
+      "References":null
    },
    {
       "Id":"99789342",
@@ -20538,7 +20458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99789342.jpg",
-      "IdName":"darkmagiccurtain"
+      "References":null
    },
    {
       "Id":"76792184",
@@ -20548,7 +20468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76792184.jpg",
-      "IdName":"blackmagicritual"
+      "References":null
    },
    {
       "Id":"81756897",
@@ -20558,7 +20478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81756897.jpg",
-      "IdName":"zeraritual"
+      "References":null
    },
    {
       "Id":"26932788",
@@ -20568,7 +20488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26932788.jpg",
-      "IdName":"javelinbeetle"
+      "References":null
    },
    {
       "Id":"69123138",
@@ -20578,7 +20498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69123138.jpg",
-      "IdName":"zerathemant"
+      "References":null
    },
    {
       "Id":"4920010",
@@ -20588,7 +20508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4920010.jpg",
-      "IdName":"soulsoftheforgotten"
+      "References":null
    },
    {
       "Id":"11761845",
@@ -20598,7 +20518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11761845.jpg",
-      "IdName":"beastoftalwar"
+      "References":null
    },
    {
       "Id":"86198326",
@@ -20608,7 +20528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86198326.jpg",
-      "IdName":"7completed"
+      "References":null
    },
    {
       "Id":"42599677",
@@ -20618,7 +20538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42599677.jpg",
-      "IdName":"flamechampion"
+      "References":null
    },
    {
       "Id":"50122883",
@@ -20628,7 +20548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50122883.jpg",
-      "IdName":"biteshoes"
+      "References":null
    },
    {
       "Id":"67049542",
@@ -20638,7 +20558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67049542.jpg",
-      "IdName":"darkbat"
+      "References":null
    },
    {
       "Id":"36868108",
@@ -20648,7 +20568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36868108.jpg",
-      "IdName":"armoredglass"
+      "References":null
    },
    {
       "Id":"30655537",
@@ -20658,7 +20578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30655537.jpg",
-      "IdName":"cyberfalcon"
+      "References":null
    },
    {
       "Id":"75646520",
@@ -20668,7 +20588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75646520.jpg",
-      "IdName":"metaldetector"
+      "References":null
    },
    {
       "Id":"30325729",
@@ -20678,7 +20598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30325729.jpg",
-      "IdName":"dokuroyaiba"
+      "References":null
    },
    {
       "Id":"78984772",
@@ -20688,7 +20608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78984772.jpg",
-      "IdName":"twinheadedfiredragon"
+      "References":null
    },
    {
       "Id":"9074847",
@@ -20698,7 +20618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9074847.jpg",
-      "IdName":"majorriot"
+      "References":null
    },
    {
       "Id":"78423643",
@@ -20708,7 +20628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78423643.jpg",
-      "IdName":"threeheadedgeedo"
+      "References":null
    },
    {
       "Id":"84620194",
@@ -20718,7 +20638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84620194.jpg",
-      "IdName":"girochinkuwagata"
+      "References":null
    },
    {
       "Id":"67532912",
@@ -20728,7 +20648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67532912.jpg",
-      "IdName":"sciencesoldier"
+      "References":null
    },
    {
       "Id":"96965364",
@@ -20738,7 +20658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96965364.jpg",
-      "IdName":"insectimitation"
+      "References":null
    },
    {
       "Id":"16227556",
@@ -20748,7 +20668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16227556.jpg",
-      "IdName":"inspection"
+      "References":null
    },
    {
       "Id":"52675689",
@@ -20758,7 +20678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52675689.jpg",
-      "IdName":"invitationtoadarksleep"
+      "References":null
    },
    {
       "Id":"3134241",
@@ -20768,7 +20688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3134241.jpg",
-      "IdName":"flyingkamakiri2"
+      "References":null
    },
    {
       "Id":"5265750",
@@ -20778,7 +20698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5265750.jpg",
-      "IdName":"skullmariner"
+      "References":null
    },
    {
       "Id":"32269855",
@@ -20788,7 +20708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32269855.jpg",
-      "IdName":"theallseeingwhitetiger"
+      "References":null
    },
    {
       "Id":"23471572",
@@ -20798,7 +20718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23471572.jpg",
-      "IdName":"solomonslawbook"
+      "References":null
    },
    {
       "Id":"31477025",
@@ -20808,7 +20728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31477025.jpg",
-      "IdName":"mrvolcano"
+      "References":null
    },
    {
       "Id":"37580756",
@@ -20818,7 +20738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37580756.jpg",
-      "IdName":"michizure"
+      "References":null
    },
    {
       "Id":"473469",
@@ -20828,7 +20748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/473469.jpg",
-      "IdName":"drivingsnow"
+      "References":null
    },
    {
       "Id":"90908427",
@@ -20838,7 +20758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90908427.jpg",
-      "IdName":"steelogregrotto2"
+      "References":null
    },
    {
       "Id":"66927994",
@@ -20848,7 +20768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66927994.jpg",
-      "IdName":"onitankt34"
+      "References":null
    },
    {
       "Id":"2311603",
@@ -20858,7 +20778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2311603.jpg",
-      "IdName":"overdrive"
+      "References":null
    },
    {
       "Id":"43711255",
@@ -20868,7 +20788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43711255.jpg",
-      "IdName":"prohibition"
+      "References":null
    },
    {
       "Id":"73079365",
@@ -20878,7 +20798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73079365.jpg",
-      "IdName":"gust"
+      "References":null
    },
    {
       "Id":"296499",
@@ -20888,7 +20808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/296499.jpg",
-      "IdName":"theregulationoftribe"
+      "References":null
    },
    {
       "Id":"48539234",
@@ -20898,7 +20818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48539234.jpg",
-      "IdName":"appropriate"
+      "References":null
    },
    {
       "Id":"60866277",
@@ -20908,7 +20828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60866277.jpg",
-      "IdName":"earthshaker"
+      "References":null
    },
    {
       "Id":"5388481",
@@ -20918,7 +20838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5388481.jpg",
-      "IdName":"darkfiresoldier1"
+      "References":null
    },
    {
       "Id":"78861134",
@@ -20928,7 +20848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78861134.jpg",
-      "IdName":"darkfiresoldier2"
+      "References":null
    },
    {
       "Id":"49251811",
@@ -20938,7 +20858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49251811.jpg",
-      "IdName":"mysticprobe"
+      "References":null
    },
    {
       "Id":"87511987",
@@ -20948,7 +20868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87511987.jpg",
-      "IdName":"spikebot"
+      "References":null
    },
    {
       "Id":"12253117",
@@ -20958,7 +20878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12253117.jpg",
-      "IdName":"worldsuppression"
+      "References":null
    },
    {
       "Id":"31447217",
@@ -20968,7 +20888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31447217.jpg",
-      "IdName":"wingweaver"
+      "References":null
    },
    {
       "Id":"4042268",
@@ -20978,7 +20898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4042268.jpg",
-      "IdName":"islandturtle"
+      "References":null
    },
    {
       "Id":"90960358",
@@ -20988,7 +20908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90960358.jpg",
-      "IdName":"toondarkmagiciangirl"
+      "References":null
    },
    {
       "Id":"55713623",
@@ -20998,7 +20918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55713623.jpg",
-      "IdName":"shrink"
+      "References":null
    },
    {
       "Id":"75500286",
@@ -21008,7 +20928,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75500286.jpg",
-      "IdName":"goldsarcophagus"
+      "References":null
    },
    {
       "Id":"81059524",
@@ -21018,7 +20938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81059524.jpg",
-      "IdName":"desvolstgalph"
+      "References":null
    },
    {
       "Id":"24311372",
@@ -21028,7 +20948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24311372.jpg",
-      "IdName":"zoa"
+      "References":null
    },
    {
       "Id":"5640330",
@@ -21038,7 +20958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5640330.jpg",
-      "IdName":"hannibalnecromancer"
+      "References":null
    },
    {
       "Id":"11508758",
@@ -21048,7 +20968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11508758.jpg",
-      "IdName":"mutantmindmaster"
+      "References":null
    },
    {
       "Id":"50725996",
@@ -21058,7 +20978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50725996.jpg",
-      "IdName":"darkmagicianknight"
+      "References":null
    },
    {
       "Id":"13604200",
@@ -21068,7 +20988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13604200.jpg",
-      "IdName":"sagesstone"
+      "References":null
    },
    {
       "Id":"87210505",
@@ -21078,7 +20998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87210505.jpg",
-      "IdName":"knightstitle"
+      "References":null
    },
    {
       "Id":"99267150",
@@ -21088,7 +21008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99267150.jpg",
-      "IdName":"fiveheadeddragon"
+      "References":null
    },
    {
       "Id":"96561011",
@@ -21098,7 +21018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96561011.jpg",
-      "IdName":"redeyesdarknessdragon"
+      "References":null
    },
    {
       "Id":"59811955",
@@ -21108,7 +21028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59811955.jpg",
-      "IdName":"ancientgearworkshop"
+      "References":null
    },
    {
       "Id":"86321248",
@@ -21118,7 +21038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86321248.jpg",
-      "IdName":"ancientgeargadjiltronchimera"
+      "References":null
    },
    {
       "Id":"50933533",
@@ -21128,7 +21048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50933533.jpg",
-      "IdName":"ancientgeargadjiltrondragon"
+      "References":null
    },
    {
       "Id":"4446672",
@@ -21138,7 +21058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4446672.jpg",
-      "IdName":"ancientgearexplosive"
+      "References":null
    },
    {
       "Id":"13955608",
@@ -21148,7 +21068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13955608.jpg",
-      "IdName":"strongholdthemovingfortress"
+      "References":null
    },
    {
       "Id":"86445415",
@@ -21158,7 +21078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86445415.jpg",
-      "IdName":"redgadget"
+      "References":null
    },
    {
       "Id":"41172955",
@@ -21168,7 +21088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41172955.jpg",
-      "IdName":"greengadget"
+      "References":null
    },
    {
       "Id":"1953925",
@@ -21178,7 +21098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1953925.jpg",
-      "IdName":"ancientgearengineer"
+      "References":null
    },
    {
       "Id":"40830387",
@@ -21188,7 +21108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40830387.jpg",
-      "IdName":"ancientgearfist"
+      "References":null
    },
    {
       "Id":"13316346",
@@ -21198,7 +21118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13316346.jpg",
-      "IdName":"bootupsoldierdreaddynamo"
+      "References":null
    },
    {
       "Id":"37457534",
@@ -21208,7 +21128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37457534.jpg",
-      "IdName":"ancientgeartank"
+      "References":null
    },
    {
       "Id":"22056710",
@@ -21218,7 +21138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22056710.jpg",
-      "IdName":"vampiregenesis"
+      "References":null
    },
    {
       "Id":"19847532",
@@ -21228,7 +21148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19847532.jpg",
-      "IdName":"infernalflameemperor"
+      "References":null
    },
    {
       "Id":"10485110",
@@ -21238,7 +21158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10485110.jpg",
-      "IdName":"oceandragonlordneodaedalus"
+      "References":null
    },
    {
       "Id":"5438492",
@@ -21248,7 +21168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5438492.jpg",
-      "IdName":"warriorladyofthewasteland"
+      "References":null
    },
    {
       "Id":"69933858",
@@ -21258,7 +21178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69933858.jpg",
-      "IdName":"gilfordthelegend"
+      "References":null
    },
    {
       "Id":"25774450",
@@ -21268,7 +21188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25774450.jpg",
-      "IdName":"mysticbox"
+      "References":null
    },
    {
       "Id":"58775978",
@@ -21278,7 +21198,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58775978.jpg",
-      "IdName":"nightmaressteelcage"
+      "References":null
    },
    {
       "Id":"55424270",
@@ -21288,7 +21208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55424270.jpg",
-      "IdName":"mythicalbeastcerberus"
+      "References":null
    },
    {
       "Id":"91819979",
@@ -21298,7 +21218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91819979.jpg",
-      "IdName":"magicalblast"
+      "References":null
    },
    {
       "Id":"29436665",
@@ -21308,7 +21228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29436665.jpg",
-      "IdName":"darkeradicatorwarlock"
+      "References":null
    },
    {
       "Id":"28120197",
@@ -21318,7 +21238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28120197.jpg",
-      "IdName":"canyon"
+      "References":null
    },
    {
       "Id":"55737443",
@@ -21328,7 +21248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55737443.jpg",
-      "IdName":"exxodmasteroftheguard"
+      "References":null
    },
    {
       "Id":"92736188",
@@ -21338,7 +21258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92736188.jpg",
-      "IdName":"greatspirit"
+      "References":null
    },
    {
       "Id":"12607053",
@@ -21348,7 +21268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12607053.jpg",
-      "IdName":"waboku"
+      "References":null
    },
    {
       "Id":"77778835",
@@ -21358,7 +21278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77778835.jpg",
-      "IdName":"hystericparty"
+      "References":null
    },
    {
       "Id":"72892473",
@@ -21368,7 +21288,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72892473.jpg",
-      "IdName":"carddestruction"
+      "References":null
    },
    {
       "Id":"78636495",
@@ -21378,7 +21298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78636495.jpg",
-      "IdName":"slatewarrior"
+      "References":null
    },
    {
       "Id":"14989021",
@@ -21388,7 +21308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14989021.jpg",
-      "IdName":"simorghbirdofdivinity"
+      "References":null
    },
    {
       "Id":"40384720",
@@ -21398,7 +21318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40384720.jpg",
-      "IdName":"sonicshooter"
+      "References":null
    },
    {
       "Id":"18144506",
@@ -21408,7 +21328,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18144506.jpg",
-      "IdName":"harpiesfeatherduster"
+      "References":null
    },
    {
       "Id":"8131171",
@@ -21418,7 +21338,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8131171.jpg",
-      "IdName":"sinisterserpent"
+      "References":null
    },
    {
       "Id":"75347539",
@@ -21428,7 +21348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75347539.jpg",
-      "IdName":"valkyrionthemagnawarrior"
+      "References":null
    },
    {
       "Id":"36733451",
@@ -21438,7 +21358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36733451.jpg",
-      "IdName":"dimensionalalchemist"
+      "References":null
    },
    {
       "Id":"9748752",
@@ -21448,7 +21368,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9748752.jpg",
-      "IdName":"caiustheshadowmonarch"
+      "References":null
    },
    {
       "Id":"37043180",
@@ -21458,7 +21378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37043180.jpg",
-      "IdName":"ddwarrior"
+      "References":null
    },
    {
       "Id":"54493213",
@@ -21468,7 +21388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54493213.jpg",
-      "IdName":"heliostheprimordialsun"
+      "References":null
    },
    {
       "Id":"27408609",
@@ -21478,7 +21398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27408609.jpg",
-      "IdName":"goldenhomunculus"
+      "References":null
    },
    {
       "Id":"72237166",
@@ -21488,7 +21408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72237166.jpg",
-      "IdName":"samsarakaiser"
+      "References":null
    },
    {
       "Id":"35011819",
@@ -21498,7 +21418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35011819.jpg",
-      "IdName":"byorderoftheemperor"
+      "References":null
    },
    {
       "Id":"9622164",
@@ -21508,7 +21428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/9622164.jpg",
-      "IdName":"ddrdifferentdimensionreincarnation"
+      "References":null
    },
    {
       "Id":"24068492",
@@ -21518,7 +21438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24068492.jpg",
-      "IdName":"justdesserts"
+      "References":null
    },
    {
       "Id":"84257639",
@@ -21528,7 +21448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84257639.jpg",
-      "IdName":"dianketothecuremaster"
+      "References":null
    },
    {
       "Id":"44209392",
@@ -21538,7 +21458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44209392.jpg",
-      "IdName":"castlewalls"
+      "References":null
    },
    {
       "Id":"19159413",
@@ -21548,7 +21468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19159413.jpg",
-      "IdName":"despell"
+      "References":null
    },
    {
       "Id":"77622396",
@@ -21558,7 +21478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77622396.jpg",
-      "IdName":"reversetrap"
+      "References":null
    },
    {
       "Id":"17814387",
@@ -21568,7 +21488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17814387.jpg",
-      "IdName":"reinforcements"
+      "References":null
    },
    {
       "Id":"41949033",
@@ -21578,7 +21498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41949033.jpg",
-      "IdName":"darkassailant"
+      "References":null
    },
    {
       "Id":"5053103",
@@ -21588,7 +21508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5053103.jpg",
-      "IdName":"battleox"
+      "References":null
    },
    {
       "Id":"47060154",
@@ -21598,7 +21518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47060154.jpg",
-      "IdName":"mysticclown"
+      "References":null
    },
    {
       "Id":"67724379",
@@ -21608,7 +21528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67724379.jpg",
-      "IdName":"koumoridragon"
+      "References":null
    },
    {
       "Id":"98374133",
@@ -21618,7 +21538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98374133.jpg",
-      "IdName":"invigoration"
+      "References":null
    },
    {
       "Id":"97360116",
@@ -21628,7 +21548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97360116.jpg",
-      "IdName":"unknownwarrioroffiend"
+      "References":null
    },
    {
       "Id":"31122090",
@@ -21638,7 +21558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31122090.jpg",
-      "IdName":"gyakutennomegami"
+      "References":null
    },
    {
       "Id":"81057959",
@@ -21648,7 +21568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81057959.jpg",
-      "IdName":"dhuman"
+      "References":null
    },
    {
       "Id":"30113682",
@@ -21658,7 +21578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30113682.jpg",
-      "IdName":"judgeman"
+      "References":null
    },
    {
       "Id":"26378150",
@@ -21668,7 +21588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26378150.jpg",
-      "IdName":"rudekaiser"
+      "References":null
    },
    {
       "Id":"81820689",
@@ -21678,7 +21598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81820689.jpg",
-      "IdName":"theinexperiencedspy"
+      "References":null
    },
    {
       "Id":"43973174",
@@ -21688,7 +21608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43973174.jpg",
-      "IdName":"thefluteofsummoningdragon"
+      "References":null
    },
    {
       "Id":"46461247",
@@ -21698,7 +21618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46461247.jpg",
-      "IdName":"trapmaster"
+      "References":null
    },
    {
       "Id":"75499502",
@@ -21708,7 +21628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75499502.jpg",
-      "IdName":"masterexpert"
+      "References":null
    },
    {
       "Id":"54098121",
@@ -21718,7 +21638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54098121.jpg",
-      "IdName":"mysteriouspuppeteer"
+      "References":null
    },
    {
       "Id":"45121025",
@@ -21728,7 +21648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45121025.jpg",
-      "IdName":"ogreoftheblackshadow"
+      "References":null
    },
    {
       "Id":"91939608",
@@ -21738,7 +21658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91939608.jpg",
-      "IdName":"roguedoll"
+      "References":null
    },
    {
       "Id":"15303296",
@@ -21748,7 +21668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15303296.jpg",
-      "IdName":"ryukishin"
+      "References":null
    },
    {
       "Id":"17985575",
@@ -21758,7 +21678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17985575.jpg",
-      "IdName":"lordofd"
+      "References":null
    },
    {
       "Id":"50005633",
@@ -21768,7 +21688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50005633.jpg",
-      "IdName":"swordstalker"
+      "References":null
    },
    {
       "Id":"17092736",
@@ -21778,7 +21698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17092736.jpg",
-      "IdName":"ancienttelescope"
+      "References":null
    },
    {
       "Id":"89494469",
@@ -21788,7 +21708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89494469.jpg",
-      "IdName":"darktitanofterror"
+      "References":null
    },
    {
       "Id":"55608151",
@@ -21798,7 +21718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55608151.jpg",
-      "IdName":"gryphonwing"
+      "References":null
    },
    {
       "Id":"59383041",
@@ -21808,7 +21728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59383041.jpg",
-      "IdName":"toonalligator"
+      "References":null
    },
    {
       "Id":"1224927",
@@ -21818,17 +21738,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"19613556,1224927",
       "Image":"https://images.ygoprodeck.com/images/cards/1224927.jpg",
-      "IdName":"malevolentcatastrophe",
-      "LimitFriendsCards":[
-         {
-            "IdName":"heavystorm",
-            "Image":"https://images.ygoprodeck.com/images/cards/19613556.jpg"
-         },
-         {
-            "IdName":"malevolentcatastrophe",
-            "Image":"https://images.ygoprodeck.com/images/cards/1224927.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"2732323",
@@ -21838,7 +21748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2732323.jpg",
-      "IdName":"decoydragon"
+      "References":null
    },
    {
       "Id":"39343610",
@@ -21848,7 +21758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39343610.jpg",
-      "IdName":"darkblazedragon"
+      "References":null
    },
    {
       "Id":"3954901",
@@ -21858,7 +21768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3954901.jpg",
-      "IdName":"felgranddragon"
+      "References":null
    },
    {
       "Id":"66337215",
@@ -21868,7 +21778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66337215.jpg",
-      "IdName":"heraldofcreation"
+      "References":null
    },
    {
       "Id":"81439173",
@@ -21878,7 +21788,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81439173.jpg",
-      "IdName":"foolishburial"
+      "References":null
    },
    {
       "Id":"38120068",
@@ -21888,7 +21798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38120068.jpg",
-      "IdName":"tradein"
+      "References":null
    },
    {
       "Id":"78700060",
@@ -21898,7 +21808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78700060.jpg",
-      "IdName":"doomcaliberknight"
+      "References":null
    },
    {
       "Id":"29267084",
@@ -21908,7 +21818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29267084.jpg",
-      "IdName":"shadowspell"
+      "References":null
    },
    {
       "Id":"34016756",
@@ -21918,7 +21828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34016756.jpg",
-      "IdName":"riryoku"
+      "References":null
    },
    {
       "Id":"2047519",
@@ -21928,7 +21838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2047519.jpg",
-      "IdName":"hiddensoldiers"
+      "References":null
    },
    {
       "Id":"29654737",
@@ -21938,7 +21848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29654737.jpg",
-      "IdName":"amazonesschainmaster"
+      "References":null
    },
    {
       "Id":"54912977",
@@ -21948,7 +21858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54912977.jpg",
-      "IdName":"ancientlamp"
+      "References":null
    },
    {
       "Id":"300302004",
@@ -21958,7 +21868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302004.jpg",
-      "IdName":"diggingforgold"
+      "References":null
    },
    {
       "Id":"73048641",
@@ -21968,7 +21878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73048641.jpg",
-      "IdName":"halfshut"
+      "References":null
    },
    {
       "Id":"21420702",
@@ -21978,7 +21888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21420702.jpg",
-      "IdName":"triblazeaccelerator"
+      "References":null
    },
    {
       "Id":"300302013",
@@ -21988,7 +21898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302013.jpg",
-      "IdName":"magiciansact"
+      "References":null
    },
    {
       "Id":"94716515",
@@ -21998,7 +21908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94716515.jpg",
-      "IdName":"eradicatingaerosol"
+      "References":null
    },
    {
       "Id":"88210105",
@@ -22008,7 +21918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88210105.jpg",
-      "IdName":"cloudianaerosol"
+      "References":null
    },
    {
       "Id":"22160245",
@@ -22018,7 +21928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22160245.jpg",
-      "IdName":"evilheroinfernowing"
+      "References":null
    },
    {
       "Id":"6150044",
@@ -22028,7 +21938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6150044.jpg",
-      "IdName":"arcanaknightjoker"
+      "References":null
    },
    {
       "Id":"70924884",
@@ -22038,7 +21948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70924884.jpg",
-      "IdName":"alinsection"
+      "References":null
    },
    {
       "Id":"77235086",
@@ -22048,7 +21958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77235086.jpg",
-      "IdName":"cyberangelbenten"
+      "References":null
    },
    {
       "Id":"26964762",
@@ -22058,7 +21968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26964762.jpg",
-      "IdName":"destinyherodarkangel"
+      "References":null
    },
    {
       "Id":"56784842",
@@ -22068,7 +21978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56784842.jpg",
-      "IdName":"angelo7"
+      "References":null
    },
    {
       "Id":"29603180",
@@ -22078,7 +21988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29603180.jpg",
-      "IdName":"annihilatorarchfiend"
+      "References":null
    },
    {
       "Id":"89904598",
@@ -22088,7 +21998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89904598.jpg",
-      "IdName":"anthrosaurus"
+      "References":null
    },
    {
       "Id":"42149850",
@@ -22098,7 +22008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42149850.jpg",
-      "IdName":"disposablelearnerdevice"
+      "References":null
    },
    {
       "Id":"300101003",
@@ -22108,7 +22018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300101003.jpg",
-      "IdName":"callofthehauntedskillcard"
+      "References":null
    },
    {
       "Id":"300202003",
@@ -22118,7 +22028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202003.jpg",
-      "IdName":"dragoncaller"
+      "References":null
    },
    {
       "Id":"70628672",
@@ -22128,7 +22038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70628672.jpg",
-      "IdName":"emergeroidcall"
+      "References":null
    },
    {
       "Id":"89567993",
@@ -22138,7 +22048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89567993.jpg",
-      "IdName":"amazonesstrainee"
+      "References":null
    },
    {
       "Id":"50287060",
@@ -22148,7 +22058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50287060.jpg",
-      "IdName":"archfiendofgilfer"
+      "References":null
    },
    {
       "Id":"28601770",
@@ -22158,7 +22068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28601770.jpg",
-      "IdName":"mistarchfiend"
+      "References":null
    },
    {
       "Id":"79418153",
@@ -22168,7 +22078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79418153.jpg",
-      "IdName":"lancerarchfiend"
+      "References":null
    },
    {
       "Id":"300302023",
@@ -22178,7 +22088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302023.jpg",
-      "IdName":"armedandready"
+      "References":null
    },
    {
       "Id":"3492538",
@@ -22188,7 +22098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3492538.jpg",
-      "IdName":"insectarmorwithlasercannon"
+      "References":null
    },
    {
       "Id":"300103002",
@@ -22198,7 +22108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300103002.jpg",
-      "IdName":"spellproofarmor"
+      "References":null
    },
    {
       "Id":"52105192",
@@ -22208,7 +22118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52105192.jpg",
-      "IdName":"hiddenarmory"
+      "References":null
    },
    {
       "Id":"46052429",
@@ -22218,7 +22128,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46052429.jpg",
-      "IdName":"advancedritualart"
+      "References":null
    },
    {
       "Id":"300302035",
@@ -22228,7 +22138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302035.jpg",
-      "IdName":"machineangelascension"
+      "References":null
    },
    {
       "Id":"300302017",
@@ -22238,7 +22148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302017.jpg",
-      "IdName":"riseofthefallen"
+      "References":null
    },
    {
       "Id":"22134079",
@@ -22248,7 +22158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22134079.jpg",
-      "IdName":"gravekeepersambusher"
+      "References":null
    },
    {
       "Id":"83715234",
@@ -22258,7 +22168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83715234.jpg",
-      "IdName":"attackthemoon"
+      "References":null
    },
    {
       "Id":"300302014",
@@ -22268,7 +22178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302014.jpg",
-      "IdName":"magneticattraction"
+      "References":null
    },
    {
       "Id":"46668237",
@@ -22278,7 +22188,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46668237.jpg",
-      "IdName":"greenbaboondefenderoftheforest"
+      "References":null
    },
    {
       "Id":"67775894",
@@ -22288,7 +22198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67775894.jpg",
-      "IdName":"wonderwand"
+      "References":null
    },
    {
       "Id":"62337487",
@@ -22298,7 +22208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62337487.jpg",
-      "IdName":"fortresswhale"
+      "References":null
    },
    {
       "Id":"300103003",
@@ -22308,7 +22218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300103003.jpg",
-      "IdName":"bandit"
+      "References":null
    },
    {
       "Id":"84650463",
@@ -22318,7 +22228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84650463.jpg",
-      "IdName":"slushy"
+      "References":null
    },
    {
       "Id":"17896384",
@@ -22328,7 +22238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17896384.jpg",
-      "IdName":"arcanebarrier"
+      "References":null
    },
    {
       "Id":"83682725",
@@ -22338,7 +22248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83682725.jpg",
-      "IdName":"tailswipe"
+      "References":null
    },
    {
       "Id":"18914778",
@@ -22348,7 +22258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18914778.jpg",
-      "IdName":"changeslime"
+      "References":null
    },
    {
       "Id":"30587695",
@@ -22358,7 +22268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30587695.jpg",
-      "IdName":"beetron"
+      "References":null
    },
    {
       "Id":"77207191",
@@ -22368,7 +22278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77207191.jpg",
-      "IdName":"berfomet"
+      "References":null
    },
    {
       "Id":"7093411",
@@ -22378,7 +22288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7093411.jpg",
-      "IdName":"crystalbeastsapphirepegasus"
+      "References":null
    },
    {
       "Id":"6849042",
@@ -22388,7 +22298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6849042.jpg",
-      "IdName":"superancientdinobeast"
+      "References":null
    },
    {
       "Id":"7264861",
@@ -22398,7 +22308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7264861.jpg",
-      "IdName":"infernitybeast"
+      "References":null
    },
    {
       "Id":"300302006",
@@ -22408,7 +22318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302006.jpg",
-      "IdName":"beastsofphantom"
+      "References":null
    },
    {
       "Id":"81020140",
@@ -22418,7 +22328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81020140.jpg",
-      "IdName":"volcanicblaster"
+      "References":null
    },
    {
       "Id":"63060238",
@@ -22428,7 +22338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63060238.jpg",
-      "IdName":"elementalheroblazeman"
+      "References":null
    },
    {
       "Id":"263926",
@@ -22438,7 +22348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/263926.jpg",
-      "IdName":"bonzealone"
+      "References":null
    },
    {
       "Id":"6691855",
@@ -22448,7 +22358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6691855.jpg",
-      "IdName":"spikeshieldwithchain"
+      "References":null
    },
    {
       "Id":"88610708",
@@ -22458,7 +22368,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88610708.jpg",
-      "IdName":"bashingshield"
+      "References":null
    },
    {
       "Id":"90135989",
@@ -22468,7 +22378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90135989.jpg",
-      "IdName":"cloudiansquall"
+      "References":null
    },
    {
       "Id":"50896944",
@@ -22478,7 +22388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50896944.jpg",
-      "IdName":"blackbrachios"
+      "References":null
    },
    {
       "Id":"74277583",
@@ -22488,7 +22398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74277583.jpg",
-      "IdName":"bravescizzar"
+      "References":null
    },
    {
       "Id":"41930553",
@@ -22498,7 +22408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41930553.jpg",
-      "IdName":"darksmog"
+      "References":null
    },
    {
       "Id":"61190918",
@@ -22508,7 +22418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61190918.jpg",
-      "IdName":"toonbusterblader"
+      "References":null
    },
    {
       "Id":"3428069",
@@ -22518,7 +22428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3428069.jpg",
-      "IdName":"busterbladerthedestructionswordmaster"
+      "References":null
    },
    {
       "Id":"300302011",
@@ -22528,7 +22438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302011.jpg",
-      "IdName":"itsjinzo"
+      "References":null
    },
    {
       "Id":"300102004",
@@ -22538,7 +22448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300102004.jpg",
-      "IdName":"itsmyluckyday"
+      "References":null
    },
    {
       "Id":"18756904",
@@ -22548,7 +22458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18756904.jpg",
-      "IdName":"whiteelephantsgift"
+      "References":null
    },
    {
       "Id":"61538782",
@@ -22558,7 +22468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61538782.jpg",
-      "IdName":"truckroid"
+      "References":null
    },
    {
       "Id":"14506878",
@@ -22568,7 +22478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14506878.jpg",
-      "IdName":"duckermobilecannon"
+      "References":null
    },
    {
       "Id":"300302042",
@@ -22578,7 +22488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302042.jpg",
-      "IdName":"volcaniccannon"
+      "References":null
    },
    {
       "Id":"15981690",
@@ -22588,7 +22498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15981690.jpg",
-      "IdName":"carboneddon"
+      "References":null
    },
    {
       "Id":"52112003",
@@ -22598,7 +22508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52112003.jpg",
-      "IdName":"cardadvance"
+      "References":null
    },
    {
       "Id":"69452756",
@@ -22608,7 +22518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69452756.jpg",
-      "IdName":"unendingnightmare"
+      "References":null
    },
    {
       "Id":"300302012",
@@ -22618,7 +22528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302012.jpg",
-      "IdName":"itsnomonsteritsagod"
+      "References":null
    },
    {
       "Id":"1802450",
@@ -22628,7 +22538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1802450.jpg",
-      "IdName":"sealingceremonyofmokuton"
+      "References":null
    },
    {
       "Id":"81443745",
@@ -22638,7 +22548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81443745.jpg",
-      "IdName":"sealingceremonyofsuiton"
+      "References":null
    },
    {
       "Id":"300302002",
@@ -22648,7 +22558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302002.jpg",
-      "IdName":"ritualceremony"
+      "References":null
    },
    {
       "Id":"25518020",
@@ -22658,7 +22568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25518020.jpg",
-      "IdName":"machineassemblyline"
+      "References":null
    },
    {
       "Id":"4740489",
@@ -22668,7 +22578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4740489.jpg",
-      "IdName":"magneticfield"
+      "References":null
    },
    {
       "Id":"300302009",
@@ -22678,7 +22588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302009.jpg",
-      "IdName":"hieraticchant"
+      "References":null
    },
    {
       "Id":"32854013",
@@ -22688,7 +22598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32854013.jpg",
-      "IdName":"superrushrecklessly"
+      "References":null
    },
    {
       "Id":"40465719",
@@ -22698,7 +22608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40465719.jpg",
-      "IdName":"commoncharity"
+      "References":null
    },
    {
       "Id":"70084224",
@@ -22708,7 +22618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70084224.jpg",
-      "IdName":"neckhunter"
+      "References":null
    },
    {
       "Id":"44364207",
@@ -22718,7 +22628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44364207.jpg",
-      "IdName":"jadeknight"
+      "References":null
    },
    {
       "Id":"80485722",
@@ -22728,7 +22638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80485722.jpg",
-      "IdName":"vampirehunter"
+      "References":null
    },
    {
       "Id":"87772572",
@@ -22738,7 +22648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87772572.jpg",
-      "IdName":"quantumcat"
+      "References":null
    },
    {
       "Id":"21843307",
@@ -22748,7 +22658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21843307.jpg",
-      "IdName":"copyknight"
+      "References":null
    },
    {
       "Id":"300204002",
@@ -22758,7 +22668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300204002.jpg",
-      "IdName":"knightoflegend"
+      "References":null
    },
    {
       "Id":"14771222",
@@ -22768,7 +22678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14771222.jpg",
-      "IdName":"shoreknight"
+      "References":null
    },
    {
       "Id":"40391316",
@@ -22778,7 +22688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40391316.jpg",
-      "IdName":"ojamaknight"
+      "References":null
    },
    {
       "Id":"39303359",
@@ -22788,7 +22698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39303359.jpg",
-      "IdName":"ancientgearknight"
+      "References":null
    },
    {
       "Id":"4796100",
@@ -22798,7 +22708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4796100.jpg",
-      "IdName":"chimeratheflyingmythicalbeast"
+      "References":null
    },
    {
       "Id":"18658572",
@@ -22808,7 +22718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18658572.jpg",
-      "IdName":"goblincircus"
+      "References":null
    },
    {
       "Id":"89386122",
@@ -22818,7 +22728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89386122.jpg",
-      "IdName":"allyofjusticeclausolas"
+      "References":null
    },
    {
       "Id":"87102774",
@@ -22828,7 +22738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87102774.jpg",
-      "IdName":"goldenladybug"
+      "References":null
    },
    {
       "Id":"300104004",
@@ -22838,7 +22748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300104004.jpg",
-      "IdName":"cocoonofultraevolutionskillcard"
+      "References":null
    },
    {
       "Id":"23639291",
@@ -22848,7 +22758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23639291.jpg",
-      "IdName":"ragingcloudian"
+      "References":null
    },
    {
       "Id":"300302038",
@@ -22858,7 +22768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302038.jpg",
-      "IdName":"rainbowcrystalcollection"
+      "References":null
    },
    {
       "Id":"5183693",
@@ -22868,7 +22778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5183693.jpg",
-      "IdName":"amuletofambition"
+      "References":null
    },
    {
       "Id":"300201006",
@@ -22878,7 +22788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201006.jpg",
-      "IdName":"millenniumnecklaceskillcard"
+      "References":null
    },
    {
       "Id":"36100154",
@@ -22888,7 +22798,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36100154.jpg",
-      "IdName":"amazonessfightingspirit"
+      "References":null
    },
    {
       "Id":"300302020",
@@ -22898,7 +22808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302020.jpg",
-      "IdName":"unioncombination"
+      "References":null
    },
    {
       "Id":"87259933",
@@ -22908,7 +22818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87259933.jpg",
-      "IdName":"crystalconclave"
+      "References":null
    },
    {
       "Id":"300205001",
@@ -22918,7 +22828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300205001.jpg",
-      "IdName":"innerconflict"
+      "References":null
    },
    {
       "Id":"300302025",
@@ -22928,7 +22838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302025.jpg",
-      "IdName":"consumedbydarkness"
+      "References":null
    },
    {
       "Id":"63741331",
@@ -22938,7 +22848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63741331.jpg",
-      "IdName":"fogcontrol"
+      "References":null
    },
    {
       "Id":"77133792",
@@ -22948,7 +22858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77133792.jpg",
-      "IdName":"magnetconversion"
+      "References":null
    },
    {
       "Id":"26376390",
@@ -22958,7 +22868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26376390.jpg",
-      "IdName":"copycat"
+      "References":null
    },
    {
       "Id":"34334692",
@@ -22968,7 +22878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34334692.jpg",
-      "IdName":"ritualraven"
+      "References":null
    },
    {
       "Id":"21350571",
@@ -22978,7 +22888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21350571.jpg",
-      "IdName":"hornofthephantombeast"
+      "References":null
    },
    {
       "Id":"300302003",
@@ -22988,7 +22898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302003.jpg",
-      "IdName":"lowblow"
+      "References":null
    },
    {
       "Id":"39175982",
@@ -22998,7 +22908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39175982.jpg",
-      "IdName":"wingedcleaver"
+      "References":null
    },
    {
       "Id":"300202004",
@@ -23008,7 +22918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202004.jpg",
-      "IdName":"grit"
+      "References":null
    },
    {
       "Id":"30608985",
@@ -23018,7 +22928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30608985.jpg",
-      "IdName":"magicalundertaker"
+      "References":null
    },
    {
       "Id":"51282878",
@@ -23028,7 +22938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/51282878.jpg",
-      "IdName":"fishborgplanter"
+      "References":null
    },
    {
       "Id":"12670770",
@@ -23038,7 +22948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12670770.jpg",
-      "IdName":"cybernetwork"
+      "References":null
    },
    {
       "Id":"80316585",
@@ -23048,7 +22958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80316585.jpg",
-      "IdName":"cyberharpielady"
+      "References":null
    },
    {
       "Id":"63224564",
@@ -23058,7 +22968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63224564.jpg",
-      "IdName":"cybershield"
+      "References":null
    },
    {
       "Id":"8267140",
@@ -23068,7 +22978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8267140.jpg",
-      "IdName":"cosmiccyclone"
+      "References":null
    },
    {
       "Id":"19980975",
@@ -23078,7 +22988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19980975.jpg",
-      "IdName":"diamonddustcyclone"
+      "References":null
    },
    {
       "Id":"5133471",
@@ -23088,7 +22998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5133471.jpg",
-      "IdName":"galaxycyclone"
+      "References":null
    },
    {
       "Id":"79279397",
@@ -23098,7 +23008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79279397.jpg",
-      "IdName":"dboyz"
+      "References":null
    },
    {
       "Id":"30757127",
@@ -23108,7 +23018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30757127.jpg",
-      "IdName":"destinyherodangerous"
+      "References":null
    },
    {
       "Id":"48588176",
@@ -23118,7 +23028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48588176.jpg",
-      "IdName":"danipon"
+      "References":null
    },
    {
       "Id":"300205002",
@@ -23128,7 +23038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300205002.jpg",
-      "IdName":"intothedarknessbelow"
+      "References":null
    },
    {
       "Id":"300201007",
@@ -23138,7 +23048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201007.jpg",
-      "IdName":"itsatoonworld"
+      "References":null
    },
    {
       "Id":"41517968",
@@ -23148,7 +23058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41517968.jpg",
-      "IdName":"elementalherodarkbright"
+      "References":null
    },
    {
       "Id":"12079734",
@@ -23158,7 +23068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12079734.jpg",
-      "IdName":"deltatri"
+      "References":null
    },
    {
       "Id":"12262393",
@@ -23168,7 +23078,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12262393.jpg",
-      "IdName":"deltathemagnetwarrior"
+      "References":null
    },
    {
       "Id":"6799227",
@@ -23178,7 +23088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6799227.jpg",
-      "IdName":"halfcounter"
+      "References":null
    },
    {
       "Id":"30492798",
@@ -23188,7 +23098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30492798.jpg",
-      "IdName":"djinndisserereofrituals"
+      "References":null
    },
    {
       "Id":"4141820",
@@ -23198,7 +23108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4141820.jpg",
-      "IdName":"djinnprognosticatorofrituals"
+      "References":null
    },
    {
       "Id":"99747800",
@@ -23208,7 +23118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99747800.jpg",
-      "IdName":"legendaryfiend"
+      "References":null
    },
    {
       "Id":"3493058",
@@ -23218,7 +23128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3493058.jpg",
-      "IdName":"dicephoon"
+      "References":null
    },
    {
       "Id":"300202005",
@@ -23228,7 +23138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202005.jpg",
-      "IdName":"lastgamble"
+      "References":null
    },
    {
       "Id":"48948935",
@@ -23238,7 +23148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48948935.jpg",
-      "IdName":"maskedbeastdesgardius"
+      "References":null
    },
    {
       "Id":"69700783",
@@ -23248,7 +23158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69700783.jpg",
-      "IdName":"vampiresdesire"
+      "References":null
    },
    {
       "Id":"44792253",
@@ -23258,7 +23168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44792253.jpg",
-      "IdName":"dddestroyer"
+      "References":null
    },
    {
       "Id":"36629203",
@@ -23268,7 +23178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/36629203.jpg",
-      "IdName":"allyofjusticecoredestroyer"
+      "References":null
    },
    {
       "Id":"95231062",
@@ -23278,7 +23188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95231062.jpg",
-      "IdName":"lostbluebreaker"
+      "References":null
    },
    {
       "Id":"63851864",
@@ -23288,7 +23198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63851864.jpg",
-      "IdName":"breakdraw"
+      "References":null
    },
    {
       "Id":"25524823",
@@ -23298,7 +23208,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25524823.jpg",
-      "IdName":"gravekeepersoracle"
+      "References":null
    },
    {
       "Id":"300101002",
@@ -23308,7 +23218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300101002.jpg",
-      "IdName":"straighttothegrave"
+      "References":null
    },
    {
       "Id":"93332803",
@@ -23318,7 +23228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93332803.jpg",
-      "IdName":"dogoranthemadflamekaiju"
+      "References":null
    },
    {
       "Id":"99721536",
@@ -23328,7 +23238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99721536.jpg",
-      "IdName":"dokurorider"
+      "References":null
    },
    {
       "Id":"70645913",
@@ -23338,7 +23248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70645913.jpg",
-      "IdName":"vampireretainer"
+      "References":null
    },
    {
       "Id":"88032456",
@@ -23348,7 +23258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88032456.jpg",
-      "IdName":"mimicat"
+      "References":null
    },
    {
       "Id":"75652080",
@@ -23358,7 +23268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75652080.jpg",
-      "IdName":"doublecyclone"
+      "References":null
    },
    {
       "Id":"43422537",
@@ -23368,7 +23278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43422537.jpg",
-      "IdName":"doublesummon"
+      "References":null
    },
    {
       "Id":"79407975",
@@ -23378,7 +23288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79407975.jpg",
-      "IdName":"rainbowdarkdragon"
+      "References":null
    },
    {
       "Id":"96005454",
@@ -23388,7 +23298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96005454.jpg",
-      "IdName":"hunterdragon"
+      "References":null
    },
    {
       "Id":"55589254",
@@ -23398,7 +23308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55589254.jpg",
-      "IdName":"frostandflamedragon"
+      "References":null
    },
    {
       "Id":"6022371",
@@ -23408,7 +23318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6022371.jpg",
-      "IdName":"waterdragoncluster"
+      "References":null
    },
    {
       "Id":"93969023",
@@ -23418,7 +23328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93969023.jpg",
-      "IdName":"blackmetaldragon"
+      "References":null
    },
    {
       "Id":"20586572",
@@ -23428,7 +23338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20586572.jpg",
-      "IdName":"exploderdragon"
+      "References":null
    },
    {
       "Id":"70050374",
@@ -23438,7 +23348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70050374.jpg",
-      "IdName":"twinbarreldragon"
+      "References":null
    },
    {
       "Id":"3366982",
@@ -23448,7 +23358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3366982.jpg",
-      "IdName":"alligatorssworddragon"
+      "References":null
    },
    {
       "Id":"90660762",
@@ -23458,7 +23368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90660762.jpg",
-      "IdName":"meteorblackdragon"
+      "References":null
    },
    {
       "Id":"90464188",
@@ -23468,7 +23378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90464188.jpg",
-      "IdName":"obsidiandragon"
+      "References":null
    },
    {
       "Id":"62762898",
@@ -23478,7 +23388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62762898.jpg",
-      "IdName":"parrotdragon"
+      "References":null
    },
    {
       "Id":"38289717",
@@ -23488,7 +23398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38289717.jpg",
-      "IdName":"crawlingdragon2"
+      "References":null
    },
    {
       "Id":"564541",
@@ -23498,7 +23408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/564541.jpg",
-      "IdName":"totemdragon"
+      "References":null
    },
    {
       "Id":"66672569",
@@ -23508,7 +23418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66672569.jpg",
-      "IdName":"dragonzombie"
+      "References":null
    },
    {
       "Id":"12493482",
@@ -23518,7 +23428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12493482.jpg",
-      "IdName":"dunamesdarkwitch"
+      "References":null
    },
    {
       "Id":"43017476",
@@ -23528,7 +23438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43017476.jpg",
-      "IdName":"duoterion"
+      "References":null
    },
    {
       "Id":"13235258",
@@ -23538,7 +23448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13235258.jpg",
-      "IdName":"corrosivescales"
+      "References":null
    },
    {
       "Id":"52497105",
@@ -23548,7 +23458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52497105.jpg",
-      "IdName":"berserkscales"
+      "References":null
    },
    {
       "Id":"15305240",
@@ -23558,7 +23468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15305240.jpg",
-      "IdName":"creatureseizure"
+      "References":null
    },
    {
       "Id":"47060347",
@@ -23568,7 +23478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47060347.jpg",
-      "IdName":"aegisofgaia"
+      "References":null
    },
    {
       "Id":"90873992",
@@ -23578,7 +23488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90873992.jpg",
-      "IdName":"warriorelimination"
+      "References":null
    },
    {
       "Id":"73872164",
@@ -23588,7 +23498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73872164.jpg",
-      "IdName":"eliminatingtheleague"
+      "References":null
    },
    {
       "Id":"45462639",
@@ -23598,7 +23508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45462639.jpg",
-      "IdName":"darkredenchanter"
+      "References":null
    },
    {
       "Id":"37120512",
@@ -23608,7 +23518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37120512.jpg",
-      "IdName":"swordofdarkdestruction"
+      "References":null
    },
    {
       "Id":"93377803",
@@ -23618,7 +23528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93377803.jpg",
-      "IdName":"solitaryswordofpoison"
+      "References":null
    },
    {
       "Id":"674561",
@@ -23628,7 +23538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/674561.jpg",
-      "IdName":"darkeruption"
+      "References":null
    },
    {
       "Id":"31102447",
@@ -23638,7 +23548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31102447.jpg",
-      "IdName":"amazonessspy"
+      "References":null
    },
    {
       "Id":"55428811",
@@ -23648,7 +23558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55428811.jpg",
-      "IdName":"fifthhope"
+      "References":null
    },
    {
       "Id":"6178850",
@@ -23658,7 +23568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6178850.jpg",
-      "IdName":"fightingspirit"
+      "References":null
    },
    {
       "Id":"44397496",
@@ -23668,7 +23578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44397496.jpg",
-      "IdName":"redeyesspirit"
+      "References":null
    },
    {
       "Id":"88494120",
@@ -23678,7 +23588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88494120.jpg",
-      "IdName":"unbreakablespirit"
+      "References":null
    },
    {
       "Id":"18438874",
@@ -23688,7 +23598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18438874.jpg",
-      "IdName":"evilmind"
+      "References":null
    },
    {
       "Id":"984114",
@@ -23698,7 +23608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/984114.jpg",
-      "IdName":"expressroid"
+      "References":null
    },
    {
       "Id":"34250214",
@@ -23708,7 +23618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34250214.jpg",
-      "IdName":"vampirefamiliar"
+      "References":null
    },
    {
       "Id":"46474915",
@@ -23718,7 +23628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46474915.jpg",
-      "IdName":"magicalghost"
+      "References":null
    },
    {
       "Id":"53581214",
@@ -23728,7 +23638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53581214.jpg",
-      "IdName":"firereaper"
+      "References":null
    },
    {
       "Id":"73507661",
@@ -23738,7 +23648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73507661.jpg",
-      "IdName":"fairywind"
+      "References":null
    },
    {
       "Id":"300302001",
@@ -23748,7 +23658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302001.jpg",
-      "IdName":"fusionparty"
+      "References":null
    },
    {
       "Id":"54828837",
@@ -23758,7 +23668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54828837.jpg",
-      "IdName":"ceruleanskyfire"
+      "References":null
    },
    {
       "Id":"68815401",
@@ -23768,7 +23678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68815401.jpg",
-      "IdName":"wildfire"
+      "References":null
    },
    {
       "Id":"93260132",
@@ -23778,7 +23688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93260132.jpg",
-      "IdName":"spellshatteringarrow"
+      "References":null
    },
    {
       "Id":"17841166",
@@ -23788,7 +23698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17841166.jpg",
-      "IdName":"magnetforce"
+      "References":null
    },
    {
       "Id":"69112325",
@@ -23798,7 +23708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69112325.jpg",
-      "IdName":"spiritualforest"
+      "References":null
    },
    {
       "Id":"57103969",
@@ -23808,7 +23718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57103969.jpg",
-      "IdName":"fireformationtenki"
+      "References":null
    },
    {
       "Id":"67227834",
@@ -23818,7 +23728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67227834.jpg",
-      "IdName":"magicformula"
+      "References":null
    },
    {
       "Id":"300101001",
@@ -23828,7 +23738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300101001.jpg",
-      "IdName":"ectoplasmicfortification"
+      "References":null
    },
    {
       "Id":"34959756",
@@ -23838,7 +23748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34959756.jpg",
-      "IdName":"livingfossil"
+      "References":null
    },
    {
       "Id":"33904024",
@@ -23848,21 +23758,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":"79571449,55144522,33904024",
       "Image":"https://images.ygoprodeck.com/images/cards/33904024.jpg",
-      "IdName":"shardofgreed",
-      "LimitFriendsCards":[
-         {
-            "IdName":"gracefulcharity",
-            "Image":"https://images.ygoprodeck.com/images/cards/79571449.jpg"
-         },
-         {
-            "IdName":"potofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/55144522.jpg"
-         },
-         {
-            "IdName":"shardofgreed",
-            "Image":"https://images.ygoprodeck.com/images/cards/33904024.jpg"
-         }
-      ]
+      "References":null
    },
    {
       "Id":"300302005",
@@ -23872,7 +23768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302005.jpg",
-      "IdName":"furyofthunder"
+      "References":null
    },
    {
       "Id":"98049038",
@@ -23882,7 +23778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98049038.jpg",
-      "IdName":"stealthroid"
+      "References":null
    },
    {
       "Id":"76459806",
@@ -23892,7 +23788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76459806.jpg",
-      "IdName":"volcanicrocket"
+      "References":null
    },
    {
       "Id":"300302022",
@@ -23902,7 +23798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302022.jpg",
-      "IdName":"ancientfusion"
+      "References":null
    },
    {
       "Id":"300302027",
@@ -23912,7 +23808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302027.jpg",
-      "IdName":"cyberbladefusion"
+      "References":null
    },
    {
       "Id":"41940225",
@@ -23922,7 +23818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41940225.jpg",
-      "IdName":"destructionswordsmanfusion"
+      "References":null
    },
    {
       "Id":"37955049",
@@ -23932,7 +23828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37955049.jpg",
-      "IdName":"gaapthedivinesoldier"
+      "References":null
    },
    {
       "Id":"18486927",
@@ -23942,7 +23838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18486927.jpg",
-      "IdName":"ancientgeargadget"
+      "References":null
    },
    {
       "Id":"7841921",
@@ -23952,7 +23848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7841921.jpg",
-      "IdName":"charginggaiathefierceknight"
+      "References":null
    },
    {
       "Id":"77135531",
@@ -23962,7 +23858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77135531.jpg",
-      "IdName":"vanguardofthedragon"
+      "References":null
    },
    {
       "Id":"19737320",
@@ -23972,7 +23868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19737320.jpg",
-      "IdName":"gatekeeper"
+      "References":null
    },
    {
       "Id":"54040221",
@@ -23982,7 +23878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54040221.jpg",
-      "IdName":"royalfirestormguards"
+      "References":null
    },
    {
       "Id":"300302008",
@@ -23992,7 +23888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302008.jpg",
-      "IdName":"guardiansofthetomb"
+      "References":null
    },
    {
       "Id":"48675364",
@@ -24002,7 +23898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48675364.jpg",
-      "IdName":"archfiendgeneral"
+      "References":null
    },
    {
       "Id":"300302015",
@@ -24012,7 +23908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302015.jpg",
-      "IdName":"nomoremrsnicemai"
+      "References":null
    },
    {
       "Id":"54635862",
@@ -24022,7 +23918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54635862.jpg",
-      "IdName":"gentlemander"
+      "References":null
    },
    {
       "Id":"38445524",
@@ -24032,7 +23928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38445524.jpg",
-      "IdName":"gilgarth"
+      "References":null
    },
    {
       "Id":"64428736",
@@ -24042,7 +23938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64428736.jpg",
-      "IdName":"alligatorssword"
+      "References":null
    },
    {
       "Id":"72580321",
@@ -24052,7 +23948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72580321.jpg",
-      "IdName":"blockgolem"
+      "References":null
    },
    {
       "Id":"21947653",
@@ -24062,7 +23958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21947653.jpg",
-      "IdName":"evilherolightninggolem"
+      "References":null
    },
    {
       "Id":"7171149",
@@ -24072,7 +23968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7171149.jpg",
-      "IdName":"toonancientgeargolem"
+      "References":null
    },
    {
       "Id":"12652643",
@@ -24082,7 +23978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12652643.jpg",
-      "IdName":"ultimateancientgeargolem"
+      "References":null
    },
    {
       "Id":"13429800",
@@ -24092,7 +23988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13429800.jpg",
-      "IdName":"greatwhite"
+      "References":null
    },
    {
       "Id":"34761062",
@@ -24102,7 +23998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34761062.jpg",
-      "IdName":"heavyknightoftheflame"
+      "References":null
    },
    {
       "Id":"54622031",
@@ -24112,7 +24008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54622031.jpg",
-      "IdName":"greatmammothofgoldfine"
+      "References":null
    },
    {
       "Id":"60876124",
@@ -24122,7 +24018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60876124.jpg",
-      "IdName":"rarevalue"
+      "References":null
    },
    {
       "Id":"63806265",
@@ -24132,7 +24028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63806265.jpg",
-      "IdName":"rainbowgravity"
+      "References":null
    },
    {
       "Id":"82562802",
@@ -24142,7 +24038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82562802.jpg",
-      "IdName":"cyberdarkclaw"
+      "References":null
    },
    {
       "Id":"46565218",
@@ -24152,7 +24048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46565218.jpg",
-      "IdName":"santaclaws"
+      "References":null
    },
    {
       "Id":"53606874",
@@ -24162,7 +24058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53606874.jpg",
-      "IdName":"biginsect"
+      "References":null
    },
    {
       "Id":"32207100",
@@ -24172,7 +24068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/32207100.jpg",
-      "IdName":"amajorupset"
+      "References":null
    },
    {
       "Id":"300302037",
@@ -24182,7 +24078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302037.jpg",
-      "IdName":"powerfulgroupofguys"
+      "References":null
    },
    {
       "Id":"79816536",
@@ -24192,7 +24088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79816536.jpg",
-      "IdName":"summonersart"
+      "References":null
    },
    {
       "Id":"66399653",
@@ -24202,7 +24098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66399653.jpg",
-      "IdName":"unionhangar"
+      "References":null
    },
    {
       "Id":"300103001",
@@ -24212,7 +24108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300103001.jpg",
-      "IdName":"heavymetalraidersskillcard"
+      "References":null
    },
    {
       "Id":"79965360",
@@ -24222,7 +24118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79965360.jpg",
-      "IdName":"amazonessheirloom"
+      "References":null
    },
    {
       "Id":"73729209",
@@ -24232,7 +24128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73729209.jpg",
-      "IdName":"skillsuccessor"
+      "References":null
    },
    {
       "Id":"8949584",
@@ -24242,7 +24138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8949584.jpg",
-      "IdName":"aherolives"
+      "References":null
    },
    {
       "Id":"16111820",
@@ -24252,7 +24148,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16111820.jpg",
-      "IdName":"jurracherra"
+      "References":null
    },
    {
       "Id":"97922283",
@@ -24262,7 +24158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97922283.jpg",
-      "IdName":"howlofthewild"
+      "References":null
    },
    {
       "Id":"300203003",
@@ -24272,7 +24168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300203003.jpg",
-      "IdName":"hypermetamorphosis"
+      "References":null
    },
    {
       "Id":"3629090",
@@ -24282,7 +24178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3629090.jpg",
-      "IdName":"cyberangelidaten"
+      "References":null
    },
    {
       "Id":"71106375",
@@ -24292,7 +24188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71106375.jpg",
-      "IdName":"jurraciguanon"
+      "References":null
    },
    {
       "Id":"41952656",
@@ -24302,7 +24198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41952656.jpg",
-      "IdName":"imairuka"
+      "References":null
    },
    {
       "Id":"80033124",
@@ -24312,7 +24208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80033124.jpg",
-      "IdName":"cyberdarkimpact"
+      "References":null
    },
    {
       "Id":"82324105",
@@ -24322,7 +24218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82324105.jpg",
-      "IdName":"limitimpulse"
+      "References":null
    },
    {
       "Id":"300102005",
@@ -24332,7 +24228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300102005.jpg",
-      "IdName":"viralinfection"
+      "References":null
    },
    {
       "Id":"22991179",
@@ -24342,7 +24238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22991179.jpg",
-      "IdName":"insectneglect"
+      "References":null
    },
    {
       "Id":"25005816",
@@ -24352,7 +24248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25005816.jpg",
-      "IdName":"inspiration"
+      "References":null
    },
    {
       "Id":"11925569",
@@ -24362,7 +24258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11925569.jpg",
-      "IdName":"huntinginstinct"
+      "References":null
    },
    {
       "Id":"1475311",
@@ -24372,7 +24268,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1475311.jpg",
-      "IdName":"allureofdarkness"
+      "References":null
    },
    {
       "Id":"55969226",
@@ -24382,7 +24278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55969226.jpg",
-      "IdName":"bluedragonsummoner"
+      "References":null
    },
    {
       "Id":"55375684",
@@ -24392,7 +24288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55375684.jpg",
-      "IdName":"summoncloud"
+      "References":null
    },
    {
       "Id":"91668401",
@@ -24402,7 +24298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/91668401.jpg",
-      "IdName":"cyberangelizana"
+      "References":null
    },
    {
       "Id":"300302032",
@@ -24412,7 +24308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302032.jpg",
-      "IdName":"ivegotdinodna"
+      "References":null
    },
    {
       "Id":"3900605",
@@ -24422,7 +24318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3900605.jpg",
-      "IdName":"absorbingjar"
+      "References":null
    },
    {
       "Id":"98954106",
@@ -24432,7 +24328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/98954106.jpg",
-      "IdName":"jarofavarice"
+      "References":null
    },
    {
       "Id":"300302010",
@@ -24442,7 +24338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302010.jpg",
-      "IdName":"imjustgonnaattack"
+      "References":null
    },
    {
       "Id":"42534368",
@@ -24452,7 +24348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42534368.jpg",
-      "IdName":"silentdoom"
+      "References":null
    },
    {
       "Id":"76634149",
@@ -24462,7 +24358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76634149.jpg",
-      "IdName":"kairyushin"
+      "References":null
    },
    {
       "Id":"87685879",
@@ -24472,7 +24368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87685879.jpg",
-      "IdName":"seakoala"
+      "References":null
    },
    {
       "Id":"1371589",
@@ -24482,7 +24378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1371589.jpg",
-      "IdName":"vampirickoala"
+      "References":null
    },
    {
       "Id":"37390589",
@@ -24492,7 +24388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37390589.jpg",
-      "IdName":"kunaiwithchain"
+      "References":null
    },
    {
       "Id":"28649820",
@@ -24502,7 +24398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28649820.jpg",
-      "IdName":"embodimentofapophis"
+      "References":null
    },
    {
       "Id":"87917187",
@@ -24512,7 +24408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87917187.jpg",
-      "IdName":"darksummoningbeast"
+      "References":null
    },
    {
       "Id":"63125616",
@@ -24522,7 +24418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63125616.jpg",
-      "IdName":"theshadowwhocontrolsthedark"
+      "References":null
    },
    {
       "Id":"3244563",
@@ -24532,7 +24428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3244563.jpg",
-      "IdName":"shieldspear"
+      "References":null
    },
    {
       "Id":"99261403",
@@ -24542,7 +24438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99261403.jpg",
-      "IdName":"darkrabbit"
+      "References":null
    },
    {
       "Id":"56051648",
@@ -24552,7 +24448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56051648.jpg",
-      "IdName":"spideregg"
+      "References":null
    },
    {
       "Id":"73680966",
@@ -24562,7 +24458,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73680966.jpg",
-      "IdName":"thebeginningoftheend"
+      "References":null
    },
    {
       "Id":"300104003",
@@ -24572,7 +24468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300104003.jpg",
-      "IdName":"dinodestruction"
+      "References":null
    },
    {
       "Id":"10000010",
@@ -24582,7 +24478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10000010.jpg",
-      "IdName":"thewingeddragonofra"
+      "References":null
    },
    {
       "Id":"300302019",
@@ -24592,7 +24488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302019.jpg",
-      "IdName":"thepsychicduelist"
+      "References":null
    },
    {
       "Id":"82386016",
@@ -24602,7 +24498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82386016.jpg",
-      "IdName":"thebigcattledrive"
+      "References":null
    },
    {
       "Id":"300302041",
@@ -24612,7 +24508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302041.jpg",
-      "IdName":"therightheroforthejob"
+      "References":null
    },
    {
       "Id":"300102001",
@@ -24622,7 +24518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300102001.jpg",
-      "IdName":"theworldsgreatestfisherman"
+      "References":null
    },
    {
       "Id":"19801646",
@@ -24632,7 +24528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/19801646.jpg",
-      "IdName":"thelegendaryfishermanii"
+      "References":null
    },
    {
       "Id":"94861297",
@@ -24642,7 +24538,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94861297.jpg",
-      "IdName":"theforcefulcheckpoint"
+      "References":null
    },
    {
       "Id":"87557188",
@@ -24652,7 +24548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/87557188.jpg",
-      "IdName":"thesternmystic"
+      "References":null
    },
    {
       "Id":"25280974",
@@ -24662,7 +24558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25280974.jpg",
-      "IdName":"legionthefiendjester"
+      "References":null
    },
    {
       "Id":"79402185",
@@ -24672,7 +24568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79402185.jpg",
-      "IdName":"bondingd2o"
+      "References":null
    },
    {
       "Id":"6890729",
@@ -24682,7 +24578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6890729.jpg",
-      "IdName":"bondingdho"
+      "References":null
    },
    {
       "Id":"300302029",
@@ -24692,7 +24588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302029.jpg",
-      "IdName":"energizingelements"
+      "References":null
    },
    {
       "Id":"55696885",
@@ -24702,7 +24598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55696885.jpg",
-      "IdName":"plaguewolf"
+      "References":null
    },
    {
       "Id":"29876529",
@@ -24712,7 +24608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29876529.jpg",
-      "IdName":"darklight"
+      "References":null
    },
    {
       "Id":"80987696",
@@ -24722,7 +24618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80987696.jpg",
-      "IdName":"timemachine"
+      "References":null
    },
    {
       "Id":"24433920",
@@ -24732,7 +24628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/24433920.jpg",
-      "IdName":"pendulummachine"
+      "References":null
    },
    {
       "Id":"88901771",
@@ -24742,7 +24638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88901771.jpg",
-      "IdName":"skilledbluemagician"
+      "References":null
    },
    {
       "Id":"15173384",
@@ -24752,7 +24648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15173384.jpg",
-      "IdName":"illusionistfacelessmagician"
+      "References":null
    },
    {
       "Id":"65338781",
@@ -24762,7 +24658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/65338781.jpg",
-      "IdName":"skilledredmagician"
+      "References":null
    },
    {
       "Id":"21296502",
@@ -24772,7 +24668,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/21296502.jpg",
-      "IdName":"toondarkmagician"
+      "References":null
    },
    {
       "Id":"300204003",
@@ -24782,7 +24678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300204003.jpg",
-      "IdName":"thousandeyesspell"
+      "References":null
    },
    {
       "Id":"300302053",
@@ -24792,7 +24688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302053.jpg",
-      "IdName":"spellofmaskskillcard"
+      "References":null
    },
    {
       "Id":"25727454",
@@ -24802,7 +24698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25727454.jpg",
-      "IdName":"mastercraftsmangamil"
+      "References":null
    },
    {
       "Id":"41442341",
@@ -24812,7 +24708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41442341.jpg",
-      "IdName":"puppetmaster"
+      "References":null
    },
    {
       "Id":"300104001",
@@ -24822,7 +24718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300104001.jpg",
-      "IdName":"zombiemasterskillcard"
+      "References":null
    },
    {
       "Id":"1945387",
@@ -24832,7 +24728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1945387.jpg",
-      "IdName":"elementalheronovamaster"
+      "References":null
    },
    {
       "Id":"75014062",
@@ -24842,7 +24738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75014062.jpg",
-      "IdName":"spellpowergrasp"
+      "References":null
    },
    {
       "Id":"34294855",
@@ -24852,7 +24748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34294855.jpg",
-      "IdName":"vampirescurse"
+      "References":null
    },
    {
       "Id":"50277973",
@@ -24862,7 +24758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50277973.jpg",
-      "IdName":"swampmirrorer"
+      "References":null
    },
    {
       "Id":"54514594",
@@ -24872,7 +24768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54514594.jpg",
-      "IdName":"volcanichammerer"
+      "References":null
    },
    {
       "Id":"22610082",
@@ -24882,7 +24778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22610082.jpg",
-      "IdName":"themaskofremnants"
+      "References":null
    },
    {
       "Id":"79447365",
@@ -24892,7 +24788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79447365.jpg",
-      "IdName":"toonmask"
+      "References":null
    },
    {
       "Id":"300302036",
@@ -24902,7 +24798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302036.jpg",
-      "IdName":"middleagemechsskillcard"
+      "References":null
    },
    {
       "Id":"72299832",
@@ -24912,7 +24808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72299832.jpg",
-      "IdName":"giantmechsoldier"
+      "References":null
    },
    {
       "Id":"78349103",
@@ -24922,7 +24818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78349103.jpg",
-      "IdName":"machinapeacekeeper"
+      "References":null
    },
    {
       "Id":"89208725",
@@ -24932,7 +24828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89208725.jpg",
-      "IdName":"metaverse"
+      "References":null
    },
    {
       "Id":"34815282",
@@ -24942,7 +24838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34815282.jpg",
-      "IdName":"miniaturize"
+      "References":null
    },
    {
       "Id":"71340250",
@@ -24952,7 +24848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71340250.jpg",
-      "IdName":"mixeroid"
+      "References":null
    },
    {
       "Id":"41113025",
@@ -24962,7 +24858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41113025.jpg",
-      "IdName":"diskbladerider"
+      "References":null
    },
    {
       "Id":"94804055",
@@ -24972,7 +24868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94804055.jpg",
-      "IdName":"firewall"
+      "References":null
    },
    {
       "Id":"58169731",
@@ -24982,7 +24878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58169731.jpg",
-      "IdName":"wallofdisruption"
+      "References":null
    },
    {
       "Id":"13945283",
@@ -24992,7 +24888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13945283.jpg",
-      "IdName":"wallofillusion"
+      "References":null
    },
    {
       "Id":"22123627",
@@ -25002,7 +24898,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22123627.jpg",
-      "IdName":"morayofgreed"
+      "References":null
    },
    {
       "Id":"3657444",
@@ -25012,7 +24908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3657444.jpg",
-      "IdName":"cybervalley"
+      "References":null
    },
    {
       "Id":"25171661",
@@ -25022,7 +24918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/25171661.jpg",
-      "IdName":"infernitydwarf"
+      "References":null
    },
    {
       "Id":"61465001",
@@ -25032,7 +24928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61465001.jpg",
-      "IdName":"loudcloudthestormserpent"
+      "References":null
    },
    {
       "Id":"79703905",
@@ -25042,7 +24938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79703905.jpg",
-      "IdName":"cloudianaltus"
+      "References":null
    },
    {
       "Id":"80825553",
@@ -25052,7 +24948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80825553.jpg",
-      "IdName":"cloudiansmokeball"
+      "References":null
    },
    {
       "Id":"17810268",
@@ -25062,7 +24958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17810268.jpg",
-      "IdName":"cloudianacidcloud"
+      "References":null
    },
    {
       "Id":"83604828",
@@ -25072,7 +24968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83604828.jpg",
-      "IdName":"cloudianghostfog"
+      "References":null
    },
    {
       "Id":"43318266",
@@ -25082,7 +24978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43318266.jpg",
-      "IdName":"cloudiancirrostratus"
+      "References":null
    },
    {
       "Id":"13474291",
@@ -25092,7 +24988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13474291.jpg",
-      "IdName":"cloudianstormdragon"
+      "References":null
    },
    {
       "Id":"20003527",
@@ -25102,7 +24998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20003527.jpg",
-      "IdName":"cloudiannimbusman"
+      "References":null
    },
    {
       "Id":"56597272",
@@ -25112,7 +25008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56597272.jpg",
-      "IdName":"cloudiansheepcloud"
+      "References":null
    },
    {
       "Id":"57610714",
@@ -25122,7 +25018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57610714.jpg",
-      "IdName":"cloudianeyeofthetyphoon"
+      "References":null
    },
    {
       "Id":"16197610",
@@ -25132,7 +25028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16197610.jpg",
-      "IdName":"cloudianturbulence"
+      "References":null
    },
    {
       "Id":"10000000",
@@ -25142,7 +25038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10000000.jpg",
-      "IdName":"obeliskthetormentor"
+      "References":null
    },
    {
       "Id":"33365932",
@@ -25152,7 +25048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33365932.jpg",
-      "IdName":"volcanicshell"
+      "References":null
    },
    {
       "Id":"300201009",
@@ -25162,7 +25058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201009.jpg",
-      "IdName":"millenniumeyeskillcard"
+      "References":null
    },
    {
       "Id":"64627453",
@@ -25172,7 +25068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64627453.jpg",
-      "IdName":"ojamablue"
+      "References":null
    },
    {
       "Id":"37132349",
@@ -25182,7 +25078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37132349.jpg",
-      "IdName":"ojamared"
+      "References":null
    },
    {
       "Id":"38395123",
@@ -25192,7 +25088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38395123.jpg",
-      "IdName":"ojamatch"
+      "References":null
    },
    {
       "Id":"40575313",
@@ -25202,7 +25098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40575313.jpg",
-      "IdName":"shadowspecter"
+      "References":null
    },
    {
       "Id":"45141013",
@@ -25212,7 +25108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45141013.jpg",
-      "IdName":"heatwave"
+      "References":null
    },
    {
       "Id":"72563071",
@@ -25222,7 +25118,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/72563071.jpg",
-      "IdName":"psychicshockwave"
+      "References":null
    },
    {
       "Id":"29216198",
@@ -25232,7 +25128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29216198.jpg",
-      "IdName":"graviticorb"
+      "References":null
    },
    {
       "Id":"26533075",
@@ -25242,7 +25138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26533075.jpg",
-      "IdName":"securityorb"
+      "References":null
    },
    {
       "Id":"68396778",
@@ -25252,7 +25148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/68396778.jpg",
-      "IdName":"faustianbargain"
+      "References":null
    },
    {
       "Id":"300204004",
@@ -25262,7 +25158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300204004.jpg",
-      "IdName":"toonmayhem"
+      "References":null
    },
    {
       "Id":"13301895",
@@ -25272,7 +25168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13301895.jpg",
-      "IdName":"fallenparadise"
+      "References":null
    },
    {
       "Id":"52367652",
@@ -25282,7 +25178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52367652.jpg",
-      "IdName":"thatwhichfeedsonlife"
+      "References":null
    },
    {
       "Id":"300203004",
@@ -25292,7 +25188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300203004.jpg",
-      "IdName":"hiddenparasite"
+      "References":null
    },
    {
       "Id":"14457896",
@@ -25302,7 +25198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14457896.jpg",
-      "IdName":"parasiteparanoid"
+      "References":null
    },
    {
       "Id":"79997591",
@@ -25312,7 +25208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79997591.jpg",
-      "IdName":"doblepasse"
+      "References":null
    },
    {
       "Id":"300205004",
@@ -25322,7 +25218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300205004.jpg",
-      "IdName":"twistedpersonality"
+      "References":null
    },
    {
       "Id":"71098407",
@@ -25332,7 +25228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71098407.jpg",
-      "IdName":"memoryloss"
+      "References":null
    },
    {
       "Id":"300202001",
@@ -25342,7 +25238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202001.jpg",
-      "IdName":"peakperformance"
+      "References":null
    },
    {
       "Id":"300302007",
@@ -25352,7 +25248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302007.jpg",
-      "IdName":"endlesstraps"
+      "References":null
    },
    {
       "Id":"300103005",
@@ -25362,7 +25258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300103005.jpg",
-      "IdName":"doubleevolutionpillskillcard"
+      "References":null
    },
    {
       "Id":"34559295",
@@ -25372,7 +25268,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34559295.jpg",
-      "IdName":"irondraw"
+      "References":null
    },
    {
       "Id":"300201002",
@@ -25382,7 +25278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201002.jpg",
-      "IdName":"destinydrawskillcard"
+      "References":null
    },
    {
       "Id":"300201003",
@@ -25392,7 +25288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201003.jpg",
-      "IdName":"finaldraw"
+      "References":null
    },
    {
       "Id":"58477767",
@@ -25402,7 +25298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58477767.jpg",
-      "IdName":"queenspawn"
+      "References":null
    },
    {
       "Id":"83965310",
@@ -25412,7 +25308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83965310.jpg",
-      "IdName":"destinyheroplasma"
+      "References":null
    },
    {
       "Id":"45653036",
@@ -25422,7 +25318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45653036.jpg",
-      "IdName":"rainstorm"
+      "References":null
    },
    {
       "Id":"53713014",
@@ -25432,7 +25328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53713014.jpg",
-      "IdName":"crazyfish"
+      "References":null
    },
    {
       "Id":"42671151",
@@ -25442,7 +25338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42671151.jpg",
-      "IdName":"thegoldenapples"
+      "References":null
    },
    {
       "Id":"300202006",
@@ -25452,7 +25348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202006.jpg",
-      "IdName":"palominezation"
+      "References":null
    },
    {
       "Id":"300302039",
@@ -25462,7 +25358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302039.jpg",
-      "IdName":"roomforgrowth"
+      "References":null
    },
    {
       "Id":"300302016",
@@ -25472,7 +25368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302016.jpg",
-      "IdName":"poweroffriendship"
+      "References":null
    },
    {
       "Id":"300201001",
@@ -25482,7 +25378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201001.jpg",
-      "IdName":"powerofdark"
+      "References":null
    },
    {
       "Id":"13048472",
@@ -25492,7 +25388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13048472.jpg",
-      "IdName":"prepreparationofrites"
+      "References":null
    },
    {
       "Id":"300201004",
@@ -25502,7 +25398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201004.jpg",
-      "IdName":"prescience"
+      "References":null
    },
    {
       "Id":"3381441",
@@ -25512,7 +25408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3381441.jpg",
-      "IdName":"gravekeeperspriestess"
+      "References":null
    },
    {
       "Id":"300102003",
@@ -25522,7 +25418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300102003.jpg",
-      "IdName":"catchoftheday"
+      "References":null
    },
    {
       "Id":"89558090",
@@ -25532,7 +25428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89558090.jpg",
-      "IdName":"darkprisoner"
+      "References":null
    },
    {
       "Id":"300102002",
@@ -25542,7 +25438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300102002.jpg",
-      "IdName":"mythicdepths"
+      "References":null
    },
    {
       "Id":"23927545",
@@ -25552,7 +25448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/23927545.jpg",
-      "IdName":"jurracprotops"
+      "References":null
    },
    {
       "Id":"66835946",
@@ -25562,7 +25458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66835946.jpg",
-      "IdName":"pyramidofwonders"
+      "References":null
    },
    {
       "Id":"300101004",
@@ -25572,7 +25468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300101004.jpg",
-      "IdName":"royalflush"
+      "References":null
    },
    {
       "Id":"300202002",
@@ -25582,7 +25478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202002.jpg",
-      "IdName":"beatdown"
+      "References":null
    },
    {
       "Id":"42233477",
@@ -25592,7 +25488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42233477.jpg",
-      "IdName":"battleguardrage"
+      "References":null
    },
    {
       "Id":"42940404",
@@ -25602,7 +25498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42940404.jpg",
-      "IdName":"machinagearframe"
+      "References":null
    },
    {
       "Id":"89882100",
@@ -25612,7 +25508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/89882100.jpg",
-      "IdName":"nightbeam"
+      "References":null
    },
    {
       "Id":"93023479",
@@ -25622,7 +25518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93023479.jpg",
-      "IdName":"gravekeepersrecruiter"
+      "References":null
    },
    {
       "Id":"300302034",
@@ -25632,7 +25528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302034.jpg",
-      "IdName":"lookingintothefuture"
+      "References":null
    },
    {
       "Id":"99458769",
@@ -25642,7 +25538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99458769.jpg",
-      "IdName":"reignbeauxoverlordofdarkworld"
+      "References":null
    },
    {
       "Id":"15951532",
@@ -25652,7 +25548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15951532.jpg",
-      "IdName":"amazonessqueen"
+      "References":null
    },
    {
       "Id":"52248570",
@@ -25662,7 +25558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52248570.jpg",
-      "IdName":"imprisonedqueenarchfiend"
+      "References":null
    },
    {
       "Id":"70560957",
@@ -25672,7 +25568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70560957.jpg",
-      "IdName":"toonrollback"
+      "References":null
    },
    {
       "Id":"300205003",
@@ -25682,7 +25578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300205003.jpg",
-      "IdName":"shadowreborn"
+      "References":null
    },
    {
       "Id":"39900763",
@@ -25692,7 +25588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39900763.jpg",
-      "IdName":"differentdimensionencounter"
+      "References":null
    },
    {
       "Id":"300302021",
@@ -25702,7 +25598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302021.jpg",
-      "IdName":"powerup"
+      "References":null
    },
    {
       "Id":"46508640",
@@ -25712,7 +25608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46508640.jpg",
-      "IdName":"dwellerinthedepths"
+      "References":null
    },
    {
       "Id":"31066283",
@@ -25722,7 +25618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31066283.jpg",
-      "IdName":"revivalofdokurorider"
+      "References":null
    },
    {
       "Id":"31189536",
@@ -25732,7 +25628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/31189536.jpg",
-      "IdName":"vampireawakening"
+      "References":null
    },
    {
       "Id":"53701259",
@@ -25742,7 +25638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53701259.jpg",
-      "IdName":"awakeningofthesacredbeasts"
+      "References":null
    },
    {
       "Id":"10813327",
@@ -25752,7 +25648,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10813327.jpg",
-      "IdName":"wakingthedragon"
+      "References":null
    },
    {
       "Id":"28112535",
@@ -25762,7 +25658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28112535.jpg",
-      "IdName":"toonbarreldragon"
+      "References":null
    },
    {
       "Id":"39996157",
@@ -25772,7 +25668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39996157.jpg",
-      "IdName":"machineangelritual"
+      "References":null
    },
    {
       "Id":"300204001",
@@ -25782,7 +25678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300204001.jpg",
-      "IdName":"ritualofblackmastery"
+      "References":null
    },
    {
       "Id":"54539105",
@@ -25792,7 +25688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/54539105.jpg",
-      "IdName":"warlionritual"
+      "References":null
    },
    {
       "Id":"55761792",
@@ -25802,7 +25698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55761792.jpg",
-      "IdName":"blacklusterritual"
+      "References":null
    },
    {
       "Id":"6614221",
@@ -25812,7 +25708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6614221.jpg",
-      "IdName":"fogking"
+      "References":null
    },
    {
       "Id":"70406920",
@@ -25822,7 +25718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70406920.jpg",
-      "IdName":"machineking3000bc"
+      "References":null
    },
    {
       "Id":"300203001",
@@ -25832,7 +25728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300203001.jpg",
-      "IdName":"dinosaurkingdom"
+      "References":null
    },
    {
       "Id":"66518841",
@@ -25842,7 +25738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/66518841.jpg",
-      "IdName":"pridefulroar"
+      "References":null
    },
    {
       "Id":"80831721",
@@ -25852,7 +25748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80831721.jpg",
-      "IdName":"sabatielthephilosophersstone"
+      "References":null
    },
    {
       "Id":"8783685",
@@ -25862,7 +25758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/8783685.jpg",
-      "IdName":"hourglassoflife"
+      "References":null
    },
    {
       "Id":"39033131",
@@ -25872,7 +25768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39033131.jpg",
-      "IdName":"hauntedshrine"
+      "References":null
    },
    {
       "Id":"80402389",
@@ -25882,7 +25778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80402389.jpg",
-      "IdName":"verdantsanctuary"
+      "References":null
    },
    {
       "Id":"70595331",
@@ -25892,7 +25788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70595331.jpg",
-      "IdName":"ilblud"
+      "References":null
    },
    {
       "Id":"97783659",
@@ -25902,7 +25798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/97783659.jpg",
-      "IdName":"bloodsucker"
+      "References":null
    },
    {
       "Id":"71209500",
@@ -25912,7 +25808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/71209500.jpg",
-      "IdName":"amazonessscouts"
+      "References":null
    },
    {
       "Id":"77454922",
@@ -25922,7 +25818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/77454922.jpg",
-      "IdName":"fortresswhalesoath"
+      "References":null
    },
    {
       "Id":"83812099",
@@ -25932,7 +25828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/83812099.jpg",
-      "IdName":"flintlock"
+      "References":null
    },
    {
       "Id":"300103004",
@@ -25942,7 +25838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300103004.jpg",
-      "IdName":"servantsofthefallenking"
+      "References":null
    },
    {
       "Id":"53162898",
@@ -25952,7 +25848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/53162898.jpg",
-      "IdName":"amazonesssage"
+      "References":null
    },
    {
       "Id":"58139128",
@@ -25962,7 +25858,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58139128.jpg",
-      "IdName":"gravekeepersshaman"
+      "References":null
    },
    {
       "Id":"60694662",
@@ -25972,7 +25868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60694662.jpg",
-      "IdName":"skelengel"
+      "References":null
    },
    {
       "Id":"27655513",
@@ -25982,7 +25878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/27655513.jpg",
-      "IdName":"skreech"
+      "References":null
    },
    {
       "Id":"10000020",
@@ -25992,7 +25888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10000020.jpg",
-      "IdName":"slifertheskydragon"
+      "References":null
    },
    {
       "Id":"26905245",
@@ -26002,7 +25898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26905245.jpg",
-      "IdName":"metalreflectslime"
+      "References":null
    },
    {
       "Id":"1474910",
@@ -26012,7 +25908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1474910.jpg",
-      "IdName":"beelistsoldier"
+      "References":null
    },
    {
       "Id":"76263644",
@@ -26022,7 +25918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76263644.jpg",
-      "IdName":"destinyenddragoon"
+      "References":null
    },
    {
       "Id":"5405694",
@@ -26032,7 +25928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/5405694.jpg",
-      "IdName":"blacklustersoldier"
+      "References":null
    },
    {
       "Id":"88728507",
@@ -26042,7 +25938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/88728507.jpg",
-      "IdName":"vampiresorcerer"
+      "References":null
    },
    {
       "Id":"300201005",
@@ -26052,7 +25948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201005.jpg",
-      "IdName":"gravekeeperslot"
+      "References":null
    },
    {
       "Id":"300203002",
@@ -26062,7 +25958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300203002.jpg",
-      "IdName":"nightmaresonicblast"
+      "References":null
    },
    {
       "Id":"79852326",
@@ -26072,7 +25968,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79852326.jpg",
-      "IdName":"zomathespirit"
+      "References":null
    },
    {
       "Id":"26302522",
@@ -26082,7 +25978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26302522.jpg",
-      "IdName":"blastsphere"
+      "References":null
    },
    {
       "Id":"33245030",
@@ -26092,7 +25988,7 @@ module.exports =
       "Limit":"1",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33245030.jpg",
-      "IdName":"spherekuriboh"
+      "References":null
    },
    {
       "Id":"44689688",
@@ -26102,7 +25998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44689688.jpg",
-      "IdName":"jurracspinos"
+      "References":null
    },
    {
       "Id":"48411996",
@@ -26112,7 +26008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48411996.jpg",
-      "IdName":"jurracstauriko"
+      "References":null
    },
    {
       "Id":"99523325",
@@ -26122,7 +26018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99523325.jpg",
-      "IdName":"gravekeepersstele"
+      "References":null
    },
    {
       "Id":"300202007",
@@ -26132,7 +26028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202007.jpg",
-      "IdName":"aromastrategy"
+      "References":null
    },
    {
       "Id":"300302028",
@@ -26142,7 +26038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302028.jpg",
-      "IdName":"cyberdarkstyleskillcard"
+      "References":null
    },
    {
       "Id":"33951077",
@@ -26152,7 +26048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33951077.jpg",
-      "IdName":"superwarlion"
+      "References":null
    },
    {
       "Id":"48130397",
@@ -26162,7 +26058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48130397.jpg",
-      "IdName":"superpolymerization"
+      "References":null
    },
    {
       "Id":"3897065",
@@ -26172,7 +26068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3897065.jpg",
-      "IdName":"supervehicroidstealthunion"
+      "References":null
    },
    {
       "Id":"37440988",
@@ -26182,7 +26078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37440988.jpg",
-      "IdName":"rainbowoverdragon"
+      "References":null
    },
    {
       "Id":"33057951",
@@ -26192,7 +26088,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33057951.jpg",
-      "IdName":"surface"
+      "References":null
    },
    {
       "Id":"64178868",
@@ -26202,7 +26098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/64178868.jpg",
-      "IdName":"battlesurvivor"
+      "References":null
    },
    {
       "Id":"300202009",
@@ -26212,7 +26108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202009.jpg",
-      "IdName":"tribalsynergy"
+      "References":null
    },
    {
       "Id":"300302030",
@@ -26222,7 +26118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302030.jpg",
-      "IdName":"forbiddencyberstyletechnique"
+      "References":null
    },
    {
       "Id":"300201008",
@@ -26232,7 +26128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300201008.jpg",
-      "IdName":"mindscanskillcard"
+      "References":null
    },
    {
       "Id":"13210191",
@@ -26242,7 +26138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/13210191.jpg",
-      "IdName":"storm"
+      "References":null
    },
    {
       "Id":"48135190",
@@ -26252,7 +26148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48135190.jpg",
-      "IdName":"gravelstorm"
+      "References":null
    },
    {
       "Id":"70000776",
@@ -26262,7 +26158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70000776.jpg",
-      "IdName":"hiddentemplesofnecrovalley"
+      "References":null
    },
    {
       "Id":"78811937",
@@ -26272,7 +26168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78811937.jpg",
-      "IdName":"creepingdarkness"
+      "References":null
    },
    {
       "Id":"12644061",
@@ -26282,7 +26178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/12644061.jpg",
-      "IdName":"advanceddark"
+      "References":null
    },
    {
       "Id":"300302033",
@@ -26292,7 +26188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302033.jpg",
-      "IdName":"landoftheojamasskillcard"
+      "References":null
    },
    {
       "Id":"300104002",
@@ -26302,7 +26198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300104002.jpg",
-      "IdName":"terrorfromthedeep"
+      "References":null
    },
    {
       "Id":"29491031",
@@ -26312,7 +26208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29491031.jpg",
-      "IdName":"thesnakehair"
+      "References":null
    },
    {
       "Id":"300101005",
@@ -26322,7 +26218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300101005.jpg",
-      "IdName":"tombofthepharaoh"
+      "References":null
    },
    {
       "Id":"46457856",
@@ -26332,7 +26228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/46457856.jpg",
-      "IdName":"tomozaurus"
+      "References":null
    },
    {
       "Id":"81977953",
@@ -26342,7 +26238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81977953.jpg",
-      "IdName":"deserttwister"
+      "References":null
    },
    {
       "Id":"47766694",
@@ -26352,7 +26248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47766694.jpg",
-      "IdName":"wildtornado"
+      "References":null
    },
    {
       "Id":"300302026",
@@ -26362,7 +26258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302026.jpg",
-      "IdName":"crystaltranscendence"
+      "References":null
    },
    {
       "Id":"39041729",
@@ -26372,7 +26268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39041729.jpg",
-      "IdName":"spacetimetranscendence"
+      "References":null
    },
    {
       "Id":"20638610",
@@ -26382,7 +26278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20638610.jpg",
-      "IdName":"dragonsrebirth"
+      "References":null
    },
    {
       "Id":"11593137",
@@ -26392,7 +26288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/11593137.jpg",
-      "IdName":"chaostraphole"
+      "References":null
    },
    {
       "Id":"69599136",
@@ -26402,7 +26298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69599136.jpg",
-      "IdName":"floodgatetraphole"
+      "References":null
    },
    {
       "Id":"96383838",
@@ -26412,7 +26308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96383838.jpg",
-      "IdName":"triwight"
+      "References":null
    },
    {
       "Id":"17286057",
@@ -26422,7 +26318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17286057.jpg",
-      "IdName":"heliostricemegistus"
+      "References":null
    },
    {
       "Id":"49669730",
@@ -26432,7 +26328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/49669730.jpg",
-      "IdName":"waterhazard"
+      "References":null
    },
    {
       "Id":"62701967",
@@ -26442,7 +26338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62701967.jpg",
-      "IdName":"jurractyrannus"
+      "References":null
    },
    {
       "Id":"39778366",
@@ -26452,7 +26348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39778366.jpg",
-      "IdName":"unionscramble"
+      "References":null
    },
    {
       "Id":"17626381",
@@ -26462,7 +26358,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17626381.jpg",
-      "IdName":"supplysquad"
+      "References":null
    },
    {
       "Id":"28486799",
@@ -26472,7 +26368,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28486799.jpg",
-      "IdName":"backupsquad"
+      "References":null
    },
    {
       "Id":"22829942",
@@ -26482,7 +26378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22829942.jpg",
-      "IdName":"fusionrecyclingplant"
+      "References":null
    },
    {
       "Id":"74003290",
@@ -26492,7 +26388,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/74003290.jpg",
-      "IdName":"lostwind"
+      "References":null
    },
    {
       "Id":"43140791",
@@ -26502,7 +26398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43140791.jpg",
-      "IdName":"wormbait"
+      "References":null
    },
    {
       "Id":"50259460",
@@ -26512,7 +26408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50259460.jpg",
-      "IdName":"versagothedestroyer"
+      "References":null
    },
    {
       "Id":"82382815",
@@ -26522,7 +26418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82382815.jpg",
-      "IdName":"championsvigilance"
+      "References":null
    },
    {
       "Id":"712559",
@@ -26532,7 +26428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/712559.jpg",
-      "IdName":"amazonessvillage"
+      "References":null
    },
    {
       "Id":"90011152",
@@ -26542,7 +26438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90011152.jpg",
-      "IdName":"ojamacountry"
+      "References":null
    },
    {
       "Id":"37694547",
@@ -26552,7 +26448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37694547.jpg",
-      "IdName":"geartown"
+      "References":null
    },
    {
       "Id":"86361354",
@@ -26562,7 +26458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/86361354.jpg",
-      "IdName":"tribeshockingvirus"
+      "References":null
    },
    {
       "Id":"56043447",
@@ -26572,7 +26468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56043447.jpg",
-      "IdName":"viserdes"
+      "References":null
    },
    {
       "Id":"34002992",
@@ -26582,7 +26478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34002992.jpg",
-      "IdName":"rainbowlife"
+      "References":null
    },
    {
       "Id":"300302031",
@@ -26592,7 +26488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300302031.jpg",
-      "IdName":"heregoessomething"
+      "References":null
    },
    {
       "Id":"90434926",
@@ -26602,7 +26498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90434926.jpg",
-      "IdName":"veilofdarkness"
+      "References":null
    },
    {
       "Id":"300202008",
@@ -26612,7 +26508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300202008.jpg",
-      "IdName":"flightoftheharpies"
+      "References":null
    },
    {
       "Id":"22082163",
@@ -26622,7 +26518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/22082163.jpg",
-      "IdName":"amazonesswillpower"
+      "References":null
    },
    {
       "Id":"300104005",
@@ -26632,7 +26528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/300104005.jpg",
-      "IdName":"switcheroo"
+      "References":null
    },
    {
       "Id":"67300516",
@@ -26642,7 +26538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/67300516.jpg",
-      "IdName":"redeyeswyvern"
+      "References":null
    },
    {
       "Id":"82099401",
@@ -26652,7 +26548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82099401.jpg",
-      "IdName":"crystalseer"
+      "References":null
    },
    {
       "Id":"1353770",
@@ -26662,7 +26558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1353770.jpg",
-      "IdName":"valhallahallofthefallen"
+      "References":null
    },
    {
       "Id":"96643568",
@@ -26672,7 +26568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96643568.jpg",
-      "IdName":"wetha"
+      "References":null
    },
    {
       "Id":"10315429",
@@ -26682,7 +26578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/10315429.jpg",
-      "IdName":"yaibarobo"
+      "References":null
    },
    {
       "Id":"35282433",
@@ -26692,7 +26588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/35282433.jpg",
-      "IdName":"blueeyedsilverzombie"
+      "References":null
    },
    {
       "Id":"92667214",
@@ -26702,7 +26598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/92667214.jpg",
-      "IdName":"clownzombie"
+      "References":null
    },
    {
       "Id":"63665875",
@@ -26712,7 +26608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/63665875.jpg",
-      "IdName":"goblinzombie"
+      "References":null
    },
    {
       "Id":"81616639",
@@ -26722,7 +26618,7 @@ module.exports =
       "Limit":"0",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/81616639.jpg",
-      "IdName":"zombina"
+      "References":null
    },
    {
       "Id":"85602018",
@@ -26732,7 +26628,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/85602018.jpg",
-      "IdName":"lastwill"
+      "References":null
    },
    {
       "Id":"50705071",
@@ -26742,7 +26638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/50705071.jpg",
-      "IdName":"metalzoa"
+      "References":null
    },
    {
       "Id":"45425051",
@@ -26752,7 +26648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/45425051.jpg",
-      "IdName":"fairykingtruesdale"
+      "References":null
    },
    {
       "Id":"4149689",
@@ -26762,7 +26658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4149689.jpg",
-      "IdName":"goblinfan"
+      "References":null
    },
    {
       "Id":"73915052",
@@ -26772,7 +26668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/73915052.jpg",
-      "IdName":"sheeptoken"
+      "References":null
    },
    {
       "Id":"2370081",
@@ -26782,7 +26678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/2370081.jpg",
-      "IdName":"steelshell"
+      "References":null
    },
    {
       "Id":"33413638",
@@ -26792,7 +26688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33413638.jpg",
-      "IdName":"cockroachknight"
+      "References":null
    },
    {
       "Id":"75559356",
@@ -26802,7 +26698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75559356.jpg",
-      "IdName":"cybersoldierofdarkworld"
+      "References":null
    },
    {
       "Id":"57405307",
@@ -26812,7 +26708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/57405307.jpg",
-      "IdName":"wingeddragonguardianofthefortress2"
+      "References":null
    },
    {
       "Id":"55321970",
@@ -26822,7 +26718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/55321970.jpg",
-      "IdName":"gustfan"
+      "References":null
    },
    {
       "Id":"69750536",
@@ -26832,7 +26728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/69750536.jpg",
-      "IdName":"wowwarrior"
+      "References":null
    },
    {
       "Id":"95144193",
@@ -26842,7 +26738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95144193.jpg",
-      "IdName":"kwagarhercules"
+      "References":null
    },
    {
       "Id":"82065276",
@@ -26852,7 +26748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/82065276.jpg",
-      "IdName":"oscillohero"
+      "References":null
    },
    {
       "Id":"60802233",
@@ -26862,7 +26758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/60802233.jpg",
-      "IdName":"kuwagata"
+      "References":null
    },
    {
       "Id":"28003512",
@@ -26872,7 +26768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/28003512.jpg",
-      "IdName":"thejudgementhand"
+      "References":null
    },
    {
       "Id":"18937875",
@@ -26882,7 +26778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/18937875.jpg",
-      "IdName":"burningspear"
+      "References":null
    },
    {
       "Id":"39897277",
@@ -26892,7 +26788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/39897277.jpg",
-      "IdName":"elfslight"
+      "References":null
    },
    {
       "Id":"20871001",
@@ -26902,7 +26798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/20871001.jpg",
-      "IdName":"bluemedicine"
+      "References":null
    },
    {
       "Id":"41762634",
@@ -26912,7 +26808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/41762634.jpg",
-      "IdName":"giantflea"
+      "References":null
    },
    {
       "Id":"56260110",
@@ -26922,7 +26818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56260110.jpg",
-      "IdName":"raimei"
+      "References":null
    },
    {
       "Id":"34290067",
@@ -26932,7 +26828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34290067.jpg",
-      "IdName":"corrodingshark"
+      "References":null
    },
    {
       "Id":"76775123",
@@ -26942,7 +26838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76775123.jpg",
-      "IdName":"patrolrobo"
+      "References":null
    },
    {
       "Id":"99426834",
@@ -26952,7 +26848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/99426834.jpg",
-      "IdName":"beastkingoftheswamps"
+      "References":null
    },
    {
       "Id":"52584282",
@@ -26962,7 +26858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/52584282.jpg",
-      "IdName":"herculesbeetle"
+      "References":null
    },
    {
       "Id":"84990171",
@@ -26972,7 +26868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84990171.jpg",
-      "IdName":"beansoldier"
+      "References":null
    },
    {
       "Id":"43487744",
@@ -26982,7 +26878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43487744.jpg",
-      "IdName":"whitehole"
+      "References":null
    },
    {
       "Id":"42883273",
@@ -26992,7 +26888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42883273.jpg",
-      "IdName":"wodantheresidentoftheforest"
+      "References":null
    },
    {
       "Id":"16970158",
@@ -27002,7 +26898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16970158.jpg",
-      "IdName":"callofthegrave"
+      "References":null
    },
    {
       "Id":"96967123",
@@ -27012,7 +26908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96967123.jpg",
-      "IdName":"dharmacannon"
+      "References":null
    },
    {
       "Id":"95288024",
@@ -27022,7 +26918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/95288024.jpg",
-      "IdName":"skydragon"
+      "References":null
    },
    {
       "Id":"59983499",
@@ -27032,7 +26928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59983499.jpg",
-      "IdName":"dancingelf"
+      "References":null
    },
    {
       "Id":"3627449",
@@ -27042,7 +26938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3627449.jpg",
-      "IdName":"skullguardian"
+      "References":null
    },
    {
       "Id":"14977074",
@@ -27052,7 +26948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14977074.jpg",
-      "IdName":"garoozis"
+      "References":null
    },
    {
       "Id":"56413937",
@@ -27062,7 +26958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56413937.jpg",
-      "IdName":"warrioroftradition"
+      "References":null
    },
    {
       "Id":"14037717",
@@ -27072,7 +26968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/14037717.jpg",
-      "IdName":"spiritofthebooks"
+      "References":null
    },
    {
       "Id":"26725158",
@@ -27082,7 +26978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/26725158.jpg",
-      "IdName":"exileofthewicked"
+      "References":null
    },
    {
       "Id":"16899564",
@@ -27092,7 +26988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/16899564.jpg",
-      "IdName":"beautifulheadhuntress"
+      "References":null
    },
    {
       "Id":"38942059",
@@ -27102,7 +26998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38942059.jpg",
-      "IdName":"sonicmaid"
+      "References":null
    },
    {
       "Id":"43694075",
@@ -27112,7 +27008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43694075.jpg",
-      "IdName":"novoxsprayer"
+      "References":null
    },
    {
       "Id":"93343894",
@@ -27122,7 +27018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93343894.jpg",
-      "IdName":"watermagician"
+      "References":null
    },
    {
       "Id":"38277918",
@@ -27132,7 +27028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/38277918.jpg",
-      "IdName":"mikazukinoyaiba"
+      "References":null
    },
    {
       "Id":"30451366",
@@ -27142,7 +27038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/30451366.jpg",
-      "IdName":"mysticalsheep1"
+      "References":null
    },
    {
       "Id":"75582395",
@@ -27152,7 +27048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75582395.jpg",
-      "IdName":"faithbird"
+      "References":null
    },
    {
       "Id":"4179849",
@@ -27162,7 +27058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/4179849.jpg",
-      "IdName":"queenofautumnleaves"
+      "References":null
    },
    {
       "Id":"58831685",
@@ -27172,7 +27068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/58831685.jpg",
-      "IdName":"giantredseasnake"
+      "References":null
    },
    {
       "Id":"3170832",
@@ -27182,7 +27078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/3170832.jpg",
-      "IdName":"takuhee"
+      "References":null
    },
    {
       "Id":"59053232",
@@ -27192,7 +27088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/59053232.jpg",
-      "IdName":"turupurun"
+      "References":null
    },
    {
       "Id":"79629370",
@@ -27202,7 +27098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/79629370.jpg",
-      "IdName":"maidenofthemoonlight"
+      "References":null
    },
    {
       "Id":"42364257",
@@ -27212,7 +27108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/42364257.jpg",
-      "IdName":"antiraigeki"
+      "References":null
    },
    {
       "Id":"6297941",
@@ -27222,7 +27118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/6297941.jpg",
-      "IdName":"burglar"
+      "References":null
    },
    {
       "Id":"40200834",
@@ -27232,7 +27128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/40200834.jpg",
-      "IdName":"sleepinglion"
+      "References":null
    },
    {
       "Id":"75889523",
@@ -27242,7 +27138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/75889523.jpg",
-      "IdName":"archfiendmarmotofnefariousness"
+      "References":null
    },
    {
       "Id":"1761063",
@@ -27252,7 +27148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/1761063.jpg",
-      "IdName":"nekogal1"
+      "References":null
    },
    {
       "Id":"29948642",
@@ -27262,7 +27158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/29948642.jpg",
-      "IdName":"digbeak"
+      "References":null
    },
    {
       "Id":"47986555",
@@ -27272,7 +27168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/47986555.jpg",
-      "IdName":"millenniumgolem"
+      "References":null
    },
    {
       "Id":"84285623",
@@ -27282,7 +27178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/84285623.jpg",
-      "IdName":"haniwa"
+      "References":null
    },
    {
       "Id":"43352213",
@@ -27292,7 +27188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/43352213.jpg",
-      "IdName":"nekogal2"
+      "References":null
    },
    {
       "Id":"80234301",
@@ -27302,7 +27198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/80234301.jpg",
-      "IdName":"prisman"
+      "References":null
    },
    {
       "Id":"94022093",
@@ -27312,7 +27208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94022093.jpg",
-      "IdName":"behegon"
+      "References":null
    },
    {
       "Id":"34743446",
@@ -27322,7 +27218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34743446.jpg",
-      "IdName":"blocker"
+      "References":null
    },
    {
       "Id":"96008713",
@@ -27332,7 +27228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/96008713.jpg",
-      "IdName":"magicalarmshield"
+      "References":null
    },
    {
       "Id":"94042337",
@@ -27342,7 +27238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/94042337.jpg",
-      "IdName":"violentrain"
+      "References":null
    },
    {
       "Id":"90844184",
@@ -27352,7 +27248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/90844184.jpg",
-      "IdName":"garmasword"
+      "References":null
    },
    {
       "Id":"17238333",
@@ -27362,7 +27258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17238333.jpg",
-      "IdName":"wretchedghostoftheattic"
+      "References":null
    },
    {
       "Id":"61454890",
@@ -27372,7 +27268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61454890.jpg",
-      "IdName":"necrolancerthetimelord"
+      "References":null
    },
    {
       "Id":"15507080",
@@ -27382,7 +27278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/15507080.jpg",
-      "IdName":"sectarianofsecrets"
+      "References":null
    },
    {
       "Id":"78577570",
@@ -27392,7 +27288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/78577570.jpg",
-      "IdName":"garmaswordoath"
+      "References":null
    },
    {
       "Id":"732302",
@@ -27402,7 +27298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/732302.jpg",
-      "IdName":"templeofskulls"
+      "References":null
    },
    {
       "Id":"62873545",
@@ -27412,7 +27308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/62873545.jpg",
-      "IdName":"dragonmasterknight"
+      "References":null
    },
    {
       "Id":"93187568",
@@ -27422,7 +27318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/93187568.jpg",
-      "IdName":"spellstriker"
+      "References":null
    },
    {
       "Id":"56570271",
@@ -27432,7 +27328,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/56570271.jpg",
-      "IdName":"destinyherodiskcommander"
+      "References":null
    },
    {
       "Id":"17559367",
@@ -27442,7 +27338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/17559367.jpg",
-      "IdName":"deepdiver"
+      "References":null
    },
    {
       "Id":"44947065",
@@ -27452,7 +27348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/44947065.jpg",
-      "IdName":"burdenofthemighty"
+      "References":null
    },
    {
       "Id":"70342110",
@@ -27462,7 +27358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/70342110.jpg",
-      "IdName":"dimensionalprison"
+      "References":null
    },
    {
       "Id":"37520316",
@@ -27472,7 +27368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37520316.jpg",
-      "IdName":"mindcontrol"
+      "References":null
    },
    {
       "Id":"37267041",
@@ -27482,7 +27378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/37267041.jpg",
-      "IdName":"silentswordsmanlv7"
+      "References":null
    },
    {
       "Id":"501000001",
@@ -27492,7 +27388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/501000001.jpg",
-      "IdName":"meteothematchless"
+      "References":null
    },
    {
       "Id":"76232340",
@@ -27502,7 +27398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/76232340.jpg",
-      "IdName":"sengenjin"
+      "References":null
    },
    {
       "Id":"501000000",
@@ -27512,7 +27408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/501000000.jpg",
-      "IdName":"ulevo"
+      "References":null
    },
    {
       "Id":"61802346",
@@ -27522,7 +27418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/61802346.jpg",
-      "IdName":"blizzarddragon"
+      "References":null
    },
    {
       "Id":"33695750",
@@ -27532,7 +27428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/33695750.jpg",
-      "IdName":"desmosquito"
+      "References":null
    },
    {
       "Id":"7200041",
@@ -27542,7 +27438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/7200041.jpg",
-      "IdName":"metalshooter"
+      "References":null
    },
    {
       "Id":"48766543",
@@ -27552,7 +27448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/48766543.jpg",
-      "IdName":"cybertechalligator"
+      "References":null
    },
    {
       "Id":"34664411",
@@ -27562,7 +27458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://images.ygoprodeck.com/images/cards/34664411.jpg",
-      "IdName":"luckyironaxe"
+      "References":null
    },
    {
       "Id":"24117",
@@ -27572,577 +27468,577 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4e/SasukeSamurai2-DR1-EN-C-UE.png",
-      "IdName":"sasukesamurai2"
+      "References":null
    },
    {
       "Id":"27755",
       "RefId":"FOTB-EN010",
       "NameEn":"Volcanic Scattershot",
-      "NameFr":null,
+      "NameFr":"Cartouche de Chasse Volcanique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4b/VolcanicScattershot-AP07-EN-C-UE.png",
-      "IdName":"volcanicscattershot"
+      "References":null
    },
    {
       "Id":"27667",
       "RefId":"FOTB-EN012",
       "NameEn":"Volcanic Slicer",
-      "NameFr":null,
+      "NameFr":"Trancheur Volcanique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/61/VolcanicSlicer-FOTB-EN-R-1E.jpg",
-      "IdName":"volcanicslicer"
+      "References":null
    },
    {
       "Id":"32058",
       "RefId":"FOTB-EN015",
       "NameEn":"Gravekeeper's Commandant",
-      "NameFr":null,
+      "NameFr":"Commandant des Protecteurs du Tombeau",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/44/GravekeepersCommandant-LCYW-EN-UR-1E.png",
-      "IdName":"gravekeeperscommandant"
+      "References":null
    },
    {
       "Id":"30397",
       "RefId":"FOTB-EN016",
       "NameEn":"Warrior of Atlantis",
-      "NameFr":null,
+      "NameFr":"Guerrier de l'Atlantide",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5a/WarriorofAtlantis-SDRE-EN-C-1E.jpg",
-      "IdName":"warriorofatlantis"
+      "References":null
    },
    {
       "Id":"32486",
       "RefId":"FOTB-EN017",
       "NameEn":"Destroyersaurus",
-      "NameFr":null,
+      "NameFr":"Destructosaure",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0b/Destroyersaurus-LCJW-EN-ScR-1E.png",
-      "IdName":"destroyersaurus"
+      "References":null
    },
    {
       "Id":"30405",
       "RefId":"FOTB-EN018",
       "NameEn":"Zeradias, Herald of Heaven",
-      "NameFr":null,
+      "NameFr":"Zéradias, Héraut du Paradis",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a0/ZeradiasHeraldofHeaven-OP07-EN-C-UE.png",
-      "IdName":"zeradiasheraldofheaven"
+      "References":null
    },
    {
       "Id":"32268",
       "RefId":"FOTB-EN020",
       "NameEn":"Harpie Queen",
-      "NameFr":null,
+      "NameFr":"Reine Harpie",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2a/HarpieQueen-LART-EN-UR-LE.png",
-      "IdName":"harpiequeen"
+      "References":null
    },
    {
       "Id":"29664",
       "RefId":"FOTB-EN021",
       "NameEn":"Sky Scourge Enrise",
-      "NameFr":null,
+      "NameFr":"Djinn Céleste Enrise",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/57/SkyScourgeEnrise-FOTB-EN-SR-1E.jpg",
-      "IdName":"skyscourgeenrise"
+      "References":null
    },
    {
       "Id":"29665",
       "RefId":"FOTB-EN022",
       "NameEn":"Sky Scourge Norleras",
-      "NameFr":null,
+      "NameFr":"Djinn Céleste Norleras",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7b/SkyScourgeNorleras-FOTB-EN-SR-1E.jpg",
-      "IdName":"skyscourgenorleras"
+      "References":null
    },
    {
       "Id":"29663",
       "RefId":"FOTB-EN023",
       "NameEn":"Sky Scourge Invicil",
-      "NameFr":null,
+      "NameFr":"Djinn Céleste Invicil",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7b/SkyScourgeInvicil-FOTB-EN-SR-1E.jpg",
-      "IdName":"skyscourgeinvicil"
+      "References":null
    },
    {
       "Id":"32508",
       "RefId":"FOTB-EN024",
       "NameEn":"Goe Goe the Gallant Ninja",
-      "NameFr":null,
+      "NameFr":"Goe Goe, le Ninja Courageux",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a6/GoeGoetheGallantNinja-TU07-EN-C-UE.png",
-      "IdName":"goegoethegallantninja"
+      "References":null
    },
    {
       "Id":"30435",
       "RefId":"FOTB-EN025",
       "NameEn":"Mei-Kou, Master of Barriers",
-      "NameFr":null,
+      "NameFr":"Mei-Kou Maître des Barrières",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/55/MeiKouMasterofBarriers-SDSC-EN-C-UE.png",
-      "IdName":"meikoumasterofbarriers"
+      "References":null
    },
    {
       "Id":"29666",
       "RefId":"FOTB-EN026",
       "NameEn":"Raiza the Storm Monarch",
-      "NameFr":null,
+      "NameFr":"Raiza, le Monarque de la Tempête",
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4a/RaizatheStormMonarch-SR01-EN-C-1E.png",
-      "IdName":"raizathestormmonarch"
+      "References":null
    },
    {
       "Id":"34395",
       "RefId":"FOTB-EN027",
       "NameEn":"Seismic Crasher",
-      "NameFr":null,
+      "NameFr":"Fracasseur Sismique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/SeismicCrasher-FOTB-EN-C-UE.png",
-      "IdName":"seismiccrasher"
+      "References":null
    },
    {
       "Id":"27669",
       "RefId":"FOTB-EN031",
       "NameEn":"Soul of Fire",
-      "NameFr":null,
+      "NameFr":"Ame de Feu",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1f/SoulofFire-FOTB-EN-SR-1E.jpg",
-      "IdName":"souloffire"
+      "References":null
    },
    {
       "Id":"34421",
       "RefId":"FOTB-EN038",
       "NameEn":"Tornado",
-      "NameFr":null,
+      "NameFr":"Tornade",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/58/Tornado-FOTB-EN-C-1E.png",
-      "IdName":"tornado"
+      "References":null
    },
    {
       "Id":"34428",
       "RefId":"FOTB-EN042",
       "NameEn":"Field Barrier",
-      "NameFr":null,
+      "NameFr":"Barrière de Terrain",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/50/FieldBarrier-SDSA-EN-C-1E.png",
-      "IdName":"fieldbarrier"
+      "References":null
    },
    {
       "Id":"30438",
       "RefId":"FOTB-EN043",
       "NameEn":"\"A\" Cell Breeding Device",
-      "NameFr":null,
+      "NameFr":"Couveuse Cellule \"A\"",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1d/ACellBreedingDevice-FOTB-EN-C-UE.png",
-      "IdName":"acellbreedingdevice"
+      "References":null
    },
    {
       "Id":"32083",
       "RefId":"FOTB-EN044",
       "NameEn":"Otherworld - The \"A\" Zone",
-      "NameFr":null,
+      "NameFr":"La Zone \"A\" - Autre Monde",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/71/OtherworldTheAZone-FOTB-EN-C-1E.jpg",
-      "IdName":"otherworldtheazone"
+      "References":null
    },
    {
       "Id":"32088",
       "RefId":"FOTB-EN049",
       "NameEn":"Volcanic Recharge",
-      "NameFr":null,
+      "NameFr":"Recharge Volcanique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d4/VolcanicRecharge-FOTB-EN-C-1E.jpg",
-      "IdName":"volcanicrecharge"
+      "References":null
    },
    {
       "Id":"30454",
       "RefId":"FOTB-EN050",
       "NameEn":"Terrible Deal",
-      "NameFr":null,
+      "NameFr":"Echange Terrible",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9b/TerribleDeal-FOTB-EN-C-1E.jpg",
-      "IdName":"terribledeal"
+      "References":null
    },
    {
       "Id":"32091",
       "RefId":"FOTB-EN051",
       "NameEn":"Breakthrough!",
-      "NameFr":null,
+      "NameFr":"Percée !",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b5/Breakthrough-FOTB-EN-C-1E.png",
-      "IdName":"breakthrough"
+      "References":null
    },
    {
       "Id":"30464",
       "RefId":"FOTB-EN052",
       "NameEn":"Backs to the Wall",
-      "NameFr":null,
+      "NameFr":"Dos au Mur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/cc/BackstotheWall-SPWA-EN-SR-1E.png",
-      "IdName":"backstothewall"
+      "References":null
    },
    {
       "Id":"30471",
       "RefId":"FOTB-EN053",
       "NameEn":"Introduction to Gallantry",
-      "NameFr":null,
+      "NameFr":"Introduction à la Bravoure",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b1/IntroductiontoGallantry-FOTB-EN-C-1E.jpg",
-      "IdName":"introductiontogallantry"
+      "References":null
    },
    {
       "Id":"34434",
       "RefId":"FOTB-EN054",
       "NameEn":"Secrets of the Gallant",
-      "NameFr":null,
+      "NameFr":"Les Secrets de la Bravoure",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ee/SecretsoftheGallant-FOTB-EN-C-1E.png",
-      "IdName":"secretsofthegallant"
+      "References":null
    },
    {
       "Id":"32405",
       "RefId":"FOTB-EN055",
       "NameEn":"Radiant Mirror Force",
-      "NameFr":null,
+      "NameFr":"Force du Miroir Radieux",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9b/RadiantMirrorForce-PGL3-EN-GUR-1E.png",
-      "IdName":"radiantmirrorforce"
+      "References":null
    },
    {
       "Id":"34440",
       "RefId":"FOTB-EN056",
       "NameEn":"Hard-sellin' Goblin",
-      "NameFr":null,
+      "NameFr":"Vendeur Gobelin Agressif",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/89/HardsellinGoblin-FOTB-EN-C-1E.jpg",
-      "IdName":"hardsellingoblin"
+      "References":null
    },
    {
       "Id":"34522",
       "RefId":"FOTB-EN057",
       "NameEn":"Hard-sellin' Zombie",
-      "NameFr":null,
+      "NameFr":"Vendeur Zombie Agressif",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9e/HardsellinZombie-FOTB-EN-C-1E.jpg",
-      "IdName":"hardsellinzombie"
+      "References":null
    },
    {
       "Id":"32095",
       "RefId":"FOTB-EN058",
       "NameEn":"Mass Hypnosis",
-      "NameFr":null,
+      "NameFr":"Hypnotisme de masse",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c7/MassHypnosis-FOTB-EN-C-1E.jpg",
-      "IdName":"masshypnosis"
+      "References":null
    },
    {
       "Id":"34527",
       "RefId":"FOTB-EN059",
       "NameEn":"Gem Flash Energy",
-      "NameFr":null,
+      "NameFr":"Energie Flash de la Gemme",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/66/GemFlashEnergy-FOTB-EN-C-1E.jpg",
-      "IdName":"gemflashenergy"
+      "References":null
    },
    {
       "Id":"29755",
       "RefId":"FOTB-EN061",
       "NameEn":"Diabolos, King of the Abyss",
-      "NameFr":null,
+      "NameFr":"Diabolos, Roi des Abysses",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6c/DiabolosKingoftheAbyss-SR06-EN-C-1E.png",
-      "IdName":"diaboloskingoftheabyss"
+      "References":null
    },
    {
       "Id":"29757",
       "RefId":"FOTB-EN062",
       "NameEn":"Lich Lord, King of the Underworld",
-      "NameFr":null,
+      "NameFr":"Seigneur Liche, Roi des Enfers",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/37/LichLordKingoftheUnderworld-SR06-EN-C-1E.png",
-      "IdName":"lichlordkingoftheunderworld"
+      "References":null
    },
    {
       "Id":"30519",
       "RefId":"FOTB-EN066",
       "NameEn":"Recurring Nightmare",
-      "NameFr":null,
+      "NameFr":"Cauchemar Récurrent",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e1/RecurringNightmare-SR06-EN-C-1E.png",
-      "IdName":"recurringnightmare"
+      "References":null
    },
    {
       "Id":"30513",
       "RefId":"FOTB-EN067",
       "NameEn":"Sword of Dark Rites",
-      "NameFr":null,
+      "NameFr":"Epée des Rites Ténébreux",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/cb/SwordofDarkRites-GLD4-EN-C-LE.png",
-      "IdName":"swordofdarkrites"
+      "References":null
    },
    {
       "Id":"29762",
       "RefId":"FOTB-EN068",
       "NameEn":"Eradicator Epidemic Virus",
-      "NameFr":null,
+      "NameFr":"Virus Épidémique D'Éradication",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f2/EradicatorEpidemicVirus-WISU-EN-R-1E.png",
-      "IdName":"eradicatorepidemicvirus"
+      "References":null
    },
    {
       "Id":"55727",
       "RefId":"GLAS-EN000",
       "NameEn":"Gladiator Beast Octavius",
-      "NameFr":null,
+      "NameFr":"Octavius, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/GladiatorBeastOctavius-LCGX-EN-UR-1E.png",
-      "IdName":"gladiatorbeastoctavius"
+      "References":null
    },
    {
       "Id":"47912",
       "RefId":"GLAS-EN001",
       "NameEn":"Chamberlain of the Six Samurai",
-      "NameFr":null,
+      "NameFr":"Chambellan Des Six Samouraïs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/88/ChamberlainoftheSixSamurai-YS14-EN-C-1E.png",
-      "IdName":"chamberlainofthesixsamurai"
+      "References":null
    },
    {
       "Id":"34171",
       "RefId":"GLAS-EN009",
       "NameEn":"Cloudian - Poison Cloud",
-      "NameFr":null,
+      "NameFr":"Nuagien – Gaz Toxique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/37/CloudianPoisonCloud-BP01-EN-C-1E.png",
-      "IdName":"cloudianpoisoncloud"
+      "References":null
    },
    {
       "Id":"42008",
       "RefId":"GLAS-EN017",
       "NameEn":"Gladiator Beast Alexander",
-      "NameFr":null,
+      "NameFr":"Alexandre, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/50/GladiatorBeastAlexander-GLAS-EN-SR-UE.png",
-      "IdName":"gladiatorbeastalexander"
+      "References":null
    },
    {
       "Id":"44198",
       "RefId":"GLAS-EN018",
       "NameEn":"Gladiator Beast Spartacus",
-      "NameFr":null,
+      "NameFr":"Spartacus, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/19/GladiatorBeastSpartacus-GLAS-EN-R-UE.png",
-      "IdName":"gladiatorbeastspartacus"
+      "References":null
    },
    {
       "Id":"44390",
       "RefId":"GLAS-EN019",
       "NameEn":"Gladiator Beast Murmillo",
-      "NameFr":null,
+      "NameFr":"Mirmillon, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0f/GladiatorBeastMurmillo-LCGX-EN-ScR-1E.png",
-      "IdName":"gladiatorbeastmurmillo"
+      "References":null
    },
    {
       "Id":"47975",
       "RefId":"GLAS-EN020",
       "NameEn":"Gladiator Beast Bestiari",
-      "NameFr":null,
+      "NameFr":"Bestiari, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/ff/GladiatorBeastBestiari-AP07-EN-C-UE.png",
-      "IdName":"gladiatorbeastbestiari"
+      "References":null
    },
    {
       "Id":"42009",
       "RefId":"GLAS-EN021",
       "NameEn":"Gladiator Beast Laquari",
-      "NameFr":null,
+      "NameFr":"Laquearius, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/97/GladiatorBeastLaquari-RYMP-EN-ScR-1E.jpg",
-      "IdName":"gladiatorbeastlaquari"
+      "References":null
    },
    {
       "Id":"44439",
       "RefId":"GLAS-EN022",
       "NameEn":"Gladiator Beast Hoplomus",
-      "NameFr":null,
+      "NameFr":"Hoplomaque, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2b/GladiatorBeastHoplomus-LCGX-EN-ScR-1E.png",
-      "IdName":"gladiatorbeasthoplomus"
+      "References":null
    },
    {
       "Id":"42010",
       "RefId":"GLAS-EN023",
       "NameEn":"Gladiator Beast Dimacari",
-      "NameFr":null,
+      "NameFr":"Dimachère, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/65/GladiatorBeastDimacari-GLAS-EN-C-1E.png",
-      "IdName":"gladiatorbeastdimacari"
+      "References":null
    },
    {
       "Id":"62417",
       "RefId":"GLAS-EN024",
       "NameEn":"Gladiator Beast Secutor",
-      "NameFr":null,
+      "NameFr":"Secutor, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/GladiatorBeastSecutor-LCGX-EN-ScR-UE.png",
-      "IdName":"gladiatorbeastsecutor"
+      "References":null
    },
    {
       "Id":"48032",
       "RefId":"GLAS-EN025",
       "NameEn":"Test Ape",
-      "NameFr":null,
+      "NameFr":"Singe De Laboratoire",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/30/TestApe-GLAS-EN-C-UE.png",
-      "IdName":"testape"
+      "References":null
    },
    {
       "Id":"48040",
       "RefId":"GLAS-EN026",
       "NameEn":"Witch Doctor of Sparta",
-      "NameFr":null,
+      "NameFr":"Sorcier Spartiate",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fb/WitchDoctorofSparta-GLAS-EN-C-1E.png",
-      "IdName":"witchdoctorofsparta"
+      "References":null
    },
    {
       "Id":"48055",
       "RefId":"GLAS-EN027",
       "NameEn":"Infinity Dark",
-      "NameFr":null,
+      "NameFr":"Ombre De L'infini",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6d/InfinityDark-GLAS-EN-C-1E.png",
-      "IdName":"infinitydark"
+      "References":null
    },
    {
       "Id":"48056",
       "RefId":"GLAS-EN028",
       "NameEn":"Magical Reflect Slime",
-      "NameFr":null,
+      "NameFr":"Slime Magique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fd/MagicalReflectSlime-GLAS-EN-C-1E.png",
-      "IdName":"magicalreflectslime"
+      "References":null
    },
    {
       "Id":"48046",
       "RefId":"GLAS-EN030",
       "NameEn":"Goblin Black Ops",
-      "NameFr":null,
+      "NameFr":"Unité Gobeline D'assassins",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/29/GoblinBlackOps-GLAS-EN-R-UE.png",
-      "IdName":"goblinblackops"
+      "References":null
    },
    {
       "Id":"48048",
       "RefId":"GLAS-EN031",
       "NameEn":"Gambler of Legend",
-      "NameFr":null,
+      "NameFr":"Joueur Légendaire",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bd/GamblerofLegend-GLAS-EN-C-1E.png",
-      "IdName":"gambleroflegend"
+      "References":null
    },
    {
       "Id":"44442",
       "RefId":"GLAS-EN032",
       "NameEn":"Enishi, Shien's Chancellor",
-      "NameFr":null,
+      "NameFr":"Enishi, Chancelier de Shien",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/20/EnishiShiensChancellor-OP06-EN-C-UE.png",
-      "IdName":"enishishienschancellor"
+      "References":null
    },
    {
       "Id":"48085",
       "RefId":"GLAS-EN033",
       "NameEn":"Spirit of the Six Samurai",
-      "NameFr":null,
+      "NameFr":"Esprit Des Six Samouraïs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/SpiritoftheSixSamurai-SDWA-EN-C-1E.png",
-      "IdName":"spiritofthesixsamurai"
+      "References":null
    },
    {
       "Id":"48089",
       "RefId":"GLAS-EN034",
       "NameEn":"Alien Telepath",
-      "NameFr":null,
+      "NameFr":"Alien Télékinésique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/61/AlienTelepath-GLAS-EN-R-1E.png",
-      "IdName":"alientelepath"
+      "References":null
    },
    {
       "Id":"48059",
       "RefId":"GLAS-EN035",
       "NameEn":"Alien Hypno",
-      "NameFr":null,
+      "NameFr":"Alien Hypnotique",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f5/AlienHypno-GLAS-EN-C-1E.jpg",
-      "IdName":"alienhypno"
+      "References":null
    },
    {
       "Id":"36840",
       "RefId":"GLAS-EN036",
       "NameEn":"Elemental HERO Chaos Neos",
-      "NameFr":null,
+      "NameFr":"Néos Chaos, Héros Élémentaire",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/3b/ElementalHEROChaosNeos-BLAR-EN-UR-1E.png",
-      "IdName":"elementalherochaosneos"
+      "References":null
    },
    {
       "Id":"48060",
@@ -28152,147 +28048,147 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/be/SuperalloyBeastRaptinus-GLAS-EN-C-1E.jpg",
-      "IdName":"superalloybeastraptinus"
+      "References":null
    },
    {
       "Id":"46196",
       "RefId":"GLAS-EN043",
       "NameEn":"Gladiator Beast Gaiodiaz",
-      "NameFr":null,
+      "NameFr":"Gaiodiaz, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/24/GladiatorBeastGaiodiaz-GLAS-EN-R-UE.png",
-      "IdName":"gladiatorbeastgaiodiaz"
+      "References":null
    },
    {
       "Id":"46194",
       "RefId":"GLAS-EN044",
       "NameEn":"Gladiator Beast Heraklinos",
-      "NameFr":null,
+      "NameFr":"Heraklinos, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/96/GladiatorBeastHeraklinos-LCGX-EN-SR-UE.png",
-      "IdName":"gladiatorbeastheraklinos"
+      "References":null
    },
    {
       "Id":"29387",
       "RefId":"GLAS-EN045",
       "NameEn":"Contact Out",
-      "NameFr":null,
+      "NameFr":"Hors Contact",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/40/ContactOut-GLAS-EN-C-1E.png",
-      "IdName":"contactout"
+      "References":null
    },
    {
       "Id":"34196",
       "RefId":"GLAS-EN050",
       "NameEn":"Lucky Cloud",
-      "NameFr":null,
+      "NameFr":"Nuage De Chance",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/LuckyCloud-GLAS-EN-C-1E.jpg",
-      "IdName":"luckycloud"
+      "References":null
    },
    {
       "Id":"48276",
       "RefId":"GLAS-EN053",
       "NameEn":"Super Double Summon",
-      "NameFr":null,
+      "NameFr":"Super Double Invocation",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/cf/SuperDoubleSummon-GLAS-EN-C-1E.jpg",
-      "IdName":"superdoublesummon"
+      "References":null
    },
    {
       "Id":"44433",
       "RefId":"GLAS-EN054",
       "NameEn":"Colosseum - Cage of the Gladiator Beasts",
-      "NameFr":null,
+      "NameFr":"Colisée – Cage Des Bêtes Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/51/ColosseumCageoftheGladiatorBeasts-GLAS-EN-R-1E.png",
-      "IdName":"colosseumcageofthegladiatorbeasts"
+      "References":null
    },
    {
       "Id":"48282",
       "RefId":"GLAS-EN055",
       "NameEn":"Gladiator Beast's Battle Halberd",
-      "NameFr":null,
+      "NameFr":"Hallebarde De Combat Des Bêtes Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4e/GladiatorBeastsBattleHalberd-GLAS-EN-C-1E.jpg",
-      "IdName":"gladiatorbeastsbattlehalberd"
+      "References":null
    },
    {
       "Id":"48288",
       "RefId":"GLAS-EN056",
       "NameEn":"Gladiator Beast's Battle Gladius",
-      "NameFr":null,
+      "NameFr":"Glaive De Combat Des Bêtes Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/GladiatorBeastsBattleGladius-GLAS-EN-C-1E.jpg",
-      "IdName":"gladiatorbeastsbattlegladius"
+      "References":null
    },
    {
       "Id":"44436",
       "RefId":"GLAS-EN057",
       "NameEn":"Gladiator Beast's Battle Manica",
-      "NameFr":null,
+      "NameFr":"Manica De Combat Des Bêtes Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e0/GladiatorBeastsBattleManica-GLAS-EN-R-1E.jpg",
-      "IdName":"gladiatorbeastsbattlemanica"
+      "References":null
    },
    {
       "Id":"48292",
       "RefId":"GLAS-EN058",
       "NameEn":"Gladiator Beast's Respite",
-      "NameFr":null,
+      "NameFr":"Le Repos des Bêtes Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/62/GladiatorBeastsRespite-RYMP-EN-C-1E.png",
-      "IdName":"gladiatorbeastsrespite"
+      "References":null
    },
    {
       "Id":"48303",
       "RefId":"GLAS-EN059",
       "NameEn":"Gladiator's Return",
-      "NameFr":null,
+      "NameFr":"Le Retour des Gladiateurs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/26/GladiatorsReturn-RYMP-EN-C-1E.png",
-      "IdName":"gladiatorsreturn"
+      "References":null
    },
    {
       "Id":"48310",
       "RefId":"GLAS-EN060",
       "NameEn":"Soul Devouring Bamboo Sword",
-      "NameFr":null,
+      "NameFr":"Épée De Bambou Dévoreuse D'esprit",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/35/SoulDevouringBambooSword-GLAS-EN-C-1E.png",
-      "IdName":"souldevouringbamboosword"
+      "References":null
    },
    {
       "Id":"48316",
       "RefId":"GLAS-EN061",
       "NameEn":"Cunning of the Six Samurai",
-      "NameFr":null,
+      "NameFr":"Ruse des Six Samouraïs",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7a/CunningoftheSixSamurai-SDWA-EN-C-1E.png",
-      "IdName":"cunningofthesixsamurai"
+      "References":null
    },
    {
       "Id":"48321",
       "RefId":"GLAS-EN062",
       "NameEn":"\"A\" Cell Incubator",
-      "NameFr":null,
+      "NameFr":"Incubateur De Cellules \"A\"",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/38/ACellIncubator-GLAS-EN-C-1E.png",
-      "IdName":"acellincubator"
+      "References":null
    },
    {
       "Id":"29585",
@@ -28302,177 +28198,177 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a0/NoEntry-BP03-EN-C-1E.png",
-      "IdName":"noentry"
+      "References":null
    },
    {
       "Id":"34194",
       "RefId":"GLAS-EN065",
       "NameEn":"Natural Disaster",
-      "NameFr":null,
+      "NameFr":"Désastre Naturel",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/NaturalDisaster-GLAS-EN-C-1E.jpg",
-      "IdName":"naturaldisaster"
+      "References":null
    },
    {
       "Id":"48326",
       "RefId":"GLAS-EN067",
       "NameEn":"Updraft",
-      "NameFr":null,
+      "NameFr":"Courant Ascendant",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/40/Updraft-GLAS-EN-SR-1E.png",
-      "IdName":"updraft"
+      "References":null
    },
    {
       "Id":"48334",
       "RefId":"GLAS-EN068",
       "NameEn":"Release from Stone",
-      "NameFr":null,
+      "NameFr":"Libération De Fossile",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/ReleasefromStone-GLAS-EN-C-UE.png",
-      "IdName":"releasefromstone"
+      "References":null
    },
    {
       "Id":"49591",
       "RefId":"GLAS-EN069",
       "NameEn":"Light-Imprisoning Mirror",
-      "NameFr":null,
+      "NameFr":"Miroir Absorbant De Lumière",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f0/LightImprisoningMirror-MAMA-EN-UR-1E.png",
-      "IdName":"lightimprisoningmirror"
+      "References":null
    },
    {
       "Id":"49597",
       "RefId":"GLAS-EN070",
       "NameEn":"Shadow-Imprisoning Mirror",
-      "NameFr":null,
+      "NameFr":"Miroir Absorbant Des Ténèbres",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e0/ShadowImprisoningMirror-MAMA-EN-UR-1E.png",
-      "IdName":"shadowimprisoningmirror"
+      "References":null
    },
    {
       "Id":"29866",
       "RefId":"GLAS-EN071",
       "NameEn":"Disarm",
-      "NameFr":null,
+      "NameFr":"Désarmer",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/Disarm-GLAS-EN-C-UE.png",
-      "IdName":"disarm"
+      "References":null
    },
    {
       "Id":"48155",
       "RefId":"GLAS-EN072",
       "NameEn":"Parry",
-      "NameFr":null,
+      "NameFr":"Parer",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a4/Parry-GLAS-EN-C-1E.jpg",
-      "IdName":"parry"
+      "References":null
    },
    {
       "Id":"49603",
       "RefId":"GLAS-EN073",
       "NameEn":"Swiftstrike Armor",
-      "NameFr":null,
+      "NameFr":"Armure De Rapidité Divine",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/66/SwiftstrikeArmor-LCGX-EN-R-1E.png",
-      "IdName":"swiftstrikearmor"
+      "References":null
    },
    {
       "Id":"49610",
       "RefId":"GLAS-EN074",
       "NameEn":"Double-Edged Sword Technique",
-      "NameFr":null,
+      "NameFr":"Technique de la Double Lame",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/97/DoubleEdgedSwordTechnique-SPWA-EN-SR-1E.png",
-      "IdName":"doubleedgedswordtechnique"
+      "References":null
    },
    {
       "Id":"49615",
       "RefId":"GLAS-EN075",
       "NameEn":"Energy-Absorbing Monolith",
-      "NameFr":null,
+      "NameFr":"Monolithe Absorbant D'Énergie",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dd/EnergyAbsorbingMonolith-GLAS-EN-SR-1E.png",
-      "IdName":"energyabsorbingmonolith"
+      "References":null
    },
    {
       "Id":"49621",
       "RefId":"GLAS-EN076",
       "NameEn":"Cell Explosion Virus",
-      "NameFr":null,
+      "NameFr":"Virus À Cellules Explosives",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/CellExplosionVirus-CP08-EN-C-UE.jpg",
-      "IdName":"cellexplosionvirus"
+      "References":null
    },
    {
       "Id":"49627",
       "RefId":"GLAS-EN077",
       "NameEn":"Detonator Circle \"A\"",
-      "NameFr":null,
+      "NameFr":"Cercle De Détonation \"A\"",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1b/DetonatorCircleA-GLAS-EN-C-1E.png",
-      "IdName":"detonatorcirclea"
+      "References":null
    },
    {
       "Id":"49632",
       "RefId":"GLAS-EN078",
       "NameEn":"Interdimensional Warp",
-      "NameFr":null,
+      "NameFr":"Trou Interdimensionnel",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/10/InterdimensionalWarp-GLAS-EN-C-1E.jpg",
-      "IdName":"interdimensionalwarp"
+      "References":null
    },
    {
       "Id":"49637",
       "RefId":"GLAS-EN079",
       "NameEn":"Foolish Revival",
-      "NameFr":null,
+      "NameFr":"Résurrection Absurde",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d1/FoolishRevival-GLAS-EN-C-1E.jpg",
-      "IdName":"foolishrevival"
+      "References":null
    },
    {
       "Id":"49641",
       "RefId":"GLAS-EN080",
       "NameEn":"An Unfortunate Report",
-      "NameFr":null,
+      "NameFr":"Compte-rendu Regrettable",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d4/AnUnfortunateReport-GLAS-EN-C-1E.jpg",
-      "IdName":"anunfortunatereport"
+      "References":null
    },
    {
       "Id":"62580",
       "RefId":"GLAS-EN081",
       "NameEn":"Gladiator Beast Torax",
-      "NameFr":null,
+      "NameFr":"Thraces, Bête Gladiateur",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0d/GladiatorBeastTorax-GLAS-EN-SR-1E.png",
-      "IdName":"gladiatorbeasttorax"
+      "References":null
    },
    {
       "Id":"59668",
       "RefId":"GLAS-EN082",
       "NameEn":"Test Tiger",
-      "NameFr":null,
+      "NameFr":"Tigre de Laboratoire",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d0/TestTiger-RYMP-EN-C-1E.png",
-      "IdName":"testtiger"
+      "References":null
    },
    {
       "Id":"62582",
@@ -28482,47 +28378,47 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c3/DefensiveTactics-LCGX-EN-UR-1E.png",
-      "IdName":"defensivetactics"
+      "References":null
    },
    {
       "Id":"59669",
       "RefId":"GLAS-EN084",
       "NameEn":"Dragon Ice",
-      "NameFr":null,
+      "NameFr":"Tactique De Défense",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/19/DragonIce-BP02-EN-C-1E.png",
-      "IdName":"dragonice"
+      "References":null
    },
    {
       "Id":"59670",
       "RefId":"GLAS-EN085",
       "NameEn":"Tongue Twister",
-      "NameFr":null,
+      "NameFr":"Virelangue",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/44/TongueTwister-GLAS-EN-ScR-UE.png",
-      "IdName":"tonguetwister"
+      "References":null
    },
    {
       "Id":"17190",
       "RefId":"GLAS-EN090",
       "NameEn":"Necroface",
-      "NameFr":null,
+      "NameFr":"Visage Nécro",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/84/Necroface-LDS3-EN-C-1E.png",
-      "IdName":"necroface"
+      "References":null
    },
    {
       "Id":"19892",
       "RefId":"GLAS-EN092",
       "NameEn":"Soul Taker",
-      "NameFr":null,
+      "NameFr":"Voleur d'Esprit",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1d/SoulTaker-YGLD-EN-C-1E.png",
-      "IdName":"soultaker"
+      "References":null
    },
    {
       "Id":"24163",
@@ -28532,7 +28428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4f/SasukeSamurai3-DR2-EN-C-UE.jpg",
-      "IdName":"sasukesamurai3"
+      "References":null
    },
    {
       "Id":"5347",
@@ -28542,7 +28438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/92/FiendReflection2-LOB-EN-C-UE.png",
-      "IdName":"fiendreflection2"
+      "References":null
    },
    {
       "Id":"5413",
@@ -28552,7 +28448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c1/MysticalSheep2-LOB-NA-C-1E.jpg",
-      "IdName":"mysticalsheep2"
+      "References":null
    },
    {
       "Id":"5683",
@@ -28562,7 +28458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9f/MWarrior1-LOB-EN-C-UE.png",
-      "IdName":"mwarrior1"
+      "References":null
    },
    {
       "Id":"5686",
@@ -28572,7 +28468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/42/MWarrior2-LOB-NA-C-1E.jpg",
-      "IdName":"mwarrior2"
+      "References":null
    },
    {
       "Id":"5773",
@@ -28582,7 +28478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/30/SteelOgreGrotto1-LOB-NA-C-1E.jpg",
-      "IdName":"steelogregrotto1"
+      "References":null
    },
    {
       "Id":"13649",
@@ -28592,47 +28488,47 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7c/SkullKnight2-DB2-EN-C-UE.png",
-      "IdName":"skullknight2"
+      "References":null
    },
    {
       "Id":"13902",
       "RefId":"LOD-EN017",
       "NameEn":"Throwstone Unit",
-      "NameFr":null,
+      "NameFr":"Unité de Lance-Pierre",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b4/ThrowstoneUnit-LOD-EN-C-UE.png",
-      "IdName":"throwstoneunit"
+      "References":null
    },
    {
       "Id":"15095",
       "RefId":"LOD-EN024",
       "NameEn":"The Hunter with 7 Weapons",
-      "NameFr":null,
+      "NameFr":"Le Chasseur aux 7 Armes",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f9/TheHunterwith7Weapons-LOD-NA-C-1E.jpg",
-      "IdName":"thehunterwith7weapons"
+      "References":null
    },
    {
       "Id":"14619",
       "RefId":"LOD-EN032",
       "NameEn":"A Feint Plan",
-      "NameFr":null,
+      "NameFr":"Juste une feinte",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/27/AFeintPlan-LOD-EN-C-UE.jpg",
-      "IdName":"afeintplan"
+      "References":null
    },
    {
       "Id":"15394",
       "RefId":"LOD-EN038",
       "NameEn":"Lizard Soldier",
-      "NameFr":null,
+      "NameFr":"Lizard Soldier",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e9/LizardSoldier-LOD-NA-C-1E.jpg",
-      "IdName":"lizardsoldier"
+      "References":null
    },
    {
       "Id":"4969",
@@ -28642,37 +28538,37 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/LusterDragon2-SS02-EN-C-1E.png",
-      "IdName":"lusterdragon2"
+      "References":null
    },
    {
       "Id":"7590",
       "RefId":"LOD-EN054",
       "NameEn":"Robolady",
-      "NameFr":null,
+      "NameFr":"Robolady",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b2/Robolady-LOD-NA-C-1E.jpg",
-      "IdName":"robolady"
+      "References":null
    },
    {
       "Id":"6814",
       "RefId":"LOD-EN055",
       "NameEn":"Roboyarou",
-      "NameFr":null,
+      "NameFr":"Roboyarou",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/48/Roboyarou-LOD-NA-C-1E.jpg",
-      "IdName":"roboyarou"
+      "References":null
    },
    {
       "Id":"15100",
       "RefId":"LOD-EN098",
       "NameEn":"Fiend Comedian",
-      "NameFr":null,
+      "NameFr":"Démon Comédien",
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/FiendComedian-LOD-NA-C-1E.jpg",
-      "IdName":"fiendcomedian"
+      "References":null
    },
    {
       "Id":"61876",
@@ -28682,7 +28578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6d/Honest-SR05-EN-C-1E.png",
-      "IdName":"honest"
+      "References":null
    },
    {
       "Id":"82302",
@@ -28692,7 +28588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/80/CrossPorter-LODT-EN-C-UE.png",
-      "IdName":"crossporter"
+      "References":null
    },
    {
       "Id":"85069",
@@ -28702,7 +28598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/MiracleFlipper-LODT-EN-C-1E.png",
-      "IdName":"miracleflipper"
+      "References":null
    },
    {
       "Id":"75509",
@@ -28712,7 +28608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fd/DestinyHERODreadServant-LEHD-EN-C-1E.png",
-      "IdName":"destinyherodreadservant"
+      "References":null
    },
    {
       "Id":"83243",
@@ -28722,7 +28618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/06/VolcanicQueen-LODT-EN-C-UE.png",
-      "IdName":"volcanicqueen"
+      "References":null
    },
    {
       "Id":"71747",
@@ -28732,7 +28628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7a/JinzoReturner-LED7-EN-C-1E.png",
-      "IdName":"jinzoreturner"
+      "References":null
    },
    {
       "Id":"72705",
@@ -28742,7 +28638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/29/JinzoLord-LED7-EN-C-1E.png",
-      "IdName":"jinzolord"
+      "References":null
    },
    {
       "Id":"85065",
@@ -28752,7 +28648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/04/ArcanaForce0TheFool-DT06-EN-DNPR-DT.jpg",
-      "IdName":"arcanaforce0thefool"
+      "References":null
    },
    {
       "Id":"28525",
@@ -28762,7 +28658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/09/ArcanaForceITheMagician-LODT-EN-C-UE.png",
-      "IdName":"arcanaforceithemagician"
+      "References":null
    },
    {
       "Id":"28555",
@@ -28772,7 +28668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/71/ArcanaForceIIITheEmpress-LODT-EN-C-UE.png",
-      "IdName":"arcanaforceiiitheempress"
+      "References":null
    },
    {
       "Id":"28562",
@@ -28782,7 +28678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fd/ArcanaForceIVTheEmperor-LODT-EN-C-UE.png",
-      "IdName":"arcanaforceivtheemperor"
+      "References":null
    },
    {
       "Id":"29636",
@@ -28792,7 +28688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/36/ArcanaForceVITheLovers-LODT-EN-C-1E.png",
-      "IdName":"arcanaforcevithelovers"
+      "References":null
    },
    {
       "Id":"28552",
@@ -28802,7 +28698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/00/ArcanaForceVIITheChariot-LODT-EN-C-UE.png",
-      "IdName":"arcanaforceviithechariot"
+      "References":null
    },
    {
       "Id":"28554",
@@ -28812,7 +28708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/cd/ArcanaForceXIVTemperance-BP01-EN-C-1E.png",
-      "IdName":"arcanaforcexivtemperance"
+      "References":null
    },
    {
       "Id":"29634",
@@ -28822,7 +28718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c6/ArcanaForceXVIIITheMoon-LODT-EN-C-1E.png",
-      "IdName":"arcanaforcexviiithemoon"
+      "References":null
    },
    {
       "Id":"29492",
@@ -28832,7 +28728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6c/ArcanaForceXXITheWorld-LODT-EN-UR-1E.png",
-      "IdName":"arcanaforcexxitheworld"
+      "References":null
    },
    {
       "Id":"85067",
@@ -28842,7 +28738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bb/ArcanaForceEXTheDarkRuler-SP13-EN-C-1E.png",
-      "IdName":"arcanaforceexthedarkruler"
+      "References":null
    },
    {
       "Id":"79805",
@@ -28852,7 +28748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/JainLightswornPaladin-SR02-EN-C-1E.png",
-      "IdName":"jainlightswornpaladin"
+      "References":null
    },
    {
       "Id":"79809",
@@ -28862,7 +28758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/32/LylaLightswornSorceress-BLLR-EN-UR-1E.png",
-      "IdName":"lylalightswornsorceress"
+      "References":null
    },
    {
       "Id":"85076",
@@ -28872,7 +28768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/07/GarothLightswornWarrior-BLLR-EN-UR-1E.png",
-      "IdName":"garothlightswornwarrior"
+      "References":null
    },
    {
       "Id":"91205",
@@ -28882,7 +28778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0d/LuminaLightswornSummoner-BLLR-EN-UR-1E.png",
-      "IdName":"luminalightswornsummoner"
+      "References":null
    },
    {
       "Id":"85080",
@@ -28892,7 +28788,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4c/RykoLightswornHunter-YS18-EN-C-1E.png",
-      "IdName":"rykolightswornhunter"
+      "References":null
    },
    {
       "Id":"85075",
@@ -28902,7 +28798,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/WulfLightswornBeast-BLLR-EN-UR-1E.png",
-      "IdName":"wulflightswornbeast"
+      "References":null
    },
    {
       "Id":"89223",
@@ -28912,7 +28808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7c/CelestiaLightswornAngel-BLLR-EN-UR-1E.png",
-      "IdName":"celestialightswornangel"
+      "References":null
    },
    {
       "Id":"79802",
@@ -28922,7 +28818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2a/GragonithLightswornDragon-SDLI-EN-C-1E.png",
-      "IdName":"gragonithlightsworndragon"
+      "References":null
    },
    {
       "Id":"85081",
@@ -28932,7 +28828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a7/JudgmentDragon-BLLR-EN-UR-1E.png",
-      "IdName":"judgmentdragon"
+      "References":null
    },
    {
       "Id":"85082",
@@ -28942,7 +28838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1b/DarkValkyria-LDK2-EN-C-1E.png",
-      "IdName":"darkvalkyria"
+      "References":null
    },
    {
       "Id":"85087",
@@ -28952,7 +28848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dc/Substitoad-LODT-EN-R-1E.png",
-      "IdName":"substitoad"
+      "References":null
    },
    {
       "Id":"85086",
@@ -28962,7 +28858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a3/Unifrog-LODT-EN-C-UE.png",
-      "IdName":"unifrog"
+      "References":null
    },
    {
       "Id":"85085",
@@ -28972,7 +28868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/BatterymanCharger-LODT-EN-C-UE.png",
-      "IdName":"batterymancharger"
+      "References":null
    },
    {
       "Id":"85084",
@@ -28982,7 +28878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b6/BatterymanIndustrialStrength-LODT-EN-R-1E.png",
-      "IdName":"batterymanindustrialstrength"
+      "References":null
    },
    {
       "Id":"85083",
@@ -28992,7 +28888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/52/BatterymanMicroCell-LODT-EN-C-1E.png",
-      "IdName":"batterymanmicrocell"
+      "References":null
    },
    {
       "Id":"91242",
@@ -29002,7 +28898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b0/GoblinReconSquad-LODT-EN-C-1E.png",
-      "IdName":"goblinreconsquad"
+      "References":null
    },
    {
       "Id":"91247",
@@ -29012,7 +28908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/10/InterplanetaryInvaderA-LODT-EN-C-1E.png",
-      "IdName":"interplanetaryinvadera"
+      "References":null
    },
    {
       "Id":"91259",
@@ -29022,7 +28918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2a/TheLadyinWight-GLD5-EN-C-LE.png",
-      "IdName":"theladyinwight"
+      "References":null
    },
    {
       "Id":"91169",
@@ -29032,7 +28928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/af/SimorghBirdofAncestry-LODT-EN-R-1E.png",
-      "IdName":"simorghbirdofancestry"
+      "References":null
    },
    {
       "Id":"91302",
@@ -29042,7 +28938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2c/PhantomDragon-BP02-EN-R-1E.png",
-      "IdName":"phantomdragon"
+      "References":null
    },
    {
       "Id":"102849",
@@ -29052,7 +28948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/14/GladiatorBeastGyzarus-DUSA-EN-UR-1E.png",
-      "IdName":"gladiatorbeastgyzarus"
+      "References":null
    },
    {
       "Id":"53437",
@@ -29062,7 +28958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d7/HeroMask-SDHS-EN-C-1E.png",
-      "IdName":"heromask"
+      "References":null
    },
    {
       "Id":"57663",
@@ -29072,7 +28968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a6/SpaceGift-OP08-EN-SR-UE.png",
-      "IdName":"spacegift"
+      "References":null
    },
    {
       "Id":"91368",
@@ -29082,7 +28978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/75/DemiseoftheLand-OP14-EN-C-UE.png",
-      "IdName":"demiseoftheland"
+      "References":null
    },
    {
       "Id":"32929",
@@ -29092,7 +28988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4a/DFormation-LCGX-EN-C-1E.png",
-      "IdName":"dformation"
+      "References":null
    },
    {
       "Id":"79703",
@@ -29102,7 +28998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/30/SpellGear-LODT-EN-C-1E.png",
-      "IdName":"spellgear"
+      "References":null
    },
    {
       "Id":"34569",
@@ -29112,7 +29008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c0/CupofAce-LODT-EN-C-UE.png",
-      "IdName":"cupoface"
+      "References":null
    },
    {
       "Id":"85089",
@@ -29122,7 +29018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ec/LightBarrier-LODT-EN-R-1E.png",
-      "IdName":"lightbarrier"
+      "References":null
    },
    {
       "Id":"91369",
@@ -29132,7 +29028,7 @@ module.exports =
       "Limit":"K",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/SolarRecharge-BLLR-EN-UR-1E.png",
-      "IdName":"solarrecharge"
+      "References":null
    },
    {
       "Id":"85093",
@@ -29142,7 +29038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6f/RealmofLight-SDLI-EN-C-1E.png",
-      "IdName":"realmoflight"
+      "References":null
    },
    {
       "Id":"85094",
@@ -29152,7 +29048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/81/Wetlands-LODT-EN-C-UE.png",
-      "IdName":"wetlands"
+      "References":null
    },
    {
       "Id":"91370",
@@ -29162,7 +29058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/84/QuickCharger-LODT-EN-C-1E.png",
-      "IdName":"quickcharger"
+      "References":null
    },
    {
       "Id":"91371",
@@ -29172,7 +29068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/35/ShortCircuit-LODT-EN-C-1E.png",
-      "IdName":"shortcircuit"
+      "References":null
    },
    {
       "Id":"85095",
@@ -29182,7 +29078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ab/LightofRedemption-SDCR-EN-C-1E.png",
-      "IdName":"lightofredemption"
+      "References":null
    },
    {
       "Id":"91413",
@@ -29192,7 +29088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a4/MysticalCardsofLight-LODT-EN-C-1E.png",
-      "IdName":"mysticalcardsoflight"
+      "References":null
    },
    {
       "Id":"91372",
@@ -29202,7 +29098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/LevelTuning-LODT-EN-C-1E.png",
-      "IdName":"leveltuning"
+      "References":null
    },
    {
       "Id":"85090",
@@ -29212,7 +29108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b6/DeckLockdown-DUOV-EN-UR-1E.png",
-      "IdName":"decklockdown"
+      "References":null
    },
    {
       "Id":"90437",
@@ -29222,7 +29118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/49/RibbonofRebirth-BP03-EN-C-1E.png",
-      "IdName":"ribbonofrebirth"
+      "References":null
    },
    {
       "Id":"91373",
@@ -29232,7 +29128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9e/GoldenBambooSword-SHVA-EN-SR-1E.png",
-      "IdName":"goldenbamboosword"
+      "References":null
    },
    {
       "Id":"71700",
@@ -29242,7 +29138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/eb/LimitReverse-YS12-EN-C-1E.png",
-      "IdName":"limitreverse"
+      "References":null
    },
    {
       "Id":"86631",
@@ -29252,7 +29148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/15/HeroBlast-SDHS-EN-C-1E.png",
-      "IdName":"heroblast"
+      "References":null
    },
    {
       "Id":"32932",
@@ -29262,7 +29158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c5/DFortune-LCGX-EN-C-1E.png",
-      "IdName":"dfortune"
+      "References":null
    },
    {
       "Id":"32600",
@@ -29272,7 +29168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/33/ReversalofFate-LODT-EN-C-UE.png",
-      "IdName":"reversaloffate"
+      "References":null
    },
    {
       "Id":"85661",
@@ -29282,7 +29178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b5/TourofDoom-LODT-EN-C-UE.png",
-      "IdName":"tourofdoom"
+      "References":null
    },
    {
       "Id":"75404",
@@ -29292,7 +29188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f8/ArcanaCall-LODT-EN-C-1E.png",
-      "IdName":"arcanacall"
+      "References":null
    },
    {
       "Id":"89225",
@@ -29302,7 +29198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/90/LightSpiral-LODT-EN-C-1E.png",
-      "IdName":"lightspiral"
+      "References":null
    },
    {
       "Id":"91366",
@@ -29312,7 +29208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9f/GloriousIllusion-SDLI-EN-C-1E.png",
-      "IdName":"gloriousillusion"
+      "References":null
    },
    {
       "Id":"85098",
@@ -29322,7 +29218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ed/DestructionJammer-LODT-EN-R-1E.png",
-      "IdName":"destructionjammer"
+      "References":null
    },
    {
       "Id":"91158",
@@ -29332,7 +29228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c8/FroggyForcefield-LODT-EN-R-1E.png",
-      "IdName":"froggyforcefield"
+      "References":null
    },
    {
       "Id":"91418",
@@ -29342,7 +29238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/64/PortableBatteryPack-LODT-EN-C-1E.png",
-      "IdName":"portablebatterypack"
+      "References":null
    },
    {
       "Id":"91258",
@@ -29352,7 +29248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ae/GladiatorLash-LODT-EN-C-1E.png",
-      "IdName":"gladiatorlash"
+      "References":null
    },
    {
       "Id":"91798",
@@ -29362,7 +29258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/SanguineSwamp-LODT-EN-C-UE.png",
-      "IdName":"sanguineswamp"
+      "References":null
    },
    {
       "Id":"91800",
@@ -29372,7 +29268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c5/LuckyChance-OP07-EN-C-UE.png",
-      "IdName":"luckychance"
+      "References":null
    },
    {
       "Id":"91803",
@@ -29382,7 +29278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f6/SummonLimit-MGED-EN-R-1E.png",
-      "IdName":"summonlimit"
+      "References":null
    },
    {
       "Id":"91804",
@@ -29392,7 +29288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d2/DiceTry-LCJW-EN-C-1E.png",
-      "IdName":"dicetry"
+      "References":null
    },
    {
       "Id":"103778",
@@ -29402,7 +29298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/AurkusLightswornDruid-SDLI-EN-C-1E.png",
-      "IdName":"aurkuslightsworndruid"
+      "References":null
    },
    {
       "Id":"104761",
@@ -29412,7 +29308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e4/EhrenLightswornMonk-SR02-EN-C-1E.png",
-      "IdName":"ehrenlightswornmonk"
+      "References":null
    },
    {
       "Id":"105241",
@@ -29422,7 +29318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/00/DarkGeneralFreed-LCYW-EN-C-1E.jpg",
-      "IdName":"darkgeneralfreed"
+      "References":null
    },
    {
       "Id":"105142",
@@ -29432,7 +29328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/61/MagicalExemplar-SR08-EN-C-1E.png",
-      "IdName":"magicalexemplar"
+      "References":null
    },
    {
       "Id":"105576",
@@ -29442,7 +29338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f1/ManiacalServant-LODT-EN-R-1E.png",
-      "IdName":"maniacalservant"
+      "References":null
    },
    {
       "Id":"104097",
@@ -29452,7 +29348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dc/NimbleMusasabi-LODT-EN-R-1E.png",
-      "IdName":"nimblemusasabi"
+      "References":null
    },
    {
       "Id":"104839",
@@ -29462,7 +29358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/06/FlameSpiritIgnis-LODT-EN-R-1E.png",
-      "IdName":"flamespiritignis"
+      "References":null
    },
    {
       "Id":"104840",
@@ -29472,7 +29368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9a/VanquishingLight-SDLI-EN-C-1E.png",
-      "IdName":"vanquishinglight"
+      "References":null
    },
    {
       "Id":"21313",
@@ -29482,7 +29378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/Tualatin-AC18-EN-SR-1E.png",
-      "IdName":"tualatin"
+      "References":null
    },
    {
       "Id":"21298",
@@ -29492,7 +29388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/3c/DivineKnightIshzark-LCJW-EN-C-1E.png",
-      "IdName":"divineknightishzark"
+      "References":null
    },
    {
       "Id":"24900",
@@ -29502,7 +29398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/65/UnionAttack-BP02-EN-C-1E.png",
-      "IdName":"unionattack"
+      "References":null
    },
    {
       "Id":"24892",
@@ -29512,7 +29408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ab/OwnersSeal-SDSA-EN-C-1E.png",
-      "IdName":"ownersseal"
+      "References":null
    },
    {
       "Id":"24851",
@@ -29522,7 +29418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2d/DangerousMachineType6-LCJW-EN-C-1E.png",
-      "IdName":"dangerousmachinetype6"
+      "References":null
    },
    {
       "Id":"24855",
@@ -29532,7 +29428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e7/MaximumSix-LCJW-EN-C-1E.png",
-      "IdName":"maximumsix"
+      "References":null
    },
    {
       "Id":"43901",
@@ -29542,7 +29438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4e/FossilDynaPachycephalo-MGED-EN-PGR-1E.png",
-      "IdName":"fossildynapachycephalo"
+      "References":null
    },
    {
       "Id":"5919",
@@ -29552,7 +29448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e2/WingedDragonGuardianoftheFortress1-YGLD-EN-C-1E.png",
-      "IdName":"wingeddragonguardianofthefortress1"
+      "References":null
    },
    {
       "Id":"5925",
@@ -29562,7 +29458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/RockOgreGrotto1-LCJW-EN-C-1E.png",
-      "IdName":"rockogregrotto1"
+      "References":null
    },
    {
       "Id":"6636",
@@ -29572,7 +29468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/36/Jinzo7-DB1-EN-C-UE.jpg",
-      "IdName":"jinzo7"
+      "References":null
    },
    {
       "Id":"6899",
@@ -29582,7 +29478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/45/TributetoTheDoomed-SS05-EN-C-1E.png",
-      "IdName":"tributetothedoomed"
+      "References":null
    },
    {
       "Id":"7158",
@@ -29592,7 +29488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8e/MushroomMan2-MRD-EN-C-UE.png",
-      "IdName":"mushroomman2"
+      "References":null
    },
    {
       "Id":"15992",
@@ -29602,7 +29498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/52/MoltenBehemoth-PGD-NA-C-UE.png",
-      "IdName":"moltenbehemoth"
+      "References":null
    },
    {
       "Id":"15998",
@@ -29612,7 +29508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/45/Souleater-PGD-NA-C-UE.png",
-      "IdName":"souleater"
+      "References":null
    },
    {
       "Id":"15773",
@@ -29622,7 +29518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e1/CobramanSakuzy-PGD-NA-C-UE-Reprint.png",
-      "IdName":"cobramansakuzy"
+      "References":null
    },
    {
       "Id":"8136",
@@ -29632,7 +29528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/65/SteelOgreGrotto2-PSV-EN-C-UE.jpg",
-      "IdName":"steelogregrotto2"
+      "References":null
    },
    {
       "Id":"8198",
@@ -29642,7 +29538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/09/GiftofTheMysticalElf-PSV-EN-SP-UE.jpg",
-      "IdName":"giftofthemysticalelf"
+      "References":null
    },
    {
       "Id":"7425",
@@ -29652,7 +29548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/MorphingJar2-SP14-EN-C-1E.png",
-      "IdName":"morphingjar2"
+      "References":null
    },
    {
       "Id":"8490",
@@ -29662,7 +29558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c3/DarkfireSoldier1-PSV-EN-C-UE.png",
-      "IdName":"darkfiresoldier1"
+      "References":null
    },
    {
       "Id":"8502",
@@ -29672,7 +29568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/db/DarkfireSoldier2-PSV-NA-C-1E.jpg",
-      "IdName":"darkfiresoldier2"
+      "References":null
    },
    {
       "Id":"8510",
@@ -29682,7 +29578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/39/FlyingKamakiri2-PSV-NA-C-1E.jpg",
-      "IdName":"flyingkamakiri2"
+      "References":null
    },
    {
       "Id":"72748",
@@ -29692,7 +29588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ae/DarkGrepher-DASA-EN-SR-1E.png",
-      "IdName":"darkgrepher"
+      "References":null
    },
    {
       "Id":"64662",
@@ -29702,7 +29598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0e/GladiatorBeastAndal-LCGX-EN-C-1E.png",
-      "IdName":"gladiatorbeastandal"
+      "References":null
    },
    {
       "Id":"66288",
@@ -29712,7 +29608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/66/AtlanteanPikeman-SDRE-EN-C-1E.png",
-      "IdName":"atlanteanpikeman"
+      "References":null
    },
    {
       "Id":"57107",
@@ -29722,7 +29618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ee/SamsaraLotus-PTDN-EN-C-UE.png",
-      "IdName":"samsaralotus"
+      "References":null
    },
    {
       "Id":"57010",
@@ -29732,7 +29628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/48/RegeneratingRose-PTDN-EN-C-1E.jpg",
-      "IdName":"regeneratingrose"
+      "References":null
    },
    {
       "Id":"37057",
@@ -29742,7 +29638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0a/Yubel-RYMP-EN-R-1E.jpg",
-      "IdName":"yubel"
+      "References":null
    },
    {
       "Id":"57056",
@@ -29752,7 +29648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/51/YubelTerrorIncarnate-RYMP-EN-R-1E.jpg",
-      "IdName":"yubelterrorincarnate"
+      "References":null
    },
    {
       "Id":"56531",
@@ -29762,7 +29658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/13/YubelTheUltimateNightmare-RYMP-EN-R-1E.png",
-      "IdName":"yubeltheultimatenightmare"
+      "References":null
    },
    {
       "Id":"49078",
@@ -29772,7 +29668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/96/ArmoredCybern-LEDD-EN-C-1E.png",
-      "IdName":"armoredcybern"
+      "References":null
    },
    {
       "Id":"35918",
@@ -29782,7 +29678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/db/CyberOuroboros-PTDN-EN-C-1E.jpg",
-      "IdName":"cyberouroboros"
+      "References":null
    },
    {
       "Id":"46055",
@@ -29792,7 +29688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/20/VolcanicCounter-SDOK-EN-C-1E.png",
-      "IdName":"volcaniccounter"
+      "References":null
    },
    {
       "Id":"34782",
@@ -29802,7 +29698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/83/FireTrooper-PTDN-EN-C-UE.png",
-      "IdName":"firetrooper"
+      "References":null
    },
    {
       "Id":"26334",
@@ -29812,7 +29708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0c/DestinyHERODunker-LCGX-EN-C-1E.png",
-      "IdName":"destinyherodunker"
+      "References":null
    },
    {
       "Id":"48333",
@@ -29822,7 +29718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c0/DestinyHERODeparted-LCGX-EN-C-1E.png",
-      "IdName":"destinyherodeparted"
+      "References":null
    },
    {
       "Id":"59306",
@@ -29832,7 +29728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/DarkHorus-LCYW-EN-C-1E.png",
-      "IdName":"darkhorus"
+      "References":null
    },
    {
       "Id":"59261",
@@ -29842,7 +29738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/50/TheDarkCreator-LCYW-EN-C-1E.png",
-      "IdName":"thedarkcreator"
+      "References":null
    },
    {
       "Id":"57058",
@@ -29852,7 +29748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ee/DarkNephthys-LCYW-EN-C-1E.png",
-      "IdName":"darknephthys"
+      "References":null
    },
    {
       "Id":"57060",
@@ -29862,7 +29758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/24/DarkArmedDragon-GFP2-EN-GR-1E.png",
-      "IdName":"darkarmeddragon"
+      "References":null
    },
    {
       "Id":"59305",
@@ -29872,7 +29768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a0/DarkCrusader-BP03-EN-C-1E.png",
-      "IdName":"darkcrusader"
+      "References":null
    },
    {
       "Id":"57062",
@@ -29882,7 +29778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/be/ArmageddonKnight-DASA-EN-SR-1E.png",
-      "IdName":"armageddonknight"
+      "References":null
    },
    {
       "Id":"66280",
@@ -29892,7 +29788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/DoomsdayHorror-DESO-EN-SR-1E.png",
-      "IdName":"doomsdayhorror"
+      "References":null
    },
    {
       "Id":"59308",
@@ -29902,7 +29798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ae/ShadowpriestessofOhm-PTDN-EN-R-1E.png",
-      "IdName":"shadowpriestessofohm"
+      "References":null
    },
    {
       "Id":"64657",
@@ -29912,7 +29808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/73/GeminiLancer-PTDN-EN-C-1E.png",
-      "IdName":"geminilancer"
+      "References":null
    },
    {
       "Id":"64658",
@@ -29922,7 +29818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/ba/Gigaplant-DUOV-EN-UR-1E.png",
-      "IdName":"gigaplant"
+      "References":null
    },
    {
       "Id":"64661",
@@ -29932,7 +29828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/32/FutureSamurai-SDWA-EN-C-1E.png",
-      "IdName":"futuresamurai"
+      "References":null
    },
    {
       "Id":"66284",
@@ -29942,7 +29838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/VengefulShinobi-YS11-EN-C-1E.jpg",
-      "IdName":"vengefulshinobi"
+      "References":null
    },
    {
       "Id":"66290",
@@ -29952,7 +29848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7b/TheImmortalBushi-BP03-EN-C-1E.png",
-      "IdName":"theimmortalbushi"
+      "References":null
    },
    {
       "Id":"66292",
@@ -29962,7 +29858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a0/FieldCommanderRahz-YS11-EN-C-1E.jpg",
-      "IdName":"fieldcommanderrahz"
+      "References":null
    },
    {
       "Id":"64663",
@@ -29972,7 +29868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/11/GladiatorBeastDarius-LCGX-EN-ScR-1E.png",
-      "IdName":"gladiatorbeastdarius"
+      "References":null
    },
    {
       "Id":"66297",
@@ -29982,7 +29878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/BlackVeloci-BP03-EN-R-1E.png",
-      "IdName":"blackveloci"
+      "References":null
    },
    {
       "Id":"66299",
@@ -29992,7 +29888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a9/SuperancientDeepseaKingCoelacanth-MAZE-EN-SR-1E.png",
-      "IdName":"superancientdeepseakingcoelacanth"
+      "References":null
    },
    {
       "Id":"67107",
@@ -30002,7 +29898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e2/CannonSoldierMK2-PTDN-EN-C-1E.png",
-      "IdName":"cannonsoldiermk2"
+      "References":null
    },
    {
       "Id":"66158",
@@ -30012,7 +29908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/10/TheCalculator-YS15-EU-C-1E.png",
-      "IdName":"thecalculator"
+      "References":null
    },
    {
       "Id":"66267",
@@ -30022,7 +29918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/73/BlueThunderT45-BP03-EN-R-1E.png",
-      "IdName":"bluethundert45"
+      "References":null
    },
    {
       "Id":"66308",
@@ -30032,7 +29928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/ba/MagneticMosquito-PTDN-EN-C-1E.png",
-      "IdName":"magneticmosquito"
+      "References":null
    },
    {
       "Id":"66307",
@@ -30042,7 +29938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b5/EarthEffigy-PTDN-EN-C-1E.png",
-      "IdName":"eartheffigy"
+      "References":null
    },
    {
       "Id":"66305",
@@ -30052,7 +29948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/43/WindEffigy-PTDN-EN-C-1E.png",
-      "IdName":"windeffigy"
+      "References":null
    },
    {
       "Id":"57519",
@@ -30062,7 +29958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0e/NeoSpacianTwinkleMoss-PTDN-EN-C-1E.png",
-      "IdName":"neospaciantwinklemoss"
+      "References":null
    },
    {
       "Id":"47102",
@@ -30072,7 +29968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ee/ElementalHEROStormNeos-LCGX-EN-C-1E.png",
-      "IdName":"elementalherostormneos"
+      "References":null
    },
    {
       "Id":"47103",
@@ -30082,7 +29978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/08/RainbowNeos-MGED-EN-R-1E.png",
-      "IdName":"rainbowneos"
+      "References":null
    },
    {
       "Id":"57982",
@@ -30092,7 +29988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/13/RainbowVeil-PTDN-EN-C-1E.png",
-      "IdName":"rainbowveil"
+      "References":null
    },
    {
       "Id":"47520",
@@ -30102,7 +29998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/04/ViciousClaw-PTDN-EN-SP-1E.png",
-      "IdName":"viciousclaw"
+      "References":null
    },
    {
       "Id":"56539",
@@ -30112,7 +30008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7f/InstantNeoSpace-OP09-EN-C-UE.png",
-      "IdName":"instantneospace"
+      "References":null
    },
    {
       "Id":"57981",
@@ -30122,7 +30018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a6/MirageTube-PTDN-EN-C-1E.png",
-      "IdName":"miragetube"
+      "References":null
    },
    {
       "Id":"57004",
@@ -30132,7 +30028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1a/SpellChronicle-SDSA-EN-C-1E.png",
-      "IdName":"spellchronicle"
+      "References":null
    },
    {
       "Id":"53406",
@@ -30142,7 +30038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dd/DimensionExplosion-PTDN-EN-C-1E.png",
-      "IdName":"dimensionexplosion"
+      "References":null
    },
    {
       "Id":"53405",
@@ -30152,7 +30048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1d/CyberneticZone-PTDN-EN-C-1E.png",
-      "IdName":"cyberneticzone"
+      "References":null
    },
    {
       "Id":"66316",
@@ -30162,7 +30058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/08/FiresofDoomsday-SR06-EN-C-1E.png",
-      "IdName":"firesofdoomsday"
+      "References":null
    },
    {
       "Id":"64654",
@@ -30172,7 +30068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/UnleashYourPower-SDWS-EN-C-1E.png",
-      "IdName":"unleashyourpower"
+      "References":null
    },
    {
       "Id":"67109",
@@ -30182,7 +30078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f6/ChainSummoning-OP05-EN-C-UE.png",
-      "IdName":"chainsummoning"
+      "References":null
    },
    {
       "Id":"67111",
@@ -30192,7 +30088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/78/AcidicDownpour-PTDN-EN-C-1E.png",
-      "IdName":"acidicdownpour"
+      "References":null
    },
    {
       "Id":"66318",
@@ -30202,7 +30098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/17/SixSamuraiUnited-SPWA-EN-SR-1E.png",
-      "IdName":"sixsamuraiunited"
+      "References":null
    },
    {
       "Id":"64655",
@@ -30212,7 +30108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5c/GladiatorBeastsBattleArchfiendShield-AP03-EN-C-UE.png",
-      "IdName":"gladiatorbeastsbattlearchfiendshield"
+      "References":null
    },
    {
       "Id":"64656",
@@ -30222,7 +30118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/76/GladiatorProvingGround-RYMP-EN-UR-1E.png",
-      "IdName":"gladiatorprovingground"
+      "References":null
    },
    {
       "Id":"66320",
@@ -30232,7 +30128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/69/DarkWorldGrimoire-LCJW-EN-C-1E.png",
-      "IdName":"darkworldgrimoire"
+      "References":null
    },
    {
       "Id":"66322",
@@ -30242,7 +30138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8a/RainbowPath-LDS1-EN-C-1E.png",
-      "IdName":"rainbowpath"
+      "References":null
    },
    {
       "Id":"66325",
@@ -30252,7 +30148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/83/SinisterSeeds-BP02-EN-C-1E.png",
-      "IdName":"sinisterseeds"
+      "References":null
    },
    {
       "Id":"57477",
@@ -30262,7 +30158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/79/HateBuster-BP03-EN-C-1E.png",
-      "IdName":"hatebuster"
+      "References":null
    },
    {
       "Id":"66330",
@@ -30272,7 +30168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fc/ChainMaterial-PTDN-EN-SP-1E.png",
-      "IdName":"chainmaterial"
+      "References":null
    },
    {
       "Id":"57983",
@@ -30282,7 +30178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/16/AlchemyCycle-PTDN-EN-C-UE.png",
-      "IdName":"alchemycycle"
+      "References":null
    },
    {
       "Id":"53404",
@@ -30292,7 +30188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/07/CyberneticHiddenTechnology-SDCR-EN-C-1E.png",
-      "IdName":"cybernetichiddentechnology"
+      "References":null
    },
    {
       "Id":"64664",
@@ -30302,7 +30198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/ce/DarkSpiritArtGreed-PTDN-EN-R-1E.png",
-      "IdName":"darkspiritartgreed"
+      "References":null
    },
    {
       "Id":"64665",
@@ -30312,7 +30208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7f/DarkIllusion-DESO-EN-SR-1E.png",
-      "IdName":"darkillusion"
+      "References":null
    },
    {
       "Id":"64666",
@@ -30322,7 +30218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/38/EscapefromtheDarkDimension-SDSA-EN-C-1E.png",
-      "IdName":"escapefromthedarkdimension"
+      "References":null
    },
    {
       "Id":"66337",
@@ -30332,7 +30228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b0/GeminiTrapHole-SDWS-EN-C-1E.jpg",
-      "IdName":"geminitraphole"
+      "References":null
    },
    {
       "Id":"66339",
@@ -30342,7 +30238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6e/DrasticDropOff-SR05-EN-C-1E.png",
-      "IdName":"drasticdropoff"
+      "References":null
    },
    {
       "Id":"66342",
@@ -30352,7 +30248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/AllOutAttacks-PTDN-EN-C-1E.png",
-      "IdName":"alloutattacks"
+      "References":null
    },
    {
       "Id":"64653",
@@ -30362,7 +30258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/DoubleTagTeam-PTDN-EN-C-UE.png",
-      "IdName":"doubletagteam"
+      "References":null
    },
    {
       "Id":"66344",
@@ -30372,7 +30268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/80/OfferingtotheSnakeDeity-ANGU-EN-R-1E.png",
-      "IdName":"offeringtothesnakedeity"
+      "References":null
    },
    {
       "Id":"66346",
@@ -30382,7 +30278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fe/CryHavoc-PTDN-EN-R-1E.png",
-      "IdName":"cryhavoc"
+      "References":null
    },
    {
       "Id":"66348",
@@ -30392,7 +30288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c5/TransmigrationBreak-PTDN-EN-C-1E.png",
-      "IdName":"transmigrationbreak"
+      "References":null
    },
    {
       "Id":"66350",
@@ -30402,7 +30298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/Fine-PTDN-EN-SP-1E.png",
-      "IdName":"fine"
+      "References":null
    },
    {
       "Id":"86494",
@@ -30412,7 +30308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a1/DarklordZerato-DESO-EN-SR-1E.png",
-      "IdName":"darklordzerato"
+      "References":null
    },
    {
       "Id":"85976",
@@ -30422,7 +30318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/73/DarknightParshath-LCYW-EN-C-1E.jpg",
-      "IdName":"darknightparshath"
+      "References":null
    },
    {
       "Id":"87492",
@@ -30432,7 +30328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a4/DeepseaMacrotrema-PTDN-EN-R-1E.png",
-      "IdName":"deepseamacrotrema"
+      "References":null
    },
    {
       "Id":"87506",
@@ -30442,7 +30338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2d/MetaboGlobster-PTDN-EN-R-1E.png",
-      "IdName":"metaboglobster"
+      "References":null
    },
    {
       "Id":"87511",
@@ -30452,7 +30348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/60/GoldenFlyingFish-BP03-EN-R-1E.png",
-      "IdName":"goldenflyingfish"
+      "References":null
    },
    {
       "Id":"87465",
@@ -30462,7 +30358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e3/PrimeMaterialDragon-PGLD-EN-GUR-1E.png",
-      "IdName":"primematerialdragon"
+      "References":null
    },
    {
       "Id":"87459",
@@ -30472,7 +30368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/da/LonefireBlossom-OP19-EN-C-UE.png",
-      "IdName":"lonefireblossom"
+      "References":null
    },
    {
       "Id":"87413",
@@ -30482,7 +30378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0d/AztekipedetheWormWarrior-BP03-EN-R-1E.png",
-      "IdName":"aztekipedethewormwarrior"
+      "References":null
    },
    {
       "Id":"24889",
@@ -30492,7 +30388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/19/CastleGate-PTDN-EN-R-1E.png",
-      "IdName":"castlegate"
+      "References":null
    },
    {
       "Id":"24747",
@@ -30502,7 +30398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2e/DarkEyesIllusionist-LCYW-EN-R-1E.png",
-      "IdName":"darkeyesillusionist"
+      "References":null
    },
    {
       "Id":"26823",
@@ -30512,7 +30408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e0/CalloftheEarthbound-LDS3-EN-C-1E.png",
-      "IdName":"calloftheearthbound"
+      "References":null
    },
    {
       "Id":"28839",
@@ -30522,7 +30418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/da/BelialMarquisofDarkness-BP02-EN-R-1E.png",
-      "IdName":"belialmarquisofdarkness"
+      "References":null
    },
    {
       "Id":"23624",
@@ -30532,7 +30428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d5/SasukeSamurai4-DR3-EN-R-UE.png",
-      "IdName":"sasukesamurai4"
+      "References":null
    },
    {
       "Id":"1785",
@@ -30542,7 +30438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5f/GammaTheMagnetWarrior-SBCB-EN-C-1E.png",
-      "IdName":"gammathemagnetwarrior"
+      "References":null
    },
    {
       "Id":"158871",
@@ -30552,7 +30448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9d/Falchion%CE%B2-SDCR-EN-C-1E.png",
-      "IdName":"falchion"
+      "References":null
    },
    {
       "Id":"20368",
@@ -30562,7 +30458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/SuperConductorTyranno-SR04-EN-C-1E.png",
-      "IdName":"superconductortyranno"
+      "References":null
    },
    {
       "Id":"20355",
@@ -30572,7 +30468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/94/BigEvolutionPill-SR04-EN-C-1E.png",
-      "IdName":"bigevolutionpill"
+      "References":null
    },
    {
       "Id":"15417",
@@ -30582,7 +30478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c2/JurassicWorld-LCJW-EN-C-1E.png",
-      "IdName":"jurassicworld"
+      "References":null
    },
    {
       "Id":"20296",
@@ -30592,7 +30488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b1/SurvivalInstinct-LCJW-EN-C-1E.png",
-      "IdName":"survivalinstinct"
+      "References":null
    },
    {
       "Id":"20325",
@@ -30602,7 +30498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/VolcanicEruption-LCJW-EN-C-1E.png",
-      "IdName":"volcaniceruption"
+      "References":null
    },
    {
       "Id":"20350",
@@ -30612,7 +30508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/44/SeismicShockwave-OP04-EN-C-UE.png",
-      "IdName":"seismicshockwave"
+      "References":null
    },
    {
       "Id":"20402",
@@ -30622,7 +30518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c0/AncientGear-SGX1-EN-C-1E.png",
-      "IdName":"ancientgearcard"
+      "References":null
    },
    {
       "Id":"7322",
@@ -30632,7 +30528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4a/FlyingKamakiri1-LCYW-EN-ScR-1E.png",
-      "IdName":"flyingkamakiri1"
+      "References":null
    },
    {
       "Id":"8856",
@@ -30642,7 +30538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f9/Ansatsu-SDY-NA-C-1E.png",
-      "IdName":"ansatsu"
+      "References":null
    },
    {
       "Id":"9798",
@@ -30652,7 +30548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7d/ClawReacher-SDY-NA-C-1E.png",
-      "IdName":"clawreacher"
+      "References":null
    },
    {
       "Id":"10047",
@@ -30662,7 +30558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f6/BaronoftheFiendSword-SDY-NA-C-1E.jpg",
-      "IdName":"baronofthefiendsword"
+      "References":null
    },
    {
       "Id":"10060",
@@ -30672,7 +30568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7e/SorcereroftheDoomed-SDY-EU-C-1E.png",
-      "IdName":"sorcererofthedoomed"
+      "References":null
    },
    {
       "Id":"7529",
@@ -30682,7 +30578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/14/Tyhone2-SRL-EN-C-UE.png",
-      "IdName":"tyhone2"
+      "References":null
    },
    {
       "Id":"7945",
@@ -30692,7 +30588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0f/TwinLongRods2-SRL-NA-C-UE.png",
-      "IdName":"twinlongrods2"
+      "References":null
    },
    {
       "Id":"7752",
@@ -30702,7 +30598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/85/CrawlingDragon2-LCJW-EN-C-1E.png",
-      "IdName":"crawlingdragon2"
+      "References":null
    },
    {
       "Id":"29541",
@@ -30712,7 +30608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8d/GeneWarpedWarwolf-YS16-EN-C-1E.png",
-      "IdName":"genewarpedwarwolf"
+      "References":null
    },
    {
       "Id":"29532",
@@ -30722,7 +30618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2b/Frostosaurus-WISU-EN-R-1E.png",
-      "IdName":"frostosaurus"
+      "References":null
    },
    {
       "Id":"29601",
@@ -30732,7 +30628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2f/SpiralSerpent-5DS1-EN-C-1E.png",
-      "IdName":"spiralserpent"
+      "References":null
    },
    {
       "Id":"33221",
@@ -30742,7 +30638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/80/TheSixSamuraiYaichi-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamuraiyaichi"
+      "References":null
    },
    {
       "Id":"33722",
@@ -30752,7 +30648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ef/TheSixSamuraiKamon-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamuraikamon"
+      "References":null
    },
    {
       "Id":"33727",
@@ -30762,7 +30658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6a/TheSixSamuraiYariza-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamuraiyariza"
+      "References":null
    },
    {
       "Id":"33732",
@@ -30772,7 +30668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b2/TheSixSamuraiNisashi-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamurainisashi"
+      "References":null
    },
    {
       "Id":"33737",
@@ -30782,7 +30678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/TheSixSamuraiZanji-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamuraizanji"
+      "References":null
    },
    {
       "Id":"33742",
@@ -30792,7 +30688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/af/TheSixSamuraiIrou-SDWA-EN-C-1E.png",
-      "IdName":"thesixsamuraiirou"
+      "References":null
    },
    {
       "Id":"33750",
@@ -30802,7 +30698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0b/GreatShogunShien-SDWA-EN-C-1E.png",
-      "IdName":"greatshogunshien"
+      "References":null
    },
    {
       "Id":"33755",
@@ -30812,7 +30708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f9/ShiensFootsoldier-SDWA-EN-C-1E.png",
-      "IdName":"shiensfootsoldier"
+      "References":null
    },
    {
       "Id":"30744",
@@ -30822,7 +30718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f9/SageofSilence-STON-EN-R-1E.jpg",
-      "IdName":"sageofsilence"
+      "References":null
    },
    {
       "Id":"33908",
@@ -30832,7 +30728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0d/SageofStillness-STON-EN-C-1E.jpg",
-      "IdName":"sageofstillness"
+      "References":null
    },
    {
       "Id":"33858",
@@ -30842,7 +30738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e8/KahkkiGuerillaofDarkWorld-SR13-EN-C-1E.png",
-      "IdName":"kahkkiguerillaofdarkworld"
+      "References":null
    },
    {
       "Id":"33852",
@@ -30852,7 +30748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9d/GrenTacticianofDarkWorld-SR13-EN-C-1E.png",
-      "IdName":"grentacticianofdarkworld"
+      "References":null
    },
    {
       "Id":"29539",
@@ -30862,7 +30758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e3/FusionDevourer-STON-EN-R-1E.jpg",
-      "IdName":"fusiondevourer"
+      "References":null
    },
    {
       "Id":"29518",
@@ -30872,7 +30768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1e/ElectricVirus-YSYR-EN-C-1E.png",
-      "IdName":"electricvirus"
+      "References":null
    },
    {
       "Id":"29569",
@@ -30882,7 +30778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a6/PuppetPlant-YSKR-EN-C-1E.png",
-      "IdName":"puppetplant"
+      "References":null
    },
    {
       "Id":"29513",
@@ -30892,7 +30788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b8/MarionetteMite-SR07-EN-C-1E.png",
-      "IdName":"marionettemite"
+      "References":null
    },
    {
       "Id":"29599",
@@ -30902,7 +30798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8e/SilentAbyss-STON-EN-C-1E.jpg",
-      "IdName":"silentabyss"
+      "References":null
    },
    {
       "Id":"29555",
@@ -30912,7 +30808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/00/FirestormProminence-STON-EN-C-1E.jpg",
-      "IdName":"firestormprominence"
+      "References":null
    },
    {
       "Id":"29595",
@@ -30922,7 +30818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/33/RagingEarth-STON-EN-C-1E.jpg",
-      "IdName":"ragingearth"
+      "References":null
    },
    {
       "Id":"33822",
@@ -30932,7 +30828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/aa/DestructionCyclone-STON-EN-C-1E.png",
-      "IdName":"destructioncyclone"
+      "References":null
    },
    {
       "Id":"29597",
@@ -30942,7 +30838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0e/RadiantSpirit-STON-EN-C-1E.jpg",
-      "IdName":"radiantspirit"
+      "References":null
    },
    {
       "Id":"29238",
@@ -30952,7 +30848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ab/UmbralSoul-STON-EN-C-UE.png",
-      "IdName":"umbralsoul"
+      "References":null
    },
    {
       "Id":"32481",
@@ -30962,7 +30858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b7/AlienPsychic-STON-EN-C-1E.jpg",
-      "IdName":"alienpsychic"
+      "References":null
    },
    {
       "Id":"29563",
@@ -30972,7 +30868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/58/Lycanthrope-STON-EN-C-1E.jpg",
-      "IdName":"lycanthrope"
+      "References":null
    },
    {
       "Id":"33800",
@@ -30982,7 +30878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/97/C%C3%BAChulainntheAwakened-STON-EN-C-1E.jpg",
-      "IdName":"cchulainntheawakened"
+      "References":null
    },
    {
       "Id":"29099",
@@ -30992,7 +30888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4b/ElementalHEROAirNeos-STON-EN-UR-1E.png",
-      "IdName":"elementalheroairneos"
+      "References":null
    },
    {
       "Id":"29096",
@@ -31002,7 +30898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/de/ElementalHEROGrandNeos-LCGX-EN-SR-UE.png",
-      "IdName":"elementalherograndneos"
+      "References":null
    },
    {
       "Id":"29090",
@@ -31012,7 +30908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5c/ElementalHEROGlowNeos-LCGX-EN-R-1E.png",
-      "IdName":"elementalheroglowneos"
+      "References":null
    },
    {
       "Id":"33767",
@@ -31022,7 +30918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/75/AncientRules-LCKC-EN-ScR-1E.png",
-      "IdName":"ancientrules"
+      "References":null
    },
    {
       "Id":"33810",
@@ -31032,7 +30928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7e/DarkWorldDealings-SR13-EN-C-1E.png",
-      "IdName":"darkworlddealings"
+      "References":null
    },
    {
       "Id":"29340",
@@ -31042,7 +30938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0c/NeosForce-LCGX-EN-C-1E.png",
-      "IdName":"neosforce"
+      "References":null
    },
    {
       "Id":"33862",
@@ -31052,7 +30948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e9/LegendaryEbonSteed-STON-EN-C-1E.jpg",
-      "IdName":"legendaryebonsteed"
+      "References":null
    },
    {
       "Id":"32484",
@@ -31062,7 +30958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e6/ACellScatterBurst-STON-EN-C-1E.jpg",
-      "IdName":"acellscatterburst"
+      "References":null
    },
    {
       "Id":"29593",
@@ -31072,7 +30968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/68/SynthesisSpell-STON-EN-C-1E.jpg",
-      "IdName":"synthesisspell"
+      "References":null
    },
    {
       "Id":"33847",
@@ -31082,7 +30978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/95/EmblemoftheAwakening-STON-EN-C-1E.jpg",
-      "IdName":"emblemoftheawakening"
+      "References":null
    },
    {
       "Id":"33789",
@@ -31092,7 +30988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/23/CardTrader-YS18-EN-C-1E.png",
-      "IdName":"cardtrader"
+      "References":null
    },
    {
       "Id":"33884",
@@ -31102,7 +30998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4b/ShiensCastleofMist-GLD2-EN-C-LE.jpg",
-      "IdName":"shienscastleofmist"
+      "References":null
    },
    {
       "Id":"29770",
@@ -31112,7 +31008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/12/ChangeofHeroReflectorRay-LCGX-EN-C-1E.png",
-      "IdName":"changeofheroreflectorray"
+      "References":null
    },
    {
       "Id":"33874",
@@ -31122,7 +31018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/ReturnoftheSixSamurai-SPWA-EN-SR-1E.png",
-      "IdName":"returnofthesixsamurai"
+      "References":null
    },
    {
       "Id":"33918",
@@ -31132,7 +31028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1d/Flashbang-STON-EN-C-1E.jpg",
-      "IdName":"flashbang"
+      "References":null
    },
    {
       "Id":"33899",
@@ -31142,7 +31038,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ec/TheTransmigrationProphecy-SDGU-EN-C-1E.png",
-      "IdName":"thetransmigrationprophecy"
+      "References":null
    },
    {
       "Id":"33772",
@@ -31152,7 +31048,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a6/AntiFusionDevice-STON-EN-C-1E.jpg",
-      "IdName":"antifusiondevice"
+      "References":null
    },
    {
       "Id":"33878",
@@ -31162,7 +31058,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/61/RitualSealing-STON-EN-C-1E.jpg",
-      "IdName":"ritualsealing"
+      "References":null
    },
    {
       "Id":"33779",
@@ -31172,7 +31068,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/66/Birthright-YSKR-EN-C-1E.png",
-      "IdName":"birthright"
+      "References":null
    },
    {
       "Id":"33888",
@@ -31182,7 +31078,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bd/SwiftSamuraiStorm-STON-EN-C-1E.jpg",
-      "IdName":"swiftsamuraistorm"
+      "References":null
    },
    {
       "Id":"33794",
@@ -31192,7 +31088,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/ba/CloakandDagger-TU03-EN-C-UE.png",
-      "IdName":"cloakanddagger"
+      "References":null
    },
    {
       "Id":"27014",
@@ -31202,7 +31098,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/53/NeoParshaththeSkyPaladin-SR05-EN-C-1E.png",
-      "IdName":"neoparshaththeskypaladin"
+      "References":null
    },
    {
       "Id":"27020",
@@ -31212,7 +31108,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b2/MeltielSageoftheSky-SR05-EN-C-1E.png",
-      "IdName":"meltielsageofthesky"
+      "References":null
    },
    {
       "Id":"29700",
@@ -31222,7 +31118,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d8/HarvestAngelofWisdom-SR05-EN-C-1E.png",
-      "IdName":"harvestangelofwisdom"
+      "References":null
    },
    {
       "Id":"31763",
@@ -31232,7 +31128,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6c/FreyaSpiritofVictory-BP03-EN-C-1E.png",
-      "IdName":"freyaspiritofvictory"
+      "References":null
    },
    {
       "Id":"31767",
@@ -31242,7 +31138,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/32/NovaSummoner-SR05-EN-C-1E.png",
-      "IdName":"novasummoner"
+      "References":null
    },
    {
       "Id":"31771",
@@ -31252,7 +31148,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5e/RadiantJeral-GLD4-EN-C-LE.png",
-      "IdName":"radiantjeral"
+      "References":null
    },
    {
       "Id":"31775",
@@ -31262,7 +31158,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a9/Gellenduo-SR05-EN-C-1E.png",
-      "IdName":"gellenduo"
+      "References":null
    },
    {
       "Id":"41004",
@@ -31272,7 +31168,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f0/GeminiSummoner-LDK2-EN-C-1E.png",
-      "IdName":"geminisummoner"
+      "References":null
    },
    {
       "Id":"39234",
@@ -31282,7 +31178,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/03/AlienShocktrooper-TAEV-EN-C-UE.png",
-      "IdName":"alienshocktrooper"
+      "References":null
    },
    {
       "Id":"39256",
@@ -31292,7 +31188,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/33/VolcanicRat-TAEV-EN-C-1E.jpg",
-      "IdName":"volcanicrat"
+      "References":null
    },
    {
       "Id":"39359",
@@ -31302,7 +31198,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/02/RengeGatekeeperofDarkWorld-SR13-EN-C-1E.png",
-      "IdName":"rengegatekeeperofdarkworld"
+      "References":null
    },
    {
       "Id":"39360",
@@ -31312,7 +31208,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b0/VenomCobra-TAEV-EN-C-1E.jpg",
-      "IdName":"venomcobra"
+      "References":null
    },
    {
       "Id":"29381",
@@ -31322,7 +31218,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4a/ChrysalisPantail-TAEV-EN-C-1E.jpg",
-      "IdName":"chrysalispantail"
+      "References":null
    },
    {
       "Id":"29383",
@@ -31332,7 +31228,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ec/ChrysalisChicky-TAEV-EN-C-UE.png",
-      "IdName":"chrysalischicky"
+      "References":null
    },
    {
       "Id":"29382",
@@ -31342,7 +31238,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e0/ChrysalisPinny-TAEV-EN-C-UE.png",
-      "IdName":"chrysalispinny"
+      "References":null
    },
    {
       "Id":"32254",
@@ -31352,7 +31248,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/24/ChrysalisLarva-TAEV-EN-C-1E.jpg",
-      "IdName":"chrysalislarva"
+      "References":null
    },
    {
       "Id":"30311",
@@ -31362,7 +31258,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/96/ChrysalisMole-TAEV-EN-C-1E.jpg",
-      "IdName":"chrysalismole"
+      "References":null
    },
    {
       "Id":"30312",
@@ -31372,7 +31268,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/44/NecroGardna-THSF-EN-SR-1E.png",
-      "IdName":"necrogardna"
+      "References":null
    },
    {
       "Id":"33447",
@@ -31382,7 +31278,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2b/VennominagatheDeityofPoisonousSnakes-ANGU-EN-R-1E.png",
-      "IdName":"vennominagathedeityofpoisonoussnakes"
+      "References":null
    },
    {
       "Id":"45103",
@@ -31392,7 +31288,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/90/VennominontheKingofPoisonousSnakes-ANGU-EN-R-1E.png",
-      "IdName":"vennominonthekingofpoisonoussnakes"
+      "References":null
    },
    {
       "Id":"33443",
@@ -31402,7 +31298,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/89/VenomSnake-TAEV-EN-C-1E.jpg",
-      "IdName":"venomsnake"
+      "References":null
    },
    {
       "Id":"33444",
@@ -31412,7 +31308,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d3/VenomBoa-TAEV-EN-C-1E.jpg",
-      "IdName":"venomboa"
+      "References":null
    },
    {
       "Id":"33445",
@@ -31422,7 +31318,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7d/VenomSerpent-TAEV-EN-C-1E.jpg",
-      "IdName":"venomserpent"
+      "References":null
    },
    {
       "Id":"34600",
@@ -31432,7 +31328,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d2/ChthonianEmperorDragon-TAEV-EN-UR-1E.jpg",
-      "IdName":"chthonianemperordragon"
+      "References":null
    },
    {
       "Id":"36742",
@@ -31442,7 +31338,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/06/AquarianAlessa-TAEV-EN-SR-1E.jpg",
-      "IdName":"aquarianalessa"
+      "References":null
    },
    {
       "Id":"37580",
@@ -31452,7 +31348,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e7/LuckyPiedPiper-TAEV-EN-SR-1E.jpg",
-      "IdName":"luckypiedpiper"
+      "References":null
    },
    {
       "Id":"37581",
@@ -31462,7 +31358,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/3c/Grasschopper-TAEV-EN-R-1E.jpg",
-      "IdName":"grasschopper"
+      "References":null
    },
    {
       "Id":"36743",
@@ -31472,7 +31368,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/ed/GoggleGolem-TAEV-EN-C-1E.jpg",
-      "IdName":"gogglegolem"
+      "References":null
    },
    {
       "Id":"37582",
@@ -31482,7 +31378,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/DawnbreakGardna-TAEV-EN-C-1E.jpg",
-      "IdName":"dawnbreakgardna"
+      "References":null
    },
    {
       "Id":"35238",
@@ -31492,7 +31388,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9f/DoomShaman-OP03-EN-C-UE.png",
-      "IdName":"doomshaman"
+      "References":null
    },
    {
       "Id":"36744",
@@ -31502,7 +31398,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/8c/KingPyron-TAEV-EN-C-1E.jpg",
-      "IdName":"kingpyron"
+      "References":null
    },
    {
       "Id":"37583",
@@ -31512,7 +31408,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d4/ShadowDelver-TAEV-EN-C-1E.jpg",
-      "IdName":"shadowdelver"
+      "References":null
    },
    {
       "Id":"39710",
@@ -31522,7 +31418,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/8/82/PhantomCricket-TAEV-EN-C-1E.jpg",
-      "IdName":"phantomcricket"
+      "References":null
    },
    {
       "Id":"35376",
@@ -31532,7 +31428,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e5/NeoSpacePathfinder-TAEV-EN-R-UE.png",
-      "IdName":"neospacepathfinder"
+      "References":null
    },
    {
       "Id":"39731",
@@ -31542,7 +31438,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fa/RazorLizard-TAEV-EN-C-1E.jpg",
-      "IdName":"razorlizard"
+      "References":null
    },
    {
       "Id":"35395",
@@ -31552,7 +31448,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/65/LightEffigy-TAEV-EN-C-1E.jpg",
-      "IdName":"lighteffigy"
+      "References":null
    },
    {
       "Id":"39237",
@@ -31562,7 +31458,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e2/DarkEffigy-TAEV-EN-C-UE.png",
-      "IdName":"darkeffigy"
+      "References":null
    },
    {
       "Id":"39367",
@@ -31572,7 +31468,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/a8/ZombieMaster-SR07-EN-C-1E.png",
-      "IdName":"zombiemaster"
+      "References":null
    },
    {
       "Id":"29498",
@@ -31582,7 +31478,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/72/NeoSpacianMarineDolphin-TAEV-EN-C-1E.jpg",
-      "IdName":"neospacianmarinedolphin"
+      "References":null
    },
    {
       "Id":"29500",
@@ -31592,7 +31488,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c7/ElementalHEROMarineNeos-LCGX-EN-C-1E.png",
-      "IdName":"elementalheromarineneos"
+      "References":null
    },
    {
       "Id":"30309",
@@ -31602,7 +31498,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bb/ElementalHEROMagmaNeos-SHVA-EN-SR-1E.png",
-      "IdName":"elementalheromagmaneos"
+      "References":null
    },
    {
       "Id":"29386",
@@ -31612,7 +31508,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/37/CocoonParty-TAEV-EN-C-1E.jpg",
-      "IdName":"cocoonparty"
+      "References":null
    },
    {
       "Id":"29503",
@@ -31622,7 +31518,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b6/NEX-TAEV-EN-C-1E.jpg",
-      "IdName":"nex"
+      "References":null
    },
    {
       "Id":"39197",
@@ -31632,7 +31528,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/60/CocoonRebirth-TAEV-EN-C-1E.jpg",
-      "IdName":"cocoonrebirth"
+      "References":null
    },
    {
       "Id":"33452",
@@ -31642,7 +31538,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e7/VenomSwamp-LCGX-EN-C-1E.png",
-      "IdName":"venomswamp"
+      "References":null
    },
    {
       "Id":"33454",
@@ -31652,7 +31548,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dd/SnakeRain-ANGU-EN-R-1E.png",
-      "IdName":"snakerain"
+      "References":null
    },
    {
       "Id":"33453",
@@ -31662,7 +31558,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1a/VenomShot-TAEV-EN-C-1E.jpg",
-      "IdName":"venomshot"
+      "References":null
    },
    {
       "Id":"39735",
@@ -31672,7 +31568,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/34/FlintMissile-TAEV-EN-C-UE.png",
-      "IdName":"flintmissile"
+      "References":null
    },
    {
       "Id":"39743",
@@ -31682,7 +31578,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/37/PhalanxPike-TAEV-EN-R-1E.png",
-      "IdName":"phalanxpike"
+      "References":null
    },
    {
       "Id":"38816",
@@ -31692,7 +31588,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ac/SymbolsofDuty-LDK2-EN-C-1E.png",
-      "IdName":"symbolsofduty"
+      "References":null
    },
    {
       "Id":"39747",
@@ -31702,7 +31598,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c1/BrokenBambooSword-OP08-EN-SR-UE.png",
-      "IdName":"brokenbamboosword"
+      "References":null
    },
    {
       "Id":"29504",
@@ -31712,7 +31608,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/0/0c/CocoonVeil-TAEV-EN-C-1E.jpg",
-      "IdName":"cocoonveil"
+      "References":null
    },
    {
       "Id":"33441",
@@ -31722,7 +31618,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/7c/SnakeWhistle-TAEV-EN-C-1E.jpg",
-      "IdName":"snakewhistle"
+      "References":null
    },
    {
       "Id":"33442",
@@ -31732,7 +31628,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2b/DamageReptile-ANGU-EN-R-1E.png",
-      "IdName":"damagereptile"
+      "References":null
    },
    {
       "Id":"33448",
@@ -31742,7 +31638,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/a/ae/SnakeDeitysCommand-TAEV-EN-R-1E.jpg",
-      "IdName":"snakedeityscommand"
+      "References":null
    },
    {
       "Id":"33449",
@@ -31752,7 +31648,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/ce/RiseoftheSnakeDeity-ANGU-EN-R-1E.png",
-      "IdName":"riseofthesnakedeity"
+      "References":null
    },
    {
       "Id":"39751",
@@ -31762,7 +31658,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b9/AmbushFangs-TAEV-EN-C-1E.jpg",
-      "IdName":"ambushfangs"
+      "References":null
    },
    {
       "Id":"39755",
@@ -31772,7 +31668,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1f/VenomBurn-TAEV-EN-C-1E.png",
-      "IdName":"venomburn"
+      "References":null
    },
    {
       "Id":"39759",
@@ -31782,7 +31678,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/6b/DestructiveDraw-TAEV-EN-C-1E.jpg",
-      "IdName":"destructivedraw"
+      "References":null
    },
    {
       "Id":"39767",
@@ -31792,7 +31688,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/74/StrikeSlash-BP02-EN-C-1E.png",
-      "IdName":"strikeslash"
+      "References":null
    },
    {
       "Id":"39444",
@@ -31802,7 +31698,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d2/SpellReclamation-TAEV-EN-R-1E.jpg",
-      "IdName":"spellreclamation"
+      "References":null
    },
    {
       "Id":"39439",
@@ -31812,7 +31708,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/70/TrapReclamation-TAEV-EN-R-UE.png",
-      "IdName":"trapreclamation"
+      "References":null
    },
    {
       "Id":"39771",
@@ -31822,7 +31718,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b6/GiftCard-TAEV-EN-C-UE.png",
-      "IdName":"giftcard"
+      "References":null
    },
    {
       "Id":"39773",
@@ -31832,7 +31728,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fb/TheGiftofGreed-TAEV-EN-C-1E.jpg",
-      "IdName":"thegiftofgreed"
+      "References":null
    },
    {
       "Id":"39437",
@@ -31842,7 +31738,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/6/69/CounterCounter-CP07-EN-C-UE.png",
-      "IdName":"countercounter"
+      "References":null
    },
    {
       "Id":"47535",
@@ -31852,7 +31748,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/OceansKeeper-TAEV-EN-R-1E.jpg",
-      "IdName":"oceanskeeper"
+      "References":null
    },
    {
       "Id":"47539",
@@ -31862,7 +31758,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4b/ThousandEyesJellyfish-TAEV-EN-R-UE.png",
-      "IdName":"thousandeyesjellyfish"
+      "References":null
    },
    {
       "Id":"47542",
@@ -31872,7 +31768,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/e/e2/CraniumFish-TAEV-EN-ScR-1E.jpg",
-      "IdName":"craniumfish"
+      "References":null
    },
    {
       "Id":"47687",
@@ -31882,7 +31778,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/AbyssalKingshark-BP01-EN-C-1E.png",
-      "IdName":"abyssalkingshark"
+      "References":null
    },
    {
       "Id":"47688",
@@ -31892,7 +31788,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/93/Mormolith-GLD4-EN-C-LE.png",
-      "IdName":"mormolith"
+      "References":null
    },
    {
       "Id":"47690",
@@ -31902,7 +31798,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bc/FossilTusker-TAEV-EN-R-1E.jpg",
-      "IdName":"fossiltusker"
+      "References":null
    },
    {
       "Id":"47692",
@@ -31912,7 +31808,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/b3/PhantomDragonrayBronto-TAEV-EN-R-1E.jpg",
-      "IdName":"phantomdragonraybronto"
+      "References":null
    },
    {
       "Id":"44279",
@@ -31922,7 +31818,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/49/BlazewingButterfly-LDK2-EN-C-1E.png",
-      "IdName":"blazewingbutterfly"
+      "References":null
    },
    {
       "Id":null,
@@ -31932,7 +31828,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5d/AndroSphinx-EP1-EN-UR-UE.png",
-      "IdName":"androsphinx"
+      "References":null
    },
    {
       "Id":null,
@@ -31942,7 +31838,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f9/SphinxTeleia-EP1-EN-UR-UE.jpg",
-      "IdName":"sphinxteleia"
+      "References":null
    },
    {
       "Id":null,
@@ -31952,7 +31848,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/43/PetentheDarkClown-SDKS-EN-C-1E.png",
-      "IdName":"petenthedarkclown"
+      "References":null
    },
    {
       "Id":null,
@@ -31962,7 +31858,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/c/c6/FamiliarKnight-DPKB-EN-C-UE.png",
-      "IdName":"familiarknight"
+      "References":null
    },
    {
       "Id":null,
@@ -31972,7 +31868,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/18/InfernoTempest-EP1-EN-C-UE.png",
-      "IdName":"infernotempest"
+      "References":null
    },
    {
       "Id":null,
@@ -31982,7 +31878,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/f4/ElementalHEROWoodsman-SDHS-EN-C-1E.png",
-      "IdName":"elementalherowoodsman"
+      "References":null
    },
    {
       "Id":null,
@@ -31992,7 +31888,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/4/4a/ElementalHEROKnospe-LCGX-EN-R-1E.png",
-      "IdName":"elementalheroknospe"
+      "References":null
    },
    {
       "Id":null,
@@ -32002,7 +31898,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/1/1b/ElementalHEROPoisonRose-LCGX-EN-R-1E.png",
-      "IdName":"elementalheropoisonrose"
+      "References":null
    },
    {
       "Id":null,
@@ -32012,7 +31908,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/55/ElementalHEROHeat-SDHS-EN-C-1E.png",
-      "IdName":"elementalheroheat"
+      "References":null
    },
    {
       "Id":null,
@@ -32022,7 +31918,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/3/39/ElementalHEROLadyHeat-LCGX-EN-C-1E.png",
-      "IdName":"elementalheroladyheat"
+      "References":null
    },
    {
       "Id":null,
@@ -32032,7 +31928,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/dc/ElementalHEROTerraFirma-LCGX-EN-SR-UE.png",
-      "IdName":"elementalheroterrafirma"
+      "References":null
    },
    {
       "Id":null,
@@ -32042,7 +31938,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5b/ElementalHEROInferno-LCGX-EN-SR-UE.png",
-      "IdName":"elementalheroinferno"
+      "References":null
    },
    {
       "Id":null,
@@ -32052,7 +31948,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/99/RoseBud-LCGX-EN-R-1E.png",
-      "IdName":"rosebud"
+      "References":null
    },
    {
       "Id":null,
@@ -32062,7 +31958,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/7/78/HEROsBond-LCGX-EN-C-1E.png",
-      "IdName":"herosbond"
+      "References":null
    },
    {
       "Id":null,
@@ -32072,7 +31968,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/f/fc/TerraFirmaGravity-LCGX-EN-R-1E.png",
-      "IdName":"terrafirmagravity"
+      "References":null
    },
    {
       "Id":null,
@@ -32082,7 +31978,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/2/2f/ElementalHEROVoltic-SDHS-EN-C-1E.png",
-      "IdName":"elementalherovoltic"
+      "References":null
    },
    {
       "Id":null,
@@ -32092,7 +31988,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d0/Carrierroid-PP02-EN-ScR-UE.png",
-      "IdName":"carrierroid"
+      "References":null
    },
    {
       "Id":null,
@@ -32102,7 +31998,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/5/5e/Mezuki-MAMA-EN-UR-1E.png",
-      "IdName":"mezuki"
+      "References":null
    },
    {
       "Id":null,
@@ -32112,7 +32008,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/d/d2/EvilDragonAnanta-ANGU-EN-R-1E.png",
-      "IdName":"evildragonananta"
+      "References":null
    },
    {
       "Id":null,
@@ -32122,7 +32018,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/9/9d/Athena-SR05-EN-C-1E.png",
-      "IdName":"athena"
+      "References":null
    },
    {
       "Id":null,
@@ -32132,7 +32028,7 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/Hecatrice-SR05-EN-C-1E.png",
-      "IdName":"hecatrice"
+      "References":null
    },
    {
       "Id":null,
@@ -32142,6 +32038,6 @@ module.exports =
       "Limit":"",
       "LimitFriends":null,
       "Image":"https://static.wikia.nocookie.net/yugioh/images/b/bf/Hecatrice-SR05-EN-C-1E.png",
-      "IdName":"hecatrice"
+      "References":null
    }
 ];
