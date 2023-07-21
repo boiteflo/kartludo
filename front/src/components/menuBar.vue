@@ -25,7 +25,7 @@
                     @blur="unselect">
       </v-text-field>
 
-      <router-link to="/decks">
+      <router-link to="/deck">
         <v-btn
           target="_blank"
           text
