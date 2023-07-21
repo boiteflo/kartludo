@@ -90,6 +90,8 @@
 .w33p { width: 33% !important;}
 .w25p { width: 25% !important;}
 
+.s100p {width: 100% !important; height: 100% !important;}
+
 .w25 { width: 25px !important;}
 .w32 { width: 32px !important;}
 .w40 { width: 40px !important;}
@@ -280,7 +282,7 @@ h2 {
   /* Tooltip card */
   .tooltip .tooltipcard {
     visibility: hidden;
-    width: 100%;
+    width: 200px;
     height:100%;
     background-color: black;
     color: #fff;

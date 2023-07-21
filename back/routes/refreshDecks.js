@@ -4,7 +4,7 @@ const cardsNotFound = `Les cartes suivantes n'ont pas été trouvées : `;
 
 class refreshDecks {
 
-    static rebuildDecks(deckData, errors, cards, sheets, spreedSheetId){
+    static rebuildDecks(deckData, errors, page, cards, updateSheet){
         if(!deckData)
             return [];
 
@@ -18,6 +18,16 @@ class refreshDecks {
         {
             let deck = decks[deckIndex];
             let errorsCards = [];
+            let sheetLine = deckIndex+2;
+
+            if(!deck.Id || deck.Id.length < 8){
+                deck.Id = "".guid();
+                updateSheet.push({range: page + '!B' + sheetLine, value:deck.Id});
+            }
+            if(!deck.Password || !deck.Password.length < 8){
+                deck.Password = "098f6bcd4621d373cade4e832627b4f6";
+                updateSheet.push({range: page + '!H' + sheetLine, value:deck.Password});
+            }
 
             // MainCardsIds
             deck.MainCardsIds = deck.MainCards.split(',').map(x=> x.cleanup());
@@ -42,12 +52,13 @@ class refreshDecks {
                     errorsCards.push(cardNameEn);
             }
                 
+            let errorMessage = '';
             if(errorsCards.length > 0){
-                let errorMessage = cardsNotFound + errorsCards.join(', ');
                 errors.push({Index: deckIndex, From:'Deck', Errors: cardsNotFound + ' ' + errorsCards.join(', ') });
-                let sheetLine = deckIndex+2;
-                helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks!A' + sheetLine, errorMessage);
+                errorMessage = cardsNotFound + errorsCards.join(', ');
             }
+            
+            updateSheet.push({range: page + '!A' + sheetLine, value:errorMessage});
         } 
 
         return decks;
@@ -55,10 +66,12 @@ class refreshDecks {
     
     static refresh= (sheetData, cards, sheets, spreedSheetId) => {
         let errors=[];
-        let decks = this.rebuildDecks(sheetData.Decks, errors, cards, sheets, spreedSheetId);
-        let decksCommunity = this.rebuildDecks(sheetData.Decks2, errors, cards, sheets, spreedSheetId);
+        let updateSheet = [];
+        let decks = this.rebuildDecks(sheetData.Decks, errors, 'Decks', cards, updateSheet);
+        let decksCommunity = this.rebuildDecks(sheetData.Decks2, errors, 'Decks2', cards, updateSheet);
         
         helperJsonFile.save('decks', {Decks: decks, DecksCommunity: decksCommunity});
+        helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
         return errors;
     }
 }

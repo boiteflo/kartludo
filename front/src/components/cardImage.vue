@@ -9,8 +9,15 @@
             </div>
             <img :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.Image"/>
          </div>
+
          <div v-if="tooltip==='image'" class="tooltipcard">
-            <img style="width:150px" :src="card.Image"/>
+            <div class="hoverFontColor" style="font-size: 8px; cursor:pointer; width:200px" @click="copyClipboard(card.NameEn);">
+                {{card.NameEn}}
+            </div>
+            <div class="hoverFontColor" v-if="card.NameFr"  style="font-size: 8px; cursor:pointer; width:200px" @click="copyClipboard(card.NameFr);">
+                {{card.NameFr}}
+            </div>
+            <img style="width:200px" :src="card.Image"/>
          </div>
         <div style="position:absolute; top:-5px; right:-5px;">
             <div class="">

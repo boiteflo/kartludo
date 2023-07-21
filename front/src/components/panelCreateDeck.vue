@@ -24,23 +24,23 @@
         
         <div class="m5px">
             <div class="flex-wrap flex-center">
-                <v-text-field class="m5px" label="Nom du deck"
+                <v-text-field class="m5px" label="Nom du deck" hide-details
                             v-model="deck.Title">
                 </v-text-field>
-                <v-text-field class="m5px" label="Auteur"
+                <v-text-field class="m5px" label="Auteur" hide-details
                             v-model="deck.Author">
                 </v-text-field>
                 <div class="tooltip">
-                    <v-icon >
+                    <v-icon style="margin-top:20px">
                         mdi-alert
                     </v-icon>
                     <div class="tooltiptext">
-                        Ce mot de passe sera demandé pour effectuer des changements sur ce deck
+                        A saisir lors de la mise a jour du deck. Ce mot de passe est crypté en MD5 dans notre BDD.
                     </div>
                 </div>
-                <v-text-field class="m5px" label="Mot de passe"
-                            v-model="deck.Password"
-                            @blue="cryptPassword">
+                <v-text-field class="m5px" label="Mot de passe" type="password" hide-details
+                            v-model="deck.PasswordApparent"
+                            @blur="cryptPassword">
                 </v-text-field>
             </div>
             <div v-if="$vuetify.breakpoint.width >= 800" class="flex">
@@ -116,6 +116,7 @@ import { store } from '../data/store.js'
 import cardImage from './cardImage.vue'
 import panelCards from './panelCards.vue'
 import panelDeckCards from './panelDeckCards.vue'
+let md5 = require('md5');
 
   export default {
     name: 'panel-create-deck',
@@ -171,7 +172,7 @@ import panelDeckCards from './panelDeckCards.vue'
             this.refreshFavCards++;
         },
         cryptPassword(){
-            
+            this.deck.Password = md5(this.deck.PasswordApparent);
         }
     }
   }

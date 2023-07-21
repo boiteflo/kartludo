@@ -3,12 +3,13 @@
         <v-card-title>{{deck.Title}}</v-card-title>
         <v-card-subtitle>{{deck.Author}} - {{deck.Date}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
-
-        <panelDeckCards :style="{'max-width':$vuetify.breakpoint.width +'px'}"
-          :cards="deck.DeckListCards" 
-          :size="$vuetify.breakpoint.width *50 /600"
-          tooltip="image">
-        </panelDeckCards>
+        <div class="flex">
+          <panelDeckCards :style="{'max-width':$vuetify.breakpoint.width +'px'}"
+            :cards="deck.DeckListCards" 
+            :size="$vuetify.breakpoint.width *50 /600"
+            tooltip="image">
+          </panelDeckCards>
+        </div>
         <v-textarea readonly :value="deck.DeckList.replaceAll(',','\n')">
 
         </v-textarea>

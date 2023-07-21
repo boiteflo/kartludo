@@ -34,8 +34,7 @@ static async authSheets() {
     }
 
     return result;
-  }
-  
+  }  
   
   static async updateSheet(sheets, spreadsheetId, range, value) {
     let params= {
@@ -47,7 +46,20 @@ static async authSheets() {
       }
     };
     let response= await sheets.spreadsheets.values.update(params);
-    //console.log(response);
+    return response;
+  }
+  
+  
+  static async updateSheetMultiple(sheets, spreadsheetId, rangeValues) {
+    let params= {
+      spreadsheetId: spreadsheetId,
+      valueInputOption: "USER_ENTERED",
+      resource: {
+        valueInputOption: "RAW",
+        data: rangeValues.map(x=> {return {range: x.range, values: [[x.value]]};})
+      }
+    };
+    let response= await sheets.spreadsheets.values.batchUpdate(params);
     return response;
   }
   
