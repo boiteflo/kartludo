@@ -1,0 +1,162 @@
+[
+	{
+		"Group": "1",
+		"Id": "fusions",
+		"Title": "Fusions",
+		"CardIdName": "darkpaladin",
+		"CardNameEn": "Dark Paladin",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/98502113.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "rituels",
+		"Title": "Rituels",
+		"CardIdName": "blacklustersoldier",
+		"CardNameEn": "Black Luster Soldier",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/5405694.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "dragons",
+		"Title": "Dragons",
+		"CardIdName": "blueeyeswhitedragon",
+		"CardNameEn": "Blue-Eyes White Dragon",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "demons",
+		"Title": "Démons",
+		"CardIdName": "darkrulerhades",
+		"CardNameEn": "Dark Ruler Ha Des",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/53982768.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "magiciens",
+		"Title": "Magiciens",
+		"CardIdName": "darkmagiciangirl",
+		"CardNameEn": "Dark Magician Girl",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/38033121.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "vent",
+		"Title": "Vent",
+		"CardIdName": "harpielady1",
+		"CardNameEn": "Harpie Lady 1",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/91932350.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "feu",
+		"Title": "Feu",
+		"CardIdName": "flameswordsman",
+		"CardNameEn": "Flame Swordsman",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/45231177.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "eau",
+		"Title": "Eau",
+		"CardIdName": "thelegendaryfisherman",
+		"CardNameEn": "The Legendary Fisherman",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/3643300.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "terre",
+		"Title": "Terre",
+		"CardIdName": "guardiansphinx",
+		"CardNameEn": "Guardian Sphinx",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/40659562.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "tenebres",
+		"Title": "Ténèbres",
+		"CardIdName": "archfiendsoldier",
+		"CardNameEn": "Archfiend Soldier",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/49881766.jpg"
+	},
+	{
+		"Group": "1",
+		"Id": "lumiere",
+		"Title": "Lumière",
+		"CardIdName": "guardianangeljoan",
+		"CardNameEn": "Guardian Angel Joan",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/68007326.jpg"
+	},
+	{
+		"Group": "2",
+		"Id": "hero",
+		"Title": "Héros",
+		"CardIdName": "elementalheroflamewingman",
+		"CardNameEn": "Elemental HERO Flame Wingman",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/35809262.jpg"
+	},
+	{
+		"Group": "2",
+		"Id": "tombeau",
+		"Title": "Tombeau",
+		"CardIdName": "gravekeepersrecruiter",
+		"CardNameEn": "Gravekeeper's Recruiter",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/93023479.jpg"
+	},
+	{
+		"Group": "2",
+		"Id": "insecte",
+		"Title": "Insecte",
+		"CardIdName": "insectqueen",
+		"CardNameEn": "Insect Queen",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/91512835.jpg"
+	},
+	{
+		"Group": "2",
+		"Id": "alien",
+		"Title": "Alien",
+		"CardIdName": "alienwarrior",
+		"CardNameEn": "Alien Warrior",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/98719226.jpg"
+	},
+	{
+		"Group": "2",
+		"Id": "exodia",
+		"Title": "Exodia",
+		"CardIdName": "exodiatheforbiddenone",
+		"CardNameEn": "Exodia the Forbidden One",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/33396948.jpg"
+	},
+	{
+		"Group": "3",
+		"Id": "anime",
+		"Title": "Animé",
+		"CardIdName": "yujofriendship",
+		"CardNameEn": "Yu-Jo Friendship",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/81332143.jpg"
+	},
+	{
+		"Group": "3",
+		"Id": "fun",
+		"Title": "Fun",
+		"CardIdName": "gyakutennomegami",
+		"CardNameEn": "Gyakutenno Megami",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/31122090.jpg"
+	},
+	{
+		"Group": "3",
+		"Id": "meta",
+		"Title": "Meta",
+		"CardIdName": "chaosemperordragonenvoyoftheend",
+		"CardNameEn": "Chaos Emperor Dragon - Envoy of the End",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/82301904.jpg"
+	},
+	{
+		"Group": "3",
+		"Id": "tous",
+		"Title": "Tous",
+		"CardIdName": "obeliskthetormentor",
+		"CardNameEn": "Obelisk the Tormentor",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/10000000.jpg"
+	}
+]

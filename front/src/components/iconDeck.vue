@@ -1,34 +1,32 @@
 <template>
-    <div class="m10px" >
-        <v-btn  height="110px" width="200px" @click="$emit('selected')">
-            <div>
-                <div v-show="deck" style="text-align:center">
-                    {{truncate(deck.Title)}}
-                </div>
-                <div class="flex-space-around flex" style="margin-top:10px; width:200px !important;">
-                    <img style="transform: rotate(-33deg); margin-right:-120px;" class="sCard"  :src="deck.MainCardsImages[1]" />
-                    <img style="transform: rotate(0deg); z-index:2;" class="sCard"  :src="deck.MainCardsImages[0]" />
-                    <img style="transform: rotate(25deg); margin-left:-120px; z-index:1" class="sCard"  :src="deck.MainCardsImages[2]" />
-                </div>
-            </div>
-        </v-btn>
+    <div class="m5px" style="width:150px; height:150px; position:relative; overflow: hidden;">
+        <img @click="$emit('select')" 
+            style="cursor:pointer; width: 210px; object-fit: cover; object-position: -30px -55px;" 
+            :src="deck.MainCardsImages[0]" 
+        />
+        <div @click="$emit('select')" class="triangle-code" style="cursor:pointer; text-align:end">
+            <div style="position:absolute; top:85px; right:5px; color:white; font-size:10px; width:150px">{{deck.Author}}</div>
+            <div style="position:absolute; top:100px; right:5px; color:white; font-size:18px; width:150px">{{deck.Title}}</div>
+        </div>
     </div>
 </template>
+
+<style>
+  .triangle-code{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    position:absolute;
+    left:0px;
+    top:0px;
+    border-bottom : 150px solid #212a3cD0;
+    border-left : 150px solid transparent;
+   }   
+</style>
 
 <script>
   export default {
     name: 'icon-deck',
-    props: ['deck'],
-    methods: {
-        truncate(data){
-            const limit = 23;
-            return data.length < limit ? data : data.substring(0, limit-3) + '...';
-        },
-        getAngle(index){
-            return index==0 ? "-25deg"
-            : index=="1" ? "0deg"
-            : "25deg";
-        }
-    }
+    props: ['deck']
   }
 </script>

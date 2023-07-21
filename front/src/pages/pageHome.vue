@@ -8,6 +8,18 @@
         <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉS</h2>
         <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
+        <br>
+        <div class="flex-wrap">
+          <div v-for="group in getLimitFriendsGroups(store.cards)" v-bind:key="group.id" style="position:relative; border: 5px solid red; margin: 5px 5px 5px 20px">
+            <div style="position:absolute; top:-15px; left:-15px;">
+                <div class="s25" style="color:red; text-align:center; font-style:bold; border-radius:15px; background:black; outline: 5px solid red">
+                    1
+                </div>
+            </div>
+            <panel-cards :cards="group.cards" :badgeoff="true" :center="false" :noflex="true" tooltip="text">
+            </panel-cards>
+          </div>
+        </div>
       
         <h2><v-icon color="yellow">mdi-star</v-icon> CARTES JOKER</h2>
         <panel-cards :cards="filterLimit(store.cards,'K')" :badgeoff="true" :center="true" tooltip="text" >
@@ -35,8 +47,22 @@ export default {
   }),
   methods: {
     filterLimit(cards, key){
-      let filteredData = cards.filter(x=> x.Limit===key);
+      let filteredData = cards.filter(x=> x.Limit===key && (!x.LimitFriends || x.LimitFriends.length < 1));
       return helperArray.sortInverse(filteredData, 'OrderIndex');
+    },
+    getLimitFriendsGroups(cards){
+      let filteredCards = cards.filter(x=> x.LimitFriends || x.LimitFriends.length >= 1);
+      let groups = [];
+      for(let i =0; i < filteredCards.length; i++){
+        let card = filteredCards[i];
+        let group = groups.find(x=> x.id === card.LimitFriends);
+        if(!group){
+          let cardIdNames = card.LimitFriends.split(',');
+          let fullCards = cards.filter(x=> cardIdNames.includes(x.IdName));
+          groups.push({id: card.LimitFriends, cards: fullCards});
+        }
+      }
+      return groups;
     }
   }
 };

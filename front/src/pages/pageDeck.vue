@@ -4,37 +4,14 @@
           Chargement
         </div>
         <div v-else>
-          <div v-if="createDeck">
-              <panel-create-deck @save='saveDeck' @cancel="createDeck=false"
+          <div v-if="isNew">
+              <panel-create-deck @save='saveDeck'
               ></panel-create-deck>
           </div>
-          <div v-else>
-              <v-dialog v-model="showDeck">
-                <panel-deck :deck="deckSelected"
-                  v-on:unselect="unselect">
-                </panel-deck>
-              </v-dialog>
-              
-              <div v-if="decksObject">
-                <h1>Les Decks </h1>
-                <h2><v-icon color="white">mdi-check-decagram</v-icon>Validé par les modérateurs du Discord </h2>
-                <div class="flex-wrap flex-center">
-                    <iconDeck v-for="deck in decksObject.Decks" :deck="deck" v-bind:key="deck.Id" v-on:selected="selectDeck(deck)">
-                    </iconDeck>
-                </div>
-                
-                <h1>Les Decks de la communauté</h1>
-                <h2><v-icon color="white">mdi-alert</v-icon>La validation reste a faire </h2>
-                <div class="flex-wrap flex-center">
-                    <iconDeck v-for="deck in decksObject.DecksCommunity" :deck="deck" v-bind:key="deck.Id" v-on:selected="selectDeck(deck)">
-                    </iconDeck>
-                </div>
-              </div>
-              <div class="flex-center">
-                <v-btn class="m5px bg" @click="createDeck=true">
-                    <v-icon color="white">mdi-plus</v-icon>Ajouter un deck
-                </v-btn>
-              </div>
+          
+          <div v-if="deck">
+            <panel-deck :deck="deck">
+            </panel-deck>
           </div>
         </div>
     </div>
@@ -42,42 +19,57 @@
 
 
 <script>
+import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
 //const axios = require('axios');
 
-import iconDeck from '../components/iconDeck';
+import { store } from '../data/store.js'
 import panelDeck from '../components/panelDeck';
 import panelCreateDeck from '../components/panelCreateDeck';
 
 export default {
   name: 'pageDeck',
-  components: {iconDeck, panelDeck, panelCreateDeck},
+  components: {panelCreateDeck, panelDeck},
   data: () => ({
     loading:false,
-    decksObject: null,
-    deckSelected: null,
-    showDeck: false,
-    createDeck: false
+    isNew: false,
+    id: null,
+    deck: null
   }),
   mounted(){
-    ServiceBack.getAll('decks').then(res => {
-      this.decksObject = res;
-    });   
+    let uri = window.location.href;
+    let i = uri.indexOf("id="); 
+    this.isNew = i < 1;
+
+    if(!this.isNew){
+      this.id = uri.substring(i+3);
+      
+      ServiceBack.get('decks', this.id).then(res => {
+        this.showDeck(res);
+      }); 
+    }
   },
   methods: {
-    selectDeck(deck){
-      this.deckSelected=deck;
-      this.showDeck = true;
-    },
-    unselect(){
-      this.deckSelected=null;
-      this.showDeck = false;
+    showDeck(deck){
+      deck.DeckListCards = [];
+      let deckList = deck.DeckList.split(',');
+      for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
+      {
+          const cardNameEn = deckList[cardIndex];
+          let quantity = helperString.includesX2(cardNameEn) ? '2' : '1';
+          let cardIdName = helperString.removeX2(helperString.cleanup(cardNameEn));
+          const card = store.cards.find(x=> x.IdName === cardIdName);
+          if(card)
+              deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
+      }
+        this.deck = deck;
     },
     saveDeck(deck){
       this.loading=true;
+      delete deck.Themes;
       ServiceBack.insert('decks', deck).then(res=> {
         if(res.status === 201)
-          ServiceBack.getAll('refresh').then(()=> window.location.reload());
+          ServiceBack.getAll('refresh').then(()=> window.location.href = '/decks');
         else
         {
           this.loading = false;

@@ -3,7 +3,7 @@ const helperJsonFile = require("../helper/helperJsonFile");
 const helperArray = require("../helper/helperArray");
 const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
-class refreshCards {
+class managerCard {
     
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
@@ -24,6 +24,9 @@ class refreshCards {
 
         cards.forEach(card => {
             card.Limit = '';
+            delete card.LimitFriendsCards;
+            delete card.LimitFriendsImages;
+            card.LimitFriends = '';
             card.IdName = card.NameEn.cleanup();
         });
 
@@ -57,7 +60,9 @@ class refreshCards {
                 
                 let limitFriends = sheetData.Limit1[i][1];
                 if(limitFriends){
-                    limitFriends = limitFriends.split(',');
+                    limitFriends = limitFriends.split(',').map(x=> x.cleanup());
+                    let LimitFriendsCards = cards.filter(x=> limitFriends.includes(x.IdName));
+                    card.LimitFriends = LimitFriendsCards.map(x=> x.IdName).join(',');
                 }
             }
             else {
@@ -94,4 +99,4 @@ class refreshCards {
     }
 }
  
-module.exports = refreshCards;
+module.exports = managerCard;

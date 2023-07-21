@@ -233,6 +233,10 @@
     color:white !important
 }
 
+.bg2 {
+    background: #374C5F !important;
+}
+
 h1 {
     background-color: #212A3C;
     color:white;
@@ -282,7 +286,7 @@ h2 {
   /* Tooltip card */
   .tooltip .tooltipcard {
     visibility: hidden;
-    width: 200px;
+    width: 100%;
     height:100%;
     background-color: black;
     color: #fff;

@@ -5,9 +5,18 @@ const helperJsonFile = require("../helper/helperJsonFile");
 let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 
 router.get('/', async (req, res) => {
-  helperJsonFile.readPath('./decks.json').then(cards => res.send(cards));
+  helperJsonFile.readPath('./decks.json').then(data => res.send(data));
 });
  
+router.get('/:id', async (req, res) => {
+  helperJsonFile.readPath('./decks.json').then(data => {
+    let deck= data.Decks.find(x=> x.Id === req.params.id);
+    if(!deck)
+      deck= data.DecksCommunity.find(x=> x.Id === req.params.id);
+    res.send(deck);
+  });          
+});
+
 router.post('/', async (req, res) => {
   let deck = req.body;
   
@@ -31,7 +40,7 @@ router.post('/', async (req, res) => {
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!E' + lastRow, new Date().toLocaleDateString("fr"));
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!F' + lastRow, deck.Author);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!G' + lastRow, mainCards);
-  helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!H' + lastRow, '');//Combo
+  helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!H' + lastRow, deck.ThemesId.join(','));//Combo
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!I' + lastRow, deckList.join(', '));
 
   res.status(201).send();

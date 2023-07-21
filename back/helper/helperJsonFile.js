@@ -16,7 +16,7 @@ class helperJsonFile {
     static savePath= (file, content) => {
       return new Promise((resolve, reject) => {
         let fs = require('fs');
-        fs.writeFile(file, JSON.stringify(content), err => {
+        fs.writeFile(file, JSON.stringify(content, null, "\t"), err => {
           if (err) {
               console.log('Error writing file : ' + file, err)
               reject('Error writing file : ' + err);

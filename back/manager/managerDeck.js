@@ -2,7 +2,7 @@ const helperGoogleApi = require("../helper/helperGoogleApi");
 const helperJsonFile = require("../helper/helperJsonFile");
 const cardsNotFound = `Les cartes suivantes n'ont pas été trouvées : `;
 
-class refreshDecks {
+class managerDeck {
 
     static rebuildDecks(deckData, errors, page, cards, updateSheet){
         if(!deckData)
@@ -10,23 +10,21 @@ class refreshDecks {
 
         let decks = deckData.map(x=> {
             return {
-            "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Password": x[6], "DeckList": x[7] 
+            "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Themes": x[6], "DeckList": x[7] 
             };
         });
 
         for(let deckIndex =0 ; deckIndex< decks.length; deckIndex++)
         {
             let deck = decks[deckIndex];
+            delete deck.Password;
+            delete deck.DeckListCards;
             let errorsCards = [];
             let sheetLine = deckIndex+2;
 
             if(!deck.Id || deck.Id.length < 8){
                 deck.Id = "".guid();
                 updateSheet.push({range: page + '!B' + sheetLine, value:deck.Id});
-            }
-            if(!deck.Password || !deck.Password.length < 8){
-                deck.Password = "098f6bcd4621d373cade4e832627b4f6";
-                updateSheet.push({range: page + '!H' + sheetLine, value:deck.Password});
             }
 
             // MainCardsIds
@@ -38,17 +36,14 @@ class refreshDecks {
                     .split(',')
                     .filter(x=> !mainCardsImages.find(y=> y.IdName===x.cleanup()));
 
-            deck.DeckListCards = [];
+            // DeckList
             let deckList = deck.DeckList.split(',');
             for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
             {
                 const cardNameEn = deckList[cardIndex];
-                let quantity = cardNameEn.includesX2() ? '2' : '1';
                 let cardIdName = cardNameEn.cleanup().removeX2();
                 const card = cards.find(x=> x.IdName === cardIdName);
-                if(card)
-                    deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
-                else
+                if(!card)
                     errorsCards.push(cardNameEn);
             }
                 
@@ -76,4 +71,4 @@ class refreshDecks {
     }
 }
  
-module.exports = refreshDecks;
+module.exports = managerDeck;

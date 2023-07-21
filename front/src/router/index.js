@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V1.5.3 ';
+let version = 'V1.6.0 ';
 
 Vue.use(VueRouter)
 
@@ -14,7 +14,7 @@ const routes = [
             import ('../pages/pageDecks.vue')
     },
     {
-        path: '/deck',
+        path: '/deck/:id',
         name: version + 'MSOS Deck',
         component: () =>
             import ('../pages/pageDeck.vue')
