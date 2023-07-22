@@ -36,6 +36,7 @@ router.post('/', async (req, res) => {
   const lastRow = sheetData.Decks2 ? sheetData.Decks2.length+2 : 2;
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!A' + lastRow, errorMessage);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!B' + lastRow, deck.Title.cleanup());
+  helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!C' + lastRow, deck.Rank);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!D' + lastRow, deck.Title);
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!E' + lastRow, new Date().toLocaleDateString("fr"));
   helperGoogleApi.updateSheet(sheets, spreedSheetId, 'Decks2!F' + lastRow, deck.Author);

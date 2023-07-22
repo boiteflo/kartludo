@@ -26,7 +26,7 @@
         </panel-cards>
         <v-card class="bg">
           <v-card-title>Remerciement</v-card-title>
-          <v-card-text class="bg">Ce format a été inventé par Zouloux (07/2023). Le Site Web a été créé par FlorentOutan. (Contactez moi sur le discord). Avec la participation de Aelle et Lockai. Utilisation de la base de données : https://db.ygoprodeck.com.</v-card-text>
+          <v-card-text class="bg">Ce format a été inventé par Zouloux (07/2023). Le Site Web a été créé par FlorentOutan. (Contactez moi sur discord). Avec la participation de Lockai, Aelle, Tenebros, Bludzee, Yan_Ue4. Utilisation de la base de données : https://db.ygoprodeck.com.</v-card-text>
         </v-card>
           
     </div>

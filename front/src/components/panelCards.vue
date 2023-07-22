@@ -7,7 +7,8 @@
         :badgeoff="badgeoff"
         :size="size"
         :tooltip="tooltip"
-        v-on:select="$emit('select', $event)">
+        v-on:select="$emit('select', $event)"
+        @hover="$emit('hover', $event)">
     </card-image>
   </div>
 </template>

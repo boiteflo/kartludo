@@ -8,7 +8,8 @@
                       :size="size"
                       :x2="cardObject.Quantity === '2'"
                       :tooltip="tooltip"
-                      v-on:select="$emit('select', $event)">
+                      v-on:select="$emit('select', $event)"
+                      @hover="$emit('hover', $event)">
           </card-image>
         </div>
     </div>

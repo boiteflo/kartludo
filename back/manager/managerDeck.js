@@ -10,7 +10,7 @@ class managerDeck {
 
         let decks = deckData.map(x=> {
             return {
-            "Id": x[0], "IdParent": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Themes": x[6], "DeckList": x[7], "Rank": x[8] 
+            "Id": x[0], "Rank": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Themes": x[6], "DeckList": x[7] 
             };
         });
 
@@ -21,6 +21,7 @@ class managerDeck {
             delete deck.DeckListCards;
             let errorsCards = [];
             let sheetLine = deckIndex+2;
+            deck.Rank = deck.Rank ?? 3;
 
             if(!deck.Id || deck.Id.length < 8){
                 deck.Id = "".guid();

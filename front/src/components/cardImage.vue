@@ -1,5 +1,8 @@
 <template>
-    <div class="tooltip" style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis;" @click="$emit('select', card)">
+    <div class="tooltip" 
+        style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis;" 
+        @click="$emit('select', card)"
+        @mouseover="$emit('hover', card)">
          <div v-if="tooltip==='text'" class="tooltipcard flex-row">
             <div class="hoverFontColor" style="font-size: 8px; cursor:pointer" @click="copyClipboard(card.NameEn);">
                 {{card.NameEn}}

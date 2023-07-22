@@ -73,6 +73,32 @@ class helperArray {
         let element = this.getElementByProperty(array, value, property);
         this.removeElement(array, element);
     }
+
+    static move(array, idProperty, item, pitch){
+        if(array == null || !array.find(x=> x[idProperty] === item[idProperty]))
+            return array;
+        
+        let result = [];
+        for(let i=0; i< array.length; i++){
+            let current = array[i];
+            let next = i === array.length-1 ? null : array[i+1];
+
+            if(next && next[idProperty] == item[idProperty] && pitch === -1){
+                result.push(next);
+                result.push(current);
+                i++;
+            }
+            else if (next && current[idProperty] == item[idProperty] && pitch === 1){
+                result.push(next);
+                result.push(current);
+                i++;
+            }
+            else
+                result.push(current);
+        }
+
+        return result;
+    }
   }
  
   module.exports = helperArray;

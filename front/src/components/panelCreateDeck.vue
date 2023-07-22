@@ -22,19 +22,22 @@
     </div>
     <div v-else-if="selectThemes">
         <div class="flex-wrap">
+            <v-btn class="m5px bg" style="width:275px; height:340px;" @click="selectThemes=false">
+                Valider
+            </v-btn>
             <icon-theme v-for="theme in themes.filter(x=> x.Id!=='tous' && !deck.ThemesId.includes(x.Id))" 
                 v-bind:key="theme.Id" 
                 v-on:select="selectTheme(theme)" 
                 :text="theme.Title" 
                 :image="theme.CardImage">
             </icon-theme>
-            <v-btn class="m5px bg" style="width:200px; height:250px;" @click="selectThemes=false">
+            <v-btn class="m5px bg" style="width:275px; height:340px;" @click="selectThemes=false">
                 Valider
             </v-btn>
         </div>
     </div>
     <div v-else>
-        <v-card-title>Créer un deck</v-card-title>
+        <h2>Créer un deck</h2>
         
         <div class="m5px">
             <div class="flex-wrap flex-center">
@@ -44,31 +47,48 @@
                 <v-text-field class="m5px" label="Auteur" hide-details
                             v-model="deck.Author">
                 </v-text-field>
-                <!--
-                <div class="tooltip">
-                    <v-icon style="margin-top:20px">
-                        mdi-alert
-                    </v-icon>
-                    <div class="tooltiptext">
-                        A saisir lors de la mise a jour du deck. Ce mot de passe est crypté en MD5 dans notre BDD.
-                    </div>
-                </div>
-                <v-text-field class="m5px" label="Mot de passe" type="password" hide-details
-                            v-model="deck.PasswordApparent"
-                            @blur="cryptPassword">
-                </v-text-field>
-                -->
+                <v-combobox :disabled="!deck.RankObj" v-model="deck.Rank" label="Classement" :items="ranks" item-text="Title">
+                </v-combobox>
             </div>
-            <div v-if="$vuetify.breakpoint.width >= 800" class="flex">
-                <div class="bg" style="flex-grow:3">
+            <div v-if="$vuetify.breakpoint.width >= 930" class="flex">
+                <div class="bg" style="flex-grow:2; flex-basis: 0">
+                    <div class="bg2 flex flex-center">
+                        <div style="color:white; margin: 10px 5px 5px 5px">Lorsque je sélectionne une carte : </div>
+                        <v-btn :class="{bg: deckClickMode===0, bg2: deckClickMode!==0, m5px:true}"  @click="deckClickMode=0">
+                            Supprimer
+                        </v-btn>
+                        <v-btn :class="{bg: deckClickMode===1, bg2: deckClickMode!==1, m5px:true}"  @click="deckClickMode=1">
+                            Changer l'ordre
+                        </v-btn>
+                    </div>
                     <panel-deck-cards :cards="deck.DeckListCards"
-                                :size="50"
-                                tooltip="image"
-                                @select="selectCardToRemove"
+                                :size="75"
+                                @select="selectCardFromDeck"
+                                @hover="showCard"
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
                 </div>
-                <div style="flex-grow:1; max-width:357px;">
+                <div class="bg2" style="width:310px">
+                    <h3 class="m5px" style="color:white">Ajouter des Staples</h3>
+                    <div class="flex flex-space-around">
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleMonster')">
+                            Monstre
+                        </v-btn>
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleSpell')">
+                            Magie
+                        </v-btn>
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleTrap')">
+                            Piège
+                        </v-btn>
+                    </div>
+                    <card-image v-if="cardHover" 
+                        :card="cardHover"
+                        :badgeoff="false"
+                        :size="300">
+                    </card-image>
+                    <br>
+                </div>
+                <div style="flex-grow:1; max-width:357px;flex-basis: 0">
                     <v-text-field
                             solo class="m5px"
                             hide-details
@@ -79,15 +99,27 @@
                             @input="search">
                     </v-text-field>
                     <panel-cards v-if="selectedCards && selectedCards.length > 0"
-                                :size="50" 
-                                tooltip="image"
+                                :size="75" 
                                 :cards="selectedCards"
-                                @select="selectCard">
+                                @select="selectCard"
+                                @hover="showCard">
                     </panel-cards>                    
                 </div>
             </div>
             <div v-else>
                 <div class="bg">
+                    <h3 class="m5px" style="color:white">Ajouter des Staples</h3>
+                    <div class="flex flex-space-around">
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleMonster')">
+                            Monstre
+                        </v-btn>
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleSpell')">
+                            Magie
+                        </v-btn>
+                        <v-btn class="" :disabled="!staples" @click="showStaples('stapleTrap')">
+                            Piège
+                        </v-btn>
+                    </div>
                     <v-text-field
                             solo class="m5px"
                             hide-details
@@ -105,28 +137,39 @@
                     </panel-cards>
                 </div>
                 <panel-deck-cards :cards="deck.DeckListCards"
-                            @select="selectCardToRemove"
+                            @select="selectCardFromDeck"
                             tooltip="image"
                             :size="50" 
                             v-bind:key="refreshCards">
                 </panel-deck-cards>
+                <div class="bg2 flex flex-center" style="color:white">Lorsque je sélectionne une carte :</div>
+                <div class="bg2 flex flex-center">
+                    <v-btn :class="{bg: deckClickMode===0, bg2: deckClickMode!==0, m5px:true}"  @click="deckClickMode=0">
+                        Supprimer
+                    </v-btn>
+                    <v-btn :class="{bg: deckClickMode===1, bg2: deckClickMode!==1, m5px:true}"  @click="deckClickMode=1">
+                        Changer l'ordre
+                    </v-btn>
+                </div>
             </div>
             <br>
-            <h2 v-if="deck.Themes.length > 0"><v-icon color="white">mdi-animation</v-icon>Les Thèmes</h2>
+            <h3 >Les Thèmes</h3>
             <div class="flex-wrap">
-                <icon-theme v-for="theme in deck.Themes" 
-                    v-bind:key="'selected'+ theme.Id" 
-                    v-on:select="unselectTheme(theme)" 
-                    :text="theme.Title" 
-                    :image="theme.CardImage">
-                </icon-theme>
+                <v-btn class="m5px bg" @click="selectThemes=true">
+                    Modifier
+                </v-btn>
+                <v-chip class="m5px"
+                    v-for="theme in deck.Themes" 
+                    v-bind:key="'selected'+ theme.Id">{{theme.Title}}
+                </v-chip>
             </div>
-            <div class="flex-reverse">
-                <v-btn class="m5px bg" :disabled="deck.MainCards.length <1" @click="$emit('save', deck)">
+
+            <div class="flex-wrap flex-reverse">
+                <v-btn class="m5px bg" :disabled="deck.DeckListCards.length <1 || deck.MainCards.length <1 || deck.Themes.length < 1" @click="$emit('save', deck)">
                     Sauvegarder
                 </v-btn>
                 <v-btn class="m5px bg" @click="selectMainCards=true">
-                    Sélectionner les 3 cartes principales
+                    Sélectionner la carte principale
                 </v-btn>
                 <v-btn class="m5px bg" @click="selectThemes=true">
                     Sélectionner les thèmes
@@ -139,6 +182,8 @@
 <script>
 import ServiceBack from '../services/serviceBack'
 import { store } from '../data/store.js'
+import helperString from '../helpers/helperString'
+import helperArray from '../helpers/helperArray'
 
 import cardImage from './cardImage.vue'
 import panelCards from './panelCards.vue'
@@ -153,18 +198,31 @@ let md5 = require('md5');
     },
     data: () => ({
         themes: null,
-        deck: {DeckListCards:[], MainCards: [], Themes: [], ThemesId: []},
+        data: null,
+        deck: {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null},
         searchString: '',
         selectedCards: [],
         refreshCards:0,
         refreshFavCards:0,
         selectMainCards: false,
-        selectThemes: false
+        selectThemes: false,
+        cardHover:null,
+        staples: null,
+        ranks: null,
+        deckClickMode : 0 // 0 = delete card, 1 = switch order
     }),
     mounted(){
-
         ServiceBack.getAll('themes').then(res => {
             this.themes = res;
+        });  
+        ServiceBack.getAll('data').then(res => {
+            this.staples = {
+                stapleMonster: res.find(x=> x.Id === 'stapleMonster'),
+                stapleSpell: res.find(x=> x.Id === 'stapleSpell'),
+                stapleTrap: res.find(x=> x.Id === 'stapleTrap')
+            };
+            this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
+            this.deck.Rank= this.ranks.find(x=> x.Id ==3);
         });  
     },
     methods: {
@@ -182,14 +240,22 @@ let md5 = require('md5');
                 this.refreshCards++;
             }
             else
-                this.deck.DeckListCards.push({Card:card});
+                this.deck.DeckListCards.push({Id: card.IdName, Card:card});
         },
-        selectCardToRemove(card){
+        selectCardFromDeck(card){
             let cardObject = this.deck.DeckListCards.find(x=> x.Card.IdName === card.IdName);
             if(!cardObject)
                 return;
             
-            console.log(cardObject);
+            // Change Order
+            if(this.deckClickMode === 1)
+            {
+                this.deck.DeckListCards = helperArray.move(this.deck.DeckListCards, 'Id', {Id:card.IdName}, -1);
+                this.refreshCards++;
+                return;
+            }
+
+            // Remove card
             if(cardObject.Quantity === "2")
             {
                 cardObject.Quantity = null;
@@ -220,6 +286,17 @@ let md5 = require('md5');
         unselectTheme(theme){
             this.deck.ThemesId = this.deck.ThemesId.filter(x=> x !== theme.Id);
             this.deck.Themes = this.deck.Themes.filter(x=> x.Id !== theme.Id);
+        },
+        showCard(card){
+            this.cardHover = card;
+        },
+        showStaples(key)
+        {
+            let stapleIdNames = this.staples[key].Value.split(",").map(x=> helperString.cleanup(x));
+            this.searchString = this.staples[key].Title;
+            this.selectedCards = store.cards
+                .filter(x=> stapleIdNames.includes(x.IdName))
+                .slice(0, 50);
         }
     }
   }
