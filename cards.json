@@ -5923,7 +5923,7 @@
 		"NameEn": "Heavy Storm",
 		"NameFr": "Violent Orage",
 		"Limit": "1",
-		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters",
+		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters",
 		"Image": "https://images.ygoprodeck.com/images/cards/19613556.jpg",
 		"IdName": "heavystorm",
 		"OrderIndex": 17
@@ -21833,7 +21833,7 @@
 		"NameEn": "Malevolent Catastrophe",
 		"NameFr": "Catastrophe Infernale",
 		"Limit": "1",
-		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters",
+		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters",
 		"Image": "https://images.ygoprodeck.com/images/cards/1224927.jpg",
 		"IdName": "malevolentcatastrophe",
 		"OrderIndex": 19
@@ -32024,7 +32024,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/43898403.jpg",
 		"Limit": "1",
 		"OrderIndex": 18,
-		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters"
+		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters,twintwisters"
 	},
 	{
 		"IdName": "gorztheemissaryofdarkness",
@@ -32069,6 +32069,14 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/ad/Dandylion-DUSA-EN-UR-1E.png",
 		"Limit": "K",
 		"OrderIndex": 28,
+		"LimitFriends": ""
+	},
+	{
+		"IdName": "thewhitestoneoflegend",
+		"NameEn": "The White Stone of Legend",
+		"NameFr": "Pierre Blanche Légendaire",
+		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/95/TheWhiteStoneofLegend-LDS2-EN-C-1E.png",
+		"Limit": "",
 		"LimitFriends": ""
 	}
 ]

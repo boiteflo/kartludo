@@ -4,85 +4,88 @@
           Chargement
         </div>
         <div v-else>
+
+          <hierarchy class="bg" :items="hierarchyArray" @select="selectHierarchy"></hierarchy>
+
+          <!-- Deck sélectionné -->
           <v-dialog v-model="showDeck">
             <panel-deck v-if="deckSelected" :deck="deckSelected" :buttonpage="true"
               v-on:unselect="unselect">
             </panel-deck>
           </v-dialog>
 
+          <!-- Theme sélectionné -->
           <div v-if="themeSelected" style="position:relative">
-            <icon-theme :text="themeSelected.Title" 
-              :subtext="themeSelected.DecksLength + ' decks'"
-              :image="themeSelected.CardImage" 
-              style="position:absolute; right:5px; top:5px">
-            </icon-theme>
+            <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
+              <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="themeSelected.CardImage" />
+            </div>
 
-            <div class="flex bg" style="">
-              <h1>Thème : {{themeSelected.Title}}</h1>
-              
-              <v-btn class="m5px" style="margin-top:35px !important" @click="showTheme(null)">
-                  <v-icon color="red">mdi-arrow-left-bottom</v-icon>Retour
-              </v-btn>
-            </div>
+            <h1>Thème : {{themeSelected.Title}}</h1>
             <h1 style="padding-top:5px;">Les Decks </h1>
-            <h2><v-icon color="white">mdi-check-decagram</v-icon>Validé par les modérateurs du Discord </h2>
             <div class="flex-wrap flex-center bg2">
-                <iconDeck v-for="deck in themeSelected.Decks" 
-                  :deck="deck" 
-                  v-bind:key="deck.Id" 
+              <div v-for="deck in themeSelected.Decks" v-bind:key="deck.Id">
+                <iconDeck  :deck="deck" 
                   v-on:select="selectDeck(deck)">
                 </iconDeck>
+              </div>
+              <div v-for="deck in themeSelected.DecksCommunity" v-bind:key="deck.Id" style="position:relative">
+                <iconDeck  :deck="deck" 
+                  v-on:select="selectDeck(deck)">
+                </iconDeck>
+                <div class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
+                    <v-icon color="red">mdi-alert</v-icon>
+                    <div class="tooltipcard">A Valider</div>
+                </div>
+              </div>
             </div>
-            
-            <h1>Les Decks de la communauté</h1>
-            <h2><v-icon color="white">mdi-alert</v-icon>La validation reste a faire </h2>
-            <div class="flex-wrap flex-center bg2">
-                <iconDeck v-for="deck in themeSelected.DecksCommunity" 
-                  :deck="deck" 
-                  v-bind:key="deck.Id" 
-                  v-on:select="selectDeck(deck)">
-                </iconDeck>
+          </div>
+          
+          <!-- Classement -->
+          <div v-else-if="!rankSelected" :key="refreshRanks">
+            <h1>Le classement des decks</h1>
+            <p class="bg" style="padding:10px; margin:0px">Même avec toute la volonté du monde, il est quasiment impossible pour le deck de Joey Wheeler de battre un deck Protecteur du tombeau. Mais il a toute ces chances contre les autres decks de sa catégorie. Voici un classement approximatif des decks du format.</p>
+            <div class="flex-wrap flex-space-around p5px bg2">
+              <icon-theme v-for="rank in ranks" 
+                v-bind:key="rank.Id" 
+                v-on:select="selectRank(rank)" 
+                :text="rank.Title" 
+                :text1="rank.DecksLength + ' decks'"
+                :image="rank.Image">
+              </icon-theme>
             </div>
           </div>
 
+          <!-- Themes -->
           <div v-else :key="refreshThemes">
             <h1>Les Themes</h1>
-            <h2><v-icon color="white">mdi-animation</v-icon> Principaux</h2>
             <div class="flex-wrap flex-space-around p5px bg2">
               <icon-theme v-for="theme in themes.filter(x=> x.Group === '1')" 
                 v-bind:key="theme.Id" 
                 v-on:select="showTheme(theme)" 
                 :text="theme.Title" 
-                :subtext="theme.DecksLength + ' decks'"
+                :text1="theme.DecksLength + ' decks'"
                 :image="theme.CardImage">
               </icon-theme>
             </div>
 
-            <h2><v-icon color="white">mdi-axe</v-icon> Thématique</h2>
+            <h2><v-icon color="white">mdi-axe</v-icon> Spécifique</h2>
             <div class="flex-wrap flex-space-around p5px bg2">
               <icon-theme v-for="theme in themes.filter(x=> x.Group === '2')" 
                 v-bind:key="theme.Id" 
                 v-on:select="showTheme(theme)" 
                 :text="theme.Title" 
-                :subtext="theme.DecksLength + ' decks'"
-                :image="theme.CardImage">
-              </icon-theme>
-            </div>
-            
-            <h2><v-icon color="white">mdi-arm-flex</v-icon> Autre</h2>
-            <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="theme in themes.filter(x=> x.Group === '3')" 
-                v-bind:key="theme.Id" 
-                v-on:select="showTheme(theme)" 
-                :text="theme.Title" 
-                :subtext="theme.DecksLength + ' decks'"
+                :text1="theme.DecksLength + ' decks'"
                 :image="theme.CardImage">
               </icon-theme>
             </div>
           </div>
         </div>
         
-        <div class="flex-center">
+          <!-- Boutons -->
+        <div class="flex-wrap flex-center">
+          <v-btn class="m5px" v-if="rankSelected" @click="selectRank(null)">
+              <v-icon color="red">mdi-arrow-left-bottom</v-icon> Revenir au classement
+          </v-btn>
           <v-btn class="m5px" v-if="themeSelected" @click="showTheme(null)">
               <v-icon color="red">mdi-arrow-left-bottom</v-icon> Voir tous les thèmes
           </v-btn>
@@ -101,27 +104,42 @@ import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
 
 import { store } from '../data/store.js'
+import hierarchy from '../components/hierarchy';
 import panelDeck from '../components/panelDeck';
 import iconTheme from '../components/iconTheme';
 import iconDeck from '../components/iconDeck';
 
 export default {
   name: 'pageDecks',
-  components: {iconTheme, iconDeck, panelDeck},
+  components: {iconTheme, iconDeck, panelDeck, hierarchy},
   data: () => ({
     loading:true,
     store: store,
+    hierarchyArray: [{Id:0, Text:'Classement'}],
+    refreshRanks: 0,
     refreshThemes: 0,
+    ranks: null,
     decksObject: null,
     themes: null,
+    rankSelected: null,
     themeSelected: null,
     deckSelected: null,
     showDeck: false,
-    createDeck: false
+    createDeck: false,
+    themeAll : {
+      "Group": "1",
+      "Id": "tous",
+      "Title": "Tous",
+      "CardImage": "https://images.ygoprodeck.com/images/cards/94163677.jpg"
+    }
   }),
   mounted(){
+    ServiceBack.get('data', 'ranks').then(res => {
+      this.ranks = JSON.parse(res.Value);
+      this.linkThemeWithDecks();
+    }); 
     ServiceBack.getAll('themes').then(res => {
-      this.themes = res;
+      this.themes = [this.themeAll].concat(res);
       this.loading=false;
       this.linkThemeWithDecks();
     });   
@@ -131,20 +149,44 @@ export default {
     });   
   },
   methods: {
+    selectHierarchy(item){
+      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
+      if(item.Id === 0) this.selectRank(null);
+      if(item.Id === 1) this.showTheme(null);
+    },
     linkThemeWithDecks(){
-      if(!this.themes || !this.decksObject)
+      if(!this.themes || !this.decksObject || !this.ranks)
         return;
+
+      this.ranks.forEach(rank => {
+        rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).Image;
+        rank.Decks = this.decksObject.Decks.filter(x=> x.Rank === rank.Id);
+        rank.DecksCommunity = this.decksObject.DecksCommunity.filter(x=> x.Rank === rank.Id);
+        rank.DecksLength = rank.Decks.length + rank.DecksCommunity.length;
+      });
+      this.refreshRanks++;
+      
+    },
+    selectRank(rank){
+      this.rankSelected = rank;   
+      this.themeSelected = null;
+      this.deckSelected = null; 
+      if(rank) this.hierarchyArray.push({Id:1, Text:rank.Title});
+      else this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=1);
       
       this.themes.forEach(theme => {
-        theme.Decks = this.decksObject.Decks.filter(x=> theme.Id==='tous' || x.Themes.split(',').includes(theme.Id));
-        theme.DecksCommunity = this.decksObject.DecksCommunity.filter(x=> theme.Id==='tous' ||x.Themes.split(',').includes(theme.Id));
+        theme.Decks = this.rankSelected.Decks.filter(x=> theme.Id==='tous' || x.Themes.split(',').includes(theme.Id));
+        theme.DecksCommunity = this.rankSelected.DecksCommunity.filter(x=> theme.Id==='tous' ||x.Themes.split(',').includes(theme.Id));
         theme.DecksLength = theme.Decks.length + theme.DecksCommunity.length;
       });
-      
       this.refreshThemes++;
+
+      window.scrollTo(0, 0);
     },
     showTheme(theme){
       this.themeSelected = theme;
+      if(theme) this.hierarchyArray.push({Id:2, Text:theme.Title});
+      else this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=2);
       window.scrollTo(0, 0);
     },
     selectDeck(deck){

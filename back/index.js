@@ -43,6 +43,7 @@ app.use(bodyParser.json());
 app.use('/api/cards', helperRouteJsonGet.createDalRoute('cards', 'IdName'))
 app.use('/api/extensions', helperRouteJsonGet.createDalRoute('extensions', 'set_code'))
 app.use('/api/themes', helperRouteJsonGet.createDalRoute('themes', 'set_code'))
+app.use('/api/data', helperRouteJsonGet.createDalRoute('data', 'Id'))
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)

@@ -3,14 +3,17 @@
         <v-card-title>{{deck.Title}}</v-card-title>
         <v-card-subtitle>{{deck.Author}} - {{deck.Date}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
-        <router-link :to="'/deck/id=' + deck.Id" >
-          <v-btn target="_blank" text v-if="buttonpage" 
-            class="bg" 
-            style="position:absolute; right:5px; top:5px" >
-            <v-icon>mdi-arrow-right-thin</v-icon>
-            Ouvrir la page dédiée a ce deck
+        <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">
+          <v-btn class="m5px" @click="$emit('unselect')">
+            Retour
           </v-btn>
-        </router-link>
+          <router-link :to="'/deck/id=' + deck.Id" >
+            <v-btn target="_blank" text  class="bg m5px" >
+              <v-icon>mdi-arrow-right-thin</v-icon>
+              Ouvrir la page dédiée a ce deck
+            </v-btn>
+          </router-link>
+        </div>
         <div class="flex">
           <div style="flex-basis: 0; flex-grow:1; min-height:400px" class="m5px"> 
             <h3>Deck List</h3>           
