@@ -3,6 +3,18 @@
         <v-card-title>{{deck.Title}}</v-card-title>
         <v-card-subtitle>{{deck.Author}} - {{deck.Date}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
+        
+        <div class="flex">
+          <v-alert v-if="deck.Errors" type="error" class="m5px">
+              {{deck.Errors}}
+          </v-alert>
+          <v-alert v-else type="success" class="m5px">
+              Ce deck respecte la ban list du format
+          </v-alert>
+          <v-alert type="info" class="m5px bg">
+            Nombre de carte du deck : {{deck.DeckLength}}
+          </v-alert>
+        </div>
 
         <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">
           <v-btn class="m5px" @click="$emit('unselect')">

@@ -73,7 +73,7 @@ class helperArray {
         this.removeElement(array, element);
     }
 
-    static removeDuplicates = (array, property)=> {
+    static removeDuplicatesObjects = (array, property)=> {
         let result = [];
         let ids = [];
 
@@ -81,6 +81,18 @@ class helperArray {
             let id = x[property];
             if(!ids.includes(id)){
                 ids.push(id);
+                result.push(x);
+            }
+        });
+
+        return result;
+    }
+
+    static removeDuplicates = (array)=> {
+        let result = [];
+
+        array.forEach(x=> {
+            if(!result.includes(x)){
                 result.push(x);
             }
         });

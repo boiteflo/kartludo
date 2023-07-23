@@ -97,7 +97,7 @@ class managerCard {
             updateSheet.push({range: 'Joker!A' + (i+2), value:errorOccur ? cardNotFound : ''});
         }
 
-        cards = helperArray.removeDuplicates(cards, 'IdName');
+        cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
         
         helperJsonFile.savePath('./cards.json', cards);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);

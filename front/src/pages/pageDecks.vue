@@ -23,18 +23,22 @@
             <h1>Thème : {{themeSelected.Title}}</h1>
             <h1 style="padding-top:5px;">Les Decks </h1>
             <div class="flex-wrap flex-center bg2">
-              <div v-for="deck in themeSelected.Decks" v-bind:key="deck.Id">
+              <div v-for="deck in themeSelected.Decks" v-bind:key="deck.Id" style="position:relative">
                 <iconDeck  :deck="deck" 
                   v-on:select="selectDeck(deck)">
                 </iconDeck>
+                <div v-if="deck.Errors && deck.Errors.length > 0" class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
+                    <v-icon color="red">mdi-alert</v-icon>
+                    <div class="tooltipcard">Non valide</div>
+                </div>
               </div>
               <div v-for="deck in themeSelected.DecksCommunity" v-bind:key="deck.Id" style="position:relative">
-                <iconDeck  :deck="deck" 
+                <iconDeck  :deck="deck" text="DRAFT"
                   v-on:select="selectDeck(deck)">
                 </iconDeck>
-                <div class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
+                <div v-if="deck.Errors && deck.Errors.length > 0" class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
                     <v-icon color="red">mdi-alert</v-icon>
-                    <div class="tooltipcard">A Valider</div>
+                    <div class="tooltipcard">Non Valide</div>
                 </div>
               </div>
             </div>
@@ -149,7 +153,7 @@ export default {
 
       this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);
       
-      this.ranks = this.ranks.concat([{ "Id":"10","Title": "T2308#01", "NameEn":"Cup of Ace"}]);
+      this.ranks = this.ranks.concat([{ "Id":"10","Title": "Tournoi 2308#01", "NameEn":"Cup of Ace"}]);
 
       this.ranks.forEach(rank => {
         rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).Image;

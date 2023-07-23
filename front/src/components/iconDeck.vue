@@ -5,6 +5,7 @@
             :src="deck.MainCardsImages[0]" 
         />
         <div @click="$emit('select')" class="triangle-code" style="cursor:pointer; text-align:end">
+            <div style="position:absolute; top:65px; right:5px; color:white; font-size:10px; width:150px">{{text}}</div>
             <div style="position:absolute; top:85px; right:5px; color:white; font-size:10px; width:150px">{{deck.Author}}</div>
             <div style="position:absolute; top:100px; right:5px; color:white; font-size:18px; width:150px">{{deck.Title}}</div>
         </div>
@@ -27,6 +28,6 @@
 <script>
   export default {
     name: 'icon-deck',
-    props: ['deck']
+    props: ['deck', 'text']
   }
 </script>
