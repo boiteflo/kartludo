@@ -24,6 +24,11 @@
         <h2><v-icon color="yellow">mdi-star</v-icon> CARTES JOKER</h2>
         <panel-cards :cards="filterLimit(store.cards,'K')" :badgeoff="true" :center="true" tooltip="text" >
         </panel-cards>
+      
+        <h2><v-icon color="yellow">mdi-gift</v-icon> CARTES AJOUTÉES DANS LE FORMAT</h2>
+        <panel-cards :cards="store.cards.filter(x=> x.Bonus && x.Limit !== '0')" :badgeoff="false" :center="true" tooltip="text" >
+        </panel-cards>
+
         <v-card class="bg">
           <v-card-title>Remerciement</v-card-title>
           <v-card-text class="bg">Ce format a été inventé par Zouloux (07/2023). Le Site Web a été créé par FlorentOutan. (Contactez moi sur discord). Avec la participation de Lockai, Aelle, Tenebros, Bludzee, Yan_Ue4. Utilisation de la base de données : https://db.ygoprodeck.com.</v-card-text>

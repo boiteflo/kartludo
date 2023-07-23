@@ -2,6 +2,30 @@
 	{
 		"Id": "ranks",
 		"Title": "Classement",
-		"Value": "[{ \"Id\":\"1\",\"Title\": \"Or\", \"NameEn\":\"Blue-Eyes Ultimate Dragon\"}, { \"Id\":\"2\",\"Title\": \"Argent\", \"NameEn\":\"Gyakutenno Megami\"}, { \"Id\":\"3\",\"Title\": \"Bronze\", \"NameEn\":\"M-Warrior #2,\"}, { \"Id\":\"4\",\"Title\": \"Animé\", \"NameEn\":\"Yu-Jo Friendship\"}]"
+		"Value": "[{ \"Id\":\"1\",\"Title\": \"Meta\", \"NameEn\":\"Blue-Eyes Ultimate Dragon\"}, { \"Id\":\"2\",\"Title\": \"Tier2\", \"NameEn\":\"Gyakutenno Megami\"}, { \"Id\":\"3\",\"Title\": \"Fun\", \"NameEn\":\"M-Warrior #2,\"}, { \"Id\":\"4\",\"Title\": \"Animé\", \"NameEn\":\"Yu-Jo Friendship\"}]"
+	},
+	{
+		"Id": "stapleMonsterBig",
+		"Title": "Staple Gros Monstre"
+	},
+	{
+		"Id": "stapleMonster",
+		"Title": "Staple Monstre",
+		"Value": "Flying Kamakiri 1,Giant Rat,Pyramid Turtle,UFO Turtle,Warrior Lady of the Wasteland,Shining Angel,Mystic Tomato,Mother Grizzly,Masked Dragon, Apprentice Magician, sangan, Witch of the Black Forest, Morphing Jar,Morphing Jar #2,Spirit Reaper"
+	},
+	{
+		"Id": "stapleSpell",
+		"Title": "Staple Magie",
+		"Value": "Pot of Greed,Pot d'Avarice,Dark Hole,Monster Reborn,The Shallow Grave,Soul Exchange,Reinforcement of the Army,The Warrior Returning Alive,Smashing Ground,Fissure,Monster Reincarnation,Mystical Space Typhoon,Twin Twisters,Messenger of Peace,Swords of Revealing Light,Lightning Vortex,Book of Moon,Scapegoat"
+	},
+	{
+		"Id": "stapleTrap",
+		"Title": "Staple Piège",
+		"Value": "Mirror Force,Sakuretsu Armor,Dimensional Prison,Waboku,Interdimensional Matter Transporter,Curse of Anubis,Metal Reflect Slime,Raigeki Break,Compulsory Evacuation Device"
+	},
+	{
+		"Id": "",
+		"Title": "",
+		"Value": "Page d'accueil : liste des cartes bonus. Page decks : afficher rank for all, filtrer les themes vis a vis des decks disponibles, page deck : bouton pour télecharger la decklist et carte hover, ajouter le type de carte et le niveau pour pouvoir trier automatiquement, ajouter les extensions de cartes pour pouvoir afficher les cartes des boosters, ajouter un mode 1vsAll et un mode tournoi et un mode ligue"
 	}
 ]

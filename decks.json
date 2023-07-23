@@ -2,14 +2,13 @@
 	"Decks": [
 		{
 			"Id": "c67ee6ea-54e2-422a-a6a6-626a9655193f",
-			"IdParent": "",
+			"Rank": "3",
 			"Title": "Guerriers bien équippés",
 			"Date": "17/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "Command Knight,Warrior Lady of the Wasteland, Hidden Armory",
 			"Themes": "terre",
 			"DeckList": "Dark Blade,D.D. Warrior, Maha Vailo, Big Shield Gardna, UFO Turtle, Shining Angel, Command Knight x2, Goblin Attack Force, Obnoxious Celtic Guard, Zombyra the Dark, Exiled Force, Blade Knight, D.D. Warrior Lady, D.D. Assailant, D.D. Survivor, Warrior Lady of the wasteland x2, Dark Dust Spirit, Dark Hole, Swords of Revealing Light, Monster Reborn, Pot of Greed, Smashing Ground, Pot of Avarice, Hidden Armory x2, Horn of the Unicorn, Malevolent Nuzzler, Megamorph, Mage Power, Ekibyo Drakmord, Megamorph, Card Trader, Mystical Space Typhoon, Order to Charge, Twin Twisters, Waboku, Raigeki Break, Sakuretsu Armor",
-			"Rank": "3",
 			"MainCardsIds": [
 				"commandknight",
 				"warriorladyofthewasteland",
@@ -23,14 +22,13 @@
 		},
 		{
 			"Id": "8f33c817-3c74-4fcb-9356-3529abcae9bd",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Protecteur du tombeau",
 			"Date": "18/07/2023",
 			"Author": "Lockai",
 			"MainCards": "Gravekeeper's Recruiter, Gravekeeper's Oracle, Necrovalley",
 			"Themes": "tombeau, tenebres",
 			"DeckList": "Gravekeeper's Recruiter x2, Gravekeeper's Oracle, Necrovalley x2, A Cat of Ill Omen, Old Vindictive Magician, Apprentice Magician, Sangan, Gravekeeper's Priestess, Witch of the Black Forest, Mystic Tomato x2, Gravekeeper's Spy, Gravekeeper's Guard, Gravekeeper's Spear Soldier, Gravekeeper's Assailant, Gravekeeper's Commandant, Gravekeeper's Ambusher, Vanity's Fiend, Dark Hole, Royal Tribute, Swords of Revealing Light, Fissure, Pot of Greed, Heavy Storm, Upstart Goblin, Hammer Shot, Gravekeeper's Stele, Mystical Space Typhoon, Smashing Ground, Trap Hole, Waboku, Bottomless Trap Hole, Rite of Spirit, Sakuretsu Armor, Compulsory Evacuation Device, Threatening Roar, Dimensional Prison, Nightmare Wheel",
-			"Rank": "1",
 			"MainCardsIds": [
 				"gravekeepersrecruiter",
 				"gravekeepersoracle",
@@ -44,14 +42,13 @@
 		},
 		{
 			"Id": "919ee4fa-5eb5-4bd4-9134-b38b918a0aae",
-			"IdParent": "8f33c817-3c74-4fcb-9356-3529abcae9bd",
+			"Rank": "1",
 			"Title": "Protecteur du tombeau \nPostBan",
 			"Date": "18/07/2023",
 			"Author": "Lockai",
 			"MainCards": "Gravekeeper's Recruiter, Gravekeeper's Oracle, Necrovalley",
 			"Themes": "tombeau, tenebres",
 			"DeckList": "Gravekeeper's Recruiter x2, Gravekeeper's Oracle, Necrovalley, A Cat of Ill Omen, Old Vindictive Magician, Apprentice Magician, Sangan, Gravekeeper's Priestess, Witch of the Black Forest, Mystic Tomato x2, Gravekeeper's Spy, Gravekeeper's Guard, Gravekeeper's Spear Soldier, Gravekeeper's Assailant, Gravekeeper's Commandant x2, Gravekeeper's Ambusher, Vanity's Fiend, Dark Hole, Swords of Revealing Light, Book of Moon, Pot of Greed, Heavy Storm, Upstart Goblin, Hammer Shot, Gravekeeper's Stele, Mystical Space Typhoon, Smashing Ground, Trap Hole, Waboku, Bottomless Trap Hole, Rite of Spirit, Sakuretsu Armor, Compulsory Evacuation Device, Draining Shield, Threatening Roar, Dimensional Prison, Nightmare Wheel",
-			"Rank": "1",
 			"MainCardsIds": [
 				"gravekeepersrecruiter",
 				"gravekeepersoracle",
@@ -65,14 +62,13 @@
 		},
 		{
 			"Id": "36597341-7282-4841-bd30-173fd2140cd5",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Gemini HERO",
 			"Date": "18/07/2023",
 			"Author": "Tenebros & Bludzee",
 			"MainCards": "Gigaplant, Future Fusion ,Elemental HERO Stratos",
 			"Themes": "terre, hero",
 			"DeckList": "Insect Knight, Lonefire Blossom x2, Witch of the Black Forest, UFO Turtle, Lord Poison, D.D. Assailant, Doomcaliber Knight, Elemental HERO Ocean, Elemental HERO Stratos, Elemental HERO Neos Alius, Blazewing Butterfly, Dark Valkyria, Heavy Knight of the Flame, Gigaplant x2, Swords of Revealing Light, Fissure, Monster Reborn, Pot of Greed, Heavy Storm, Reinforcement of the Army, Smashing Ground, Gold Sarcophagus, Miracle Fusion x2, E – Emergency Call, Galaxy Cyclone, Messenger of Peace, Future Fusion, Burden of the Mighty, Mystical Space Typhoon, Book of Moon, Enemy Controller, Mirror Force, Bottomless Trap Hole, Sakuretsu Armor, Dimensional Prison, Jar of Greed, Legacy of Yata-Garasu, Superalloy Beast Raptinus, Elemental HERO Nova Master",
-			"Rank": "1",
 			"MainCardsIds": [
 				"gigaplant",
 				"futurefusion",
@@ -86,14 +82,13 @@
 		},
 		{
 			"Id": "ebdeebc3-faa6-46e7-a25e-fffa0704b9e1",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Six Samuraïs PreBan",
 			"Date": "19/07/2023",
 			"Author": "Lockai",
 			"MainCards": "The Six Samurai - Zanji, Grandmaster of the Six Samurai, Enishi Shien's Chancellor",
 			"Themes": "terre",
 			"DeckList": "Shien's Footsoldier, The Six Samurai - Yariza, The Six Samurai - Yaichi, The Six Samurai - Kamon, The Six Samurai - Zanji x2, The Six Samurai - Nisashi, The Six Samurai - Irou, Spirit of the Six Samurai, Witch of the Black Forest, UFO Turtle, Mother Grizzly, Exiled Force, Grandmaster of the Six Samurai x2, Enishi Shien's Chancellor x2, Swords of Revealing Light, Fissure, Monster Reborn, Pot of Greed, Heavy Storm, Reinforcement of the Army, The Warrior Returning Alive, Smashing Ground, Hammer Shot, Pot of Avarice, Galaxy Cyclone, Six Samurai United, Mystical Space Typhoon, Trap Hole, Mirror Force, Torrential Tribute, Bottomless Trap Hole, Sakuretsu Armor, Return of the Six Samurai, Double-Edged Sword Technique, Dimensional Prison, Call of the Haunted, Nightmare Wheel",
-			"Rank": "1",
 			"MainCardsIds": [
 				"thesixsamuraizanji",
 				"grandmasterofthesixsamurai",
@@ -107,14 +102,13 @@
 		},
 		{
 			"Id": "ca0bd872-e174-4a95-a60a-1e9ed3c4351d",
-			"IdParent": "",
+			"Rank": "3",
 			"Title": "Démon Mefist",
 			"Date": "19/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "Mefist the Infernal General, Summoned Skull, Dark necrofear",
 			"Themes": "tenebres,demons, fun",
 			"DeckList": "archfiend soldier, summoned skull, sangan, morphing jar 2, witch of the black forest, wall of illusion, mystic tomato x2, newdoria, doomcaliber knight, necroface, doomsday horror, mefist the infernal general x2, the fiend megacyber, dark ruler ha des, dark dust spirit, legendary fiend, puppet master, dark necrofear, exodius the ultimate forbidden lord, dark hole, swords of revealing light, brain control, monster reborn, pot of greed, the shallow grave, soul exchange, terraforming, fiend s sanctuary x2, pot of avarice, yami, mystic plasma zone, mystical space typhoon, twin twisters, waboku, dark spirit of the silent, raigeki break, soul rope, a hero emerges, robbin goblin, metal reflect slime ",
-			"Rank": "3",
 			"MainCardsIds": [
 				"mefisttheinfernalgeneral",
 				"summonedskull",
@@ -128,14 +122,13 @@
 		},
 		{
 			"Id": "4a4f3ad0-ace2-4a3a-9184-73dd5db3b582",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Rituel Dark",
 			"Date": "19/07/2023",
 			"Author": "Arty75",
 			"MainCards": "the masked beast, relinquished, demise king of armageddon",
 			"Themes": "rituels",
 			"DeckList": "luster dragon, insect knight, sabersaurus, gladiator beast andal, sangan, witch of the black forest, senju of the thousand hands x2, sonic bird, mystic tomato, goblin attack force, newdoria, dark jeroid, manju of the ten thousand hands x2, doomcaliber knight, relinquished, the masked beast, demise king of armageddon, dark hole, swords of revealing light, monster reborn, pot of greed, nightmare's steelcage, galaxy cyclone, mystic plasma zone, black illusion ritual, contract with the abyss, advanced ritual art, mystical space typhoon, book of moon, enemy controller, waboku, jar of greed, sakuretsu armor, curse of anubis, negate attack, seven tools of the bandit, judgment of anubis",
-			"Rank": "1",
 			"MainCardsIds": [
 				"themaskedbeast",
 				"relinquished",
@@ -149,14 +142,13 @@
 		},
 		{
 			"Id": "ccde670d-2f47-4496-898c-2e2c85cb0aeb",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Bête en ragé !",
 			"Date": "20/07/2023",
 			"Author": "Harutazzy",
 			"MainCards": "master of oz, green baboon defender of the forest, horn of the phantom beast",
 			"Themes": "fusions",
 			"DeckList": "great angus,mad dog of darkness,genewarped warwolf,gladiator beast andal,big koala,sea koala,ryko lightsworn hunter,des koala,gyakugire panda,giant rat,bazoo the souleater,des kangaroo x2,berserk gorilla,enraged battle ox,the trojan horse,vampiric koala,manticore of darkness,behemoth the king of all animals,green baboon defender of the forest,dark hole,swords of revealing light,monster reborn,pot of greed,wild natures release,smashing ground,hammer shot,the big cattle drive,gaia power,future fusion,spiritual forest,mystical space typhoon,book of moon,my body as a shield,twin twisters,michizure,bottomless trap hole,sakuretsu armor,dimensional prison,horn of the phantom beast x2,super rush recklessly,howl of the wild,master of oz",
-			"Rank": "1",
 			"MainCardsIds": [
 				"masterofoz",
 				"greenbaboondefenderoftheforest",
@@ -170,14 +162,13 @@
 		},
 		{
 			"Id": "d3452dd5-ab8a-4a3d-bb58-aa5784beb8e2",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Dragon Supreme",
 			"Date": "20/07/2023",
 			"Author": "Chaoxys",
 			"MainCards": "fiveheaded dragon",
 			"Themes": "dragons",
 			"DeckList": "luster dragon,meteor dragon,redeyes black dragon,blueeyes white dragon,trihorned dragon,decoy dragon x2,totem dragon x2,twinheaded behemoth,armed dragon lv3,masked dragon x2,exploder dragon,spear dragon,mirage dragon,blizzard dragon,vanguard of the dragon,armed dragon lv5,armed dragon lv7,felgrand dragon,phantom dragon,swords of revealing light,fissure,monster reborn,pot of greed,a wingbeat of giant dragon,gold sarcophagus,dragons mirror,tradein,galaxy cyclone,future fusion,burden of the mighty,twin twisters,mirror force,windstorm of etaqua,sakuretsu armor,dimensional prison,dragons rebirth,call of the haunted,meteor black dragon,fiveheaded dragon",
-			"Rank": "2",
 			"MainCardsIds": [
 				"fiveheadeddragon"
 			],
@@ -187,14 +178,13 @@
 		},
 		{
 			"Id": "5a46debf-115c-40a0-9446-d053bd0487c4",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Diamond Dude Turbo - Post-Banlist",
 			"Date": "20/07/2023",
 			"Author": "Bucket avec l'aide de Bludzee et Ténébros",
 			"MainCards": "destiny hero  diamond dude, elemental hero stratos, destiny hero  plasma",
 			"Themes": "hero",
 			"DeckList": "treeborn frog,cyber valley,vortex trooper x2,witch of the black forest,mystic tomato,destiny hero  diamond dude x2,elemental hero ocean,destiny hero  fear monger,elemental hero stratos,elemental hero neos alius,fieldcommander rahz,jinzo,dark dust spirit,destiny hero  dasher,destiny hero  malicious x2,destiny hero  plasma,swords of revealing light,monster reborn,pot of greed,heavy storm,soul exchange,nightmares steelcage,creature swap,lightning vortex,reinforcement of the army,the warrior returning alive,soul taker,fissure,e  emergency call,destiny draw,scapegoat,mystical space typhoon,bottomless trap hole,sakuretsu armor,hero signal,destiny signal,dimensional prison",
-			"Rank": "1",
 			"MainCardsIds": [
 				"destinyherodiamonddude",
 				"elementalherostratos",
@@ -207,15 +197,14 @@
 			]
 		},
 		{
-			"Id": "joeybcity",
-			"IdParent": "",
+			"Id": "93b055fe-87a3-48da-b099-0243b7346f29",
+			"Rank": "4",
 			"Title": "JOEY B.City",
 			"Date": "21/07/2023",
 			"Author": "Zouloux 2018",
 			"MainCards": "flame swordsman",
 			"Themes": "feu,anime",
 			"DeckList": "redeyes black metal dragon,gilford the lightning,redeyes black dragon,jinzo,axe raider,masaki the legendary swordsman, command knight x2,gearfried the iron knight,alligators sword,panther warrior,rocket warrior,littlewinguard,warrior lady of the wasteland x2, baby dragon,swordsman of landstar,king of the swamp x2,time wizard,black dragons chick,scapegoat,shield  sword,graceful dice,monster reborn,polymerization x2,fusion sage,pot of greed,pot of avarice,salamandra,heavy storm,mystical space typhoon,fairy box,magical arm shield,kunai with chain,skull dice,torrential tribute,bottomless trap hole,metalmorph,graverobber,black skull dragon,meteor black dragon,thousand dragon,alligators sword dragon,flame swordsman",
-			"Rank": "4",
 			"MainCardsIds": [
 				"flameswordsman"
 			],
@@ -224,15 +213,14 @@
 			]
 		},
 		{
-			"Id": "magicien",
-			"IdParent": "",
+			"Id": "1214aa63-6bbc-43f3-bfa9-c084ac65cb99",
+			"Rank": "2",
 			"Title": "Magicien",
 			"Date": "21/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "dark magician of chaos",
 			"Themes": "magiciens",
 			"DeckList": "dark magician,cosmo queen,magician of faith,copycat,apprentice magician,old vindictive magician,jowgen the spiritualist,legion the fiend jester,shining angel x2,mystic tomato,skilled dark magician,silent magician lv4,silent magician lv8,mythical beast cerberus,gemini elf,dark magician girl,chaos command magician,chaos sorcerer,dark red enchanter,dark magician of chaos,exodius the ultimate forbidden lord,dark hole,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,level up,messenger of peace,card trader,mystical space typhoon,magical dimension x2,twin twisters,waboku,interdimensional matter transporter,sakuretsu armor,magicians circle x2",
-			"Rank": "2",
 			"MainCardsIds": [
 				"darkmagicianofchaos"
 			],
@@ -242,14 +230,13 @@
 		},
 		{
 			"Id": "a22aea4f-90b9-473e-be83-0cfb83294db3",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Clowns",
 			"Date": "21/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "dream clown",
 			"Themes": "terre,anime",
 			"DeckList": "dark magician,cosmo queen,magician of faith,copycat,apprentice magician,old vindictive magician,blade rabbit,dream clown x2,morphing jar 2,crass clown,legion the fiend jester,giant rat x2,mystic tomato,breaker the magical warrior,malice doll of demise,golem sentry,warrior lady of the wasteland,guardian sphinx,exodius the ultimate forbidden lord,dark hole,swords of revealing light,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,smashing ground,ectoplasmer,messenger of peace,stumbling x2,card trader,mystical space typhoon,magical dimension,twin twisters,waboku,sakuretsu armor,zero gravity,no entry,ordeal of a traveler,labyrinth of nightmare",
-			"Rank": "2",
 			"MainCardsIds": [
 				"dreamclown"
 			],
@@ -258,15 +245,14 @@
 			]
 		},
 		{
-			"Id": "crnesserviteurs",
-			"IdParent": "",
+			"Id": "add9767e-fa52-44b3-ba7e-59352fafce8f",
+			"Rank": "2",
 			"Title": "Crânes Serviteurs",
 			"Date": "21/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "king of the skull servants, the lady in wight, skull servant",
 			"Themes": "demons,tenebres,fun",
 			"DeckList": "skull servant,magician of faith,copycat,king of the skull servants x2,morphing jar 2,apprentice magician,old vindictive magician,sangan,spirit reaper,the lady in wight x2,mystic tomato,pyramid turtle,goblin zombie,necroface,armageddon knight,doomsday horror,the fiend megacyber,dark dust spirit,legendary fiend,swords of revealing light,pot of greed,pot of avarice,lightning vortex,book of life x2,back to square one,monster reincarnation,opticamouflage armor,messenger of peace,card trader,scapegoat,mystical space typhoon,hand destruction,twin twisters,waboku,raigeki break,compulsory evacuation device,robbin goblin",
-			"Rank": "2",
 			"MainCardsIds": [
 				"kingoftheskullservants",
 				"theladyinwight",
@@ -280,14 +266,13 @@
 		},
 		{
 			"Id": "35250798-179b-4ae5-98c9-51ee0f3ba682",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Fusions",
 			"Date": "21/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "meteor black dragon, master of oz, dark paladin",
 			"Themes": "fusions",
 			"DeckList": "summoned skull,dark magician,redeyes black dragon,big koala,decoy dragon,versago the destroyer,morphing jar 2,spirit reaper,king of the swamp x2,goddess with the third eye,beastking of the swamps,witch of the black forest,legion the fiend jester,ufo turtle,mother grizzly x2,mystic tomato,des kangaroo,necroface,dark hole,polymerization x2,monster reborn,pot of greed,pot of avarice,fusion sage,smashing ground,monster reincarnation,fusion recovery,future fusion,dragons mirror,ancient rules,summoners art,messenger of peace,card trader,mystical space typhoon,twin twisters,waboku,raigeki break,interdimensional matter transporter,sakuretsu armor,metal reflect slime,reaper on the nightmare,meteor black dragon x2,dark paladin,black skull dragon,master of oz x2,fiveheaded dragon",
-			"Rank": "2",
 			"MainCardsIds": [
 				"meteorblackdragon",
 				"masterofoz",
@@ -301,14 +286,13 @@
 		},
 		{
 			"Id": "67c9477c-6e0e-4bea-8b26-4d05957e0180",
-			"IdParent": "",
+			"Rank": "2",
 			"Title": "Y. Bleus",
 			"Date": "21/07/2023",
 			"Author": "FlorentOutan",
 			"MainCards": "decoy dragon, kaibaman, blueeyes white dragon",
 			"Themes": "dragons,fun",
 			"DeckList": "blueeyes white dragon x2,the white stone of legend, decoy dragon,morphing jar 2,twinheaded behemoth,armed dragon lv3,armed dragon lv5,masked dragon x2,kaibaman x2,exploder dragon,witch of the black forest,ufo turtle,shining angel x2,vanguard of the dragon,dark hole,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,reinforcement of the army,the warrior returning alive,smashing ground,burst stream of destruction,monster reincarnation,ancient rules,summoners art,mystical space typhoon,twin twisters,waboku,burst breath,interdimensional matter transporter,curse of anubis,dragons rebirth,dragons rage,metal reflect slime",
-			"Rank": "2",
 			"MainCardsIds": [
 				"decoydragon",
 				"kaibaman",
@@ -319,19 +303,38 @@
 				"https://images.ygoprodeck.com/images/cards/34627841.jpg",
 				"https://images.ygoprodeck.com/images/cards/2732323.jpg"
 			]
+		},
+		{
+			"Id": "dd2a9814-1c4b-4b4d-bca1-8cbd38d0a35c",
+			"Rank": "1",
+			"Title": "Lightsworn Post ban",
+			"Date": "22/07/2023",
+			"Author": "Lockai",
+			"MainCards": "celestia lightsworn angel, wulf lightsworn beast, ryko lightsworn hunter",
+			"Themes": "lumiere,lightsworn",
+			"DeckList": "jain lightsworn paladin x2,lyla lightsworn sorceress,garoth lightsworn warrior,lumina lightsworn summoner x2,ryko lightsworn hunter,wulf lightsworn beast,celestia lightsworn angel x2,gragonith lightsworn dragon,ehren lightsworn monk,magical merchant,mask of darkness,card trooper,necro gardna,shining angel,honest,supernimble mega hamster,soul of purity and light,exodius the ultimate forbidden lord,dark hole,swords of revealing light,monster reborn,pot of greed,pot of avarice,heavy storm,smashing ground,hammer shot,solar recharge,galaxy cyclone,realm of light,mystical space typhoon,trap hole,bottomless trap hole,sakuretsu armor,beckoning light,vanquishing light,nightmare wheel,glorious illusion",
+			"MainCardsIds": [
+				"celestialightswornangel",
+				"wulflightswornbeast",
+				"rykolightswornhunter"
+			],
+			"MainCardsImages": [
+				"https://static.wikia.nocookie.net/yugioh/images/4/4c/RykoLightswornHunter-YS18-EN-C-1E.png",
+				"https://static.wikia.nocookie.net/yugioh/images/8/82/WulfLightswornBeast-BLLR-EN-UR-1E.png",
+				"https://static.wikia.nocookie.net/yugioh/images/7/7c/CelestiaLightswornAngel-BLLR-EN-UR-1E.png"
+			]
 		}
 	],
 	"DecksCommunity": [
 		{
 			"Id": "2e039030-ae03-4e1f-be48-44145bdbebea",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "De vieux jouet",
 			"Date": "20/07/2023",
 			"Author": "HayatteMADI",
 			"MainCards": "ancient gear gadjiltron dragon, geartown, green gadget",
 			"Themes": "terre",
 			"DeckList": "ancient gear gadjiltron dragon x2,ancient gear golem,ancient gear beast,ancient gear engineer,ancient gear knight,ancient gear soldier,green gadget,red gadget,yellow gadget,ancient gear gadget x2,giant rat,nanobreaker,truckroid,machine king prototype,reflect bounder,cyber valley,cipher soldier,bootup soldier  dread dynamo,monster reborn,pot of greed,heavy storm,creature swap,machine duplication,terraforming,pot of avarice,iron draw,geartown x2,ancient gear castle,future fusion,burden of the mighty,rush recklessly,limiter removal,shrink,book of moon,enemy controller,double cyclone,mirror force",
-			"Rank": "1",
 			"MainCardsIds": [
 				"ancientgeargadjiltrondragon",
 				"geartown",
@@ -345,14 +348,13 @@
 		},
 		{
 			"Id": "ae848c31-b561-47b2-a206-bc6ad5e86761",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "GK Challenge joue sans ta main",
 			"Date": "20/07/2023",
 			"Author": "HayatteMADI",
 			"MainCards": "necrovalley, gravekeepers priestess, royal tribute",
 			"Themes": "tombeau, tenebres",
 			"DeckList": "gravekeepers spy x2,gravekeepers assailant,gravekeepers spear soldier,gravekeepers shaman,gravekeepers guard,gravekeepers chief,gravekeepers ambusher,gravekeepers priestess,gravekeepers recruiter,gravekeepers cannonholder,sangan,a cat of ill omen,mystic tomato,tsukuyomi,gravekeepers commandant,necrovalley x2,royal tribute x2,gravekeepers stele,dd designator,pot of greed,upstart goblin,terraforming,wonder wand,field barrier,book of moon,enemy controller,twister,deck devastation virus,bottomless trap hole,trap hole,dust tornado,mirror force,mind crush,judgment of anubis,dark bribe,rite of spirit,burden of the mighty",
-			"Rank": "1",
 			"MainCardsIds": [
 				"necrovalley",
 				"gravekeeperspriestess",
@@ -366,14 +368,13 @@
 		},
 		{
 			"Id": "c3cbd23b-4222-4dc0-842f-5cb8bc524dd6",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Insecte",
 			"Date": "20/07/2023",
 			"Author": "WUIMAX",
 			"MainCards": "doom dozer, insect queen, insect neglect",
 			"Themes": "insecte, terre",
 			"DeckList": "doom dozer x2,metal armored bug,insect queen,maneater bug,pinch hopper x2,leghul,parasite paracide,4starred ladybug of doom,skullmark ladybug,magical merchant,swarm of scarabs,swarm of locusts,saber beetle,noblemaneater bug,howling insect x2,insect knight,dark hole,swords of revealing light,monster reborn,pot of greed,the shallow grave,multiplication of ants,insect imitation,insect barrier,insect armor with laser cannon,insect neglect,verdant sanctuary,dna surgery,magic jammer,rivalry of warlords,swamp mirrorer,card advance,gaia power,mage power,giant rat,neo bug,twin twisters",
-			"Rank": "1",
 			"MainCardsIds": [
 				"doomdozer",
 				"insectqueen",
@@ -387,14 +388,13 @@
 		},
 		{
 			"Id": "8d9d696c-73c5-4721-82d9-8f0445056346",
-			"IdParent": "",
+			"Rank": "1",
 			"Title": "Guerrier magnétique ",
 			"Date": "20/07/2023",
 			"Author": "Lionator52 ",
 			"MainCards": "beta the magnet warrior, alpha the magnet warrior, gamma the magnet warrior",
 			"Themes": "terre, theme",
 			"DeckList": "alpha the magnet warrior,beta the magnet warrior x2,gamma the magnet warrior,labyrinth wall,familiarpossessed  aussa,avalanching aussa,aussa the earth charmer,delta the magnet warrior,megarock dragon,block golem,granmarg the rock monarch,mask of darkness,morphing jar,giant rat x2,sphere kuriboh,valkyrion the magna warrior x2,attack the moon,magnetic field,enemy controller,card destruction,hand destruction,fissure,monster reborn,pot of greed,mage power,terraforming,twin twisters,lightning vortex,exchange,swords of revealing light,sakuretsu armor,rock bombardment,draining shield,magnet conversion,raigeki break,spiritual earth art  kurogane,lightforce sword",
-			"Rank": "1",
 			"MainCardsIds": [
 				"betathemagnetwarrior",
 				"alphathemagnetwarrior",
@@ -408,14 +408,13 @@
 		},
 		{
 			"Id": "9d663299-186d-4599-b4da-ded0e3971cfb",
-			"IdParent": "",
+			"Rank": "3",
 			"Title": "Uria",
 			"Date": "21/07/2023",
 			"Author": "test",
 			"MainCards": "uria lord of searing flames",
 			"Themes": "dieux",
 			"DeckList": "uria lord of searing flames",
-			"Rank": "3",
 			"MainCardsIds": [
 				"urialordofsearingflames"
 			],
@@ -425,19 +424,50 @@
 		},
 		{
 			"Id": "bc4139f7-f423-4189-8251-6877466de778",
-			"IdParent": "",
+			"Rank": "3",
 			"Title": "Dieux",
 			"Date": "21/07/2023",
 			"Author": "test",
 			"MainCards": "slifer the sky dragon",
 			"Themes": "dieux",
 			"DeckList": "obelisk the tormentor,slifer the sky dragon,the winged dragon of ra,the winged dragon of ra  sphere mode",
-			"Rank": "3",
 			"MainCardsIds": [
 				"slifertheskydragon"
 			],
 			"MainCardsImages": [
 				"https://images.ygoprodeck.com/images/cards/10000020.jpg"
+			]
+		},
+		{
+			"Id": "0b2b9a9e-ee17-4b19-9b04-d66ef244316a",
+			"Rank": "3",
+			"Title": "Yeux Rouges",
+			"Date": "22/07/2023",
+			"Author": "Franck_N974",
+			"MainCards": "redeyes darkness dragon",
+			"Themes": "dragons",
+			"DeckList": "luster dragon,divine dragon ragnarok,redeyes black dragon x2,redeyes darkness dragon x2,black dragons chick x2,dark mimic lv1,dark mimic lv3,armed dragon lv3,armed dragon lv5,armed dragon lv7,masked dragon,lord of d,mystic tomato,spear dragon,spirit ryu,element dragon,exploder dragon,dark hole,swords of revealing light,the flute of summoning dragon,polymerization,monster reborn,pot of greed,soul exchange,a wingbeat of giant dragon,level up,stamping destruction,inferno fire blast,dragons mirror,dragon treasure,mountain,reload,hand destruction,twin twisters,bottomless trap hole,sakuretsu armor,call of the haunted",
+			"MainCardsIds": [
+				"redeyesdarknessdragon"
+			],
+			"MainCardsImages": [
+				"https://images.ygoprodeck.com/images/cards/96561011.jpg"
+			]
+		},
+		{
+			"Id": "857cf725-8322-4dc5-bdcf-319a758cf7b6",
+			"Rank": "2",
+			"Title": "zer",
+			"Date": "23/07/2023",
+			"Author": "ze",
+			"MainCards": "warrior of zera",
+			"Themes": "demons,vent,magiciens",
+			"DeckList": "mazera deville,warrior of zera,archlord zerato",
+			"MainCardsIds": [
+				"warriorofzera"
+			],
+			"MainCardsImages": [
+				"https://images.ygoprodeck.com/images/cards/66073051.jpg"
 			]
 		}
 	]

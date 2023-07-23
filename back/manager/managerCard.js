@@ -13,14 +13,19 @@ class managerCard {
         // Bonus
         if(sheetData.Bonus && sheetData.Bonus.length > 0){
             sheetData.Bonus.forEach(cardArray=> {
-                cards.push({
-                "IdName": cardArray[0].cleanup(),
-                "NameEn":cardArray[0],
-                "NameFr":cardArray[1],
-                "Image":cardArray[2]
-                });
+                let card = cards.find(x=> x.NameEn.cleanup() === cardArray[0].cleanup());
+                if(card)
+                    card.Bonus=true;
+                else
+                    cards.push({
+                        "IdName": cardArray[0].cleanup(),
+                        "NameEn":cardArray[0],
+                        "NameFr":cardArray[1],
+                        "Image":cardArray[2],
+                        "Bonus":true
+                    });
             });
-        }          
+        }     
 
         cards.forEach(card => {
             card.Limit = '';
@@ -28,6 +33,7 @@ class managerCard {
             delete card.LimitFriendsImages;
             card.LimitFriends = '';
             card.IdName = card.NameEn.cleanup();
+            card.IdNameFr = card.NameFr.cleanup();
         });
 
         // Limit0

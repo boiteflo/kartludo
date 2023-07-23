@@ -3,11 +3,19 @@
         style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis;" 
         @click="$emit('select', card)"
         @mouseover="$emit('hover', card)">
+        <div v-if="showname" style="font-size: 16px; cursor:pointer; color:white; text-align:center" class="bg2">
+            <div class="p5px hoverFontColor" @click="copyClipboard(card.NameEn);">
+                {{card.NameEn}}
+            </div>
+            <div class="p5px hoverFontColor" @click="copyClipboard(card.NameFr);">
+                {{card.NameFr}}
+            </div>
+        </div>
          <div v-if="tooltip==='text'" class="tooltipcard flex-row">
             <div class="hoverFontColor" style="font-size: 8px; cursor:pointer" @click="copyClipboard(card.NameEn);">
                 {{card.NameEn}}
             </div>
-            <div class="hoverFontColor" v-if="card.NameFr"  style="font-size: 8px; cursor:pointer" @click="copyClipboard(card.NameFr);">
+            <div class="hoverFontColor" style="font-size: 8px; cursor:pointer" @click="copyClipboard(card.NameFr);">
                 {{card.NameFr}}
             </div>
             <img :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.Image"/>
@@ -17,7 +25,7 @@
             <div class="hoverFontColor" :style="{'cursor':'pointer', width: (size ? size : 150) +'px'}" @click="copyClipboard(card.NameEn);">
                 {{card.NameEn}}
             </div>
-            <div class="hoverFontColor" v-if="card.NameFr"  :style="{'cursor':'pointer', width: (size ? size : 150) +'px'}" @click="copyClipboard(card.NameFr);">
+            <div class="hoverFontColor" :style="{'cursor':'pointer', width: (size ? size : 150) +'px'}" @click="copyClipboard(card.NameFr);">
                 {{card.NameFr}}
             </div>
             <img style="max-width:250px !important" :src="card.Image"/>
@@ -40,7 +48,7 @@
 <script>
   export default {
     name: 'card-image',
-    props: ['card', 'badgeoff', 'size', 'tooltip', 'x2'],
+    props: ['card', 'badgeoff', 'size', 'tooltip', 'x2', 'showname'],
     methods: {
         copyClipboard(text) {
             navigator.clipboard.writeText(text);

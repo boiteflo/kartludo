@@ -22,7 +22,16 @@ String.prototype.includesX2 = function() {
     return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
 }
 String.prototype.cleanup = function() {
-    return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+    let result = this;
+    let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
+    groups.forEach(group => {
+        let array = group.split('|');
+        let key = array[0].split('')[0];
+        array[1].split('').forEach(character=> result = result.replaceAll(character, key));
+    });
+    
+    result = result.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+    return result;
 }
 String.prototype.onlyAlphaNumericAndSpace = function() {
     return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
@@ -35,6 +44,7 @@ String.prototype.removeX2 = function() {
     else
         return this.substring(0);
 }
+
 
 const app = express();
 app.use(cors());

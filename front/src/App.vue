@@ -18,6 +18,7 @@
 <script>
 import { store } from './data/store.js'
 import ServiceBack from './services/serviceBack'
+import serviceMain from './services/serviceMain'
 
 import menuBar from './components/menuBar';
 import panelCards from './components/panelCards';
@@ -43,11 +44,7 @@ export default {
   },
   methods: {
     search(value){
-      this.selectedCards = !value || value.length < 3 ? []
-        : this.cards.filter(x=> 
-          x.IdName.includes(value.toLowerCase())
-          || x.NameEn.toLowerCase().includes(value.toLowerCase())
-          || (x.NameFr && x.NameFr.toLowerCase().includes(value.toLowerCase()))).slice(0, 50);
+      this.selectedCards = serviceMain.filterCard(this.cards, value);
     },
   }
 };

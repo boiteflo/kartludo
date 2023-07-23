@@ -47,7 +47,7 @@
                 <v-text-field class="m5px" label="Auteur" hide-details
                             v-model="deck.Author">
                 </v-text-field>
-                <v-combobox :disabled="!deck.RankObj" v-model="deck.Rank" label="Classement" :items="ranks" item-text="Title">
+                <v-combobox :disabled="!deck.Rank" v-model="deck.Rank" label="Classement" :items="ranks" item-text="Title">
                 </v-combobox>
             </div>
             <div v-if="$vuetify.breakpoint.width >= 930" class="flex">
@@ -83,7 +83,7 @@
                     </div>
                     <card-image v-if="cardHover" 
                         :card="cardHover"
-                        :badgeoff="false"
+                        :badgeoff="true"
                         :size="300">
                     </card-image>
                     <br>
@@ -180,8 +180,9 @@
 </template>
 
 <script>
-import ServiceBack from '../services/serviceBack'
 import { store } from '../data/store.js'
+import ServiceMain from '../services/serviceMain'
+import ServiceBack from '../services/serviceBack'
 import helperString from '../helpers/helperString'
 import helperArray from '../helpers/helperArray'
 
@@ -227,11 +228,7 @@ let md5 = require('md5');
     },
     methods: {
         search(value){
-            this.selectedCards = !value || value.length < 3 ? []
-                : store.cards.filter(x=> 
-                    x.NameEn.toLowerCase().includes(value.toLowerCase())
-                    || (x.NameFr && x.NameFr.toLowerCase().includes(value.toLowerCase())))
-                .slice(0, 50);
+            this.selectedCards = ServiceMain.filterCard(store.cards, value);
         },
         selectCard(card){
             let alreadyExist = this.deck.DeckListCards.find(x=> x.Card.IdName == card.IdName);

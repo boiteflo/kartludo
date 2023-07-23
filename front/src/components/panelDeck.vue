@@ -3,6 +3,7 @@
         <v-card-title>{{deck.Title}}</v-card-title>
         <v-card-subtitle>{{deck.Author}} - {{deck.Date}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
+
         <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">
           <v-btn class="m5px" @click="$emit('unselect')">
             Retour
@@ -14,17 +15,31 @@
             </v-btn>
           </router-link>
         </div>
-        <div class="flex">
-          <div style="flex-basis: 0; flex-grow:1; min-height:400px" class="m5px"> 
-            <h3>Deck List</h3>           
-            <v-textarea readonly variant="outlined" auto-grow
-              :value="deck.DeckList.replaceAll(',','\n')">
-            </v-textarea>
+        
+        <div class="flex" style="align-items:center">
+          <div style="flex-basis: 0; min-height:400px; width:310px" class="m5px">  
+            <v-btn target="_blank" text  class="bg m5px w100p" @click="saveDecklist" >
+              <v-icon>mdi-download</v-icon>
+              Télécharger la decklist
+            </v-btn>  
+            <v-btn target="_blank" text  class="bg m5px w100p" >
+              <v-icon>mdi-content-duplicate</v-icon>
+              Dupliquer ce deck
+            </v-btn>  
+            <div style="width:310px; height:5px;"></div>        
+            <card-image v-if="cardHover" 
+                :card="cardHover"
+                :badgeoff="true"
+                :size="300"
+                :showname="true">
+            </card-image>
+            <div v-else class="bg2 w100p" style="height:437px">
+            </div>
           </div>
           <div style="flex-basis: 0; flex-grow:5; min-height:400px" class="m5px">            
             <panelDeckCards :cards="deck.DeckListCards"
-              :size="$vuetify.breakpoint.width *50 /600"
-              tooltip="image">
+              :size="$vuetify.breakpoint.width *40 /600"
+              @hover="showCard">
             </panelDeckCards>
           </div>
         </div>
@@ -45,18 +60,28 @@
 </template>
 
 <script>
+import helperJs from '../helpers/helperJs';
+
 import panelDeckCards from './panelDeckCards';
+import cardImage from './cardImage';
 
   export default {
     name: 'panel-deck',
     props: ['deck', 'buttonpage'],
-    components: {panelDeckCards},
+    components: {panelDeckCards, cardImage},
     data: () => ({
         size: 150,
+        cardHover: null
     }),
     methods : {
       switchSize(value){
         this.size = value ? 50 : 150;
+      },
+      showCard(card){
+          this.cardHover = card;
+      },
+      saveDecklist(){
+        helperJs.saveFile(this.deck.Title + '_decklist.txt', `${this.deck.Title} - ${ this.deck.Author} - ${ this.deck.Date}\n${this.deck.DeckList.replaceAll(',','\n')}`);
       }
     }
   }

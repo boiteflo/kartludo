@@ -59,18 +59,7 @@
           <div v-else :key="refreshThemes">
             <h1>Les Themes</h1>
             <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="theme in themes.filter(x=> x.Group === '1')" 
-                v-bind:key="theme.Id" 
-                v-on:select="showTheme(theme)" 
-                :text="theme.Title" 
-                :text1="theme.DecksLength + ' decks'"
-                :image="theme.CardImage">
-              </icon-theme>
-            </div>
-
-            <h2><v-icon color="white">mdi-axe</v-icon> Spécifique</h2>
-            <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="theme in themes.filter(x=> x.Group === '2')" 
+              <icon-theme v-for="theme in themes.filter(x=> rankSelected.Id==0 || x.DecksLength > 0)" 
                 v-bind:key="theme.Id" 
                 v-on:select="showTheme(theme)" 
                 :text="theme.Title" 
@@ -139,7 +128,7 @@ export default {
       this.linkThemeWithDecks();
     }); 
     ServiceBack.getAll('themes').then(res => {
-      this.themes = [this.themeAll].concat(res);
+      this.themes = res.concat([this.themeAll]);
       this.loading=false;
       this.linkThemeWithDecks();
     });   
@@ -158,10 +147,14 @@ export default {
       if(!this.themes || !this.decksObject || !this.ranks)
         return;
 
+      this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);
+      
+      this.ranks = this.ranks.concat([{ "Id":"10","Title": "T2308#01", "NameEn":"Cup of Ace"}]);
+
       this.ranks.forEach(rank => {
         rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).Image;
-        rank.Decks = this.decksObject.Decks.filter(x=> x.Rank === rank.Id);
-        rank.DecksCommunity = this.decksObject.DecksCommunity.filter(x=> x.Rank === rank.Id);
+        rank.Decks = this.decksObject.Decks.filter(x=> rank.Id==0 || x.Rank === rank.Id);
+        rank.DecksCommunity = this.decksObject.DecksCommunity.filter(x=> rank.Id==0 || x.Rank === rank.Id);
         rank.DecksLength = rank.Decks.length + rank.DecksCommunity.length;
       });
       this.refreshRanks++;

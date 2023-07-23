@@ -89,6 +89,14 @@
 	},
 	{
 		"Group": "2",
+		"Id": "lightsworn",
+		"Title": "Seigneurs Lumière",
+		"CardIdName": "rykolightswornhunter",
+		"CardNameEn": "Ryko Lightsworn Hunter",
+		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/4/4c/RykoLightswornHunter-YS18-EN-C-1E.png"
+	},
+	{
+		"Group": "2",
 		"Id": "hero",
 		"Title": "Héros",
 		"CardIdName": "elementalheroflamewingman",
@@ -126,38 +134,6 @@
 		"CardIdName": "exodiatheforbiddenone",
 		"CardNameEn": "Exodia the Forbidden One",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/33396948.jpg"
-	},
-	{
-		"Group": "3",
-		"Id": "anime",
-		"Title": "Animé",
-		"CardIdName": "yujofriendship",
-		"CardNameEn": "Yu-Jo Friendship",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/81332143.jpg"
-	},
-	{
-		"Group": "3",
-		"Id": "fun",
-		"Title": "Fun",
-		"CardIdName": "gyakutennomegami",
-		"CardNameEn": "Gyakutenno Megami",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/31122090.jpg"
-	},
-	{
-		"Group": "3",
-		"Id": "meta",
-		"Title": "Meta",
-		"CardIdName": "chaosemperordragonenvoyoftheend",
-		"CardNameEn": "Chaos Emperor Dragon - Envoy of the End",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/82301904.jpg"
-	},
-	{
-		"Group": "3",
-		"Id": "tous",
-		"Title": "Tous",
-		"CardIdName": "obeliskthetormentor",
-		"CardNameEn": "Obelisk the Tormentor",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/10000000.jpg"
 	},
 	{
 		"Group": "2",
