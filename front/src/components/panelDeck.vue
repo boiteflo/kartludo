@@ -93,7 +93,7 @@ import cardImage from './cardImage';
           this.cardHover = card;
       },
       saveDecklist(){
-        helperJs.saveFile(this.deck.Title + '_decklist.txt', `${this.deck.Title} - ${ this.deck.Author} - ${ this.deck.Date}\n${this.deck.DeckList.replaceAll(',','\n')}`);
+        helperJs.saveFile(this.deck.Title + '_decklist.txt', `${this.deck.Title} - ${ this.deck.Author} - ${ this.deck.Date}\n${this.deck.DeckList.replace(/,/g,'\n')}`);
       }
     }
   }

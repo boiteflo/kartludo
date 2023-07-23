@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helperRouteJsonGet = require("./helper/helperRouteJsonGet");
 
+String.prototype.replaceAll = function(searchTxt, replaceTxt) {
+    const regex = new RegExp(searchTxt, 'g');
+    return this.replace(regex, replaceTxt) ;
+}
 String.prototype.guid = function() {
     var d = new Date().getTime();//Timestamp
     var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
@@ -22,7 +26,7 @@ String.prototype.includesX2 = function() {
     return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
 }
 String.prototype.cleanup = function() {
-    let result = this;
+    let result = this || '';
     let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
     groups.forEach(group => {
         let array = group.split('|');

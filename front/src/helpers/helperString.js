@@ -1,4 +1,9 @@
 class helperString {
+    static replaceAll = function(str, searchTxt, replaceTxt) {
+        const regex = new RegExp(searchTxt, 'g');
+        return str.replace(regex, replaceTxt) ;
+    }
+
     static includesX2(str) {
         return str.toLowerCase().startsWith("x2") || str.toLowerCase().endsWith("x2");
       }
