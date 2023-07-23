@@ -27,12 +27,12 @@ String.prototype.includesX2 = function() {
 }
 String.prototype.cleanup = function() {
     let result = this || '';
-    let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
+    /*let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
     groups.forEach(group => {
         let array = group.split('|');
         let key = array[0].split('')[0];
         array[1].split('').forEach(character=> result = result.replaceAll(character, key));
-    });
+    });*/
     
     result = result.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
     return result;
