@@ -224,14 +224,14 @@
 			"Author": "Zouloux 2018",
 			"MainCards": "flame swordsman",
 			"Themes": "feu,anime",
-			"DeckList": "redeyes black metal dragon,gilford the lightning,redeyes black dragon,jinzo,axe raider,masaki the legendary swordsman, command knight x2,gearfried the iron knight,alligators sword,panther warrior,rocket warrior,littlewinguard,warrior lady of the wasteland x2, baby dragon,swordsman of landstar,king of the swamp x2,time wizard,black dragons chick,scapegoat,shield  sword,graceful dice,monster reborn,polymerization x2,fusion sage,pot of greed,pot of avarice,salamandra,heavy storm,mystical space typhoon,fairy box,magical arm shield,kunai with chain,skull dice,torrential tribute,bottomless trap hole,metalmorph,graverobber,black skull dragon,meteor black dragon,thousand dragon,alligators sword dragon,flame swordsman",
+			"DeckList": "redeyes black metal dragon,gilford the lightning,redeyes black dragon,jinzo,axe raider,masaki the legendary swordsman, command knight x2,gearfried the iron knight,alligators sword,panther warrior,rocket warrior,littlewinguard,warrior lady of the wasteland, baby dragon,swordsman of landstar,king of the swamp x2,time wizard,black dragons chick,scapegoat,shield  sword,graceful dice,monster reborn,polymerization x2,fusion sage,pot of greed,pot of avarice,salamandra,heavy storm,mystical space typhoon,fairy box,magical arm shield,kunai with chain,skull dice,torrential tribute,bottomless trap hole,metalmorph,graverobber,black skull dragon,meteor black dragon,thousand dragon,alligators sword dragon,flame swordsman",
 			"MainCardsIds": [
 				"flameswordsman"
 			],
 			"MainCardsImages": [
 				"https://images.ygoprodeck.com/images/cards/45231177.jpg"
 			],
-			"DeckLength": 46,
+			"DeckLength": 45,
 			"Errors": null
 		},
 		{
@@ -300,7 +300,7 @@
 			"Author": "FlorentOutan",
 			"MainCards": "meteor black dragon, master of oz, dark paladin",
 			"Themes": "fusions",
-			"DeckList": "summoned skull,dark magician,redeyes black dragon,big koala,decoy dragon,versago the destroyer,morphing jar 2,spirit reaper,king of the swamp x2,goddess with the third eye,beastking of the swamps,witch of the black forest,legion the fiend jester,ufo turtle,mother grizzly x2,mystic tomato,des kangaroo,necroface,dark hole,polymerization x2,monster reborn,pot of greed,pot of avarice,fusion sage,smashing ground,monster reincarnation,fusion recovery,future fusion,dragons mirror,ancient rules,summoners art,card trader,mystical space typhoon,twin twisters,waboku,raigeki break,interdimensional matter transporter,sakuretsu armor,metal reflect slime,reaper on the nightmare,meteor black dragon x2,dark paladin,black skull dragon,master of oz x2,fiveheaded dragon",
+			"DeckList": "summoned skull,dark magician,redeyes black dragon,big koala,decoy dragon,versago the destroyer,morphing jar 2,spirit reaper,king of the swamp x2,goddess with the third eye,beastking of the swamps,witch of the black forest,legion the fiend jester,ufo turtle,mother grizzly x2,mystic tomato,des kangaroo,necroface,dark hole,polymerization x2,monster reborn,pot of greed,pot of avarice,fusion sage,smashing ground,monster reincarnation,fusion recovery,future fusion,dragons mirror,ancient rules,summoners art,card trader,mystical space typhoon,twin twisters,waboku,raigeki break,interdimensional matter transporter,sakuretsu armor,metal reflect slime,reaper on the nightmare,meteor black dragon ,dark paladin,black skull dragon,master of oz ,fiveheaded dragon",
 			"MainCardsIds": [
 				"meteorblackdragon",
 				"masterofoz",
@@ -311,7 +311,7 @@
 				"https://images.ygoprodeck.com/images/cards/27134689.jpg",
 				"https://images.ygoprodeck.com/images/cards/90660762.jpg"
 			],
-			"DeckLength": 50,
+			"DeckLength": 48,
 			"Errors": null
 		},
 		{
@@ -322,7 +322,7 @@
 			"Author": "FlorentOutan",
 			"MainCards": "decoy dragon, kaibaman, blueeyes white dragon",
 			"Themes": "dragons,fun",
-			"DeckList": "blueeyes white dragon x2,the white stone of legend, decoy dragon,morphing jar 2,twinheaded behemoth,armed dragon lv3,armed dragon lv5,masked dragon x2,kaibaman x2,exploder dragon,witch of the black forest,ufo turtle,shining angel x2,vanguard of the dragon,dark hole,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,reinforcement of the army,the warrior returning alive,smashing ground,burst stream of destruction,monster reincarnation,ancient rules,summoners art,mystical space typhoon,twin twisters,waboku,burst breath,interdimensional matter transporter,curse of anubis,dragons rebirth,dragons rage,metal reflect slime",
+			"DeckList": "blueeyes white dragon x2,the white stone of legend, decoy dragon,morphing jar 2,twinheaded behemoth,armed dragon lv3,armed dragon lv5,masked dragon ,kaibaman x2,exploder dragon,witch of the black forest,ufo turtle,shining angel x2,vanguard of the dragon,dark hole,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,reinforcement of the army,the warrior returning alive,smashing ground,burst stream of destruction,monster reincarnation,ancient rules,summoners art,mystical space typhoon,twin twisters,waboku,burst breath,interdimensional matter transporter,curse of anubis,dragons rebirth,dragons rage,metal reflect slime, No Entry",
 			"MainCardsIds": [
 				"decoydragon",
 				"kaibaman",

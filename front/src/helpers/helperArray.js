@@ -99,6 +99,33 @@ class helperArray {
 
         return result;
     }
+    
+    static removeDuplicatesObjects = (array, property)=> {
+        let result = [];
+        let ids = [];
+
+        array.forEach(x=> {
+            let id = x[property];
+            if(!ids.includes(id)){
+                ids.push(id);
+                result.push(x);
+            }
+        });
+
+        return result;
+    }
+
+    static removeDuplicates = (array)=> {
+        let result = [];
+
+        array.forEach(x=> {
+            if(!result.includes(x)){
+                result.push(x);
+            }
+        });
+
+        return result;
+    }
   }
  
   module.exports = helperArray;

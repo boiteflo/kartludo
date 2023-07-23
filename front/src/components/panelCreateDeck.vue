@@ -50,6 +50,19 @@
                 <v-combobox :disabled="!deck.Rank" v-model="deck.Rank" label="Classement" :items="ranks" item-text="Title">
                 </v-combobox>
             </div>
+            
+            <div class="flex">
+            <v-alert v-if="deck.Errors" type="error" class="m5px">
+                {{deck.Errors}}
+            </v-alert>
+            <v-alert v-else type="success" class="m5px">
+                Ce deck respecte la ban list du format
+            </v-alert>
+            <v-alert type="info" class="m5px bg">
+                Nombre de carte du deck : {{deck.DeckLength}}
+            </v-alert>
+            </div>
+
             <div v-if="$vuetify.breakpoint.width >= 930" class="flex">
                 <div class="bg" style="flex-grow:2; flex-basis: 0">
                     <div class="bg2 flex flex-center">
@@ -182,6 +195,7 @@
 <script>
 import { store } from '../data/store.js'
 import ServiceMain from '../services/serviceMain'
+import ServiceDeck from '../services/serviceDeck'
 import ServiceBack from '../services/serviceBack'
 import helperString from '../helpers/helperString'
 import helperArray from '../helpers/helperArray'
@@ -224,7 +238,9 @@ let md5 = require('md5');
             };
             this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
             this.deck.Rank= this.ranks.find(x=> x.Id ==3);
-        });  
+        }); 
+        
+        this.deck.Errors = ServiceDeck.getErrors(this.deck, this.deck.DeckListCards);
     },
     methods: {
         search(value){
@@ -238,6 +254,8 @@ let md5 = require('md5');
             }
             else
                 this.deck.DeckListCards.push({Id: card.IdName, Card:card});
+            
+            this.deck.Errors = ServiceDeck.getErrors(this.deck, this.deck.DeckListCards);
         },
         selectCardFromDeck(card){
             let cardObject = this.deck.DeckListCards.find(x=> x.Card.IdName === card.IdName);
@@ -261,6 +279,8 @@ let md5 = require('md5');
             }
 
             this.deck.DeckListCards = this.deck.DeckListCards.filter(x=> x.Card.IdName !== cardObject.Card.IdName);
+            
+            this.deck.Errors = ServiceDeck.getErrors(this.deck, this.deck.DeckListCards);
         },
         selectFav(card){
             this.deck.MainCards.push(card);
