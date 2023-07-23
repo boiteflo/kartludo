@@ -3,9 +3,35 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helperRouteJsonGet = require("./helper/helperRouteJsonGet");
 
-String.prototype.replaceAll = function(searchTxt, replaceTxt) {
+String.prototype.replaceMany = function(searchTxt, replaceTxt) {
     const regex = new RegExp(searchTxt, 'g');
     return this.replace(regex, replaceTxt) ;
+}
+String.prototype.includesX2 = function() {
+    return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
+}
+String.prototype.cleanup = function() {
+    let result = this || '';
+    let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
+    groups.forEach(group => {
+        let array = group.split('|');
+        let key = array[0].split('')[0];
+        array[1].split('').forEach(character=> result = result.replaceMany(character, key));
+    });
+    
+    result = result.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+    return result;
+}
+String.prototype.onlyAlphaNumericAndSpace = function() {
+    return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
+}
+String.prototype.removeX2 = function() {
+    if(this.toLowerCase().startsWith("x2"))
+        return this.substring(2);
+    else if(this.toLowerCase().endsWith("x2"))
+        return this.substring(0, this.length-2);
+    else
+        return this.substring(0);
 }
 String.prototype.guid = function() {
     var d = new Date().getTime();//Timestamp
@@ -21,32 +47,6 @@ String.prototype.guid = function() {
         }
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
-}
-String.prototype.includesX2 = function() {
-    return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
-}
-String.prototype.cleanup = function() {
-    let result = this || '';
-    /*let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
-    groups.forEach(group => {
-        let array = group.split('|');
-        let key = array[0].split('')[0];
-        array[1].split('').forEach(character=> result = result.replaceAll(character, key));
-    });*/
-    
-    result = result.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
-    return result;
-}
-String.prototype.onlyAlphaNumericAndSpace = function() {
-    return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
-}
-String.prototype.removeX2 = function() {
-    if(this.toLowerCase().startsWith("x2"))
-        return this.substring(2);
-    else if(this.toLowerCase().endsWith("x2"))
-        return this.substring(0, this.length-2);
-    else
-        return this.substring(0);
 }
 
 
