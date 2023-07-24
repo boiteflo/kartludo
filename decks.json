@@ -465,16 +465,18 @@
 		"Errors": null
 	},
 	{
-		"Id": "d1e0aaf4-7d9e-49db-8c5c-ca86747fe9f4",
+		"Id": "ad6fd2ee-e8fb-4f29-aac6-cecb0603e4b0",
 		"Format": "",
 		"Rank": 3,
 		"Title": "test",
 		"IsDraft": true,
 		"Date": "24/07/2023",
-		"Author": "tes",
+		"Author": "test",
+		"MainCard": "Pyramid Turtle",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/77044671.jpg",
 		"Themes": "",
-		"DeckList": "order to charge, desertapir, judgment of the desert, morphing jar",
-		"DeckLength": 4,
-		"Errors": "Pas asser de cartes : 4"
+		"DeckList": "morphing jar, pyramid turtle, spirit reaper",
+		"DeckLength": 3,
+		"Errors": "Pas asser de cartes : 3"
 	}
 ]

@@ -35,7 +35,7 @@ class managerDeck {
             .map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))
             .join(', ');
 
-        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard)?.Image;
+        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.Image;
         
         deck = {
             Id: "".guid(),
@@ -55,24 +55,24 @@ class managerDeck {
 
         const helperGoogleApi = require("../helper/helperGoogleApi");
         const { sheets } = await helperGoogleApi.authSheets();
-        let requestsPages = ['Decks3!B2:I'];  
+        let requestsPages = ['Decks!B2:I'];  
         const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
 
-        const sheetLine = sheetData.Decks3 ? sheetData.Decks3.length+2 : 2;
+        const sheetLine = sheetData.Decks ? sheetData.Decks.length+2 : 2;
         let updateSheet = [];
         
-        updateSheet.push({range: 'Decks3!A' + sheetLine, value:errorMessage});
-        updateSheet.push({range: 'Decks3!B' + sheetLine, value:deck.Id});
-        updateSheet.push({range: 'Decks3!C' + sheetLine, value:deck.Format});
-        updateSheet.push({range: 'Decks3!D' + sheetLine, value:deck.Rank});
-        updateSheet.push({range: 'Decks3!E' + sheetLine, value:deck.Title});
-        updateSheet.push({range: 'Decks3!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
-        updateSheet.push({range: 'Decks3!G' + sheetLine, value:deck.Date});
-        updateSheet.push({range: 'Decks3!H' + sheetLine, value:deck.Author});
-        updateSheet.push({range: 'Decks3!I' + sheetLine, value:deck.MainCard});
-        updateSheet.push({range: 'Decks3!J' + sheetLine, value:deck.Themes});
-        updateSheet.push({range: 'Decks3!K' + sheetLine, value:deck.DeckList});
-        updateSheet.push({range: 'Decks3!L' + sheetLine, value:deck.Errors});
+        updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage});
+        updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
+        updateSheet.push({range: 'Decks!C' + sheetLine, value:deck.Format});
+        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank});
+        updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Title});
+        updateSheet.push({range: 'Decks!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
+        updateSheet.push({range: 'Decks!G' + sheetLine, value:deck.Date});
+        updateSheet.push({range: 'Decks!H' + sheetLine, value:deck.Author});
+        updateSheet.push({range: 'Decks!I' + sheetLine, value:deck.MainCard});
+        updateSheet.push({range: 'Decks!J' + sheetLine, value:deck.Themes});
+        updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.DeckList});
+        updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
 
@@ -83,12 +83,12 @@ class managerDeck {
         res.status(201).send(deck.Id);
     }
 
-    static getSheetRanges(){return ["Decks3!B2:L"];}
+    static getSheetRanges(){return ["Decks!B2:L"];}
     
     static refresh= (sheetData, cards, sheets, spreedSheetId) => {
         let errors=[];
         let updateSheet = [];
-        let decks = this.rebuildDecks(sheetData.Decks3, errors, 'Decks3', cards, updateSheet);
+        let decks = this.rebuildDecks(sheetData.Decks, errors, 'Decks', cards, updateSheet);
         
         this.saveDecks(decks);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);

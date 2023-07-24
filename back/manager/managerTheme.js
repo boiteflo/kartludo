@@ -4,7 +4,7 @@ const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
 class managerTheme {
 
-    static getSheetRanges(){return ["Themes!B2:E"];}
+    static getSheetRanges(){return ["Themes!B2:D"];}
 
     static rebuild(themeData, errors, cards, updateSheet){
         if(!themeData)
@@ -12,7 +12,7 @@ class managerTheme {
 
         let data = themeData.map(x=> {
             return {
-                "Id": x[1], "Title": x[2], "CardIdName": x[3]?.cleanup(),  "CardNameEn": x[3]
+                "Id": x[0], "Title": x[1], "CardIdName": x[2]?.cleanup(),  "CardNameEn": x[2]
             };
         });
 

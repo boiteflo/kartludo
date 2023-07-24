@@ -1,24 +1,9 @@
 <template>
-    <div v-if="selectMainCards">   
+    <div v-if="selectMainCard">   
         <panel-deck-cards :cards="deckObj.DeckListCards"
-                    tooltip="image"
                     @select="selectFav"
-                    :size="50" >
+                    :size="100" >
         </panel-deck-cards> 
-        <div class="flex-center">
-            <card-image v-for="card in deckObj.MainCards" 
-                v-bind:key="'ForFav'+card.IdName" 
-                :card="card"
-                :badgeoff="badgeoff"
-                :size="size"
-                v-on:select="selectFavToRemove">
-            </card-image>
-        </div>  
-        <div class="flex-center">
-            <v-btn class="m5px bg" @click="selectMainCards=false">
-                Valider
-            </v-btn>
-        </div>  
     </div>
     <div v-else-if="selectThemes">
         <div class="flex-wrap">
@@ -179,10 +164,10 @@
             -->
 
             <div class="flex-wrap flex-reverse">
-                <v-btn class="m5px bg" :disabled="deckObj.DeckListCards.length <1 || deckObj.MainCards.length <1" @click="$emit('save', deckObj)">
+                <v-btn class="m5px bg" :disabled="deckObj.DeckListCards.length <1 || !deckObj.MainCard" @click="$emit('save', deckObj)">
                     Sauvegarder
                 </v-btn>
-                <v-btn class="m5px bg" @click="selectMainCards=true">
+                <v-btn class="m5px bg" @click="selectMainCard=true">
                     Sélectionner la carte principale
                 </v-btn>
             </div>
@@ -214,8 +199,7 @@ let md5 = require('md5');
         searchString: '',
         selectedCards: [],
         refreshCards:0,
-        refreshFavCards:0,
-        selectMainCards: false,
+        selectMainCard: false,
         selectThemes: false,
         cardHover:null,
         deckClickMode : 0 // 0 = delete card, 1 = switch order
@@ -267,12 +251,8 @@ let md5 = require('md5');
             this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards);
         },
         selectFav(card){
-            this.deckObj.MainCards.push(card);
-            this.refreshFavCards++;
-        },
-        selectFavToRemove(card){
-            this.deckObj.MainCards = this.deckObj.MainCards.filter(x=> x.IdName !== card.IdName);
-            this.refreshFavCards++;
+            this.deckObj.MainCard = card.NameEn;
+            this.selectMainCard = false;
         },
         cryptPassword(){
             this.deckObj.Password = md5(this.deckObj.PasswordApparent);
