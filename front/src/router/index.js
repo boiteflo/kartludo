@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V1.6.6 ';
+let version = 'V1.7.0 ';
 
 Vue.use(VueRouter)
 
 
 const routes = [
+    {
+        path: '/error/:id',
+        name: version + 'MSOS Error',
+        component: () =>
+            import ('../pages/pageError.vue')
+    },
     {
         path: '/decks',
         name: version + 'MSOS Deck',

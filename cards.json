@@ -240,7 +240,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/98045062.jpg",
 		"IdName": "enemycontroller",
-		"OrderIndex": 12,
+		"OrderIndex": 35,
 		"IdNameFr": "controleurdennemi"
 	},
 	{
@@ -325,11 +325,12 @@
 		"RefId": null,
 		"NameEn": "Blowback Dragon",
 		"NameFr": "Dragon à Recul",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/25551951.jpg",
 		"IdName": "blowbackdragon",
-		"IdNameFr": "dragonarecul"
+		"IdNameFr": "dragonarecul",
+		"OrderIndex": 51
 	},
 	{
 		"Id": "45985838",
@@ -578,11 +579,12 @@
 		"RefId": null,
 		"NameEn": "The End of Anubis",
 		"NameFr": "La Fin d'Anubis",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/65403020.jpg",
 		"IdName": "theendofanubis",
-		"IdNameFr": "lafindanubis"
+		"IdNameFr": "lafindanubis",
+		"OrderIndex": 32
 	},
 	{
 		"Id": "27618634",
@@ -655,11 +657,12 @@
 		"RefId": null,
 		"NameEn": "The Sanctuary in the Sky",
 		"NameFr": "Le Sanctuaire Céleste",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/56433456.jpg",
 		"IdName": "thesanctuaryinthesky",
-		"IdNameFr": "lesanctuaireceleste"
+		"IdNameFr": "lesanctuaireceleste",
+		"OrderIndex": 61
 	},
 	{
 		"Id": "3136426",
@@ -670,7 +673,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/3136426.jpg",
 		"IdName": "levellimitareab",
-		"OrderIndex": 42,
+		"OrderIndex": 55,
 		"IdNameFr": "limitedeniveauzoneb"
 	},
 	{
@@ -832,11 +835,11 @@
 		"RefId": null,
 		"NameEn": "Wall of Revealing Light",
 		"NameFr": "Mur de Lumière Révélatrice",
-		"Limit": "K",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/17078030.jpg",
 		"IdName": "wallofrevealinglight",
-		"OrderIndex": 78,
+		"OrderIndex": 113,
 		"IdNameFr": "murdelumiererevelatrice"
 	},
 	{
@@ -892,7 +895,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/43040603.jpg",
 		"IdName": "monstergate",
-		"OrderIndex": 55,
+		"OrderIndex": 76,
 		"IdNameFr": "portaildemonstre"
 	},
 	{
@@ -1234,7 +1237,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/51945556.jpg",
 		"IdName": "zaborgthethundermonarch",
-		"OrderIndex": 8,
+		"OrderIndex": 9,
 		"IdNameFr": "zaborglemonarquedutonnerre"
 	},
 	{
@@ -1290,7 +1293,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/77585513.jpg",
 		"IdName": "jinzo",
-		"OrderIndex": 3,
+		"OrderIndex": 4,
 		"IdNameFr": "jinzo"
 	},
 	{
@@ -1401,7 +1404,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/84290642.jpg",
 		"IdName": "snipehunter",
-		"OrderIndex": 17,
+		"OrderIndex": 19,
 		"IdNameFr": "chasseurdeprecision"
 	},
 	{
@@ -1486,11 +1489,12 @@
 		"RefId": null,
 		"NameEn": "Vanity's Fiend",
 		"NameFr": "Démon de la Vanité",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/47084486.jpg",
 		"IdName": "vanitysfiend",
-		"IdNameFr": "demondelavanite"
+		"IdNameFr": "demondelavanite",
+		"OrderIndex": 31
 	},
 	{
 		"Id": "51449743",
@@ -1567,7 +1571,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/91623717.jpg",
 		"IdName": "chainstrike",
-		"OrderIndex": 63,
+		"OrderIndex": 83,
 		"IdNameFr": "frappesenchaine"
 	},
 	{
@@ -1663,11 +1667,12 @@
 		"RefId": null,
 		"NameEn": "Justi-Break",
 		"NameFr": "Justi-Fracture",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/62271284.jpg",
 		"IdName": "justibreak",
-		"IdNameFr": "justifracture"
+		"IdNameFr": "justifracture",
+		"OrderIndex": 111
 	},
 	{
 		"Id": "85313220",
@@ -2008,7 +2013,7 @@
 		"LimitFriends": "sakuretsuarmor,dimensionalprison",
 		"Image": "https://images.ygoprodeck.com/images/cards/56120475.jpg",
 		"IdName": "sakuretsuarmor",
-		"OrderIndex": 38,
+		"OrderIndex": 86,
 		"IdNameFr": "armuredesakuretsu"
 	},
 	{
@@ -2075,7 +2080,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/41420027.jpg",
 		"IdName": "solemnjudgment",
-		"OrderIndex": 79,
+		"OrderIndex": 107,
 		"IdNameFr": "jugementsolennel"
 	},
 	{
@@ -2087,7 +2092,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/14087893.jpg",
 		"IdName": "bookofmoon",
-		"OrderIndex": 14,
+		"OrderIndex": 37,
 		"IdNameFr": "lelivredelalune"
 	},
 	{
@@ -2110,7 +2115,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/46411259.jpg",
 		"IdName": "metamorphosis",
-		"OrderIndex": 53,
+		"OrderIndex": 74,
 		"IdNameFr": "metamorphose"
 	},
 	{
@@ -2184,11 +2189,12 @@
 		"RefId": null,
 		"NameEn": "King Tiger Wanghu",
 		"NameFr": "Tigre-Roi Wanghu",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/83986578.jpg",
 		"IdName": "kingtigerwanghu",
-		"IdNameFr": "tigreroiwanghu"
+		"IdNameFr": "tigreroiwanghu",
+		"OrderIndex": 22
 	},
 	{
 		"Id": "60764581",
@@ -2210,7 +2216,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/83555666.jpg",
 		"IdName": "ringofdestruction",
-		"OrderIndex": 73,
+		"OrderIndex": 102,
 		"IdNameFr": "anneaudedestruction"
 	},
 	{
@@ -2267,7 +2273,7 @@
 		"LimitFriends": "smashingground,fissure",
 		"Image": "https://images.ygoprodeck.com/images/cards/97169186.jpg",
 		"IdName": "smashingground",
-		"OrderIndex": 7,
+		"OrderIndex": 30,
 		"IdNameFr": "destructionterrestre"
 	},
 	{
@@ -2275,11 +2281,12 @@
 		"RefId": null,
 		"NameEn": "Magical Dimension",
 		"NameFr": "Dimension Magique",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/28553439.jpg",
 		"IdName": "magicaldimension",
-		"IdNameFr": "dimensionmagique"
+		"IdNameFr": "dimensionmagique",
+		"OrderIndex": 94
 	},
 	{
 		"Id": "31786629",
@@ -2301,7 +2308,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/98494543.jpg",
 		"IdName": "magicalstoneexcavation",
-		"OrderIndex": 52,
+		"OrderIndex": 73,
 		"IdNameFr": "excavationdepierremagique"
 	},
 	{
@@ -2382,18 +2389,19 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/73628505.jpg",
 		"IdName": "terraforming",
 		"IdNameFr": "terraformation",
-		"OrderIndex": 54
+		"OrderIndex": 75
 	},
 	{
 		"Id": "77044671",
 		"RefId": null,
 		"NameEn": "Pyramid Turtle",
 		"NameFr": "Tortue Pyramide",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/77044671.jpg",
 		"IdName": "pyramidturtle",
-		"IdNameFr": "tortuepyramide"
+		"IdNameFr": "tortuepyramide",
+		"OrderIndex": 19
 	},
 	{
 		"Id": "97642679",
@@ -2605,7 +2613,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/47355498.jpg",
 		"IdName": "necrovalley",
 		"IdNameFr": "valleemortuaire",
-		"OrderIndex": 25
+		"OrderIndex": 49
 	},
 	{
 		"Id": "9156135",
@@ -2649,7 +2657,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/17375316.jpg",
 		"IdName": "confiscation",
-		"OrderIndex": 29,
+		"OrderIndex": 42,
 		"IdNameFr": "confiscation"
 	},
 	{
@@ -2679,11 +2687,12 @@
 		"RefId": null,
 		"NameEn": "Gigantes",
 		"NameFr": "Gigantes",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/47606319.jpg",
 		"IdName": "gigantes",
-		"IdNameFr": "gigantes"
+		"IdNameFr": "gigantes",
+		"OrderIndex": 50
 	},
 	{
 		"Id": "88279736",
@@ -2695,7 +2704,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/88279736.jpg",
 		"IdName": "robbingoblin",
 		"IdNameFr": "gobelinderobbin",
-		"OrderIndex": 72
+		"OrderIndex": 95
 	},
 	{
 		"Id": "13676474",
@@ -2717,7 +2726,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/12538374.jpg",
 		"IdName": "treebornfrog",
-		"OrderIndex": 5,
+		"OrderIndex": 28,
 		"IdNameFr": "grenouilledarbre"
 	},
 	{
@@ -2747,11 +2756,12 @@
 		"RefId": null,
 		"NameEn": "Manju of the Ten Thousand Hands",
 		"NameFr": "Manju des Dix Mille Mains",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/95492061.jpg",
 		"IdName": "manjuofthetenthousandhands",
-		"IdNameFr": "manjudesdixmillemains"
+		"IdNameFr": "manjudesdixmillemains",
+		"OrderIndex": 56
 	},
 	{
 		"Id": "57839750",
@@ -2773,7 +2783,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/80604091.jpg",
 		"IdName": "ultimateoffering",
-		"OrderIndex": 66,
+		"OrderIndex": 89,
 		"IdNameFr": "offrandesupreme"
 	},
 	{
@@ -2785,7 +2795,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/27174286.jpg",
 		"IdName": "returnfromthedifferentdimension",
-		"OrderIndex": 72,
+		"OrderIndex": 101,
 		"IdNameFr": "retourdeladimensiondifferente"
 	},
 	{
@@ -2816,11 +2826,12 @@
 		"RefId": null,
 		"NameEn": "D.D. Survivor",
 		"NameFr": "Survivant D.D.",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/48092532.jpg",
 		"IdName": "ddsurvivor",
-		"IdNameFr": "survivantdd"
+		"IdNameFr": "survivantdd",
+		"OrderIndex": 11
 	},
 	{
 		"Id": "29401950",
@@ -2854,7 +2865,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/53239672.jpg",
 		"IdName": "spiritbarrier",
 		"IdNameFr": "barrierespirituelle",
-		"OrderIndex": 68
+		"OrderIndex": 91
 	},
 	{
 		"Id": "38992735",
@@ -2866,7 +2877,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/38992735.jpg",
 		"IdName": "wavemotioncannon",
 		"IdNameFr": "canonondulatoire",
-		"OrderIndex": 51
+		"OrderIndex": 64
 	},
 	{
 		"Id": "14878871",
@@ -2889,7 +2900,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/64697231.jpg",
 		"IdName": "trapdustshoot",
-		"OrderIndex": 75,
+		"OrderIndex": 104,
 		"IdNameFr": "chaussetrape"
 	},
 	{
@@ -2974,11 +2985,12 @@
 		"RefId": null,
 		"NameEn": "Dark Necrofear",
 		"NameFr": "Necrofear des Ténèbres",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/31829185.jpg",
 		"IdName": "darknecrofear",
-		"IdNameFr": "necrofeardestenebres"
+		"IdNameFr": "necrofeardestenebres",
+		"OrderIndex": 57
 	},
 	{
 		"Id": "58921041",
@@ -3023,7 +3035,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/35027493.jpg",
 		"IdName": "deckdevastationvirus",
 		"IdNameFr": "virusdemoniaquededestructiondedeck",
-		"OrderIndex": 69
+		"OrderIndex": 92
 	},
 	{
 		"Id": "69537999",
@@ -3046,7 +3058,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/40044918.jpg",
 		"IdName": "elementalherostratos",
 		"IdNameFr": "airmanhroslementaire",
-		"OrderIndex": 0
+		"OrderIndex": 5
 	},
 	{
 		"Id": "77527210",
@@ -3146,7 +3158,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/67095270.jpg",
 		"IdName": "dimensionwall",
 		"IdNameFr": "murdimensionnel",
-		"OrderIndex": 82
+		"OrderIndex": 109
 	},
 	{
 		"Id": "69303178",
@@ -3164,11 +3176,12 @@
 		"RefId": null,
 		"NameEn": "Cold Wave",
 		"NameFr": "Onde Glacée",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/60682203.jpg",
 		"IdName": "coldwave",
-		"IdNameFr": "ondeglacee"
+		"IdNameFr": "ondeglacee",
+		"OrderIndex": 77
 	},
 	{
 		"Id": "39180960",
@@ -3186,11 +3199,12 @@
 		"RefId": null,
 		"NameEn": "Mage Power",
 		"NameFr": "Puissance du Mage",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/83746708.jpg",
 		"IdName": "magepower",
-		"IdNameFr": "puissancedumage"
+		"IdNameFr": "puissancedumage",
+		"OrderIndex": 93
 	},
 	{
 		"Id": "85448931",
@@ -3355,7 +3369,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70095154.jpg",
 		"IdName": "cyberdragon",
-		"OrderIndex": 11,
+		"OrderIndex": 14,
 		"IdNameFr": "cyberdragon"
 	},
 	{
@@ -3401,7 +3415,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/32723153.jpg",
 		"IdName": "magicalexplosion",
 		"IdNameFr": "detonationmagique",
-		"OrderIndex": 80
+		"OrderIndex": 103
 	},
 	{
 		"Id": "57062206",
@@ -3490,18 +3504,19 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/45906428.jpg",
 		"IdName": "miraclefusion",
 		"IdNameFr": "fusionmiraculeuse",
-		"OrderIndex": 51
+		"OrderIndex": 72
 	},
 	{
 		"Id": "63035430",
 		"RefId": null,
 		"NameEn": "Skyscraper",
 		"NameFr": "Gratte-Ciel",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/63035430.jpg",
 		"IdName": "skyscraper",
-		"IdNameFr": "gratteciel"
+		"IdNameFr": "gratteciel",
+		"OrderIndex": 55
 	},
 	{
 		"Id": "84451804",
@@ -3673,11 +3688,12 @@
 		"RefId": null,
 		"NameEn": "Dragon's Mirror",
 		"NameFr": "Miroir du Dragon",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/71490127.jpg",
 		"IdName": "dragonsmirror",
-		"IdNameFr": "miroirdudragon"
+		"IdNameFr": "miroirdudragon",
+		"OrderIndex": 91
 	},
 	{
 		"Id": "79333300",
@@ -4267,11 +4283,12 @@
 		"RefId": null,
 		"NameEn": "Marauding Captain",
 		"NameFr": "Capitaine en Maraude",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/2460565.jpg",
 		"IdName": "maraudingcaptain",
-		"IdNameFr": "capitaineenmaraude"
+		"IdNameFr": "capitaineenmaraude",
+		"OrderIndex": 26
 	},
 	{
 		"Id": "94905343",
@@ -4326,7 +4343,7 @@
 		"LimitFriends": "gracefulcharity,potofgreed,shardofgreed",
 		"Image": "https://images.ygoprodeck.com/images/cards/79571449.jpg",
 		"IdName": "gracefulcharity",
-		"OrderIndex": 27,
+		"OrderIndex": 68,
 		"IdNameFr": "charitegracieuse"
 	},
 	{
@@ -4470,7 +4487,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/69015963.jpg",
 		"IdName": "cyberstein",
-		"OrderIndex": 13,
+		"OrderIndex": 14,
 		"IdNameFr": "cyberstein"
 	},
 	{
@@ -4515,7 +4532,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/51452091.jpg",
 		"IdName": "royaldecree",
-		"OrderIndex": 77,
+		"OrderIndex": 106,
 		"IdNameFr": "decretroyal"
 	},
 	{
@@ -4572,7 +4589,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/28566710.jpg",
 		"IdName": "lastturn",
 		"IdNameFr": "derniertour",
-		"OrderIndex": 70
+		"OrderIndex": 93
 	},
 	{
 		"Id": "32015116",
@@ -4617,7 +4634,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/76922029.jpg",
 		"IdName": "donzaloog",
 		"IdNameFr": "donzaloog",
-		"OrderIndex": 38
+		"OrderIndex": 39
 	},
 	{
 		"Id": "3682106",
@@ -4768,11 +4785,12 @@
 		"RefId": null,
 		"NameEn": "Ekibyo Drakmord",
 		"NameFr": "Ekibyo Drakomord",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/69954399.jpg",
 		"IdName": "ekibyodrakmord",
-		"IdNameFr": "ekibyodrakomord"
+		"IdNameFr": "ekibyodrakomord",
+		"OrderIndex": 75
 	},
 	{
 		"Id": "27324313",
@@ -4823,11 +4841,12 @@
 		"RefId": null,
 		"NameEn": "Dark Dust Spirit",
 		"NameFr": "Esprit de Poussière des Ténèbres",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/89111398.jpg",
 		"IdName": "darkdustspirit",
-		"IdNameFr": "espritdepoussieredestenebres"
+		"IdNameFr": "espritdepoussieredestenebres",
+		"OrderIndex": 55
 	},
 	{
 		"Id": "93599951",
@@ -4894,7 +4913,7 @@
 		"LimitFriends": "mirrorforce,darkhole,lightningvortex",
 		"Image": "https://images.ygoprodeck.com/images/cards/44095762.jpg",
 		"IdName": "mirrorforce",
-		"OrderIndex": 33,
+		"OrderIndex": 84,
 		"IdNameFr": "forcedemiroir"
 	},
 	{
@@ -4913,11 +4932,12 @@
 		"RefId": null,
 		"NameEn": "Freed the Matchless General",
 		"NameFr": "Freed le Général Irremplaçable",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/49681811.jpg",
 		"IdName": "freedthematchlessgeneral",
-		"IdNameFr": "freedlegeneralirremplacable"
+		"IdNameFr": "freedlegeneralirremplacable",
+		"OrderIndex": 52
 	},
 	{
 		"Id": "63789924",
@@ -5386,22 +5406,24 @@
 		"RefId": null,
 		"NameEn": "The Warrior Returning Alive",
 		"NameFr": "Le Guerrier Réincarné",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/95281259.jpg",
 		"IdName": "thewarriorreturningalive",
-		"IdNameFr": "leguerrierreincarne"
+		"IdNameFr": "leguerrierreincarne",
+		"OrderIndex": 79
 	},
 	{
 		"Id": "2204140",
 		"RefId": null,
 		"NameEn": "Book of Life",
 		"NameFr": "Le Livre de la Vie",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/2204140.jpg",
 		"IdName": "bookoflife",
-		"IdNameFr": "lelivredelavie"
+		"IdNameFr": "lelivredelavie",
+		"OrderIndex": 78
 	},
 	{
 		"Id": "6733059",
@@ -5479,7 +5501,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/403847.jpg",
 		"IdName": "theaforces",
 		"IdNameFr": "lesforcesa",
-		"OrderIndex": 18
+		"OrderIndex": 41
 	},
 	{
 		"Id": "68400115",
@@ -5688,7 +5710,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/41482598.jpg",
 		"IdName": "mirageofnightmare",
-		"OrderIndex": 43,
+		"OrderIndex": 56,
 		"IdNameFr": "mirageducauchemar"
 	},
 	{
@@ -5784,11 +5806,12 @@
 		"RefId": null,
 		"NameEn": "A Legendary Ocean",
 		"NameFr": "Océan Légendaire",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/295517.jpg",
 		"IdName": "alegendaryocean",
-		"IdNameFr": "oceanlegendaire"
+		"IdNameFr": "oceanlegendaire",
+		"OrderIndex": 57
 	},
 	{
 		"Id": "71283180",
@@ -5810,7 +5833,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/93016201.jpg",
 		"IdName": "royaloppression",
-		"OrderIndex": 65,
+		"OrderIndex": 88,
 		"IdNameFr": "oppressionroyale"
 	},
 	{
@@ -5845,7 +5868,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/39537362.jpg",
 		"IdName": "ordealofatraveler",
 		"IdNameFr": "ordalieduvoyageur",
-		"OrderIndex": 75
+		"OrderIndex": 98
 	},
 	{
 		"Id": "33950246",
@@ -6066,7 +6089,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/32807846.jpg",
 		"IdName": "reinforcementofthearmy",
 		"IdNameFr": "renfortdelarmee",
-		"OrderIndex": 16
+		"OrderIndex": 39
 	},
 	{
 		"Id": "99518961",
@@ -6209,7 +6232,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/26202165.jpg",
 		"IdName": "sangan",
-		"OrderIndex": 21,
+		"OrderIndex": 23,
 		"IdNameFr": "sangan"
 	},
 	{
@@ -6305,11 +6328,12 @@
 		"RefId": null,
 		"NameEn": "Susa Soldier",
 		"NameFr": "Soldat Susa",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/40473581.jpg",
 		"IdName": "susasoldier",
-		"IdNameFr": "soldatsusa"
+		"IdNameFr": "soldatsusa",
+		"OrderIndex": 33
 	},
 	{
 		"Id": "16392422",
@@ -6331,7 +6355,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/78010363.jpg",
 		"IdName": "witchoftheblackforest",
-		"OrderIndex": 19,
+		"OrderIndex": 21,
 		"IdNameFr": "sorcieredelaforetnoire"
 	},
 	{
@@ -6531,7 +6555,7 @@
 		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters",
 		"Image": "https://images.ygoprodeck.com/images/cards/19613556.jpg",
 		"IdName": "heavystorm",
-		"OrderIndex": 29,
+		"OrderIndex": 70,
 		"IdNameFr": "violentorage"
 	},
 	{
@@ -6621,7 +6645,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/97077563.jpg",
 		"IdName": "callofthehaunted",
-		"OrderIndex": 76,
+		"OrderIndex": 105,
 		"IdNameFr": "appeldeltrehante"
 	},
 	{
@@ -6667,7 +6691,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/23615409.jpg",
 		"IdName": "insectbarrier",
 		"IdNameFr": "barriereinsecticide",
-		"OrderIndex": 49
+		"OrderIndex": 62
 	},
 	{
 		"Id": "56387350",
@@ -6712,29 +6736,31 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/21598948.jpg",
 		"IdName": "fairybox",
 		"IdNameFr": "boitefeerique",
-		"OrderIndex": 80
+		"OrderIndex": 108
 	},
 	{
 		"Id": "70903634",
 		"RefId": null,
 		"NameEn": "Right Arm of the Forbidden One",
 		"NameFr": "Bras Droit de l'Interdit",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70903634.jpg",
 		"IdName": "rightarmoftheforbiddenone",
-		"IdNameFr": "brasdroitdelinterdit"
+		"IdNameFr": "brasdroitdelinterdit",
+		"OrderIndex": 1
 	},
 	{
 		"Id": "7902349",
 		"RefId": null,
 		"NameEn": "Left Arm of the Forbidden One",
 		"NameFr": "Bras Gauche de l'Interdit",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/7902349.jpg",
 		"IdName": "leftarmoftheforbiddenone",
-		"IdNameFr": "brasgauchedelinterdit"
+		"IdNameFr": "brasgauchedelinterdit",
+		"OrderIndex": 0
 	},
 	{
 		"Id": "21237481",
@@ -6767,7 +6793,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/57953380.jpg",
 		"IdName": "cardofsafereturn",
-		"OrderIndex": 41,
+		"OrderIndex": 54,
 		"IdNameFr": "cartederetoursainsauf"
 	},
 	{
@@ -6801,7 +6827,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/4031928.jpg",
 		"IdName": "changeofheart",
-		"OrderIndex": 28,
+		"OrderIndex": 41,
 		"IdNameFr": "changementdecour"
 	},
 	{
@@ -6897,11 +6923,12 @@
 		"RefId": null,
 		"NameEn": "Chorus of Sanctuary",
 		"NameFr": "Chœur du Sanctuaire",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/81380218.jpg",
 		"IdName": "chorusofsanctuary",
-		"IdNameFr": "chourdusanctuaire"
+		"IdNameFr": "chourdusanctuaire",
+		"OrderIndex": 63
 	},
 	{
 		"Id": "74191942",
@@ -6912,7 +6939,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/74191942.jpg",
 		"IdName": "painfulchoice",
-		"OrderIndex": 35,
+		"OrderIndex": 48,
 		"IdNameFr": "choixdouloureux"
 	},
 	{
@@ -6991,7 +7018,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/45778932.jpg",
 		"IdName": "risingaircurrent",
 		"IdNameFr": "courantdairascendant",
-		"OrderIndex": 20
+		"OrderIndex": 43
 	},
 	{
 		"Id": "70781052",
@@ -7042,11 +7069,11 @@
 		"RefId": null,
 		"NameEn": "Cyber Jar",
 		"NameFr": "Cyberjarre",
-		"Limit": "K",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34124316.jpg",
 		"IdName": "cyberjar",
-		"OrderIndex": 22,
+		"OrderIndex": 23,
 		"IdNameFr": "cyberjarre"
 	},
 	{
@@ -7098,11 +7125,12 @@
 		"RefId": null,
 		"NameEn": "Molten Destruction",
 		"NameFr": "Destruction de Lave",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/19384334.jpg",
 		"IdName": "moltendestruction",
-		"IdNameFr": "destructiondelave"
+		"IdNameFr": "destructiondelave",
+		"OrderIndex": 48
 	},
 	{
 		"Id": "1248895",
@@ -7179,7 +7207,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/44763025.jpg",
 		"IdName": "delinquentduo",
-		"OrderIndex": 30,
+		"OrderIndex": 43,
 		"IdNameFr": "duodedelinquants"
 	},
 	{
@@ -7236,7 +7264,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/81777047.jpg",
 		"IdName": "luminousspark",
 		"IdNameFr": "clatlumineux",
-		"OrderIndex": 21
+		"OrderIndex": 44
 	},
 	{
 		"Id": "90219263",
@@ -7281,7 +7309,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/79323590.jpg",
 		"IdName": "chainenergy",
 		"IdNameFr": "nergieenchaine",
-		"OrderIndex": 50
+		"OrderIndex": 63
 	},
 	{
 		"Id": "70828912",
@@ -7292,7 +7320,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70828912.jpg",
 		"IdName": "prematureburial",
-		"OrderIndex": 67,
+		"OrderIndex": 87,
 		"IdNameFr": "enterrementpremature"
 	},
 	{
@@ -7315,7 +7343,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/72302403.jpg",
 		"IdName": "swordsofrevealinglight",
-		"OrderIndex": 9,
+		"OrderIndex": 32,
 		"IdNameFr": "peesderevelationdelalumiere"
 	},
 	{
@@ -7334,11 +7362,12 @@
 		"RefId": null,
 		"NameEn": "Exodia the Forbidden One",
 		"NameFr": "Éxodia l'Interdit",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
 		"IdName": "exodiatheforbiddenone",
-		"IdNameFr": "xodialinterdit"
+		"IdNameFr": "xodialinterdit",
+		"OrderIndex": 4
 	},
 	{
 		"Id": "21297224",
@@ -7371,7 +7400,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/85742772.jpg",
 		"IdName": "gravitybind",
-		"OrderIndex": 63,
+		"OrderIndex": 86,
 		"IdNameFr": "filetgravitationnel"
 	},
 	{
@@ -7383,7 +7412,7 @@
 		"LimitFriends": "smashingground,fissure",
 		"Image": "https://images.ygoprodeck.com/images/cards/66788016.jpg",
 		"IdName": "fissure",
-		"OrderIndex": 6,
+		"OrderIndex": 29,
 		"IdNameFr": "fissure"
 	},
 	{
@@ -7472,7 +7501,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70368879.jpg",
 		"IdName": "upstartgoblin",
-		"OrderIndex": 11,
+		"OrderIndex": 34,
 		"IdNameFr": "gobelinparvenu"
 	},
 	{
@@ -7605,7 +7634,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/53582587.jpg",
 		"IdName": "torrentialtribute",
-		"OrderIndex": 74,
+		"OrderIndex": 103,
 		"IdNameFr": "hommagetorrentiel"
 	},
 	{
@@ -7668,22 +7697,24 @@
 		"RefId": null,
 		"NameEn": "Right Leg of the Forbidden One",
 		"NameFr": "Jambe Droite de l'Interdit",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/8124921.jpg",
 		"IdName": "rightlegoftheforbiddenone",
-		"IdNameFr": "jambedroitedelinterdit"
+		"IdNameFr": "jambedroitedelinterdit",
+		"OrderIndex": 3
 	},
 	{
 		"Id": "44519536",
 		"RefId": null,
 		"NameEn": "Left Leg of the Forbidden One",
 		"NameFr": "Jambe Gauche de l'Interdit",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/44519536.jpg",
 		"IdName": "leftlegoftheforbiddenone",
-		"IdNameFr": "jambegauchedelinterdit"
+		"IdNameFr": "jambegauchedelinterdit",
+		"OrderIndex": 2
 	},
 	{
 		"Id": "50045299",
@@ -7881,7 +7912,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/56747793.jpg",
 		"IdName": "unitedwestand",
-		"OrderIndex": 65,
+		"OrderIndex": 85,
 		"IdNameFr": "lunionfaitlaforce"
 	},
 	{
@@ -7904,7 +7935,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/42829885.jpg",
 		"IdName": "theforcefulsentry",
-		"OrderIndex": 38,
+		"OrderIndex": 51,
 		"IdNameFr": "lasentinelleinflexible"
 	},
 	{
@@ -8026,7 +8057,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/63519819.jpg",
 		"IdName": "thousandeyesrestrict",
-		"OrderIndex": 40,
+		"OrderIndex": 61,
 		"IdNameFr": "lerenonceauxmillesyeux"
 	},
 	{
@@ -8266,22 +8297,23 @@
 		"RefId": null,
 		"NameEn": "Mask of Restrict",
 		"NameFr": "Masque de Restriction",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/29549364.jpg",
 		"IdName": "maskofrestrict",
-		"IdNameFr": "masquederestriction"
+		"IdNameFr": "masquederestriction",
+		"OrderIndex": 114
 	},
 	{
 		"Id": "28933734",
 		"RefId": null,
 		"NameEn": "Mask of Darkness",
 		"NameFr": "Masque des Ténèbres",
-		"Limit": "1",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/28933734.jpg",
 		"IdName": "maskofdarkness",
-		"OrderIndex": 3,
+		"OrderIndex": 53,
 		"IdNameFr": "masquedestenebres"
 	},
 	{
@@ -8338,7 +8370,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/44656491.jpg",
 		"IdName": "messengerofpeace",
 		"IdNameFr": "messagerdepaix",
-		"OrderIndex": 53
+		"OrderIndex": 66
 	},
 	{
 		"Id": "32539892",
@@ -8382,7 +8414,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/83764718.jpg",
 		"IdName": "monsterreborn",
-		"OrderIndex": 10,
+		"OrderIndex": 33,
 		"IdNameFr": "monsterreborn"
 	},
 	{
@@ -8412,11 +8444,12 @@
 		"RefId": null,
 		"NameEn": "Mirror Wall",
 		"NameFr": "Mur Miroir",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/22359980.jpg",
 		"IdName": "mirrorwall",
-		"IdNameFr": "murmiroir"
+		"IdNameFr": "murmiroir",
+		"OrderIndex": 92
 	},
 	{
 		"Id": "18605135",
@@ -8482,7 +8515,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/61740673.jpg",
 		"IdName": "imperialorder",
-		"OrderIndex": 64,
+		"OrderIndex": 87,
 		"IdNameFr": "ordreimperial"
 	},
 	{
@@ -8517,7 +8550,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/82003859.jpg",
 		"IdName": "toll",
 		"IdNameFr": "peage",
-		"OrderIndex": 55
+		"OrderIndex": 68
 	},
 	{
 		"Id": "65169794",
@@ -8583,7 +8616,7 @@
 		"LimitFriends": "gracefulcharity,potofgreed,shardofgreed",
 		"Image": "https://images.ygoprodeck.com/images/cards/55144522.jpg",
 		"IdName": "potofgreed",
-		"OrderIndex": 26,
+		"OrderIndex": 67,
 		"IdNameFr": "potdecupidite"
 	},
 	{
@@ -8618,7 +8651,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/56594520.jpg",
 		"IdName": "gaiapower",
 		"IdNameFr": "puissancedegaia",
-		"OrderIndex": 24
+		"OrderIndex": 47
 	},
 	{
 		"Id": "12580477",
@@ -8629,7 +8662,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/12580477.jpg",
 		"IdName": "raigeki",
-		"OrderIndex": 36,
+		"OrderIndex": 49,
 		"IdNameFr": "raigeki"
 	},
 	{
@@ -8747,11 +8780,11 @@
 		"RefId": null,
 		"NameEn": "Nobleman of Crossout",
 		"NameFr": "Seigneur de la Suppression",
-		"Limit": "K",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/71044499.jpg",
 		"IdName": "noblemanofcrossout",
-		"OrderIndex": 58,
+		"OrderIndex": 76,
 		"IdNameFr": "seigneurdelasuppression"
 	},
 	{
@@ -8786,7 +8819,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/16762927.jpg",
 		"IdName": "gravekeepersservant",
 		"IdNameFr": "serviteurdesprotecteursdutombeau",
-		"OrderIndex": 57
+		"OrderIndex": 70
 	},
 	{
 		"Id": "85802526",
@@ -8973,7 +9006,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/42703248.jpg",
 		"IdName": "gianttrunade",
-		"OrderIndex": 32,
+		"OrderIndex": 45,
 		"IdNameFr": "tornadegeante"
 	},
 	{
@@ -9029,7 +9062,7 @@
 		"LimitFriends": "mirrorforce,darkhole,lightningvortex",
 		"Image": "https://images.ygoprodeck.com/images/cards/53129443.jpg",
 		"IdName": "darkhole",
-		"OrderIndex": 32,
+		"OrderIndex": 72,
 		"IdNameFr": "trounoir"
 	},
 	{
@@ -9059,11 +9092,12 @@
 		"RefId": null,
 		"NameEn": "Umi",
 		"NameFr": "Umi",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/22702055.jpg",
 		"IdName": "umi",
-		"IdNameFr": "umi"
+		"IdNameFr": "umi",
+		"OrderIndex": 66
 	},
 	{
 		"Id": "82999629",
@@ -9075,7 +9109,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/82999629.jpg",
 		"IdName": "umiiruka",
 		"IdNameFr": "umiiruka",
-		"OrderIndex": 22
+		"OrderIndex": 45
 	},
 	{
 		"Id": "1784619",
@@ -9152,7 +9186,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/45986603.jpg",
 		"IdName": "snatchsteal",
-		"OrderIndex": 48,
+		"OrderIndex": 61,
 		"IdNameFr": "volalarrache"
 	},
 	{
@@ -9176,7 +9210,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/18161786.jpg",
 		"IdName": "mysticplasmazone",
 		"IdNameFr": "zonedeplasmamystique",
-		"OrderIndex": 23
+		"OrderIndex": 46
 	},
 	{
 		"Id": "82035781",
@@ -9210,7 +9244,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/82732705.jpg",
 		"IdName": "skilldrain",
 		"IdNameFr": "absorptiondecompetence",
-		"OrderIndex": 35
+		"OrderIndex": 83
 	},
 	{
 		"Id": "6850209",
@@ -9507,7 +9541,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/7572887.jpg",
 		"IdName": "ddwarriorlady",
-		"OrderIndex": 16,
+		"OrderIndex": 18,
 		"IdNameFr": "dameguerrieredd"
 	},
 	{
@@ -9618,7 +9652,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/69243953.jpg",
 		"IdName": "butterflydaggerelma",
-		"OrderIndex": 46,
+		"OrderIndex": 59,
 		"IdNameFr": "elmadaguepapillon"
 	},
 	{
@@ -9692,11 +9726,12 @@
 		"RefId": null,
 		"NameEn": "Iron Blacksmith Kotetsu",
 		"NameFr": "Forgeron Kotetsu",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/73431236.jpg",
 		"IdName": "ironblacksmithkotetsu",
-		"IdNameFr": "forgeronkotetsu"
+		"IdNameFr": "forgeronkotetsu",
+		"OrderIndex": 18
 	},
 	{
 		"Id": "35798491",
@@ -10033,11 +10068,12 @@
 		"RefId": null,
 		"NameEn": "Pandemonium",
 		"NameFr": "Pandémonium",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/94585852.jpg",
 		"IdName": "pandemonium",
-		"IdNameFr": "pandemonium"
+		"IdNameFr": "pandemonium",
+		"OrderIndex": 62
 	},
 	{
 		"Id": "90790253",
@@ -10235,7 +10271,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/29843091.jpg",
 		"IdName": "ojamatrio",
-		"OrderIndex": 71,
+		"OrderIndex": 100,
 		"IdNameFr": "trioojama"
 	},
 	{
@@ -10258,7 +10294,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34853266.jpg",
 		"IdName": "tsukuyomi",
-		"OrderIndex": 18,
+		"OrderIndex": 20,
 		"IdNameFr": "tsukuyomi"
 	},
 	{
@@ -10502,7 +10538,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/213326.jpg",
 		"IdName": "eemergencycall",
 		"IdNameFr": "eappeldedetresse",
-		"OrderIndex": 15
+		"OrderIndex": 38
 	},
 	{
 		"Id": "48976825",
@@ -10711,7 +10747,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/85087012.jpg",
 		"IdName": "cardtrooper",
-		"OrderIndex": 1,
+		"OrderIndex": 6,
 		"IdNameFr": "soldatdecarte"
 	},
 	{
@@ -10855,7 +10891,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/77565204.jpg",
 		"IdName": "futurefusion",
-		"OrderIndex": 64,
+		"OrderIndex": 84,
 		"IdNameFr": "fusiondufutur"
 	},
 	{
@@ -10867,7 +10903,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/3659803.jpg",
 		"IdName": "overloadfusion",
-		"OrderIndex": 34,
+		"OrderIndex": 47,
 		"IdNameFr": "fusionensurcharge"
 	},
 	{
@@ -10941,11 +10977,12 @@
 		"RefId": null,
 		"NameEn": "D - Shield",
 		"NameFr": "Bouclier D",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/62868900.jpg",
 		"IdName": "dshield",
-		"IdNameFr": "bouclierd"
+		"IdNameFr": "bouclierd",
+		"OrderIndex": 111
 	},
 	{
 		"Id": "77608643",
@@ -10974,11 +11011,12 @@
 		"RefId": null,
 		"NameEn": "D - Counter",
 		"NameFr": "Contre Attaque D",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/8698851.jpg",
 		"IdName": "dcounter",
-		"IdNameFr": "contreattaqued"
+		"IdNameFr": "contreattaqued",
+		"OrderIndex": 116
 	},
 	{
 		"Id": "13093792",
@@ -11176,7 +11214,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/45809008.jpg",
 		"IdName": "destinydraw",
-		"OrderIndex": 46,
+		"OrderIndex": 67,
 		"IdNameFr": "piochedeladestinee"
 	},
 	{
@@ -11189,7 +11227,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/75041269.jpg",
 		"IdName": "clocktowerprison",
 		"IdNameFr": "prisondelatourdelhorloge",
-		"OrderIndex": 57
+		"OrderIndex": 78
 	},
 	{
 		"Id": "48653261",
@@ -11251,11 +11289,12 @@
 		"RefId": null,
 		"NameEn": "Dark City",
 		"NameFr": "Ville Ténébreuse",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/53527835.jpg",
 		"IdName": "darkcity",
-		"IdNameFr": "villetenebreuse"
+		"IdNameFr": "villetenebreuse",
+		"OrderIndex": 59
 	},
 	{
 		"Id": "96765646",
@@ -11284,11 +11323,12 @@
 		"RefId": null,
 		"NameEn": "Elemental HERO Captain Gold",
 		"NameFr": "Capitaine Doré, HÉROS Élémentaire",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/80908502.jpg",
 		"IdName": "elementalherocaptaingold",
-		"IdNameFr": "capitainedorehroslementaire"
+		"IdNameFr": "capitainedorehroslementaire",
+		"OrderIndex": 25
 	},
 	{
 		"Id": "95943058",
@@ -11339,11 +11379,12 @@
 		"RefId": null,
 		"NameEn": "Dark Calling",
 		"NameFr": "Convocation Ténébreuse",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/12071500.jpg",
 		"IdName": "darkcalling",
-		"IdNameFr": "convocationtenebreuse"
+		"IdNameFr": "convocationtenebreuse",
+		"OrderIndex": 95
 	},
 	{
 		"Id": "13293158",
@@ -11394,11 +11435,12 @@
 		"RefId": null,
 		"NameEn": "Skyscraper 2 - Hero City",
 		"NameFr": "Gratte-Ciel 2 - Ville du Héros",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/47596607.jpg",
 		"IdName": "skyscraper2herocity",
-		"IdNameFr": "gratteciel2villeduheros"
+		"IdNameFr": "gratteciel2villeduheros",
+		"OrderIndex": 56
 	},
 	{
 		"Id": "58554959",
@@ -11530,7 +11572,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/80344569.jpg",
 		"IdName": "neospaciangrandmole",
-		"OrderIndex": 23,
+		"OrderIndex": 24,
 		"IdNameFr": "taupegeanteneospacien"
 	},
 	{
@@ -11670,11 +11712,12 @@
 		"RefId": null,
 		"NameEn": "Crystal Raigeki",
 		"NameFr": "Cristal Raigeki",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/96331676.jpg",
 		"IdName": "crystalraigeki",
-		"IdNameFr": "cristalraigeki"
+		"IdNameFr": "cristalraigeki",
+		"OrderIndex": 90
 	},
 	{
 		"Id": "74519184",
@@ -11714,11 +11757,12 @@
 		"RefId": null,
 		"NameEn": "Last Resort",
 		"NameFr": "En Dernier Recours",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/97970833.jpg",
 		"IdName": "lastresort",
-		"IdNameFr": "endernierrecours"
+		"IdNameFr": "endernierrecours",
+		"OrderIndex": 91
 	},
 	{
 		"Id": "48343627",
@@ -11791,11 +11835,12 @@
 		"RefId": null,
 		"NameEn": "Ancient City - Rainbow Ruins",
 		"NameFr": "Ruines Arc-en-ciel, la Cité Ancienne",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34487429.jpg",
 		"IdName": "ancientcityrainbowruins",
-		"IdNameFr": "ruinesarcenciellaciteancienne"
+		"IdNameFr": "ruinesarcenciellaciteancienne",
+		"OrderIndex": 53
 	},
 	{
 		"Id": "45939841",
@@ -12390,7 +12435,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/53567095.jpg",
 		"IdName": "icarusattack",
 		"IdNameFr": "attaquedicare",
-		"OrderIndex": 81
+		"OrderIndex": 104
 	},
 	{
 		"Id": "31887905",
@@ -12562,11 +12607,12 @@
 		"RefId": null,
 		"NameEn": "Doom Dozer",
 		"NameFr": "Chargeur Dévastateur",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/76039636.jpg",
 		"IdName": "doomdozer",
-		"IdNameFr": "chargeurdevastateur"
+		"IdNameFr": "chargeurdevastateur",
+		"OrderIndex": 49
 	},
 	{
 		"Id": "33248692",
@@ -12694,11 +12740,12 @@
 		"RefId": null,
 		"NameEn": "Grand Convergence",
 		"NameFr": "Convergence Majeure",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/38430673.jpg",
 		"IdName": "grandconvergence",
-		"IdNameFr": "convergencemajeure"
+		"IdNameFr": "convergencemajeure",
+		"OrderIndex": 72
 	},
 	{
 		"Id": "76763417",
@@ -12919,7 +12966,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/81674782.jpg",
 		"IdName": "dimensionalfissure",
 		"IdNameFr": "fissuredimensionnelle",
-		"OrderIndex": 19
+		"OrderIndex": 42
 	},
 	{
 		"Id": "13250922",
@@ -13195,7 +13242,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/30241314.jpg",
 		"IdName": "macrocosmos",
 		"IdNameFr": "macrocosmos",
-		"OrderIndex": 36
+		"OrderIndex": 85
 	},
 	{
 		"Id": "6337436",
@@ -13284,7 +13331,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/72426662.jpg",
 		"IdName": "demisekingofarmageddon",
 		"IdNameFr": "peineroidelarmageddon",
-		"OrderIndex": 26
+		"OrderIndex": 37
 	},
 	{
 		"Id": "67829249",
@@ -13621,11 +13668,12 @@
 		"RefId": null,
 		"NameEn": "Voltanis the Adjudicator",
 		"NameFr": "Voltanis, le Juge",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/20951752.jpg",
 		"IdName": "voltanistheadjudicator",
-		"IdNameFr": "voltanislejuge"
+		"IdNameFr": "voltanislejuge",
+		"OrderIndex": 48
 	},
 	{
 		"Id": "31764353",
@@ -13665,11 +13713,12 @@
 		"RefId": null,
 		"NameEn": "Non-Fusion Area",
 		"NameFr": "Zone de Non Fusion",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/27581098.jpg",
 		"IdName": "nonfusionarea",
-		"IdNameFr": "zonedenonfusion"
+		"IdNameFr": "zonedenonfusion",
+		"OrderIndex": 112
 	},
 	{
 		"Id": "7459013",
@@ -14307,7 +14356,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/71413901.jpg",
 		"IdName": "breakerthemagicalwarrior",
-		"OrderIndex": 13,
+		"OrderIndex": 15,
 		"IdNameFr": "fracasleguerriermagique"
 	},
 	{
@@ -14341,7 +14390,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/33184167.jpg",
 		"IdName": "tribeinfectingvirus",
-		"OrderIndex": 15,
+		"OrderIndex": 17,
 		"IdNameFr": "genovirus"
 	},
 	{
@@ -14837,7 +14886,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/58577036.jpg",
 		"IdName": "reasoning",
-		"OrderIndex": 37,
+		"OrderIndex": 50,
 		"IdNameFr": "raisonnement"
 	},
 	{
@@ -15004,7 +15053,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/72405967.jpg",
 		"IdName": "royaltribute",
 		"IdNameFr": "sacrificeroyal",
-		"OrderIndex": 58
+		"OrderIndex": 81
 	},
 	{
 		"Id": "80193355",
@@ -15026,7 +15075,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34206604.jpg",
 		"IdName": "magicalscientist",
-		"OrderIndex": 14,
+		"OrderIndex": 15,
 		"IdNameFr": "scientifiquesoterique"
 	},
 	{
@@ -15094,7 +15143,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/47233801.jpg",
 		"IdName": "darksnakesyndrome",
 		"IdNameFr": "syndromeduserpentdestenebres",
-		"OrderIndex": 56
+		"OrderIndex": 69
 	},
 	{
 		"Id": "47693640",
@@ -15751,11 +15800,12 @@
 		"RefId": null,
 		"NameEn": "D.D. Borderline",
 		"NameFr": "Frontière D.D.",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/60912752.jpg",
 		"IdName": "ddborderline",
-		"IdNameFr": "frontieredd"
+		"IdNameFr": "frontieredd",
+		"OrderIndex": 74
 	},
 	{
 		"Id": "9373534",
@@ -15777,7 +15827,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/23557835.jpg",
 		"IdName": "dimensionfusion",
-		"OrderIndex": 31,
+		"OrderIndex": 44,
 		"IdNameFr": "fusiondimensionnelle"
 	},
 	{
@@ -15834,7 +15884,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/39168895.jpg",
 		"IdName": "berserkgorilla",
 		"IdNameFr": "gorilleenrage",
-		"OrderIndex": 20
+		"OrderIndex": 21
 	},
 	{
 		"Id": "13944422",
@@ -15901,7 +15951,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/20374520.jpg",
 		"IdName": "begoneknave",
 		"IdNameFr": "horsdicifripons",
-		"OrderIndex": 71
+		"OrderIndex": 94
 	},
 	{
 		"Id": "2671330",
@@ -16011,7 +16061,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/40737112.jpg",
 		"IdName": "darkmagicianofchaos",
-		"OrderIndex": 1,
+		"OrderIndex": 2,
 		"IdNameFr": "magiciensombreduchaos"
 	},
 	{
@@ -16024,7 +16074,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/84970821.jpg",
 		"IdName": "curseofdarkness",
 		"IdNameFr": "maledictiondestenebres",
-		"OrderIndex": 73
+		"OrderIndex": 96
 	},
 	{
 		"Id": "22609617",
@@ -16251,11 +16301,12 @@
 		"RefId": null,
 		"NameEn": "Salvage",
 		"NameFr": "Sauvetage",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/96947648.jpg",
 		"IdName": "salvage",
-		"IdNameFr": "sauvetage"
+		"IdNameFr": "sauvetage",
+		"OrderIndex": 92
 	},
 	{
 		"Id": "40320754",
@@ -16284,11 +16335,11 @@
 		"RefId": null,
 		"NameEn": "Black Luster Soldier - Envoy of the Beginning",
 		"NameFr": "Soldat du Lustre Noir - Émissaire du Commencement",
-		"Limit": "0",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/72989439.jpg",
 		"IdName": "blacklustersoldierenvoyofthebeginning",
-		"OrderIndex": 21,
+		"OrderIndex": 0,
 		"IdNameFr": "soldatdulustrenoirmissaireducommencement"
 	},
 	{
@@ -16300,7 +16351,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/9596126.jpg",
 		"IdName": "chaossorcerer",
-		"OrderIndex": 9,
+		"OrderIndex": 12,
 		"IdNameFr": "sorcierduchaos"
 	},
 	{
@@ -16851,7 +16902,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/87910978.jpg",
 		"IdName": "braincontrol",
-		"OrderIndex": 42,
+		"OrderIndex": 63,
 		"IdNameFr": "controlecerebral"
 	},
 	{
@@ -17101,11 +17152,12 @@
 		"RefId": null,
 		"NameEn": "Mirage Dragon",
 		"NameFr": "Dragon Mirage",
-		"Limit": "",
-		"LimitFriends": "",
+		"Limit": "1",
+		"LimitFriends": "miragedragon,pitchblackwarwolf",
 		"Image": "https://images.ygoprodeck.com/images/cards/15960641.jpg",
 		"IdName": "miragedragon",
-		"IdNameFr": "dragonmirage"
+		"IdNameFr": "dragonmirage",
+		"OrderIndex": 12
 	},
 	{
 		"Id": "8628798",
@@ -17139,7 +17191,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/97342942.jpg",
 		"IdName": "ectoplasmer",
 		"IdNameFr": "ectoplasmer",
-		"OrderIndex": 66
+		"OrderIndex": 86
 	},
 	{
 		"Id": "66690411",
@@ -17470,7 +17522,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/60229110.jpg",
 		"IdName": "granmargtherockmonarch",
 		"IdNameFr": "grandmarglemonarquedesroches",
-		"OrderIndex": 7
+		"OrderIndex": 8
 	},
 	{
 		"Id": "28357177",
@@ -17532,11 +17584,12 @@
 		"RefId": null,
 		"NameEn": "Horus the Black Flame Dragon LV6",
 		"NameFr": "Horus Dragon de la Flamme Noire LV6",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/11224103.jpg",
 		"IdName": "horustheblackflamedragonlv6",
-		"IdNameFr": "horusdragondelaflammenoirelv6"
+		"IdNameFr": "horusdragondelaflammenoirelv6",
+		"OrderIndex": 10
 	},
 	{
 		"Id": "48229808",
@@ -17852,11 +17905,12 @@
 		"RefId": null,
 		"NameEn": "Pitch-Black Warwolf",
 		"NameFr": "Loup de Guerre Noir-d'Encre",
-		"Limit": "",
-		"LimitFriends": "",
+		"Limit": "1",
+		"LimitFriends": "miragedragon,pitchblackwarwolf",
 		"Image": "https://images.ygoprodeck.com/images/cards/88975532.jpg",
 		"IdName": "pitchblackwarwolf",
-		"IdNameFr": "loupdeguerrenoirdencre"
+		"IdNameFr": "loupdeguerrenoirdencre",
+		"OrderIndex": 13
 	},
 	{
 		"Id": "82452993",
@@ -18021,7 +18075,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/4929256.jpg",
 		"IdName": "mobiusthefrostmonarch",
-		"OrderIndex": 5,
+		"OrderIndex": 6,
 		"IdNameFr": "mobiuslemonarquedeglace"
 	},
 	{
@@ -18040,11 +18094,12 @@
 		"RefId": null,
 		"NameEn": "Level Up!",
 		"NameFr": "Montée de Niveau !",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/25290459.jpg",
 		"IdName": "levelup",
-		"IdNameFr": "monteedeniveau"
+		"IdNameFr": "monteedeniveau",
+		"OrderIndex": 73
 	},
 	{
 		"Id": "90740329",
@@ -18568,22 +18623,24 @@
 		"RefId": null,
 		"NameEn": "Harpies' Hunting Ground",
 		"NameFr": "Terrain de Chasse des Harpies",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/75782277.jpg",
 		"IdName": "harpieshuntingground",
-		"IdNameFr": "terraindechassedesharpies"
+		"IdNameFr": "terraindechassedesharpies",
+		"OrderIndex": 60
 	},
 	{
 		"Id": "26205777",
 		"RefId": null,
 		"NameEn": "Thestalos the Firestorm Monarch",
 		"NameFr": "Thestalos, le Monarque de la Tempête de Feu",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/26205777.jpg",
 		"IdName": "thestalosthefirestormmonarch",
-		"IdNameFr": "thestaloslemonarquedelatempetedefeu"
+		"IdNameFr": "thestaloslemonarquedelatempetedefeu",
+		"OrderIndex": 11
 	},
 	{
 		"Id": "74458486",
@@ -18693,7 +18750,7 @@
 		"LimitFriends": "mirrorforce,darkhole,lightningvortex",
 		"Image": "https://images.ygoprodeck.com/images/cards/69162969.jpg",
 		"IdName": "lightningvortex",
-		"OrderIndex": 34,
+		"OrderIndex": 81,
 		"IdNameFr": "vortexfoudroyant"
 	},
 	{
@@ -18739,7 +18796,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/76515293.jpg",
 		"IdName": "xingzhenhu",
 		"IdNameFr": "xingzhenhu",
-		"OrderIndex": 83
+		"OrderIndex": 110
 	},
 	{
 		"Id": "74137509",
@@ -18838,7 +18895,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/30312361.jpg",
 		"IdName": "phantomofchaos",
-		"OrderIndex": 20,
+		"OrderIndex": 22,
 		"IdNameFr": "fantomeduchaos"
 	},
 	{
@@ -18890,11 +18947,12 @@
 		"RefId": null,
 		"NameEn": "Grandmaster of the Six Samurai",
 		"NameFr": "Grand Maître des Six Samouraïs",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/83039729.jpg",
 		"IdName": "grandmasterofthesixsamurai",
-		"IdNameFr": "grandmaitredessixsamourais"
+		"IdNameFr": "grandmaitredessixsamourais",
+		"OrderIndex": 9
 	},
 	{
 		"Id": "14644902",
@@ -18956,11 +19014,11 @@
 		"RefId": null,
 		"NameEn": "Crush Card Virus",
 		"NameFr": "Virus Broyeur de Carte",
-		"Limit": "K",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/57728570.jpg",
 		"IdName": "crushcardvirus",
-		"OrderIndex": 69,
+		"OrderIndex": 110,
 		"IdNameFr": "virusbroyeurdecarte"
 	},
 	{
@@ -19137,7 +19195,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/73915051.jpg",
 		"IdName": "scapegoat",
-		"OrderIndex": 13,
+		"OrderIndex": 36,
 		"IdNameFr": "boucmissaire"
 	},
 	{
@@ -19160,7 +19218,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/62279055.jpg",
 		"IdName": "magiccylinder",
-		"OrderIndex": 70,
+		"OrderIndex": 99,
 		"IdNameFr": "cylindremagique"
 	},
 	{
@@ -20236,11 +20294,12 @@
 		"RefId": null,
 		"NameEn": "Kuraz the Light Monarch",
 		"NameFr": "Kuraz le Monarque de la Lumière",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/57666212.jpg",
 		"IdName": "kurazthelightmonarch",
-		"IdNameFr": "kurazlemonarquedelalumiere"
+		"IdNameFr": "kurazlemonarquedelalumiere",
+		"OrderIndex": 10
 	},
 	{
 		"Id": "37383714",
@@ -21737,7 +21796,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/58551308.jpg",
 		"IdName": "spearcretin",
 		"IdNameFr": "familierdestenebres",
-		"OrderIndex": 17
+		"OrderIndex": 18
 	},
 	{
 		"Id": "47879985",
@@ -22349,11 +22408,12 @@
 		"RefId": null,
 		"NameEn": "Mausoleum of the Emperor",
 		"NameFr": "Mausolée de l'Empereur",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/80921533.jpg",
 		"IdName": "mausoleumoftheemperor",
-		"IdNameFr": "mausoleedelempereur"
+		"IdNameFr": "mausoleedelempereur",
+		"OrderIndex": 58
 	},
 	{
 		"Id": "24104865",
@@ -22437,11 +22497,12 @@
 		"RefId": null,
 		"NameEn": "Brainwashing Beam",
 		"NameFr": "Rayon de Lavage de Cerveau",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/59258334.jpg",
 		"IdName": "brainwashingbeam",
-		"IdNameFr": "rayondelavagedecerveau"
+		"IdNameFr": "rayondelavagedecerveau",
+		"OrderIndex": 113
 	},
 	{
 		"Id": "37265642",
@@ -22606,7 +22667,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/31305911.jpg",
 		"IdName": "marshmallon",
-		"OrderIndex": 19,
+		"OrderIndex": 20,
 		"IdNameFr": "marshmallon"
 	},
 	{
@@ -22636,11 +22697,12 @@
 		"RefId": null,
 		"NameEn": "Dark Magic Curtain",
 		"NameFr": "Rideau de Magie Noire",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/99789342.jpg",
 		"IdName": "darkmagiccurtain",
-		"IdNameFr": "rideaudemagienoire"
+		"IdNameFr": "rideaudemagienoire",
+		"OrderIndex": 80
 	},
 	{
 		"Id": "76792184",
@@ -23157,7 +23219,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/75500286.jpg",
 		"IdName": "goldsarcophagus",
-		"OrderIndex": 48,
+		"OrderIndex": 69,
 		"IdNameFr": "sarcophagedore"
 	},
 	{
@@ -23455,7 +23517,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/58775978.jpg",
 		"IdName": "nightmaressteelcage",
-		"OrderIndex": 8,
+		"OrderIndex": 31,
 		"IdNameFr": "cagedacierdecauchemar"
 	},
 	{
@@ -23555,7 +23617,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/72892473.jpg",
 		"IdName": "carddestruction",
-		"OrderIndex": 43,
+		"OrderIndex": 64,
 		"IdNameFr": "destructiondecarte"
 	},
 	{
@@ -23600,7 +23662,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/18144506.jpg",
 		"IdName": "harpiesfeatherduster",
-		"OrderIndex": 33,
+		"OrderIndex": 46,
 		"IdNameFr": "leplumeaudedameharpie"
 	},
 	{
@@ -23646,7 +23708,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/9748752.jpg",
 		"IdName": "caiustheshadowmonarch",
-		"OrderIndex": 4,
+		"OrderIndex": 5,
 		"IdNameFr": "caiuslemonarquedesombres"
 	},
 	{
@@ -24054,7 +24116,7 @@
 		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters",
 		"Image": "https://images.ygoprodeck.com/images/cards/1224927.jpg",
 		"IdName": "malevolentcatastrophe",
-		"OrderIndex": 31,
+		"OrderIndex": 82,
 		"IdNameFr": "catastropheinfernale"
 	},
 	{
@@ -24110,7 +24172,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/81439173.jpg",
 		"IdName": "foolishburial",
-		"OrderIndex": 47,
+		"OrderIndex": 68,
 		"IdNameFr": "sacrificeinutile"
 	},
 	{
@@ -24251,11 +24313,12 @@
 		"RefId": null,
 		"NameEn": "Cloudian Aerosol",
 		"NameFr": "Aérosol Nuagien",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/88210105.jpg",
 		"IdName": "cloudianaerosol",
-		"IdNameFr": "aerosolnuagien"
+		"IdNameFr": "aerosolnuagien",
+		"OrderIndex": 71
 	},
 	{
 		"Id": "22160245",
@@ -24322,18 +24385,19 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/56784842.jpg",
 		"IdName": "angelo7",
 		"IdNameFr": "angeo7",
-		"OrderIndex": 15
+		"OrderIndex": 16
 	},
 	{
 		"Id": "29603180",
 		"RefId": null,
 		"NameEn": "Annihilator Archfiend",
 		"NameFr": "Annihilateur Archdémon",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/29603180.jpg",
 		"IdName": "annihilatorarchfiend",
-		"IdNameFr": "annihilateurarchdemon"
+		"IdNameFr": "annihilateurarchdemon",
+		"OrderIndex": 36
 	},
 	{
 		"Id": "89904598",
@@ -24472,11 +24536,12 @@
 		"RefId": null,
 		"NameEn": "Hidden Armory",
 		"NameFr": "Arsenal Secret",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/52105192.jpg",
 		"IdName": "hiddenarmory",
-		"IdNameFr": "arsenalsecret"
+		"IdNameFr": "arsenalsecret",
+		"OrderIndex": 77
 	},
 	{
 		"Id": "46052429",
@@ -24487,7 +24552,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/46052429.jpg",
 		"IdName": "advancedritualart",
-		"OrderIndex": 62,
+		"OrderIndex": 82,
 		"IdNameFr": "artdurituelavance"
 	},
 	{
@@ -24554,7 +24619,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/46668237.jpg",
 		"IdName": "greenbaboondefenderoftheforest",
-		"OrderIndex": 2,
+		"OrderIndex": 3,
 		"IdNameFr": "babouinvertleprotecteurdelaforet"
 	},
 	{
@@ -24567,7 +24632,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/67775894.jpg",
 		"IdName": "wonderwand",
 		"IdNameFr": "baguettemagique",
-		"OrderIndex": 45
+		"OrderIndex": 66
 	},
 	{
 		"Id": "62337487",
@@ -24754,7 +24819,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/88610708.jpg",
 		"IdName": "bashingshield",
-		"OrderIndex": 45,
+		"OrderIndex": 58,
 		"IdNameFr": "bouclierviolent"
 	},
 	{
@@ -24762,11 +24827,12 @@
 		"RefId": null,
 		"NameEn": "Cloudian Squall",
 		"NameFr": "Bourrasque Nuagien",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/90135989.jpg",
 		"IdName": "cloudiansquall",
-		"IdNameFr": "bourrasquenuagien"
+		"IdNameFr": "bourrasquenuagien",
+		"OrderIndex": 73
 	},
 	{
 		"Id": "50896944",
@@ -24988,7 +25054,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/4740489.jpg",
 		"IdName": "magneticfield",
 		"IdNameFr": "champmagnetique",
-		"OrderIndex": 44
+		"OrderIndex": 65
 	},
 	{
 		"Id": "300302009",
@@ -25204,11 +25270,12 @@
 		"RefId": null,
 		"NameEn": "Amulet of Ambition",
 		"NameFr": "Collier d'Ambition",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/5183693.jpg",
 		"IdName": "amuletofambition",
-		"IdNameFr": "collierdambition"
+		"IdNameFr": "collierdambition",
+		"OrderIndex": 90
 	},
 	{
 		"Id": "300201006",
@@ -25248,11 +25315,12 @@
 		"RefId": null,
 		"NameEn": "Crystal Conclave",
 		"NameFr": "Conclave du Cristal",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/87259933.jpg",
 		"IdName": "crystalconclave",
-		"IdNameFr": "conclaveducristal"
+		"IdNameFr": "conclaveducristal",
+		"OrderIndex": 109
 	},
 	{
 		"Id": "300205001",
@@ -25292,11 +25360,12 @@
 		"RefId": null,
 		"NameEn": "Magnet Conversion",
 		"NameFr": "Conversion Magnétique",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/77133792.jpg",
 		"IdName": "magnetconversion",
-		"IdNameFr": "conversionmagnetique"
+		"IdNameFr": "conversionmagnetique",
+		"OrderIndex": 116
 	},
 	{
 		"Id": "26376390",
@@ -25325,11 +25394,12 @@
 		"RefId": null,
 		"NameEn": "Horn of the Phantom Beast",
 		"NameFr": "Corne de la Bête Fantôme",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/21350571.jpg",
 		"IdName": "hornofthephantombeast",
-		"IdNameFr": "cornedelabetefantome"
+		"IdNameFr": "cornedelabetefantome",
+		"OrderIndex": 117
 	},
 	{
 		"Id": "300302003",
@@ -25451,7 +25521,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/5133471.jpg",
 		"IdName": "galaxycyclone",
 		"IdNameFr": "cyclonegalactique",
-		"OrderIndex": 68
+		"OrderIndex": 88
 	},
 	{
 		"Id": "79279397",
@@ -25539,7 +25609,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/12262393.jpg",
 		"IdName": "deltathemagnetwarrior",
-		"OrderIndex": 14,
+		"OrderIndex": 16,
 		"IdNameFr": "deltaleguerriermagnetique"
 	},
 	{
@@ -25624,11 +25694,12 @@
 		"RefId": null,
 		"NameEn": "Vampire's Desire",
 		"NameFr": "Désir de Vampire",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/69700783.jpg",
 		"IdName": "vampiresdesire",
-		"IdNameFr": "desirdevampire"
+		"IdNameFr": "desirdevampire",
+		"OrderIndex": 79
 	},
 	{
 		"Id": "44792253",
@@ -25683,7 +25754,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/25524823.jpg",
 		"IdName": "gravekeepersoracle",
-		"OrderIndex": 0,
+		"OrderIndex": 1,
 		"IdNameFr": "devindesprotecteursdutombeau"
 	},
 	{
@@ -25724,11 +25795,12 @@
 		"RefId": null,
 		"NameEn": "Vampire Retainer",
 		"NameFr": "Domestique Vampire",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70645913.jpg",
 		"IdName": "vampireretainer",
-		"IdNameFr": "domestiquevampire"
+		"IdNameFr": "domestiquevampire",
+		"OrderIndex": 35
 	},
 	{
 		"Id": "88032456",
@@ -26080,7 +26152,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/6178850.jpg",
 		"IdName": "fightingspirit",
-		"OrderIndex": 47,
+		"OrderIndex": 60,
 		"IdNameFr": "espritdecombat"
 	},
 	{
@@ -26088,11 +26160,12 @@
 		"RefId": null,
 		"NameEn": "Red-Eyes Spirit",
 		"NameFr": "Esprit des Yeux Rouges",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/44397496.jpg",
 		"IdName": "redeyesspirit",
-		"IdNameFr": "espritdesyeuxrouges"
+		"IdNameFr": "espritdesyeuxrouges",
+		"OrderIndex": 118
 	},
 	{
 		"Id": "88494120",
@@ -26132,11 +26205,12 @@
 		"RefId": null,
 		"NameEn": "Vampire Familiar",
 		"NameFr": "Familier Vampire",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34250214.jpg",
 		"IdName": "vampirefamiliar",
-		"IdNameFr": "familiervampire"
+		"IdNameFr": "familiervampire",
+		"OrderIndex": 34
 	},
 	{
 		"Id": "46474915",
@@ -26247,7 +26321,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/57103969.jpg",
 		"IdName": "fireformationtenki",
 		"IdNameFr": "formationfeutenki",
-		"OrderIndex": 54
+		"OrderIndex": 67
 	},
 	{
 		"Id": "67227834",
@@ -26291,7 +26365,7 @@
 		"LimitFriends": "gracefulcharity,potofgreed,shardofgreed",
 		"Image": "https://images.ygoprodeck.com/images/cards/33904024.jpg",
 		"IdName": "shardofgreed",
-		"OrderIndex": 28,
+		"OrderIndex": 69,
 		"IdNameFr": "fragmentdecupidite"
 	},
 	{
@@ -26358,7 +26432,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/41940225.jpg",
 		"IdName": "destructionswordsmanfusion",
-		"OrderIndex": 39,
+		"OrderIndex": 52,
 		"IdNameFr": "fusionsoldatdelpeedestructrice"
 	},
 	{
@@ -26443,11 +26517,12 @@
 		"RefId": null,
 		"NameEn": "Archfiend General",
 		"NameFr": "Général Archdémon",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/48675364.jpg",
 		"IdName": "archfiendgeneral",
-		"IdNameFr": "generalarchdemon"
+		"IdNameFr": "generalarchdemon",
+		"OrderIndex": 17
 	},
 	{
 		"Id": "300302015",
@@ -26707,11 +26782,12 @@
 		"RefId": null,
 		"NameEn": "A Hero Lives",
 		"NameFr": "Héros Vivant",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/8949584.jpg",
 		"IdName": "aherolives",
-		"IdNameFr": "herosvivant"
+		"IdNameFr": "herosvivant",
+		"OrderIndex": 78
 	},
 	{
 		"Id": "16111820",
@@ -26855,7 +26931,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/1475311.jpg",
 		"IdName": "allureofdarkness",
-		"OrderIndex": 41,
+		"OrderIndex": 62,
 		"IdNameFr": "invitationdestenebres"
 	},
 	{
@@ -26885,11 +26961,12 @@
 		"RefId": null,
 		"NameEn": "Cyber Angel Izana",
 		"NameFr": "Izana Ange Cyber",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/91668401.jpg",
 		"IdName": "cyberangelizana",
-		"IdNameFr": "izanaangecyber"
+		"IdNameFr": "izanaangecyber",
+		"OrderIndex": 60
 	},
 	{
 		"Id": "300302032",
@@ -27065,7 +27142,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/73680966.jpg",
 		"IdName": "thebeginningoftheend",
-		"OrderIndex": 61,
+		"OrderIndex": 81,
 		"IdNameFr": "ledebutdelafin"
 	},
 	{
@@ -27154,7 +27231,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/94861297.jpg",
 		"IdName": "theforcefulcheckpoint",
-		"OrderIndex": 61,
+		"OrderIndex": 84,
 		"IdNameFr": "lepointdecontroleinflexible"
 	},
 	{
@@ -27471,12 +27548,12 @@
 		"RefId": null,
 		"NameEn": "Metaverse",
 		"NameFr": "Métavers",
-		"Limit": "K",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/89208725.jpg",
 		"IdName": "metaverse",
 		"IdNameFr": "metavers",
-		"OrderIndex": 81
+		"OrderIndex": 115
 	},
 	{
 		"Id": "34815282",
@@ -27532,7 +27609,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/58169731.jpg",
 		"IdName": "wallofdisruption",
 		"IdNameFr": "murdelinterruption",
-		"OrderIndex": 83
+		"OrderIndex": 106
 	},
 	{
 		"Id": "13945283",
@@ -27554,7 +27631,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/22123627.jpg",
 		"IdName": "morayofgreed",
-		"OrderIndex": 56,
+		"OrderIndex": 77,
 		"IdNameFr": "murenedecupidite"
 	},
 	{
@@ -27650,11 +27727,12 @@
 		"RefId": null,
 		"NameEn": "Cloudian - Storm Dragon",
 		"NameFr": "Nuagien - Dragon de l'Orage",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/13474291.jpg",
 		"IdName": "cloudianstormdragon",
-		"IdNameFr": "nuagiendragondelorage"
+		"IdNameFr": "nuagiendragondelorage",
+		"OrderIndex": 40
 	},
 	{
 		"Id": "20003527",
@@ -27797,7 +27875,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/72563071.jpg",
 		"IdName": "psychicshockwave",
-		"OrderIndex": 60,
+		"OrderIndex": 83,
 		"IdNameFr": "ondedechocpsychique"
 	},
 	{
@@ -27849,11 +27927,12 @@
 		"RefId": null,
 		"NameEn": "Fallen Paradise",
 		"NameFr": "Paradis Perdu",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/13301895.jpg",
 		"IdName": "fallenparadise",
-		"IdNameFr": "paradisperdu"
+		"IdNameFr": "paradisperdu",
+		"OrderIndex": 80
 	},
 	{
 		"Id": "52367652",
@@ -27963,7 +28042,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/34559295.jpg",
 		"IdName": "irondraw",
-		"OrderIndex": 49,
+		"OrderIndex": 70,
 		"IdNameFr": "piochedefer"
 	},
 	{
@@ -28042,7 +28121,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/42671151.jpg",
 		"IdName": "thegoldenapples",
 		"IdNameFr": "pommesdor",
-		"OrderIndex": 78
+		"OrderIndex": 101
 	},
 	{
 		"Id": "300202006",
@@ -28093,11 +28172,12 @@
 		"RefId": null,
 		"NameEn": "Pre-Preparation of Rites",
 		"NameFr": "Pré-Préparation des Rites",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/13048472.jpg",
 		"IdName": "prepreparationofrites",
-		"IdNameFr": "prepreparationdesrites"
+		"IdNameFr": "prepreparationdesrites",
+		"OrderIndex": 96
 	},
 	{
 		"Id": "300201004",
@@ -28236,11 +28316,12 @@
 		"RefId": null,
 		"NameEn": "Gravekeeper's Recruiter",
 		"NameFr": "Recruteur des Protecteurs du Tombeau",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/93023479.jpg",
 		"IdName": "gravekeepersrecruiter",
-		"IdNameFr": "recruteurdesprotecteursdutombeau"
+		"IdNameFr": "recruteurdesprotecteursdutombeau",
+		"OrderIndex": 21
 	},
 	{
 		"Id": "300302034",
@@ -28362,7 +28443,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/31189536.jpg",
 		"IdName": "vampireawakening",
 		"IdNameFr": "reveildevampire",
-		"OrderIndex": 77
+		"OrderIndex": 100
 	},
 	{
 		"Id": "53701259",
@@ -28384,7 +28465,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/10813327.jpg",
 		"IdName": "wakingthedragon",
-		"OrderIndex": 62,
+		"OrderIndex": 85,
 		"IdNameFr": "reveildudragon"
 	},
 	{
@@ -28447,11 +28528,12 @@
 		"RefId": null,
 		"NameEn": "Fog King",
 		"NameFr": "Roi de Brume",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/6614221.jpg",
 		"IdName": "fogking",
-		"IdNameFr": "roidebrume"
+		"IdNameFr": "roidebrume",
+		"OrderIndex": 27
 	},
 	{
 		"Id": "70406920",
@@ -28524,22 +28606,24 @@
 		"RefId": null,
 		"NameEn": "Verdant Sanctuary",
 		"NameFr": "Sanctuaire Verdoyant",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/80402389.jpg",
 		"IdName": "verdantsanctuary",
-		"IdNameFr": "sanctuaireverdoyant"
+		"IdNameFr": "sanctuaireverdoyant",
+		"OrderIndex": 76
 	},
 	{
 		"Id": "70595331",
 		"RefId": null,
 		"NameEn": "Il Blud",
 		"NameFr": "Sang Putride, Le Gardien des Limbes",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/70595331.jpg",
 		"IdName": "ilblud",
-		"IdNameFr": "sangputridelegardiendeslimbes"
+		"IdNameFr": "sangputridelegardiendeslimbes",
+		"OrderIndex": 46
 	},
 	{
 		"Id": "97783659",
@@ -28616,7 +28700,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/58139128.jpg",
 		"IdName": "gravekeepersshaman",
-		"OrderIndex": 10,
+		"OrderIndex": 13,
 		"IdNameFr": "shamandesprotecteursdutombeau"
 	},
 	{
@@ -28679,11 +28763,12 @@
 		"RefId": null,
 		"NameEn": "Destiny End Dragoon",
 		"NameFr": "Soldat Dragon de l'Ultime Destinée",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/76263644.jpg",
 		"IdName": "destinyenddragoon",
-		"IdNameFr": "soldatdragondelultimedestinee"
+		"IdNameFr": "soldatdragondelultimedestinee",
+		"OrderIndex": 40
 	},
 	{
 		"Id": "5405694",
@@ -28739,7 +28824,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/79852326.jpg",
 		"IdName": "zomathespirit",
-		"OrderIndex": 67,
+		"OrderIndex": 90,
 		"IdNameFr": "spectrezoma"
 	},
 	{
@@ -28762,7 +28847,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/33245030.jpg",
 		"IdName": "spherekuriboh",
-		"OrderIndex": 4,
+		"OrderIndex": 8,
 		"IdNameFr": "spherekuriboh"
 	},
 	{
@@ -28792,11 +28877,12 @@
 		"RefId": null,
 		"NameEn": "Gravekeeper's Stele",
 		"NameFr": "Stèle des Protecteurs du Tombeau",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/99523325.jpg",
 		"IdName": "gravekeepersstele",
-		"IdNameFr": "steledesprotecteursdutombeau"
+		"IdNameFr": "steledesprotecteursdutombeau",
+		"OrderIndex": 97
 	},
 	{
 		"Id": "300202007",
@@ -28873,7 +28959,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/33057951.jpg",
 		"IdName": "surface",
-		"OrderIndex": 60,
+		"OrderIndex": 80,
 		"IdNameFr": "surface"
 	},
 	{
@@ -29171,7 +29257,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/17626381.jpg",
 		"IdName": "supplysquad",
-		"OrderIndex": 44,
+		"OrderIndex": 57,
 		"IdNameFr": "unitederavitaillement"
 	},
 	{
@@ -29183,7 +29269,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/28486799.jpg",
 		"IdName": "backupsquad",
-		"OrderIndex": 40,
+		"OrderIndex": 53,
 		"IdNameFr": "unitedereserve"
 	},
 	{
@@ -29191,11 +29277,12 @@
 		"RefId": null,
 		"NameEn": "Fusion Recycling Plant",
 		"NameFr": "Usine de Recyclage Fusion",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/22829942.jpg",
 		"IdName": "fusionrecyclingplant",
-		"IdNameFr": "usinederecyclagefusion"
+		"IdNameFr": "usinederecyclagefusion",
+		"OrderIndex": 98
 	},
 	{
 		"Id": "74003290",
@@ -29206,7 +29293,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/74003290.jpg",
 		"IdName": "lostwind",
-		"OrderIndex": 59,
+		"OrderIndex": 82,
 		"IdNameFr": "ventperdu"
 	},
 	{
@@ -29269,11 +29356,12 @@
 		"RefId": null,
 		"NameEn": "Geartown",
 		"NameFr": "Ville des Engrenages",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/37694547.jpg",
 		"IdName": "geartown",
-		"IdNameFr": "villedesengrenages"
+		"IdNameFr": "villedesengrenages",
+		"OrderIndex": 64
 	},
 	{
 		"Id": "86361354",
@@ -29368,11 +29456,12 @@
 		"RefId": null,
 		"NameEn": "Red-Eyes Wyvern",
 		"NameFr": "Vouivre aux Yeux Rouges",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/67300516.jpg",
 		"IdName": "redeyeswyvern",
-		"IdNameFr": "vouivreauxyeuxrouges"
+		"IdNameFr": "vouivreauxyeuxrouges",
+		"OrderIndex": 58
 	},
 	{
 		"Id": "82099401",
@@ -29472,7 +29561,7 @@
 		"LimitFriends": "",
 		"Image": "https://images.ygoprodeck.com/images/cards/85602018.jpg",
 		"IdName": "lastwill",
-		"OrderIndex": 50,
+		"OrderIndex": 71,
 		"IdNameFr": "dernierevolonte"
 	},
 	{
@@ -30267,7 +30356,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/44947065.jpg",
 		"IdName": "burdenofthemighty",
 		"IdNameFr": "fardeaudupuissant",
-		"OrderIndex": 52
+		"OrderIndex": 65
 	},
 	{
 		"Id": "70342110",
@@ -30279,7 +30368,7 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/70342110.jpg",
 		"IdName": "dimensionalprison",
 		"IdNameFr": "prisondimensionnelle",
-		"OrderIndex": 39
+		"OrderIndex": 87
 	},
 	{
 		"Id": "37520316",
@@ -30418,77 +30507,84 @@
 		"RefId": "FOTB-EN015",
 		"NameEn": "Gravekeeper's Commandant",
 		"NameFr": "Commandant des Protecteurs du Tombeau",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/4/44/GravekeepersCommandant-LCYW-EN-UR-1E.png",
 		"IdName": "gravekeeperscommandant",
-		"IdNameFr": "commandantdesprotecteursdutombeau"
+		"IdNameFr": "commandantdesprotecteursdutombeau",
+		"OrderIndex": 20
 	},
 	{
 		"Id": "30397",
 		"RefId": "FOTB-EN016",
 		"NameEn": "Warrior of Atlantis",
 		"NameFr": "Guerrier de l'Atlantide",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/WarriorofAtlantis-SDRE-EN-C-1E.jpg",
 		"IdName": "warriorofatlantis",
-		"IdNameFr": "guerrierdelatlantide"
+		"IdNameFr": "guerrierdelatlantide",
+		"OrderIndex": 15
 	},
 	{
 		"Id": "32486",
 		"RefId": "FOTB-EN017",
 		"NameEn": "Destroyersaurus",
 		"NameFr": "Destructosaure",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/0/0b/Destroyersaurus-LCJW-EN-ScR-1E.png",
 		"IdName": "destroyersaurus",
-		"IdNameFr": "destructosaure"
+		"IdNameFr": "destructosaure",
+		"OrderIndex": 24
 	},
 	{
 		"Id": "30405",
 		"RefId": "FOTB-EN018",
 		"NameEn": "Zeradias, Herald of Heaven",
 		"NameFr": "Zéradias, Héraut du Paradis",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/a0/ZeradiasHeraldofHeaven-OP07-EN-C-UE.png",
 		"IdName": "zeradiasheraldofheaven",
-		"IdNameFr": "zeradiasherautduparadis"
+		"IdNameFr": "zeradiasherautduparadis",
+		"OrderIndex": 14
 	},
 	{
 		"Id": "32268",
 		"RefId": "FOTB-EN020",
 		"NameEn": "Harpie Queen",
 		"NameFr": "Reine Harpie",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/2/2a/HarpieQueen-LART-EN-UR-LE.png",
 		"IdName": "harpiequeen",
-		"IdNameFr": "reineharpie"
+		"IdNameFr": "reineharpie",
+		"OrderIndex": 16
 	},
 	{
 		"Id": "29664",
 		"RefId": "FOTB-EN021",
 		"NameEn": "Sky Scourge Enrise",
 		"NameFr": "Djinn Céleste Enrise",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/5/57/SkyScourgeEnrise-FOTB-EN-SR-1E.jpg",
 		"IdName": "skyscourgeenrise",
-		"IdNameFr": "djinncelesteenrise"
+		"IdNameFr": "djinncelesteenrise",
+		"OrderIndex": 47
 	},
 	{
 		"Id": "29665",
 		"RefId": "FOTB-EN022",
 		"NameEn": "Sky Scourge Norleras",
 		"NameFr": "Djinn Céleste Norleras",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/7/7b/SkyScourgeNorleras-FOTB-EN-SR-1E.jpg",
 		"IdName": "skyscourgenorleras",
-		"IdNameFr": "djinncelestenorleras"
+		"IdNameFr": "djinncelestenorleras",
+		"OrderIndex": 30
 	},
 	{
 		"Id": "29663",
@@ -30500,7 +30596,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/7/7b/SkyScourgeInvicil-FOTB-EN-SR-1E.jpg",
 		"IdName": "skyscourgeinvicil",
 		"IdNameFr": "djinncelesteinvicil",
-		"OrderIndex": 16
+		"OrderIndex": 17
 	},
 	{
 		"Id": "32508",
@@ -30533,7 +30629,7 @@
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/4/4a/RaizatheStormMonarch-SR01-EN-C-1E.png",
 		"IdName": "raizathestormmonarch",
-		"OrderIndex": 6,
+		"OrderIndex": 7,
 		"IdNameFr": "raizalemonarquedelatempete"
 	},
 	{
@@ -30590,7 +30686,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/1/1d/ACellBreedingDevice-FOTB-EN-C-UE.png",
 		"IdName": "acellbreedingdevice",
 		"IdNameFr": "couveusecellulea",
-		"OrderIndex": 17
+		"OrderIndex": 40
 	},
 	{
 		"Id": "32083",
@@ -30707,11 +30803,12 @@
 		"RefId": "FOTB-EN058",
 		"NameEn": "Mass Hypnosis",
 		"NameFr": "Hypnotisme de masse",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/c/c7/MassHypnosis-FOTB-EN-C-1E.jpg",
 		"IdName": "masshypnosis",
-		"IdNameFr": "hypnotismedemasse"
+		"IdNameFr": "hypnotismedemasse",
+		"OrderIndex": 114
 	},
 	{
 		"Id": "34527",
@@ -30778,7 +30875,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/f/f2/EradicatorEpidemicVirus-WISU-EN-R-1E.png",
 		"IdName": "eradicatorepidemicvirus",
 		"IdNameFr": "viruspidemiquedradication",
-		"OrderIndex": 84
+		"OrderIndex": 107
 	},
 	{
 		"Id": "55727",
@@ -30972,11 +31069,12 @@
 		"RefId": "GLAS-EN032",
 		"NameEn": "Enishi, Shien's Chancellor",
 		"NameFr": "Enishi, Chancelier de Shien",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/2/20/EnishiShiensChancellor-OP06-EN-C-UE.png",
 		"IdName": "enishishienschancellor",
-		"IdNameFr": "enishichancelierdeshien"
+		"IdNameFr": "enishichancelierdeshien",
+		"OrderIndex": 44
 	},
 	{
 		"Id": "48085",
@@ -31049,11 +31147,12 @@
 		"RefId": "GLAS-EN044",
 		"NameEn": "Gladiator Beast Heraklinos",
 		"NameFr": "Heraklinos, Bête Gladiateur",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/96/GladiatorBeastHeraklinos-LCGX-EN-SR-UE.png",
 		"IdName": "gladiatorbeastheraklinos",
-		"IdNameFr": "heraklinosbetegladiateur"
+		"IdNameFr": "heraklinosbetegladiateur",
+		"OrderIndex": 39
 	},
 	{
 		"Id": "29387",
@@ -31093,11 +31192,12 @@
 		"RefId": "GLAS-EN054",
 		"NameEn": "Colosseum - Cage of the Gladiator Beasts",
 		"NameFr": "Colisée – Cage Des Bêtes Gladiateurs",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/5/51/ColosseumCageoftheGladiatorBeasts-GLAS-EN-R-1E.png",
 		"IdName": "colosseumcageofthegladiatorbeasts",
-		"IdNameFr": "coliseecagedesbetesgladiateurs"
+		"IdNameFr": "coliseecagedesbetesgladiateurs",
+		"OrderIndex": 51
 	},
 	{
 		"Id": "48282",
@@ -31313,12 +31413,12 @@
 		"RefId": "GLAS-EN076",
 		"NameEn": "Cell Explosion Virus",
 		"NameFr": "Virus À Cellules Explosives",
-		"Limit": "1",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/8/82/CellExplosionVirus-CP08-EN-C-UE.jpg",
 		"IdName": "cellexplosionvirus",
 		"IdNameFr": "viruscellulesexplosives",
-		"OrderIndex": 37
+		"OrderIndex": 112
 	},
 	{
 		"Id": "49627",
@@ -31336,11 +31436,12 @@
 		"RefId": "GLAS-EN078",
 		"NameEn": "Interdimensional Warp",
 		"NameFr": "Trou Interdimensionnel",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/1/10/InterdimensionalWarp-GLAS-EN-C-1E.jpg",
 		"IdName": "interdimensionalwarp",
-		"IdNameFr": "trouinterdimensionnel"
+		"IdNameFr": "trouinterdimensionnel",
+		"OrderIndex": 115
 	},
 	{
 		"Id": "49637",
@@ -31380,11 +31481,12 @@
 		"RefId": "GLAS-EN082",
 		"NameEn": "Test Tiger",
 		"NameFr": "Tigre de Laboratoire",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/d/d0/TestTiger-RYMP-EN-C-1E.png",
 		"IdName": "testtiger",
-		"IdNameFr": "tigredelaboratoire"
+		"IdNameFr": "tigredelaboratoire",
+		"OrderIndex": 45
 	},
 	{
 		"Id": "62582",
@@ -31528,7 +31630,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/6/6d/Honest-SR05-EN-C-1E.png",
 		"IdName": "honest",
 		"IdNameFr": "angedeloyaute",
-		"OrderIndex": 2
+		"OrderIndex": 7
 	},
 	{
 		"Id": "82302",
@@ -31606,7 +31708,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/0/04/ArcanaForce0TheFool-DT06-EN-DNPR-DT.jpg",
 		"IdName": "arcanaforce0thefool",
 		"IdNameFr": "forcearcane0larlequin",
-		"OrderIndex": 18
+		"OrderIndex": 19
 	},
 	{
 		"Id": "28525",
@@ -31745,11 +31847,12 @@
 		"RefId": "LODT-EN021",
 		"NameEn": "Lumina, Lightsworn Summoner",
 		"NameFr": "Lumina L'invocatrice, Seigneur Lumière",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/0/0d/LuminaLightswornSummoner-BLLR-EN-UR-1E.png",
 		"IdName": "luminalightswornsummoner",
-		"IdNameFr": "luminalinvocatriceseigneurlumiere"
+		"IdNameFr": "luminalinvocatriceseigneurlumiere",
+		"OrderIndex": 38
 	},
 	{
 		"Id": "85080",
@@ -31768,11 +31871,11 @@
 		"RefId": "LODT-EN023",
 		"NameEn": "Wulf, Lightsworn Beast",
 		"NameFr": "Wulf La Bete, Seigneur Lumière",
-		"Limit": "K",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/8/82/WulfLightswornBeast-BLLR-EN-UR-1E.png",
 		"IdName": "wulflightswornbeast",
-		"OrderIndex": 12,
+		"OrderIndex": 27,
 		"IdNameFr": "wulflabeteseigneurlumiere"
 	},
 	{
@@ -31825,11 +31928,12 @@
 		"RefId": "LODT-EN028",
 		"NameEn": "Substitoad",
 		"NameFr": "Grenouille De Permutation",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/d/dc/Substitoad-LODT-EN-R-1E.png",
 		"IdName": "substitoad",
-		"IdNameFr": "grenouilledepermutation"
+		"IdNameFr": "grenouilledepermutation",
+		"OrderIndex": 26
 	},
 	{
 		"Id": "85086",
@@ -31939,7 +32043,7 @@
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/1/14/GladiatorBeastGyzarus-DUSA-EN-UR-1E.png",
 		"IdName": "gladiatorbeastgyzarus",
-		"OrderIndex": 27,
+		"OrderIndex": 38,
 		"IdNameFr": "gyzarusbetegladiateur"
 	},
 	{
@@ -32028,7 +32132,7 @@
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/7/70/SolarRecharge-BLLR-EN-UR-1E.png",
 		"IdName": "solarrecharge",
-		"OrderIndex": 59,
+		"OrderIndex": 79,
 		"IdNameFr": "changesolaire"
 	},
 	{
@@ -32036,11 +32140,12 @@
 		"RefId": "LODT-EN053",
 		"NameEn": "Realm of Light",
 		"NameFr": "Royaume De Lumière",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/6/6f/RealmofLight-SDLI-EN-C-1E.png",
 		"IdName": "realmoflight",
-		"IdNameFr": "royaumedelumiere"
+		"IdNameFr": "royaumedelumiere",
+		"OrderIndex": 50
 	},
 	{
 		"Id": "85094",
@@ -32190,11 +32295,12 @@
 		"RefId": "LODT-EN068",
 		"NameEn": "Tour of Doom",
 		"NameFr": "Visite De La Faucheuse",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/b/b5/TourofDoom-LODT-EN-C-UE.png",
 		"IdName": "tourofdoom",
-		"IdNameFr": "visitedelafaucheuse"
+		"IdNameFr": "visitedelafaucheuse",
+		"OrderIndex": 108
 	},
 	{
 		"Id": "75404",
@@ -32223,11 +32329,12 @@
 		"RefId": "LODT-EN071",
 		"NameEn": "Glorious Illusion",
 		"NameFr": "Illusion Glorieuse",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/9f/GloriousIllusion-SDLI-EN-C-1E.png",
 		"IdName": "gloriousillusion",
-		"IdNameFr": "illusionglorieuse"
+		"IdNameFr": "illusionglorieuse",
+		"OrderIndex": 89
 	},
 	{
 		"Id": "85098",
@@ -32355,11 +32462,12 @@
 		"RefId": "LODT-EN084",
 		"NameEn": "Magical Exemplar",
 		"NameFr": "Canalisateur De Magie",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/6/61/MagicalExemplar-SR08-EN-C-1E.png",
 		"IdName": "magicalexemplar",
-		"IdNameFr": "canalisateurdemagie"
+		"IdNameFr": "canalisateurdemagie",
+		"OrderIndex": 41
 	},
 	{
 		"Id": "105576",
@@ -32399,11 +32507,12 @@
 		"RefId": "LODT-EN089",
 		"NameEn": "Vanquishing Light",
 		"NameFr": "Lumière Du Bannissement",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/9a/VanquishingLight-SDLI-EN-C-1E.png",
 		"IdName": "vanquishinglight",
-		"IdNameFr": "lumieredubannissement"
+		"IdNameFr": "lumieredubannissement",
+		"OrderIndex": 88
 	},
 	{
 		"Id": "21313",
@@ -32575,11 +32684,12 @@
 		"RefId": "PTDN-EN006",
 		"NameEn": "Yubel",
 		"NameFr": "Yubel",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/0/0a/Yubel-RYMP-EN-R-1E.jpg",
 		"IdName": "yubel",
-		"IdNameFr": "yubel"
+		"IdNameFr": "yubel",
+		"OrderIndex": 23
 	},
 	{
 		"Id": "57056",
@@ -32685,22 +32795,24 @@
 		"RefId": "PTDN-EN017",
 		"NameEn": "The Dark Creator",
 		"NameFr": "Le Créateur Des Ténèbres",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/5/50/TheDarkCreator-LCYW-EN-C-1E.png",
 		"IdName": "thedarkcreator",
-		"IdNameFr": "lecreateurdestenebres"
+		"IdNameFr": "lecreateurdestenebres",
+		"OrderIndex": 42
 	},
 	{
 		"Id": "57058",
 		"RefId": "PTDN-EN018",
 		"NameEn": "Dark Nephthys",
 		"NameFr": "Nephthys des Ténèbres",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/e/ee/DarkNephthys-LCYW-EN-C-1E.png",
 		"IdName": "darknephthys",
-		"IdNameFr": "nephthysdestenebres"
+		"IdNameFr": "nephthysdestenebres",
+		"OrderIndex": 43
 	},
 	{
 		"Id": "57060",
@@ -32852,11 +32964,12 @@
 		"RefId": "PTDN-EN034",
 		"NameEn": "Superancient Deepsea King Coelacanth",
 		"NameFr": "Coelacanthe le Roi des Mers Millénaire",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/a9/SuperancientDeepseaKingCoelacanth-MAZE-EN-SR-1E.png",
 		"IdName": "superancientdeepseakingcoelacanth",
-		"IdNameFr": "coelacantheleroidesmersmillenaire"
+		"IdNameFr": "coelacantheleroidesmersmillenaire",
+		"OrderIndex": 29
 	},
 	{
 		"Id": "67107",
@@ -33083,11 +33196,12 @@
 		"RefId": "PTDN-EN059",
 		"NameEn": "Six Samurai United",
 		"NameFr": "Union des Six Samouraïs",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/1/17/SixSamuraiUnited-SPWA-EN-SR-1E.png",
 		"IdName": "sixsamuraiunited",
-		"IdNameFr": "uniondessixsamourais"
+		"IdNameFr": "uniondessixsamourais",
+		"OrderIndex": 89
 	},
 	{
 		"Id": "64655",
@@ -33105,11 +33219,12 @@
 		"RefId": "PTDN-EN061",
 		"NameEn": "Gladiator Proving Ground",
 		"NameFr": "Arène des Gladiateurs",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/7/76/GladiatorProvingGround-RYMP-EN-UR-1E.png",
 		"IdName": "gladiatorprovingground",
-		"IdNameFr": "arenedesgladiateurs"
+		"IdNameFr": "arenedesgladiateurs",
+		"OrderIndex": 74
 	},
 	{
 		"Id": "66320",
@@ -33275,7 +33390,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/8/80/OfferingtotheSnakeDeity-ANGU-EN-R-1E.png",
 		"IdName": "offeringtothesnakedeity",
 		"IdNameFr": "sacrificeaudieuserpent",
-		"OrderIndex": 82
+		"OrderIndex": 105
 	},
 	{
 		"Id": "66346",
@@ -33315,11 +33430,12 @@
 		"RefId": "PTDN-EN081",
 		"NameEn": "Darklord Zerato",
 		"NameFr": "Ange Déchu Zerato",
-		"Limit": "",
+		"Limit": "0",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/a1/DarklordZerato-DESO-EN-SR-1E.png",
 		"IdName": "darklordzerato",
-		"IdNameFr": "angedechuzerato"
+		"IdNameFr": "angedechuzerato",
+		"OrderIndex": 28
 	},
 	{
 		"Id": "85976",
@@ -33370,11 +33486,12 @@
 		"RefId": "PTDN-EN087",
 		"NameEn": "Prime Material Dragon",
 		"NameFr": "Dragon Materia",
-		"Limit": "",
+		"Limit": "K",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/e/e3/PrimeMaterialDragon-PGLD-EN-GUR-1E.png",
 		"IdName": "primematerialdragon",
-		"IdNameFr": "dragonmateria"
+		"IdNameFr": "dragonmateria",
+		"OrderIndex": 54
 	},
 	{
 		"Id": "87459",
@@ -33481,11 +33598,12 @@
 		"RefId": "SD09-EN019",
 		"NameEn": "Jurassic World",
 		"NameFr": "Monde Jurassique",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/c/c2/JurassicWorld-LCJW-EN-C-1E.png",
 		"IdName": "jurassicworld",
-		"IdNameFr": "mondejurassique"
+		"IdNameFr": "mondejurassique",
+		"OrderIndex": 65
 	},
 	{
 		"Id": "20296",
@@ -33922,11 +34040,12 @@
 		"RefId": "STON-EN037",
 		"NameEn": "Ancient Rules",
 		"NameFr": "Anciens Réglements",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/7/75/AncientRules-LCKC-EN-ScR-1E.png",
 		"IdName": "ancientrules",
-		"IdNameFr": "anciensreglements"
+		"IdNameFr": "anciensreglements",
+		"OrderIndex": 75
 	},
 	{
 		"Id": "33810",
@@ -34010,11 +34129,12 @@
 		"RefId": "STON-EN047",
 		"NameEn": "Shien's Castle of Mist",
 		"NameFr": "Château de Brume de Shien",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/4/4b/ShiensCastleofMist-GLD2-EN-C-LE.jpg",
 		"IdName": "shienscastleofmist",
-		"IdNameFr": "chateaudebrumedeshien"
+		"IdNameFr": "chateaudebrumedeshien",
+		"OrderIndex": 54
 	},
 	{
 		"Id": "29770",
@@ -34191,7 +34311,7 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/a9/Gellenduo-SR05-EN-C-1E.png",
 		"IdName": "gellenduo",
 		"IdNameFr": "duogellen",
-		"OrderIndex": 39
+		"OrderIndex": 59
 	},
 	{
 		"Id": "41004",
@@ -34605,11 +34725,12 @@
 		"RefId": "TAEV-EN051",
 		"NameEn": "Venom Swamp",
 		"NameFr": "Marais Venin",
-		"Limit": "",
+		"Limit": "1",
 		"LimitFriends": "",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/e/e7/VenomSwamp-LCGX-EN-C-1E.png",
 		"IdName": "venomswamp",
-		"IdNameFr": "maraisvenin"
+		"IdNameFr": "maraisvenin",
+		"OrderIndex": 52
 	},
 	{
 		"Id": "33454",
@@ -35217,7 +35338,6 @@
 		"Image": "https://images.ygoprodeck.com/images/cards/44910027.jpg",
 		"Limit": "0",
 		"OrderIndex": 5,
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "dragondelavictoire"
 	},
@@ -35227,7 +35347,6 @@
 		"NameFr": "Insecte Assassin A La Faux",
 		"Image": "https://images.ygoprodeck.com/images/cards/66973070.jpg",
 		"Limit": "",
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "insecteassassinalafaux"
 	},
@@ -35267,7 +35386,6 @@
 		"NameFr": "Délivrance de Monstre",
 		"Image": "https://images.ygoprodeck.com/images/cards/37507488.jpg",
 		"Limit": "",
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "delivrancedemonstre"
 	},
@@ -35277,7 +35395,6 @@
 		"NameFr": "Duplication des Clones",
 		"Image": "https://images.ygoprodeck.com/images/cards/86871614.jpg",
 		"Limit": "",
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "duplicationdesclones"
 	},
@@ -35287,7 +35404,6 @@
 		"NameFr": "Van'Dalgyon le Seigneur du Dragon des Ténèbres",
 		"Image": "https://images.ygoprodeck.com/images/cards/24857466.jpg",
 		"Limit": "",
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "vandalgyonleseigneurdudragondestenebres"
 	},
@@ -35297,7 +35413,7 @@
 		"NameFr": "Tourbillons Jumeaux",
 		"Image": "https://images.ygoprodeck.com/images/cards/43898403.jpg",
 		"Limit": "1",
-		"OrderIndex": 30,
+		"OrderIndex": 71,
 		"Bonus": true,
 		"LimitFriends": "heavystorm,malevolentcatastrophe,twintwisters",
 		"IdNameFr": "tourbillonsjumeaux"
@@ -35309,7 +35425,6 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/97/GorztheEmissaryofDarkness-PGL2-EN-GUR-1E.png",
 		"Limit": "",
 		"OrderIndex": 6,
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "gorzlmissairedestenebres"
 	},
@@ -35320,7 +35435,6 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/0/07/ChargeoftheLightBrigade-SR02-EN-C-1E.png",
 		"Limit": "",
 		"OrderIndex": 17,
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "renfortdelumiere"
 	},
@@ -35331,7 +35445,6 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/d/d1/TheWingedDragonofRaSphereMode-GFP2-EN-GR-1E.png",
 		"Limit": "",
 		"OrderIndex": 1,
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "ledragonailederamodesphere"
 	},
@@ -35342,7 +35455,6 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/f/fb/Shutendoji-BP03-EN-C-1E.png",
 		"Limit": "",
 		"OrderIndex": 19,
-		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "demonshutendoji"
 	},
@@ -35351,8 +35463,8 @@
 		"NameEn": "Dandylion",
 		"NameFr": "Dandelion",
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/a/ad/Dandylion-DUSA-EN-UR-1E.png",
-		"Limit": "K",
-		"OrderIndex": 24,
+		"Limit": "",
+		"OrderIndex": 28,
 		"Bonus": true,
 		"LimitFriends": "",
 		"IdNameFr": "dandelion"
@@ -35366,15 +35478,5 @@
 		"Limit": "",
 		"LimitFriends": "",
 		"IdNameFr": "pierreblanchelegendaire"
-	},
-	{
-		"IdName": "supernimblemegahamster",
-		"NameEn": "Super-Nimble Mega Hamster",
-		"NameFr": "Super Méga Agile Hamster",
-		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/EGO1/EGO1-11.jpg",
-		"Bonus": true,
-		"Limit": "",
-		"LimitFriends": "",
-		"IdNameFr": "supermegaagilehamster"
 	}
 ]

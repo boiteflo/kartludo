@@ -22,10 +22,5 @@
 		"Id": "stapleTrap",
 		"Title": "Staple Piège",
 		"Value": "Mirror Force,Sakuretsu Armor,Dimensional Prison,Waboku,Interdimensional Matter Transporter,Curse of Anubis,Metal Reflect Slime,Raigeki Break,Compulsory Evacuation Device"
-	},
-	{
-		"Id": "",
-		"Title": "",
-		"Value": "Page d'accueil : liste des cartes bonus. Page decks : afficher rank for all, filtrer les themes vis a vis des decks disponibles, page deck : bouton pour télecharger la decklist et carte hover, ajouter le type de carte et le niveau pour pouvoir trier automatiquement, ajouter les extensions de cartes pour pouvoir afficher les cartes des boosters, ajouter un mode 1vsAll et un mode tournoi et un mode ligue"
 	}
 ]

@@ -5,7 +5,7 @@
         </div>
         <div v-else>
           <div v-if="isNew">
-              <panel-create-deck @save='saveDeck'
+              <panel-create-deck @save='saveDeck' :themes="themes" :staples="staples" :ranks="ranks"
               ></panel-create-deck>
           </div>
           
@@ -32,6 +32,9 @@ export default {
   components: {panelCreateDeck, panelDeck},
   data: () => ({
     loading:false,
+    ranks: null,
+    staples : null,
+    themes: null,
     isNew: false,
     id: null,
     deck: null
@@ -48,9 +51,28 @@ export default {
         this.showDeck(res);
       }); 
     }
+    
+    ServiceBack.getAll('data').then(res => {
+      this.staples = {
+          stapleMonster: res.find(x=> x.Id === 'stapleMonster'),
+          stapleSpell: res.find(x=> x.Id === 'stapleSpell'),
+          stapleTrap: res.find(x=> x.Id === 'stapleTrap')
+      };
+      this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
+    }); 
+    ServiceBack.getAll('themes').then(res => {
+      this.themes = res.concat([this.themeAll]);
+      this.loading=false;
+    });   
+    ServiceBack.getAll('decks').then(res => {
+      this.decks = res;
+    }); 
   },
   methods: {
     showDeck(deck){
+      if(!deck)
+        window.location.href = '/error/text=Ce%20deck%20n%20existe%20pas'
+
       deck.DeckListCards = [];
       let deckList = deck.DeckList.split(',');
       for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
@@ -67,15 +89,8 @@ export default {
     saveDeck(deck){
       this.loading=true;
       delete deck.Themes;
-      ServiceBack.insert('decks', deck).then(res=> {
-        if(res.status === 201)
-          ServiceBack.getAll('refresh').then(()=> window.location.href = '/decks');
-        else
-        {
-          this.loading = false;
-          alert('Une erreur est survenue. Veuillez contacter FlorentOutan sur le discord.')
-        }
-      });
+      ServiceBack.insert('decks', deck)
+        .then(res=> window.location.href = '/deck/id=' + res.data);
     }
   }
 };

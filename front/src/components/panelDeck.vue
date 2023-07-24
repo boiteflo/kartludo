@@ -1,20 +1,15 @@
 <template>
     <v-card v-if="deck">
         <v-card-title>{{deck.Title}}</v-card-title>
-        <v-card-subtitle>{{deck.Author}} - {{deck.Date}}</v-card-subtitle>
+        <v-card-subtitle>{{deck.Author}} - {{deck.Date}} - {{deck.Format}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
         
-        <div class="flex">
-          <v-alert v-if="deck.Errors" type="error" class="m5px">
-              {{deck.Errors}}
-          </v-alert>
-          <v-alert v-else type="success" class="m5px">
-              Ce deck respecte la ban list du format
-          </v-alert>
-          <v-alert type="info" class="m5px bg">
-            Nombre de carte du deck : {{deck.DeckLength}}
-          </v-alert>
-        </div>
+        <v-alert v-if="deck.Errors" type="error" class="m5px w100p">
+            {{deck.Errors}}
+        </v-alert>
+        <v-alert v-else type="success" class="m5px w100p">
+            Ce deck respecte la ban list du format
+        </v-alert>
 
         <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">
           <v-btn class="m5px" @click="$emit('unselect')">
@@ -28,8 +23,12 @@
           </router-link>
         </div>
         
-        <div class="flex" style="align-items:center">
+        <div v-if="$vuetify.breakpoint.width >= 930" class="flex" style="align-items:center">
           <div style="flex-basis: 0; min-height:400px; width:310px" class="m5px">  
+            
+            <v-alert type="info" class="m5px w100p" style="background: #212A3C !important">
+              Nombre de carte du deck : {{deck.DeckLength}}
+            </v-alert>
             <v-btn target="_blank" text  class="bg m5px w100p" @click="saveDecklist" >
               <v-icon>mdi-download</v-icon>
               Télécharger la decklist
@@ -45,7 +44,7 @@
                 :size="300"
                 :showname="true">
             </card-image>
-            <div v-else class="bg2 w100p" style="height:437px">
+            <div v-else class="bg2 w100p" style="height:500px">
             </div>
           </div>
           <div style="flex-basis: 0; flex-grow:5; min-height:400px" class="m5px">            
@@ -55,9 +54,46 @@
             </panelDeckCards>
           </div>
         </div>
-        <div class="flex">
+        
+        <div v-else >
+          <v-alert type="info" class="m5px w100p" style="background: #212A3C !important">
+            Nombre de carte du deck : {{deck.DeckLength}}
+          </v-alert>
+          <v-btn target="_blank" text  class="bg m5px w100p" @click="saveDecklist" >
+            <v-icon>mdi-download</v-icon>
+            Télécharger la decklist
+          </v-btn>  
+          <v-btn target="_blank" text  class="bg m5px w100p" >
+            <v-icon>mdi-content-duplicate</v-icon>
+            Dupliquer ce deck
+          </v-btn>
+          <div class="flex">
+            <div class="bg2" style="flex-basis: 0; flex-grow:1">
+              <card-image v-if="cardHover" 
+                  :card="cardHover"
+                  :badgeoff="true"
+                  :showname="true">
+              </card-image>
+              <div v-else class="bg2" style="height:507px; width:100px">
+              </div>
+            </div>
+            <div style="flex-basis: 0; flex-grow:2">
+              <panelDeckCards :cards="deck.DeckListCards"
+                  :size="$vuetify.breakpoint.width *40 /600"
+                  @hover="showCard">
+              </panelDeckCards>
+            </div>
+          </div>
         </div>
+
+
         <div class="flex-reverse">
+          <router-link :to="'/deck/id=' + deck.Id" >
+            <v-btn target="_blank" text  class="bg m5px" >
+              <v-icon>mdi-arrow-right-thin</v-icon>
+              Ouvrir la page dédiée a ce deck
+            </v-btn>
+          </router-link>
           <v-btn v-if="buttonpage" class="m5px" @click="$emit('unselect')">
             Retour
           </v-btn>

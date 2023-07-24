@@ -1,6 +1,5 @@
 [
 	{
-		"Group": "1",
 		"Id": "fusions",
 		"Title": "Fusions",
 		"CardIdName": "darkpaladin",
@@ -8,7 +7,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/98502113.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "rituels",
 		"Title": "Rituels",
 		"CardIdName": "blacklustersoldier",
@@ -16,7 +14,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/5405694.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "dragons",
 		"Title": "Dragons",
 		"CardIdName": "blueeyeswhitedragon",
@@ -24,7 +21,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "demons",
 		"Title": "Démons",
 		"CardIdName": "darkrulerhades",
@@ -32,7 +28,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/53982768.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "magiciens",
 		"Title": "Magiciens",
 		"CardIdName": "darkmagiciangirl",
@@ -40,7 +35,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/38033121.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "vent",
 		"Title": "Vent",
 		"CardIdName": "harpielady1",
@@ -48,7 +42,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/91932350.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "feu",
 		"Title": "Feu",
 		"CardIdName": "flameswordsman",
@@ -56,7 +49,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/45231177.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "eau",
 		"Title": "Eau",
 		"CardIdName": "thelegendaryfisherman",
@@ -64,7 +56,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/3643300.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "terre",
 		"Title": "Terre",
 		"CardIdName": "guardiansphinx",
@@ -72,7 +63,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/40659562.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "tenebres",
 		"Title": "Ténèbres",
 		"CardIdName": "archfiendsoldier",
@@ -80,7 +70,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/49881766.jpg"
 	},
 	{
-		"Group": "1",
 		"Id": "lumiere",
 		"Title": "Lumière",
 		"CardIdName": "guardianangeljoan",
@@ -88,7 +77,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/68007326.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "lightsworn",
 		"Title": "Seigneurs Lumière",
 		"CardIdName": "rykolightswornhunter",
@@ -96,7 +84,6 @@
 		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/4/4c/RykoLightswornHunter-YS18-EN-C-1E.png"
 	},
 	{
-		"Group": "2",
 		"Id": "hero",
 		"Title": "Héros",
 		"CardIdName": "elementalheroflamewingman",
@@ -104,7 +91,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/35809262.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "tombeau",
 		"Title": "Tombeau",
 		"CardIdName": "gravekeepersrecruiter",
@@ -112,7 +98,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/93023479.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "insecte",
 		"Title": "Insecte",
 		"CardIdName": "insectqueen",
@@ -120,7 +105,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/91512835.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "alien",
 		"Title": "Alien",
 		"CardIdName": "alienwarrior",
@@ -128,7 +112,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/98719226.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "exodia",
 		"Title": "Exodia",
 		"CardIdName": "exodiatheforbiddenone",
@@ -136,7 +119,6 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/33396948.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "dieux",
 		"Title": "Dieux",
 		"CardIdName": "thewingeddragonofra",
@@ -144,11 +126,31 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/10000010.jpg"
 	},
 	{
-		"Group": "2",
 		"Id": "cristalline",
 		"Title": "Cristal ",
 		"CardIdName": "crystalbeastamethystcat",
 		"CardNameEn": "Crystal Beast Amethyst Cat",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/32933942.jpg"
+	},
+	{
+		"Id": "sixsam",
+		"Title": "Six Samourais",
+		"CardIdName": "enishishienschancellor",
+		"CardNameEn": "Enishi Shien's Chancellor",
+		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/2/20/EnishiShiensChancellor-OP06-EN-C-UE.png"
+	},
+	{
+		"Id": "zombie",
+		"Title": "Zombie",
+		"CardIdName": "vampirelord",
+		"CardNameEn": "vampire lord",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/53839837.jpg"
+	},
+	{
+		"Id": "warrior",
+		"Title": "Guerriers",
+		"CardIdName": "ddwarriorlady",
+		"CardNameEn": "D.D. Warrior Lady",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/7572887.jpg"
 	}
 ]

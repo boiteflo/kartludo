@@ -6,13 +6,102 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 
 class managerDeck {
 
+    static async readDecks(){
+        return await helperJsonFile.readPath('./decks.json');
+    }
+
+    static async saveDecks(decks){
+        helperJsonFile.save('decks', decks);
+    }
+
+    static async getAll(res){        
+        res.send(await this.readDecks());
+    }
+
+    static async get(id, res){        
+        let data = await this.readDecks();
+        res.send(data.find(x=> x.Id === id));    
+    }
+
+    static async insert(deck, res){        
+        let cards = await helperJsonFile.read('cards');
+        let cardsIdName = cards.map(x=> x.IdName);
+      
+        let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
+        let errorMessage = missingCards.length < 1 ? '' : `Les cartes suivantes n'ont pas été trouvées :` + missingCards.join(",");
+      
+        let deckList = deck.DeckListCards
+            .filter(x=> cardsIdName.includes(x.Card.IdName))
+            .map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))
+            .join(', ');
+
+        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard)?.Image;
+        
+        deck = {
+            Id: "".guid(),
+            Format: '',
+			Rank: deck.Rank ? deck.Rank.Id : 3,
+			Title: deck.Title,
+            IsDraft: true,
+			Date: new Date().toLocaleDateString("fr"),
+			Author: deck.Author,
+			MainCard: deck.MainCard,
+			MainCardImage: mainCardImage,
+			Themes: deck.ThemesId ? deck.ThemesId.join(',') : 'autre',
+			DeckList: deckList,
+			DeckLength: deck.DeckLength,
+			Errors: deck.Errors
+        };
+
+        const helperGoogleApi = require("../helper/helperGoogleApi");
+        const { sheets } = await helperGoogleApi.authSheets();
+        let requestsPages = ['Decks3!B2:I'];  
+        const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
+
+        const sheetLine = sheetData.Decks3 ? sheetData.Decks3.length+2 : 2;
+        let updateSheet = [];
+        
+        updateSheet.push({range: 'Decks3!A' + sheetLine, value:errorMessage});
+        updateSheet.push({range: 'Decks3!B' + sheetLine, value:deck.Id});
+        updateSheet.push({range: 'Decks3!C' + sheetLine, value:deck.Format});
+        updateSheet.push({range: 'Decks3!D' + sheetLine, value:deck.Rank});
+        updateSheet.push({range: 'Decks3!E' + sheetLine, value:deck.Title});
+        updateSheet.push({range: 'Decks3!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
+        updateSheet.push({range: 'Decks3!G' + sheetLine, value:deck.Date});
+        updateSheet.push({range: 'Decks3!H' + sheetLine, value:deck.Author});
+        updateSheet.push({range: 'Decks3!I' + sheetLine, value:deck.MainCard});
+        updateSheet.push({range: 'Decks3!J' + sheetLine, value:deck.Themes});
+        updateSheet.push({range: 'Decks3!K' + sheetLine, value:deck.DeckList});
+        updateSheet.push({range: 'Decks3!L' + sheetLine, value:deck.Errors});
+        
+        helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
+
+        let decks = await this.readDecks();
+        decks.push(deck);
+        this.saveDecks(decks);
+      
+        res.status(201).send(deck.Id);
+    }
+
+    static getSheetRanges(){return ["Decks3!B2:L"];}
+    
+    static refresh= (sheetData, cards, sheets, spreedSheetId) => {
+        let errors=[];
+        let updateSheet = [];
+        let decks = this.rebuildDecks(sheetData.Decks3, errors, 'Decks3', cards, updateSheet);
+        
+        this.saveDecks(decks);
+        helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
+        return errors;
+    }
+
     static rebuildDecks(deckData, errors, page, cards, updateSheet){
         if(!deckData)
             return [];
 
         let decks = deckData.map(x=> {
             return {
-            "Id": x[0], "Rank": x[1], "Title": x[2], "Date": x[3], "Author": x[4], "MainCards": x[5], "Themes": x[6], "DeckList": x[7] 
+            "Id": x[0], "Format":x[1], "Rank": x[2], "Title": x[3], "IsDraft": x[4], "Date": x[5], "Author": x[6], "MainCard": x[7], "Themes": x[8], "DeckList": x[9] 
             };
         });
 
@@ -22,20 +111,17 @@ class managerDeck {
             let errorsCards = [];
             let sheetLine = deckIndex+2;
             deck.Rank = deck.Rank ?? 3;
+            deck.IsDraft = deck.IsDraft === "1";
 
             if(!deck.Id || deck.Id.length < 8){
                 deck.Id = "".guid();
                 updateSheet.push({range: page + '!B' + sheetLine, value:deck.Id});
             }
 
-            // MainCardsIds
-            deck.MainCardsIds = deck.MainCards.split(',').map(x=> x.cleanup());
-            let mainCardsImages = cards.filter(x=> deck.MainCardsIds.includes(x.IdName));
-            deck.MainCardsImages=mainCardsImages.map(x=> x.Image);
-            if(deck.MainCardsImages.length < deck.MainCards.length)
-                errorsCards=deck.MainCards
-                    .split(',')
-                    .filter(x=> !mainCardsImages.find(y=> y.IdName===x.cleanup()));
+            // MainCard
+            deck.MainCardImage = cards.find(x=> x.IdName == deck.MainCard.cleanup())?.Image;
+            if(!deck.MainCardImage)
+                errorsCards.push(deck.MainCard);
 
             // DeckList
             let deckList = deck.DeckList.split(',');
@@ -53,13 +139,12 @@ class managerDeck {
             }
             
             deck.Errors = this.getErrors(deck, deckCards);
+            updateSheet.push({range: page + '!L' + sheetLine, value:deck.Errors ?? ''});
                 
             let errorMessage = '';
-            if(errorsCards.length > 0 || deck.Errors){
+            if(errorsCards.length > 0){
                 if(errorsCards.length > 0)
                     errorMessage = cardsNotFound + errorsCards.join(', ');
-                if(deck.Errors)
-                    errorMessage += ' ' + deck.Errors;
                 errors.push({Index: deckIndex, From:page, Errors: deck.Title + ' ' + errorMessage });
             }
             
@@ -68,49 +153,31 @@ class managerDeck {
 
         return decks;
     }
-    
-    static refresh= (sheetData, cards, sheets, spreedSheetId) => {
-        let errors=[];
-        let updateSheet = [];
-        let decks = this.rebuildDecks(sheetData.Decks, errors, 'Decks', cards, updateSheet);
-        let decksCommunity = this.rebuildDecks(sheetData.Decks2, errors, 'Decks2', cards, updateSheet);
-        
-        helperJsonFile.save('decks', {Decks: decks, DecksCommunity: decksCommunity});
-        helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
-        return errors;
-    }
-
-    static async getAll(res){        
-        helperJsonFile.readPath('./decks.json').then(data => res.send(data));
-    }
-
-    static async get(id, res){        
-        let data = await helperJsonFile.readPath('./decks.json');
-        let deck= data.Decks.find(x=> x.Id === id);
-        if(!deck)
-            deck= data.DecksCommunity.find(x=> x.Id === id);
-        res.send(deck);    
-    }
 
     static getErrors(deck, deckCards){
         let errors = [];
         let forbiddenCards = deckCards.filter(x=> x.Card.Limit === '0');
         if(forbiddenCards.length > 0)
-            errors.push('carte interdites : ' + forbiddenCards.map(x=> x.Card.NameEn).join(', '));
+            errors.push('Il y a des carte interdites : ' + forbiddenCards.map(x=> x.Card.NameEn).join(', '));
         
         forbiddenCards = deckCards.filter(x=> x.Card.Limit == '1' && x.Quantity === '2');
         if(forbiddenCards.length > 0)
-            errors.push('carte limitées : ' + forbiddenCards.map(x=> x.Card.NameEn).join(', '));
+            errors.push('Il y a des carte limitées en doublon : ' + forbiddenCards.map(x=> x.Card.NameEn).join(', '));
 
         deck.DeckLength = 0;
         let jokerLength = 0;
         let x2Length = 0;
-        deckCards.forEach(deckObj => {
-            let quantity = deckObj.Quantity === '2' ? 2 : 1;
-            if(deckObj.Quantity === '2')
+        let errorJokerQuantityx2 = [];
+        deckCards.forEach(cardObj => {
+            let quantity = cardObj.Quantity === '2' ? 2 : 1;
+            
+            if(cardObj.Quantity === '2')
                 x2Length++;
-            if(deckObj.Card.Limit == 'K')
+            if(cardObj.Card.Limit == 'K')
                 jokerLength += quantity;
+            if(cardObj.Card.Limit == 'K' && cardObj.Quantity === '2')
+                errorJokerQuantityx2.push(cardObj.Card.NameEn);
+            
             deck.DeckLength+= quantity;
         });
 
@@ -119,6 +186,9 @@ class managerDeck {
 
         if(x2Length > 3)
             errors.push('Il y a trop de doublons : ' + x2Length);
+
+        if(errorJokerQuantityx2.length > 0)
+            errors.push('Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :' + errorJokerQuantityx2.join(', '));
         
         let limitFriends = helperArray.removeDuplicates(deckCards.filter(x=> x.Card.LimitFriends).map(x=> x.Card.LimitFriends));
         limitFriends.forEach(group => {
@@ -131,41 +201,7 @@ class managerDeck {
         if(deck.DeckLength < 40)
             errors.push('Pas asser de cartes : ' + deck.DeckLength);
 
-        return errors.length < 1 ? null : errors.join(', ');
-    }
-
-    static async insert(deck, res){        
-        let cards = await helperJsonFile.read('cards');
-        let cardsIdName = cards.map(x=> x.IdName);
-      
-        let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
-        let errorMessage = missingCards.length < 1 ? '' : `Les cartes suivantes n'ont pas été trouvées :` + missingCards.join(",");
-      
-        let deckList = [deck.DeckListCards.filter(x=> cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))];
-        let mainCards = deck.MainCards.slice(0,3).map(x=> x.NameEn.onlyAlphaNumericAndSpace()).join(', ');
-        
-        deck.Rank = deck.Rank.Id;
-
-        const helperGoogleApi = require("../helper/helperGoogleApi");
-        const { sheets } = await helperGoogleApi.authSheets();
-        let requestsPages = ['Decks2!B2:I'];  
-        const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
-
-        const sheetLine = sheetData.Decks2 ? sheetData.Decks2.length+2 : 2;
-        let updateSheet = [];
-        updateSheet.push({range: 'Decks2!A' + sheetLine, value:errorMessage});
-        updateSheet.push({range: 'Decks2!B' + sheetLine, value:"".guid()});
-        updateSheet.push({range: 'Decks2!C' + sheetLine, value:deck.Rank});
-        updateSheet.push({range: 'Decks2!D' + sheetLine, value:deck.Title});
-        updateSheet.push({range: 'Decks2!E' + sheetLine, value:new Date().toLocaleDateString("fr")});
-        updateSheet.push({range: 'Decks2!F' + sheetLine, value:deck.Author});
-        updateSheet.push({range: 'Decks2!G' + sheetLine, value:mainCards});
-        updateSheet.push({range: 'Decks2!H' + sheetLine, value:deck.ThemesId.join(',')});
-        updateSheet.push({range: 'Decks2!I' + sheetLine, value:deckList.join(', ')});
-        
-        helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
-      
-        res.status(201).send();
+        return errors.length < 1 ? null : errors.join('. ');
     }
 }
  

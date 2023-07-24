@@ -228,6 +228,10 @@
     background-color: rgba(0,0,0,.05)
 }
 
+.bgWhite {
+    background-color: white !important;
+}
+
 .bg {
     background-color: #212A3C !important;
     color:white !important

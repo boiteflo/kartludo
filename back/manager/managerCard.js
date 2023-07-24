@@ -5,6 +5,8 @@ const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
 class managerCard {
     
+    static getSheetRanges(){return ['Bonus!B2:D','Limit0!B2:B', 'Limit1!B2:C', 'Joker!B2:B'];}
+
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
         let updateSheet = [];

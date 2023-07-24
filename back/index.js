@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helperRouteJsonGet = require("./helper/helperRouteJsonGet");
 
+String.prototype.stringify = function(obj) {
+    return JSON.stringify(obj, null, "\t");
+}
 String.prototype.replaceMany = function(searchTxt, replaceTxt) {
     const regex = new RegExp(searchTxt, 'g');
     return this.replace(regex, replaceTxt) ;

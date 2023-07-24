@@ -9,9 +9,12 @@
 
           <!-- Deck sélectionné -->
           <v-dialog v-model="showDeck">
-            <panel-deck v-if="deckSelected" :deck="deckSelected" :buttonpage="true"
-              v-on:unselect="unselect">
-            </panel-deck>
+            <div v-if="deckSelected">
+              <panel-deck v-if="!isDraft" :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect">
+              </panel-deck>
+              <panel-create-deck v-else :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" :themes="themes" :staples="staples" :ranks="ranks">
+              </panel-create-deck>
+            </div>
           </v-dialog>
 
           <!-- Theme sélectionné -->
@@ -23,23 +26,9 @@
             <h1>Thème : {{themeSelected.Title}}</h1>
             <h1 style="padding-top:5px;">Les Decks </h1>
             <div class="flex-wrap flex-center bg2">
-              <div v-for="deck in themeSelected.Decks" v-bind:key="deck.Id" style="position:relative">
-                <iconDeck  :deck="deck" 
-                  v-on:select="selectDeck(deck)">
+              <div v-for="deck in currentThemeDecks" v-bind:key="deck.Id" style="position:relative">
+                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
                 </iconDeck>
-                <div v-if="deck.Errors && deck.Errors.length > 0" class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
-                    <v-icon color="red">mdi-alert</v-icon>
-                    <div class="tooltipcard">Non valide</div>
-                </div>
-              </div>
-              <div v-for="deck in themeSelected.DecksCommunity" v-bind:key="deck.Id" style="position:relative">
-                <iconDeck  :deck="deck" text="DRAFT"
-                  v-on:select="selectDeck(deck)">
-                </iconDeck>
-                <div v-if="deck.Errors && deck.Errors.length > 0" class="s25 tooltip" style="color:red; text-align:center; font-style:bold; border-radius:15px; position:absolute; top:5px; right:5px">
-                    <v-icon color="red">mdi-alert</v-icon>
-                    <div class="tooltipcard">Non Valide</div>
-                </div>
               </div>
             </div>
           </div>
@@ -99,21 +88,28 @@ import ServiceBack from '../services/serviceBack'
 import { store } from '../data/store.js'
 import hierarchy from '../components/hierarchy';
 import panelDeck from '../components/panelDeck';
+import panelCreateDeck from '../components/panelCreateDeck';
 import iconTheme from '../components/iconTheme';
 import iconDeck from '../components/iconDeck';
 
 export default {
   name: 'pageDecks',
-  components: {iconTheme, iconDeck, panelDeck, hierarchy},
+  components: {iconTheme, iconDeck, panelDeck, panelCreateDeck, hierarchy},
   data: () => ({
     loading:true,
     store: store,
+    ranks: null,
+    staples : null,
+    themes: null,
+    decksObject: null,
+    decks: null,
+    rankDecks: [],
+    themeDecks: [],
+    currentThemeDecks : null,
+
     hierarchyArray: [{Id:0, Text:'Classement'}],
     refreshRanks: 0,
     refreshThemes: 0,
-    ranks: null,
-    decksObject: null,
-    themes: null,
     rankSelected: null,
     themeSelected: null,
     deckSelected: null,
@@ -127,8 +123,13 @@ export default {
     }
   }),
   mounted(){
-    ServiceBack.get('data', 'ranks').then(res => {
-      this.ranks = JSON.parse(res.Value);
+    ServiceBack.getAll('data').then(res => {
+      this.staples = {
+          stapleMonster: res.find(x=> x.Id === 'stapleMonster'),
+          stapleSpell: res.find(x=> x.Id === 'stapleSpell'),
+          stapleTrap: res.find(x=> x.Id === 'stapleTrap')
+      };
+      this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
       this.linkThemeWithDecks();
     }); 
     ServiceBack.getAll('themes').then(res => {
@@ -137,18 +138,13 @@ export default {
       this.linkThemeWithDecks();
     });   
     ServiceBack.getAll('decks').then(res => {
-      this.decksObject = res;
+      this.decks = res;
       this.linkThemeWithDecks();
     });   
   },
   methods: {
-    selectHierarchy(item){
-      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
-      if(item.Id === 0) this.selectRank(null);
-      if(item.Id === 1) this.showTheme(null);
-    },
     linkThemeWithDecks(){
-      if(!this.themes || !this.decksObject || !this.ranks)
+      if(!this.themes || !this.decks || !this.ranks)
         return;
 
       this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);
@@ -157,24 +153,35 @@ export default {
 
       this.ranks.forEach(rank => {
         rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).Image;
-        rank.Decks = this.decksObject.Decks.filter(x=> rank.Id==0 || x.Rank === rank.Id);
-        rank.DecksCommunity = this.decksObject.DecksCommunity.filter(x=> rank.Id==0 || x.Rank === rank.Id);
-        rank.DecksLength = rank.Decks.length + rank.DecksCommunity.length;
+        let decks = this.decks.filter(x=> rank.Id==0 || x.Rank === rank.Id);
+        rank.DecksLength =decks.length;
+        this.rankDecks.push({Id: rank.Id, Value:decks});
       });
-      this.refreshRanks++;
-      
+
+      this.refreshRanks++;      
+    },
+    selectHierarchy(item){
+      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
+      if(item.Id === 0) this.selectRank(null);
+      if(item.Id === 1) this.showTheme(null);
     },
     selectRank(rank){
       this.rankSelected = rank;   
       this.themeSelected = null;
       this.deckSelected = null; 
-      if(rank) this.hierarchyArray.push({Id:1, Text:rank.Title});
-      else this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=1);
+      if(!rank) {
+        this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=1);
+        return;
+      }
+
+      this.hierarchyArray.push({Id:1, Text:rank.Title});
+      this.themeDecks = [];
+      let rankDecks = this.rankDecks.find(x=> x.Id === rank.Id).Value;
       
       this.themes.forEach(theme => {
-        theme.Decks = this.rankSelected.Decks.filter(x=> theme.Id==='tous' || x.Themes.split(',').includes(theme.Id));
-        theme.DecksCommunity = this.rankSelected.DecksCommunity.filter(x=> theme.Id==='tous' ||x.Themes.split(',').includes(theme.Id));
-        theme.DecksLength = theme.Decks.length + theme.DecksCommunity.length;
+        let decks = rankDecks.filter(x=> theme.Id==='tous' || x.Themes.split(',').includes(theme.Id));
+        theme.DecksLength = decks.length;
+        this.themeDecks.push({Id: theme.Id, Value: decks});
       });
       this.refreshThemes++;
 
@@ -182,8 +189,13 @@ export default {
     },
     showTheme(theme){
       this.themeSelected = theme;
-      if(theme) this.hierarchyArray.push({Id:2, Text:theme.Title});
-      else this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=2);
+      if(!theme) {
+        this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=2);
+        return;
+      }
+
+      this.hierarchyArray.push({Id:2, Text:theme.Title});
+      this.currentThemeDecks = this.themeDecks.find(x=> x.Id === theme.Id).Value;
       window.scrollTo(0, 0);
     },
     selectDeck(deck){
