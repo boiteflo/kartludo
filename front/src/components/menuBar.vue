@@ -21,37 +21,24 @@
                     hide-details
                     v-model="searchString"
                     label="Chercher une carte (FR ou EN)"
-                    @input="$emit('search', $event)"
-                    @blur="unselect">
+                    @input="$emit('search', $event)">
       </v-text-field>
+      <v-combobox v-model="format" 
+        label="Format" 
+        :items="formats" 
+        item-text="Title"
+        hide-details
+        style="margin: 0px 5px 0px 5px; width:100px;">
+      </v-combobox>
 
       <router-link to="/decks">
         <v-btn
           target="_blank"
           text
+          @click="unselect"
         >
           <v-icon>mdi-cards-outline</v-icon>
           <span class="mr-2">Decks</span>
-        </v-btn>
-      </router-link>
-
-      <router-link to="/duel">
-        <v-btn
-          target="_blank"
-          text
-        >
-          <v-icon>mdi-fencing</v-icon>
-          <span class="mr-2">Duel</span>
-        </v-btn>
-      </router-link>
-
-      <router-link to="/Boosters">
-        <v-btn
-          target="_blank"
-          text
-        >
-          <v-icon>mdi-library-shelves</v-icon>
-          <span class="mr-2">Boosters</span>
         </v-btn>
       </router-link>
       
@@ -70,8 +57,7 @@
                   hide-details
                   v-model="searchString"
                   label="Chercher une carte (FR ou EN)"
-                  @input="$emit('search', $event)"
-                  @blur="unselect">
+                  @input="$emit('search', $event)">
     </v-text-field>
   </div>
 </template>
@@ -81,11 +67,13 @@
     name: 'menuBar',
     data: () => ({
         searchString: '',
+        format: 'Test',
+        formats: ['Alpha V1', 'Test']
     }),
     methods:{
       unselect(){
-        //this.searchString = '';
-        //this.$emit('search', '');
+        this.searchString = '';
+        this.$emit('search', '');
       }
     }
   }
