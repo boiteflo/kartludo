@@ -99,6 +99,10 @@ class helperArray {
 
         return result;
     }
+
+    static getMatch(array1, array2){
+        return array1.filter(x=> array2.includes(x));
+    }
   }
  
   module.exports = helperArray;

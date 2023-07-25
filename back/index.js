@@ -52,15 +52,15 @@ String.prototype.guid = function() {
     });
 }
 
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use('/api/data', helperRouteJsonGet.createDalRoute('data', 'Id'))
+app.use('/api/themes', helperRouteJsonGet.createDalRoute('themes', 'Id'))
+app.use('/api/formats', helperRouteJsonGet.createDalRoute('formats', 'Id'))
 app.use('/api/cards', helperRouteJsonGet.createDalRoute('cards', 'IdName'))
 app.use('/api/extensions', helperRouteJsonGet.createDalRoute('extensions', 'set_code'))
-app.use('/api/themes', helperRouteJsonGet.createDalRoute('themes', 'set_code'))
-app.use('/api/data', helperRouteJsonGet.createDalRoute('data', 'Id'))
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)

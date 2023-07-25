@@ -1,3 +1,4 @@
+const managerFormat = require("./managerFormat");
 const managerCard = require("./managerCard");
 const managerDeck = require("./managerDeck");
 const managerTheme = require("./managerTheme");
@@ -12,14 +13,22 @@ class managerMain {
     let errors = [];
     
     const { sheets } = await helperGoogleApi.authSheets();
-    let requestsPages = managerCard.getSheetRanges().concat(managerDeck.getSheetRanges()).concat(managerTheme.getSheetRanges()).concat(['Data!B2:D']);   
+    let requestsPages = ['Data!B2:D']
+      .concat(managerFormat.getSheetRanges())
+      .concat(managerDeck.getSheetRanges())
+      .concat(managerCard.getSheetRanges())
+      .concat(managerTheme.getSheetRanges());   
     const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
     
     let cardsResult = await managerCard.refresh(sheetData, sheets, spreedSheetId);
     let cards = cardsResult.cards;
     errors = errors.concat(cardsResult.errors);
   
-    let deckErrrors =managerDeck.refresh(sheetData, cards, sheets, spreedSheetId);
+    let formatResult =managerFormat.refresh(sheetData, cards, sheets, spreedSheetId);
+    let formats = formatResult.formats;
+    errors = errors.concat(formatResult.errors);
+  
+    let deckErrrors =managerDeck.refresh(sheetData, cards, formats, sheets, spreedSheetId);
     errors = errors.concat(deckErrrors);
   
     let themeErrrors = managerTheme.refresh(sheetData, cards, sheets, spreedSheetId);

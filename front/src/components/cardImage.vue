@@ -1,6 +1,6 @@
 <template>
     <div class="tooltip" 
-        style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis;" 
+        style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis; cursor:pointer" 
         @click="$emit('select', card)"
         @mouseover="$emit('hover', card)">
         <div v-if="showname" style="font-size: 16px; cursor:pointer; color:white; text-align:center" class="bg2">

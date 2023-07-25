@@ -12,7 +12,7 @@
 		"DeckList": "Dark Blade,D.D. Warrior, Maha Vailo, Big Shield Gardna, UFO Turtle, Shining Angel, Command Knight x2, Goblin Attack Force, Obnoxious Celtic Guard, Zombyra the Dark, Exiled Force, Blade Knight, D.D. Warrior Lady, D.D. Assailant, D.D. Survivor, Warrior Lady of the wasteland x2, Dark Dust Spirit, Dark Hole, Swords of Revealing Light, Monster Reborn, Pot of Greed, Smashing Ground, Pot of Avarice, Hidden Armory x2, Horn of the Unicorn, Malevolent Nuzzler, Megamorph, Mage Power, Ekibyo Drakmord, Megamorph, Card Trader, Mystical Space Typhoon, Order to Charge, Twin Twisters, Waboku, Raigeki Break, Sakuretsu Armor",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/10375182.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Ekibyo Drakmord. Il y a des carte limitées en doublon : Hidden Armory"
+		"Errors": null
 	},
 	{
 		"Id": "919ee4fa-5eb5-4bd4-9134-b38b918a0aae",
@@ -42,7 +42,7 @@
 		"DeckList": "Insect Knight, Lonefire Blossom x2, Witch of the Black Forest, UFO Turtle, Lord Poison, D.D. Assailant, Doomcaliber Knight, Elemental HERO Ocean, Elemental HERO Stratos, Elemental HERO Neos Alius, Blazewing Butterfly, Dark Valkyria, Heavy Knight of the Flame, Gigaplant x2, Swords of Revealing Light, Fissure, Monster Reborn, Pot of Greed, Heavy Storm, Reinforcement of the Army, Smashing Ground, Gold Sarcophagus, Miracle Fusion x2, E – Emergency Call, Galaxy Cyclone, Messenger of Peace, Future Fusion, Burden of the Mighty, Mystical Space Typhoon, Book of Moon, Enemy Controller, Mirror Force, Bottomless Trap Hole, Sakuretsu Armor, Dimensional Prison, Jar of Greed, Legacy of Yata-Garasu, Superalloy Beast Raptinus, Elemental HERO Nova Master",
 		"MainCardImage": "https://static.wikia.nocookie.net/yugioh/images/b/ba/Gigaplant-DUOV-EN-UR-1E.png",
 		"DeckLength": 42,
-		"Errors": "Il y a des carte interdites : Lonefire Blossom, Messenger of Peace, Burden of the Mighty. Il y a trop de jokers : 9. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Gigaplant, Miracle Fusion. Ce groupe de limitation n est pas respecté : smashingground,fissure. Ce groupe de limitation n est pas respecté : sakuretsuarmor,dimensionalprison"
+		"Errors": null
 	},
 	{
 		"Id": "ebdeebc3-faa6-46e7-a25e-fffa0704b9e1",
@@ -72,7 +72,7 @@
 		"DeckList": "archfiend soldier, summoned skull, sangan, morphing jar 2, witch of the black forest, wall of illusion, mystic tomato x2, newdoria, doomcaliber knight, necroface, doomsday horror, mefist the infernal general x2, the fiend megacyber, dark ruler ha des, dark dust spirit, legendary fiend, puppet master, dark necrofear, exodius the ultimate forbidden lord, dark hole, swords of revealing light, monster reborn, pot of greed, the shallow grave, soul exchange, fiend s sanctuary x2, pot of avarice, yami, mystic plasma zone, mystical space typhoon, twin twisters, waboku, dark spirit of the silent, raigeki break, soul rope, a hero emerges, metal reflect slime ",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/46820049.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a trop de jokers : 5"
+		"Errors": null
 	},
 	{
 		"Id": "4a4f3ad0-ace2-4a3a-9184-73dd5db3b582",
@@ -87,7 +87,7 @@
 		"DeckList": "luster dragon, insect knight, sabersaurus, gladiator beast andal, sangan, witch of the black forest, senju of the thousand hands x2, sonic bird, mystic tomato, goblin attack force, newdoria, dark jeroid, manju of the ten thousand hands x2, doomcaliber knight, relinquished, the masked beast, demise king of armageddon, dark hole, swords of revealing light, monster reborn, pot of greed, nightmare's steelcage, galaxy cyclone, mystic plasma zone, black illusion ritual, contract with the abyss, advanced ritual art, mystical space typhoon, book of moon, enemy controller, waboku, jar of greed, sakuretsu armor, curse of anubis, negate attack, seven tools of the bandit, judgment of anubis",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/49064413.jpg",
 		"DeckLength": 39,
-		"Errors": "Il y a des carte interdites : Demise, King of Armageddon. Il y a trop de jokers : 7. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Manju of the Ten Thousand Hands. Pas asser de cartes : 39"
+		"Errors": "Pas asser de cartes : 39"
 	},
 	{
 		"Id": "ccde670d-2f47-4496-898c-2e2c85cb0aeb",
@@ -102,7 +102,7 @@
 		"DeckList": "great angus,mad dog of darkness,genewarped warwolf,gladiator beast andal,big koala,sea koala,ryko lightsworn hunter,des koala,gyakugire panda,giant rat,bazoo the souleater,des kangaroo x2,berserk gorilla,enraged battle ox,the trojan horse,vampiric koala,manticore of darkness,behemoth the king of all animals,green baboon defender of the forest,dark hole,swords of revealing light,monster reborn,pot of greed,wild natures release,smashing ground,hammer shot,the big cattle drive,gaia power,future fusion,spiritual forest,mystical space typhoon,book of moon,my body as a shield,twin twisters,michizure,bottomless trap hole,sakuretsu armor,dimensional prison,horn of the phantom beast x2,super rush recklessly,howl of the wild,master of oz",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/27134689.jpg",
 		"DeckLength": 44,
-		"Errors": "Il y a des carte interdites : Gene-Warped Warwolf, Berserk Gorilla, Manticore of Darkness. Il y a trop de jokers : 5. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Horn of the Phantom Beast. Ce groupe de limitation n est pas respecté : sakuretsuarmor,dimensionalprison"
+		"Errors": null
 	},
 	{
 		"Id": "d3452dd5-ab8a-4a3d-bb58-aa5784beb8e2",
@@ -117,7 +117,7 @@
 		"DeckList": "luster dragon,meteor dragon,redeyes black dragon,blueeyes white dragon,trihorned dragon,decoy dragon x2,totem dragon x2,twinheaded behemoth,armed dragon lv3,masked dragon x2,exploder dragon,spear dragon,mirage dragon,blizzard dragon,vanguard of the dragon,armed dragon lv5,armed dragon lv7,felgrand dragon,phantom dragon,swords of revealing light,fissure,monster reborn,pot of greed,a wingbeat of giant dragon,gold sarcophagus,dragons mirror,tradein,galaxy cyclone,future fusion,burden of the mighty,twin twisters,mirror force,windstorm of etaqua,sakuretsu armor,dimensional prison,dragons rebirth,call of the haunted,meteor black dragon,fiveheaded dragon",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/99267150.jpg",
 		"DeckLength": 42,
-		"Errors": "Il y a des carte interdites : Burden of the Mighty. Il y a trop de jokers : 5. Ce groupe de limitation n est pas respecté : sakuretsuarmor,dimensionalprison"
+		"Errors": null
 	},
 	{
 		"Id": "5a46debf-115c-40a0-9446-d053bd0487c4",
@@ -132,7 +132,7 @@
 		"DeckList": "treeborn frog,cyber valley,vortex trooper x2,witch of the black forest,mystic tomato,destiny hero  diamond dude x2,elemental hero ocean,destiny hero  fear monger,elemental hero stratos,elemental hero neos alius,fieldcommander rahz,jinzo,dark dust spirit,destiny hero  dasher,destiny hero  malicious x2,destiny hero  plasma,swords of revealing light,monster reborn,pot of greed,heavy storm,soul exchange,nightmares steelcage,creature swap,lightning vortex,reinforcement of the army,the warrior returning alive,soul taker,fissure,e  emergency call,destiny draw,scapegoat,mystical space typhoon,bottomless trap hole,sakuretsu armor,hero signal,destiny signal,dimensional prison",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/13093792.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a trop de jokers : 4. Ce groupe de limitation n est pas respecté : sakuretsuarmor,dimensionalprison"
+		"Errors": null
 	},
 	{
 		"Id": "93b055fe-87a3-48da-b099-0243b7346f29",
@@ -162,7 +162,7 @@
 		"DeckList": "dark magician,cosmo queen,Gemini Elf, magician of faith,copycat,apprentice magician,old vindictive magician,jowgen the spiritualist,legion the fiend jester,shining angel x2,mystic tomato,skilled dark magician,silent magician lv4,silent magician lv8,mythical beast cerberus,gemini elf,dark magician girl,chaos command magician,chaos sorcerer,dark red enchanter,dark magician of chaos,exodius the ultimate forbidden lord,dark hole,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,level up,card trader,mystical space typhoon,magical dimension x2,twin twisters,waboku,interdimensional matter transporter,sakuretsu armor,magicians circle x2",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/40737112.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Level Up!. Il y a trop de jokers : 5. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Magical Dimension"
+		"Errors": null
 	},
 	{
 		"Id": "a22aea4f-90b9-473e-be83-0cfb83294db3",
@@ -177,7 +177,7 @@
 		"DeckList": "dark magician,cosmo queen,magician of faith,copycat,apprentice magician,old vindictive magician,blade rabbit,dream clown x2,morphing jar 2,crass clown,legion the fiend jester,giant rat x2,mystic tomato,breaker the magical warrior,malice doll of demise,golem sentry,warrior lady of the wasteland,exodius the ultimate forbidden lord,dark hole,swords of revealing light,monster reborn,pot of greed,pot of avarice,the shallow grave,soul exchange,smashing ground,ectoplasmer,stumbling x2,card trader,mystical space typhoon,magical dimension,twin twisters,waboku,sakuretsu armor,zero gravity,no entry,curse of anubis,labyrinth of nightmare",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/13215230.jpg",
 		"DeckLength": 41,
-		"Errors": "Il y a trop de jokers : 4"
+		"Errors": null
 	},
 	{
 		"Id": "add9767e-fa52-44b3-ba7e-59352fafce8f",
@@ -192,7 +192,7 @@
 		"DeckList": "skull servant,magician of faith,copycat,king of the skull servants x2,morphing jar 2,apprentice magician,old vindictive magician,sangan,spirit reaper,the lady in wight x2,mystic tomato,pyramid turtle,goblin zombie,necroface,armageddon knight,doomsday horror,the fiend megacyber,dark dust spirit,legendary fiend,swords of revealing light,pot of greed,pot of avarice,lightning vortex,book of life x2,Book of Moon,back to square one,monster reincarnation,opticamouflage armor,card trader,scapegoat,mystical space typhoon,hand destruction,twin twisters,waboku,raigeki break,compulsory evacuation device,Dimensional Prison",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/32274490.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte limitées en doublon : Book of Life. Il y a trop de jokers : 4"
+		"Errors": null
 	},
 	{
 		"Id": "35250798-179b-4ae5-98c9-51ee0f3ba682",
@@ -207,7 +207,7 @@
 		"DeckList": "summoned skull,dark magician,redeyes black dragon,big koala,decoy dragon,versago the destroyer,morphing jar 2,spirit reaper,king of the swamp x2,goddess with the third eye,beastking of the swamps,witch of the black forest,legion the fiend jester,ufo turtle,mother grizzly x2,mystic tomato,des kangaroo,necroface,dark hole,polymerization x2,monster reborn,pot of greed,pot of avarice,fusion sage,smashing ground,monster reincarnation,fusion recovery,future fusion,dragons mirror,ancient rules,summoners art,card trader,mystical space typhoon,twin twisters,waboku,raigeki break,interdimensional matter transporter,sakuretsu armor,metal reflect slime,reaper on the nightmare,meteor black dragon ,dark paladin,black skull dragon,master of oz ,fiveheaded dragon",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/90660762.jpg",
 		"DeckLength": 48,
-		"Errors": "Il y a trop de jokers : 4"
+		"Errors": null
 	},
 	{
 		"Id": "67c9477c-6e0e-4bea-8b26-4d05957e0180",
@@ -282,7 +282,7 @@
 		"DeckList": "ancient gear gadjiltron dragon x2,ancient gear golem,ancient gear beast,ancient gear engineer,ancient gear knight,ancient gear soldier,green gadget,red gadget,yellow gadget,ancient gear gadget x2,giant rat,nanobreaker,truckroid,machine king prototype,reflect bounder,cyber valley,cipher soldier,bootup soldier  dread dynamo,monster reborn,pot of greed,heavy storm,creature swap,machine duplication,terraforming,pot of avarice,iron draw,geartown x2,ancient gear castle,future fusion,burden of the mighty,rush recklessly,limiter removal,shrink,book of moon,enemy controller,double cyclone,mirror force",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/50933533.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Burden of the Mighty. Il y a des carte limitées en doublon : Geartown"
+		"Errors": null
 	},
 	{
 		"Id": "ae848c31-b561-47b2-a206-bc6ad5e86761",
@@ -297,7 +297,7 @@
 		"DeckList": "gravekeepers spy x2,gravekeepers assailant,gravekeepers spear soldier,gravekeepers shaman,gravekeepers guard,gravekeepers chief,gravekeepers ambusher,gravekeepers priestess,gravekeepers recruiter,gravekeepers cannonholder,sangan,a cat of ill omen,mystic tomato,tsukuyomi,gravekeepers commandant,necrovalley x2,royal tribute x2,gravekeepers stele,dd designator,pot of greed,upstart goblin,terraforming,wonder wand,field barrier,book of moon,enemy controller,twister,deck devastation virus,bottomless trap hole,trap hole,dust tornado,mirror force,mind crush,judgment of anubis,dark bribe,rite of spirit,burden of the mighty",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/47355498.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Royal Tribute, Deck Devastation Virus, Burden of the Mighty. Il y a des carte limitées en doublon : Necrovalley. Il y a trop de jokers : 6"
+		"Errors": null
 	},
 	{
 		"Id": "c3cbd23b-4222-4dc0-842f-5cb8bc524dd6",
@@ -312,7 +312,7 @@
 		"DeckList": "doom dozer x2,metal armored bug,insect queen,maneater bug,pinch hopper x2,leghul,parasite paracide,4starred ladybug of doom,skullmark ladybug,magical merchant,swarm of scarabs,swarm of locusts,saber beetle,noblemaneater bug,howling insect x2,insect knight,dark hole,swords of revealing light,monster reborn,pot of greed,the shallow grave,multiplication of ants,insect imitation,insect barrier,insect armor with laser cannon,insect neglect,verdant sanctuary,dna surgery,magic jammer,rivalry of warlords,swamp mirrorer,card advance,gaia power,mage power,giant rat,neo bug,twin twisters",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/76039636.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Insect Barrier. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Doom Dozer"
+		"Errors": null
 	},
 	{
 		"Id": "8d9d696c-73c5-4721-82d9-8f0445056346",
@@ -327,7 +327,7 @@
 		"DeckList": "alpha the magnet warrior,beta the magnet warrior x2,gamma the magnet warrior,labyrinth wall,familiarpossessed  aussa,avalanching aussa,aussa the earth charmer,delta the magnet warrior,megarock dragon,block golem,granmarg the rock monarch,mask of darkness,morphing jar,giant rat x2,sphere kuriboh,valkyrion the magna warrior x2,attack the moon,magnetic field,enemy controller,card destruction,hand destruction,fissure,monster reborn,pot of greed,mage power,terraforming,twin twisters,lightning vortex,exchange,swords of revealing light,sakuretsu armor,rock bombardment,draining shield,magnet conversion,raigeki break,spiritual earth art  kurogane,lightforce sword",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/39256679.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Magnet Conversion. Il y a trop de jokers : 8"
+		"Errors": null
 	},
 	{
 		"Id": "9d663299-186d-4599-b4da-ded0e3971cfb",
@@ -372,7 +372,7 @@
 		"DeckList": "luster dragon,divine dragon ragnarok,redeyes black dragon x2,redeyes darkness dragon x2,black dragons chick x2,dark mimic lv1,dark mimic lv3,armed dragon lv3,armed dragon lv5,armed dragon lv7,masked dragon,lord of d,mystic tomato,spear dragon,spirit ryu,element dragon,exploder dragon,dark hole,swords of revealing light,the flute of summoning dragon,polymerization,monster reborn,pot of greed,soul exchange,a wingbeat of giant dragon,level up,stamping destruction,inferno fire blast,dragons mirror,dragon treasure,mountain,reload,hand destruction,twin twisters,bottomless trap hole,sakuretsu armor,call of the haunted",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/96561011.jpg",
 		"DeckLength": 40,
-		"Errors": "Il y a des carte interdites : Level Up!"
+		"Errors": null
 	},
 	{
 		"Id": "863a35c9-afef-47a1-b7c0-78105a961562",
@@ -387,7 +387,7 @@
 		"DeckList": "7 colored fish,space mambo,giga gagagigo,terrorking salmon,frostosaurus,aqua spirit,nightmare penguin,abyss soldier,unshaven angler,blizzard dragon,warrior of atlantis x2,abyssal kingshark,dragon ice,the legendary fisherman ii,mobius the frost monarch,leviadragon  daedalus x2,superancient deepsea king coelacanth,ocean dragon lord  neodaedalus,swords of revealing light,graceful charity,fissure,monster reborn,metamorphosis,smashing ground,moray of greed,galaxy cyclone,umi,umiiruka,a legendary ocean x2,burden of the mighty,mystical space typhoon,twin twisters,mirror force,bottomless trap hole,sakuretsu armor,judgment of anubis,metal reflect slime,ryu senshi,ojama king,dark blade the dragon knight,cyber blader,cyber ogre 2,cyber twin dragon,cyber end dragon,destiny end dragoon",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/295517.jpg",
 		"DeckLength": 48,
-		"Errors": "Il y a des carte interdites : Superancient Deepsea King Coelacanth, Burden of the Mighty, Destiny End Dragoon. Il y a des carte limitées en doublon : Warrior of Atlantis, A Legendary Ocean. Il y a trop de jokers : 4. Ce groupe de limitation n est pas respecté : smashingground,fissure"
+		"Errors": null
 	},
 	{
 		"Id": "e8c5b726-fdae-4d3f-b399-98f9dc5b2b7b",
@@ -402,7 +402,7 @@
 		"DeckList": "elemental hero avian,elemental hero burstinatrix,elemental hero clayman,elemental hero sparkman,elemental hero neos,morphing jar,king of the swamp,gravekeepers guard,elemental hero bubbleman,elemental hero woodsman,elemental hero stratos x2,elemental hero captain gold,destiny hero  dunker,elemental hero necroshade,jinzo,destiny hero  malicious x2,destiny hero  dreadmaster,destiny hero  plasma,fissure,polymerization x2,monster reborn,lightning vortex,reinforcement of the army,smashing ground,fusion recovery,destiny draw,skyscraper,clock tower prison,skyscraper 2  hero city,shard of greed,mystical space typhoon,enemy controller,hand destruction,sakuretsu armor,call of the haunted,elemental hero flame wingman,elemental hero thunder giant,elemental hero phoenix enforcer,elemental hero shining flare wingman,elemental hero tempest",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/25366484.jpg",
 		"DeckLength": 43,
-		"Errors": "Il y a des carte limitées en doublon : Elemental HERO Stratos. Il y a trop de jokers : 5. Ce groupe de limitation n est pas respecté : smashingground,fissure"
+		"Errors": "Il y a trop de jokers : 4"
 	},
 	{
 		"Id": "a3758c94-1c7e-4c3a-8d15-7a165479841a",
@@ -417,7 +417,7 @@
 		"DeckList": "morphing jar,penguin soldier,dummy golem,medusa worm,neospacian grand mole,stone statue of the aztecs,gigantes,golem sentry x2,moai interceptor cannons,grave ohja,guardian statue,sand moth,great spirit,fossil tusker x2,guardian sphinx x2,hieracosphinx,criosphinx,megarock dragon,exxod master of the guard,monster reborn,pot of greed,upstart goblin,the shallow grave,terraforming,canyon,stumbling,shifting shadows,degenerate circuit,mystical space typhoon,book of moon,staunch defender,rock bombardment,dimensional prison,seven tools of the bandit,robbin goblin,call of the haunted,fairy box,ordeal of a traveler",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/40659562.jpg",
 		"DeckLength": 41,
-		"Errors": "Il y a des carte interdites : Robbin' Goblin, Ordeal of a Traveler. Il y a trop de jokers : 8. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Guardian Sphinx"
+		"Errors": null
 	},
 	{
 		"Id": "31324865-18de-449f-99a6-31bcfc4e0267",
@@ -432,7 +432,7 @@
 		"DeckList": "luster dragon,redeyes black dragon x2,mad reloader,black metal dragon,twinheaded behemoth,masked dragon,card trooper,exploder dragon,vortex trooper,cave dragon,horus the black flame dragon lv4,mirage dragon,blizzard dragon,redeyes wyvern x2,vanguard of the dragon,kaiser glider,horus the black flame dragon lv6,prime material dragon,horus the black flame dragon lv8,swords of revealing light,monster reborn,pot of greed,twin twisters,upstart goblin,soul exchange,smashing ground,gold sarcophagus,future fusion,mystical space typhoon,book of moon,enemy controller,mirror force,bottomless trap hole,sakuretsu armor,dimensional prison,dragons rebirth,redeyes spirit x2,fiveheaded dragon",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/48229808.jpg",
 		"DeckLength": 41,
-		"Errors": "Il y a trop de jokers : 8. Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :Red-Eyes Wyvern, Red-Eyes Spirit. Ce groupe de limitation n est pas respecté : sakuretsuarmor,dimensionalprison"
+		"Errors": null
 	},
 	{
 		"Id": "2d73adf3-db63-4c8a-8744-c2e4d2f1a9da",
@@ -465,17 +465,32 @@
 		"Errors": null
 	},
 	{
-		"Id": "ad6fd2ee-e8fb-4f29-aac6-cecb0603e4b0",
+		"Id": "72f188e2-e186-482b-b114-279bea301e03",
 		"Format": "",
-		"Rank": 3,
-		"Title": "test",
+		"Rank": "3",
+		"Title": "insect - v2",
 		"IsDraft": true,
 		"Date": "24/07/2023",
-		"Author": "test",
-		"MainCard": "Pyramid Turtle",
-		"MainCardImage": "https://images.ygoprodeck.com/images/cards/77044671.jpg",
+		"Author": "Wuimax",
+		"MainCard": "Doom Dozer",
+		"Themes": "insecte, terre",
+		"DeckList": "insect knight x2, metal armored bug, leghul, magical merchant, maneater bug, parasite paracide, 4starred ladybug of doom, swarm of scarabs, swarm of locusts, howling insect x2, skullmark ladybug, pinch hopper x2, giant rat, blazewing butterfly, noblemaneater bug, grasschopper, saber beetle, insect queen, swords of revealing light, monster reborn, pot of greed, twin twisters, the shallow grave, multiplication of ants, insect imitation, card advance, insect armor with laser cannon, mage power, gaia power, verdant sanctuary, insect neglect, mirror force, ojama trio, magic jammer, rivalry of warlords, swamp mirrorer, doom dozer",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/76039636.jpg",
+		"DeckLength": 40,
+		"Errors": null
+	},
+	{
+		"Id": "9fb5a303-6383-4498-ae3a-0843f81191b7",
+		"Format": "v1alpha",
+		"Rank": 3,
+		"Title": "tes",
+		"IsDraft": true,
+		"Date": "25/07/2023",
+		"Author": "tes",
+		"MainCard": "Mazera DeVille",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/6133894.jpg",
 		"Themes": "",
-		"DeckList": "morphing jar, pyramid turtle, spirit reaper",
+		"DeckList": "mazera deville, book of moon, smashing ground",
 		"DeckLength": 3,
 		"Errors": "Pas asser de cartes : 3"
 	}

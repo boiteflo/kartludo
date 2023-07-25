@@ -23,12 +23,13 @@
                     label="Chercher une carte (FR ou EN)"
                     @input="$emit('search', $event)">
       </v-text-field>
-      <v-combobox v-model="format" 
+      <v-combobox v-model="store.formatSelected" 
         label="Format" 
-        :items="formats" 
+        :items="store.formats" 
         item-text="Title"
         hide-details
-        style="margin: 0px 5px 0px 5px; width:100px;">
+        style="margin: 0px 5px 0px 5px; width:100px;"
+        @input="selectFormat">
       </v-combobox>
 
       <router-link to="/decks">
@@ -63,17 +64,25 @@
 </template>
 
 <script>
+import { store } from '../data/store.js'
+import ServiceFormat from '../services/serviceFormat'
+
   export default {
     name: 'menuBar',
+    props: ['formats'],
     data: () => ({
+        store : store,
         searchString: '',
-        format: 'Test',
-        formats: ['Alpha V1', 'Test']
     }),
     methods:{
       unselect(){
         this.searchString = '';
         this.$emit('search', '');
+      },
+      selectFormat(format){
+        let result = ServiceFormat.setFormat(format, store.cards);
+        store.format = result.format;
+        store.cards = result.cards;
       }
     }
   }

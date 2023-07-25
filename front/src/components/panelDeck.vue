@@ -5,10 +5,10 @@
         <v-card-text>{{deck.Combo}}</v-card-text>
         
         <v-alert v-if="deck.Errors" type="error" class="m5px w100p">
-            {{deck.Errors}}
+            Ce deck ne respecte pas le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}} pour les raisons suivantes : {{deck.Errors}}
         </v-alert>
         <v-alert v-else type="success" class="m5px w100p">
-            Ce deck respecte la ban list du format
+            Ce deck respecte bien le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}}
         </v-alert>
 
         <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">

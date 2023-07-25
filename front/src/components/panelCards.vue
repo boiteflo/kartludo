@@ -1,6 +1,6 @@
 <template>
   <div v-if="cards && cards.length > 0" 
-    :class="{'flex-wrap':!noflex, 'flex-space-around':!noflex && center, 'p5px':true}">
+    :class="{'flex-wrap':!noflex, 'p5px':true}">
     <card-image v-for="card in cards" 
       v-bind:key="card.IdName"
       :card="card"

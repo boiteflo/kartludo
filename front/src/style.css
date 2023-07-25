@@ -254,6 +254,14 @@ h2 {
     font-size: 30px;
     padding: 40px 40px 40px 80px;
 }
+.h3 {
+    background-color: #212A3C;
+    color: #FFFFFF90 !important; 
+    font-size:22px; 
+    margin-top:-40px;
+    padding-left:130px;
+    padding-bottom: 20px;
+}
 
 .sCard{
     width: 50px !important;

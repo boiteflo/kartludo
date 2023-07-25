@@ -6,10 +6,11 @@
         <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
         <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉS</h2>
+        <h3 class="h3">A 1 EXEMPLAIRE STRICTE</h3>
         <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
         <br>
-        <div class="flex-wrap">
+        <div class="flex-wrap" v-if="false">
           <div v-for="group in getLimitFriendsGroups(store.cards)" v-bind:key="group.id" style="position:relative; border: 5px solid red; margin: 5px 5px 5px 20px">
             <div style="position:absolute; top:-15px; left:-15px;">
                 <div class="s25" style="color:red; text-align:center; font-style:bold; border-radius:15px; background:black; outline: 5px solid red">
@@ -22,6 +23,7 @@
         </div>
       
         <h2><v-icon color="yellow">mdi-star</v-icon> CARTES JOKER</h2>
+        <h3 class="h3">UNIQUEMENT 3 DANS VOTRE DECK ET SEULEMENT EN X1</h3>
         <panel-cards :cards="filterLimit(store.cards,'K')" :badgeoff="true" :center="true" tooltip="text" >
         </panel-cards>
       

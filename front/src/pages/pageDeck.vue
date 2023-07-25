@@ -5,7 +5,7 @@
         </div>
         <div v-else>
           <div v-if="isNew">
-              <panel-create-deck @save='saveDeck' :themes="themes" :staples="staples" :ranks="ranks"
+              <panel-create-deck :themes="themes" :staples="staples" :ranks="ranks" @save='saveDeck' 
               ></panel-create-deck>
           </div>
           
@@ -19,6 +19,7 @@
 
 
 <script>
+import { forkJoin } from 'rxjs';
 import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
 //const axios = require('axios');
@@ -31,7 +32,7 @@ export default {
   name: 'pageDeck',
   components: {panelCreateDeck, panelDeck},
   data: () => ({
-    loading:false,
+    loading:true,
     ranks: null,
     staples : null,
     themes: null,
@@ -44,29 +45,30 @@ export default {
     let i = uri.indexOf("id="); 
     this.isNew = i < 1;
 
+    let calls = [
+      ServiceBack.getAll('data'),
+      ServiceBack.getAll('themes'),
+      ServiceBack.getAll('decks')
+    ];
+
     if(!this.isNew){
       this.id = uri.substring(i+3);
-      
-      ServiceBack.get('decks', this.id).then(res => {
-        this.showDeck(res);
-      }); 
+      calls.push(ServiceBack.get('decks', this.id));
     }
-    
-    ServiceBack.getAll('data').then(res => {
+
+    forkJoin(calls).subscribe(results => {
       this.staples = {
-          stapleMonster: res.find(x=> x.Id === 'stapleMonster'),
-          stapleSpell: res.find(x=> x.Id === 'stapleSpell'),
-          stapleTrap: res.find(x=> x.Id === 'stapleTrap')
+          stapleMonster: results[0].find(x=> x.Id === 'stapleMonster'),
+          stapleSpell: results[0].find(x=> x.Id === 'stapleSpell'),
+          stapleTrap: results[0].find(x=> x.Id === 'stapleTrap')
       };
-      this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
-    }); 
-    ServiceBack.getAll('themes').then(res => {
-      this.themes = res.concat([this.themeAll]);
+      this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
+      this.themes = results[1].concat([this.themeAll]);
+      this.decks = results[2];
+      if(results.length > 3)
+        this.showDeck(results[3]);
       this.loading=false;
-    });   
-    ServiceBack.getAll('decks').then(res => {
-      this.decks = res;
-    }); 
+    });
   },
   methods: {
     showDeck(deck){
