@@ -34,6 +34,7 @@ class managerCard {
             NameEn: x.NameEn,
             NameFr: x.NameFr,
             Image: x.Image,
+            Animation: x.Animation,
             Bonus : x.Bonus
         }});
         

@@ -802,7 +802,8 @@
 		"IdNameFr": "dragonblancauxyeuxbleus",
 		"NameEn": "Blue-Eyes White Dragon",
 		"NameFr": "Dragon Blanc aux Yeux Bleus",
-		"Image": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
+		"Image": "https://images.ygoprodeck.com/images/cards/89631139.jpg",
+		"Animation": "blue"
 	},
 	{
 		"IdName": "gearfriedtheironknight",
@@ -823,7 +824,8 @@
 		"IdNameFr": "magiciensombre",
 		"NameEn": "Dark Magician",
 		"NameFr": "Magicien Sombre",
-		"Image": "https://images.ygoprodeck.com/images/cards/36996508.jpg"
+		"Image": "https://images.ygoprodeck.com/images/cards/36996508.jpg",
+		"Animation": "dark"
 	},
 	{
 		"IdName": "abaki",
@@ -22407,6 +22409,97 @@
 		"NameEn": "Alien Kid",
 		"NameFr": "Enfant Alien",
 		"Image": "https://www.otk-expert.fr/cartes/yugioh/64160836.jpg",
+		"Bonus": true
+	},
+	{
+		"IdName": "aliendog",
+		"IdNameFr": "chienalien",
+		"NameEn": "Alien Dog",
+		"NameFr": "Chien Alien",
+		"Bonus": true
+	},
+	{
+		"IdName": "handofthesixsamurai",
+		"IdNameFr": "envoyedessixsamourais",
+		"NameEn": "Hand of the Six Samurai",
+		"NameFr": "Envoyé des Six Samouraïs",
+		"Bonus": true
+	},
+	{
+		"IdName": "wightmare",
+		"IdNameFr": "cauchemarducraneserviteur",
+		"NameEn": "Wightmare",
+		"NameFr": "Cauchemar du Crâne Serviteur",
+		"Bonus": true
+	},
+	{
+		"IdName": "toonbookmark",
+		"IdNameFr": "marquepagetoon",
+		"NameEn": "Toon Bookmark",
+		"NameFr": "Marque-Page Toon",
+		"Bonus": true
+	},
+	{
+		"IdName": "defenderthemagicalknight",
+		"IdNameFr": "bouclierdivinlechevaliermagique",
+		"NameEn": "Defender, the Magical Knight",
+		"NameFr": "Bouclier Divin, le Chevalier Magique",
+		"Bonus": true
+	},
+	{
+		"IdName": "cyberdragonzwei",
+		"IdNameFr": "cyberdragonzwei",
+		"NameEn": "Cyber Dragon Zwei",
+		"NameFr": "Cyber Dragon Zwei",
+		"Bonus": true
+	},
+	{
+		"IdName": "mokeymokeyadrift",
+		"IdNameFr": "mokeymokeyaladerive",
+		"NameEn": "Mokey Mokey Adrift",
+		"NameFr": "Mokey Mokey à la Dérive",
+		"Bonus": true
+	},
+	{
+		"IdName": "battlefader",
+		"IdNameFr": "pendulierdecombat",
+		"NameEn": "Battle Fader",
+		"NameFr": "Pendulier de Combat",
+		"Bonus": true
+	},
+	{
+		"IdName": "thetruename",
+		"IdNameFr": "levrainom",
+		"NameEn": "The True Name",
+		"NameFr": "Le Vrai Nom",
+		"Bonus": true
+	},
+	{
+		"IdName": "supervise",
+		"IdNameFr": "supervision",
+		"NameEn": "Supervise",
+		"NameFr": "Supervision",
+		"Bonus": true
+	},
+	{
+		"IdName": "defensedraw",
+		"IdNameFr": "piochededefense",
+		"NameEn": "Defense Draw",
+		"NameFr": "Pioche de Défense",
+		"Bonus": true
+	},
+	{
+		"IdName": "forbiddenlance",
+		"IdNameFr": "graalinterdit",
+		"NameEn": "Forbidden Lance",
+		"NameFr": "Graal Interdit",
+		"Bonus": true
+	},
+	{
+		"IdName": "forbiddenchalice",
+		"IdNameFr": "lanceinterdite",
+		"NameEn": "Forbidden Chalice",
+		"NameFr": "Lance Interdite",
 		"Bonus": true
 	}
 ]

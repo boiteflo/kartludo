@@ -26,7 +26,8 @@
                 <div class="hoverFontColor" style="font-size: 8px; cursor:pointer" @click="copyClipboard(card.NameFr);">
                     {{card.NameFr}}
                 </div>
-                <img :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.Image"/>
+                <img v-if="card.Animation" :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :srcset="getImgUrl(card.Animation)">
+                <img v-else :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.Image"/>
             </div>
 
             <div v-if="tooltip==='image'" class="tooltipcard" style="font-size:8px">
@@ -45,6 +46,7 @@
             </div>
         </div>
         
+        
         <img :style="{ width: (size ? size : 150)+ 'px' }" :src="card.Image"/>
         
         <img :style="{ width: (size ? size : 150)+ 'px' }" 
@@ -62,7 +64,11 @@
     methods: {
         copyClipboard(text) {
             navigator.clipboard.writeText(text);
-        }   
-    }
+        },
+        getImgUrl(value){
+            var images = require.context('../assets/', false, /\.webp$/)
+            return images('./' + value + ".webp")
+        }
+  }
   }
 </script>

@@ -87,7 +87,7 @@
 		"DeckList": "luster dragon, insect knight, sabersaurus, gladiator beast andal, sangan, witch of the black forest, senju of the thousand hands x2, sonic bird, mystic tomato, goblin attack force, newdoria, dark jeroid, manju of the ten thousand hands x2, doomcaliber knight, relinquished, the masked beast, demise king of armageddon, dark hole, swords of revealing light, monster reborn, pot of greed, nightmare's steelcage, galaxy cyclone, mystic plasma zone, black illusion ritual, contract with the abyss, advanced ritual art, mystical space typhoon, book of moon, enemy controller, waboku, jar of greed, sakuretsu armor, curse of anubis, negate attack, seven tools of the bandit, judgment of anubis",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/49064413.jpg",
 		"DeckLength": 39,
-		"Errors": "Pas asser de cartes : 39"
+		"Errors": "Pas assez de cartes : 39"
 	},
 	{
 		"Id": "ccde670d-2f47-4496-898c-2e2c85cb0aeb",
@@ -342,7 +342,7 @@
 		"DeckList": "uria lord of searing flames",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/6007213.jpg",
 		"DeckLength": 1,
-		"Errors": "Pas asser de cartes : 1"
+		"Errors": "Pas assez de cartes : 1"
 	},
 	{
 		"Id": "bc4139f7-f423-4189-8251-6877466de778",
@@ -357,7 +357,7 @@
 		"DeckList": "obelisk the tormentor,slifer the sky dragon,the winged dragon of ra,the winged dragon of ra  sphere mode",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/10000020.jpg",
 		"DeckLength": 4,
-		"Errors": "Pas asser de cartes : 4"
+		"Errors": "Pas assez de cartes : 4"
 	},
 	{
 		"Id": "0b2b9a9e-ee17-4b19-9b04-d66ef244316a",
@@ -525,18 +525,33 @@
 		"Errors": null
 	},
 	{
+		"Id": "a05445dd-d7c8-4a56-9a6e-876e7def8c25",
+		"Format": "v1alpha",
+		"Rank": "3",
+		"Title": "Trap-monster Burn",
+		"IsDraft": true,
+		"Date": "25/07/2023",
+		"Author": "Wuimax",
+		"MainCard": "Uria  Lord of Searing Flames",
+		"Themes": "",
+		"DeckList": "magical merchant, penguin soldier, giant germ x2, sangan, bowganian, mystic tomato x2, lava golem, uria  lord of searing flames, swords of revealing light, monster reincarnation, pot of greed, scapegoat, twin twisters, creature swap, the shallow grave, mist body, waboku, mirror force, magical hats, dust tornado, statue of the wicked, dark coffin, compulsory evacuation device, threatening roar, dimensional prison, negate attack, shadow spell, mirror wall, fairy box, embodiment of apophis, needle wall, metal reflect slime, des counterblow, nightmare wheel, swamp mirrorer x2, quantum cat, torrential tribute",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/6007213.jpg",
+		"DeckLength": 40,
+		"Errors": null
+	},
+	{
 		"Id": "94a82e73-f449-43dc-b6b0-f14326a72c6e",
 		"Format": "v1alpha",
-		"Rank": 3,
+		"Rank": "3",
 		"Title": "test",
 		"IsDraft": true,
 		"Date": "25/07/2023",
 		"Author": "fdff",
 		"MainCard": "Blue-Eyes Shining Dragon",
-		"MainCardImage": "https://images.ygoprodeck.com/images/cards/53347303.jpg",
 		"Themes": "",
 		"DeckList": "blueeyes white dragon x2, blueeyes toon dragon, blueeyes ultimate dragon, kagemusha of the blue flame, blue dragon summoner, bluewinged crown, blueeyes shining dragon",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/53347303.jpg",
 		"DeckLength": 8,
-		"Errors": "Pas asser de cartes : 8"
+		"Errors": "Pas assez de cartes : 8"
 	}
 ]

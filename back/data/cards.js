@@ -802,7 +802,8 @@ module.exports = [
 		"IdNameFr": "dragonblancauxyeuxbleus",
 		"NameEn": "Blue-Eyes White Dragon",
 		"NameFr": "Dragon Blanc aux Yeux Bleus",
-		"Image": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
+		"Image": "https://images.ygoprodeck.com/images/cards/89631139.jpg",
+		"Animation" : "blue"
 	},
 	{
 		"IdName": "gearfriedtheironknight",
@@ -823,7 +824,8 @@ module.exports = [
 		"IdNameFr": "magiciensombre",
 		"NameEn": "Dark Magician",
 		"NameFr": "Magicien Sombre",
-		"Image": "https://images.ygoprodeck.com/images/cards/36996508.jpg"
+		"Image": "https://images.ygoprodeck.com/images/cards/36996508.jpg",
+		"Animation" : "dark"
 	},
 	{
 		"IdName": "abaki",
