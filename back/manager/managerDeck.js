@@ -198,7 +198,7 @@ class managerDeck {
             errors.push('Il y a trop de doublons : ' + x2Length);
 
         if(errorJokerQuantityx2.length > 0)
-            errors.push('Les cartes jokers sont limité à un seul exemplaire. Cartes a corriger :' + errorJokerQuantityx2.join(', '));
+            errors.push('Les cartes jokers sont limitées à un seul exemplaire. Cartes a corriger :' + errorJokerQuantityx2.join(', '));
         
         format.Limit1Groups.split('|').forEach(group => {
             let groupCards = group.split(',').map(x=> x.cleanup());
@@ -208,7 +208,7 @@ class managerDeck {
         })
 
         if(deck.DeckLength < 40)
-            errors.push('Pas asser de cartes : ' + deck.DeckLength);
+            errors.push('Pas assez de cartes : ' + deck.DeckLength);
 
         return errors.length < 1 ? null : errors.join('. ');
     }

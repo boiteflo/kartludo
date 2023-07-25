@@ -35,6 +35,13 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/38033121.jpg"
 	},
 	{
+		"Id": "warrior",
+		"Title": "Guerriers",
+		"CardIdName": "ddwarriorlady",
+		"CardNameEn": "D.D. Warrior Lady",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/7572887.jpg"
+	},
+	{
 		"Id": "vent",
 		"Title": "Vent",
 		"CardIdName": "harpielady1",
@@ -51,9 +58,9 @@
 	{
 		"Id": "eau",
 		"Title": "Eau",
-		"CardIdName": "thelegendaryfisherman",
-		"CardNameEn": "The Legendary Fisherman",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/3643300.jpg"
+		"CardIdName": "alegendaryocean",
+		"CardNameEn": "A Legendary Ocean",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/295517.jpg"
 	},
 	{
 		"Id": "terre",
@@ -126,11 +133,11 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/10000010.jpg"
 	},
 	{
-		"Id": "cristalline",
+		"Id": "crystal",
 		"Title": "Cristal ",
-		"CardIdName": "crystalbeastamethystcat",
-		"CardNameEn": "Crystal Beast Amethyst Cat",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/32933942.jpg"
+		"CardIdName": "crystalbeasttopaztiger",
+		"CardNameEn": "Crystal Beast Topaz Tiger",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/95600067.jpg"
 	},
 	{
 		"Id": "sixsam",
@@ -145,12 +152,5 @@
 		"CardIdName": "vampirelord",
 		"CardNameEn": "vampire lord",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/53839837.jpg"
-	},
-	{
-		"Id": "warrior",
-		"Title": "Guerriers",
-		"CardIdName": "ddwarriorlady",
-		"CardNameEn": "D.D. Warrior Lady",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/7572887.jpg"
 	}
 ]

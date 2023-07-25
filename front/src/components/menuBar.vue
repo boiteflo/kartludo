@@ -9,6 +9,7 @@
         <v-btn
           target="_blank"
           text
+          @click="unselect"
         >
           <v-icon>mdi-cards</v-icon>
           <h3>MD - OLD SCHOOL</h3>

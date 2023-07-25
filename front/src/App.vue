@@ -5,12 +5,15 @@
       <div class="bg w100p h100p" v-if="!store.formatSelected">
         CHARGEMENT EN COURS
       </div>
-      <div v-else>
-        <menuBar v-on:search="search"></menuBar>
-        <panel-cards class="bg2" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards"  tooltip="text">
-        </panel-cards>
-        <router-view>
-        </router-view>
+      <div v-else class="bg" style="width:100%; height:100%">
+        <img v-if="konamiCode" style="width:100%" :srcset="require('./assets/konamiCode.webp')">
+        <div v-else>
+          <menuBar v-on:search="search"></menuBar>
+          <panel-cards class="bg2" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards"  tooltip="text">
+          </panel-cards>
+          <router-view>
+          </router-view>
+        </div>
       </div>
     </v-main>
   </v-app>
@@ -20,9 +23,18 @@
   @import './style.css';
 </style>
 
+<!--
+<script setup>
+  const easterEgg = () => {
+    alert('easterEgg');
+  };
+</script>
+-->
+
 <script>
 import { forkJoin } from 'rxjs';
 import { store } from './data/store.js'
+import Konami from 'konami';
 import ServiceBack from './services/serviceBack'
 import ServiceMain from './services/serviceMain'
 import ServiceFormat from './services/serviceFormat'
@@ -39,10 +51,12 @@ export default {
 
   data: () => ({
     store: store,
-    selectedCards: []
+    selectedCards: [],
+    konamiCode : false
   }),
   
   mounted() {
+    new Konami(() => this.konamiCode=true);
     forkJoin([
         ServiceBack.getAll('cards'), 
         ServiceBack.getAll('formats')

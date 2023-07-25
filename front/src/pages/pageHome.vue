@@ -50,7 +50,7 @@ export default {
   name: 'pageDeck',
   components: {panelCards},
   data: () => ({
-    store: store
+    store: store,
   }),
   methods: {
     filterLimit(cards, key){
