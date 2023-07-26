@@ -19,10 +19,10 @@ class ServiceFormat {
         let limit1GroupsCards = format.Limit1Groups.split('|').join(',').split(',').map(x=> helperString.cleanup(x));
         for(let i=0; i< limit1GroupsCards.length; i++)
         {
-          let idName = limit1GroupsCards[0];
+          let idName = limit1GroupsCards[i];
           let card = cards.find(x=> x.IdName === idName);
           if(card) {
-            card.LimitFriends = limit1Groups.find(x=> x.includes(x.IdName));
+            card.LimitFriends = limit1Groups.find(x=> x.includes(card.NameEn)).split(',').map(x=> helperString.cleanup(x)).join(',');
             card.OrderIndex = i;
           }
         }

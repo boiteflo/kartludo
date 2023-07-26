@@ -17,21 +17,22 @@
       </router-link>
 
       <v-spacer></v-spacer>
-      <v-text-field v-if="$vuetify.breakpoint.width >= 800"
-                    class="flex-grow"
-                    hide-details
-                    v-model="searchString"
-                    label="Chercher une carte (FR ou EN)"
-                    @input="$emit('search', $event)">
-      </v-text-field>
-      <v-combobox v-model="store.formatSelected" 
-        label="Format" 
-        :items="store.formats" 
-        item-text="Title"
-        hide-details
-        style="margin: 0px 5px 0px 5px; width:100px;"
-        @input="selectFormat">
-      </v-combobox>
+      <template v-if="$vuetify.breakpoint.width >= 800">
+        <v-text-field class="flex-grow"
+                      hide-details
+                      v-model="searchString"
+                      label="Chercher une carte (FR ou EN)"
+                      @input="$emit('search', $event)">
+        </v-text-field>
+        <v-combobox v-model="store.formatSelected" 
+          label="Format" 
+          :items="store.formats" 
+          item-text="Title"
+          hide-details
+          style="margin: 0px 5px 0px 5px; width:100px;"
+          @input="selectFormat">
+        </v-combobox>
+      </template>
 
       <router-link to="/decks">
         <v-btn
@@ -54,13 +55,22 @@
         </v-btn>
       </a>
     </v-app-bar>
-    <v-text-field v-if="$vuetify.breakpoint.width < 800"
-                  class="flex-grow m5px"
-                  hide-details
-                  v-model="searchString"
-                  label="Chercher une carte (FR ou EN)"
-                  @input="$emit('search', $event)">
-    </v-text-field>
+    <template v-if="$vuetify.breakpoint.width < 800">      
+      <v-text-field class="flex-grow m5px"
+                    hide-details
+                    v-model="searchString"
+                    label="Chercher une carte (FR ou EN)"
+                    @input="$emit('search', $event)">
+      </v-text-field>
+        <v-combobox v-model="store.formatSelected" 
+          label="Format" 
+          :items="store.formats" 
+          item-text="Title"
+          hide-details
+          style="margin: 0px 5px 0px 5px; width:100px;"
+          @input="selectFormat">
+        </v-combobox>
+    </template>
   </div>
 </template>
 

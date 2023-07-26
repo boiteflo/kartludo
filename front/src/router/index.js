@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V1.7.4 ';
+let version = 'V1.7.5 ';
 
 Vue.use(VueRouter)
 
@@ -12,6 +12,18 @@ const routes = [
         name: version + 'MSOS Error',
         component: () =>
             import ('../pages/pageError.vue')
+    },
+    {
+        path: '/success/:id',
+        name: version + 'MSOS Error',
+        component: () =>
+            import ('../pages/pageSuccess.vue')
+    },
+    {
+        path: '/format',
+        name: version + 'MSOS Format',
+        component: () =>
+            import ('../pages/pageFormat.vue')
     },
     {
         path: '/decks',

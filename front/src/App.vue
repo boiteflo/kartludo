@@ -5,8 +5,8 @@
       <div class="bg w100p h100p" v-if="!store.formatSelected">
         CHARGEMENT EN COURS
       </div>
-      <div v-else class="bg" style="width:100%; height:100%">
-        <img v-if="konamiCode" style="width:100%" :srcset="require('./assets/konamiCode.webp')">
+      <div v-else >
+        <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
         <div v-else>
           <menuBar v-on:search="search"></menuBar>
           <panel-cards class="bg2" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards"  tooltip="text">
@@ -58,8 +58,8 @@ export default {
   mounted() {
     new Konami(() => this.konamiCode=true);
     forkJoin([
-        ServiceBack.getAll('cards'), 
-        ServiceBack.getAll('formats')
+        ServiceBack.getAll('card'), 
+        ServiceBack.getAll('format')
       ]).subscribe(results => {
       store.formats = results[1];
       let formatResult = ServiceFormat.setFormat(store.formats[store.formats.length-2], results[0]);

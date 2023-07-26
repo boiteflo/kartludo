@@ -132,12 +132,12 @@ export default {
       this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
       this.linkThemeWithDecks();
     }); 
-    ServiceBack.getAll('themes').then(res => {
+    ServiceBack.getAll('theme').then(res => {
       this.themes = res.concat([this.themeAll]);
       this.loading=false;
       this.linkThemeWithDecks();
     });   
-    ServiceBack.getAll('decks').then(res => {
+    ServiceBack.getAll('deck').then(res => {
       this.decks = res;
       this.linkThemeWithDecks();
     });   

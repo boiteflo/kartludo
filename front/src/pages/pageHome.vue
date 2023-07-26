@@ -10,7 +10,7 @@
         <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
         <br>
-        <div class="flex-wrap" v-if="false">
+        <div class="flex-wrap">
           <div v-for="group in getLimitFriendsGroups(store.cards)" v-bind:key="group.id" style="position:relative; border: 5px solid red; margin: 5px 5px 5px 20px">
             <div style="position:absolute; top:-15px; left:-15px;">
                 <div class="s25" style="color:red; text-align:center; font-style:bold; border-radius:15px; background:black; outline: 5px solid red">
@@ -58,7 +58,7 @@ export default {
       return helperArray.sortInverse(filteredData, 'OrderIndex');
     },
     getLimitFriendsGroups(cards){
-      let filteredCards = cards.filter(x=> x.LimitFriends || x.LimitFriends.length >= 1);
+      let filteredCards = cards.filter(x=> x.LimitFriends && x.LimitFriends.length >= 1);
       let groups = [];
       for(let i =0; i < filteredCards.length; i++){
         let card = filteredCards[i];

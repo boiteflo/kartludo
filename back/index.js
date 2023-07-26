@@ -57,16 +57,18 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/data', helperRouteJsonGet.createDalRoute('data', 'Id'))
-app.use('/api/themes', helperRouteJsonGet.createDalRoute('themes', 'Id'))
-app.use('/api/formats', helperRouteJsonGet.createDalRoute('formats', 'Id'))
-app.use('/api/cards', helperRouteJsonGet.createDalRoute('cards', 'IdName'))
-app.use('/api/extensions', helperRouteJsonGet.createDalRoute('extensions', 'set_code'))
+app.use('/api/theme', helperRouteJsonGet.createDalRoute('themes', 'Id'))
+app.use('/api/card', helperRouteJsonGet.createDalRoute('cards', 'IdName'))
+app.use('/api/extension', helperRouteJsonGet.createDalRoute('extensions', 'set_code'))
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)
 
-var routeDecks = require('./routes/decks');
-app.use('/api/decks', routeDecks)
+var routeDecks = require('./routes/deck');
+app.use('/api/deck', routeDecks)
+
+var routeFormats = require('./routes/format');
+app.use('/api/format', routeFormats)
 
 app.use(express.static(__dirname + '/public/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));

@@ -26,7 +26,7 @@ export default {
     extensions: null
   }),
   async mounted(){
-      ServiceBack.getAll('extensions').then(result => {
+      ServiceBack.getAll('extension').then(result => {
         this.extensions = result; //helperArray.sort(, 'tcg_date');
       });
   },

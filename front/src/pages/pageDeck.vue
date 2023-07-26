@@ -47,13 +47,13 @@ export default {
 
     let calls = [
       ServiceBack.getAll('data'),
-      ServiceBack.getAll('themes'),
-      ServiceBack.getAll('decks')
+      ServiceBack.getAll('theme'),
+      ServiceBack.getAll('deck')
     ];
 
     if(!this.isNew){
       this.id = uri.substring(i+3);
-      calls.push(ServiceBack.get('decks', this.id));
+      calls.push(ServiceBack.get('deck', this.id));
     }
 
     forkJoin(calls).subscribe(results => {
@@ -91,7 +91,7 @@ export default {
     saveDeck(deck){
       this.loading=true;
       delete deck.Themes;
-      ServiceBack.insert('decks', deck)
+      ServiceBack.insert('deck', deck)
         .then(res=> window.location.href = '/deck/id=' + res.data);
     }
   }
