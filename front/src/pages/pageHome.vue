@@ -54,7 +54,7 @@ export default {
   }),
   methods: {
     filterLimit(cards, key){
-      let filteredData = cards.filter(x=> x.Limit===key && (!x.LimitFriends || x.LimitFriends.length < 1));
+      let filteredData = cards.filter(x=> x.Limit===key && (!x.LimitFriends || x.LimitFriends.length < 1) && !x.Bonus);
       return helperArray.sortInverse(filteredData, 'OrderIndex');
     },
     getLimitFriendsGroups(cards){
