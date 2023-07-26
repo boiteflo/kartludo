@@ -156,6 +156,7 @@ class managerDeck {
 
     static getErrors(deck, deckCards, formats){
         let errors = [];
+        let matchs= [];
         let cardIdNames = deckCards.map(x=> x.Card.IdName);
         let format = deck.Format ? formats.find(x=>x.Id === deck.Format) : null;
         if(!format) format = formats[formats.length-2];
