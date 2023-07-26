@@ -1,41 +1,41 @@
 [
 	{
-		"Id": "fusions",
+		"Id": "fusion",
 		"Title": "Fusions",
 		"CardIdName": "darkpaladin",
 		"CardNameEn": "Dark Paladin",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/98502113.jpg"
 	},
 	{
-		"Id": "rituels",
+		"Id": "rituel",
 		"Title": "Rituels",
 		"CardIdName": "blacklustersoldier",
 		"CardNameEn": "Black Luster Soldier",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/5405694.jpg"
 	},
 	{
-		"Id": "dragons",
+		"Id": "dragon",
 		"Title": "Dragons",
 		"CardIdName": "blueeyeswhitedragon",
 		"CardNameEn": "Blue-Eyes White Dragon",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
 	},
 	{
-		"Id": "demons",
+		"Id": "demon",
 		"Title": "Démons",
 		"CardIdName": "darkrulerhades",
 		"CardNameEn": "Dark Ruler Ha Des",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/53982768.jpg"
 	},
 	{
-		"Id": "magiciens",
+		"Id": "magicien",
 		"Title": "Magiciens",
 		"CardIdName": "darkmagiciangirl",
 		"CardNameEn": "Dark Magician Girl",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/38033121.jpg"
 	},
 	{
-		"Id": "warrior",
+		"Id": "guerrier",
 		"Title": "Guerriers",
 		"CardIdName": "ddwarriorlady",
 		"CardNameEn": "D.D. Warrior Lady",
@@ -70,7 +70,7 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/40659562.jpg"
 	},
 	{
-		"Id": "tenebres",
+		"Id": "tenebre",
 		"Title": "Ténèbres",
 		"CardIdName": "archfiendsoldier",
 		"CardNameEn": "Archfiend Soldier",
@@ -126,14 +126,14 @@
 		"CardImage": "https://images.ygoprodeck.com/images/cards/33396948.jpg"
 	},
 	{
-		"Id": "dieux",
+		"Id": "dieu",
 		"Title": "Dieux",
 		"CardIdName": "thewingeddragonofra",
 		"CardNameEn": "The Winged Dragon of Ra",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/10000010.jpg"
 	},
 	{
-		"Id": "crystal",
+		"Id": "cristalline",
 		"Title": "Cristal ",
 		"CardIdName": "crystalbeasttopaztiger",
 		"CardNameEn": "Crystal Beast Topaz Tiger",
@@ -152,5 +152,61 @@
 		"CardIdName": "vampirelord",
 		"CardNameEn": "vampire lord",
 		"CardImage": "https://images.ygoprodeck.com/images/cards/53839837.jpg"
+	},
+	{
+		"Id": "toon",
+		"Title": "Toon",
+		"CardIdName": "blueeyestoondragon",
+		"CardNameEn": "Blue-Eyes Toon Dragon",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/53183600.jpg"
+	},
+	{
+		"Id": "equipement",
+		"Title": "Équipement",
+		"CardIdName": "hiddenarmory",
+		"CardNameEn": "Hidden Armory",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/52105192.jpg"
+	},
+	{
+		"Id": "rouage",
+		"Title": "Rouages Ancien",
+		"CardIdName": "ancientgeargolem",
+		"CardNameEn": "Ancient Gear Golem",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/83104731.jpg"
+	},
+	{
+		"Id": "piege",
+		"Title": "Piège",
+		"CardIdName": "threateningroar",
+		"CardNameEn": "Threatening Roar",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/36361633.jpg"
+	},
+	{
+		"Id": "pioche",
+		"Title": "Pioche",
+		"CardIdName": "royalmagicallibrary",
+		"CardNameEn": "Royal Magical Library",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/70791313.jpg"
+	},
+	{
+		"Id": "burn",
+		"Title": "Burn",
+		"CardIdName": "solarflaredragon",
+		"CardNameEn": "Solar Flare Dragon",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/45985838.jpg"
+	},
+	{
+		"Id": "roid",
+		"Title": "Roid",
+		"CardIdName": "steamroid",
+		"CardNameEn": "Steamroid",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/44729197.jpg"
+	},
+	{
+		"Id": "normal",
+		"Title": "Normal",
+		"CardIdName": "frostosaurus",
+		"CardNameEn": "Frostosaurus",
+		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/2/2b/Frostosaurus-WISU-EN-R-1E.png"
 	}
 ]

@@ -28,11 +28,11 @@ class managerMain {
     let formats = formatResult.formats;
     errors = errors.concat(formatResult.errors);
   
-    let deckErrrors =managerDeck.refresh(sheetData, cards, formats, sheets, spreedSheetId);
-    errors = errors.concat(deckErrrors);
-  
     let themeErrrors = managerTheme.refresh(sheetData, cards, sheets, spreedSheetId);
     errors = errors.concat(themeErrrors);
+  
+    let deckErrrors =managerDeck.refresh(sheetData, cards, formats, sheets, spreedSheetId);
+    errors = errors.concat(deckErrrors);
 
     let data = sheetData.Data.map(x=> {return {"Id": x[0], "Title": x[1], "Value": x[2]};});
     helperJsonFile.save('data', data);

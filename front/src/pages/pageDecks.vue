@@ -179,7 +179,7 @@ export default {
       let rankDecks = this.rankDecks.find(x=> x.Id === rank.Id).Value;
       
       this.themes.forEach(theme => {
-        let decks = rankDecks.filter(x=> theme.Id==='tous' || x.Themes.split(',').includes(theme.Id));
+        let decks = rankDecks.filter(x=> theme.Id==='tous' || helperString.replaceAll(x.Themes,' ','').split(',').includes(theme.Id));
         theme.DecksLength = decks.length;
         this.themeDecks.push({Id: theme.Id, Value: decks});
       });

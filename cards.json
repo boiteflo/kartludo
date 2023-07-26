@@ -22358,6 +22358,14 @@
 		"Bonus": true
 	},
 	{
+		"IdName": "thewhitestoneoflegend",
+		"IdNameFr": "pierreblanchelegendaire",
+		"NameEn": "The White Stone of Legend",
+		"NameFr": "Pierre Blanche Légendaire",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/LDS2/LDS2-4.jpg",
+		"Bonus": true
+	},
+	{
 		"IdName": "cyberdragonzwei",
 		"IdNameFr": "cyberdragonzwei",
 		"NameEn": "Cyber Dragon Zwei",
@@ -22403,6 +22411,14 @@
 		"NameEn": "Defense Draw",
 		"NameFr": "Pioche de Défense",
 		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/DEM3/DEM3-19.jpg",
+		"Bonus": true
+	},
+	{
+		"IdName": "shutendoji",
+		"IdNameFr": "demonshutendoji",
+		"NameEn": "Shutendoji",
+		"NameFr": "Démon Shutendoji",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/SR07/SR07-14.jpg",
 		"Bonus": true
 	},
 	{
