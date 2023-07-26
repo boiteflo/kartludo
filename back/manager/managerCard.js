@@ -18,8 +18,8 @@ class managerCard {
                 cards.push({
                     "IdName": cardArray[0].cleanup(),
                     "IdNameFr": cardArray[1].cleanup(),
-                    "NameEn":cardArray[0],
-                    "NameFr":cardArray[1],
+                    "NameEn":cardArray[0].replaceMany(',',''),
+                    "NameFr":cardArray[1].replaceMany(',',''),
                     "Image":cardArray[2],
                     "Bonus": true
                 })
