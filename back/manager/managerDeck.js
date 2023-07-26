@@ -157,13 +157,14 @@ class managerDeck {
     static getErrors(deck, deckCards, formats){
         let errors = [];
         let matchs= [];
+        let deckCardsMatchs = [];
         let cardIdNames = deckCards.map(x=> x.Card.IdName);
         let format = deck.Format ? formats.find(x=>x.Id === deck.Format) : null;
         if(!format) format = formats[formats.length-2];
 
         if(format.Limit0 && format.Limit0.length > 0){
-            let matchs = helperArray.getMatch(format.Limit0.split(',').map(x=> x.cleanup()), cardIdNames);
-            let deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName));
+            matchs = helperArray.getMatch(format.Limit0.split(',').map(x=> x.cleanup()), cardIdNames);
+            deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName));
             if(deckCardsMatchs.length > 0)
                 errors.push('Il y a des carte interdites : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
         }
