@@ -27,7 +27,7 @@
                     {{card.NameFr}}
                 </div>
                 <img v-if="card.Animation" :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :srcset="getImgUrl(card.Animation)">
-                <img v-else :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.Image"/>
+                <img v-else :style="{ width: (size ? size*0.8 : 150*.8)+ 'px' }" :src="card.ImageMDM"/>
             </div>
 
             <div v-if="tooltip==='image'" class="tooltipcard" style="font-size:8px">
@@ -37,7 +37,7 @@
                 <div class="hoverFontColor" :style="{'cursor':'pointer', width: (size ? size : 150) +'px'}" @click="copyClipboard(card.NameFr);">
                     {{card.NameFr}}
                 </div>
-                <img style="max-width:250px !important" :src="card.Image"/>
+                <img style="max-width:250px !important" :src="card.ImageMDM"/>
             </div>
         </div>
         <div style="position:absolute; top:-5px; right:-5px;">
@@ -45,13 +45,17 @@
                 {{card.Limit}}
             </div>
         </div>
+        <div style="position:absolute; top:2px; left:2px;">
+            <div v-if="!badgeoff" class="" :style="{background:getRarityColor(card.Rarity), color:'white', 'font-weight': 'bold', width:'15px', height:'15px', 'font-size':'10px', 'text-align':'center', 'font-style':'bold'}">
+                {{card.Rarity}}
+            </div>
+        </div>        
         
-        
-        <img :style="{ width: (size ? size : 150)+ 'px' }" :src="card.Image"/>
+        <img :style="{ width: (size ? size : 150)+ 'px' }" :src="card.ImageMDM"/>
         
         <img :style="{ width: (size ? size : 150)+ 'px' }" 
               v-if="x2" 
-              :src="card.Image" 
+              :src="card.ImageMDM" 
               style="position:absolute; top:18px; left:0px"
               @click="$emit('select', cardObject.Card)"/>
     </div>
@@ -68,6 +72,12 @@
         getImgUrl(value){
             var images = require.context('../assets/', false, /\.webp$/)
             return images('./' + value + ".webp")
+        },
+        getRarityColor(rarity){
+            return rarity=== 'N' ? '#9E9E9E'
+                : rarity=== 'R' ? '#3F51B5'
+                : rarity=== 'SR' ? '#FBC02D'
+                : '#673AB7';
         }
   }
   }

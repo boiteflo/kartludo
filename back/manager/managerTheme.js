@@ -24,7 +24,7 @@ class managerTheme {
 
             let card = cards.find(x=> x.IdName === theme.CardIdName);
             if(card)
-                theme.CardImage= card.Image;
+                theme.CardImage= card.ImageMDM;
             else
             {
                 errorMessage = cardNotFound;

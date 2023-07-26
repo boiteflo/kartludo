@@ -34,13 +34,14 @@ class managerDeck {
       
         let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
         let errorMessage = missingCards.length < 1 ? '' : `Les cartes suivantes n'ont pas été trouvées :` + missingCards.join(",");
-      
-        let deckList = deck.DeckListCards
+        
+        let deckCards = this.sort(deck.DeckListCards);
+        let deckList = deckCards
             .filter(x=> cardsIdName.includes(x.Card.IdName))
-            .map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))
+            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
             .join(', ');
 
-        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.Image;
+        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
         
         deck = {
             Id: "".guid(),
@@ -73,13 +74,14 @@ class managerDeck {
       
         let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
         let errorMessage = missingCards.length < 1 ? '' : `Les cartes suivantes n'ont pas été trouvées :` + missingCards.join(",");
-      
-        let deckList = deck.DeckListCards
+        
+        let deckCards = this.sort(deck.DeckListCards);
+        let deckList = deckCards
             .filter(x=> cardsIdName.includes(x.Card.IdName))
-            .map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))
+            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
             .join(', ');
 
-        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.Image;
+        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
         
         deck = {
             Id: deck.Id,
@@ -199,7 +201,7 @@ class managerDeck {
             }
 
             // MainCard
-            deck.MainCardImage = cards.find(x=> x.IdName == deck.MainCard.cleanup())?.Image;
+            deck.MainCardImage = cards.find(x=> x.IdName == deck.MainCard.cleanup())?.ImageMDM;
             if(!deck.MainCardImage)
                 errorsCards.push(deck.MainCard);
 
@@ -217,6 +219,11 @@ class managerDeck {
                 else
                     deckCards.push({Card: card, Quantity: quantity});
             }
+
+            deckCards = this.sort(deckCards);
+            deck.DeckList = deckCards
+                .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
+                .join(', ');
             
             deck.Errors = this.getErrors(deck, deckCards, formats);
             updateSheet.push({range: page + '!L' + sheetLine, value:deck.Errors ?? ''});
@@ -232,6 +239,38 @@ class managerDeck {
         } 
 
         return decks;
+    }
+
+    static sort(deckCards)
+    {
+        let result = [];
+        deckCards.forEach(x=> {x.Level = x.Card.Level; x.NameEn = x.Card.NameEn});
+
+        let normal = deckCards.filter(x=> x.Card.Type === 'Monster' && x.Card.TypeMonster.includes("Normal") && !x.Card.ToExtraDeck);
+        normal = helperArray.sortIntegerDesc(normal, 'Level');
+        result = result.concat(normal);
+
+        let rituel = deckCards.filter(x=> x.Card.Type === 'Monster' && x.Card.TypeMonster.includes("Ritual"));
+        rituel = helperArray.sortIntegerDesc(rituel, 'Level');
+        result = result.concat(rituel);
+        
+        let effect = deckCards.filter(x=> x.Card.Type === 'Monster' && !x.Card.TypeMonster.includes("Normal") && !x.Card.ToExtraDeck && !x.Card.TypeMonster.includes("Ritual"));
+        effect = helperArray.sortIntegerDesc(effect, 'Level');
+        result = result.concat(effect);
+        
+        let spell = deckCards.filter(x=> x.Card.Type === 'Spell');
+        spell = helperArray.sort(spell, 'NameEn');
+        result = result.concat(spell);
+        
+        let trap = deckCards.filter(x=> x.Card.Type === 'Trap');
+        trap = helperArray.sort(trap, 'NameEn');
+        result = result.concat(trap);
+
+        let extra = deckCards.filter(x=> x.Card.ToExtraDeck);
+        extra = helperArray.sortIntegerDesc(extra, 'Level');
+        result = result.concat(extra);
+
+        return result;
     }
 
     static getErrors(deck, deckCards, formats){
@@ -277,7 +316,8 @@ class managerDeck {
                     errorJokerQuantityx2.push(cardObj.Card.NameEn);
             }
             
-            deck.DeckLength+= quantity;
+            if(!cardObj.Card.ToExtraDeck)
+                deck.DeckLength+= quantity;
         });
 
         if(jokerLength > 3)

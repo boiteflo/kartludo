@@ -47,8 +47,12 @@
             <div v-else class="bg2 w100p" style="height:500px">
             </div>
           </div>
-          <div style="flex-basis: 0; flex-grow:5; min-height:400px" class="m5px">            
-            <panelDeckCards :cards="deck.DeckListCards"
+          <div style="flex-basis: 0; flex-grow:5; min-height:400px" class="m5px">
+            <panelDeckCards :cards="getCards(false)"
+              :size="$vuetify.breakpoint.width *40 /600"
+              @hover="showCard">
+            </panelDeckCards>
+            <panelDeckCards :cards="getCards(true)"
               :size="$vuetify.breakpoint.width *40 /600"
               @hover="showCard">
             </panelDeckCards>
@@ -109,6 +113,7 @@
 
 <script>
 import helperJs from '../helpers/helperJs';
+import serviceDeck from '../services/serviceDeck';
 
 import panelDeckCards from './panelDeckCards';
 import cardImage from './cardImage';
@@ -127,6 +132,11 @@ import cardImage from './cardImage';
       },
       showCard(card){
           this.cardHover = card;
+      },
+      getCards(extra){
+        if(!this.deck || !this.deck.DeckListCards)
+          return [];
+        return serviceDeck.sort(this.deck.DeckListCards.filter(x=> x.Card.ToExtraDeck === extra));
       },
       saveDecklist(){
         helperJs.saveFile(this.deck.Title + '_decklist.txt', `${this.deck.Title} - ${ this.deck.Author} - ${ this.deck.Date}\n${this.deck.DeckList.replace(/,/g,'\n')}`);

@@ -45,16 +45,13 @@
 
                 <div v-if="$vuetify.breakpoint.width >= 930" class="flex">
                     <div class="bg" style="flex-grow:2; flex-basis: 0">
-                        <div class="bg2 flex flex-center">
-                            <div style="color:white; margin: 10px 5px 5px 5px">Lorsque je sélectionne une carte : </div>
-                            <v-btn :class="{bg: deckClickMode===0, bg2: deckClickMode!==0, m5px:true}"  @click="deckClickMode=0">
-                                Supprimer
-                            </v-btn>
-                            <v-btn :class="{bg: deckClickMode===1, bg2: deckClickMode!==1, m5px:true}"  @click="deckClickMode=1">
-                                Changer l'ordre
-                            </v-btn>
-                        </div>
-                        <panel-deck-cards :cards="deckObj.DeckListCards"
+                        <panel-deck-cards :cards="getCards(false)"
+                                    :size="75"
+                                    @select="selectCardFromDeck"
+                                    @hover="showCard"
+                                    v-bind:key="refreshCards">
+                        </panel-deck-cards>
+                        <panel-deck-cards :cards="getCards(true)"
                                     :size="75"
                                     @select="selectCardFromDeck"
                                     @hover="showCard"
@@ -134,21 +131,18 @@
                                     @select="selectCard">
                         </panel-cards>
                     </div>
-                    <panel-deck-cards :cards="deckObj.DeckListCards"
+                    <panel-deck-cards :cards="getCards(false)"
                                 @select="selectCardFromDeck"
                                 tooltip="image"
                                 :size="50" 
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
-                    <div class="bg2 flex flex-center" style="color:white">Lorsque je sélectionne une carte :</div>
-                    <div class="bg2 flex flex-center">
-                        <v-btn :class="{bg: deckClickMode===0, bg2: deckClickMode!==0, m5px:true}"  @click="deckClickMode=0">
-                            Supprimer
-                        </v-btn>
-                        <v-btn :class="{bg: deckClickMode===1, bg2: deckClickMode!==1, m5px:true}"  @click="deckClickMode=1">
-                            Changer l'ordre
-                        </v-btn>
-                    </div>
+                    <panel-deck-cards :cards="getCards(true)"
+                                @select="selectCardFromDeck"
+                                tooltip="image"
+                                :size="50" 
+                                v-bind:key="refreshCards">
+                    </panel-deck-cards>
                 </div>
                 <br>
                 <!--
@@ -182,7 +176,6 @@ import { store } from '../data/store.js'
 import ServiceMain from '../services/serviceMain'
 import ServiceDeck from '../services/serviceDeck'
 import helperString from '../helpers/helperString'
-import helperArray from '../helpers/helperArray'
 
 import cardImage from './cardImage.vue'
 import panelCards from './panelCards.vue'
@@ -205,15 +198,19 @@ let md5 = require('md5');
         selectMainCard: false,
         selectThemes: false,
         cardHover:null,
-        deckClickMode : 0 // 0 = delete card, 1 = switch order
     }),
     mounted(){
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null, Format: store.formatSelected.Title};
         this.deckObj.Rank= 3; //this.ranks.find(x=> x.Id ==this.deckObj.Rank);
-        this.deckObj.Themes= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> this.deckObj.Themes.includes(x.Id)) : [];
+        // this.deckObj.Themes= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> this.deckObj.Themes.includes(x.Id)) : [];
         this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
     },
     methods: {
+        getCards(extra){
+            if(!this.deckObj || !this.deckObj.DeckListCards)
+            return [];
+            return ServiceDeck.sort(this.deckObj.DeckListCards.filter(x=> x.Card.ToExtraDeck === extra));
+        },
         search(value){
             this.selectedCards = ServiceMain.filterCard(store.cards, value);
         },
@@ -232,16 +229,7 @@ let md5 = require('md5');
             let cardObject = this.deckObj.DeckListCards.find(x=> x.Card.IdName === card.IdName);
             if(!cardObject)
                 return;
-            
-            // Change Order
-            if(this.deckClickMode === 1)
-            {
-                this.deckObj.DeckListCards = helperArray.move(this.deckObj.DeckListCards, 'Id', {Id:card.IdName}, -1);
-                this.refreshCards++;
-                return;
-            }
 
-            // Remove card
             if(cardObject.Quantity === "2")
             {
                 cardObject.Quantity = null;

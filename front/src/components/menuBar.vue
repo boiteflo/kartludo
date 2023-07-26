@@ -55,21 +55,21 @@
         </v-btn>
       </a>
     </v-app-bar>
-    <template v-if="$vuetify.breakpoint.width < 800">      
+    <template v-if="$vuetify.breakpoint.width < 800"> 
+      <v-combobox class="flex-grow m5px"
+        v-model="store.formatSelected" 
+        label="Format" 
+        :items="store.formats" 
+        item-text="Title"
+        hide-details
+        @input="selectFormat">
+      </v-combobox>     
       <v-text-field class="flex-grow m5px"
                     hide-details
                     v-model="searchString"
                     label="Chercher une carte (FR ou EN)"
                     @input="$emit('search', $event)">
       </v-text-field>
-        <v-combobox v-model="store.formatSelected" 
-          label="Format" 
-          :items="store.formats" 
-          item-text="Title"
-          hide-details
-          style="margin: 0px 5px 0px 5px; width:100px;"
-          @input="selectFormat">
-        </v-combobox>
     </template>
   </div>
 </template>

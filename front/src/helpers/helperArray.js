@@ -48,9 +48,12 @@ class helperArray {
         return array.sort((a,b)=> a[property] - b[property])
     }
 
-
     static sortInteger= (array, property) => {
         return array.sort((a,b)=> parseInt(a[property]) - parseInt(b[property]))
+    }
+
+    static sortIntegerDesc= (array, property) => {
+        return array.sort((a,b)=> parseInt(b[property]) - parseInt(a[property]))
     }
 
 

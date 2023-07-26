@@ -13,6 +13,7 @@ class managerCard {
         let cards = require("../data/cards");
         
         // Extra
+        /*
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -25,6 +26,7 @@ class managerCard {
                 })
             );
         }
+        */
 
         cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
 
@@ -35,7 +37,20 @@ class managerCard {
             NameFr: x.NameFr,
             Image: x.Image,
             Animation: x.Animation,
-            Bonus : x.Bonus
+            Bonus : x.Bonus,
+            ImageMDM:x.ImageMDM,
+            Type:x.Type,
+            TypeMonster:x.TypeMonster,
+            ToExtraDeck:x.ToExtraDeck,
+            KonamiID:x.KonamiID,
+            Level:x.Level,
+            Scale:x.Scale,
+            Race:x.Race,
+            Attribute:x.Attribute,
+            Atk:x.Atk,
+            Def:x.Def,
+            Rarity:x.Rarity,
+            TcgRelease:x.TcgRelease
         }});
         
         helperJsonFile.savePath('./cards.json', cards);
