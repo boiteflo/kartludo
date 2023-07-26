@@ -160,17 +160,24 @@ class managerDeck {
         let format = deck.Format ? formats.find(x=>x.Id === deck.Format) : null;
         if(!format) format = formats[formats.length-2];
 
-        let matchs = helperArray.getMatch(format.Limit0.split(',').map(x=> x.cleanup()), cardIdNames);
-        let deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName));
-        if(deckCardsMatchs.length > 0)
-            errors.push('Il y a des carte interdites : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
+        if(format.Limit0 && format.Limit0.length > 0){
+            let matchs = helperArray.getMatch(format.Limit0.split(',').map(x=> x.cleanup()), cardIdNames);
+            let deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName));
+            if(deckCardsMatchs.length > 0)
+                errors.push('Il y a des carte interdites : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
+        }
         
-        matchs = helperArray.getMatch(format.Limit1.split(',').map(x=> x.cleanup()), cardIdNames);
-        deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName) && x.Quantity === '2');
-        if(deckCardsMatchs.length > 0)
-            errors.push('Il y a des carte limitées en doublon : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
+        if(format.Limit0 && format.Limit0.length > 0){
+            matchs = helperArray.getMatch(format.Limit1.split(',').map(x=> x.cleanup()), cardIdNames);
+            deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName) && x.Quantity === '2');
+            if(deckCardsMatchs.length > 0)
+                errors.push('Il y a des carte limitées en doublon : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
+        }
 
-        matchs = helperArray.getMatch(format.Joker.split(',').map(x=> x.cleanup()), cardIdNames);
+        matchs= [];
+        if(format.Limit0 && format.Limit0.length > 0){
+            matchs = helperArray.getMatch(format.Joker.split(',').map(x=> x.cleanup()), cardIdNames);
+        }
         deck.DeckLength = 0;
         let jokerLength = 0;
         let x2Length = 0;
@@ -200,12 +207,14 @@ class managerDeck {
         if(errorJokerQuantityx2.length > 0)
             errors.push('Les cartes jokers sont limitées à un seul exemplaire. Cartes a corriger :' + errorJokerQuantityx2.join(', '));
         
-        format.Limit1Groups.split('|').forEach(group => {
-            let groupCards = group.split(',').map(x=> x.cleanup());
-            matchs = helperArray.getMatch(groupCards, cardIdNames);
-            if(matchs.length > 2)
-                errors.push('Ce groupe de limitation n est pas respecté : ' + group);
-        })
+        if(format.Limit0 && format.Limit0.length > 0){
+            format.Limit1Groups.split('|').forEach(group => {
+                let groupCards = group.split(',').map(x=> x.cleanup());
+                matchs = helperArray.getMatch(groupCards, cardIdNames);
+                if(matchs.length > 2)
+                    errors.push('Ce groupe de limitation n est pas respecté : ' + group);
+            })
+        }
 
         if(deck.DeckLength < 40)
             errors.push('Pas assez de cartes : ' + deck.DeckLength);
