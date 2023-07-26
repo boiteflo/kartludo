@@ -66,7 +66,7 @@ class managerTheme {
         res.status(201).send(format.Id);
     }
 
-    static getSheetRanges(){return ["Formats!B2:J", 'Bonus!B2:B','Limit0!B2:B', 'Limit1!B2:C', 'Joker!B2:B'];}
+    static getSheetRanges(){return ["Formats!B2:K", 'Bonus!B2:B','Limit0!B2:B', 'Limit1!B2:C', 'Joker!B2:B'];}
 
     static refresh= (sheetData, cards, sheets, spreedSheetId) => {
         if(!sheetData)

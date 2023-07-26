@@ -22388,19 +22388,11 @@
 		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/95/TheWhiteStoneofLegend-LDS2-EN-C-1E.png"
 	},
 	{
-		"IdName": "ladyofd",
-		"IdNameFr": "dammedesd",
-		"NameEn": "lady of d.",
-		"NameFr": "damme des d.",
-		"Image": "https://static.wikia.nocookie.net/yugioh/images/d/de/LadyofD-GAOV-EN-C-1E.png",
-		"Bonus": true
-	},
-	{
 		"IdName": "rinyanlightswornrogue",
 		"IdNameFr": "ryanlevoleurseigneurlumiere",
 		"NameEn": "Rinyan, Lightsworn Rogue",
 		"NameFr": "Ryan le Voleur, Seigneur Lumière",
-		"Image": "https://static.wikia.nocookie.net/yugioh/images/9/99/AlienKid-CRMS-EN-SR-UE.png/revision/latest/scale-to-width-down/300?cb=20150223200458",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/AP05/AP05-17.jpg",
 		"Bonus": true
 	},
 	{
@@ -22424,6 +22416,7 @@
 		"IdNameFr": "envoyedessixsamourais",
 		"NameEn": "Hand of the Six Samurai",
 		"NameFr": "Envoyé des Six Samouraïs",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/SPWA/SPWA-42.jpg",
 		"Bonus": true
 	},
 	{
@@ -22431,6 +22424,7 @@
 		"IdNameFr": "cauchemarducraneserviteur",
 		"NameEn": "Wightmare",
 		"NameFr": "Cauchemar du Crâne Serviteur",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/DUOV/DUOV-65.jpg",
 		"Bonus": true
 	},
 	{
@@ -22438,6 +22432,7 @@
 		"IdNameFr": "marquepagetoon",
 		"NameEn": "Toon Bookmark",
 		"NameFr": "Marque-Page Toon",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/BLCR/BLCR-67.jpg",
 		"Bonus": true
 	},
 	{
@@ -22445,6 +22440,7 @@
 		"IdNameFr": "bouclierdivinlechevaliermagique",
 		"NameEn": "Defender, the Magical Knight",
 		"NameFr": "Bouclier Divin, le Chevalier Magique",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/SR08/SR08-7.jpg",
 		"Bonus": true
 	},
 	{
@@ -22452,6 +22448,7 @@
 		"IdNameFr": "cyberdragonzwei",
 		"NameEn": "Cyber Dragon Zwei",
 		"NameFr": "Cyber Dragon Zwei",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/SDCS/SDCS-4.jpg",
 		"Bonus": true
 	},
 	{
@@ -22459,6 +22456,7 @@
 		"IdNameFr": "mokeymokeyaladerive",
 		"NameEn": "Mokey Mokey Adrift",
 		"NameFr": "Mokey Mokey à la Dérive",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/POTE/POTE-30.jpg",
 		"Bonus": true
 	},
 	{
@@ -22466,6 +22464,7 @@
 		"IdNameFr": "pendulierdecombat",
 		"NameEn": "Battle Fader",
 		"NameFr": "Pendulier de Combat",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/YS18/YS18-19.jpg",
 		"Bonus": true
 	},
 	{
@@ -22473,6 +22472,7 @@
 		"IdNameFr": "levrainom",
 		"NameEn": "The True Name",
 		"NameFr": "Le Vrai Nom",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/MAMA/MAMA-113.jpg",
 		"Bonus": true
 	},
 	{
@@ -22480,6 +22480,7 @@
 		"IdNameFr": "supervision",
 		"NameEn": "Supervise",
 		"NameFr": "Supervision",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/TOCH/TOCH-55.jpg",
 		"Bonus": true
 	},
 	{
@@ -22487,20 +22488,23 @@
 		"IdNameFr": "piochededefense",
 		"NameEn": "Defense Draw",
 		"NameFr": "Pioche de Défense",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/DEM3/DEM3-19.jpg",
 		"Bonus": true
 	},
 	{
 		"IdName": "forbiddenlance",
-		"IdNameFr": "graalinterdit",
+		"IdNameFr": "lanceinterdite",
 		"NameEn": "Forbidden Lance",
-		"NameFr": "Graal Interdit",
+		"NameFr": "Lance Interdite",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/EGO1/EGO1-29.jpg",
 		"Bonus": true
 	},
 	{
 		"IdName": "forbiddenchalice",
-		"IdNameFr": "lanceinterdite",
+		"IdNameFr": "graalinterdit",
 		"NameEn": "Forbidden Chalice",
-		"NameFr": "Lance Interdite",
+		"NameFr": "Graal Interdit",
+		"Image": "https://www.otk-expert.fr/cartes/yugioh_ext/OP19/OP19-11.jpg",
 		"Bonus": true
 	}
 ]
