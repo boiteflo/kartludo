@@ -169,7 +169,7 @@ class managerDeck {
                 errors.push('Il y a des carte interdites : ' + deckCardsMatchs.map(x=> x.Card.NameEn).join(', '));
         }
         
-        if(format.Limit0 && format.Limit0.length > 0){
+        if(format.Limit1 && format.Limit1.length > 0){
             matchs = helperArray.getMatch(format.Limit1.split(',').map(x=> x.cleanup()), cardIdNames);
             deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName) && x.Quantity === '2');
             if(deckCardsMatchs.length > 0)
@@ -177,7 +177,7 @@ class managerDeck {
         }
 
         matchs= [];
-        if(format.Limit0 && format.Limit0.length > 0){
+        if(format.Joker && format.Joker.length > 0){
             matchs = helperArray.getMatch(format.Joker.split(',').map(x=> x.cleanup()), cardIdNames);
         }
         deck.DeckLength = 0;
@@ -209,7 +209,7 @@ class managerDeck {
         if(errorJokerQuantityx2.length > 0)
             errors.push('Les cartes jokers sont limitées à un seul exemplaire. Cartes a corriger :' + errorJokerQuantityx2.join(', '));
         
-        if(format.Limit0 && format.Limit0.length > 0){
+        if(format.Limit1Groups && format.Limit1Groups.length > 0){
             format.Limit1Groups.split('|').forEach(group => {
                 let groupCards = group.split(',').map(x=> x.cleanup());
                 matchs = helperArray.getMatch(groupCards, cardIdNames);
