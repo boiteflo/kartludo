@@ -10,9 +10,9 @@
           <!-- Deck sélectionné -->
           <v-dialog v-model="showDeck">
             <div v-if="deckSelected">
-              <panel-deck v-if="!isDraft" :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect">
+              <panel-deck v-if="!deckSelected.isDraft" :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" @duplicate="duplicate">
               </panel-deck>
-              <panel-create-deck v-else :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" :themes="themes" :staples="staples" :ranks="ranks">
+              <panel-create-deck v-else :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" :themes="themes" :staples="staples" >
               </panel-create-deck>
             </div>
           </v-dialog>
@@ -216,6 +216,10 @@ export default {
     unselect(){
       this.deckSelected=null;
       this.showDeck = false;
+    },
+    duplicate(deck){
+      ServiceBack.insert('deck/duplicate', deck)
+        .then(res=> window.location.href = '/deck/id=' + res.data);
     }
   }
 };

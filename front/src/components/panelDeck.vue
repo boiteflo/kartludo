@@ -33,7 +33,7 @@
               <v-icon>mdi-download</v-icon>
               Télécharger la decklist
             </v-btn>  
-            <v-btn target="_blank" text  class="bg m5px w100p" >
+            <v-btn target="_blank" text  class="bg m5px w100p" @click="$emit('duplicate', deck)" >
               <v-icon>mdi-content-duplicate</v-icon>
               Dupliquer ce deck
             </v-btn>  

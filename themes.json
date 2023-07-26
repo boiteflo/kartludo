@@ -156,9 +156,9 @@
 	{
 		"Id": "toon",
 		"Title": "Toon",
-		"CardIdName": "blueeyestoondragon",
-		"CardNameEn": "Blue-Eyes Toon Dragon",
-		"CardImage": "https://images.ygoprodeck.com/images/cards/53183600.jpg"
+		"CardIdName": "toondarkmagiciangirl",
+		"CardNameEn": "Toon Dark Magician Girl",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/90960358.jpg"
 	},
 	{
 		"Id": "equipement",
@@ -205,8 +205,8 @@
 	{
 		"Id": "normal",
 		"Title": "Normal",
-		"CardIdName": "frostosaurus",
-		"CardNameEn": "Frostosaurus",
-		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/2/2b/Frostosaurus-WISU-EN-R-1E.png"
+		"CardIdName": "cosmoqueen",
+		"CardNameEn": "Cosmo Queen",
+		"CardImage": "https://images.ygoprodeck.com/images/cards/38999506.jpg"
 	}
 ]

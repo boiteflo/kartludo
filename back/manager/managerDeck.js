@@ -6,21 +6,26 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 
 class managerDeck {
 
-    static async readDecks(){
+    static async read(){
         return await helperJsonFile.readPath('./decks.json');
     }
 
-    static async saveDecks(decks){
+    static async save(decks){
         helperJsonFile.save('decks', decks);
     }
 
     static async getAll(res){        
-        res.send(await this.readDecks());
+        res.send(await this.read());
     }
 
     static async get(id, res){        
-        let data = await this.readDecks();
+        let data = await this.read();
         res.send(data.find(x=> x.Id === id));    
+    }
+
+    static async insertOrUpdate(deck, res){
+        if(!deck.Id) this.insert(deck, res);
+        else this.update(deck, res);
     }
 
     static async insert(deck, res){        
@@ -53,12 +58,93 @@ class managerDeck {
 			Errors: deck.Errors
         };
 
+        this.saveDeck(deck, errorMessage);
+
+        let decks = await this.read();
+        decks.push(deck);
+        this.save(decks);
+      
+        res.status(201).send(deck.Id);
+    }
+
+    static async update(deck, res){        
+        let cards = await helperJsonFile.read('cards');
+        let cardsIdName = cards.map(x=> x.IdName);
+      
+        let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
+        let errorMessage = missingCards.length < 1 ? '' : `Les cartes suivantes n'ont pas été trouvées :` + missingCards.join(",");
+      
+        let deckList = deck.DeckListCards
+            .filter(x=> cardsIdName.includes(x.Card.IdName))
+            .map(x=> x.Card.NameEn.onlyAlphaNumericAndSpace() + (x.Quantity==='2' ? ' x2' : ''))
+            .join(', ');
+
+        let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.Image;
+        
+        deck = {
+            Id: deck.Id,
+            Format: deck.Format,
+			Rank: deck.Rank ? deck.Rank.Id : 3,
+			Title: deck.Title,
+            IsDraft: true,
+			Date: new Date().toLocaleDateString("fr"),
+			Author: deck.Author,
+			MainCard: deck.MainCard,
+			MainCardImage: mainCardImage,
+			Themes: deck.ThemesId ? deck.ThemesId.join(',') : 'autre',
+			DeckList: deckList,
+			DeckLength: deck.DeckLength,
+			Errors: deck.Errors
+        };
+
+        this.saveDeck(deck, errorMessage, deck.Id);
+
+        let decks = await this.read();
+        decks = decks.filter(x=> x.Id !== deck.Id).concat([deck]);
+        this.save(decks);
+      
+        res.status(201).send(deck.Id);
+    }
+
+    static async duplicate(deck, res){
+        deck = {
+            Id: "".guid(),
+            Format: '',
+			Rank: 3,
+			Title: 'Copie de ' + deck.Title,
+            IsDraft: true,
+			Date: new Date().toLocaleDateString("fr"),
+			Author: '',
+			MainCard: deck.MainCard,
+			MainCardImage: deck.MainCardImage,
+			Themes: deck.Themes,
+			DeckList: deck.DeckList,
+			DeckLength: deck.DeckLength
+        };
+
+        this.saveDeck(deck, '');
+
+        let decks = await this.read();
+        decks.push(deck);
+        this.save(decks);
+      
+        res.status(201).send(deck.Id);
+    }
+
+    static async saveDeck(deck, errorMessage, id){
         const helperGoogleApi = require("../helper/helperGoogleApi");
         const { sheets } = await helperGoogleApi.authSheets();
         let requestsPages = ['Decks!B2:I'];  
         const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
 
-        const sheetLine = sheetData.Decks ? sheetData.Decks.length+2 : 2;
+        let sheetLine = sheetData.Decks ? sheetData.Decks.length+2 : 2;
+        if(id){
+            let row = sheetData.Decks
+                .map((x, index)=> {return {"Id": x[0], "Index":index};})
+                .find(x=> x.Id === id);
+            if(!row) return;
+            sheetLine = row.Index+2;
+        }
         let updateSheet = [];
         
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage});
@@ -75,12 +161,6 @@ class managerDeck {
         updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
-
-        let decks = await this.readDecks();
-        decks.push(deck);
-        this.saveDecks(decks);
-      
-        res.status(201).send(deck.Id);
     }
 
     static getSheetRanges(){return ["Decks!B2:L"];}
@@ -90,7 +170,7 @@ class managerDeck {
         let updateSheet = [];
         let decks = this.rebuildDecks(sheetData.Decks, errors, 'Decks', cards, formats, updateSheet);
         
-        this.saveDecks(decks);
+        this.save(decks);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
         return errors;
     }

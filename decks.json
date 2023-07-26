@@ -4,7 +4,7 @@
 		"Format": "v1alpha",
 		"Rank": "3",
 		"Title": "Guerriers bien équippés",
-		"IsDraft": false,
+		"IsDraft": true,
 		"Date": "17/07/2023",
 		"Author": "FlorentOutan",
 		"MainCard": "Command Knight",
@@ -16,7 +16,7 @@
 	},
 	{
 		"Id": "919ee4fa-5eb5-4bd4-9134-b38b918a0aae",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Protecteur du tombeau PostBan",
 		"IsDraft": false,
@@ -46,7 +46,7 @@
 	},
 	{
 		"Id": "ebdeebc3-faa6-46e7-a25e-fffa0704b9e1",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Six Samuraïs PostBan",
 		"IsDraft": false,
@@ -84,10 +84,10 @@
 		"Author": "Arty75",
 		"MainCard": "the masked beast",
 		"Themes": "rituel",
-		"DeckList": "luster dragon, insect knight, sabersaurus, gladiator beast andal, sangan, witch of the black forest, senju of the thousand hands x2, sonic bird, mystic tomato, goblin attack force, newdoria, dark jeroid, manju of the ten thousand hands x2, doomcaliber knight, relinquished, the masked beast, demise king of armageddon, dark hole, swords of revealing light, monster reborn, pot of greed, nightmare's steelcage, galaxy cyclone, mystic plasma zone, black illusion ritual, contract with the abyss, advanced ritual art, mystical space typhoon, book of moon, enemy controller, waboku, jar of greed, sakuretsu armor, curse of anubis, negate attack, seven tools of the bandit, judgment of anubis",
+		"DeckList": "luster dragon, insect knight, sabersaurus, gladiator beast andal, sangan, witch of the black forest, senju of the thousand hands x2, sonic bird, mystic tomato, goblin attack force, newdoria, dark jeroid, manju of the ten thousand hands x2, doomcaliber knight, Sphere Kuriboh, relinquished, the masked beast, demise king of armageddon, dark hole, swords of revealing light, monster reborn, pot of greed, nightmare's steelcage, galaxy cyclone, mystic plasma zone, black illusion ritual, contract with the abyss, advanced ritual art, mystical space typhoon, book of moon, enemy controller, waboku, jar of greed, sakuretsu armor, curse of anubis, negate attack, seven tools of the bandit, judgment of anubis",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/49064413.jpg",
-		"DeckLength": 39,
-		"Errors": "Pas assez de cartes : 39"
+		"DeckLength": 40,
+		"Errors": null
 	},
 	{
 		"Id": "ccde670d-2f47-4496-898c-2e2c85cb0aeb",
@@ -136,7 +136,7 @@
 	},
 	{
 		"Id": "93b055fe-87a3-48da-b099-0243b7346f29",
-		"Format": "",
+		"Format": "v1alpha",
 		"Rank": "4",
 		"Title": "JOEY B.City",
 		"IsDraft": false,
@@ -147,7 +147,7 @@
 		"DeckList": "redeyes black metal dragon,gilford the lightning,redeyes black dragon,jinzo,axe raider,masaki the legendary swordsman, command knight x2,gearfried the iron knight,alligators sword,panther warrior,rocket warrior,littlewinguard,warrior lady of the wasteland, baby dragon,swordsman of landstar,king of the swamp x2,time wizard,black dragons chick,scapegoat,shield  sword,graceful dice,monster reborn,polymerization x2,fusion sage,pot of greed,pot of avarice,salamandra,heavy storm,mystical space typhoon,fairy box,magical arm shield,kunai with chain,skull dice,torrential tribute,bottomless trap hole,metalmorph,graverobber,black skull dragon,meteor black dragon,thousand dragon,alligators sword dragon,flame swordsman",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/45231177.jpg",
 		"DeckLength": 45,
-		"Errors": "Il y a des carte limitées en doublon : Command Knight"
+		"Errors": null
 	},
 	{
 		"Id": "1214aa63-6bbc-43f3-bfa9-c084ac65cb99",
@@ -211,7 +211,7 @@
 	},
 	{
 		"Id": "67c9477c-6e0e-4bea-8b26-4d05957e0180",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Y. Bleus",
 		"IsDraft": false,
@@ -226,7 +226,7 @@
 	},
 	{
 		"Id": "dd2a9814-1c4b-4b4d-bca1-8cbd38d0a35c",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Lightsworn Post ban",
 		"IsDraft": false,
@@ -241,7 +241,7 @@
 	},
 	{
 		"Id": "d7ae98b8-c6c4-451b-864d-0936dab75c97",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Zombie Taper FORT",
 		"IsDraft": false,
@@ -256,7 +256,7 @@
 	},
 	{
 		"Id": "2d73adf3-db63-4c8a-8744-c2e4d2f1a9da",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Guerrier bannissement challenge",
 		"IsDraft": false,
@@ -369,10 +369,10 @@
 		"Author": "From Ager",
 		"MainCard": "elemental hero shining flare wingman",
 		"Themes": "hero",
-		"DeckList": "elemental hero avian,elemental hero burstinatrix,elemental hero clayman,elemental hero sparkman,elemental hero neos,morphing jar,king of the swamp,gravekeepers guard,elemental hero bubbleman,elemental hero woodsman,elemental hero stratos x2,elemental hero captain gold,destiny hero  dunker,elemental hero necroshade,jinzo,destiny hero  malicious x2,destiny hero  dreadmaster,destiny hero  plasma,fissure,polymerization x2,monster reborn,lightning vortex,reinforcement of the army,smashing ground,fusion recovery,destiny draw,skyscraper,clock tower prison,skyscraper 2  hero city,shard of greed,mystical space typhoon,enemy controller,hand destruction,sakuretsu armor,call of the haunted,elemental hero flame wingman,elemental hero thunder giant,elemental hero phoenix enforcer,elemental hero shining flare wingman,elemental hero tempest",
+		"DeckList": "elemental hero avian,elemental hero burstinatrix,elemental hero clayman,elemental hero sparkman,elemental hero neos,king of the swamp,gravekeepers guard,elemental hero bubbleman,elemental hero woodsman,elemental hero stratos x2,elemental hero captain gold,destiny hero  dunker,elemental hero necroshade,jinzo,destiny hero  malicious x2,destiny hero  dreadmaster,destiny hero  plasma,fissure,polymerization x2,monster reborn,lightning vortex,reinforcement of the army,smashing ground,fusion recovery,destiny draw,skyscraper,clock tower prison,skyscraper 2  hero city,shard of greed,mystical space typhoon,enemy controller,hand destruction,sakuretsu armor,call of the haunted,elemental hero flame wingman,elemental hero thunder giant,elemental hero phoenix enforcer,elemental hero shining flare wingman,elemental hero tempest",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/25366484.jpg",
-		"DeckLength": 43,
-		"Errors": "Il y a trop de jokers : 4"
+		"DeckLength": 42,
+		"Errors": null
 	},
 	{
 		"Id": "a3758c94-1c7e-4c3a-8d15-7a165479841a",
@@ -406,7 +406,7 @@
 	},
 	{
 		"Id": "2d73adf3-db63-4c8a-8744-c2e4d2f1a9da",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Guerrier bannissement challenge",
 		"IsDraft": false,
@@ -421,7 +421,7 @@
 	},
 	{
 		"Id": "0f40f299-dd4c-4cfc-9771-7db9c4cf9f5a",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Exodia contrôle ",
 		"IsDraft": false,
@@ -436,7 +436,7 @@
 	},
 	{
 		"Id": "72f188e2-e186-482b-b114-279bea301e03",
-		"Format": "",
+		"Format": "mdoldschoolv2",
 		"Rank": "3",
 		"Title": "insect - v2",
 		"IsDraft": false,
@@ -451,7 +451,7 @@
 	},
 	{
 		"Id": "006e975b-7b0c-4d31-ac8a-d118bd163cca",
-		"Format": "",
+		"Format": "v1alpha",
 		"Rank": "3",
 		"Title": "Rainbow",
 		"IsDraft": false,
@@ -462,7 +462,7 @@
 		"DeckList": "elemental hero neos, injection fairy lily, crystal beast amethyst cat, crystal beast ruby carbuncle, crystal beast emerald tortoise, crystal beast amber mammoth x2, crystal beast topaz tiger, vortex trooper, witch of the black forest, giant rat, shining angel, crystal beast cobalt eagle, crystal beast sapphire pegasus x2, herald of creation, hamon  lord of striking thunder, rainbow dragon, dark hole, swords of revealing light, polymerization, monster reborn, pot of greed, nightmares steelcage, terraforming, gold sarcophagus, crystal beacon, rare value, crystal blessing, crystal abundance, crystal release, ancient city  rainbow ruins, Future Fusion, scapegoat, twin twisters, raigeki break, compulsory evacuation device, rainbow gravity, crystal conclave x2, Rainbow Neos, Rainbow Overdragon",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/79856792.jpg",
 		"DeckLength": 42,
-		"Errors": "Il y a des carte interdites : Crystal Abundance, Crystal Conclave. Il y a trop de jokers : 4"
+		"Errors": null
 	},
 	{
 		"Id": "c84a7e3d-2f2c-4aa5-851d-92b534a69614",
@@ -699,10 +699,10 @@
 		"Author": "HayatteMADI",
 		"MainCard": "Heart of the Underdog",
 		"Themes": "normal",
-		"DeckList": "blueeyes white dragon, cosmo queen, frostosaurus, summoned skull, gemini elf, vorse raider, dark blade, jerry beans man, hunter dragon, mad lobster, sonic duck, dragon zombie, the judgement hand, giant soldier of stone, elemental hero burstinatrix, charcoal inpachi, dd trainer, mokey mokey, dark hole, monster reborn, pot of greed, ancient rules, enemy controller, book of moon, twin twisters, gold sarcophagus, amulet of ambition, creature swap, enchanting fitting room, dark factory of mass production, summoners art, heat wave, nonspellcasting area, heart of the underdog, dimensional prison, skill drain, justibreak, birthright, dark bribe",
+		"DeckList": "blueeyes white dragon, cosmo queen, frostosaurus, summoned skull, gemini elf, vorse raider, dark blade, jerry beans man, hunter dragon, mad lobster, sonic duck, dragon zombie, the judgement hand, giant soldier of stone, elemental hero burstinatrix, charcoal inpachi, dd trainer, mokey mokey, dark hole, monster reborn, pot of greed, ancient rules, enemy controller, book of moon, twin twisters, gold sarcophagus, amulet of ambition, creature swap, enchanting fitting room, dark factory of mass production, summoners art, heat wave, nonspellcasting area, heart of the underdog x2, dimensional prison, skill drain, justibreak, birthright, dark bribe",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/35762283.jpg",
-		"DeckLength": 39,
-		"Errors": "Pas assez de cartes : 39"
+		"DeckLength": 40,
+		"Errors": null
 	},
 	{
 		"Id": "35cb19dc-77e9-4145-928e-17c9d0c03498",
@@ -747,6 +747,20 @@
 		"DeckList": "cyber dragon, cyber phoenix, cyber valley, ancient gear gadget, green gadget x2, red gadget, yellow gadget x2, ancient gear gadjiltron dragon, ancient gear gadjiltron chimera, ancient gear castle, neospacian grand mole, blast sphere, kelbek, giant rat x2, dekoichi the battlechanted locomotive, nanobreaker, truckroid, swords of revealing light, monster reborn, pot of greed, creature swap, smashing ground, galaxy cyclone, ribbon of rebirth, geartown, mystical space typhoon, book of moon, enemy controller, forbidden lance, mirror force, malevolent catastrophe, compulsory evacuation device, draining shield, dimensional prison, nightmare wheel, stronghold the moving fortress, ancient gear knight",
 		"MainCardImage": "https://images.ygoprodeck.com/images/cards/50933533.jpg",
 		"DeckLength": 40,
+		"Errors": null
+	},
+	{
+		"Id": "324d7dbc-c976-4368-b523-85d96cdbb47a",
+		"Format": "mdoldschoolv2",
+		"Title": "Fusions V2",
+		"IsDraft": true,
+		"Date": "26/07/2023",
+		"Author": "FlorentOutan",
+		"MainCard": "Black Skull Dragon",
+		"MainCardImage": "https://images.ygoprodeck.com/images/cards/11901678.jpg",
+		"Themes": "autre",
+		"DeckList": "summoned skull, dark magician, redeyes black dragon, big koala, decoy dragon, versago the destroyer, morphing jar 2, king of the swamp x2, goddess with the third eye, beastking of the swamps, witch of the black forest, legion the fiend jester, ufo turtle, mother grizzly x2, mystic tomato, des kangaroo, necroface, dark hole, polymerization x2, monster reborn, pot of greed, pot of avarice, fusion sage, smashing ground, monster reincarnation, fusion recovery, future fusion, dragons mirror, ancient rules, summoners art, card trader, mystical space typhoon, twin twisters, forbidden lance, waboku, raigeki break, interdimensional matter transporter, sakuretsu armor, metal reflect slime, meteor black dragon, dark paladin, black skull dragon, master of oz, fiveheaded dragon",
+		"DeckLength": 47,
 		"Errors": null
 	}
 ]

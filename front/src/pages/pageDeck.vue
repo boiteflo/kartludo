@@ -4,12 +4,12 @@
           Chargement
         </div>
         <div v-else>
-          <div v-if="isNew">
-              <panel-create-deck :themes="themes" :staples="staples" :ranks="ranks" @save='saveDeck' 
+          <div v-if="isNew || deck.IsDraft">
+              <panel-create-deck :deck="deck" :themes="themes" :staples="staples" @save='saveDeck' 
               ></panel-create-deck>
           </div>
           
-          <div v-if="deck">
+          <div v-else-if="deck">
             <panel-deck :deck="deck">
             </panel-deck>
           </div>
@@ -90,7 +90,8 @@ export default {
     },
     saveDeck(deck){
       this.loading=true;
-      delete deck.Themes;
+      deck.Themes = [];
+      deck.Rank = 3;
       ServiceBack.insert('deck', deck)
         .then(res=> window.location.href = '/deck/id=' + res.data);
     }

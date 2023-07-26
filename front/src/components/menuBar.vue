@@ -12,7 +12,7 @@
           @click="unselect"
         >
           <v-icon>mdi-cards</v-icon>
-          <h3>MD - OLD SCHOOL</h3>
+          <h3>MD - RETRO</h3>
         </v-btn>
       </router-link>
 

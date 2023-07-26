@@ -32,8 +32,6 @@
                     <v-text-field class="m5px" label="Auteur" hide-details
                                 v-model="deckObj.Author">
                     </v-text-field>
-                    <v-combobox :disabled="!deckObj.Rank" v-model="deckObj.Rank" label="Classement" :items="ranks" item-text="Title">
-                    </v-combobox>
                 </div>
                 
                 <template v-if="deckObj">
@@ -194,7 +192,7 @@ let md5 = require('md5');
 
   export default {
     name: 'panel-create-deck',
-    props: ['deck', 'themes', 'ranks', 'staples'],
+    props: ['deck', 'themes', 'staples'],
     components: {
         cardImage, panelCards, panelDeckCards, iconTheme
     },
@@ -211,7 +209,7 @@ let md5 = require('md5');
     }),
     mounted(){
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null, Format: store.formatSelected.Title};
-        this.deckObj.Rank= this.ranks.find(x=> x.Id ==this.deckObj.Rank);
+        this.deckObj.Rank= 3; //this.ranks.find(x=> x.Id ==this.deckObj.Rank);
         this.deckObj.Themes= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> this.deckObj.Themes.includes(x.Id)) : [];
         this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
     },

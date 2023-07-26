@@ -12,7 +12,11 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  managerDeck.insert(req.body, res);   
+  managerDeck.insertOrUpdate(req.body, res);   
+});
+
+router.post('/duplicate', async (req, res) => {
+  managerDeck.duplicate(req.body, res);   
 });
 
 module.exports = router;
