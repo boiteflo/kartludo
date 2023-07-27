@@ -42,6 +42,20 @@
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51b72_w420.webp"
 	},
 	{
+		"Id": "insecte",
+		"Title": "Insecte",
+		"CardIdName": "insectqueen",
+		"CardNameEn": "Insect Queen",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5274b_w420.webp"
+	},
+	{
+		"Id": "zombie",
+		"Title": "Zombie",
+		"CardIdName": "vampirelord",
+		"CardNameEn": "vampire lord",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53ccd_w420.webp"
+	},
+	{
 		"Id": "vent",
 		"Title": "Vent",
 		"CardIdName": "harpielady1",
@@ -105,13 +119,6 @@
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a524d7_w420.webp"
 	},
 	{
-		"Id": "insecte",
-		"Title": "Insecte",
-		"CardIdName": "insectqueen",
-		"CardNameEn": "Insect Queen",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5274b_w420.webp"
-	},
-	{
 		"Id": "alien",
 		"Title": "Alien",
 		"CardIdName": "alienwarrior",
@@ -145,13 +152,6 @@
 		"CardIdName": "enishishienschancellor",
 		"CardNameEn": "Enishi Shien's Chancellor",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ff2_w420.webp"
-	},
-	{
-		"Id": "zombie",
-		"Title": "Zombie",
-		"CardIdName": "vampirelord",
-		"CardNameEn": "vampire lord",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53ccd_w420.webp"
 	},
 	{
 		"Id": "toon",
@@ -204,7 +204,7 @@
 	},
 	{
 		"Id": "normal",
-		"Title": "Normal",
+		"Title": "Normaux",
 		"CardIdName": "cosmoqueen",
 		"CardNameEn": "Cosmo Queen",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51a32_w420.webp"

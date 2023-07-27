@@ -5,7 +5,7 @@ const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
 class managerCard {
     
-    static getSheetRanges(){return ["Extra!B2:D"];}
+    static getSheetRanges(){return ["Extra!B2:H"];}
 
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
@@ -13,7 +13,7 @@ class managerCard {
         let cards = require("../data/cards");
         
         // Extra
-        /*
+        
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -21,12 +21,17 @@ class managerCard {
                     "IdNameFr": cardArray[1].cleanup(),
                     "NameEn":cardArray[0].replaceMany(',',''),
                     "NameFr":cardArray[1].replaceMany(',',''),
-                    "Image":cardArray[2],
-                    "Bonus": true
+                    "Type": cardArray[2] ?? "",
+                    "TypeMonster": cardArray[3] ?? "",
+                    "Level": cardArray[4] ?? "",
+                    "Rarity": cardArray[5] ?? "",
+                    "Image":cardArray[6] ?? "",
+                    "ImageMDM":cardArray[6] ?? "",
+                    "Bonus": true,
                 })
             );
         }
-        */
+        
 
         cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
 
