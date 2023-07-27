@@ -778,20 +778,5 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535ee_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
-	},
-	{
-		"Id": "3d5d0e2e-6e30-406e-99b0-50ae3ed21137",
-		"Format": "mdoldschoolv2",
-		"Rank": "3",
-		"Title": "test",
-		"IsDraft": true,
-		"Date": "27/07/2023",
-		"Author": "floTest",
-		"MainCard": "Horus the Black Flame Dragon LV4",
-		"Themes": "autre",
-		"DeckList": "Blue-Eyes White Dragon, Blue-Eyes Shining Dragon, Horus the Black Flame Dragon LV8, Horus the Black Flame Dragon LV6, Mother Grizzly, Giant Rat, Flying Kamakiri #1 x2, Horus the Black Flame Dragon LV4 x2, Sangan, Morphing Jar #2, Horus' Servant, Monster Reborn, Dark Hole, Twin Twisters, Fissure, Compulsory Evacuation Device, Mirror Force, Metal Reflect Slime, Waboku, Blue-Eyes Ultimate Dragon",
-		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5265e_w420.webp",
-		"DeckLength": 21,
-		"Errors": "Pas assez de cartes : 21"
 	}
 ]
