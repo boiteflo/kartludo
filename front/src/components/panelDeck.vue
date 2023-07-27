@@ -18,11 +18,10 @@
           <router-link :to="'/deck/id=' + deck.Id" >
             <v-btn target="_blank" text  class="bg m5px" >
               <v-icon>mdi-arrow-right-thin</v-icon>
-              Ouvrir la page dédiée a ce deck
+              Ouvrir la page dédiée a ce deck <span v-if="deck.IsDraft || (deck.Errors && deck.Errors.length > 0)"> pour le modifier</span>
             </v-btn>
           </router-link>
         </div>
-        
         <div v-if="$vuetify.breakpoint.width >= 930" class="flex" style="align-items:center">
           <div style="flex-basis: 0; min-height:400px; width:310px" class="m5px">  
             
@@ -50,10 +49,12 @@
           <div style="flex-basis: 0; flex-grow:5; min-height:400px" class="m5px">
             <panelDeckCards :cards="getCards(false)"
               :size="$vuetify.breakpoint.width *40 /600"
+              keyid= "deckMain"
               @hover="showCard">
             </panelDeckCards>
             <panelDeckCards :cards="getCards(true)"
               :size="$vuetify.breakpoint.width *40 /600"
+              keyid= "deckExtra"
               @hover="showCard">
             </panelDeckCards>
           </div>
@@ -82,8 +83,14 @@
               </div>
             </div>
             <div style="flex-basis: 0; flex-grow:2">
-              <panelDeckCards :cards="deck.DeckListCards"
-                  :size="$vuetify.breakpoint.width *40 /600"
+              <panelDeckCards :cards="getCards(false)"
+                  :size="50"
+                  keyid= "VdeckMain"
+                  @hover="showCard">
+              </panelDeckCards>
+              <panelDeckCards :cards="getCards(true)"
+                  :size="50"
+                  keyid= "VdeckExtra"
                   @hover="showCard">
               </panelDeckCards>
             </div>
@@ -92,15 +99,17 @@
 
 
         <div class="flex-reverse">
-          <router-link :to="'/deck/id=' + deck.Id" >
-            <v-btn target="_blank" text  class="bg m5px" >
-              <v-icon>mdi-arrow-right-thin</v-icon>
-              Ouvrir la page dédiée a ce deck
+          <template v-if="buttonpage">
+            <router-link :to="'/deck/id=' + deck.Id" >
+              <v-btn target="_blank" text  class="bg m5px" >
+                <v-icon>mdi-arrow-right-thin</v-icon>
+                Ouvrir la page dédiée a ce deck
+              </v-btn>
+            </router-link>
+            <v-btn v-if="buttonpage" class="m5px" @click="$emit('unselect')">
+              Retour
             </v-btn>
-          </router-link>
-          <v-btn v-if="buttonpage" class="m5px" @click="$emit('unselect')">
-            Retour
-          </v-btn>
+          </template>
           <router-link v-else to="/decks" >
             <v-btn target="_blank" text class="bg m5px" >
               <v-icon>mdi-arrow-right-thin</v-icon>

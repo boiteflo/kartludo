@@ -35,7 +35,7 @@ class managerMain {
     errors = errors.concat(deckErrrors);
 
     let data = sheetData.Data.map(x=> {return {"Id": x[0], "Title": x[1], "Value": x[2]};});
-    helperJsonFile.save('data', data);
+    helperJsonFile.save('./back/data/data', data);
   
     res.send(errors.length < 1 ? 'Importation réussie' : 'Des erreurs sont survenues : <br/>' + errors
       .map(x=> `${x.From}!Ligne${x.Index+2} ${x.Errors}`).join('<br/>'));  

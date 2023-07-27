@@ -10,10 +10,11 @@
           <!-- Deck sélectionné -->
           <v-dialog v-model="showDeck">
             <div v-if="deckSelected">
-              <panel-deck v-if="!deckSelected.isDraft" :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" @duplicate="duplicate">
+              <panel-deck :deck="deckSelected" 
+                :buttonpage="true" 
+                v-on:unselect="unselect" 
+                @duplicate="duplicate">
               </panel-deck>
-              <panel-create-deck v-else :deck="deckSelected" :buttonpage="true" v-on:unselect="unselect" :themes="themes" :staples="staples" >
-              </panel-create-deck>
             </div>
           </v-dialog>
 
@@ -88,13 +89,12 @@ import ServiceBack from '../services/serviceBack'
 import { store } from '../data/store.js'
 import hierarchy from '../components/hierarchy';
 import panelDeck from '../components/panelDeck';
-import panelCreateDeck from '../components/panelCreateDeck';
 import iconTheme from '../components/iconTheme';
 import iconDeck from '../components/iconDeck';
 
 export default {
   name: 'pageDecks',
-  components: {iconTheme, iconDeck, panelDeck, panelCreateDeck, hierarchy},
+  components: {iconTheme, iconDeck, panelDeck, hierarchy},
   data: () => ({
     loading:true,
     store: store,
@@ -152,7 +152,7 @@ export default {
       this.ranks = this.ranks.concat([{ "Id":"10","Title": "Tournoi 2308#01", "NameEn":"Cup of Ace"}]);
 
       this.ranks.forEach(rank => {
-        rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).Image;
+        rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).ImageMDM;
         let decks = this.decks.filter(x=> rank.Id==0 || x.Rank === rank.Id);
         rank.DecksLength =decks.length;
         this.rankDecks.push({Id: rank.Id, Value:decks});

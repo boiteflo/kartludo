@@ -1,6 +1,17 @@
 <template>
     <div class="pageTop">
-        <v-img :src="require('../assets/RulesTopOnly.jpg')" />
+        <div class="flex flex-center bg">
+          <div class="bg2" style="border-radius:20px; width:240px; height: 185px; margin:20px;">
+            <div class="flex colorWhite" style="flex-direction:column">
+              <div style="font-size:100px;  font-family:'Franklin Gothic Heavy'; 'font-weight':bold; text-align:center; flex-grow:1; letter-spacing:15px; text-indent: 15px;">MD</div>
+              <div class="flex flex-center" style="margin-top:-35px;">                
+                <v-icon style="font-size:40px; flex-grow:1" class="colorWhite">mdi-cards</v-icon>
+                <div style="margin-left:-60px; font-size:30px; font-family:'Arial-Black'; 'font-weight':bold; text-align:center; flex-grow:1; letter-spacing:5px">RETRO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <v-img :src="require('../assets/RulesTopOnly2.jpg')" />
         <h1>BANLIST</h1>
         <h2><v-icon color="red">mdi-cancel</v-icon> CARTES INTERDITES</h2>
         <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true" :center="true" tooltip="text">
@@ -30,6 +41,10 @@
         <h2><v-icon color="yellow">mdi-gift</v-icon> CARTES AJOUTÉES DANS LE FORMAT</h2>
         <panel-cards :cards="store.cards.filter(x=> x.Bonus && x.Limit !== '0')" :badgeoff="false" :center="true" tooltip="text" >
         </panel-cards>
+        <v-card class="bg2 colorWhite" style="margin-top:20px;">
+          <v-card-title>Easter Eggs</v-card-title>
+          <v-card-text class="bg2 colorWhite">Il y a actuellement 5 Easter-Eggs visuels a trouver sur le site dont 4 liés a des cartes.</v-card-text>
+        </v-card>
 
         <v-card class="bg">
           <v-card-title>Remerciement</v-card-title>

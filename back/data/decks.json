@@ -610,7 +610,7 @@
 		"MainCard": "Pot of Greed",
 		"Themes": "piege,burn",
 		"DeckList": "Lava Golem, Big Eye, Solar Flare Dragon x2, Dekoichi the Battlechanted Locomotive x2, Volcanic Slicer, Spirit Reaper, Ancient Lamp, Des Koala x2, Stealth Bird, Needle Worm, Old Vindictive Magician, Hane-Hane, Man-Eater Bug, Swords of Revealing Light, Fissure, Pot of Greed, Mystical Space Typhoon, Card Destruction, Monster Reborn, Heavy Storm, Nightmare's Steelcage, Card Trader, Book of Moon, Sakuretsu Armor, Mirror Force, Dark Bribe, Ceasefire, Magic Cylinder, Trap Hole, Bottomless Trap Hole, Magic Jammer, Trap Jammer, Seven Tools of the Bandit, Magic Drain, Magical Thorn, DNA Surgery, Skull Invitation",
-		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53151_w420.webp",
+		"MainCardImage": "https://static.wikia.nocookie.net/yugioh/images/4/41/PotofGreed-SYE-SP-C-1E.png",
 		"DeckLength": 40,
 		"Errors": null
 	},
@@ -823,5 +823,20 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53b1c_w420.webp",
 		"DeckLength": 41,
 		"Errors": null
+	},
+	{
+		"Id": "4b460464-6dce-4c59-8e93-127b59f6dd54",
+		"Format": "",
+		"Rank": "3",
+		"Title": "Copie de Droid",
+		"IsDraft": false,
+		"Date": "27/07/2023",
+		"Author": "",
+		"MainCard": "Super Vehicroid Jumbo Drill",
+		"Themes": "roid",
+		"DeckList": "UFOroid, Rescueroid, The Fiend Megacyber, Drillroid x2, Steamroid x2, Submarineroid, Truckroid, D.D. Warrior Lady, Cyber Phoenix, Expressroid x2, Giant Rat, Gyroid, Ambulanceroid, Card Trooper, Vehicroid Connection Zone, Pot of Greed, Pot of Avarice, Heavy Storm, Swords of Concealing Light, Swords of Revealing Light, Lightning Vortex, Exchange, Smashing Ground, Mystical Space Typhoon, Shield & Sword, Limiter Removal, Future Fusion, Power Bond, Monster Reincarnation, Dimensional Prison, Bottomless Trap Hole, Supercharge, Compulsory Evacuation Device, UFOroid Fighter, Super Vehicroid Jumbo Drill, Steam Gyroid, Ambulance Rescueroid",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53888_w420.webp",
+		"DeckLength": 36,
+		"Errors": "Pas assez de cartes : 36"
 	}
 ]

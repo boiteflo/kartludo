@@ -2,7 +2,8 @@
     <div class="tooltip" 
         style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis; cursor:pointer" 
         @click="$emit('select', card)"
-        @mouseover="$emit('hover', card)">
+        @mouseover="hover"
+        @mouseleave="leave">
         <div v-if="showname" style="font-size: 16px; cursor:pointer; color:white; text-align:center" class="bg2">
             <div class="p5px hoverFontColor" @click="copyClipboard(card.NameEn);">
                 {{card.NameEn}}
@@ -65,6 +66,9 @@
   export default {
     name: 'card-image',
     props: ['card', 'badgeoff', 'size', 'tooltip', 'x2', 'showname'],
+    data: () => ({
+        isStillHover: false
+    }),
     methods: {
         copyClipboard(text) {
             navigator.clipboard.writeText(text);
@@ -78,6 +82,13 @@
                 : rarity=== 'R' ? '#3F51B5'
                 : rarity=== 'SR' ? '#FBC02D'
                 : '#673AB7';
+        },
+        hover(){
+            this.isStillHover = true;
+            setTimeout(() => { if(this.isStillHover) this.$emit('hover', this.card);}, 1500)
+        },
+        leave(){
+            this.isStillHover = false;
         }
   }
   }

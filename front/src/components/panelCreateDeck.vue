@@ -44,18 +44,18 @@
                 </template>
 
                 <div v-if="$vuetify.breakpoint.width >= 930" class="flex">
-                    <div class="bg" style="flex-grow:2; flex-basis: 0">
+                    <div class="bg" style="flex-grow:2; flex-basis: 0" v-bind:key="refreshCards">
                         <panel-deck-cards :cards="getCards(false)"
+                                    keyid= "deckMain"
                                     :size="75"
                                     @select="selectCardFromDeck"
-                                    @hover="showCard"
-                                    v-bind:key="refreshCards">
+                                    @hover="showCard">
                         </panel-deck-cards>
                         <panel-deck-cards :cards="getCards(true)"
+                                    keyid= "deckExtra"
                                     :size="75"
                                     @select="selectCardFromDeck"
-                                    @hover="showCard"
-                                    v-bind:key="refreshCards">
+                                    @hover="showCard">
                         </panel-deck-cards>
                     </div>
                     <div v-if="deckObj" class="bg2" style="width:310px">                 
@@ -77,6 +77,7 @@
                         <card-image v-if="cardHover" 
                             :card="cardHover"
                             :badgeoff="true"
+                            :showname="true"
                             :size="300">
                         </card-image>
                         <div v-else class="bg2 w100p" style="height:437px">
@@ -94,6 +95,7 @@
                                 @input="search">
                         </v-text-field>
                         <panel-cards v-if="selectedCards && selectedCards.length > 0"
+                                    keyid= "searchCards"
                                     :size="75" 
                                     :cards="selectedCards"
                                     @select="selectCard"
@@ -126,43 +128,38 @@
                         </v-text-field>
                         <panel-cards v-if="selectedCards && selectedCards.length > 0" 
                                     :size="50" 
-                                    tooltip="image"
                                     :cards="selectedCards"
                                     @select="selectCard">
                         </panel-cards>
                     </div>
                     <panel-deck-cards :cards="getCards(false)"
                                 @select="selectCardFromDeck"
-                                tooltip="image"
+                                keyid= "vdeckMain"
                                 :size="50" 
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
                     <panel-deck-cards :cards="getCards(true)"
                                 @select="selectCardFromDeck"
-                                tooltip="image"
+                                keyid= "vdeckExtra"
                                 :size="50" 
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
                 </div>
                 <br>
-                <!--
-                <h3 >Les Thèmes</h3>
-                <div class="flex-wrap">
-                    <v-btn class="m5px bg" @click="selectThemes=true">
-                        Modifier
-                    </v-btn>
-                    <v-chip class="m5px"
-                        v-for="theme in deckObj.Themes" 
-                        v-bind:key="'selected'+ theme.Id">{{theme.Title}}
-                    </v-chip>
-                </div>
-                -->
-
+                <v-alert type="warning" v-if="!isValidForSave()">
+                    Pour sauvegarder un deck, il faut qu'il y ait au moins 1 carte dans le deck, une carte principale définie, un titre et un auteur.
+                </v-alert>
+                <v-alert type="warning" v-if="isValidForSave() && (deckObj.Errors && deckObj.Errors.length >0)">
+                    Pour valider un deck, il faut que le format sélectionné soit respecté.
+                </v-alert>
                 <div class="flex-wrap flex-reverse">
-                    <v-btn class="m5px bg" :disabled="deckObj.DeckListCards.length <1 || !deckObj.MainCard" @click="$emit('save', deckObj)">
+                    <v-btn class="m5px bg" :disabled="!isValidForSave() || (deckObj.Errors && deckObj.Errors.length >0)" @click="validate">
+                        Valider (ne sera plus modifiable)
+                    </v-btn>
+                    <v-btn class="m5px bg2 colorWhite" :disabled="!isValidForSave()" @click="$emit('save', deckObj)">
                         Sauvegarder
                     </v-btn>
-                    <v-btn class="m5px bg" @click="selectMainCard=true">
+                    <v-btn class="m5px bg2 colorWhite" @click="selectMainCard=true">
                         Sélectionner la carte principale
                     </v-btn>
                 </div>
@@ -206,24 +203,26 @@ let md5 = require('md5');
         this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
     },
     methods: {
+        refreshCardsDeck(){
+            this.deckObj.DeckListCards =  ServiceDeck.sort(this.deckObj.DeckListCards);
+            this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
+            this.refreshCards++;
+        },
         getCards(extra){
             if(!this.deckObj || !this.deckObj.DeckListCards)
-            return [];
-            return ServiceDeck.sort(this.deckObj.DeckListCards.filter(x=> x.Card.ToExtraDeck === extra));
+                return [];
+            return this.deckObj.DeckListCards.filter(x=> x.Card.ToExtraDeck === extra);
         },
         search(value){
             this.selectedCards = ServiceMain.filterCard(store.cards, value);
         },
         selectCard(card){
             let alreadyExist = this.deckObj.DeckListCards.find(x=> x.Card.IdName == card.IdName);
-            if(alreadyExist){
-                alreadyExist.Quantity = "2";
-                this.refreshCards++;
-            }
-            else
-                this.deckObj.DeckListCards.push({Id: card.IdName, Card:card});
+
+            if(alreadyExist) alreadyExist.Quantity = "2";
+            else this.deckObj.DeckListCards.push({Id: card.IdName, Card:card});
             
-            this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
+            this.refreshCardsDeck();
         },
         selectCardFromDeck(card){
             let cardObject = this.deckObj.DeckListCards.find(x=> x.Card.IdName === card.IdName);
@@ -233,13 +232,12 @@ let md5 = require('md5');
             if(cardObject.Quantity === "2")
             {
                 cardObject.Quantity = null;
-                this.refreshCards++;
+                this.refreshCardsDeck();
                 return;
             }
 
             this.deckObj.DeckListCards = this.deckObj.DeckListCards.filter(x=> x.Card.IdName !== cardObject.Card.IdName);
-            
-            this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats);
+            this.refreshCardsDeck();
         },
         selectFav(card){
             this.deckObj.MainCard = card.NameEn;
@@ -269,6 +267,16 @@ let md5 = require('md5');
             this.selectedCards = store.cards
                 .filter(x=> stapleIdNames.includes(x.IdName))
                 .slice(0, 50);
+        },
+        validate(){
+            this.deckObj.IsDraft=false;
+            this.$emit('save', this.deckObj);
+        },
+        isValidForSave(){
+            return (this.deckObj.Title && this.deckObj.Title.length > 0)
+                && (this.deckObj.Author && this.deckObj.Author.length > 0)
+                && (this.deckObj.DeckListCards && this.deckObj.DeckListCards.length > 0)
+                && (this.deckObj.MainCard && this.deckObj.MainCard.length > 0);
         }
     }
   }

@@ -56,6 +56,7 @@ class managerCard {
                     "Rarity": cardArray[5] ?? "",
                     "Image":cardArray[6] ?? "",
                     "ImageMDM":cardArray[6] ?? "",
+                    "ToExtraDeck" : cardArray[3]?.includes("Fusion"),
                     "Bonus": true,
                 })
             );

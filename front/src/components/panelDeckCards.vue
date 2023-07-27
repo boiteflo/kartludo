@@ -1,7 +1,7 @@
 <template>
     <div class="flex-wrap" v-if="cards">
         <div v-for="cardObject in cards" 
-            v-bind:key="cardObject.Card.IdName" 
+            v-bind:key="keyid + cardObject.Card.IdName" 
             style="position:relative">
           <card-image :card="cardObject.Card" 
                       :badgeoff="false" 
@@ -20,7 +20,7 @@ import cardImage from './cardImage';
 
   export default {
     name: 'panel-deck-cards',
-    props: ['cards', 'size', 'tooltip'],
+    props: ['cards', 'size', 'tooltip', 'keyid'],
     components: {cardImage},
   }
 </script>

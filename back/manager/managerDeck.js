@@ -7,7 +7,7 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 class managerDeck {
 
     static async read(){
-        return await helperJsonFile.readPath('../back/data/decks.json');
+        return await helperJsonFile.readPath('./back/data/decks.json');
     }
 
     static async save(decks){
@@ -29,7 +29,7 @@ class managerDeck {
     }
 
     static async insert(deck, res){        
-        let cards = await helperJsonFile.read('cards');
+        let cards = await helperJsonFile.read('./back/data/cards');
         let cardsIdName = cards.map(x=> x.IdName);
       
         let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
@@ -53,7 +53,7 @@ class managerDeck {
 			Author: deck.Author,
 			MainCard: deck.MainCard,
 			MainCardImage: mainCardImage,
-			Themes: deck.ThemesId ? deck.ThemesId.join(',') : 'autre',
+			Themes: deck.ThemesId ? deck.ThemesId.join(',') : deck.Themes ?? 'autre',
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors
@@ -69,7 +69,7 @@ class managerDeck {
     }
 
     static async update(deck, res){        
-        let cards = await helperJsonFile.read('cards');
+        let cards = await helperJsonFile.read('./back/data/cards');
         let cardsIdName = cards.map(x=> x.IdName);
       
         let missingCards = deck.DeckListCards.filter(x=> !cardsIdName.includes(x.Card.IdName)).map(x=> x.Card.NameEn);
@@ -88,12 +88,12 @@ class managerDeck {
             Format: deck.Format,
 			Rank: deck.Rank ? deck.Rank.Id : 3,
 			Title: deck.Title,
-            IsDraft: true,
+            IsDraft: deck.IsDraft,
 			Date: new Date().toLocaleDateString("fr"),
 			Author: deck.Author,
 			MainCard: deck.MainCard,
 			MainCardImage: mainCardImage,
-			Themes: deck.ThemesId ? deck.ThemesId.join(',') : 'autre',
+			Themes: deck.ThemesId ? deck.ThemesId.join(',') : deck.Themes ?? 'autre',
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors
@@ -149,10 +149,10 @@ class managerDeck {
         }
         let updateSheet = [];
         
-        updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage});
+        updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
         updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
         updateSheet.push({range: 'Decks!C' + sheetLine, value:deck.Format});
-        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank});
+        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank ?? 3});
         updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Title});
         updateSheet.push({range: 'Decks!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
         updateSheet.push({range: 'Decks!G' + sheetLine, value:deck.Date});
@@ -160,7 +160,7 @@ class managerDeck {
         updateSheet.push({range: 'Decks!I' + sheetLine, value:deck.MainCard});
         updateSheet.push({range: 'Decks!J' + sheetLine, value:deck.Themes});
         updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.DeckList});
-        updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors});
+        updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors ?? ''});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
     }

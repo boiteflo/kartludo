@@ -2286,7 +2286,7 @@
 		"IdNameFr": "potdecupidite",
 		"NameEn": "Pot of Greed",
 		"NameFr": "Pot de Cupidité",
-		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53151_w420.webp",
+		"ImageMDM": "https://static.wikia.nocookie.net/yugioh/images/4/41/PotofGreed-SYE-SP-C-1E.png",
 		"Type": "Spell",
 		"TypeMonster": "",
 		"ToExtraDeck": false,
@@ -37030,6 +37030,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f8b_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "R"
 	},
@@ -37042,6 +37043,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a533bf_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "2",
 		"Rarity": "N"
 	},
@@ -37054,6 +37056,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513ef_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "R"
 	},
@@ -37066,6 +37069,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513ea_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "3",
 		"Rarity": "R"
 	},
@@ -37078,6 +37082,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51fb9_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "R"
 	},
@@ -37090,6 +37095,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f90_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "N"
 	},
@@ -37102,6 +37108,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f8e_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Fusion",
+		"ToExtraDeck": true,
 		"Level": "8",
 		"Rarity": "N"
 	},
@@ -37114,6 +37121,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51fb2_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Fusion",
+		"ToExtraDeck": true,
 		"Level": "8",
 		"Rarity": "SR"
 	},
@@ -37126,6 +37134,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52579_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "3",
 		"Rarity": "N"
 	},
@@ -37138,6 +37147,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53e07_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "1",
 		"Rarity": "R"
 	},
@@ -37150,6 +37160,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535e2_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "SR"
 	},
@@ -37162,6 +37173,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51cd4_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "N"
 	},
@@ -37174,6 +37186,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53a76_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "1",
 		"Rarity": "R"
 	},
@@ -37186,6 +37199,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ae9_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "4",
 		"Rarity": "N"
 	},
@@ -37198,6 +37212,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/6265e6b63ecc89b0e4f30338_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "1",
 		"Rarity": "SR"
 	},
@@ -37210,6 +37225,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a5165d_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
 		"Level": "1",
 		"Rarity": "R"
 	},
@@ -37222,6 +37238,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53a5e_w420.webp",
 		"Type": "Spell",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "R"
 	},
@@ -37234,6 +37251,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a538bd_w420.webp",
 		"Type": "Spell",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "SR"
 	},
@@ -37246,6 +37264,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53b07_w420.webp",
 		"Type": "Spell",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "SR"
 	},
@@ -37258,6 +37277,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a521e9_w420.webp",
 		"Type": "Spell",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "SR"
 	},
@@ -37270,6 +37290,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a521e5_w420.webp",
 		"Type": "Spell",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "R"
 	},
@@ -37282,6 +37303,7 @@
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51cd6_w420.webp",
 		"Type": "Trap",
 		"TypeMonster": "",
+		"ToExtraDeck": false,
 		"Level": "",
 		"Rarity": "R"
 	}

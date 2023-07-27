@@ -2,7 +2,7 @@
   <div v-if="cards && cards.length > 0" 
     :class="{'flex-wrap':!noflex, 'p5px':true}">
     <card-image v-for="card in cards" 
-      v-bind:key="card.IdName"
+      v-bind:key="keyid + card.IdName"
       :card="card"
         :badgeoff="badgeoff"
         :size="size"
@@ -18,7 +18,7 @@ import cardImage from './cardImage';
 
   export default {
     name: 'panel-cards',
-    props: ['cards', 'badgeoff', 'size', 'center', 'tooltip', 'noflex'],
+    props: ['cards', 'badgeoff', 'size', 'center', 'tooltip', 'noflex', 'keyid'],
     components: {cardImage},
   }
 </script>

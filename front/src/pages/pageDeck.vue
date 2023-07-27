@@ -4,7 +4,7 @@
           Chargement
         </div>
         <div v-else>
-          <div v-if="isNew || deck.IsDraft">
+          <div v-if="isNew || deck.isDraft || (deck.Errors && deck.Errors.length > 0)">
               <panel-create-deck :deck="deck" :themes="themes" :staples="staples" @save='saveDeck' 
               ></panel-create-deck>
           </div>

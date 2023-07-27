@@ -4020,7 +4020,7 @@ module.exports =
       "NameEn":"Pot of Greed",
       "NameFr":"Pot de Cupidité",
       "Image":"https://images.ygoprodeck.com/images/cards/55144522.jpg",
-      "ImageMDM":"https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53151_w420.webp",
+      "ImageMDM":"https://static.wikia.nocookie.net/yugioh/images/4/41/PotofGreed-SYE-SP-C-1E.png", //https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53151_w420.webp
       "Type":"Spell",
       "TypeMonster":"",
       "ToExtraDeck":false,
