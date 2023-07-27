@@ -156,9 +156,9 @@
 	{
 		"Id": "toon",
 		"Title": "Toon",
-		"CardIdName": "toondarkmagiciangirl",
-		"CardNameEn": "Toon Dark Magician Girl",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53b0d_w420.webp"
+		"CardIdName": "toongeminielf",
+		"CardNameEn": "Toon Gemini Elf",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53b0f_w420.webp"
 	},
 	{
 		"Id": "equipement",

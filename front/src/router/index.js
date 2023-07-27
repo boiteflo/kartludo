@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V1.9.3 ';
+let version = 'V1.9.5';
 
 Vue.use(VueRouter)
 
+Vue.prototype.$version = version;
 
 const routes = [
     {

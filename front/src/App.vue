@@ -23,14 +23,6 @@
   @import './style.css';
 </style>
 
-<!--
-<script setup>
-  const easterEgg = () => {
-    alert('easterEgg');
-  };
-</script>
--->
-
 <script>
 import { forkJoin } from 'rxjs';
 import { store } from './data/store.js'

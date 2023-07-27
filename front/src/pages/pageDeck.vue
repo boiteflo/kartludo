@@ -4,7 +4,7 @@
           Chargement
         </div>
         <div v-else>
-          <div v-if="isNew || deck.isDraft || (deck.Errors && deck.Errors.length > 0)">
+          <div v-if="isNew || deck.IsDraft">
               <panel-create-deck :deck="deck" :themes="themes" :staples="staples" @save='saveDeck' 
               ></panel-create-deck>
           </div>
@@ -22,7 +22,7 @@
 import { forkJoin } from 'rxjs';
 import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
-//const axios = require('axios');
+import ServiceFormat from '../services/serviceFormat'
 
 import { store } from '../data/store.js'
 import panelDeck from '../components/panelDeck';
@@ -75,6 +75,16 @@ export default {
       if(!deck)
         window.location.href = '/error/text=Ce%20deck%20n%20existe%20pas'
 
+      if(deck.IsDraft && deck.Format)
+      {
+        let format = store.formats.find(x=> x.Id === deck.Format);
+        if(format){
+          let formatResult = ServiceFormat.setFormat(format, store.cards);
+          store.cards = formatResult.cards;
+          store.formatSelected = formatResult.format;
+        }
+      }
+
       deck.DeckListCards = [];
       let deckList = deck.DeckList.split(',');
       for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
@@ -90,7 +100,6 @@ export default {
     },
     saveDeck(deck){
       this.loading=true;
-      deck.Themes = [];
       deck.Rank = 3;
       ServiceBack.insert('deck', deck)
         .then(res=> window.location.href = '/deck/id=' + res.data);

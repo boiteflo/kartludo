@@ -5,21 +5,28 @@
                     :size="100" >
         </panel-deck-cards> 
     </div>
-    <div v-else-if="selectThemes">
-        <div class="flex-wrap">
-            <v-btn class="m5px bg" style="width:275px; height:340px;" @click="selectThemes=false">
-                Valider
-            </v-btn>
-            <icon-theme v-for="theme in themes.filter(x=> x.Id!=='tous' && !deckObj.ThemesId.includes(x.Id))" 
+    <div v-else-if="selectThemes && deckObj" v-bind:key="refreshThemes">
+        <h1>Thèmes sélectionnable</h1>
+        <div class="flex-wrap bg2">
+            <icon-theme-mini v-for="theme in themes.filter(x=> x && x.Id!=='tous' && !deckObj.ThemesId.includes(x.Id))" 
                 v-bind:key="theme.Id" 
                 v-on:select="selectTheme(theme)" 
                 :text="theme.Title" 
                 :image="theme.CardImage">
-            </icon-theme>
-            <v-btn class="m5px bg" style="width:275px; height:340px;" @click="selectThemes=false">
-                Valider
-            </v-btn>
+            </icon-theme-mini>
         </div>
+        <h1>Thèmes sélectionné pour le deck</h1>
+        <div class="flex-wrap bg2" >
+            <icon-theme-mini v-for="theme in themes.filter(x=> x && deckObj.ThemesId.includes(x.Id))" 
+                v-bind:key="theme.Id" 
+                v-on:select="unselectTheme(theme)" 
+                :text="theme.Title" 
+                :image="theme.CardImage">
+            </icon-theme-mini>
+        </div>
+        <v-btn class="m5px bg" style="width:100%; height:30px; position:static" @click="selectThemes=false">
+            Valider
+        </v-btn>
     </div>
     <div v-else class="bgWhite">
         <template v-if="deckObj">
@@ -147,7 +154,7 @@
                 </div>
                 <br>
                 <v-alert type="warning" v-if="!isValidForSave()">
-                    Pour sauvegarder un deck, il faut qu'il y ait au moins 1 carte dans le deck, une carte principale définie, un titre et un auteur.
+                    Pour sauvegarder un deck, il faut qu'il y ait au moins 1 carte dans le deck, une carte principale définie, un thème minimum, un titre et un auteur.
                 </v-alert>
                 <v-alert type="warning" v-if="isValidForSave() && (deckObj.Errors && deckObj.Errors.length >0)">
                     Pour valider un deck, il faut que le format sélectionné soit respecté.
@@ -162,6 +169,9 @@
                     <v-btn class="m5px bg2 colorWhite" @click="selectMainCard=true">
                         Sélectionner la carte principale
                     </v-btn>
+                    <v-btn class="m5px bg2 colorWhite" @click="selectThemes=true">
+                        Sélectionner les thèmes
+                    </v-btn>                    
                 </div>
             </div>
         </template>
@@ -169,6 +179,7 @@
 </template>
 
 <script>
+import { watch } from 'vue'
 import { store } from '../data/store.js'
 import ServiceMain from '../services/serviceMain'
 import ServiceDeck from '../services/serviceDeck'
@@ -176,7 +187,7 @@ import helperString from '../helpers/helperString'
 
 import cardImage from './cardImage.vue'
 import panelCards from './panelCards.vue'
-import iconTheme from '../components/iconTheme';
+import iconThemeMini from '../components/iconThemeMini';
 import panelDeckCards from './panelDeckCards.vue'
 let md5 = require('md5');
 
@@ -184,7 +195,7 @@ let md5 = require('md5');
     name: 'panel-create-deck',
     props: ['deck', 'themes', 'staples'],
     components: {
-        cardImage, panelCards, panelDeckCards, iconTheme
+        cardImage, panelCards, panelDeckCards, iconThemeMini
     },
     data: () => ({
         store: store,
@@ -192,15 +203,19 @@ let md5 = require('md5');
         searchString: '',
         selectedCards: [],
         refreshCards:0,
+        refreshThemes: 0,
         selectMainCard: false,
         selectThemes: false,
         cardHover:null,
     }),
     mounted(){
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null, Format: store.formatSelected.Title};
-        this.deckObj.Rank= 3; //this.ranks.find(x=> x.Id ==this.deckObj.Rank);
-        // this.deckObj.Themes= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> this.deckObj.Themes.includes(x.Id)) : [];
+        this.deckObj.Rank= 3;
+        this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)) : [];
         this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
+        watch(store, () => { 
+            this.refreshCardsDeck();
+        })
     },
     methods: {
         refreshCardsDeck(){
@@ -247,15 +262,15 @@ let md5 = require('md5');
             this.deckObj.Password = md5(this.deckObj.PasswordApparent);
         },
         selectTheme(theme){
-            let alreadyExist = this.deckObj.Themes.find(x=> x.Id === theme.id);
+            let alreadyExist = this.deckObj.ThemesId.find(x=> x === theme.id);
             if(!alreadyExist){                
-                this.deckObj.Themes.push(theme);
                 this.deckObj.ThemesId.push(theme.Id);
+                this.refreshThemes++;
             }
         },
         unselectTheme(theme){
             this.deckObj.ThemesId = this.deckObj.ThemesId.filter(x=> x !== theme.Id);
-            this.deckObj.Themes = this.deckObj.Themes.filter(x=> x.Id !== theme.Id);
+            this.refreshThemes++;
         },
         showCard(card){
             this.cardHover = card;
@@ -276,7 +291,8 @@ let md5 = require('md5');
             return (this.deckObj.Title && this.deckObj.Title.length > 0)
                 && (this.deckObj.Author && this.deckObj.Author.length > 0)
                 && (this.deckObj.DeckListCards && this.deckObj.DeckListCards.length > 0)
-                && (this.deckObj.MainCard && this.deckObj.MainCard.length > 0);
+                && (this.deckObj.MainCard && this.deckObj.MainCard.length > 0)
+                && (this.deckObj.ThemesId && this.deckObj.ThemesId.length > 0);
         }
     }
   }

@@ -82,7 +82,6 @@ class managerDeck {
             .join(', ');
 
         let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
-        
         deck = {
             Id: deck.Id,
             Format: deck.Format,
@@ -93,7 +92,7 @@ class managerDeck {
 			Author: deck.Author,
 			MainCard: deck.MainCard,
 			MainCardImage: mainCardImage,
-			Themes: deck.ThemesId ? deck.ThemesId.join(',') : deck.Themes ?? 'autre',
+			Themes: deck.ThemesId ? deck.ThemesId.join(',') : '',
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors
@@ -148,11 +147,16 @@ class managerDeck {
             sheetLine = row.Index+2;
         }
         let updateSheet = [];
+        deck.Themes = deck.Themes ?? '';
+        if (typeof deck.Themes === 'object')
+            deck.Themes= deck.Themes.join(', ');
+
+        if(!deck.Rank)
+        deck.Rank = '3';
         
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
-        updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
         updateSheet.push({range: 'Decks!C' + sheetLine, value:deck.Format});
-        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank ?? 3});
+        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank});
         updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Title});
         updateSheet.push({range: 'Decks!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
         updateSheet.push({range: 'Decks!G' + sheetLine, value:deck.Date});
@@ -226,6 +230,8 @@ class managerDeck {
                 .join(', ');
             
             deck.Errors = this.getErrors(deck, deckCards, formats);
+            if(deck.Errors && deck.Errors.length > 0)
+                deck.IsDraft=true;
             updateSheet.push({range: page + '!L' + sheetLine, value:deck.Errors ?? ''});
                 
             let errorMessage = '';
