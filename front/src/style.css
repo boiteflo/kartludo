@@ -320,3 +320,7 @@ h2 {
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  .colorWhite{
+    color:white !important;
+  }

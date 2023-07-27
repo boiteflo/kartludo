@@ -41,7 +41,7 @@ class managerTheme {
         let errors=[];
         let updateSheet = [];
         let themes = this.rebuild(sheetData.Themes, errors, cards, updateSheet);
-        helperJsonFile.save('themes', themes);
+        helperJsonFile.save('./back/data/themes', themes);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
         return errors;
     }

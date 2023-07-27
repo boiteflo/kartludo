@@ -7,11 +7,11 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 class managerTheme {
 
     static async read(){
-        return await helperJsonFile.readPath('./formats.json');
+        return await helperJsonFile.readPath('./back/data/formats.json');
     }
   
     static async save(data){
-        helperJsonFile.save('formats', data);
+        helperJsonFile.save('./back/data/formats', data);
     }
 
     static async getAll(res){        

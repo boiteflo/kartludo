@@ -1,16 +1,40 @@
 const helperGoogleApi = require("../helper/helperGoogleApi");
 const helperJsonFile = require("../helper/helperJsonFile");
 const helperArray = require("../helper/helperArray");
-const cardNotFound = `Cette carte n'a pas été trouvée :`;
 
 class managerCard {
+
+    static async read(){
+        return await helperJsonFile.readPath('./back/data/cardsToAdd.json');
+    }
+
+    static async save(data){
+        helperJsonFile.savePath('./back/data/cardsToAdd.json', data);
+    }
+
+    static async getAllMDM(res){
+        res.send(await this.read());
+    }
+
+    static async getMDM(id, res){
+        let data = await this.read();
+        res.send(data.find(x=> x.IdName === id)); 
+    }
+
+    static async insertMDM(cards, res){
+        let data = await this.read();
+        data = data.concat(cards);
+        this.save(data);
+      
+        res.status(201).send('Les cartes ont été insérés dans la liste des cartes a ajouter.');
+    }
     
     static getSheetRanges(){return ["Extra!B2:H"];}
 
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
         let updateSheet = [];
-        let cards = require("../data/cards");
+        let cards = require("../data/cards.js");
         
         // Extra
         
@@ -58,7 +82,7 @@ class managerCard {
             TcgRelease:x.TcgRelease
         }});
         
-        helperJsonFile.savePath('./cards.json', cards);
+        helperJsonFile.savePath('./back/data/cards.json', cards);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
         return {cards: cards, errors: errors };
     }

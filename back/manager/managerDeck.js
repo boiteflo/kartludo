@@ -7,11 +7,11 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 class managerDeck {
 
     static async read(){
-        return await helperJsonFile.readPath('./decks.json');
+        return await helperJsonFile.readPath('../back/data/decks.json');
     }
 
     static async save(decks){
-        helperJsonFile.save('decks', decks);
+        helperJsonFile.save('./back/data/decks', decks);
     }
 
     static async getAll(res){        

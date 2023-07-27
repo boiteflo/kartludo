@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V1.9.0 ';
+let version = 'V1.9.1 ';
 
 Vue.use(VueRouter)
 
@@ -18,6 +18,12 @@ const routes = [
         name: version + 'MSOS Error',
         component: () =>
             import ('../pages/pageSuccess.vue')
+    },
+    {
+        path: '/cardAdd',
+        name: version + 'MSOS Carte',
+        component: () =>
+            import ('../pages/pageAddCard.vue')
     },
     {
         path: '/format',

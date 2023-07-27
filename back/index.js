@@ -56,10 +56,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/api/data', helperRouteJsonGet.createDalRoute('data', 'Id'))
-app.use('/api/theme', helperRouteJsonGet.createDalRoute('themes', 'Id'))
-app.use('/api/card', helperRouteJsonGet.createDalRoute('cards', 'IdName'))
-app.use('/api/extension', helperRouteJsonGet.createDalRoute('extensions', 'set_code'))
+app.use('/api/data', helperRouteJsonGet.createDalRoute('back/data/data', 'Id'))
+app.use('/api/theme', helperRouteJsonGet.createDalRoute('back/data/themes', 'Id'))
+app.use('/api/card', helperRouteJsonGet.createDalRoute('back/data/cards', 'IdName'))
+app.use('/api/cardMDM', helperRouteJsonGet.createDalRoute('back/data/cardsAll', 'IdName'))
+app.use('/api/extension', helperRouteJsonGet.createDalRoute('back/data/extensions', 'set_code'))
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)
@@ -69,6 +70,9 @@ app.use('/api/deck', routeDecks)
 
 var routeFormats = require('./routes/format');
 app.use('/api/format', routeFormats)
+
+var routeCardsMDM = require('./routes/cardToAdd');
+app.use('/api/cardToAdd', routeCardsMDM)
 
 app.use(express.static(__dirname + '/public/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
