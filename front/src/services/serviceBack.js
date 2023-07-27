@@ -1,7 +1,9 @@
 const axios = require('axios');
 
-
-const urlBack = 'https://mdos.onrender.com/api/'; //'http://localhost:5000/api/';//
+let urlBack = 'http://localhost:5000/api/';
+if (process.env.NODE_ENV === 'production') {
+    urlBack = 'https://mdos.onrender.com/api/';
+}
 
 
 class ServiceBack {

@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="flex flex-responsive">
-            <div style="flex-grow:3; flex-basis: 0">
-                <h1>AJOUTER UNE CARTE</h1>
+            <div style="flex-grow:3; flex-basis: 0" class="bgWhite">
+                <h1 style="padding-bottom:4px;">AJOUTER UNE CARTE</h1>
                 <v-text-field class="flex-grow p5px"
                             hide-details
                             v-model="searchString"
@@ -10,40 +10,31 @@
                             @input="search">
                 </v-text-field>
                 <panel-cards v-if="cardsFiltered && cardsFiltered.length > 0" 
+                            key=""
                             :size="100" 
                             :cards="cardsFiltered"
                             @hover="showCard"
                             @select="selectCard">
                 </panel-cards>
-                <div class="bg2">
-                    <h3 class="p5px colorWhite">Les cartes a ajouter</h3>
-                    <panel-cards v-if="cardToAdd && cardToAdd.length > 0" 
-                                :size="100" 
-                                :cards="cardToAdd"
-                                @hover="showCard">
-                    </panel-cards>
-                </div>
             </div>
-            <div style="flex-grow:1; flex-basis: 0" class="bg">
+            <div style="flex-grow:1; flex-basis: 0">
+                <div class="bg2">
+                    <h3 class="p5px colorWhite">Les cartes séléctionnées</h3>
+                    <panel-cards v-if="cardsSelected && cardsSelected.length > 0" 
+                                :size="50" 
+                                :cards="cardsSelected"
+                                @hover="showCard"
+                                @select="unselectCard">
+                    </panel-cards>
+                    <v-btn class="m5px bg w100p colorWhite" :disabled="cardsSelected.length <1" @click="addCards">
+                        Ajouter dans l'onglet EXTRA
+                    </v-btn>
+                </div>
                 <card-image v-if="cardHover" 
                     :card="cardHover"
                     :badgeoff="true"
                     :size="300">
                 </card-image>
-                <div v-else class="bg w100p" style="height:437px">
-                </div>
-                <h3 class="m5px" style="color:white">Cartes séléctionnées</h3>
-                
-                <panel-cards v-if="cardsSelected && cardsSelected.length > 0" 
-                            :size="50" 
-                            :cards="cardsSelected"
-                            @hover="showCard"
-                            @select="unselectCard">
-                </panel-cards>
-
-                <v-btn class="m5px bg2 w100p colorWhite" :disabled="cardsSelected.length <1" @click="addCards">
-                    Sauvegarder
-                </v-btn>
             </div>
         </div>
     </div>
@@ -52,6 +43,8 @@
 
 <script>
 import ServiceBack from '../services/serviceBack'
+import { store } from '../data/store.js'
+
 import panelCards from '../components/panelCards.vue'
 import cardImage from '../components/cardImage.vue'
 
@@ -60,18 +53,15 @@ export default {
   components: {panelCards, cardImage},
   data: () => ({
     cards: null,
-    cardToAdd : null,
     cardsFiltered: null,
     cardHover: null,
     cardsSelected: [],
     searchString: ""
   }),
   async mounted(){
+    let storeCardIds = store.cards.map(x=> x.IdName);
       ServiceBack.getAll('cardMDM').then(result => {
-        this.cards = result;
-      });
-      ServiceBack.getAll('cardToAdd').then(result => {
-        this.cardToAdd = result;
+        this.cards = result.filter(x=> !storeCardIds.includes(x.IdName));
       });
   },
   methods: {
