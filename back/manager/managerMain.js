@@ -10,6 +10,7 @@ let spreedSheetId= '1tRkMQB_w_rb0mubb-7PEWsepUfCGroLjHZDO_KewBd4';
 
 class managerMain {
   static async refresh(req, res){
+    console.log('refresh');
     let errors = [];
     
     const { sheets } = await helperGoogleApi.authSheets();

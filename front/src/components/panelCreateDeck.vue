@@ -31,7 +31,7 @@
     <div v-else class="bgWhite">
         <template v-if="deckObj">
             <h2>Modifier un deck</h2>
-            <div class="m5px">
+            <div>
                 <div class="flex-wrap flex-center">
                     <v-text-field class="m5px" label="Nom du deck" hide-details
                                 v-model="deckObj.Title">
@@ -152,7 +152,16 @@
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
                 </div>
-                <br>
+                <h1>Tournoi</h1> 
+                <v-combobox class="m5px w100p" 
+                    v-model="deckObj.Tournament" 
+                    label="Tournoi" 
+                    :items="tournaments" 
+                    item-text="Title"
+                    hide-details>
+                </v-combobox>
+                <v-alert type="info">Si vous sélectionnez un tournoi dans la liste déroulante ci-dessus, votre deck ne sera pas visible par la communauté. A l'exception des organisateurs de tournoi, vous serez le seul a pouvoir le consulter si vous prenez soin de noter l'url du deck une fois l'enregistrement terminé.</v-alert>
+                
                 <v-alert type="warning" v-if="!isValidForSave()">
                     Pour sauvegarder un deck, il faut qu'il y ait au moins 1 carte dans le deck, une carte principale définie, un thème minimum, un titre et un auteur.
                 </v-alert>
@@ -163,7 +172,7 @@
                     <v-btn class="m5px bg" :disabled="!isValidForSave() || (deckObj.Errors && deckObj.Errors.length >0)" @click="validate">
                         Valider (ne sera plus modifiable)
                     </v-btn>
-                    <v-btn class="m5px bg2 colorWhite" :disabled="!isValidForSave()" @click="$emit('save', deckObj)">
+                    <v-btn class="m5px bg2 colorWhite" :disabled="!isValidForSave()" @click="save">
                         Sauvegarder
                     </v-btn>
                     <v-btn class="m5px bg2 colorWhite" @click="selectMainCard=true">
@@ -193,7 +202,7 @@ let md5 = require('md5');
 
   export default {
     name: 'panel-create-deck',
-    props: ['deck', 'themes', 'staples'],
+    props: ['deck', 'themes', 'staples', 'tournaments'],
     components: {
         cardImage, panelCards, panelDeckCards, iconThemeMini
     },
@@ -211,7 +220,12 @@ let md5 = require('md5');
     mounted(){
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null, Format: store.formatSelected.Title};
         this.deckObj.Rank= 3;
-        this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)) : [];
+        this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 
+            ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)).map(x=> x.Id)
+            : [];
+        this.deckObj.Tournament= this.deckObj.IdTournament && this.deckObj.IdTournament.length > 0 
+            ? this.tournaments.find(x=> x && x.Id === this.deckObj.IdTournament)?.Id
+            : '';            
         this.deckObj.Errors = ServiceDeck.getErrors(this.deckObj, this.deckObj.DeckListCards, store.formats, store.formatSelected.Id);
         watch(store, () => { 
             this.refreshCardsDeck();
@@ -283,9 +297,16 @@ let md5 = require('md5');
                 .filter(x=> stapleIdNames.includes(x.IdName))
                 .slice(0, 50);
         },
+        save(){
+            this.deckObj.Rank = 3;
+            this.deckObj.IdTournament = this.deckObj.Tournament ? this.deckObj.Tournament.Id : '';
+            this.deckObj.Themes= this.deckObj.ThemesId? this.deckObj.ThemesId.join(', ') : '';
+            delete this.deckObj.Tournament;
+            this.$emit('save', this.deckObj);
+        },
         validate(){
             this.deckObj.IsDraft=false;
-            this.$emit('save', this.deckObj);
+            this.save();
         },
         isValidForSave(){
             return (this.deckObj.Title && this.deckObj.Title.length > 0)

@@ -61,6 +61,7 @@ app.use('/api/theme', helperRouteJsonGet.createDalRoute('back/data/themes', 'Id'
 app.use('/api/card', helperRouteJsonGet.createDalRoute('back/data/cards', 'IdName'))
 app.use('/api/cardMDM', helperRouteJsonGet.createDalRoute('back/data/cardsAll', 'IdName'))
 app.use('/api/extension', helperRouteJsonGet.createDalRoute('back/data/extensions', 'set_code'))
+app.use('/api/tournament', helperRouteJsonGet.createDalRoute('back/data/tournaments', 'Id'))
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)

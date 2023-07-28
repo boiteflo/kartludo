@@ -3,13 +3,17 @@
         <div v-if="loading">
           Chargement
         </div>
-        <div v-else>
+        <div v-else-if="deck">
+          <v-alert type="warning" class="m5px" v-if="deck.IdTournament">
+              Notez bien l'url de cette page quelque part car ce deck n'est pas public. Vous ne serez plus capable d'y retourner par la suite.
+          </v-alert>
+
           <div v-if="isNew || deck.IsDraft">
-              <panel-create-deck :deck="deck" :themes="themes" :staples="staples" @save='saveDeck' 
+              <panel-create-deck :deck="deck" :themes="themes" :staples="staples" :tournaments="tournaments" @save='saveDeck' 
               ></panel-create-deck>
           </div>
           
-          <div v-else-if="deck">
+          <div v-else>
             <panel-deck :deck="deck">
             </panel-deck>
           </div>
@@ -34,6 +38,7 @@ export default {
   data: () => ({
     loading:true,
     ranks: null,
+    tournaments:null,
     staples : null,
     themes: null,
     isNew: false,
@@ -48,7 +53,8 @@ export default {
     let calls = [
       ServiceBack.getAll('data'),
       ServiceBack.getAll('theme'),
-      ServiceBack.getAll('deck')
+      ServiceBack.getAll('deck'),
+      ServiceBack.getAll('tournament'),
     ];
 
     if(!this.isNew){
@@ -65,8 +71,9 @@ export default {
       this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
       this.themes = results[1].concat([this.themeAll]);
       this.decks = results[2];
-      if(results.length > 3)
-        this.showDeck(results[3]);
+      this.tournaments = results[3];
+      if(results.length > 4)
+        this.showDeck(results[4]);
       this.loading=false;
     });
   },
@@ -100,9 +107,14 @@ export default {
     },
     saveDeck(deck){
       this.loading=true;
-      deck.Rank = 3;
       ServiceBack.insert('deck', deck)
-        .then(res=> window.location.href = '/deck/id=' + res.data);
+        .then(res=> this.move('/deck/id=' + res.data));
+    },
+    move(url){
+      if(window.location.href === url)
+        window.location.reload();
+      else
+        window.location.href =url;
     }
   }
 };

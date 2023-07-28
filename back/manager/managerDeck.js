@@ -14,8 +14,10 @@ class managerDeck {
         helperJsonFile.save('./back/data/decks', decks);
     }
 
-    static async getAll(res){        
-        res.send(await this.read());
+    static async getAll(res){     
+        let result =await this.read();
+        result = result.filter(x=> !x.IdTournament);   
+        res.send(result);
     }
 
     static async get(id, res){        
@@ -56,7 +58,8 @@ class managerDeck {
 			Themes: deck.ThemesId ? deck.ThemesId.join(',') : deck.Themes ?? 'autre',
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
-			Errors: deck.Errors
+			Errors: deck.Errors,
+            IdTournament : deck.IdTournament
         };
 
         this.saveDeck(deck, errorMessage);
@@ -95,7 +98,8 @@ class managerDeck {
 			Themes: deck.ThemesId ? deck.ThemesId.join(',') : '',
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
-			Errors: deck.Errors
+			Errors: deck.Errors,
+            IdTournament : deck.IdTournament
         };
 
         this.saveDeck(deck, errorMessage, deck.Id);
@@ -120,7 +124,9 @@ class managerDeck {
 			MainCardImage: deck.MainCardImage,
 			Themes: deck.Themes,
 			DeckList: deck.DeckList,
-			DeckLength: deck.DeckLength
+			DeckLength: deck.DeckLength,
+			Errors: deck.Errors,
+            IdTournament : ''
         };
 
         this.saveDeck(deck, '');
@@ -155,6 +161,7 @@ class managerDeck {
         deck.Rank = '3';
         
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
+        updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
         updateSheet.push({range: 'Decks!C' + sheetLine, value:deck.Format});
         updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank});
         updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Title});
@@ -165,11 +172,12 @@ class managerDeck {
         updateSheet.push({range: 'Decks!J' + sheetLine, value:deck.Themes});
         updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.DeckList});
         updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors ?? ''});
+        updateSheet.push({range: 'Decks!M' + sheetLine, value:deck.IdTournament ?? ''});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
     }
 
-    static getSheetRanges(){return ["Decks!B2:L"];}
+    static getSheetRanges(){return ["Decks!B2:M"];}
     
     static refresh= (sheetData, cards, formats, sheets, spreedSheetId) => {
         let errors=[];
@@ -187,7 +195,17 @@ class managerDeck {
 
         let decks = deckData.map(x=> {
             return {
-            "Id": x[0], "Format":x[1], "Rank": x[2], "Title": x[3], "IsDraft": x[4], "Date": x[5], "Author": x[6], "MainCard": x[7], "Themes": x[8], "DeckList": x[9] 
+                "Id": x[0], 
+                "Format":x[1], 
+                "Rank": x[2], 
+                "Title": x[3], 
+                "IsDraft": x[4], 
+                "Date": x[5], 
+                "Author": x[6], 
+                "MainCard": x[7], 
+                "Themes": x[8], 
+                "DeckList": x[9] , 
+                "IdTournament": x[10] 
             };
         });
 
