@@ -3,8 +3,8 @@
         <div v-if="loading">
           Chargement
         </div>
-        <div v-else-if="deck">
-          <v-alert type="warning" class="m5px" v-if="deck.IdTournament">
+        <div v-else>
+          <v-alert type="warning" class="m5px" v-if="deck && deck.IdTournament">
               Notez bien l'url de cette page quelque part car ce deck n'est pas public. Vous ne serez plus capable d'y retourner par la suite.
           </v-alert>
 
@@ -13,7 +13,7 @@
               ></panel-create-deck>
           </div>
           
-          <div v-else>
+          <div v-else-if="deck">
             <panel-deck :deck="deck">
             </panel-deck>
           </div>
