@@ -41,8 +41,7 @@ class managerCard {
         let updateSheet = [];
         let cards = require("../data/cards.js");
         
-        // Extra
-        
+        // Extra        
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -68,8 +67,8 @@ class managerCard {
         cards = cards.map(x=> {return {
             IdName: x.IdName,
             IdNameFr: x.IdNameFr,
-            NameEn: x.NameEn,
-            NameFr: x.NameFr,
+            NameEn: x.NameEn.replaceMany(",",""),
+            NameFr: x.NameFr.replaceMany(",",""),
             Animation: x.Animation,
             Bonus : x.Bonus,
             ImageMDM:x.ImageMDM,

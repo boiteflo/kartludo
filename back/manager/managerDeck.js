@@ -205,7 +205,7 @@ class managerDeck {
                 "MainCard": x[7], 
                 "Themes": x[8], 
                 "DeckList": x[9] , 
-                "IdTournament": x[10] 
+                "IdTournament": x[11] 
             };
         });
 
