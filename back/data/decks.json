@@ -994,20 +994,5 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53888_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
-	},
-	{
-		"Id": "eea72321-79d2-446a-983d-36d84c4e98ed",
-		"Format": "mdoldschoolv2",
-		"Title": "Banger Y. Bleus",
-		"IsDraft": true,
-		"Date": "28/07/2023",
-		"Author": "flo",
-		"MainCard": "blueeyes white dragon",
-		"MainCardImage": "https://images.ygoprodeck.com/images/cards/89631139.jpg",
-		"Themes": "dragon",
-		"DeckList": "Blue-Eyes White Dragon x2, Armed Dragon LV5, Witch of the Black Forest, UFO Turtle, Shining Angel x2, Vanguard of the Dragon, Blue Dragon Summoner, Morphing Jar #2, Twin-Headed Behemoth, Armed Dragon LV3, Masked Dragon, Kaibaman x2, Exploder Dragon, Decoy Dragon, The White Stone of Legend, Dark Hole, Monster Reborn, Pot of Greed, Pot of Avarice, The Shallow Grave, Soul Exchange, Reinforcement of the Army, The Warrior Returning Alive, Smashing Ground, Burst Stream of Destruction, Monster Reincarnation, Ancient Rules, Summoner's Art, Mystical Space Typhoon, Twin Twisters, Waboku, Burst Breath, Interdimensional Matter Transporter, Curse of Anubis, Dragon's Rebirth, Dragon's Rage, Metal Reflect Slime, No Entry!!",
-		"DeckLength": 41,
-		"Errors": null,
-		"IdTournament": "t01mdoldschoolv2"
 	}
 ]
