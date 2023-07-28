@@ -78,7 +78,6 @@
             </v-btn>
           </router-link>
         </div>
-        {{decks}}
     </div>
 </template>
 
