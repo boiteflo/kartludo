@@ -1,18 +1,6 @@
 <template>
     <div class="pageTop">
-        <div class="flex flex-center bg">
-          <div class="bg2" style="border-radius:20px; width:240px; height: 185px; margin:20px;">
-            <div class="flex colorWhite" style="flex-direction:column">
-              <div style="font-size:100px; margin-top:-20px; font-family:'Franklin Gothic Heavy'; 'font-weight':bold; text-align:center; flex-grow:1; letter-spacing:15px; text-indent: 15px;">MD</div>
-              <div class="flex flex-center" style="margin-top:-35px;">                
-                <v-icon style="font-size:40px; flex-grow:1" class="colorWhite">mdi-cards</v-icon>
-                <div style="margin-left:-60px; font-size:30px; font-family:'Arial-Black'; 'font-weight':bold; text-align:center; flex-grow:1; letter-spacing:5px">RETRO</div>
-              </div>
-              <v-chip style="margin-left: 85px; font-size:12px; width:60px;">{{$version}}</v-chip>
-            </div>
-          </div>
-        </div>
-        <v-img :src="require('../assets/RulesTopOnly2.jpg')" />
+        <v-img :src="require('../assets/RulesTopOnly.jpg')" />
         <h1>BANLIST</h1>
         <h2><v-icon color="red">mdi-cancel</v-icon> CARTES INTERDITES</h2>
         <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true" :center="true" tooltip="text">
