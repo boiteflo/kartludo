@@ -1,10 +1,22 @@
 [
-    {
-        "Id":"t01mdoldschoolv2",
-        "Date":"30/07/2023",
-        "Organizer": "Lockai",
-        "Title":"T01 MD Old School V2",
-        "MainCard":"Sangan",
-        "Actif":true
-    }
+	{
+		"Id": "t01mdoldschoolv2",
+		"Date": "30/07/2023",
+		"Organizer": "Lockai",
+		"Title": "Tournoi 01 MDOld-School V2",
+		"Actif": false,
+		"Results": "Chaoxys:644e9550-6601-45dd-b311-a531d5a63ce3,Veguito:7776b8ff-5922-45df-a89c-6dbd8d723fe5,Alala:0db2fadc-a332-41a8-88e8-d4a89b9c93e1,Marutan:d56bedc4-9fd1-48d2-9a2e-2729542d6f07,Lionator53:5fed38f6-6130-424e-8811-f8f18781fe8d,SOBRINO:3b47f0e0-7a7c-4078-bdb6-7de0dbdc88b4,t_kira:e1c62b9f-2371-49e6-a62f-2a7c9160fd36,tec:ec11062c-4f83-45b4-8c15-af601280c225,archiwombi:d5f97012-a718-4229-83ce-f92e98a9633c,Dragoon:543dde41-ab79-4c9d-a55f-812078b2d7a2,Lockai:4d17412f-7ef9-4618-8d9e-986813ed4d43,Wysim:0c2b2987-ac1e-4ef1-a128-ecd4000de7d9,LZ Ricardo:8a4cd6cb-ca21-450e-88dd-c22f73955ad3,_PtitBiscuit_:64e99471-939d-45f4-8eea-b2143b681935,Battillian:c7f0b306-b230-4606-a8f9-6c6c870d89de,Batoxe:c6bc69d9-5c30-41ba-82bf-eaea40dba2e8",
+		"MainCard": "Elemental HERO Stratos",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51faf_w420.webp"
+	},
+	{
+		"Id": "t02mdoldschoolv2",
+		"Date": "bientôt",
+		"Organizer": "",
+		"Title": "Tournoi 02 MDOld-School V2",
+		"Actif": true,
+		"Results": "",
+		"MainCard": "Petit Dragon",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a530be_w420.webp"
+	}
 ]

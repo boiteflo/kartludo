@@ -14,9 +14,17 @@ class managerDeck {
         helperJsonFile.save('./back/data/decks', decks);
     }
 
+    static async getTournaments(){
+        return await helperJsonFile.readPath('./back/data/tournaments.json');
+    }
+
     static async getAll(res){     
-        let result =await this.read();
-        result = result.filter(x=> !x.IdTournament);   
+        const allDecks =await this.read();
+        const tournaments = await this.getTournaments();
+        let result = allDecks.filter(x=> !x.IdTournament);  
+        tournaments.filter(x=> !x.Actif).forEach(tournament=> {
+            result = result.concat(allDecks.filter(x=> x.IdTournament === tournament.Id));
+        });
         res.send(result);
     }
 
@@ -186,7 +194,7 @@ class managerDeck {
         
         this.save(decks);
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
-        return errors;
+        return {data:decks, errors:errors};
     }
 
     static rebuildDecks(deckData, errors, page, cards, formats, updateSheet){
@@ -357,7 +365,7 @@ class managerDeck {
             format.Limit1Groups.split('|').forEach(group => {
                 let groupCards = group.split(',').map(x=> x.cleanup());
                 matchs = helperArray.getMatch(groupCards, cardIdNames);
-                if(matchs.length > 2)
+                if(matchs.length > 1)
                     errors.push('Ce groupe de limitation n est pas respecté : ' + group);
             })
         }

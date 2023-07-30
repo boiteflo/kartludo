@@ -90,7 +90,7 @@ class ServiceDeck {
         format.Limit1Groups.split('|').forEach(group => {
             let groupCards = group.split(',').map(x=> helperString.cleanup(x));
             matchs = helperArray.getMatch(groupCards, cardIdNames);
-            if(matchs.length > 2)
+            if(matchs.length > 1)
                 errors.push('Ce groupe de limitation n est pas respecté : ' + group);
         })
 

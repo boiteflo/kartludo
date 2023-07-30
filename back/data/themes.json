@@ -215,5 +215,12 @@
 		"CardIdName": "armeddragonlv7",
 		"CardNameEn": "Armed Dragon LV7",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a5155c_w420.webp"
+	},
+	{
+		"Id": "tenebreux",
+		"Title": "Ténébreux",
+		"CardIdName": "sillvawarlordofdarkworld",
+		"CardNameEn": "Sillva Warlord of Dark World",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535f9_w420.webp"
 	}
 ]

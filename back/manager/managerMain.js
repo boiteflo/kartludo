@@ -1,7 +1,8 @@
-const managerFormat = require("./managerFormat");
 const managerCard = require("./managerCard");
 const managerDeck = require("./managerDeck");
 const managerTheme = require("./managerTheme");
+const managerFormat = require("./managerFormat");
+const managerTournament = require("./managerTournament");
 
 const helperJsonFile = require("../helper/helperJsonFile");
 const helperGoogleApi = require("../helper/helperGoogleApi");
@@ -18,7 +19,8 @@ class managerMain {
       .concat(managerFormat.getSheetRanges())
       .concat(managerDeck.getSheetRanges())
       .concat(managerCard.getSheetRanges())
-      .concat(managerTheme.getSheetRanges());   
+      .concat(managerTheme.getSheetRanges())
+      .concat(managerTournament.getSheetRanges());   
     const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
     
     let cardsResult = await managerCard.refresh(sheetData, sheets, spreedSheetId);
@@ -29,11 +31,15 @@ class managerMain {
     let formats = formatResult.formats;
     errors = errors.concat(formatResult.errors);
   
-    let themeErrrors = managerTheme.refresh(sheetData, cards, sheets, spreedSheetId);
-    errors = errors.concat(themeErrrors);
+    let themeErrors = managerTheme.refresh(sheetData, cards, sheets, spreedSheetId);
+    errors = errors.concat(themeErrors);
   
-    let deckErrrors =managerDeck.refresh(sheetData, cards, formats, sheets, spreedSheetId);
-    errors = errors.concat(deckErrrors);
+    let deckResult =managerDeck.refresh(sheetData, cards, formats, sheets, spreedSheetId);
+    let decks = deckResult.data;
+    errors = errors.concat(deckResult.errors);
+  
+    let tournamentErrors = managerTournament.refresh(sheetData, decks, sheets, spreedSheetId);
+    errors = errors.concat(tournamentErrors);
 
     let data = sheetData.Data.map(x=> {return {"Id": x[0], "Title": x[1], "Value": x[2]};});
     helperJsonFile.save('./back/data/data', data);

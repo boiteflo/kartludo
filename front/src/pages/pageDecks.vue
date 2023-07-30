@@ -18,8 +18,24 @@
             </div>
           </v-dialog>
 
+          <!-- Tournoi sélectionné -->
+          <div v-if="tournamentSelected" style="position:relative">
+            <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
+              <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="tournamentSelected.CardImage" />
+            </div>
+
+            <h1>Tournoi : {{tournamentSelected.Title}}</h1>
+            <h1 style="padding-top:5px;">Les Decks </h1>
+            <div class="flex-wrap flex-center bg2">
+              <div v-for="deck in tournamentSelected.Decks" v-bind:key="deck.Id" style="position:relative">
+                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
+                </iconDeck>
+              </div>
+            </div>
+          </div>
+
           <!-- Theme sélectionné -->
-          <div v-if="themeSelected" style="position:relative">
+          <div v-else-if="themeSelected" style="position:relative">
             <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
               <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="themeSelected.CardImage" />
             </div>
@@ -33,24 +49,9 @@
               </div>
             </div>
           </div>
-          
-          <!-- Classement -->
-          <div v-else-if="!rankSelected" :key="refreshRanks">
-            <h1>Le classement des decks</h1>
-            <p class="bg" style="padding:10px; margin:0px">Même avec toute la volonté du monde, il est quasiment impossible pour le deck de Joey Wheeler de battre un deck Protecteur du tombeau. Mais il a toute ces chances contre les autres decks de sa catégorie. Voici un classement approximatif des decks du format.</p>
-            <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="rank in ranks" 
-                v-bind:key="rank.Id" 
-                v-on:select="selectRank(rank)" 
-                :text="rank.Title" 
-                :text1="rank.DecksLength + ' decks'"
-                :image="rank.Image">
-              </icon-theme>
-            </div>
-          </div>
 
           <!-- Themes -->
-          <div v-else :key="refreshThemes">
+          <div v-else-if="rankSelected" :key="refreshThemes">
             <h1>Les Themes</h1>
             <div class="flex-wrap flex-space-around p5px bg2">
               <icon-theme v-for="theme in themes.filter(x=> rankSelected.Id==0 || x.DecksLength > 0)" 
@@ -62,8 +63,32 @@
               </icon-theme>
             </div>
           </div>
-        </div>
+          
+          <!-- Classement -->
+          <div v-else :key="refreshRanks">
+            <h1>Le classement des decks</h1>
+            <div class="flex-wrap flex-space-around p5px bg2">
+              <icon-theme v-for="rank in ranks" 
+                v-bind:key="rank.Id" 
+                v-on:select="selectRank(rank)" 
+                :text="rank.Title" 
+                :text1="rank.DecksLength + ' decks'"
+                :image="rank.Image">
+              </icon-theme>
+            </div>
+            <h1>Les Tournois</h1>
+            <div class="flex-wrap flex-space-around p5px bg2">
+              <icon-theme v-for="tournament in tournaments" 
+                v-bind:key="tournament.Id" 
+                v-on:select="showTournament(tournament)" 
+                :text="tournament.Title" 
+                :text1="tournament.Date"
+                :image="tournament.MainCardImage">
+              </icon-theme>
+            </div>
+          </div>
         
+        </div>
           <!-- Boutons -->
         <div class="flex-wrap flex-center">
           <v-btn class="m5px" v-if="rankSelected" @click="selectRank(null)">
@@ -83,6 +108,7 @@
 
 
 <script>
+import { forkJoin } from 'rxjs';
 import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
 
@@ -101,18 +127,20 @@ export default {
     ranks: null,
     staples : null,
     themes: null,
+    tournaments: null,
     decksObject: null,
     decks: null,
     rankDecks: [],
     themeDecks: [],
     currentThemeDecks : null,
 
-    hierarchyArray: [{Id:0, Text:'Classement'}],
+    hierarchyArray: [{Id:0, Text:'Classement et Tournois'}],
     refreshRanks: 0,
     refreshThemes: 0,
     rankSelected: null,
     themeSelected: null,
     deckSelected: null,
+    tournamentSelected:null,
     showDeck: false,
     createDeck: false,
     themeAll : {
@@ -123,33 +151,30 @@ export default {
     }
   }),
   mounted(){
-    ServiceBack.getAll('data').then(res => {
-      this.staples = {
-          stapleMonster: res.find(x=> x.Id === 'stapleMonster'),
-          stapleSpell: res.find(x=> x.Id === 'stapleSpell'),
-          stapleTrap: res.find(x=> x.Id === 'stapleTrap')
-      };
-      this.ranks = JSON.parse(res.find(x=> x.Id === 'ranks').Value);
-      this.linkThemeWithDecks();
-    }); 
-    ServiceBack.getAll('theme').then(res => {
-      this.themes = res.concat([this.themeAll]);
-      this.loading=false;
-      this.linkThemeWithDecks();
-    });   
-    ServiceBack.getAll('deck').then(res => {
-      this.decks = res;
-      this.linkThemeWithDecks();
-    });   
+    forkJoin([
+        ServiceBack.getAll('data'),
+        ServiceBack.getAll('theme'),
+        ServiceBack.getAll('deck'),
+        ServiceBack.getAll('tournament')
+      ]).subscribe(results => {
+        this.staples = {
+            stapleMonster: results[0].find(x=> x.Id === 'stapleMonster'),
+            stapleSpell: results[0].find(x=> x.Id === 'stapleSpell'),
+            stapleTrap: results[0].find(x=> x.Id === 'stapleTrap')
+        };
+        this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
+        this.themes = results[1].concat([this.themeAll]);
+        this.decks = results[2];
+        this.tournaments = results[3];
+        this.linkThemeWithDecks();
+      });   
   },
   methods: {
     linkThemeWithDecks(){
       if(!this.themes || !this.decks || !this.ranks)
         return;
 
-      this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);
-      
-      this.ranks = this.ranks.concat([{ "Id":"10","Title": "Tournoi 2308#01", "NameEn":"Cup of Ace"}]);
+      this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);      
 
       this.ranks.forEach(rank => {
         rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).ImageMDM;
@@ -158,11 +183,23 @@ export default {
         this.rankDecks.push({Id: rank.Id, Value:decks});
       });
 
+      this.tournaments.filter(x=> !x.Actif).forEach(tournament => {
+        tournament.Decks = [];
+        tournament.Results.split(",").forEach(tournamendDeck => {
+          let array = tournamendDeck.split(":");
+          let deck = this.decks.find(x=> x.Id === array[1]);
+          if(deck)
+            tournament.Decks.push(deck);
+        })
+      });
+
+      this.loading=false;
       this.refreshRanks++;      
     },
     selectHierarchy(item){
       this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
       if(item.Id === 0) this.selectRank(null);
+      if(item.Id === 0) this.showTournament(null);
       if(item.Id === 1) this.showTheme(null);
     },
     selectRank(rank){
@@ -212,6 +249,13 @@ export default {
               deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
       }
       this.showDeck = true;
+    },
+    showTournament(tournament){
+      this.tournamentSelected=tournament;
+      if(tournament){
+        this.hierarchyArray.push({Id:2, Text:tournament.Title});
+      }
+      window.scrollTo(0, 0);
     },
     unselect(){
       this.deckSelected=null;
