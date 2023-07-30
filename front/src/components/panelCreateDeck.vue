@@ -156,7 +156,7 @@
                 <v-combobox class="m5px w100p" 
                     v-model="deckObj.Tournament" 
                     label="Tournoi" 
-                    :items="tournaments" 
+                    :items="tournaments.filter(x=>x.Actif)" 
                     item-text="Title"
                     hide-details>
                 </v-combobox>

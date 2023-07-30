@@ -171,16 +171,16 @@ class managerDeck {
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
         updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
         updateSheet.push({range: 'Decks!C' + sheetLine, value:deck.Format});
-        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.Rank});
-        updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Title});
-        updateSheet.push({range: 'Decks!F' + sheetLine, value:deck.IsDraft ?'1' : '0'});
-        updateSheet.push({range: 'Decks!G' + sheetLine, value:deck.Date});
-        updateSheet.push({range: 'Decks!H' + sheetLine, value:deck.Author});
-        updateSheet.push({range: 'Decks!I' + sheetLine, value:deck.MainCard});
-        updateSheet.push({range: 'Decks!J' + sheetLine, value:deck.Themes});
-        updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.DeckList});
-        updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.Errors ?? ''});
-        updateSheet.push({range: 'Decks!M' + sheetLine, value:deck.IdTournament ?? ''});
+        updateSheet.push({range: 'Decks!D' + sheetLine, value:deck.IdTournament ?? ''});
+        updateSheet.push({range: 'Decks!E' + sheetLine, value:deck.Rank});
+        updateSheet.push({range: 'Decks!F' + sheetLine, value:deck.Title});
+        updateSheet.push({range: 'Decks!G' + sheetLine, value:deck.IsDraft ?'1' : '0'});
+        updateSheet.push({range: 'Decks!H' + sheetLine, value:deck.Date});
+        updateSheet.push({range: 'Decks!I' + sheetLine, value:deck.Author});
+        updateSheet.push({range: 'Decks!J' + sheetLine, value:deck.MainCard});
+        updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.Themes});
+        updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.DeckList});
+        updateSheet.push({range: 'Decks!M' + sheetLine, value:deck.Errors ?? ''});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
     }
@@ -258,7 +258,7 @@ class managerDeck {
             deck.Errors = this.getErrors(deck, deckCards, formats);
             if(deck.Errors && deck.Errors.length > 0)
                 deck.IsDraft=true;
-            updateSheet.push({range: page + '!L' + sheetLine, value:deck.Errors ?? ''});
+            updateSheet.push({range: page + '!M' + sheetLine, value:deck.Errors ?? ''});
                 
             let errorMessage = '';
             if(errorsCards.length > 0){

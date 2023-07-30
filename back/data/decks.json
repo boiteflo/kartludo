@@ -1264,22 +1264,6 @@
 		"Errors": null
 	},
 	{
-		"Id": "13ae4562-3e6b-4e41-abf2-e3ac32328078",
-		"Format": "",
-		"IdTournament": "",
-		"Rank": "3",
-		"Title": "Copie de Magicien Compteur",
-		"IsDraft": true,
-		"Date": "29/07/2023",
-		"Author": "",
-		"MainCard": "Silent Magician LV8",
-		"Themes": "magicien",
-		"DeckList": "Dark Magician, Exodius the Ultimate Forbidden Lord, Silent Magician LV8, Magical Marionette, Witch of the Black Forest, Des Feral Imp, Skilled Dark Magician, Breaker the Magical Warrior, Royal Magical Library, Silent Magician LV4 x2, Blast Magician, Mythical Beast Cerberus, Defender the Magical Knight, Apprentice Magician, Magical Plant Mandragola x2, Magical Undertaker, Magician of Faith, Swords of Revealing Light, Fissure, Monster Reborn, Pot of Greed, Heavy Storm, Upstart Goblin, Nightmare's Steelcage, Creature Swap, Soul Taker, Hammer Shot, Magicians Unite, Pot of Avarice, Autonomous Action Unit, Spell Absorption, Mystical Space Typhoon, Book of Moon, Mirror Force, Bottomless Trap Hole, Dimensional Prison, Pitch-Black Power Stone x2",
-		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535ee_w420.webp",
-		"DeckLength": 40,
-		"Errors": null
-	},
-	{
 		"Id": "615750d3-b3b8-4984-bd6a-7217741928b1",
 		"Format": "mdoldschoolv2",
 		"IdTournament": "",
@@ -1710,5 +1694,20 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a523c6_w420.webp",
 		"DeckLength": 40,
 		"Errors": "Ce groupe de limitation n est pas respecté :  Mirror Force, Dark Hole, Lightning Vortex"
+	},
+	{
+		"Id": "8f98180b-90a7-438a-9027-648033d2a780",
+		"Format": "mdoldschoolv2",
+		"Title": "red2",
+		"IsDraft": true,
+		"Date": "31/07/2023",
+		"Author": "red",
+		"MainCard": "Red-Eyes Darkness Dragon",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53322_w420.webp",
+		"Themes": "dragon",
+		"DeckList": "Red-Eyes Black Dragon, Red-Eyes Darkness Dragon, Reinforcement of the Army, Book of Moon, Red-Eyes Spirit",
+		"DeckLength": 5,
+		"Errors": "Pas assez de cartes : 5",
+		"IdTournament": ""
 	}
 ]
