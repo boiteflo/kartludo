@@ -13,6 +13,7 @@ class managerMain {
   static async refresh(req, res){
     console.log('refresh');
     let errors = [];
+    return;
     
     const { sheets } = await helperGoogleApi.authSheets();
     let requestsPages = ['Data!B2:D']
