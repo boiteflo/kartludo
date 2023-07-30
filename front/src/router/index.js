@@ -10,49 +10,49 @@ Vue.prototype.$version = version;
 const routes = [
     {
         path: '/error/:id',
-        name: version + 'MSOS Error',
+        name: version + ' MDOS Error',
         component: () =>
             import ('../pages/pageError.vue')
     },
     {
         path: '/success/:id',
-        name: version + 'MSOS Error',
+        name: version + ' MDOS Error',
         component: () =>
             import ('../pages/pageSuccess.vue')
     },
     {
         path: '/cardAdd',
-        name: version + 'MSOS Carte',
+        name: version + ' MDOS Carte',
         component: () =>
             import ('../pages/pageAddCard.vue')
     },
     {
         path: '/format',
-        name: version + 'MSOS Format',
+        name: version + ' MDOS Format',
         component: () =>
             import ('../pages/pageFormat.vue')
     },
     {
         path: '/decks',
-        name: version + 'MSOS Deck',
+        name: version + ' MDOS Deck',
         component: () =>
             import ('../pages/pageDecks.vue')
     },
     {
         path: '/deck/:id',
-        name: version + 'MSOS Deck',
+        name: version + ' MDOS Deck',
         component: () =>
             import ('../pages/pageDeck.vue')
     },
     {
         path: '/duel',
-        name: version + 'MSOS Duel',
+        name: version + ' MDOS Duel',
         component: () =>
             import ('../pages/pageDuel.vue')
     },
     {
         path: '/boosters',
-        name: version + 'MSOS Boosters',
+        name: version + ' MDOS Boosters',
         component: () =>
             import ('../pages/pageBoosters.vue')
     },
