@@ -2,6 +2,7 @@
 	{
 		"Id": "c67ee6ea-54e2-422a-a6a6-626a9655193f",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerriers bien équippés",
 		"IsDraft": false,
@@ -17,6 +18,7 @@
 	{
 		"Id": "919ee4fa-5eb5-4bd4-9134-b38b918a0aae",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Protecteur du tombeau PostBan",
 		"IsDraft": false,
@@ -32,6 +34,7 @@
 	{
 		"Id": "36597341-7282-4841-bd30-173fd2140cd5",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Gemini HERO",
 		"IsDraft": false,
@@ -47,6 +50,7 @@
 	{
 		"Id": "ebdeebc3-faa6-46e7-a25e-fffa0704b9e1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Six Samuraïs PostBan",
 		"IsDraft": false,
@@ -62,6 +66,7 @@
 	{
 		"Id": "ca0bd872-e174-4a95-a60a-1e9ed3c4351d",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Démon Mefist",
 		"IsDraft": false,
@@ -77,6 +82,7 @@
 	{
 		"Id": "4a4f3ad0-ace2-4a3a-9184-73dd5db3b582",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Rituel Dark",
 		"IsDraft": false,
@@ -92,6 +98,7 @@
 	{
 		"Id": "ccde670d-2f47-4496-898c-2e2c85cb0aeb",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Bête en ragé !",
 		"IsDraft": false,
@@ -107,6 +114,7 @@
 	{
 		"Id": "d3452dd5-ab8a-4a3d-bb58-aa5784beb8e2",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Dragon Supreme",
 		"IsDraft": false,
@@ -122,6 +130,7 @@
 	{
 		"Id": "5a46debf-115c-40a0-9446-d053bd0487c4",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Diamond Dude Turbo - Post-Banlist",
 		"IsDraft": false,
@@ -137,6 +146,7 @@
 	{
 		"Id": "93b055fe-87a3-48da-b099-0243b7346f29",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "4",
 		"Title": "JOEY B.City",
 		"IsDraft": false,
@@ -152,6 +162,7 @@
 	{
 		"Id": "1214aa63-6bbc-43f3-bfa9-c084ac65cb99",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Magicien",
 		"IsDraft": false,
@@ -167,6 +178,7 @@
 	{
 		"Id": "a22aea4f-90b9-473e-be83-0cfb83294db3",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Arkana Clowns",
 		"IsDraft": false,
@@ -182,6 +194,7 @@
 	{
 		"Id": "add9767e-fa52-44b3-ba7e-59352fafce8f",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Crânes Serviteurs",
 		"IsDraft": false,
@@ -197,6 +210,7 @@
 	{
 		"Id": "35250798-179b-4ae5-98c9-51ee0f3ba682",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Fusions",
 		"IsDraft": false,
@@ -212,6 +226,7 @@
 	{
 		"Id": "67c9477c-6e0e-4bea-8b26-4d05957e0180",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Y. Bleus",
 		"IsDraft": false,
@@ -227,6 +242,7 @@
 	{
 		"Id": "dd2a9814-1c4b-4b4d-bca1-8cbd38d0a35c",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Lightsworn Post ban",
 		"IsDraft": false,
@@ -242,6 +258,7 @@
 	{
 		"Id": "d7ae98b8-c6c4-451b-864d-0936dab75c97",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Zombie Taper FORT",
 		"IsDraft": false,
@@ -257,6 +274,7 @@
 	{
 		"Id": "2d73adf3-db63-4c8a-8744-c2e4d2f1a9da",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Guerrier bannissement challenge",
 		"IsDraft": false,
@@ -272,6 +290,7 @@
 	{
 		"Id": "2e039030-ae03-4e1f-be48-44145bdbebea",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "De vieux jouet",
 		"IsDraft": false,
@@ -287,6 +306,7 @@
 	{
 		"Id": "ae848c31-b561-47b2-a206-bc6ad5e86761",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "GK Challenge joue sans ta main",
 		"IsDraft": false,
@@ -302,6 +322,7 @@
 	{
 		"Id": "c3cbd23b-4222-4dc0-842f-5cb8bc524dd6",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Insecte",
 		"IsDraft": false,
@@ -317,6 +338,7 @@
 	{
 		"Id": "8d9d696c-73c5-4721-82d9-8f0445056346",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerrier magnétique ",
 		"IsDraft": false,
@@ -332,6 +354,7 @@
 	{
 		"Id": "0b2b9a9e-ee17-4b19-9b04-d66ef244316a",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Yeux Rouges",
 		"IsDraft": false,
@@ -347,6 +370,7 @@
 	{
 		"Id": "863a35c9-afef-47a1-b7c0-78105a961562",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Aqua Beatdown",
 		"IsDraft": false,
@@ -362,6 +386,7 @@
 	{
 		"Id": "e8c5b726-fdae-4d3f-b399-98f9dc5b2b7b",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Emental Hero",
 		"IsDraft": true,
@@ -377,6 +402,7 @@
 	{
 		"Id": "a3758c94-1c7e-4c3a-8d15-7a165479841a",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Sphinx",
 		"IsDraft": false,
@@ -392,6 +418,7 @@
 	{
 		"Id": "31324865-18de-449f-99a6-31bcfc4e0267",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Horus Dragons",
 		"IsDraft": false,
@@ -407,6 +434,7 @@
 	{
 		"Id": "2d73adf3-db63-4c8a-8744-c2e4d2f1a9da",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerrier bannissement challenge",
 		"IsDraft": false,
@@ -422,6 +450,7 @@
 	{
 		"Id": "0f40f299-dd4c-4cfc-9771-7db9c4cf9f5a",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Exodia contrôle ",
 		"IsDraft": false,
@@ -437,6 +466,7 @@
 	{
 		"Id": "72f188e2-e186-482b-b114-279bea301e03",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "insect - v2",
 		"IsDraft": false,
@@ -452,6 +482,7 @@
 	{
 		"Id": "006e975b-7b0c-4d31-ac8a-d118bd163cca",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Rainbow",
 		"IsDraft": false,
@@ -467,6 +498,7 @@
 	{
 		"Id": "c84a7e3d-2f2c-4aa5-851d-92b534a69614",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "LevelUp",
 		"IsDraft": false,
@@ -482,6 +514,7 @@
 	{
 		"Id": "29752ae4-d113-4b14-9fbf-c1d43c3dcad4",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "La mer à boire",
 		"IsDraft": false,
@@ -497,6 +530,7 @@
 	{
 		"Id": "a05445dd-d7c8-4a56-9a6e-876e7def8c25",
 		"Format": "v1alpha",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Trap-monster Burn",
 		"IsDraft": false,
@@ -512,6 +546,7 @@
 	{
 		"Id": "c33b7182-c398-432c-9f17-a4a2748f8a57",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Toon tempo",
 		"IsDraft": false,
@@ -527,6 +562,7 @@
 	{
 		"Id": "9d8906be-d322-42cc-bea4-168f9b4e9f0b",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Magicien Compteur",
 		"IsDraft": false,
@@ -542,6 +578,7 @@
 	{
 		"Id": "65ab42dd-dfc6-4277-a24c-363820685bfc",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "Droid",
 		"IsDraft": true,
@@ -557,6 +594,7 @@
 	{
 		"Id": "1083a341-caf3-4a84-98e3-811ca5959e2d",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Bête Harpie",
 		"IsDraft": false,
@@ -572,6 +610,7 @@
 	{
 		"Id": "a04a25aa-8d20-41f2-a8ed-38274dc4fab7",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Mars Attaque !",
 		"IsDraft": false,
@@ -587,6 +626,7 @@
 	{
 		"Id": "e3962ef0-6e44-4283-925a-ecaa3c2494f4",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "2",
 		"Title": "six samourai",
 		"IsDraft": false,
@@ -602,6 +642,7 @@
 	{
 		"Id": "40bc2228-29d2-4cf8-b603-56a89fdfa1e1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "CANCER",
 		"IsDraft": false,
@@ -617,6 +658,7 @@
 	{
 		"Id": "114e942b-fde4-4e08-8751-8e2f9b4656e2",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Exodia Turbo pioche",
 		"IsDraft": false,
@@ -632,6 +674,7 @@
 	{
 		"Id": "4ad54d0a-bbe8-4d6c-91e5-29d8ed4a6a79",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "tempête inferno retro",
 		"IsDraft": false,
@@ -647,6 +690,7 @@
 	{
 		"Id": "09eb54b4-cc00-4273-b391-82292bd00cc2",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "De vieux Jouet (GadgetxRouage)",
 		"IsDraft": false,
@@ -662,6 +706,7 @@
 	{
 		"Id": "fc028fe7-c2c9-4e2d-9c4e-222583118db0",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Ben Kei",
 		"IsDraft": false,
@@ -677,6 +722,7 @@
 	{
 		"Id": "61b7cc52-e5e4-42e4-8824-d7b45532c31e",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Magichien des Tenebres",
 		"IsDraft": false,
@@ -692,6 +738,7 @@
 	{
 		"Id": "3bf09d58-d81a-4911-9b40-2f0004f94d51",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Vanilla Ice BB",
 		"IsDraft": false,
@@ -707,6 +754,7 @@
 	{
 		"Id": "35cb19dc-77e9-4145-928e-17c9d0c03498",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "4",
 		"Title": "YUGI Battle city ++",
 		"IsDraft": false,
@@ -722,6 +770,7 @@
 	{
 		"Id": "83df66fb-6832-45bb-b02e-a50df54d320b",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "4",
 		"Title": "Seto Kaiba Anime +",
 		"IsDraft": false,
@@ -737,6 +786,7 @@
 	{
 		"Id": "232d6cc9-5ea2-4223-a735-14eca21d59d0",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Gadget/mécanique ",
 		"IsDraft": false,
@@ -752,6 +802,7 @@
 	{
 		"Id": "7fc69ba5-a4db-4e7c-99a8-bdc39c843ad1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Magicien V2",
 		"IsDraft": false,
@@ -767,6 +818,7 @@
 	{
 		"Id": "a51091fe-432d-4ea8-a57f-babf475c136a",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Kebab flip Lv compteur ",
 		"IsDraft": true,
@@ -782,6 +834,7 @@
 	{
 		"Id": "5a03be80-3d7d-4dc4-9934-6fbf1e6cdee3",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Diamond Dude Turbo - Post-Banlist",
 		"IsDraft": true,
@@ -797,6 +850,7 @@
 	{
 		"Id": "64608546-ec73-4deb-8845-707724aaead7",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Marik Battle city",
 		"IsDraft": true,
@@ -812,6 +866,7 @@
 	{
 		"Id": "3fd33c58-b9b7-4067-b655-cfced82fce94",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "La bonne époque ",
 		"IsDraft": true,
@@ -827,6 +882,7 @@
 	{
 		"Id": "7fe9cae2-d4a3-4263-b340-5c3987af7812",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Héros élémentaire ",
 		"IsDraft": true,
@@ -842,6 +898,7 @@
 	{
 		"Id": "8a3edd12-638c-4cde-a9b8-ef961b0589d1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "4",
 		"Title": "Pegasus Anime",
 		"IsDraft": true,
@@ -857,6 +914,7 @@
 	{
 		"Id": "db1078db-e25e-494f-989d-679b66d904bc",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Deck Dragon Levia Dedale",
 		"IsDraft": true,
@@ -872,6 +930,7 @@
 	{
 		"Id": "2d7fae43-15b9-431e-9350-51161f8002b3",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Exodia contrôle ",
 		"IsDraft": true,
@@ -887,6 +946,7 @@
 	{
 		"Id": "17dfeeac-cfad-4762-b4de-2f41792b6f00",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "5",
 		"Title": "Exemple de deckliste valide",
 		"IsDraft": true,
@@ -902,6 +962,7 @@
 	{
 		"Id": "c36cc752-b2fe-4451-890a-8749968d7a32",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Dragon LV des ténèbres ",
 		"IsDraft": true,
@@ -917,6 +978,7 @@
 	{
 		"Id": "7ac5864b-cba5-42e8-a362-8d74cedc7eaa",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "LV Dragon",
 		"IsDraft": false,
@@ -932,6 +994,7 @@
 	{
 		"Id": "49675422-1152-44c3-bf43-2c0f0221ddb5",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Exemple de deck valide",
 		"IsDraft": true,
@@ -947,6 +1010,7 @@
 	{
 		"Id": "40f39f63-8a19-4a29-9277-ee1accbefb4b",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Diamond Dude Turbo - Post-Banlist",
 		"IsDraft": true,
@@ -962,6 +1026,7 @@
 	{
 		"Id": "09f6859d-8b60-49c9-89d0-1ce3a1c4687b",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerrier équipement",
 		"IsDraft": true,
@@ -977,6 +1042,7 @@
 	{
 		"Id": "95c97582-9487-425b-a615-0f82c51063f5",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerrier équipement",
 		"IsDraft": true,
@@ -992,6 +1058,7 @@
 	{
 		"Id": "c639393a-4366-4777-b328-bce00c06ce7c",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Deck Lumière",
 		"IsDraft": true,
@@ -1007,6 +1074,7 @@
 	{
 		"Id": "0300b42c-9149-4053-8dd9-ea14373dd9fd",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Rainbow",
 		"IsDraft": true,
@@ -1022,6 +1090,7 @@
 	{
 		"Id": "ab0dc05d-d3b0-4bf1-b11d-49e681ad59f6",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Héro des éléments !",
 		"IsDraft": false,
@@ -1037,6 +1106,7 @@
 	{
 		"Id": "a973a9e0-f462-4314-9ac0-952d83139994",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Exodia toon",
 		"IsDraft": true,
@@ -1052,6 +1122,7 @@
 	{
 		"Id": "665ae3be-8581-485c-9640-aefd210ec3ee",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Nécrofear",
 		"IsDraft": true,
@@ -1067,6 +1138,7 @@
 	{
 		"Id": "60f7c759-8923-432f-8bd7-e210017d31d1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "4",
 		"Title": "Maï Kujaku Anime",
 		"IsDraft": false,
@@ -1082,6 +1154,7 @@
 	{
 		"Id": "b42c23d9-b55e-4f28-8984-9fad1d714a5c",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "NORMAL",
 		"IsDraft": false,
@@ -1097,6 +1170,7 @@
 	{
 		"Id": "07afd1bf-3cad-448e-8f29-11d6b9e4eaf0",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Ultime Y. Bleus",
 		"IsDraft": false,
@@ -1112,6 +1186,7 @@
 	{
 		"Id": "53511146-1a9d-4d30-9e34-3d4d4bcd7e6e",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Fusions V2",
 		"IsDraft": false,
@@ -1127,6 +1202,7 @@
 	{
 		"Id": "1a4861ca-e290-4880-ad3d-c297a36acbbd",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Crânes Serviteurs V2",
 		"IsDraft": false,
@@ -1142,6 +1218,7 @@
 	{
 		"Id": "6231e689-bf3c-42c3-b1b2-237ffb2a8185",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "maju gren da eiza",
 		"IsDraft": false,
@@ -1157,6 +1234,7 @@
 	{
 		"Id": "fb5345d0-ee7e-4485-be2e-918cc9954559",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Seigneur du Chaos",
 		"IsDraft": true,
@@ -1172,6 +1250,7 @@
 	{
 		"Id": "dbc6fece-cc1f-41f3-afc1-55d9a3248c4c",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Elfe rétro CY",
 		"IsDraft": false,
@@ -1187,6 +1266,7 @@
 	{
 		"Id": "13ae4562-3e6b-4e41-abf2-e3ac32328078",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Magicien Compteur",
 		"IsDraft": true,
@@ -1202,6 +1282,7 @@
 	{
 		"Id": "615750d3-b3b8-4984-bd6a-7217741928b1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Force Arcane",
 		"IsDraft": false,
@@ -1217,6 +1298,7 @@
 	{
 		"Id": "a39654b2-1a9d-4e6c-8061-492345eff2b5",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Bataille des Bannis",
 		"IsDraft": true,
@@ -1232,6 +1314,7 @@
 	{
 		"Id": "0c7c905a-154d-4d34-972e-2b57f1bfef66",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Bête Cristalline",
 		"IsDraft": true,
@@ -1247,6 +1330,7 @@
 	{
 		"Id": "a16818c1-e384-4dbf-bb34-efa1157ff523",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Bête Cristalline",
 		"IsDraft": true,
@@ -1262,6 +1346,7 @@
 	{
 		"Id": "021e0e01-b082-4231-a749-0b45218759ca",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Héros",
 		"IsDraft": false,
@@ -1277,6 +1362,7 @@
 	{
 		"Id": "d56bedc4-9fd1-48d2-9a2e-2729542d6f07",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "1",
 		"Title": "EARTH beatdown",
 		"IsDraft": true,
@@ -1285,7 +1371,6 @@
 		"MainCard": "Gaia Power",
 		"Themes": "terre",
 		"DeckList": "Insect Knight, Gladiator Beast Andal, Dark Driceratops, Guardian Sphinx, D.D. Warrior, Giant Rat x2, The Rock Spirit, Exiled Force, Chiron the Mage, Gigantes, D.D. Assailant, Drillroid, Warrior Lady of the Wasteland x2, Black Stego, Crystal Beast Topaz Tiger, Black Brachios, Injection Fairy Lily, Legendary Jujitsu Master, Neo-Spacian Grand Mole, Dark Hole, Pot of Greed, Heavy Storm, Swords of Revealing Light, Monster Reborn, Nightmare's Steelcage, Creature Swap x2, Smashing Ground, Gaia Power, Mystical Space Typhoon, Book of Moon, Enemy Controller, Forbidden Chalice, Soul Taker, Dimensional Prison, Bottomless Trap Hole, Widespread Ruin, Dust Tornado",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a52299_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1293,6 +1378,7 @@
 	{
 		"Id": "c6bc69d9-5c30-41ba-82bf-eaea40dba2e8",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Exodia",
 		"IsDraft": true,
@@ -1301,7 +1387,6 @@
 		"MainCard": "Exodia the Forbidden One",
 		"Themes": "exodia",
 		"DeckList": "Labyrinth Wall, Mystical Elf, Feral Imp, Battle Ox, Two-Headed King Rex, Big Insect, Jellyfish, Axe Raider, Aqua Madoor, Prevent Rat, Tongyo, Red Archery Girl, Gamma the Magnet Warrior, Vorse Raider, Robotic Knight, Dark Blade, Luster Dragon, Space Mambo, Divine Dragon Ragnarok, Elemental HERO Clayman, Renge Gatekeeper of Dark World, Alien Shocktrooper, Gladiator Beast Andal, Armored Lizard, Ryu-Kishin, Rock Ogre Grotto #1, Giant Soldier of Stone, Acrobat Monkey, Left Arm of the Forbidden One, Left Leg of the Forbidden One, Right Arm of the Forbidden One, Right Leg of the Forbidden One, Charcoal Inpachi, Exodia the Forbidden One, Heart of the Underdog x2, Reload x2, Magical Mallet x2",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a52079_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1309,6 +1394,7 @@
 	{
 		"Id": "c7f0b306-b230-4606-a8f9-6c6c870d89de",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Cyber ",
 		"IsDraft": true,
@@ -1317,7 +1403,6 @@
 		"MainCard": "Cyber Dragon",
 		"Themes": "dragon",
 		"DeckList": "Blue-Eyes White Dragon, Tri-Horned Dragon, Chthonian Emperor Dragon, Cyber Dragon, Cyber Dragon Zwei, Cyberdark Horn, Cyberdark Edge, Cyberdark Keel, Honest, Shining Angel x2, Mystic Tomato x2, Cyber Phoenix, Twin-Barrel Dragon, Blast Sphere, Twin-Headed Behemoth, Masked Dragon x2, Proto-Cyber Dragon, Decoy Dragon, Cyber Valley, Future Fusion, Cyberdark Impact!, Polymerization, Trade-In, Different Dimension Capsule, Power Bond, Limiter Removal, Hand Destruction, Pot of Greed, Twin Twisters, Dark Hole, Monster Reborn, Rare Metalmorph, Raigeki Break, Mirror Force, Widespread Ruin, Bottomless Trap Hole, Draining Shield, Five-Headed Dragon, Cyber End Dragon, Chimeratech Overdragon, Cyber Twin Dragon, Cyberdark Dragon",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ade_w420.webp",
 		"DeckLength": 40,
 		"Errors": "Ce groupe de limitation n est pas respecté :  Mirror Force, Dark Hole, Lightning Vortex"
@@ -1325,6 +1410,7 @@
 	{
 		"Id": "7776b8ff-5922-45df-a89c-6dbd8d723fe5",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "1",
 		"Title": "Bons vieux Guerriers",
 		"IsDraft": false,
@@ -1333,7 +1419,6 @@
 		"MainCard": "Gilford the Legend",
 		"Themes": "guerrier,equipement",
 		"DeckList": "Warrior Dai Grepher, Dark Blade, Gilford the Legend, Gilford the Lightning, Silent Swordsman LV7, Silent Swordsman LV5, D.D. Warrior Lady, Warrior Lady of the Wasteland x2, Command Knight, Gearfried the Iron Knight, Ninja Grandmaster Sasuke, Obnoxious Celtic Guard, Goblin Attack Force, Exiled Force, Blindly Loyal Goblin, Silent Swordsman LV3, Marauding Captain, Mataza the Zapper, Swords of Revealing Light, Monster Reborn, Fusion Sword Murasame Blade, Solitary Sword of Poison, Lightning Blade, Reinforcement of the Army, The A. Forces, Double Summon x2, United We Stand, The Warrior Returning Alive, Pot of Greed, Lightning Vortex, Wicked-Breaking Flamberge - Baou, Mystical Space Typhoon, Enemy Controller, Twin Twisters, Sakuretsu Armor, Kunai with Chain, Magic Jammer, Seven Tools of the Bandit",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a523c6_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1341,6 +1426,7 @@
 	{
 		"Id": "64e99471-939d-45f4-8eea-b2143b681935",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Héro Retro - MDOS",
 		"IsDraft": false,
@@ -1349,7 +1435,6 @@
 		"MainCard": "Elemental HERO Stratos",
 		"Themes": "fusion,guerrier,hero",
 		"DeckList": "Elemental HERO Neos, Elemental HERO Clayman, Elemental HERO Sparkman, Elemental HERO Avian, Elemental HERO Burstinatrix, Rainbow Dragon, Elemental HERO Bladedge, Elemental HERO Necroshade, Elemental HERO Stratos, Elemental HERO Blazeman, Elemental HERO Wildheart, Elemental HERO Captain Gold, Elemental HERO Prisma x2, Elemental HERO Heat, Elemental HERO Woodsman, Elemental HERO Ocean, D.D. Assailant, King of the Swamp x2, Neo-Spacian Grand Mole, Swords of Revealing Light, Polymerization x2, Monster Reborn, Pot of Greed, Reinforcement of the Army, Fusion Recovery, Miracle Fusion, E - Emergency Call, R - Righteous Justice, O - Oversoul, Fusion Recycling Plant, Skyscraper, Mystical Space Typhoon, De-Fusion, Twin Twisters, Forbidden Lance, Mirror Force, Bottomless Trap Hole, Dimensional Prison, Hero Blast, Rainbow Neos, Elemental HERO Shining Flare Wingman, Elemental HERO Wild Wingman, Elemental HERO Tempest, Elemental HERO Wildedge, Elemental HERO Shining Phoenix Enforcer, Elemental HERO Plasma Vice, Elemental HERO Nova Master, Elemental HERO Terra Firma, Elemental HERO Flame Wingman, Elemental HERO Thunder Giant, Elemental HERO Rampart Blaster, Elemental HERO Necroid Shaman, Elemental HERO Phoenix Enforcer, Elemental HERO Darkbright",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51faf_w420.webp",
 		"DeckLength": 42,
 		"Errors": null
@@ -1357,6 +1442,7 @@
 	{
 		"Id": "5fed38f6-6130-424e-8811-f8f18781fe8d",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Orde d'aimants ",
 		"IsDraft": false,
@@ -1365,7 +1451,6 @@
 		"MainCard": "Magnetic Field",
 		"Themes": "terre,pioche",
 		"DeckList": "Labyrinth Wall, Alpha The Magnet Warrior, Beta The Magnet Warrior x2, Gamma the Magnet Warrior, Valkyrion the Magna Warrior x2, Megarock Dragon, Avalanching Aussa, Familiar-Possessed - Aussa, Giant Rat x2, Delta The Magnet Warrior, Aussa the Earth Charmer, Card Trooper, Absorbing Jar, Block Golem, Morphing Jar, Sphere Kuriboh, Lightning Vortex, Monster Reborn, Twin Twisters, Pot of Greed, Swords of Revealing Light, Fissure, Nightmare's Steelcage, Exchange, Gaia Power, Magnetic Field, Attack the Moon!, Enemy Controller, Hand Destruction, Jar of Avarice, Sakuretsu Armor, Raigeki Break, Lightforce Sword, Draining Shield, Rock Bombardment, Spiritual Earth Art - Kurogane, Defense Draw",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52ad8_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1373,6 +1458,7 @@
 	{
 		"Id": "e1c62b9f-2371-49e6-a62f-2a7c9160fd36",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "MD Old School",
 		"IsDraft": false,
@@ -1381,7 +1467,6 @@
 		"MainCard": "Dark Magician",
 		"Themes": "fusion,magicien",
 		"DeckList": "Dark Magician, Dark Blade, Silent Magician LV8, Buster Blader, Rapid-Fire Magician, Magician's Valkyria, Silent Magician LV4 x2, Pitch-Black Warwolf, Defender the Magical Knight, Breaker the Magical Warrior, Magical Exemplar, Royal Magical Library, Mystic Tomato, Blast Magician x2, Skilled Dark Magician, Pitch-Dark Dragon, The Dark - Hex-Sealed Fusion, Apprentice Magician, Old Vindictive Magician, Magical Plant Mandragola, Malevolent Nuzzler, Fissure, Polymerization, Fusion Recycling Plant, Buster Rancher, Monster Reborn, Swords of Revealing Light, Mystical Space Typhoon, Pot of Greed, Card Trader, Poison of the Old Man, Spell Power Grasp, De-Spell, Spellbook Organization, Spell Absorption, Pitch-Black Power Stone, Mirror Force, Chaos Burst, Dark Paladin, Dark Blade the Dragon Knight",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51c30_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1389,6 +1474,7 @@
 	{
 		"Id": "8a4cd6cb-ca21-450e-88dd-c22f73955ad3",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Monde Ténébreux M.D. V.2",
 		"IsDraft": false,
@@ -1397,7 +1483,6 @@
 		"MainCard": "Card Destruction",
 		"Themes": "demon,tenebre,tenebreux",
 		"DeckList": "Renge Gatekeeper of Dark World, Zure Knight of Dark World, Raviel Lord of Phantasms, Dark Necrofear, Reign-Beaux Overlord of Dark World, Dark Ruler Ha Des, Puppet Master, Goldd Wu-Lord of Dark World x2, Sillva Warlord of Dark World x2, Newdoria, Beiige Vanguard of Dark World, Brron Mad King of Dark World, Broww Huntsman of Dark World, Gren Tactician of Dark World, Kahkki Guerilla of Dark World, Scarr Scout of Dark World, Dark World Dealings x2, Dark World Lightning, Gateway to Dark World, Monster Reborn, Swords of Revealing Light, Smashing Ground, Graceful Charity, Card Destruction, Heavy Storm, Allure of Darkness, Mystic Plasma Zone, Forbidden Lance, Dark World Grimoire, Mirror Force, Dimensional Prison, Bark of Dark Ruler, The Forces of Darkness, Dark Deal, Forced Requisition, Escape from the Dark Dimension, Skill Drain",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a518ab_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1405,6 +1490,7 @@
 	{
 		"Id": "0c2b2987-ac1e-4ef1-a128-ecd4000de7d9",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Rouages ancien",
 		"IsDraft": false,
@@ -1413,7 +1499,6 @@
 		"MainCard": "Ancient Gear Golem",
 		"Themes": "rouage",
 		"DeckList": "X-Head Cannon, V-Tiger Jet, Ancient Gear Golem x2, Ancient Gear Gadjiltron Dragon, Perfect Machine King, Ancient Gear Beast, Ancient Gear Gadjiltron Chimera, Jinzo, Ancient Gear Engineer, Ancient Gear Gadget, Ancient Gear Knight x2, Ancient Gear Soldier, Gear Golem the Moving Fortress, Green Gadget, Red Gadget, Yellow Gadget, Y-Dragon Head, Z-Metal Tank, W-Wing Catapult, Ancient Gear Cannon, Ancient Gear, Spell Gear, Ancient Gear Tank, Ancient Gear Workshop, Ancient Gear Drill, Ancient Gear Explosive, Ancient Gear Factory, Ancient Gear Fist, Ancient Gear Castle, Polymerization x2, Monster Reborn, Fissure, Pot of Greed, Fusion Recycling Plant, Machine Conversion Factory, Limiter Removal, Mirror Force, Sakuretsu Armor, Call of the Haunted, Machine King - 3000 B.C., Ultimate Ancient Gear Golem, XYZ-Dragon Cannon, VWXYZ-Dragon Catapult Cannon, YZ-Tank Dragon, XZ-Tank Cannon, XY-Dragon Cannon, VW-Tiger Catapult",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a514a2_w420.webp",
 		"DeckLength": 43,
 		"Errors": null
@@ -1421,6 +1506,7 @@
 	{
 		"Id": "4d17412f-7ef9-4618-8d9e-986813ed4d43",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "test",
 		"IsDraft": true,
@@ -1429,7 +1515,6 @@
 		"MainCard": "Dimensional Prison",
 		"Themes": "equipement",
 		"DeckList": "Flying Kamakiri #1, Giant Rat, Pyramid Turtle, UFO Turtle, Shining Angel, Mystic Tomato, Mother Grizzly x2, Warrior Lady of the Wasteland x2, Sangan, Spirit Reaper, Morphing Jar #2, Masked Dragon, Morphing Jar, Apprentice Magician, Reinforcement of the Army, Scapegoat, Book of Moon, Monster Reborn, Twin Twisters, Dark Hole, Pot of Greed, Monster Reincarnation x2, Lightning Vortex, Fissure, Swords of Revealing Light, Mystical Space Typhoon, Soul Exchange, The Shallow Grave, Smashing Ground, The Warrior Returning Alive, Curse of Anubis, Waboku, Interdimensional Matter Transporter, Sakuretsu Armor, Dimensional Prison, Metal Reflect Slime, Compulsory Evacuation Device",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51d8f_w420.webp",
 		"DeckLength": 40,
 		"Errors": "Ce groupe de limitation n est pas respecté :  Fissure, Smashing Ground. Ce groupe de limitation n est pas respecté :  Mirror Force, Dark Hole, Lightning Vortex. Ce groupe de limitation n est pas respecté :  Dimensional Prison, Sakuretsu Armor"
@@ -1437,6 +1522,7 @@
 	{
 		"Id": "543dde41-ab79-4c9d-a55f-812078b2d7a2",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Magicien des compteurs ",
 		"IsDraft": false,
@@ -1445,7 +1531,6 @@
 		"MainCard": "Defender the Magical Knight",
 		"Themes": "magicien",
 		"DeckList": "Dark Magician, Legendary Flame Lord, Silent Magician LV8, Dark Red Enchanter, Breaker the Magical Warrior, Magical Exemplar, Defender the Magical Knight, Royal Magical Library, Skilled Dark Magician, Blast Magician, Mythical Beast Cerberus, Silent Magician LV4 x2, Magical Undertaker, Magical Plant Mandragola, Apprentice Magician x2, Old Vindictive Magician, Copycat, Magician of Faith, Spell Power Grasp x2, Arcane Barrier, Smashing Ground, Mystical Space Typhoon, Shard of Greed, Magicians Unite, Incandescent Ordeal, Mega Ton Magical Cannon, Enemy Controller, Book of Moon, Book of Taiyou, Spell Absorption, Monster Reborn, Forbidden Lance, Magician's Circle, Pitch-Black Power Stone, Miracle Restoring, Anti-Spell, Malevolent Catastrophe",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51cd4_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1453,6 +1538,7 @@
 	{
 		"Id": "3b47f0e0-7a7c-4078-bdb6-7de0dbdc88b4",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "NORMAL",
 		"IsDraft": false,
@@ -1461,7 +1547,6 @@
 		"MainCard": "Heart of the Underdog",
 		"Themes": "normal",
 		"DeckList": "Summoned Skull, Beast of Talwar, Frostosaurus x2, Labyrinth Wall, Cyber-Tech Alligator, La Jinn the Mystical Genie of the Lamp x2, Gemini Elf, Vorse Raider, Luster Dragon, Battle Footballer, Gladiator Beast Andal, Sabersaurus, Mechanicalchaser, Ancient Lamp x2, Magician of Faith, Monster Reborn, Pot of Greed, Swords of Revealing Light, Fissure, Mystical Space Typhoon, Heavy Storm, Nightmare's Steelcage, White Elephant's Gift, Fairy Meteor Crush, Heart of the Underdog, Book of Moon, Mirror Force, Sakuretsu Armor, Solemn Judgment, Magic Cylinder, Bottomless Trap Hole, Threatening Roar, Magic Jammer, Trap Jammer, Dark Bribe, Birthright, Seven Tools of the Bandit",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a525b6_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1469,6 +1554,7 @@
 	{
 		"Id": "ec11062c-4f83-45b4-8c15-af601280c225",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "gren maju da eiza",
 		"IsDraft": false,
@@ -1477,7 +1563,6 @@
 		"MainCard": "Gren Maju Da Eiza",
 		"Themes": "pioche",
 		"DeckList": "Golden Homunculus, Caius the Shadow Monarch, Bazoo the Soul-Eater, Strike Ninja, D.D. Assailant, Necroface x2, D.D. Survivor, Helios - The Primordial Sun, Cyber Phoenix, Gren Maju Da Eiza x2, Trap Master, Banisher of the Light, Des Koala, Card Trooper, Banisher of the Radiance x2, Hane-Hane, Needle Worm, Magician of Faith, Magical Merchant, D.D. Crow, Battle Fader, Swords of Revealing Light, Fissure, Dimensional Fissure, Pot of Greed, Soul Release, Gold Sarcophagus, Necrovalley, Soul Absorption, Book of Moon, Nightmare's Steelcage, Mirror Force, Bottomless Trap Hole, D.D. Dynamite, Dimensional Prison, Macro Cosmos, Threatening Roar",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52516_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1485,6 +1570,7 @@
 	{
 		"Id": "d5f97012-a718-4229-83ce-f92e98a9633c",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "3",
 		"Title": "Copie de en avant véhicroid !!",
 		"IsDraft": false,
@@ -1493,7 +1579,6 @@
 		"MainCard": "Super Vehicroid Jumbo Drill",
 		"Themes": "roid",
 		"DeckList": "Ancient Gear Golem, UFOroid, The Fiend Megacyber, Rescueroid, Drillroid x2, Expressroid x2, Steamroid x2, Submarineroid, Truckroid, D.D. Warrior Lady, Giant Rat, Shining Angel, Cyber Phoenix, Elemental HERO Prisma, Ambulanceroid, Gyroid, Card Trooper, Magician of Faith, Dark Hole, Pot of Greed, Pot of Avarice, Swords of Concealing Light, Swords of Revealing Light, Heavy Storm, Exchange, My Body as a Shield, Mystical Space Typhoon, Future Fusion, Smashing Ground, Power Bond, Vehicroid Connection Zone, Limiter Removal, Creature Swap, Bottomless Trap Hole, Dimensional Prison, Supercharge, Compulsory Evacuation Device, UFOroid Fighter, Super Vehicroid Jumbo Drill, Ambulance Rescueroid, Steam Gyroid",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53888_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1501,6 +1586,7 @@
 	{
 		"Id": "644e9550-6601-45dd-b311-a531d5a63ce3",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "1",
 		"Title": "Héros",
 		"IsDraft": true,
@@ -1509,7 +1595,6 @@
 		"MainCard": "Elemental HERO Stratos",
 		"Themes": "guerrier,hero",
 		"DeckList": "Elemental HERO Neos, Elemental HERO Necroshade, Elemental HERO Stratos, Elemental HERO Blazeman, Elemental HERO Neos Alius x2, Elemental HERO Prisma, Elemental HERO Ocean, Elemental HERO Captain Gold, Elemental HERO Heat x2, Exiled Force, Command Knight, D.D. Assailant, Field-Commander Rahz, Vortex Trooper, Reinforcement of the Army, Book of Moon, Monster Reborn, Pot of Greed, Swords of Revealing Light, Mystical Space Typhoon, Smashing Ground, The Warrior Returning Alive, Heavy Storm, Soul Taker, E - Emergency Call, O - Oversoul, The A. Forces, Skyscraper, Forbidden Lance, Gold Sarcophagus, Miracle Fusion, Mirror Force, Dimensional Prison, Raigeki Break, Bottomless Trap Hole, Hero Blast x2, Birthright, Elemental HERO Nova Master, Elemental HERO Inferno, Elemental HERO Terra Firma, Elemental HERO Aqua Neos, Elemental HERO Flare Neos, Elemental HERO Grand Neos, Elemental HERO Necroid Shaman",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51faf_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
@@ -1517,6 +1602,7 @@
 	{
 		"Id": "0db2fadc-a332-41a8-88e8-d4a89b9c93e1",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "t01mdoldschoolv2",
 		"Rank": "1",
 		"Title": "Meta killler",
 		"IsDraft": false,
@@ -1525,7 +1611,6 @@
 		"MainCard": "Pot of Greed",
 		"Themes": "guerrier",
 		"DeckList": "Caius the Shadow Monarch, Raiza the Storm Monarch, Zaborg the Thunder Monarch, Elemental HERO Stratos, Giant Rat, King Tiger Wanghu, Kycoo the Ghost Destroyer, Green Gadget x2, Red Gadget x2, Yellow Gadget x2, Mirage Dragon, Elemental HERO Wildheart, Elemental HERO Ocean, Fossil Dyna Pachycephalo, Injection Fairy Lily, Battle Fader, Sphere Kuriboh, Fissure, Pot of Avarice, Pot of Greed, Reinforcement of the Army, Heavy Storm, Shield Crush, Gaia Power, Mystical Space Typhoon, Shrink, Book of Moon, Enemy Controller, Forbidden Lance, Widespread Ruin, Mirror Force, Bottomless Trap Hole, Trap Hole, Dust Tornado, Dimensional Prison, Mirror Wall, Windstorm of Etaqua",
-		"IdTournament": "t01mdoldschoolv2",
 		"MainCardImage": "https://static.wikia.nocookie.net/yugioh/images/4/41/PotofGreed-SYE-SP-C-1E.png",
 		"DeckLength": 40,
 		"Errors": null
@@ -1533,6 +1618,7 @@
 	{
 		"Id": "38ae957e-347d-46ac-863e-c2f655dc9f85",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "",
 		"Title": "Héros MDOS",
 		"IsDraft": false,
@@ -1548,6 +1634,7 @@
 	{
 		"Id": "b0209d7c-049b-4239-9a70-cff557335fa0",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "",
 		"Title": "Héros MDOS",
 		"IsDraft": false,
@@ -1563,6 +1650,7 @@
 	{
 		"Id": "9560a76d-35de-42d6-87cf-a210fed8631b",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Volcanique",
 		"IsDraft": true,
@@ -1578,6 +1666,7 @@
 	{
 		"Id": "fab62868-0142-400a-8adc-605bcd064f54",
 		"Format": "",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Copie de Héro des éléments !",
 		"IsDraft": true,
@@ -1593,6 +1682,7 @@
 	{
 		"Id": "187bbfdc-09d1-417b-9c47-1bd3269c75f6",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Heros Elementaire ",
 		"IsDraft": true,
@@ -1608,6 +1698,7 @@
 	{
 		"Id": "0667698b-8f7c-4d4f-ad20-c3ed8cb9c398",
 		"Format": "mdoldschoolv2",
+		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Guerrier Equipement",
 		"IsDraft": true,

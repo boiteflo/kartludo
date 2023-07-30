@@ -205,15 +205,15 @@ class managerDeck {
             return {
                 "Id": x[0], 
                 "Format":x[1], 
-                "Rank": x[2], 
-                "Title": x[3], 
-                "IsDraft": x[4], 
-                "Date": x[5], 
-                "Author": x[6], 
-                "MainCard": x[7], 
-                "Themes": x[8], 
-                "DeckList": x[9] , 
-                "IdTournament": x[11] 
+                "IdTournament": x[2],
+                "Rank": x[3], 
+                "Title": x[4], 
+                "IsDraft": x[5], 
+                "Date": x[6], 
+                "Author": x[7], 
+                "MainCard": x[8], 
+                "Themes": x[9], 
+                "DeckList": x[10]
             };
         });
 
