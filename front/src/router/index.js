@@ -57,10 +57,16 @@ const routes = [
             import ('../pages/pageBoosters.vue')
     },
     {
-        path: '/cube',
-        name: version + ' MDOS Cubes',
+        path: '/cube/:id',
+        name: version + ' MDOS Cube',
         component: () =>
             import ('../pages/pageCube.vue')
+    },
+    {
+        path: '/cubes',
+        name: version + ' MDOS Cubes',
+        component: () =>
+            import ('../pages/pageCubes.vue')
     },
     {
         path: '/*',

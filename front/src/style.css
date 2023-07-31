@@ -82,6 +82,8 @@
 
 .h25 { height: 25px !important;}
 .h32 { height: 32px !important;}
+.h38 { height: 38px !important;}
+.h42 { height: 42px !important;}
 .h50 { height: 50px !important;}
 .h100 {height: 100px !important;}
 .h200 {height: 200px !important;}
@@ -104,6 +106,7 @@
 .w100 { width: 100px !important;}
 .w150 { width: 150px !important;}
 .w200 { width: 200px !important;}
+.w250 { width: 250px !important;}
 .w300 { width: 300px !important;}
 .w500 { width: 500px !important;}
 

@@ -1598,18 +1598,6 @@
 		"Rarity": "SR"
 	},
 	{
-		"IdName": "chargeofthelightbrigade",
-		"IdNameFr": "renfortdelumiere",
-		"NameEn": "Charge of the Light Brigade",
-		"NameFr": "Renfort de Lumière",
-		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a5192f_w420.webp",
-		"Type": "Spell",
-		"TypeMonster": "",
-		"ToExtraDeck": false,
-		"Level": null,
-		"Rarity": "UR"
-	},
-	{
 		"IdName": "destinyherodasher",
 		"IdNameFr": "fonceurhrosdeladestinee",
 		"NameEn": "Destiny HERO - Dasher",
@@ -3055,18 +3043,6 @@
 		"NameEn": "Dark Armed Dragon",
 		"NameFr": "Dragon Armé des Ténèbres",
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51be2_w420.webp",
-		"Type": "Monster",
-		"TypeMonster": "Effect",
-		"ToExtraDeck": false,
-		"Level": "7",
-		"Rarity": "SR"
-	},
-	{
-		"IdName": "gorztheemissaryofdarkness",
-		"IdNameFr": "gorzlmissairedestenebres",
-		"NameEn": "Gorz the Emissary of Darkness",
-		"NameFr": "Gorz  l'Émissaire des Ténèbres",
-		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52483_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
 		"ToExtraDeck": false,
@@ -36571,18 +36547,6 @@
 		"NameEn": "Meteo the Matchless",
 		"NameFr": "Meteo l'Invincible",
 		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52c5f_w420.webp",
-		"Type": "Monster",
-		"TypeMonster": "Effect",
-		"ToExtraDeck": false,
-		"Level": "8",
-		"Rarity": null
-	},
-	{
-		"IdName": "victorydragon",
-		"IdNameFr": "dragondelavictoire",
-		"NameEn": "Victory Dragon",
-		"NameFr": "Dragon De La Victoire",
-		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53d10_w420.webp",
 		"Type": "Monster",
 		"TypeMonster": "Effect",
 		"ToExtraDeck": false,

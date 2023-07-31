@@ -1,11 +1,17 @@
-{
-    "Id":"Cube25e",
-    "Steps": [
-        { "Booster" : "LOB", "Quantity":"25" },
-        { "Booster" : "MRD", "Quantity":"25" },
-        { "Booster" : "SRL", "Quantity":"25" },
-        { "Booster" : "PSV", "Quantity":"25" },
-        { "Booster" : "DCR", "Quantity":"25" },
-        { "Booster" : "IOC", "Quantity":"25" }
-    ]
-}
+[
+    {
+        "Id":"cube25e",
+        "Title":"Multi Cube 25e Anniversaire",
+        "Description":"Ce groupe de cube regroupe les 6 boosters réeditées par Konami a l'occasion du 25eme anniversaire du jeu de cartes. C'est ce format qui a été utilisé pour la série Duels Historiques en Juin 2023 par Doc7 et Zouloux.",
+        "Image":"https://static.wixstatic.com/media/24b04d_8220e478f1ca4e3ba4d3a33a13f2eb47~mv2.jpg/v1/fill/w_750,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/24b04d_8220e478f1ca4e3ba4d3a33a13f2eb47~mv2.jpg",
+        "SubImage":"https://i.ytimg.com/vi/NMd2Xcyq2AE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUDMQPwqhyzFWTdFzP8wp0AT2FnQ",
+        "Steps": [
+            { "Booster" : "LOB", "Quantity":"25" },
+            { "Booster" : "MRD", "Quantity":"25" },
+            { "Booster" : "SRL", "Quantity":"25" },
+            { "Booster" : "PSV", "Quantity":"25" },
+            { "Booster" : "DCR", "Quantity":"25" },
+            { "Booster" : "IOC", "Quantity":"25" }
+        ]
+    }
+]

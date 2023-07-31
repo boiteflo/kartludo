@@ -57,11 +57,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/data', helperRouteJsonGet.createDalRoute('back/data/data', 'Id'))
+app.use('/api/cube', helperRouteJsonGet.createDalRoute('back/data/cubes', 'Id'))
 app.use('/api/theme', helperRouteJsonGet.createDalRoute('back/data/themes', 'Id'))
 app.use('/api/card', helperRouteJsonGet.createDalRoute('back/data/cards', 'IdName'))
+app.use('/api/booster', helperRouteJsonGet.createDalRoute('back/data/boosters', 'Id'))
 app.use('/api/cardMDM', helperRouteJsonGet.createDalRoute('back/data/cardsAll', 'IdName'))
 app.use('/api/extension', helperRouteJsonGet.createDalRoute('back/data/extensions', 'set_code'))
-app.use('/api/booster', helperRouteJsonGet.createDalRoute('back/data/boosters25Anniversary', 'Id'))
 app.use('/api/tournament', helperRouteJsonGet.createDalRoute('back/data/tournaments', 'Id'))
 
 var refreshRoute = require('./routes/refresh');

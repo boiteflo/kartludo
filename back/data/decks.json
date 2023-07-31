@@ -1062,14 +1062,14 @@
 		"Rank": "3",
 		"Title": "Deck Lumière",
 		"IsDraft": true,
-		"Date": "28/07/2023",
+		"Date": "31/07/2023",
 		"Author": "Coygoco",
 		"MainCard": "Wingweaver",
 		"Themes": "lumiere",
-		"DeckList": "Wingweaver, Labyrinth Wall, Dunames Dark Witch, X-Head Cannon, Soul Tiger, Mystical Shine Ball, Moisture Creature, Gilford the Lightning, Guardian Angel Joan, Exiled Force, Kaiser Sea Horse x2, Blade Knight, Barrier Statue of the Heavens, Gellenduo, Light Effigy, Maha Vailo x2, The Agent of Creation - Venus, Hoshiningen, Sphere Kuriboh, Dian Keto the Cure Master, Swords of Revealing Light, Fissure, Monster Reborn, Smashing Ground, Axe of Despair x2, Malevolent Nuzzler, Luminous Spark, Shard of Greed, Enemy Controller, Soul Exchange, Metalmorph, Lightforce Sword, Skull Dice, Trap Hole, Mirror Force, Magic Cylinder, Solemn Judgment",
+		"DeckList": "Wingweaver, Labyrinth Wall, Dunames Dark Witch, X-Head Cannon, Soul Tiger, Mystical Shine Ball, Moisture Creature, Gilford the Lightning, Guardian Angel Joan, Exiled Force, Kaiser Sea Horse x2, Blade Knight, Barrier Statue of the Heavens, Gellenduo, Light Effigy, Maha Vailo x2, The Agent of Creation - Venus, Hoshiningen, Sphere Kuriboh, Dian Keto the Cure Master, Swords of Revealing Light, Fissure, Monster Reborn, Axe of Despair x2, Malevolent Nuzzler, Luminous Spark, Shard of Greed, Enemy Controller, Soul Exchange, Mystical Space Typhoon, Metalmorph, Lightforce Sword, Skull Dice, Trap Hole, Mirror Force, Magic Cylinder, Solemn Judgment",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53e44_w420.webp",
 		"DeckLength": 40,
-		"Errors": "Ce groupe de limitation n est pas respecté :  Fissure, Smashing Ground"
+		"Errors": null
 	},
 	{
 		"Id": "0300b42c-9149-4053-8dd9-ea14373dd9fd",
@@ -1545,7 +1545,7 @@
 		"Date": "28/07/2023",
 		"Author": "tec",
 		"MainCard": "Gren Maju Da Eiza",
-		"Themes": "pioche",
+		"Themes": "pioche,bani",
 		"DeckList": "Golden Homunculus, Caius the Shadow Monarch, Bazoo the Soul-Eater, Strike Ninja, D.D. Assailant, Necroface x2, D.D. Survivor, Helios - The Primordial Sun, Cyber Phoenix, Gren Maju Da Eiza x2, Trap Master, Banisher of the Light, Des Koala, Card Trooper, Banisher of the Radiance x2, Hane-Hane, Needle Worm, Magician of Faith, Magical Merchant, D.D. Crow, Battle Fader, Swords of Revealing Light, Fissure, Dimensional Fissure, Pot of Greed, Soul Release, Gold Sarcophagus, Necrovalley, Soul Absorption, Book of Moon, Nightmare's Steelcage, Mirror Force, Bottomless Trap Hole, D.D. Dynamite, Dimensional Prison, Macro Cosmos, Threatening Roar",
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52516_w420.webp",
 		"DeckLength": 40,
@@ -1696,18 +1696,35 @@
 		"Errors": "Ce groupe de limitation n est pas respecté :  Mirror Force, Dark Hole, Lightning Vortex"
 	},
 	{
-		"Id": "8f98180b-90a7-438a-9027-648033d2a780",
-		"Format": "mdoldschoolv2",
-		"Title": "red2",
+		"Id": "d6c5158a-689f-47c0-b714-c6110adb28af",
+		"Format": "",
+		"IdTournament": "",
+		"Rank": "3",
+		"Title": "Copie de Diamond Dude Turbo - Post-Banlist",
 		"IsDraft": true,
 		"Date": "31/07/2023",
-		"Author": "red",
-		"MainCard": "Red-Eyes Darkness Dragon",
-		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53322_w420.webp",
-		"Themes": "dragon",
-		"DeckList": "Red-Eyes Black Dragon, Red-Eyes Darkness Dragon, Reinforcement of the Army, Book of Moon, Red-Eyes Spirit",
-		"DeckLength": 5,
-		"Errors": "Pas assez de cartes : 5",
-		"IdTournament": ""
+		"Author": "",
+		"MainCard": "destiny hero  diamond dude",
+		"Themes": "hero",
+		"DeckList": "Destiny HERO - Plasma, Jinzo, Dark Dust Spirit, Destiny HERO - Dasher, Destiny HERO - Malicious x2, Witch of the Black Forest, Mystic Tomato, Destiny HERO - Diamond Dude x2, Elemental HERO Ocean, Destiny HERO - Fear Monger, Elemental HERO Stratos, Elemental HERO Neos Alius, Field-Commander Rahz, Vortex Trooper x2, Treeborn Frog, Cyber Valley, Swords of Revealing Light, Monster Reborn, Pot of Greed, Heavy Storm, Soul Exchange, Nightmare's Steelcage, Creature Swap, Lightning Vortex, Reinforcement of the Army, The Warrior Returning Alive, Soul Taker, Fissure, E - Emergency Call, Destiny Draw, Scapegoat, Mystical Space Typhoon, Bottomless Trap Hole, Sakuretsu Armor, Hero Signal, Destiny Signal, Dimensional Prison",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51d23_w420.webp",
+		"DeckLength": 40,
+		"Errors": "Il y a trop de jokers : 6. Ce groupe de limitation n est pas respecté :  Dimensional Prison, Sakuretsu Armor"
+	},
+	{
+		"Id": "11d59710-d613-4e5f-b5f6-66aec6361500",
+		"Format": "mdoldschoolv2",
+		"IdTournament": "",
+		"Rank": "3",
+		"Title": "Horus / Volcano",
+		"IsDraft": false,
+		"Date": "31/07/2023",
+		"Author": "Zothic",
+		"MainCard": "Horus the Black Flame Dragon LV8",
+		"Themes": "feu,burn",
+		"DeckList": "Blazing Inpachi, Horus the Black Flame Dragon LV8, Volcanic Doomfire, Horus the Black Flame Dragon LV6, Horus the Black Flame Dragon LV4 x2, UFO Turtle x2, Barrier Statue of the Inferno, Inferno, Solar Flare Dragon x2, The Thing in the Crater, Volcanic Rocket, Royal Firestorm Guards, Volcanic Slicer, Raging Flame Sprite, Volcanic Counter, Volcanic Scattershot, Level Modulation, Pot of Greed, Fissure, Swords of Revealing Light, Monster Reborn, Dark Hole, Book of Moon, Mystical Space Typhoon, Rush Recklessly, Enemy Controller, Molten Destruction, Stamping Destruction, Blaze Accelerator, Tri-Blaze Accelerator, Salamandra, Foolish Burial, Royal Decree, Sakuretsu Armor, Backfire, Nightmare Wheel, Firewall",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52660_w420.webp",
+		"DeckLength": 40,
+		"Errors": null
 	}
 ]

@@ -222,5 +222,12 @@
 		"CardIdName": "sillvawarlordofdarkworld",
 		"CardNameEn": "Sillva Warlord of Dark World",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535f9_w420.webp"
+	},
+	{
+		"Id": "bani",
+		"Title": "Banissement",
+		"CardIdName": "macrocosmos",
+		"CardNameEn": "Macro Cosmos",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52a4f_w420.webp"
 	}
 ]
