@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.0.1';
+let version = 'V2.0.2';
 
 Vue.use(VueRouter)
 
@@ -55,6 +55,12 @@ const routes = [
         name: version + ' MDOS Boosters',
         component: () =>
             import ('../pages/pageBoosters.vue')
+    },
+    {
+        path: '/cube',
+        name: version + ' MDOS Cubes',
+        component: () =>
+            import ('../pages/pageCube.vue')
     },
     {
         path: '/*',

@@ -1,0 +1,11 @@
+{
+    "Id":"Cube25e",
+    "Steps": [
+        { "Booster" : "LOB", "Quantity":"25" },
+        { "Booster" : "MRD", "Quantity":"25" },
+        { "Booster" : "SRL", "Quantity":"25" },
+        { "Booster" : "PSV", "Quantity":"25" },
+        { "Booster" : "DCR", "Quantity":"25" },
+        { "Booster" : "IOC", "Quantity":"25" }
+    ]
+}

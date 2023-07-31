@@ -91,12 +91,17 @@
         </div>
           <!-- Boutons -->
         <div class="flex-wrap flex-center">
-          <v-btn class="m5px" v-if="rankSelected" @click="selectRank(null)">
+          <v-btn class="m5px" v-if="rankSelected || tournamentSelected" @click="selectRank(null)">
               <v-icon color="red">mdi-arrow-left-bottom</v-icon> Revenir au classement
           </v-btn>
           <v-btn class="m5px" v-if="themeSelected" @click="showTheme(null)">
               <v-icon color="red">mdi-arrow-left-bottom</v-icon> Voir tous les thèmes
           </v-btn>
+          <router-link :to="'/cube'" >
+            <v-btn target="_blank" text class="bg m5px">
+              <v-icon>mdi-cube</v-icon> Ouvrir un cube de Draft
+            </v-btn>
+          </router-link>
           <router-link :to="'/deck/new'" >
             <v-btn target="_blank" text class="bg m5px">
               <v-icon>mdi-plus</v-icon> Ajouter un deck
