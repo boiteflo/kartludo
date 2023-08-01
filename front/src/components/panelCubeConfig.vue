@@ -81,6 +81,7 @@
 </template>
 
 <script>
+const seedrandom = require('seedrandom');
 import { store } from '../data/store.js'
 import helperString from '../helpers/helperString';
 
@@ -91,10 +92,11 @@ import panelSpoiler from './panelSpoiler';
 
   export default {
     name: 'panel-cube-config',
-    props: ['cube', 'boosters'],
+    props: ['seed', 'cube', 'boosters'],
     components: {textBorder, cardBooster, panelCards, panelSpoiler},
     data: () => ({
         store : store,
+        generator : null,
         NoDuplicate: false,
         NoDuplicateHolo: false,
         commonCardPerBatch: 7,
@@ -107,6 +109,9 @@ import panelSpoiler from './panelSpoiler';
         cubesOpened: [],
         cubesOpenedIds: [],
     }),
+    mounted(){
+        this.generator = seedrandom(this.seed);
+    },
     methods: {
         getBooster(step){
             if(!step.Booster) return [];
@@ -115,7 +120,7 @@ import panelSpoiler from './panelSpoiler';
             return [booster];
         },
         getRandomInt(max){
-            return Math.floor(Math.random() * max);
+            return Math.floor(this.generator() * max);
         },
         getRandomItem(array){
             return array[this.getRandomInt(array.length)];

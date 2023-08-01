@@ -4,7 +4,7 @@
         <p class="bg p5px"> 
             Le format Draft consiste a ouvrir un booster, chosir une seule carte et passez le reste a ses voisins. Puis répéter l'opération jusqu'a ce que chacun puisse créer un deck et faire des duels.
             Un cube de Draft est un ensemble de carte utilisées pour jouer en Draft. Au lieu d'ouvrir des boosters scellés, vous draftez des "boosters" de cartes que vous avez créé à partir de votre cube.
-            Ce format permet de reproduire l'engouement d'ouvrir un lot de carte aléatoire avec ses bonnes et mauvaises surprises. De devoir trouver une synergie et d'affronter ces adversaires dans un cadre non META.
+            Ce format permet de reproduire l'engouement d'ouvrir un lot de carte aléatoire avec des bonnes et mauvaises surprises. De devoir trouver une synergie et d'affronter ces adversaires dans un cadre non META.
         </p>
         <div v-for="cube in cubes" v-bind:key="cube.Id">
             <div class="flex p5px">

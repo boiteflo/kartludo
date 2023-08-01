@@ -3,7 +3,8 @@
         <div v-if="loading">
             Chargement
         </div>
-        <panel-cube-config v-else-if="cube" 
+        <panel-cube-config v-else-if="seed && cube" 
+          :seed="seed"
           :cube="cube"
           :boosters="boosters">
         </panel-cube-config>
@@ -29,15 +30,23 @@ export default {
     loading:true,
     isNew: false,
     id: null,
+    seed: null,
     cube: null,
     boosters : null,
   }),
-  mounted(){
+  mounted(){    
     let uri = window.location.href;
+    let indexSeed = uri.indexOf("&seed="); 
+    if(indexSeed<1)
+    {
+      window.location.href = window.location.href +'&seed=' + ((new Date().getTime() * 10000) + 621355968000000000);
+      return;
+    }
+    this.seed = uri.substring(indexSeed+6);
+
     let i = uri.indexOf("id="); 
     this.isNew = i < 1;
-    this.id = uri.substring(i+3);
-
+    this.id = uri.substring(i+3).substring(0, indexSeed - i - 3);
     
     forkJoin([
         ServiceBack.get('cube', this.id),
@@ -47,11 +56,6 @@ export default {
         this.boosters = results[1];
         this.loading=false;
       });   
-  },
-  methods: {
-    openCube(){
-        alert('Bientôt disponible');
-    }
   }
 };
 </script>
