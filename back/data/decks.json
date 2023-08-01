@@ -1726,5 +1726,20 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52660_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
+	},
+	{
+		"Id": "b5330a42-c10a-4b17-8b25-d0dd169cd80b",
+		"Format": "mdoldschoolv2",
+		"Title": "Rétro Vent",
+		"IsDraft": true,
+		"Date": "01/08/2023",
+		"Author": "Sobrino",
+		"MainCard": "Spirit Ryu",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a5374e_w420.webp",
+		"Themes": "vent,dragon",
+		"DeckList": "Luster Dragon #2, Blue-Winged Crown, The Dragon Dwelling in the Cave, Luster Dragon x2, Spirit Ryu x2, Flying Kamakiri #1, Garuda the Wind Spirit, Spear Dragon, Silpheed, Harpie Lady 1, Harpie's Pet Baby Dragon, Twin-Headed Behemoth, Masked Dragon x2, Magician of Faith, Dark Hole, Swords of Revealing Light, Fissure, Monster Reborn, Pot of Greed, Heavy Storm, Black Pendant, Mage Power, Rising Air Current, Mystical Space Typhoon, Book of Moon, Mirror Force, Magic Cylinder, Bottomless Trap Hole, Sakuretsu Armor, Draining Shield, Threatening Roar, Solemn Judgment, Magic Jammer, Seven Tools of the Bandit, Dark Bribe, Birthright",
+		"DeckLength": 39,
+		"Errors": "Il y a trop de jokers : 4. Ce groupe de limitation n est pas respecté :  Mirror Force, Dark Hole, Lightning Vortex. Pas assez de cartes : 39",
+		"IdTournament": ""
 	}
 ]

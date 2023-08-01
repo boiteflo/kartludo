@@ -47,7 +47,7 @@
             </div>
         </div>
         <div style="position:absolute; top:2px; left:2px;">
-            <div v-if="!badgeoff" class="" :style="{background:getRarityColor(card.Rarity), color:'white', 'font-weight': 'bold', width:'15px', height:'15px', 'font-size':'10px', 'text-align':'center', 'font-style':'bold'}">
+            <div v-if="!badgeoff" class="" :style="{background:getRarityColor(card.Rarity), color:'white', 'font-weight': 'bold', width:'20px', height:'15px', 'font-size':'10px', 'text-align':'center', 'font-style':'bold'}">
                 {{card.Rarity}}
             </div>
         </div>        
@@ -78,14 +78,15 @@
             return images('./' + value + ".webp")
         },
         getRarityColor(rarity){
-            return rarity=== 'N' ? '#9E9E9E'
+            return rarity=== 'N' || rarity=== 'C' ? '#9E9E9E'
                 : rarity=== 'R' ? '#3F51B5'
                 : rarity=== 'SR' ? '#FBC02D'
-                : '#673AB7';
+                : rarity=== 'UR' ? '#673AB7'
+                : '#F44336';
         },
         hover(){
             this.isStillHover = true;
-            setTimeout(() => { if(this.isStillHover) this.$emit('hover', this.card);}, 1500)
+            setTimeout(() => { if(this.isStillHover) this.$emit('hover', this.card);}, 500)
         },
         leave(){
             this.isStillHover = false;
