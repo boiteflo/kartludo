@@ -66970,5 +66970,31 @@ module.exports =
       "Def":null,
       "Rarity":null,
       "TcgRelease":null
+   },   
+   {
+      "Id":"60c2b3aaa0e24f2d54a51b4d",
+      "IdName":"cuchulainntheawakened",
+      "IdNameFr":"cuchulainnlemergent",
+      "NameEn":"Cu Chulainn the Awakened",
+      "NameFr":"Cu Chulainn, l'Emergent",
+      "ImageMDM":"https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51b4d_w420.webp",
+      "Type":"Monster",
+      "TypeMonster":"Ritual,Effect",
+      "ToExtraDeck":false,
+      "Rarity":"N",
+      "Level":"4"
+   },
+   {
+      "Id":"60c2b3aba0e24f2d54a5253b",
+      "IdName":"guardianoforder",
+      "IdNameFr":"gardiendelordre",
+      "NameEn":"Guardian of Order",
+      "NameFr":"Gardien de l'Ordre",
+      "ImageMDM":"https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5253b_w420.webp",
+      "Type":"Monster",
+      "TypeMonster":"Effect",
+      "ToExtraDeck":false,
+      "Rarity":"R",
+      "Level":"8"
    }
 ];

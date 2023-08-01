@@ -55,7 +55,7 @@
                 </card-booster>
             </div>
         </div>
-        <h2>Les Cubes ouverts</h2>
+        <h2>Les cartes obtenues</h2>
         <div class="bg2" v-for="(cubeOpened,cubeOpenedIndex) in cubesOpened" v-bind:key="'cubeOpened' + cubeOpenedIndex">
             <panel-spoiler class="p5px colorWhite" :title="cubeOpened.cube" :show="true">
             <panel-cards class="bg2" 
@@ -131,16 +131,18 @@ import panelSpoiler from './panelSpoiler';
             let errors = [];
             booster.Cards.forEach(boosterCard => {
                 let card = this.store.cards.find(x=> x.IdName === helperString.cleanup(boosterCard.NameEn));
-                if(!card) errors.push(boosterCard.NameEn);
+                if(!card) errors.push(`${boosterCard.Id}-${boosterCard.NameEn}`);
                 else cards.push({...card, Rarity:boosterCard.Rarity});
             });
             if(errors.length > 0)
                 alert("Ces cartes n'ont pas été trouvées : " + errors.join('\n'));
-            let commonCards = cards.filter(x=> x.Rarity === 'C');
-            let rareCards = cards.filter(x=> x.Rarity === 'R');
-            let superRareCards = cards.filter(x=> x.Rarity === 'SR');
-            let ultraRareCards = cards.filter(x=> x.Rarity === 'UR');
-            let secretRareCards = cards.filter(x=> x.Rarity === 'SCR');
+            let commonCards = cards.filter(x=> x.Rarity.split(',').includes('C'));
+            let rareCards = cards.filter(x=> x.Rarity.split(',').includes('R'));
+            let superRareCards = cards.filter(x=> x.Rarity.split(',').includes('SR'));
+            let ultraRareCards = cards.filter(x=> x.Rarity.split(',').includes('UR'));
+            let secretRareCards = cards.filter(x=> x.Rarity.split(',').includes('SCR'));
+            //let ultimateRareCards = cards.filter(x=> x.Rarity.split(',').includes('UL'));
+            //let ghostRareCards = cards.filter(x=> x.Rarity.split(',').includes('GL'));
 
             for(let batchIndex=0; batchIndex< this.batchPerCube; batchIndex++){
                 

@@ -51,11 +51,27 @@ export default {
     forkJoin([
         ServiceBack.get('cube', this.id),
         ServiceBack.getAll('booster'),
+        ServiceBack.get('booster', this.id),
       ]).subscribe(results => {
-        this.cube= results[0];
         this.boosters = results[1];
+        if(!results[0] && results[2])
+          this.cube = this.generateBoosterCube(results[2]);
+        else
+          this.cube= results[0];
         this.loading=false;
       });   
+  },
+  methods: {
+    generateBoosterCube(booster){
+      return {
+        "Id":'Cube'+booster.Ref,
+        "Title":booster.Ref,
+        "Image":booster.Image,
+        "Steps": [
+            { "Booster" : booster.Ref, "Quantity":"25" }
+        ]
+    }
+    }
   }
 };
 </script>
