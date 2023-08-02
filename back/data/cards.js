@@ -5211,27 +5211,6 @@ module.exports =
       "TcgRelease":"2005-11-05T00:00:00.000Z"
    },
    {
-      "Id":"60c2b3aca0e24f2d54a53cdb",
-      "IdName":"vandalgyonthedarkdragonlord",
-      "IdNameFr":"vandalgyonleseigneurdudragondestenebres",
-      "NameEn":"Van'Dalgyon the Dark Dragon Lord",
-      "NameFr":"Van'Dalgyon le Seigneur du Dragon des Ténèbres",
-      "Image":"https://images.ygoprodeck.com/images/cards/24857466.jpg",
-      "ImageMDM":"https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53cdb_w420.webp",
-      "Type":"Monster",
-      "TypeMonster":"Effect",
-      "ToExtraDeck":false,
-      "KonamiID":"24857466",
-      "Level":"8",
-      "Scale":null,
-      "Race":"Dragon",
-      "Attribute":"DARK",
-      "Atk":"2800",
-      "Def":"2500",
-      "Rarity":"SR",
-      "TcgRelease":"2008-02-01T00:00:00.000Z"
-   },
-   {
       "Id":"60c2b3a9a0e24f2d54a51400",
       "IdName":"allurequeenlv7",
       "IdNameFr":"reinecharmeuselv7",
