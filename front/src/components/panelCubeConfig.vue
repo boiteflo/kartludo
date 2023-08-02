@@ -51,30 +51,23 @@
                     :booster="booster"
                     :title="booster.Title" 
                     :image="booster.Image"
+                    :actions="[{Id:'open', Icon:'mdi-cube', Text:'Ouvrir le cube'}]"
                     @open="openCubeBooster">
                 </card-booster>
+                
             </div>
         </div>
         <h2>Les cartes obtenues</h2>
         <div class="bg2" v-for="(cubeOpened,cubeOpenedIndex) in cubesOpened" v-bind:key="'cubeOpened' + cubeOpenedIndex">
             <panel-spoiler class="p5px colorWhite" :title="cubeOpened.cube" :show="true">
-            <panel-cards class="bg2" 
-                v-for="(batch,batchIndex) in cubeOpened.batchs" 
-                v-bind:key="cubeOpenedIndex + 'Batch' + batchIndex" 
-                :cards="batch.Cards"  
-                :keyid="cubeOpenedIndex + 'Batch' + batchIndex + 'Cards'"
-                tooltip="image">
-            </panel-cards>
+                <panel-cards class="bg2" 
+                    v-for="(batch,batchIndex) in cubeOpened.batchs" 
+                    v-bind:key="cubeOpenedIndex + 'Batch' + batchIndex" 
+                    :cards="batch.Cards"  
+                    :keyid="cubeOpenedIndex + 'Batch' + batchIndex + 'Cards'"
+                    tooltip="image">
+                </panel-cards>
             </panel-spoiler>
-        <!--
-        <h3 class="p5px colorWhite bg w100p">{{cubeOpened.cube}}</h3>
-          <panel-cards class="bg2" 
-            v-for="(batch,batchIndex) in cubeOpened.batchs" 
-            v-bind:key="cubeOpenedIndex + 'Batch' + batchIndex" 
-            :cards="batch.Cards"  
-            tooltip="image">
-          </panel-cards>
-          -->
         </div>
         <div class="bg2 h50"></div>
     </div>

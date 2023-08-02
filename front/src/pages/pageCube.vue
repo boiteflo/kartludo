@@ -50,26 +50,26 @@ export default {
     
     forkJoin([
         ServiceBack.get('cube', this.id),
-        ServiceBack.getAll('booster'),
-        ServiceBack.get('booster', this.id),
+        ServiceBack.getAll('booster')
       ]).subscribe(results => {
         this.boosters = results[1];
-        if(!results[0] && results[2])
-          this.cube = this.generateBoosterCube(results[2]);
+        let boostersIds = this.id.split('+');
+        let boostersFromIds = this.boosters.filter(x=> boostersIds.includes(x.Ref)); 
+        if(boostersFromIds && boostersFromIds.length > 0)
+          this.cube = this.generateBoosterCube(boostersFromIds);
         else
           this.cube= results[0];
         this.loading=false;
       });   
   },
   methods: {
-    generateBoosterCube(booster){
+    generateBoosterCube(boosters){
+      let ids = boosters.map(x=> x.Ref).join(' + ');
       return {
-        "Id":'Cube'+booster.Ref,
-        "Title":booster.Ref,
-        "Image":booster.Image,
-        "Steps": [
-            { "Booster" : booster.Ref, "Quantity":"25" }
-        ]
+        "Id":'Cube '+ids,
+        "Title":'MultiCube ' + ids ,
+        "Image":boosters[0].Image,
+        "Steps": boosters.map(x=> {return { "Booster" : x.Ref, "Quantity":"25" }})
     }
     }
   }
