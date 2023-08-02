@@ -331,3 +331,20 @@ h2 {
   .colorWhite{
     color:white !important;
   }
+
+  
+.slideToLeft-enter-active {transition: .3s;}
+.slideToLeft-enter-to{transform: translateX(100px);opacity: 0;}
+.slideToLeft-enter{transform: translateX(0px);opacity: 1;}
+
+.slideToRight-enter-active {transition: .3s;}
+.slideToRight-enter-to{transform: translateX(-100px);opacity: 0;}
+.slideToRight-enter{transform: translateX(0px);opacity: 1;}
+
+.slideToUp-enter-active {transition: .3s;}
+.slideToUp-enter-to{transform: translateY(-100px);opacity: 0;}
+.slideToUp-enter{transform: translateY(0px);opacity: 1;}
+
+.slideToDown-enter-active {transition: .3s;}
+.slideToDown-enter-to{transform: translateY(100px);opacity: 0;}
+.slideToDown-enter{transform: translateY(0px);opacity: 1;}

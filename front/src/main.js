@@ -12,6 +12,25 @@ String.prototype.cleanup = function() {
   return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
 }
 
+Vue.mixin({
+  methods: {
+    globalHelper: function () {
+      alert("Hello world")
+    },
+    moveImage(animatedImage, event){
+      
+      this.store.animatedImage = {
+        Animation : animatedImage.Animation,
+        Image: animatedImage.Image,
+        Width: event.currentTarget.clientWidth, //animatedImage.Width,
+        X: event.pageX -event.offsetX,
+        Y: event.pageY -event.offsetY - 70
+      }
+      setTimeout(() =>  this.store.animatedImage=null, 300);
+    }
+  },
+})
+
 new Vue({
   vuetify,
   router,

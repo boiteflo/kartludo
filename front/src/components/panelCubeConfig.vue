@@ -1,75 +1,82 @@
 <template>
     <div v-if="cube" style="position:relative">
         <h1>{{cube.Title}}</h1>
-        <h2>Réglage des options</h2>
         <img :src="cube.Image" style="position:absolute; top:10px; right:10px; width:180px;" />
-        <div class="p5px flex-wrap">
-            <v-text-field class="m5px" 
-                label="Nombre de Commune dans un lot" 
-                v-model="commonCardPerBatch">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Nombre de Rare dans un lot" 
-                v-model="rareCardPerBatch">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Nombre de Holo ou Commune dans un lot" 
-                v-model="holoCardPerBatch">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Nombre de lot dans un cube" 
-                v-model="batchPerCube">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Probabilité des Super Rare (%)" 
-                v-model="probabilitySr">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Probabilité des Ultra Rare (%)" 
-                v-model="probabilityUr">
-            </v-text-field>
-            <v-text-field class="m5px" 
-                label="Probabilité des Secret Rare (%)" 
-                v-model="probabilityScr">
-            </v-text-field>
-        </div>
-        <div class="p5px flex-wrap">
-            <div class="flex">
-                <v-switch disabled v-model="NoDuplicate" label="Carte unique" class="m5px w250"></v-switch>
-                <text-border text="Aucun doublon parmis toutes les cartes."></text-border>
+        <div v-if="showOptions">
+            <h2>Réglage des options</h2>
+            <div class="p5px flex-wrap">
+                <v-text-field class="m5px" 
+                    label="Nombre de Commune dans un lot" 
+                    v-model="commonCardPerBatch">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Nombre de Rare dans un lot" 
+                    v-model="rareCardPerBatch">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Nombre de Holo ou Commune dans un lot" 
+                    v-model="holoCardPerBatch">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Nombre de lot dans un cube" 
+                    v-model="batchPerCube">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Probabilité des Super Rare (%)" 
+                    v-model="probabilitySr">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Probabilité des Ultra Rare (%)" 
+                    v-model="probabilityUr">
+                </v-text-field>
+                <v-text-field class="m5px" 
+                    label="Probabilité des Secret Rare (%)" 
+                    v-model="probabilityScr">
+                </v-text-field>
             </div>
-            <div class="flex">
-                <v-switch disabled v-model="NoDuplicateHolo" label="Holographique unique" class="m5px w250"></v-switch> 
-                <text-border text="Aucun doublon parmis toutes les SR, UR et Scr."></text-border>
+            <div class="p5px flex-wrap">
+                <div class="flex">
+                    <v-switch disabled v-model="NoDuplicate" label="Carte unique" class="m5px w250"></v-switch>
+                    <text-border text="Aucun doublon parmis toutes les cartes."></text-border>
+                </div>
+                <div class="flex">
+                    <v-switch disabled v-model="NoDuplicateHolo" label="Holographique unique" class="m5px w250"></v-switch> 
+                    <text-border text="Aucun doublon parmis toutes les SR, UR et Scr."></text-border>
+                </div>
             </div>
         </div>
-        <h2>Les Cubes à ouvrir</h2>
-        <div class="flex flex-wrap bg2">
+        <h2>Les Cubes</h2>
+        <div class="bg2">
+            <div v-for="booster in cubeBoosters" v-bind:key="'booster' + booster.Ref">
+                <panel-spoiler class="p5px colorWhite" :title="booster.Title" icon="mdi-cards" :image="booster.Image" :imagewidth="30">
+                    <panel-cards class="bg2" 
+                        v-for="(batch,batchIndex) in booster.Batchs" 
+                        v-bind:key="booster.Ref + 'Batch' + batchIndex" 
+                        :cards="batch.Cards"  
+                        :keyid="booster.Ref + 'Batch' + batchIndex + 'Cards'"
+                        @select="addCardToDeck">
+                    </panel-cards>
+                </panel-spoiler>
+            </div>
             <div v-for="(step,index) in cube.Steps.filter(x=> !cubesOpenedIds.includes(x.Booster))" v-bind:key="'Step' + index">
-                <card-booster v-for="booster in getBooster(step)" 
-                    v-bind:key="booster.Id" 
+                <div v-for="booster in getBooster(step)" 
+                    v-bind:key="booster.Id">
+                <card-booster  v-if="false"
                     :booster="booster"
                     :title="booster.Title" 
                     :image="booster.Image"
                     :actions="[{Id:'open', Icon:'mdi-cube', Text:'Ouvrir le cube'}]"
                     @open="openCubeBooster">
                 </card-booster>
-                
+                </div>
             </div>
         </div>
-        <h2>Les cartes obtenues</h2>
-        <div class="bg2" v-for="(cubeOpened,cubeOpenedIndex) in cubesOpened" v-bind:key="'cubeOpened' + cubeOpenedIndex">
-            <panel-spoiler class="p5px colorWhite" :title="cubeOpened.cube" :show="true">
-                <panel-cards class="bg2" 
-                    v-for="(batch,batchIndex) in cubeOpened.batchs" 
-                    v-bind:key="cubeOpenedIndex + 'Batch' + batchIndex" 
-                    :cards="batch.Cards"  
-                    :keyid="cubeOpenedIndex + 'Batch' + batchIndex + 'Cards'"
-                    tooltip="image">
-                </panel-cards>
-            </panel-spoiler>
-        </div>
-        <div class="bg2 h50"></div>
+        <h2>Créer un Deck</h2>
+        <panel-cards class="bg2" 
+            :cards="deckCards"  
+            :keyid="'DeckCards'"
+            @select="removeCardFromDeck">
+        </panel-cards>        
     </div>
 </template>
 
@@ -101,9 +108,20 @@ import panelSpoiler from './panelSpoiler';
         probabilityScr:1,
         cubesOpened: [],
         cubesOpenedIds: [],
+        cubeBoosters: null,
+        deckCards: [],
+        showOptions: false
     }),
     mounted(){
         this.generator = seedrandom(this.seed);
+
+        let boosters = [];
+        this.cube.Steps.forEach(step=> {
+            let booster = this.boosters.find(x=> x.Ref === step.Booster);
+            booster.Batchs = this.openCubeBooster(booster);
+            boosters.push(booster)
+        });
+        this.cubeBoosters = boosters;
     },
     methods: {
         getBooster(step){
@@ -117,6 +135,18 @@ import panelSpoiler from './panelSpoiler';
         },
         getRandomItem(array){
             return array[this.getRandomInt(array.length)];
+        },
+        addCardToDeck(card){
+            let event = card.event;
+            delete card.event;
+            this.deckCards.push(card);
+            this.moveImage({Image:card.ImageMDM, Animation:'slideToDown'}, event);
+        },
+        removeCardFromDeck(card){
+            let event = card.event;
+            delete card.event;
+            this.deckCards = this.deckCards.filter(x=> x.IdName !== card.IdName);
+            this.moveImage({Image:card.ImageMDM, Animation:'slideToUp'}, event);
         },
         openCubeBooster(booster){
             let result = [];
@@ -158,9 +188,10 @@ import panelSpoiler from './panelSpoiler';
                 result.push(batch);
             }
 
-            this.cubesOpened.push({cube: `${booster.Ref}-${booster.Title}`, batchs:result});
-            this.cubesOpenedIds.push(booster.Ref);
-            window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+            //this.cubesOpened.push({cube: `${booster.Ref}-${booster.Title}`, batchs:result});
+            //this.cubesOpenedIds.push(booster.Ref);
+            //window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+            return result;
         },
   }
   }

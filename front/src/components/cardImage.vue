@@ -1,7 +1,7 @@
 <template>
     <div class="tooltip" 
         style="position:relative; margin: 5px 5px -10px 5px !important; text-overflow: ellipsis; cursor:pointer" 
-        @click="$emit('select', card)"
+        @click="$emit('select', {...card, event:$event})"
         @mouseover="hover"
         @mouseleave="leave">
         <div v-if="showname" style="font-size: 16px; cursor:pointer; color:white; text-align:center" class="bg2">
@@ -58,7 +58,7 @@
               v-if="x2" 
               :src="card.ImageMDM" 
               style="position:absolute; top:18px; left:0px"
-              @click="$emit('select', cardObject.Card)"/>
+              @click="$emit('select', {...card, event:$event})"/>
     </div>
 </template>
 

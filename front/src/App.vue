@@ -13,6 +13,12 @@
           </panel-cards>
           <router-view>
           </router-view>
+          <div v-if="store.animatedImage">
+            <transition :name="store.animatedImage.Animation" appear>
+              <img :src="store.animatedImage.Image" 
+                :style="{width: store.animatedImage.Width + 'px', position: 'absolute', top: store.animatedImage.Y +'px', left: store.animatedImage.X+'px'}">
+            </transition>
+          </div>
         </div>
       </div>
     </v-main>
@@ -24,6 +30,8 @@
 </style>
 
 <script>
+// eslint-disable-next-line
+import { Transition } from "vue";
 import { forkJoin } from 'rxjs';
 import { store } from './data/store.js'
 import Konami from 'konami';
@@ -44,7 +52,8 @@ export default {
   data: () => ({
     store: store,
     selectedCards: [],
-    konamiCode : false
+    konamiCode : false,
+    animatedCard: null
   }),
   
   mounted() {
@@ -63,7 +72,7 @@ export default {
     search(value){
       this.selectedCards = ServiceMain.filterCard(store.cards, value);
       window.scrollTo(0, 0);
-    },
+    }
   }
 };
 </script>

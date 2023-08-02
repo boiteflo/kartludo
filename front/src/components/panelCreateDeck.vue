@@ -246,14 +246,19 @@ let md5 = require('md5');
             this.selectedCards = ServiceMain.filterCard(store.cards, value);
         },
         selectCard(card){
+            let event = card.event;
+            delete card.event;
             let alreadyExist = this.deckObj.DeckListCards.find(x=> x.Card.IdName == card.IdName);
 
             if(alreadyExist) alreadyExist.Quantity = "2";
             else this.deckObj.DeckListCards.push({Id: card.IdName, Card:card});
             
             this.refreshCardsDeck();
+            this.moveImage({Image:card.ImageMDM, Animation:'slideToRight'}, event);
         },
         selectCardFromDeck(card){
+            let event = card.event;
+            delete card.event;
             let cardObject = this.deckObj.DeckListCards.find(x=> x.Card.IdName === card.IdName);
             if(!cardObject)
                 return;
@@ -262,11 +267,13 @@ let md5 = require('md5');
             {
                 cardObject.Quantity = null;
                 this.refreshCardsDeck();
+                this.moveImage({Image:card.ImageMDM, Animation:'slideToUp'}, event);
                 return;
             }
 
             this.deckObj.DeckListCards = this.deckObj.DeckListCards.filter(x=> x.Card.IdName !== cardObject.Card.IdName);
             this.refreshCardsDeck();
+            this.moveImage({Image:card.ImageMDM, Animation:'slideToLeft'}, event);
         },
         selectFav(card){
             this.deckObj.MainCard = card.NameEn;
