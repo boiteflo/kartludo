@@ -366,13 +366,13 @@ class managerDeck {
                 : cardObj.Quantity === '2' ? 2 
                 : 1;
             
-            if(cardObj.Quantity === '2')
+            if(quantity === 2)
                 x2Length++;
 
             if(matchs.includes(cardObj.Card.IdName))
             {
                 jokerLength += quantity;
-                if(cardObj.Quantity !== '1')
+                if(quantity !== 1)
                     errorJokerQuantityx2.push(cardObj.Card.NameEn);
             }
             
