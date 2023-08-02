@@ -18,8 +18,18 @@
             </div>
           </v-dialog>
 
+          <!-- Format Cube -->
+          <div v-if="selectCubeMode" class="flex-wrap flex-center bg2">
+              <div v-for="deck in decksCube" 
+                v-bind:key="deck.Id" 
+                style="position:relative">
+                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
+                </iconDeck>
+              </div>
+          </div>
+
           <!-- Tournoi sélectionné -->
-          <div v-if="tournamentSelected" style="position:relative">
+          <div v-else-if="tournamentSelected" style="position:relative">
             <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
               <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="tournamentSelected.CardImage" />
             </div>
@@ -74,6 +84,13 @@
                 :text="rank.Title" 
                 :text1="rank.DecksLength + ' decks'"
                 :image="rank.Image">
+              </icon-theme>
+              
+              <icon-theme  
+                v-on:select="showCubes()" 
+                text="Format Cube" 
+                :text1="decksCube.length + ' decks'"
+                :image="require('../assets/cube.jpg')">
               </icon-theme>
             </div>
             <h1>Les Tournois</h1>
@@ -135,6 +152,7 @@ export default {
     tournaments: null,
     decksObject: null,
     decks: null,
+    decksCube: null,
     rankDecks: [],
     themeDecks: [],
     currentThemeDecks : null,
@@ -148,6 +166,7 @@ export default {
     tournamentSelected:null,
     showDeck: false,
     createDeck: false,
+    selectCubeMode:false,
     themeAll : {
       "Group": "1",
       "Id": "tous",
@@ -170,6 +189,8 @@ export default {
         this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
         this.themes = results[1].concat([this.themeAll]);
         this.decks = results[2];
+        this.decksCube = this.decks.filter(x=> x.Rank === '5');
+        this.decks = this.decks.filter(x=> x.Rank !== '5');
         this.tournaments = results[3];
         this.linkThemeWithDecks();
       });   
@@ -205,7 +226,12 @@ export default {
       this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
       if(item.Id === 0) this.selectRank(null);
       if(item.Id === 0) this.showTournament(null);
+      if(item.Id === 0) this.selectCubeMode=false;
       if(item.Id === 1) this.showTheme(null);
+    },
+    showCubes(){
+      this.selectCubeMode=true;
+      this.hierarchyArray.push({Id:1, Text:'Format Cube'});
     },
     selectRank(rank){
       this.rankSelected = rank;   

@@ -16,7 +16,7 @@
           <div v-if="store.animatedImage">
             <transition :name="store.animatedImage.Animation" appear>
               <img :src="store.animatedImage.Image" 
-                :style="{width: store.animatedImage.Width + 'px', position: 'absolute', top: store.animatedImage.Y +'px', left: store.animatedImage.X+'px'}">
+                :style="{width: store.animatedImage.Width + 'px', position: 'absolute', top: store.animatedImage.Y +'px', left: store.animatedImage.X+'px', 'z-index':2}">
             </transition>
           </div>
         </div>

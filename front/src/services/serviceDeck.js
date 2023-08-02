@@ -62,7 +62,9 @@ class ServiceDeck {
         let x2Length = 0;
         let errorJokerQuantityx2 = [];
         deckCards.forEach(cardObj => {
-            let quantity = cardObj.Quantity === '2' ? 2 : 1;
+            let quantity = cardObj.Quantity === '3' ? 3 
+                : cardObj.Quantity === '2' ? 2 
+                : 1;
             
             if(cardObj.Quantity === '2')
                 x2Length++;
@@ -70,7 +72,7 @@ class ServiceDeck {
             if(matchs.includes(cardObj.Card.IdName))
             {
                 jokerLength += quantity;
-                if(cardObj.Quantity === '2')
+                if(cardObj.Quantity !== '1')
                     errorJokerQuantityx2.push(cardObj.Card.NameEn);
             }
             

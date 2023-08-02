@@ -97,8 +97,8 @@ export default {
       for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
       {
           const cardNameEn = deckList[cardIndex];
-          let quantity = helperString.includesX2(cardNameEn) ? '2' : '1';
-          let cardIdName = helperString.removeX2(helperString.cleanup(cardNameEn));
+          let quantity = helperString.includesX3(cardNameEn) ? '3' : helperString.includesX2(cardNameEn) ? '2' : '1';
+          let cardIdName = helperString.removeX3(helperString.removeX2(helperString.cleanup(cardNameEn)));
           const card = store.cards.find(x=> x.IdName === cardIdName);
           if(card)
               deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
@@ -108,13 +108,7 @@ export default {
     saveDeck(deck){
       this.loading=true;
       ServiceBack.insert('deck', deck)
-        .then(res=> this.move('/deck/id=' + res.data));
-    },
-    move(url){
-      if(window.location.href === url)
-        window.location.reload();
-      else
-        window.location.href =url;
+        .then(res=> this.moveUrl('/deck/id=' + res.data));
     }
   }
 };

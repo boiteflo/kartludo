@@ -4,23 +4,35 @@
         <v-card-subtitle>{{deck.Author}} - {{deck.Date}} - {{deck.Format}}</v-card-subtitle>
         <v-card-text>{{deck.Combo}}</v-card-text>
         
-        <v-alert v-if="deck.Errors" type="error" class="m5px w100p">
-            Ce deck ne respecte pas le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}} pour les raisons suivantes : {{deck.Errors}}
-        </v-alert>
-        <v-alert v-else type="success" class="m5px w100p">
-            Ce deck respecte bien le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}}
-        </v-alert>
+        <template v-if="!deck.Seed">
+          <v-alert v-if="deck.Errors" type="error" class="m5px w100p">
+              Ce deck ne respecte pas le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}} pour les raisons suivantes : {{deck.Errors}}
+          </v-alert>
+          <v-alert v-else type="success" class="m5px w100p">
+              Ce deck respecte bien le format : {{deck.Format && deck.Format.length > 0 ? deck.Format : 'Test'}}
+          </v-alert>
+        </template>
 
         <div v-if="buttonpage" class="flex" style="position:absolute; right:5px; top:5px">
           <v-btn class="m5px" @click="$emit('unselect')">
             Retour
           </v-btn>
-          <router-link :to="'/deck/id=' + deck.Id" >
-            <v-btn target="_blank" text  class="bg m5px" >
-              <v-icon>mdi-arrow-right-thin</v-icon>
-              Ouvrir la page dédiée a ce deck <span v-if="deck.IsDraft || (deck.Errors && deck.Errors.length > 0)"> pour le modifier</span>
-            </v-btn>
-          </router-link>
+          <template v-if="deck.Seed">
+            <router-link :to="'/cube/id=' + deck.Cube + '&deck=' + deck.Id" >
+              <v-btn target="_blank" text  class="bg m5px" >
+                <v-icon>mdi-cube</v-icon>
+                Ouvrir le cube pour modifier ce deck
+              </v-btn>
+            </router-link>
+          </template>
+          <template v-else>
+            <router-link :to="'/deck/id=' + deck.Id" >
+              <v-btn target="_blank" text  class="bg m5px" >
+                <v-icon>mdi-arrow-right-thin</v-icon>
+                Ouvrir la page dédiée a ce deck <span v-if="deck.IsDraft || (deck.Errors && deck.Errors.length > 0)"> pour le modifier</span>
+              </v-btn>
+            </router-link>
+          </template>
         </div>
         <div v-if="$vuetify.breakpoint.width >= 930" class="flex" style="align-items:center">
           <div style="flex-basis: 0; min-height:400px; width:310px" class="m5px">  
@@ -100,12 +112,22 @@
 
         <div class="flex-reverse">
           <template v-if="buttonpage">
-            <router-link :to="'/deck/id=' + deck.Id" >
-              <v-btn target="_blank" text  class="bg m5px" >
-                <v-icon>mdi-arrow-right-thin</v-icon>
-                Ouvrir la page dédiée a ce deck
-              </v-btn>
-            </router-link>
+            <template v-if="deck.Seed">
+              <router-link :to="'/cube/id=' + deck.Cube + '&deck=' + deck.Id" >
+                <v-btn target="_blank" text  class="bg m5px" >
+                  <v-icon>mdi-cube</v-icon>
+                  Ouvrir le cube pour modifier ce deck
+                </v-btn>
+              </router-link>
+            </template>
+            <template v-else>
+              <router-link :to="'/deck/id=' + deck.Id" >
+                <v-btn target="_blank" text  class="bg m5px" >
+                  <v-icon>mdi-arrow-right-thin</v-icon>
+                  Ouvrir la page dédiée a ce deck
+                </v-btn>
+              </router-link>
+            </template>
             <v-btn v-if="buttonpage" class="m5px" @click="$emit('unselect')">
               Retour
             </v-btn>

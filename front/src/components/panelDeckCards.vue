@@ -7,6 +7,7 @@
                       :badgeoff="false" 
                       :size="size"
                       :x2="cardObject.Quantity === '2'"
+                      :x3="cardObject.Quantity === '3'"
                       :tooltip="tooltip"
                       v-on:select="$emit('select', $event)"
                       @hover="$emit('hover', $event)">

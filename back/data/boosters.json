@@ -6,7 +6,6 @@
 		"Image":"https://static.wikia.nocookie.net/yugioh/images/b/bc/LOB-BoosterEN.png",
 		"Cards":[
 			{ "Id":"LOB-EN000", "NameEn":"Tri-Horned Dragon","Rarity":"SCR"},
-			{ "Id":"LOB-EN000", "NameEn":"Tri-Horned Dragon","Rarity":"SCR"},
 			{ "Id":"LOB-EN001", "NameEn":"Blue-Eyes White Dragon","Rarity":"UR"},
 			{ "Id":"LOB-EN002", "NameEn":"Hitotsu-Me Giant","Rarity":"C"},
 			{ "Id":"LOB-EN003", "NameEn":"Flame Swordsman","Rarity":"SR"},

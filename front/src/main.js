@@ -14,8 +14,11 @@ String.prototype.cleanup = function() {
 
 Vue.mixin({
   methods: {
-    globalHelper: function () {
-      alert("Hello world")
+    moveUrl(url){
+      if(window.location.href === url)
+        window.location.reload();
+      else
+        window.location.href =url;
     },
     moveImage(animatedImage, event){
       

@@ -13,6 +13,9 @@ String.prototype.replaceMany = function(searchTxt, replaceTxt) {
 String.prototype.includesX2 = function() {
     return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
 }
+String.prototype.includesX3 = function() {
+    return this.toLowerCase().startsWith("x3") || this.toLowerCase().endsWith("x3");
+}
 String.prototype.cleanup = function() {
     let result = this || '';
     let groups = ["e|éèêë", "o|ôò", "a|àâ", "i|îïíì", "c|ç", "oe|œ", "u|ûúùü"];
@@ -29,9 +32,15 @@ String.prototype.onlyAlphaNumericAndSpace = function() {
     return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
 }
 String.prototype.removeX2 = function() {
-    if(this.toLowerCase().startsWith("x2"))
+    return this.removeX('2');
+}
+String.prototype.removeX3 = function() {
+    return this.removeX('3');
+}
+String.prototype.removeX = function(key) {
+    if(this.toLowerCase().startsWith("x" + key))
         return this.substring(2);
-    else if(this.toLowerCase().endsWith("x2"))
+    else if(this.toLowerCase().endsWith("x" + key))
         return this.substring(0, this.length-2);
     else
         return this.substring(0);

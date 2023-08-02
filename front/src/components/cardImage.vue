@@ -55,17 +55,28 @@
         <img :style="{ width: (size ? size : 150)+ 'px' }" :src="card.ImageMDM"/>
         
         <img :style="{ width: (size ? size : 150)+ 'px' }" 
-              v-if="x2" 
+              v-if="x2 || x3" 
               :src="card.ImageMDM" 
               style="position:absolute; top:18px; left:0px"
               @click="$emit('select', {...card, event:$event})"/>
+        
+        <div v-if="x3" 
+            :style="{height: ((size ? size : 150)*1.2) + 'px', position:'absolute', overflow:'hidden', top:'36px', left:'0px'}">
+            <img :style="{ width: (size ? size : 150)+ 'px' }" 
+                :src="card.ImageMDM" 
+                @click="$emit('select', {...card, event:$event})"/>
+        </div>
+        
+        <div v-if="shadow" class="w100p h100p" style="background: #000000A0; position:absolute; z-index:1; top:0">
+
+        </div>
     </div>
 </template>
 
 <script>
   export default {
     name: 'card-image',
-    props: ['card', 'badgeoff', 'size', 'tooltip', 'x2', 'showname'],
+    props: ['card', 'badgeoff', 'size', 'tooltip', 'x2', 'x3', 'shadow', 'showname'],
     data: () => ({
         isStillHover: false
     }),

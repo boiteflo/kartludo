@@ -48,7 +48,7 @@ class managerDeck {
         let deckCards = this.sort(deck.DeckListCards);
         let deckList = deckCards
             .filter(x=> cardsIdName.includes(x.Card.IdName))
-            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
+            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
             .join(', ');
 
         let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
@@ -57,6 +57,7 @@ class managerDeck {
             Id: "".guid(),
             Format: deck.Format,
 			Rank: deck.Rank ? deck.Rank.Id : 3,
+            IdTournament : deck.IdTournament,
 			Title: deck.Title,
             IsDraft: true,
 			Date: new Date().toLocaleDateString("fr"),
@@ -67,8 +68,14 @@ class managerDeck {
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-            IdTournament : deck.IdTournament
+			Seed: deck.Seed
         };
+        
+        if(!deck.Rank)
+            deck.Rank = '3';
+        deck.Cube = this.getCube(deck);
+        if(deck.Cube.length > 0)
+            deck.Rank = '5';
 
         this.saveDeck(deck, errorMessage);
 
@@ -89,7 +96,7 @@ class managerDeck {
         let deckCards = this.sort(deck.DeckListCards);
         let deckList = deckCards
             .filter(x=> cardsIdName.includes(x.Card.IdName))
-            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
+            .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
             .join(', ');
 
         let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
@@ -97,6 +104,7 @@ class managerDeck {
             Id: deck.Id,
             Format: deck.Format,
 			Rank: deck.Rank ? deck.Rank.Id : 3,
+            IdTournament : deck.IdTournament,
 			Title: deck.Title,
             IsDraft: deck.IsDraft,
 			Date: new Date().toLocaleDateString("fr"),
@@ -107,8 +115,14 @@ class managerDeck {
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-            IdTournament : deck.IdTournament
+			Seed: deck.Seed
         };
+        
+        if(!deck.Rank)
+            deck.Rank = '3';
+        deck.Cube = this.getCube(deck);
+        if(deck.Cube.length > 0)
+            deck.Rank = '5';
 
         this.saveDeck(deck, errorMessage, deck.Id);
 
@@ -124,6 +138,7 @@ class managerDeck {
             Id: "".guid(),
             Format: '',
 			Rank: 3,
+            IdTournament : '',
 			Title: 'Copie de ' + deck.Title,
             IsDraft: true,
 			Date: new Date().toLocaleDateString("fr"),
@@ -134,7 +149,7 @@ class managerDeck {
 			DeckList: deck.DeckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-            IdTournament : ''
+            Seed : deck.Seed
         };
 
         this.saveDeck(deck, '');
@@ -166,7 +181,10 @@ class managerDeck {
             deck.Themes= deck.Themes.join(', ');
 
         if(!deck.Rank)
-        deck.Rank = '3';
+            deck.Rank = '3';
+        deck.Cube = this.getCube(deck);
+        if(deck.Cube.length > 0)
+            deck.Rank = '5';
         
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
         updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
@@ -181,11 +199,17 @@ class managerDeck {
         updateSheet.push({range: 'Decks!K' + sheetLine, value:deck.Themes});
         updateSheet.push({range: 'Decks!L' + sheetLine, value:deck.DeckList});
         updateSheet.push({range: 'Decks!M' + sheetLine, value:deck.Errors ?? ''});
+        updateSheet.push({range: 'Decks!N' + sheetLine, value:deck.Seed ?? ''});
         
         helperGoogleApi.updateSheetMultiple(sheets, spreedSheetId, updateSheet);
     }
 
-    static getSheetRanges(){return ["Decks!B2:M"];}
+    static getCube(deck){
+        return !deck.Format ? '' 
+        : deck.Format.replaceMany("Cube","").replaceMany(" ","") + "&seed=" + deck.Seed;
+    }
+
+    static getSheetRanges(){return ["Decks!B2:N"];}
     
     static refresh= (sheetData, cards, formats, sheets, spreedSheetId) => {
         let errors=[];
@@ -213,7 +237,8 @@ class managerDeck {
                 "Author": x[7], 
                 "MainCard": x[8], 
                 "Themes": x[9], 
-                "DeckList": x[10]
+                "DeckList": x[10], 
+                "Seed": x[12]
             };
         });
 
@@ -224,6 +249,7 @@ class managerDeck {
             let sheetLine = deckIndex+2;
             deck.Rank = deck.Rank ?? 3;
             deck.IsDraft = deck.IsDraft === "1";
+            deck.Cube = this.getCube(deck);
 
             if(!deck.Id || deck.Id.length < 8){
                 deck.Id = "".guid();
@@ -241,8 +267,8 @@ class managerDeck {
             for(let cardIndex =0 ; cardIndex< deckList.length; cardIndex++)
             {
                 const cardNameEn = deckList[cardIndex];
-                let quantity = cardNameEn.includesX2() ? '2' : '1';
-                let cardIdName = cardNameEn.cleanup().removeX2();
+                let quantity = cardNameEn.includesX3() ? '3' : cardNameEn.includesX2() ? '2' : '1';
+                let cardIdName = cardNameEn.cleanup().removeX2().removeX3();
                 const card = cards.find(x=> x.IdName === cardIdName);
                 if(!card)
                     errorsCards.push(cardNameEn);
@@ -252,7 +278,7 @@ class managerDeck {
 
             deckCards = this.sort(deckCards);
             deck.DeckList = deckCards
-                .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : ''))
+                .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
                 .join(', ');
             
             deck.Errors = this.getErrors(deck, deckCards, formats);
@@ -336,7 +362,9 @@ class managerDeck {
         let x2Length = 0;
         let errorJokerQuantityx2 = [];
         deckCards.forEach(cardObj => {
-            let quantity = cardObj.Quantity === '2' ? 2 : 1;
+            let quantity = cardObj.Quantity === '3' ? 3
+                : cardObj.Quantity === '2' ? 2 
+                : 1;
             
             if(cardObj.Quantity === '2')
                 x2Length++;
@@ -344,7 +372,7 @@ class managerDeck {
             if(matchs.includes(cardObj.Card.IdName))
             {
                 jokerLength += quantity;
-                if(cardObj.Quantity === '2')
+                if(cardObj.Quantity !== '1')
                     errorJokerQuantityx2.push(cardObj.Card.NameEn);
             }
             

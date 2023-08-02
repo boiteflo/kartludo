@@ -2966,18 +2966,6 @@
 		"Rarity": "SR"
 	},
 	{
-		"IdName": "vandalgyonthedarkdragonlord",
-		"IdNameFr": "vandalgyonleseigneurdudragondestenebres",
-		"NameEn": "Van'Dalgyon the Dark Dragon Lord",
-		"NameFr": "Van'Dalgyon le Seigneur du Dragon des Ténèbres",
-		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53cdb_w420.webp",
-		"Type": "Monster",
-		"TypeMonster": "Effect",
-		"ToExtraDeck": false,
-		"Level": "8",
-		"Rarity": "SR"
-	},
-	{
 		"IdName": "allurequeenlv7",
 		"IdNameFr": "reinecharmeuselv7",
 		"NameEn": "Allure Queen LV7",

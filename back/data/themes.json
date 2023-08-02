@@ -177,9 +177,9 @@
 	{
 		"Id": "piege",
 		"Title": "Piège",
-		"CardIdName": "threateningroar",
-		"CardNameEn": "Threatening Roar",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53a94_w420.webp"
+		"CardIdName": "nightmarewheel",
+		"CardNameEn": "Nightmare Wheel",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52e2c_w420.webp"
 	},
 	{
 		"Id": "pioche",
