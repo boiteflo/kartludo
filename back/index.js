@@ -32,16 +32,16 @@ String.prototype.onlyAlphaNumericAndSpace = function() {
     return this.toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,'');
 }
 String.prototype.removeX2 = function() {
-    return this.removeX('2');
+    return this.removeStringStartOrEnd('x2');
 }
 String.prototype.removeX3 = function() {
-    return this.removeX('3');
+    return this.removeStringStartOrEnd('x3');
 }
-String.prototype.removeX = function(key) {
-    if(this.toLowerCase().startsWith("x" + key))
-        return this.substring(2);
-    else if(this.toLowerCase().endsWith("x" + key))
-        return this.substring(0, this.length-2);
+String.prototype.removeStringStartOrEnd = function(str) {
+    if(this.toLowerCase().startsWith(str.toLowerCase()))
+        return this.substring(str.length);
+    else if(this.toLowerCase().endsWith(str.toLowerCase()))
+        return this.substring(0, this.length-str.length);
     else
         return this.substring(0);
 }

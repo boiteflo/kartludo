@@ -184,9 +184,9 @@
 	{
 		"Id": "pioche",
 		"Title": "Pioche",
-		"CardIdName": "royalmagicallibrary",
-		"CardNameEn": "Royal Magical Library",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53422_w420.webp"
+		"CardIdName": "potofgreed",
+		"CardNameEn": "Pot of Greed",
+		"CardImage": "https://static.wikia.nocookie.net/yugioh/images/4/41/PotofGreed-SYE-SP-C-1E.png"
 	},
 	{
 		"Id": "burn",

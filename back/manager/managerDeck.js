@@ -56,7 +56,7 @@ class managerDeck {
         deck = {
             Id: "".guid(),
             Format: deck.Format,
-			Rank: deck.Rank ? deck.Rank.Id : 3,
+			Rank: deck.Rank ? deck.Rank : '3',
             IdTournament : deck.IdTournament,
 			Title: deck.Title,
             IsDraft: true,
@@ -71,14 +71,13 @@ class managerDeck {
 			Seed: deck.Seed
         };
         
-        if(!deck.Rank)
-            deck.Rank = '3';
-        deck.Cube = this.getCube(deck);
-        if(deck.Cube.length > 0)
+        if(deck.Seed && deck.Seed.length > 0)
             deck.Rank = '5';
 
         this.saveDeck(deck, errorMessage);
 
+        deck.Seed = deck.Seed ? deck.Seed.removeStringStartOrEnd('SEED') : '';
+        deck.Cube = this.getCube(deck);
         let decks = await this.read();
         decks.push(deck);
         this.save(decks);
@@ -103,7 +102,7 @@ class managerDeck {
         deck = {
             Id: deck.Id,
             Format: deck.Format,
-			Rank: deck.Rank ? deck.Rank.Id : 3,
+			Rank: deck.Rank ? deck.Rank : '3',
             IdTournament : deck.IdTournament,
 			Title: deck.Title,
             IsDraft: deck.IsDraft,
@@ -118,14 +117,13 @@ class managerDeck {
 			Seed: deck.Seed
         };
         
-        if(!deck.Rank)
-            deck.Rank = '3';
-        deck.Cube = this.getCube(deck);
-        if(deck.Cube.length > 0)
+        if(deck.Seed && deck.Seed.length > 0)
             deck.Rank = '5';
 
         this.saveDeck(deck, errorMessage, deck.Id);
 
+        deck.Seed = deck.Seed ? deck.Seed.removeStringStartOrEnd('SEED') : '';
+        deck.Cube = this.getCube(deck);
         let decks = await this.read();
         decks = decks.filter(x=> x.Id !== deck.Id).concat([deck]);
         this.save(decks);
@@ -180,11 +178,7 @@ class managerDeck {
         if (typeof deck.Themes === 'object')
             deck.Themes= deck.Themes.join(', ');
 
-        if(!deck.Rank)
-            deck.Rank = '3';
-        deck.Cube = this.getCube(deck);
-        if(deck.Cube.length > 0)
-            deck.Rank = '5';
+        deck.Seed = deck.Seed && deck.Seed.length > 0 ? 'SEED' + deck.Seed : '';
         
         updateSheet.push({range: 'Decks!A' + sheetLine, value:errorMessage ?? ''});
         updateSheet.push({range: 'Decks!B' + sheetLine, value:deck.Id});
@@ -247,8 +241,9 @@ class managerDeck {
             let deck = decks[deckIndex];            
             let errorsCards = [];
             let sheetLine = deckIndex+2;
-            deck.Rank = deck.Rank ?? 3;
+            deck.Rank = deck.Rank ?? '3';
             deck.IsDraft = deck.IsDraft === "1";
+            deck.Seed = deck.Seed ? deck.Seed.removeStringStartOrEnd('SEED') : '';
             deck.Cube = this.getCube(deck);
 
             if(!deck.Id || deck.Id.length < 8){

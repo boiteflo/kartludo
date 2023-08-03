@@ -218,8 +218,7 @@ let md5 = require('md5');
         cardHover:null,
     }),
     mounted(){
-        this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: null, Format: store.formatSelected.Title};
-        this.deckObj.Rank= 3;
+        this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: 3, Format: store.formatSelected.Title};
         this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 
             ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)).map(x=> x.Id)
             : [];
@@ -305,7 +304,6 @@ let md5 = require('md5');
                 .slice(0, 50);
         },
         save(){
-            this.deckObj.Rank = 3;
             this.deckObj.IdTournament = this.deckObj.Tournament ? this.deckObj.Tournament.Id : '';
             this.deckObj.Themes= this.deckObj.ThemesId? this.deckObj.ThemesId.join(', ') : '';
             delete this.deckObj.Tournament;
