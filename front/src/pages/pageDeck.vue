@@ -14,7 +14,8 @@
           </div>
           
           <div v-else-if="deck">
-            <panel-deck :deck="deck">
+            <panel-deck :deck="deck"
+                @duplicate="duplicate">
             </panel-deck>
           </div>
         </div>
@@ -109,6 +110,10 @@ export default {
       this.loading=true;
       ServiceBack.insert('deck', deck)
         .then(res=> this.moveUrl('/deck/id=' + res.data));
+    },
+    duplicate(deck){
+      ServiceBack.insert('deck/duplicate', deck)
+        .then(res=> window.location.href = '/deck/id=' + res.data);
     }
   }
 };

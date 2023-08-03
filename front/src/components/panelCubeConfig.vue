@@ -322,7 +322,7 @@ import panelDeckCards from './panelDeckCards';
             return cards.slice(0, Math.min(cards.length, quantity)).map(x=> x.Id);
         } ,
         initDeck(){
-            return {DeckListCards:[], MainCards: [], ThemesId: ['cube'], Rank: 5, Format:this.cube.Id, Seed:this.seed };
+            return {DeckListCards:[], MainCards: [], ThemesId: ['cube'], Rank: '5', Format:this.cube.Id, Seed:this.seed };
         },
         showDeck(deck){
             deck.DeckListCards = [];

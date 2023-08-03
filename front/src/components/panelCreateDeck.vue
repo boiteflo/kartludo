@@ -218,7 +218,7 @@ let md5 = require('md5');
         cardHover:null,
     }),
     mounted(){
-        this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: 3, Format: store.formatSelected.Title};
+        this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: '3', Format: store.formatSelected.Title};
         this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 
             ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)).map(x=> x.Id)
             : [];

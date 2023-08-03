@@ -135,7 +135,7 @@ class managerDeck {
         deck = {
             Id: "".guid(),
             Format: '',
-			Rank: 3,
+			Rank: '3',
             IdTournament : '',
 			Title: 'Copie de ' + deck.Title,
             IsDraft: true,
