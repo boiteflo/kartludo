@@ -7,7 +7,7 @@ class managerCard {
 
     static async insertMDM(cards, res){       
         const { sheets } = await helperGoogleApi.authSheets();
-        let requestsPages = ['Extra!B3:I'];  
+        let requestsPages = ['Extra!B3:K'];  
         const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
 
         let errorMessage = '';
@@ -21,10 +21,12 @@ class managerCard {
             updateSheet.push({range: 'Extra!C' + (sheetLine+i), value:card.NameFr?.replaceMany(',','')});
             updateSheet.push({range: 'Extra!D' + (sheetLine+i), value:card.Type});
             updateSheet.push({range: 'Extra!E' + (sheetLine+i), value:card.TypeMonster});
-            updateSheet.push({range: 'Extra!F' + (sheetLine+i), value:card.Level});
-            updateSheet.push({range: 'Extra!G' + (sheetLine+i), value:card.Rarity});
-            updateSheet.push({range: 'Extra!H' + (sheetLine+i), value:card.ImageMDM});
-            updateSheet.push({range: 'Extra!I' + (sheetLine+i), value:card.Image});
+            updateSheet.push({range: 'Extra!F' + (sheetLine+i), value:card.Race});
+            updateSheet.push({range: 'Extra!G' + (sheetLine+i), value:card.Level});
+            updateSheet.push({range: 'Extra!H' + (sheetLine+i), value:card.Attribute});
+            updateSheet.push({range: 'Extra!I' + (sheetLine+i), value:card.Rarity});
+            updateSheet.push({range: 'Extra!J' + (sheetLine+i), value:card.ImageMDM});
+            updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Image});
 
             console.log((sheetLine+i) + card.NameEn);
         }
@@ -34,7 +36,7 @@ class managerCard {
         res.status(201).send('Les cartes ont été insérés dans la liste des cartes a ajouter.');
     }
     
-    static getSheetRanges(){return ["Extra!B3:H"];}
+    static getSheetRanges(){return ["Extra!B3:K"];}
 
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
@@ -51,13 +53,13 @@ class managerCard {
                     "NameFr":cardArray[1].replaceMany(',',''),
                     "Type": cardArray[2] ?? "",
                     "TypeMonster": cardArray[3] ?? "",
-                    "Level": cardArray[4] ?? "",
-                    "Rarity": cardArray[5] ?? "",
-                    "Image":cardArray[6] ?? "",
-                    "ImageMDM":cardArray[6] ?? "",
+                    "Race": cardArray[4] ?? "",
+                    "Level": cardArray[5] ?? "",
+                    "Attribute": cardArray[6] ?? "",
+                    "Rarity": cardArray[7] ?? "",
+                    "ImageMDM":cardArray[8] ?? "",
+                    "Image":cardArray[9] ?? "",
                     "ToExtraDeck" : cardArray[3]?.includes("Fusion"),
-                    "Race": "Unknown",
-                    "Attribute" : "Unknown",
                     "Atk":"0",
                     "Def":"0",
                     "TcgRelease" : "2020_01_01",
