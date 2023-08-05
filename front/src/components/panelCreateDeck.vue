@@ -246,7 +246,7 @@ let md5 = require('md5');
             attribute: null,
             race : null,
             searchEffect: null,
-            limit: 20,
+            limit: 50,
             length:0,
             imageWidth: 60
         }

@@ -71,7 +71,7 @@ export default {
       attribute: null,
       race : null,
       searchEffect: null,
-      limit: 20,
+      limit: 50,
       length:0,
       imageWidth: 150
     }
