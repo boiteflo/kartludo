@@ -4,7 +4,7 @@
         <v-btn v-for="action in actions"
           :key="action.Id"
           class="w100p p5px bg2 colorWhite" 
-          @click="$emit(action.Id, booster)">
+          @click="$emit(action.Id, {...booster, event:$event})">
           <v-icon>{{action.Icon}}</v-icon>{{action.Text}}
         </v-btn>
         <img style="width:180px;" :src="image" />

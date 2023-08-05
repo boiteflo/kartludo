@@ -18,6 +18,9 @@
 
       <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.width >= 800">
+        <v-btn class="bg s32 m5px" @click="$emit('filter')" style="min-width:32px">
+          <v-icon>mdi-filter</v-icon>
+        </v-btn>
         <v-text-field class="flex-grow"
                       hide-details
                       v-model="searchString"
@@ -64,12 +67,17 @@
         hide-details
         @input="selectFormat">
       </v-combobox>     
-      <v-text-field class="flex-grow m5px"
-                    hide-details
-                    v-model="searchString"
-                    label="Chercher une carte (FR ou EN)"
-                    @input="$emit('search', $event)">
-      </v-text-field>
+      <div class="flex">
+        <v-btn class="w32" @click="$emit('filter')" style="height:50px;">
+          <v-icon>mdi-filter</v-icon>
+        </v-btn>
+        <v-text-field class="flex-grow m5px"
+                      hide-details
+                      v-model="searchString"
+                      label="Chercher une carte (FR ou EN)"
+                      @input="$emit('search', $event)">
+        </v-text-field>
+      </div>
     </template>
   </div>
 </template>

@@ -128,9 +128,11 @@ export default {
     },
     addToMultiCube(booster){
         this.multiCubeBoosters.push(booster);
+        this.moveImage({Image:booster.Image, Animation:'slideToDown'}, booster.event, 70);
     },
     removeToMultiCube(booster){
         this.multiCubeBoosters = this.multiCubeBoosters.filter(x=> x.Ref !== booster.Ref);
+        this.moveImage({Image:booster.Image, Animation:'slideToUp'}, booster.event, -60);
     },
     openMultiCube(){
         window.location.href = "/cube/id=" + this.multiCubeBoosters.map(x=> x.Ref).join('+') + '&seed=' + ((new Date().getTime() * 10000) + 621355968000000000);

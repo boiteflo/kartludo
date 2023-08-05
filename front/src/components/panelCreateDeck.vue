@@ -15,7 +15,7 @@
                 :image="theme.CardImage">
             </icon-theme-mini>
         </div>
-        <h1>Thèmes sélectionné pour le deck</h1>
+        <h1>Thème(s) sélectionné(s) pour le deck</h1>
         <div class="flex-wrap bg2" >
             <icon-theme-mini v-for="theme in themes.filter(x=> x && deckObj.ThemesId.includes(x.Id))" 
                 v-bind:key="theme.Id" 
@@ -29,6 +29,12 @@
         </v-btn>
     </div>
     <div v-else class="bgWhite">
+    
+        <v-dialog v-model="showFilter">
+            <panel-card-filter v-if="showFilter" :filter="filter" v-on:hide="showOrHideFilter" v-on:filter="defineFilter">
+            </panel-card-filter>
+        </v-dialog> 
+
         <template v-if="deckObj">
             <h2>Modifier un deck</h2>
             <div>
@@ -92,22 +98,28 @@
                         <br>
                     </div>
                     <div style="flex-grow:1; max-width:357px;flex-basis: 0">
-                        <v-text-field
-                                solo class="m5px"
-                                hide-details
-                                label="Chercher une carte (FR ou EN)"
-                                color="#212A3C"
-                                append-inner-icon="mdi-magnify"
-                                v-model="searchString"
-                                @input="search">
-                        </v-text-field>
+                        <div class="flex">
+                            <v-btn class="w32 m5px" @click="showOrHideFilter()" style="min-width:32px; height:48px;">
+                                <v-icon>mdi-filter</v-icon>
+                            </v-btn>
+                            <v-text-field
+                                    solo class="m5px flex-grow"
+                                    hide-details
+                                    label="Chercher une carte (FR ou EN)"
+                                    color="#212A3C"
+                                    append-inner-icon="mdi-magnify"
+                                    v-model="searchString"
+                                    @input="search">
+                            </v-text-field>
+                        </div>
                         <panel-cards v-if="selectedCards && selectedCards.length > 0"
                                     keyid= "searchCards"
-                                    :size="75" 
-                                    :cards="selectedCards"
+                                    :size="filter.imageWidth" 
+                                    :cards="selectedCards.slice(0,filter.limit)"
                                     @select="selectCard"
                                     @hover="showCard">
-                        </panel-cards>                    
+                        </panel-cards>   
+                        <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>                 
                     </div>
                 </div>
                 <div v-else>
@@ -123,21 +135,30 @@
                             <v-btn class="" @click="showStaples('stapleTrap')">
                                 Piège
                             </v-btn>
+                        </div>                 
+                        <v-alert type="info" class="m5px" style="background: #212A3C !important">
+                            Nombre de carte du deck : {{deckObj.DeckLength}}
+                        </v-alert>
+                        <div class="flex">                            
+                            <v-btn class="w32 m5px" @click="showOrHideFilter()" style="min-width:32px; height:48px;">
+                                <v-icon>mdi-filter</v-icon>
+                            </v-btn>
+                            <v-text-field
+                                    solo class="m5px flex-grow"
+                                    hide-details
+                                    label="Chercher une carte (FR ou EN)"
+                                    color="#212A3C"
+                                    append-inner-icon="mdi-magnify"
+                                    v-model="searchString"
+                                    @input="search">
+                            </v-text-field>
                         </div>
-                        <v-text-field
-                                solo class="m5px"
-                                hide-details
-                                label="Chercher une carte (FR ou EN)"
-                                color="#212A3C"
-                                append-inner-icon="mdi-magnify"
-                                v-model="searchString"
-                                @input="search">
-                        </v-text-field>
                         <panel-cards v-if="selectedCards && selectedCards.length > 0" 
-                                    :size="50" 
-                                    :cards="selectedCards"
+                                    :size="filter.imageWidth" 
+                                    :cards="selectedCards.slice(0,filter.limit)"
                                     @select="selectCard">
                         </panel-cards>
+                        <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>
                     </div>
                     <panel-deck-cards :cards="getCards(false)"
                                 @select="selectCardFromDeck"
@@ -198,13 +219,14 @@ import cardImage from './cardImage.vue'
 import panelCards from './panelCards.vue'
 import iconThemeMini from '../components/iconThemeMini';
 import panelDeckCards from './panelDeckCards.vue'
+import panelCardFilter from './panelCardFilter.vue'
 let md5 = require('md5');
 
   export default {
     name: 'panel-create-deck',
     props: ['deck', 'themes', 'staples', 'tournaments'],
     components: {
-        cardImage, panelCards, panelDeckCards, iconThemeMini
+        cardImage, panelCards, panelDeckCards, iconThemeMini, panelCardFilter
     },
     data: () => ({
         store: store,
@@ -216,6 +238,18 @@ let md5 = require('md5');
         selectMainCard: false,
         selectThemes: false,
         cardHover:null,
+        showFilter:false,
+        filter: {
+            search: '',
+            type : null,
+            subType : null,
+            attribute: null,
+            race : null,
+            searchEffect: null,
+            limit: 20,
+            length:0,
+            imageWidth: 60
+        }
     }),
     mounted(){
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: '3', Format: store.formatSelected.Title};
@@ -241,8 +275,23 @@ let md5 = require('md5');
                 return [];
             return this.deckObj.DeckListCards.filter(x=> x.Card.ToExtraDeck === extra);
         },
+        refreshSearch(){
+            this.selectedCards = ServiceMain.filterCard(store.cards, store.formatSelected, this.filter);
+        },
         search(value){
-            this.selectedCards = ServiceMain.filterCard(store.cards, value);
+            this.filter.search = value;
+            if(!value || value.trim().length < 1)
+                this.selectedCards = [];
+            else
+                this.refreshSearch();
+        },
+        showOrHideFilter(){
+            this.showFilter=!this.showFilter;
+        },
+        defineFilter(filter){
+            this.filter = {...filter, search: this.filter.search};
+            this.showFilter=false;
+            this.refreshSearch();
         },
         selectCard(card){
             let event = card.event;
@@ -253,7 +302,8 @@ let md5 = require('md5');
             else this.deckObj.DeckListCards.push({Id: card.IdName, Card:card});
             
             this.refreshCardsDeck();
-            this.moveImage({Image:card.ImageMDM, Animation:'slideToRight'}, event);
+            let animation = this.isMobileScreen() ? 'slideToDown' : 'slideToRight';
+            this.moveImage({Image:card.ImageMDM, Animation:animation}, event);
         },
         selectCardFromDeck(card){
             let event = card.event;
@@ -272,7 +322,8 @@ let md5 = require('md5');
 
             this.deckObj.DeckListCards = this.deckObj.DeckListCards.filter(x=> x.Card.IdName !== cardObject.Card.IdName);
             this.refreshCardsDeck();
-            this.moveImage({Image:card.ImageMDM, Animation:'slideToLeft'}, event);
+            let animation = this.isMobileScreen() ? 'slideToUp' : 'slideToLeft';
+            this.moveImage({Image:card.ImageMDM, Animation:animation}, event);
         },
         selectFav(card){
             this.deckObj.MainCard = card.NameEn;

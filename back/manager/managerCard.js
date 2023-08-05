@@ -56,7 +56,12 @@ class managerCard {
                     "Image":cardArray[6] ?? "",
                     "ImageMDM":cardArray[6] ?? "",
                     "ToExtraDeck" : cardArray[3]?.includes("Fusion"),
-                    "Bonus": true,
+                    "Race": "Unknown",
+                    "Attribute" : "Unknown",
+                    "Atk":"0",
+                    "Def":"0",
+                    "TcgRelease" : "2020_01_01",
+                    "Bonus": true
                 })
             );
         }
@@ -76,7 +81,12 @@ class managerCard {
             TypeMonster:x.TypeMonster,
             ToExtraDeck:x.ToExtraDeck,
             Level:x.Level,
-            Rarity:x.Rarity
+            Rarity:x.Rarity,
+            Attribute: x.Attribute,
+            Race : x.Race,
+            Atk: x.Atk ? parseInt(x.Atk) : 0,
+            Def: x.Def ? parseInt(x.Def) : 0,
+            TcgRelease :  x.TcgRelease
         }});
         
         helperJsonFile.savePath('./back/data/cards.json', cards);

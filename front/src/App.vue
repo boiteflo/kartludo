@@ -8,11 +8,21 @@
       <div v-else >
         <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
         <div v-else>
-          <menuBar v-on:search="search"></menuBar>
-          <panel-cards class="bg2" v-if="selectedCards && selectedCards.length > 0" :cards="selectedCards"  tooltip="text">
-          </panel-cards>
+          <menuBar v-on:search="search" v-on:filter="showOrHideFilter"></menuBar>
+          <v-dialog v-model="showFilter">
+            <panel-card-filter v-if="showFilter" :keyid="'home'" :filter="filter" v-on:hide="showOrHideFilter" v-on:filter="defineFilter">
+            </panel-card-filter>
+          </v-dialog> 
+
+          <div v-if="selectedCards && selectedCards.length > 0" class="bg2">
+            <panel-cards   :cards="selectedCards.slice(0,filter.limit)"  tooltip="text" :size="filter.imageWidth">
+            </panel-cards>
+            <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>
+          </div>
+
           <router-view>
           </router-view>
+
           <div v-if="store.animatedImage">
             <transition :name="store.animatedImage.Animation" appear>
               <img :src="store.animatedImage.Image" 
@@ -30,8 +40,6 @@
 </style>
 
 <script>
-// eslint-disable-next-line
-import { Transition } from "vue";
 import { forkJoin } from 'rxjs';
 import { store } from './data/store.js'
 import Konami from 'konami';
@@ -41,19 +49,32 @@ import ServiceFormat from './services/serviceFormat'
 
 import menuBar from './components/menuBar';
 import panelCards from './components/panelCards';
+import panelCardFilter from './components/panelCardFilter.vue';
 
 export default {
   name: 'App',
 
   components: {
-    menuBar, panelCards
+    menuBar, panelCards, panelCardFilter
   },
 
   data: () => ({
     store: store,
     selectedCards: [],
     konamiCode : false,
-    animatedCard: null
+    animatedCard: null,
+    showFilter:false,
+    filter: {
+      search: '',
+      type : null,
+      subType : null,
+      attribute: null,
+      race : null,
+      searchEffect: null,
+      limit: 20,
+      length:0,
+      imageWidth: 150
+    }
   }),
   
   mounted() {
@@ -69,9 +90,24 @@ export default {
     });
   },
   methods: {
-    search(value){
-      this.selectedCards = ServiceMain.filterCard(store.cards, value);
+    refreshSearch(){
+      this.selectedCards = ServiceMain.filterCard(store.cards, store.formatSelected, this.filter);
       window.scrollTo(0, 0);
+    },
+    search(value){
+      this.filter.search = value;
+      if(!value || value.trim().length < 1)
+        this.selectedCards=[];
+      else
+        this.refreshSearch();
+    },
+    showOrHideFilter(){
+      this.showFilter=!this.showFilter;
+    },
+    defineFilter(filter){
+      this.filter = {...filter, search: this.filter.search};
+      this.showFilter=false;
+      this.refreshSearch();
     }
   }
 };

@@ -20,14 +20,17 @@ Vue.mixin({
       else
         window.location.href =url;
     },
-    moveImage(animatedImage, event){
+    isMobileScreen(){
+      return this.$vuetify.breakpoint.width < 900;
+    },
+    moveImage(animatedImage, event, yMargin = 0){ //this.moveImage({Image:'image', Animation:'slideToDown'}, event);
       
       this.store.animatedImage = {
         Animation : animatedImage.Animation,
         Image: animatedImage.Image,
         Width: event.currentTarget.clientWidth, //animatedImage.Width,
         X: event.pageX -event.offsetX,
-        Y: event.pageY -event.offsetY - 70
+        Y: event.pageY -event.offsetY - 70 + yMargin
       }
       setTimeout(() =>  this.store.animatedImage=null, 300);
     }
