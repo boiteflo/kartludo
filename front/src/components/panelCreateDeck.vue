@@ -73,7 +73,7 @@
                     </div>
                     <div v-if="deckObj" class="bg2" style="width:310px">                 
                         <v-alert type="info" class="m5px" style="background: #212A3C !important">
-                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magie: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
+                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magies: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
                         </v-alert>
                         <h3 class="m5px" style="color:white">Ajouter des Staples</h3>
                         <div class="flex flex-space-around">
@@ -159,7 +159,7 @@
                         </panel-cards>
                         <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>        
                         <v-alert type="info" class="m5px" style="background: #212A3C !important">
-                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magie: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
+                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magies: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
                         </v-alert>
                     </div>
                     <panel-deck-cards :cards="getCards(false)"
