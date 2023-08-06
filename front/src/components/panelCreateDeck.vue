@@ -262,7 +262,7 @@ let md5 = require('md5');
             limit: 50,
             length:0,
             imageWidth: 150,
-            sort:'>Type,>Level,<IdName',
+            sort:'<Type,<MonTyp,>Level,<IdName',
             showAll : false,
             isActive:false
         }
