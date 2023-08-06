@@ -91,7 +91,8 @@
                             :card="cardHover"
                             :badgeoff="true"
                             :showname="true"
-                            :size="300">
+                            :size="300"
+                            style="position:sticky; top:20px;">
                         </card-image>
                         <div v-else class="bg2 w100p" style="height:437px">
                         </div>
@@ -153,7 +154,8 @@
                         <panel-cards v-if="selectedCards && selectedCards.length > 0" 
                                     :size="filter.imageWidth" 
                                     :cards="selectedCards.slice(0,filter.limit)"
-                                    @select="selectCard">
+                                    @select="selectCard"
+                                    @hover="showCard">
                         </panel-cards>
                         <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>        
                         <v-alert type="info" class="m5px" style="background: #212A3C !important">
@@ -162,16 +164,24 @@
                     </div>
                     <panel-deck-cards :cards="getCards(false)"
                                 @select="selectCardFromDeck"
+                                @hover="showCard"
                                 keyid= "vdeckMain"
                                 :size="50" 
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
                     <panel-deck-cards :cards="getCards(true)"
                                 @select="selectCardFromDeck"
+                                @hover="showCard"
                                 keyid= "vdeckExtra"
                                 :size="50" 
                                 v-bind:key="refreshCards">
                     </panel-deck-cards>
+                    <card-image v-if="cardHover" 
+                        :card="cardHover"
+                        :badgeoff="true"
+                        :showname="true"
+                        :size="$vuetify.breakpoint.width-20">
+                    </card-image>
                 </div>
                 <h1>Tournoi</h1> 
                 <v-combobox class="m5px w100p" 

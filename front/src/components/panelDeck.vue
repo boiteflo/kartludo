@@ -53,7 +53,8 @@
                 :card="cardHover"
                 :badgeoff="true"
                 :size="300"
-                :showname="true">
+                :showname="true"
+                style="position:sticky; top:20px;">
             </card-image>
             <div v-else class="bg2 w100p" style="height:500px">
             </div>
@@ -89,7 +90,8 @@
               <card-image v-if="cardHover" 
                   :card="cardHover"
                   :badgeoff="true"
-                  :showname="true">
+                  :showname="true"
+                  style="position:sticky; top:20px;">
               </card-image>
               <div v-else class="bg2" style="height:507px; width:100px">
               </div>

@@ -2680,5 +2680,23 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a52079_w420.webp",
 		"DeckLength": 40,
 		"Errors": null
+	},
+	{
+		"Id": "21225bba-23d7-48bd-b424-7c43ef51b68a",
+		"Format": "mdoldschoolv2",
+		"IdTournament": "",
+		"Rank": "3",
+		"Title": "Fenrir",
+		"IsDraft": true,
+		"Date": "06/08/2023",
+		"Author": "FlorentOutan",
+		"MainCard": "Fenrir",
+		"Themes": "eau,equipement",
+		"DeckList": "Frostosaurus, Giga Gagagigo, Aqua Madoor, 7 Colored Fish, Gagagigo, Dark Dust Spirit, Fenrir x2, Abyss Soldier, Blizzard Dragon, Elemental HERO Ocean, Nightmare Penguin, Mother Grizzly x2, Deep Diver, Treeborn Frog, Sinister Serpent, Dark Hole, Swords of Revealing Light, Monster Reborn, Pot of Greed, Smashing Ground, Pot of Avarice, Hidden Armory, Horn of the Unicorn, Malevolent Nuzzler, Mage Power, Card Trader, Mystical Space Typhoon, Heavy Storm, Megamorph, Umiiruka, Moray of Greed, Waboku, Raigeki Break, Jar of Avarice",
+		"Seed": "",
+		"Cube": "mdoldschoolv2&seed=",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a520fe_w420.webp",
+		"DeckLength": 36,
+		"Errors": "Pas assez de cartes : 36"
 	}
 ]
