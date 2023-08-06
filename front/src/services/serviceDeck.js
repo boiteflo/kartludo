@@ -43,8 +43,10 @@ class ServiceDeck {
             return "Il n'y a pas de cartes dans ce deck";
         if(formatSelected)
             deck.Format = formatSelected;
-        let format = deck.Format ? formats.find(x=>x.Id === deck.Format) : null;
-        if(!format) format = formats[formats.length-2];
+        
+        let format = {Limit0:'', Limit1:'', Joker:'', Limit1Groups:''};
+        if(formats && formats.length > 1)
+            format = deck.Format ? formats.find(x=>x.Id === deck.Format) : formats[formats.length-2];
 
         let matchs = helperArray.getMatch(format.Limit0.split(',').map(x=> helperString.cleanup(x)), cardIdNames);
         let deckCardsMatchs = deckCards.filter(x=> matchs.includes(x.Card.IdName));
@@ -58,6 +60,10 @@ class ServiceDeck {
 
         matchs = helperArray.getMatch(format.Joker.split(',').map(x=> helperString.cleanup(x)), cardIdNames);
         deck.DeckLength = 0;
+        deck.MonsterLength = 0;
+        deck.SpellLength = 0;
+        deck.TrapLength = 0;
+        deck.ExtraLength = 0;
         let jokerLength = 0;
         let x2Length = 0;
         let errorJokerQuantityx2 = [];
@@ -76,8 +82,14 @@ class ServiceDeck {
                     errorJokerQuantityx2.push(cardObj.Card.NameEn);
             }
             
-            if(!cardObj.Card.ToExtraDeck)
+            if(!cardObj.Card.ToExtraDeck){
                 deck.DeckLength+= quantity;
+                if(cardObj.Card.Type === 'Monster') deck.MonsterLength+= quantity;
+                else if(cardObj.Card.Type === 'Spell') deck.SpellLength+= quantity;
+                else if(cardObj.Card.Type === 'Trap') deck.TrapLength+= quantity;
+            }
+            else
+                deck.ExtraLength+=quantity;
         });
 
         if(jokerLength > 3)

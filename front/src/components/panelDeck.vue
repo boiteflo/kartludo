@@ -38,7 +38,7 @@
           <div style="flex-basis: 0; min-height:400px; width:310px" class="m5px">  
             
             <v-alert type="info" class="m5px w100p" style="background: #212A3C !important">
-              Nombre de carte du deck : {{deck.DeckLength}}
+              Deck: {{deck.DeckLength}}, Monstres: {{deck.MonsterLength}}, Magies: {{deck.SpellLength}}, Pièges: {{deck.TrapLength}}, Extra: {{deck.ExtraLength}}
             </v-alert>
             <v-btn target="_blank" text  class="bg m5px w100p" @click="saveDecklist" >
               <v-icon>mdi-download</v-icon>

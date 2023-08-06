@@ -28,6 +28,7 @@ import { forkJoin } from 'rxjs';
 import helperString from '../helpers/helperString'
 import ServiceBack from '../services/serviceBack'
 import ServiceFormat from '../services/serviceFormat'
+import serviceDeck from '../services/serviceDeck';
 
 import { store } from '../data/store.js'
 import panelDeck from '../components/panelDeck';
@@ -104,7 +105,9 @@ export default {
           if(card)
               deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
       }
-        this.deck = deck;
+      
+      deck.Errors = serviceDeck.getErrors(deck, deck.DeckListCards);
+      this.deck = deck;
     },
     saveDeck(deck){
       this.loading=true;

@@ -162,7 +162,7 @@
   },
     methods : {
       selectType(element){      
-        if(element.Id ==this.filterData.subType){
+        if(element.Id ==this.filterData.type){
           this.filterData.type = null;
           return;
         }

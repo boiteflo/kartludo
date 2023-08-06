@@ -73,7 +73,7 @@
                     </div>
                     <div v-if="deckObj" class="bg2" style="width:310px">                 
                         <v-alert type="info" class="m5px" style="background: #212A3C !important">
-                            Nombre de carte du deck : {{deckObj.DeckLength}}
+                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magie: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
                         </v-alert>
                         <h3 class="m5px" style="color:white">Ajouter des Staples</h3>
                         <div class="flex flex-space-around">
@@ -135,10 +135,7 @@
                             <v-btn class="" @click="showStaples('stapleTrap')">
                                 Piège
                             </v-btn>
-                        </div>                 
-                        <v-alert type="info" class="m5px" style="background: #212A3C !important">
-                            Nombre de carte du deck : {{deckObj.DeckLength}}
-                        </v-alert>
+                        </div>
                         <div class="flex">                            
                             <v-btn class="w32 m5px" @click="showOrHideFilter()" style="min-width:32px; height:48px;">
                                 <v-icon>mdi-filter</v-icon>
@@ -158,7 +155,10 @@
                                     :cards="selectedCards.slice(0,filter.limit)"
                                     @select="selectCard">
                         </panel-cards>
-                        <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>
+                        <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>        
+                        <v-alert type="info" class="m5px" style="background: #212A3C !important">
+                            Deck: {{deckObj.DeckLength}}, Monstres: {{deckObj.MonsterLength}}, Magie: {{deckObj.SpellLength}}, Pièges: {{deckObj.TrapLength}}, Extra: {{deckObj.ExtraLength}}
+                        </v-alert>
                     </div>
                     <panel-deck-cards :cards="getCards(false)"
                                 @select="selectCardFromDeck"

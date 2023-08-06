@@ -93,9 +93,9 @@
 	{
 		"Id": "lumiere",
 		"Title": "Lumière",
-		"CardIdName": "guardianangeljoan",
-		"CardNameEn": "Guardian Angel Joan",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5252e_w420.webp"
+		"CardIdName": "wingweaver",
+		"CardNameEn": "Wingweaver",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53e44_w420.webp"
 	},
 	{
 		"Id": "lightsworn",
@@ -229,5 +229,54 @@
 		"CardIdName": "macrocosmos",
 		"CardNameEn": "Macro Cosmos",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52a4f_w420.webp"
+	},
+	{
+		"Id": "batterie",
+		"Title": "Homme-batterie",
+		"CardIdName": "batterymanindustrialstrength",
+		"CardNameEn": "Batteryman Industrial Strength",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a51659_w420.webp"
+	},
+	{
+		"Id": "elfe",
+		"Title": "Elfe",
+		"CardIdName": "airknightparshath",
+		"CardNameEn": "Airknight Parshath",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513d1_w420.webp"
+	},
+	{
+		"Id": "nuagien",
+		"Title": "Nuagien",
+		"CardIdName": "cloudiansmokeball",
+		"CardNameEn": "Cloudian - Smoke Ball",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a519a7_w420.webp"
+	},
+	{
+		"Id": "volcanique",
+		"Title": "Volcanique",
+		"CardIdName": "volcanicdoomfire",
+		"CardNameEn": "Volcanic Doomfire",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53d49_w420.webp"
+	},
+	{
+		"Id": "magnetique",
+		"Title": "Magnetique",
+		"CardIdName": "betathemagnetwarrior",
+		"CardNameEn": "Beta The Magnet Warrior",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a516c5_w420.webp"
+	},
+	{
+		"Id": "gadget",
+		"Title": "Gadget",
+		"CardIdName": "greengadget",
+		"CardNameEn": "Green Gadget",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52512_w420.webp"
+	},
+	{
+		"Id": "harpie",
+		"Title": "Harpie",
+		"CardIdName": "harpiequeen",
+		"CardNameEn": "Harpie Queen",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52598_w420.webp"
 	}
 ]
