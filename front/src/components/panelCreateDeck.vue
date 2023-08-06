@@ -249,19 +249,26 @@ let md5 = require('md5');
         selectThemes: false,
         cardHover:null,
         showFilter:false,
-        filter: {
+        filter: null,
+        filterInit: {
             search: '',
             type : null,
             subType : null,
             attribute: null,
             race : null,
+            levelmax: 12,
+            levelmin: 1,
             searchEffect: null,
             limit: 50,
             length:0,
-            imageWidth: 60
+            imageWidth: 150,
+            sort:'>Type,>Level,<IdName',
+            showAll : false,
+            isActive:false
         }
     }),
     mounted(){
+        this.filter = {...this.filterInit};
         this.deckObj = this.deck ?? {DeckListCards:[], MainCards: [], Themes: [], ThemesId: [], Rank: '3', Format: store.formatSelected.Title};
         this.deckObj.ThemesId= this.deckObj.Themes && this.deckObj.Themes.length > 0 
             ? this.themes.filter(x=> x && this.deckObj.Themes.split(',').includes(x.Id)).map(x=> x.Id)
@@ -290,10 +297,11 @@ let md5 = require('md5');
         },
         search(value){
             this.filter.search = value;
-            if(!value || value.trim().length < 1)
-                this.selectedCards = [];
-            else
-                this.refreshSearch();
+            this.refreshSearch();
+        },
+        resetFilter(){
+            this.filter = {...this.filterInit}
+            this.refreshSearch();
         },
         showOrHideFilter(){
             this.showFilter=!this.showFilter;

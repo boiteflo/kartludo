@@ -249,6 +249,10 @@
     background: #374C5F !important;
 }
 
+.bgRed {
+    background: red !important;
+}
+
 h1 {
     background-color: #212A3C;
     color:white;

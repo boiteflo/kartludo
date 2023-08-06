@@ -40,8 +40,22 @@ class helperArray {
     }
 
 
-    static sort= (array, property) => {
-        return array.sort((a,b)=> b[property] - a[property])
+    static sort= (array, property, isAscending=true) => {
+        return array.sort((a,b)=> isAscending ? b[property] - a[property] : a[property] - b[property])
+    }
+    
+    static getSortResult = (result) => result.find(x=> x!= 0) ?? 0;
+    static getSortPropertyValue = (a,b,x, ascending) => ascending ? (a[x] > b[x]) - (a[x] < b[x]) : (b[x] > a[x]) - (b[x] < a[x]);
+
+    static sortByProperties(array, sortPropertiesString){
+        let properties = sortPropertiesString
+            .split(',');
+
+        return array.sort((a,b) => {
+            const result = this.getSortResult(properties
+                .map(x=> this.getSortPropertyValue(a,b,x.substring(1),x[0] ==='<')));
+            return result;
+        });
     }
 
     static sortInverse= (array, property) => {

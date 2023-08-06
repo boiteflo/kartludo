@@ -8,9 +8,18 @@
       <div v-else >
         <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
         <div v-else>
-          <menuBar v-on:search="search" v-on:filter="showOrHideFilter"></menuBar>
+          <menuBar :filteractive="filter.isActive"
+            v-on:search="search" 
+            v-on:filter="showOrHideFilter">
+          </menuBar>
+
           <v-dialog v-model="showFilter">
-            <panel-card-filter v-if="showFilter" :keyid="'home'" :filter="filter" v-on:hide="showOrHideFilter" v-on:filter="defineFilter">
+            <panel-card-filter v-if="showFilter" 
+              :keyid="'home'" 
+              :filter="filter" 
+              v-on:hide="showOrHideFilter" 
+              v-on:filter="defineFilter"
+              v-on:reset="resetFilter">
             </panel-card-filter>
           </v-dialog> 
 
@@ -64,20 +73,27 @@ export default {
     konamiCode : false,
     animatedCard: null,
     showFilter:false,
-    filter: {
+    filter: null,
+    filterInit: {
       search: '',
       type : null,
       subType : null,
       attribute: null,
       race : null,
+      levelmax: 12,
+      levelmin: 1,
       searchEffect: null,
       limit: 50,
       length:0,
-      imageWidth: 150
+      imageWidth: 150,
+      sort:'<Type,<MonTyp,>Level,<IdName',
+      showAll : false,
+      isActive:false
     }
   }),
   
   mounted() {
+    this.filter = {... this.filterInit};
     new Konami(() => this.konamiCode=true);
     forkJoin([
         ServiceBack.getAll('card'), 
@@ -95,17 +111,19 @@ export default {
       window.scrollTo(0, 0);
     },
     search(value){
-      this.filter.search = value;
-      if(!value || value.trim().length < 1)
-        this.selectedCards=[];
-      else
-        this.refreshSearch();
+      this.filter.search = value;      
+      this.refreshSearch();
     },
     showOrHideFilter(){
       this.showFilter=!this.showFilter;
     },
+    resetFilter(){      
+      this.filter = {... this.filterInit};
+      this.showFilter=false;
+      this.refreshSearch();
+    },
     defineFilter(filter){
-      this.filter = {...filter, search: this.filter.search};
+      this.filter = filter;
       this.showFilter=false;
       this.refreshSearch();
     }

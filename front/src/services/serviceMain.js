@@ -1,6 +1,14 @@
+
+import helperArray from '../helpers/helperArray'
+
 class ServiceMain {
     static filterCard(cards, format, filter) {
-        if(filter == null)
+        let isActive = (filter.search && filter.search.length > 0)
+            || (filter.type && filter.type.length > 0)
+            || (filter.limitation && filter.limitation.length > 0)
+            || filter.showAll;
+
+        if(!isActive)
             return [];
 
         let result = cards.filter(x=> !(x.Bonus && x.Limit==='0'));
@@ -17,20 +25,25 @@ class ServiceMain {
             result = result.filter(x=> x.Type && x.Type.includes(filter.type));
         }
 
-        if(filter.magicTrapType && filter.magicTrapType.length>0) {
-            result = result.filter(x=> x.Race && x.Race.includes(filter.magicTrapType));
-        }
-
-        if(filter.monsterType && filter.monsterType.length>0) {
-            result = result.filter(x=> x.TypeMonster && x.TypeMonster.includes(filter.monsterType));
-        }
-
-        if(filter.attribute && filter.attribute.length>0) {
-            result = result.filter(x=> x.Attribute && x.Attribute.includes(filter.attribute));
-        }
-
-        if(filter.race && filter.race.length>0) {            
-            result = result.filter(x=> x.Race && x.Race === filter.race);
+        if(filter.type === 'Monster')
+        {
+            if(filter.monsterType && filter.monsterType.length>0) {
+                result = result.filter(x=> x.TypeMonster && x.TypeMonster.includes(filter.monsterType));
+            }
+    
+            if(filter.attribute && filter.attribute.length>0) {
+                result = result.filter(x=> x.Attribute && x.Attribute.includes(filter.attribute));
+            }
+    
+            if(filter.race && filter.race.length>0) {            
+                result = result.filter(x=> x.Race && x.Race === filter.race);
+            }
+            
+            result = result.filter(x=> x && x.Level && parseInt(x.Level).between(filter.levelmin, filter.levelmax));
+        } else{
+            if(filter.magicTrapType && filter.magicTrapType.length>0) {
+                result = result.filter(x=> x.Race && x.Race.includes(filter.magicTrapType));
+            }
         }
 
         if(filter.limitation && filter.limitation.length>0){
@@ -39,10 +52,20 @@ class ServiceMain {
             result = result.filter(x=> limitArray.includes(x.IdName));
         }
         
+        result = result.map(x=> { return {...x, Level:x.Level ? parseInt(x.Level):0, MonTyp:this.getTypeMOrder(x.TypeMonster)};})
+        result = helperArray.sortByProperties(result, filter.sort);
+        
         filter.length = result.length;
         
         return result;
-    }    
+    }
+
+    static getTypeMOrder(value){
+        return value.startsWith('Fusion') ? 0
+            : value.startsWith('Ritual') ? 1
+            : value === 'Normal' ? 2
+            : 3;
+    }
 }
 
 

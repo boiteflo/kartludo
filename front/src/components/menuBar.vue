@@ -19,7 +19,7 @@
       <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.width >= 800">
         <v-btn class="bg s32 m5px" @click="$emit('filter')" style="min-width:32px">
-          <v-icon>mdi-filter</v-icon>
+          <v-icon :style="{color: filteractive ? 'red' : 'white'}"> mdi-filter</v-icon>
         </v-btn>
         <v-text-field class="flex-grow"
                       hide-details
@@ -88,7 +88,7 @@ import ServiceFormat from '../services/serviceFormat'
 
   export default {
     name: 'menuBar',
-    props: ['formats'],
+    props: ['filteractive'],
     data: () => ({
         store : store,
         searchString: '',

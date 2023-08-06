@@ -2,8 +2,22 @@
     <div class="bgWhite" :key="keyid + refreshComponent">    
       <table class="m5px" v-if="filterData">
         <tr>
+          <td style="min-width:150px"><div class="m5px">Nom de la carte</div></td>
+          <td>
+            <v-text-field class="flex-grow"
+                          v-model="filterData.search"
+                          label="Chercher une carte (FR ou EN)">
+            </v-text-field>
+          </td>
+        </tr>
+        <tr>
           <td style="min-width:150px"><div class="m5px">Type de carte : </div></td>
           <td>
+            <v-chip 
+              :class="{m5px:true, bg2:filterData.showAll, colorWhite:filterData.showAll}"
+              @click="setShowAll()">
+              Tous
+            </v-chip>
             <v-chip v-for="element in mainTypes"
               :key="keyid + element.Id" 
               :class="{m5px:true, bg2:filterData.type === element.Id, colorWhite:filterData.type === element.Id}"
@@ -30,7 +44,7 @@
             <v-chip v-for="element in attributes"
               :key="keyid + element.Id" 
               :class="{m5px:true, bg2:filterData.attribute === element.Id, colorWhite:filterData.attribute === element.Id}"
-              :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster') || (currentSubType && !currentSubType.Parent.includes('Monster'))"
+              :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster')"
               @click="selectAttribute(element)">
               {{element.Name}}
             </v-chip>
@@ -42,10 +56,26 @@
             <v-chip v-for="element in races"
               :key="keyid + element.Id" 
               :class="{m5px:true, bg2:filterData.race === element.Id, colorWhite:filterData.race === element.Id}"
-              :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster') || (currentSubType && !currentSubType.Parent.includes('Monster'))"
+              :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster')"
               @click="selectRace(element)">
               {{element.Name}}
             </v-chip>
+          </td>
+        </tr>
+        <tr>
+          <td><div class="m5px" style="margin-top:-20px !important">Niveau </div></td>
+          <td class="flex">
+            <v-slider :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster')"
+              :min="1" 
+              :max="Math.min(12,filterData.levelmax)" 
+              v-model="filterData.levelmin">
+            </v-slider>
+            <v-chip class="bg2 colorWhite">{{filterData.levelmin}} - {{filterData.levelmax}}</v-chip>
+            <v-slider :disabled="!filterData.type || (filterData.type && filterData.type !== 'Monster')"
+              :min="Math.max(1,filterData.levelmin)" 
+              :max="12" 
+              v-model="filterData.levelmax">
+            </v-slider>
           </td>
         </tr>
         <tr>
@@ -60,10 +90,22 @@
             </v-chip>
           </td>
         </tr>
-        <tr v-if="false">
-          <td><div class="m5px">Texte dans l'effet </div></td>
+        <tr>
+          <td><div class="m5px">Tri des cartes</div></td>
           <td>
-            <v-text-field disabled v-model='searchEffect' label="Texte dans l'effet (en anglais)"></v-text-field>
+            <v-chip v-for="element in sorts"
+              :key="keyid + element.Id" 
+              :class="{m5px:true, 
+                bg2:filterData.sort.includes(element.Id),
+                colorWhite:filterData.sort.includes(element.Id)
+              }"
+              @click="selectSort(element)">
+              <v-icon v-if="filterData.sort.includes('>' +element.Id)" color="white">mdi-sort-ascending</v-icon> 
+              <v-icon v-else-if="filterData.sort.includes('<' +element.Id)" color="blue">mdi-sort-descending</v-icon> 
+              <v-icon v-else>mdi-sort-variant-off</v-icon>
+              {{element.Name}}
+            </v-chip>
+            {{filterData.sort}}
           </td>
         </tr>
         <tr>
@@ -85,6 +127,7 @@
           <td></td>
           <td>
             <v-btn class="m5px" @click="$emit('hide')">Annuler</v-btn>
+            <v-btn class="m5px" @click="$emit('reset')">Réinitialiser les filtres</v-btn>
             <v-btn class="m5px bg" @click="$emit('filter', getFilter())">Valider</v-btn>
           </td>
         </tr>
@@ -154,6 +197,15 @@
           {Id:'1', Name:'Limitée'},
           {Id:'2', Name:'Semi-Limitée', Disabled:true},
           {Id:'K', Name:'Joker'},
+        ],
+        sorts : [
+          {Id:'Type', Name:'Type', Order:'1'},
+          {Id:'MonTyp', Name:'Type de Monstre', Order:'2'},
+          {Id:'Level', Name:'Niveau', Parent:'Monster', Order:'3'},
+          {Id:'Atk', Name:'ATK', Parent:'Monster', Order:'4'},
+          {Id:'Def', Name:'DEF', Parent:'Monster', Order:'5'},
+          {Id:'TcgRelease', Name:'Date', Order:'6'},
+          {Id:'IdName', Name:'Nom', Order:'7'},
         ]
     }),  
   mounted() {
@@ -161,13 +213,22 @@
     this.currentSubType= !this.filter.subType ? null : this.subTypes.find(x=> x.Id=== this.filter.subType);
   },
     methods : {
+      setShowAll(){
+          this.filterData.showAll = !this.filterData.showAll;
+          this.selectType(null);
+      },
       selectType(element){      
-        if(element.Id ==this.filterData.type){
+        if(!element || element.Id ==this.filterData.type){
           this.filterData.type = null;
+          this.currentSubType = null;
+          this.filterData.subType = null;
+          this.filterData.attribute = null;
+          this.filterData.race = null;
           return;
         }
 
         this.filterData.type = element.Id;
+        this.filterData.showAll = false;
 
         if(this.currentSubType && !this.currentSubType.Parent.includes(this.filterData.type))
         {
@@ -214,22 +275,41 @@
           this.filterData.limitation = element.Id;
         this.refreshComponent++;
       },
+      selectSort(element){
+        let array = this.filterData.sort.split(',');
+        let alreadyExist = array.map(x=> x.substring(1)).indexOf(element.Id);
+        if(alreadyExist < 0)
+          array.push('>' + element.Id);
+        else {
+          if(array[alreadyExist].startsWith('>'))
+            array[alreadyExist] = array[alreadyExist].replace('>','<');
+          else if(array[alreadyExist] === '<IdName')
+            array[alreadyExist] = array[alreadyExist].replace('<','>');
+          else
+            array = array.filter(x=> x.substring(1) !== element.Id);
+        }
+
+        let match = this.sorts
+          .map(x=> {return {...x, sort:array.find(y=> y.substring(1) === x.Id)?.substring(0,1)};})
+          .filter(x=> x.sort);
+        this.filterData.sort = match.map(x=> x.sort + x.Id).join(',');
+      },
       getFilter(){
         const isSubTypeMonster = this.filterData.type && this.filterData.type === 'Monster' && this.currentSubType;
         const isSubTypeSpellTrap = this.filterData.type && this.filterData.type !== 'Monster' && this.currentSubType;
 
-        return {
-          type : this.filterData.type ? this.filterData.type : null,
+        let result = { 
+          ...this.filterData,
           magicTrapType:isSubTypeSpellTrap ? this.filterData.subType: null,
-          monsterType : isSubTypeMonster ? this.filterData.subType : null,
-          attribute: this.filterData.attribute ? this.filterData.attribute : null,
-          race : this.filterData.race ? this.filterData.race : null,
-          searchEffect: this.searchEffect,
-          limit: this.filterData.limit,
-          limitation:this.filterData.limitation,
-          subType : this.filterData.subType,
-          imageWidth: this.filterData.imageWidth
-        }
+          monsterType : isSubTypeMonster ? this.filterData.subType : null
+        };
+
+        result.isActive =  (result.search && result.search.length > 0)
+          || (result.type && result.type.length > 0)
+          || (result.limitation && result.limitation.length > 0)
+          || result.showAll;
+
+        return result;
       },
     }
   }
