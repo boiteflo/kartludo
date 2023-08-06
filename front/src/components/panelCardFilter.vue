@@ -105,7 +105,6 @@
               <v-icon v-else>mdi-sort-variant-off</v-icon>
               {{element.Name}}
             </v-chip>
-            {{filterData.sort}}
           </td>
         </tr>
         <tr>
