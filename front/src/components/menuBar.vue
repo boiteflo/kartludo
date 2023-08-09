@@ -1,7 +1,6 @@
 <template>
 <div>
     <v-app-bar app dark color="black" >
-      {{$vuetify.breakpoint.width}}
       <div v-if="$vuetify.breakpoint.width >= 950" style="width:300px; height:60px; position:absolute; top:0px; left:90px; overflow: hhidden;">
         <img style="width:150px;   object-fit: cover; object-position: 0px -0px;" :src="require('../assets/header.png')"/>
       </div>
