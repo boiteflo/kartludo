@@ -261,7 +261,7 @@ let md5 = require('md5');
             searchEffect: null,
             limit: 50,
             length:0,
-            imageWidth: 150,
+            imageWidth: 60,
             sort:'<Type,<MonTyp,>Level,<IdName',
             showAll : false,
             isActive:false

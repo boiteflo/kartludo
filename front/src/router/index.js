@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.1.5';
+let version = 'V2.2.0';
 
 Vue.use(VueRouter)
 
@@ -49,6 +49,12 @@ const routes = [
         name: version + ' MDOS Duel',
         component: () =>
             import ('../pages/pageDuel.vue')
+    },
+    {
+        path: '/tool',
+        name: version + ' MDOS Outils',
+        component: () =>
+            import ('../pages/pageTool.vue')
     },
     {
         path: '/boosters',

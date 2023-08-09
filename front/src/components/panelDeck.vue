@@ -85,7 +85,7 @@
             <v-icon>mdi-content-duplicate</v-icon>
             Dupliquer ce deck
           </v-btn>
-          <div class="flex">
+          <div class="flex" style="align-items:flex-start;">
             <div class="bg2" style="flex-basis: 0; flex-grow:1">
               <card-image v-if="cardHover" 
                   :card="cardHover"

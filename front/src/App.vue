@@ -1,46 +1,47 @@
 
 <template>
   <v-app>
-    <v-main>
-      <div class="bg w100p h100p" v-if="!store.formatSelected">
-        CHARGEMENT EN COURS
-      </div>
-      <div v-else >
-        <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
-        <div v-else>
-          <menuBar :filteractive="filter.isActive"
-            v-on:search="search" 
-            v-on:filter="showOrHideFilter">
-          </menuBar>
+    <menuBar :filteractive="filter.isActive"
+        :version="version"
+        @search="search" 
+        @filter="showOrHideFilter"
+        @format="selectFormat">
+      </menuBar>
 
-          <v-dialog v-model="showFilter">
-            <panel-card-filter v-if="showFilter" 
-              :keyid="'home'" 
-              :filter="filter" 
-              v-on:hide="showOrHideFilter" 
-              v-on:filter="defineFilter"
-              v-on:reset="resetFilter">
-            </panel-card-filter>
-          </v-dialog> 
+        <div class="bg w100p h100p" v-if=" !store.formatSelected">
+          CHARGEMENT EN COURS
+        </div>
+        <div v-else >
+          <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
+          <div v-else>
 
-          <div v-if="selectedCards && selectedCards.length > 0" class="bg2">
-            <panel-cards   :cards="selectedCards.slice(0,filter.limit)"  tooltip="text" :size="filter.imageWidth">
-            </panel-cards>
-            <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>
-          </div>
+            <v-dialog v-model="showFilter">
+              <panel-card-filter v-if="showFilter" 
+                :keyid="'home'" 
+                :filter="filter" 
+                v-on:hide="showOrHideFilter" 
+                v-on:filter="defineFilter"
+                v-on:reset="resetFilter">
+              </panel-card-filter>
+            </v-dialog>             
+            
+            <div v-if="selectedCards && selectedCards.length > 0" class="bg2">
+              <panel-cards   :cards="selectedCards.slice(0,filter.limit)"  tooltip="text" :size="filter.imageWidth">
+              </panel-cards>
+              <v-chip class="bg w100p m5px">Cartes Affichées : {{Math.min(filter.limit,filter.length)}} / {{filter.length}}</v-chip>
+            </div>
 
-          <router-view>
-          </router-view>
+            <router-view>
+            </router-view>
 
-          <div v-if="store.animatedImage">
-            <transition :name="store.animatedImage.Animation" appear>
-              <img :src="store.animatedImage.Image" 
-                :style="{width: store.animatedImage.Width + 'px', position: 'absolute', top: store.animatedImage.Y +'px', left: store.animatedImage.X+'px', 'z-index':2}">
-            </transition>
+            <div v-if="store.animatedImage">
+              <transition :name="store.animatedImage.Animation" appear>
+                <img :src="store.animatedImage.Image" 
+                  :style="{width: store.animatedImage.Width + 'px', position: 'absolute', top: store.animatedImage.Y +'px', left: store.animatedImage.X+'px', 'z-index':2}">
+              </transition>
+            </div>
           </div>
         </div>
-      </div>
-    </v-main>
   </v-app>
 </template>
 
@@ -68,12 +69,13 @@ export default {
   },
 
   data: () => ({
+    version:'',
     store: store,
     selectedCards: [],
     konamiCode : false,
     animatedCard: null,
     showFilter:false,
-    filter: null,
+    filter: {},
     filterInit: {
       search: '',
       type : null,
@@ -89,10 +91,11 @@ export default {
       sort:'<Type,<MonTyp,>Level,<IdName',
       showAll : false,
       isActive:false
-    }
+    },
   }),
   
   mounted() {
+    this.version = this.$version;
     this.filter = {... this.filterInit};
     new Konami(() => this.konamiCode=true);
     forkJoin([
@@ -106,6 +109,11 @@ export default {
     });
   },
   methods: {
+    selectFormat(format){
+      let result = ServiceFormat.setFormat(format, store.cards);
+      store.format = result.format;
+      store.cards = result.cards;
+    },
     refreshSearch(){
       this.selectedCards = ServiceMain.filterCard(store.cards, store.formatSelected, this.filter);
       window.scrollTo(0, 0);

@@ -1,24 +1,26 @@
 <template>
-  <div>
-    <v-app-bar
-      app
-      color="#212A3C"
-      dark
-    >
+<div>
+    <v-app-bar app dark color="black" >
+      <div style="width:300px; height:60px; position:absolute; top:0px; left:90px; height:10px; overflow: hhidden;">
+        <img style="width:150px;   object-fit: cover; object-position: 0px -0px;" :src="require('../assets/header.png')"/>
+      </div>
+      <v-app-bar-nav-icon variant="text" @click="showDrawer=true"></v-app-bar-nav-icon>
       <router-link to="/">
         <v-btn
           target="_blank"
+          style="position:relative"
           text
-          @click="unselect"
+          @click="unselect()"
         >
-          <v-icon>mdi-cards</v-icon>
-          <h3>MD - OLD SCHOOL</h3>
+          <h3 style="position:absolute; top:-15px; letter-spacing:5px">MDOS</h3>
+          <span style="position:absolute; top:5px; left:-17px; font-size:10px">{{version}}</span>
         </v-btn>
       </router-link>
 
       <v-spacer></v-spacer>
+      
       <template v-if="$vuetify.breakpoint.width >= 800">
-        <v-btn class="bg s32 m5px" @click="$emit('filter')" style="min-width:32px">
+        <v-btn class="bg2 s32 m5px" @click="$emit('filter')" style="min-width:32px">
           <v-icon :style="{color: filteractive ? 'red' : 'white'}"> mdi-filter</v-icon>
         </v-btn>
         <v-text-field class="flex-grow"
@@ -33,31 +35,21 @@
           item-text="Title"
           hide-details
           style="margin: 0px 5px 0px 5px; width:100px;"
-          @input="selectFormat">
+          @input="$emit('format')">
         </v-combobox>
       </template>
-
-      <router-link to="/decks">
-        <v-btn
-          target="_blank"
-          text
-          @click="unselect"
-        >
-          <v-icon>mdi-cards-outline</v-icon>
-          <span class="mr-2">Decks</span>
-        </v-btn>
-      </router-link>
       
-      <a href="https://discord.gg/zouloux">
-        <v-btn
-          target=""
-          text
-        >
-          <v-icon>mdi-chat</v-icon>
-          <span class="mr-2">Discord</span>
-        </v-btn>
-      </a>
+      <link-button v-for="link in links" 
+        :key="'menuBarr' +link.Text" 
+        :url="link.Url" 
+        :external="link.external" 
+        :text="$vuetify.breakpoint.width >= 950 ? link.Text : ''" 
+        :icon="link.Icon"
+        @click="unselect()">
+      </link-button>
+
     </v-app-bar>
+
     <template v-if="$vuetify.breakpoint.width < 800"> 
       <v-combobox class="flex-grow m5px"
         v-model="store.formatSelected" 
@@ -79,29 +71,55 @@
         </v-text-field>
       </div>
     </template>
-  </div>
+
+      <v-navigation-drawer v-model="showDrawer" absolute temporary>
+        <br>
+        <router-link to="/">
+          <v-btn
+            target="_blank"
+            text
+            @click="unselect()"
+          >
+            <v-icon>mdi-cards</v-icon>
+            <h3>MD - OLD SCHOOL</h3>
+          </v-btn>
+        </router-link>
+          <link-button v-for="link in links" 
+            :key="'navigationDrawer' +link.Text" 
+            :url="link.Url" 
+            :external="link.external" 
+            :text="link.Text" 
+            :icon="link.Icon"
+            class="m5px w100p"
+            @click="unselect()">
+          </link-button>
+      </v-navigation-drawer>
+</div>
 </template>
 
 <script>
 import { store } from '../data/store.js'
-import ServiceFormat from '../services/serviceFormat'
+
+import linkButton from './linkButton';
 
   export default {
     name: 'menuBar',
-    props: ['filteractive'],
+    components : {linkButton},
+    props: ['filteractive', 'version'],
     data: () => ({
         store : store,
         searchString: '',
+        showDrawer: false,
+        links : [
+          {Text: 'Decks', Icon: 'mdi-cards-outline', Url:'/decks'},
+          {Text: 'Outils', Icon: 'mdi-hammer-wrench', Url:'/tool'},
+          {Text: 'Discord', Icon: 'mdi-chat', Url:'https://discord.gg/zouloux', External:true},
+        ]
     }),
     methods:{
       unselect(){
         this.searchString = '';
         this.$emit('search', '');
-      },
-      selectFormat(format){
-        let result = ServiceFormat.setFormat(format, store.cards);
-        store.format = result.format;
-        store.cards = result.cards;
       }
     }
   }
