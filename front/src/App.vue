@@ -7,6 +7,7 @@
         @filter="showOrHideFilter"
         @format="selectFormat">
       </menuBar>
+      <div class="bg" style="height:60px;"></div>
 
         <div class="bg w100p h100p" v-if=" !store.formatSelected">
           CHARGEMENT EN COURS

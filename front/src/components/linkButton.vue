@@ -7,8 +7,8 @@
             target=""
             @click="$emit('click')"
             >
-            <v-icon v-if="icon">{{icon}}</v-icon>
-            <span class="mr-2">{{text}}</span>
+            <v-icon class="colorWhite" v-if="icon">{{icon}}</v-icon>
+            <span class="mr-2 colorWhite">{{text}}</span>
             </v-btn>
         </a> 
 
@@ -18,8 +18,8 @@
             text
             @click="$emit('click')"
             >
-            <v-icon v-if="icon">{{icon}}</v-icon>
-            <span class="mr-2">{{text}}</span>
+            <v-icon class="colorWhite" v-if="icon">{{icon}}</v-icon>
+            <span class="mr-2 colorWhite" >{{text}}</span>
             </v-btn>
         </router-link>
     </div>

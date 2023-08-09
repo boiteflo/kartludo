@@ -72,18 +72,20 @@
       </div>
     </template>
 
-      <v-navigation-drawer v-model="showDrawer" absolute temporary>
+      <v-navigation-drawer v-model="showDrawer" absolute temporary
+        :src="require('../assets/menu.png')">
         <br>
-        <router-link to="/">
-          <v-btn
-            target="_blank"
-            text
-            @click="unselect()"
-          >
-            <v-icon>mdi-cards</v-icon>
-            <h3>MD - OLD SCHOOL</h3>
-          </v-btn>
-        </router-link>
+        <div>
+          <router-link to="/">
+            <v-btn
+              target="_blank"
+              text
+              @click="unselect()"
+            >
+              <v-icon class="colorWhite">mdi-cards</v-icon>
+              <h3 class="colorWhite">MD - OLD SCHOOL</h3>
+            </v-btn>
+          </router-link>
           <link-button v-for="link in links" 
             :key="'navigationDrawer' +link.Text" 
             :url="link.Url" 
@@ -93,6 +95,7 @@
             class="m5px w100p"
             @click="unselect()">
           </link-button>
+        </div>
       </v-navigation-drawer>
 </div>
 </template>
