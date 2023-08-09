@@ -1,9 +1,6 @@
 <template>
 <div>
     <v-app-bar app dark color="black" >
-      <div v-if="$vuetify.breakpoint.width >= 950" style="width:300px; height:60px; position:absolute; top:0px; left:90px; overflow: hhidden;">
-        <img style="width:150px;   object-fit: cover; object-position: 0px -0px;" :src="require('../assets/header.png')"/>
-      </div>
       <div style="width:300px; position:absolute; bottom:0px; top:0px; left:90px; overflow: hidden;">
         <img :style="{width:$vuetify.breakpoint.width >= 950 ? 150 + 'px' :130 + 'px', 'object-fit': 'cover'}" :src="require('../assets/header.png')"/>
       </div>
@@ -46,7 +43,7 @@
         :key="'menuBarr' +link.Text" 
         :url="link.Url" 
         :external="link.external" 
-        :text="$vuetify.breakpoint.width >= 950 ? link.Text : ''" 
+        :text="$vuetify.breakpoint.width >= 1050 ? link.Text : ''" 
         :icon="link.Icon"
         @click="unselect()">
       </link-button>
@@ -119,6 +116,7 @@ import linkButton from './linkButton';
         showDrawer: false,
         links : [
           {Text: 'Decks', Icon: 'mdi-cards-outline', Url:'/decks'},
+          {Text: 'Cubes', Icon: 'mdi-cube', Url:'/cubes'},
           {Text: 'Outils', Icon: 'mdi-hammer-wrench', Url:'/tool'},
           {Text: 'Discord', Icon: 'mdi-chat', Url:'https://discord.gg/zouloux', External:true},
         ]
