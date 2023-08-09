@@ -17,9 +17,7 @@
         <h2>Liens utiles</h2>
         <div class="p5px bg">
           <p class="m5px">Le lien ci-dessous vont conduit sur un site dédié à Yu-Gi-Oh!. Depuis cette page, on peux retrouver la liste de toutes les cartes qui ont un effet spécifique, ensuite on peux utiliser l'outil ci-dessus pour savoir si oui ou non elles font parties du format MDOS. Par exemple : "Changes battle positions", dans cette liste, on va retrouver des cartes comme "Destiny HERO - Dasher" ou "Guardian Sphinx".</p>
-          <a href="https://yugioh.fandom.com/wiki/Category:Cards_by_effect_properties">
-              Lien vers yugioh.fandom.com
-            </a>
+          <a class="m5px" href="https://yugioh.fandom.com/wiki/Category:Cards_by_effect_properties"> Lien vers yugioh.fandom.com </a>
           <p class="m5px">La procédure a suivre est simple, on va sur la page wiki, on suit un lien vers une catégorie d'effet, on copie le contenu des tableaux dans un tableur (Libre Office par exemple), puis on copie la colonne A du tableur que l'on colle dans le champ ci-dessus. Ne reste plus qu'a appuyer sur le bouton : "Chercher dans les cartes MDOS" et voila...</p>
           <p class="m5px">Remarque : Pour certaines catégories d'effet, il y a tellement de carte que le contenu des tableaux est tronqué. Pour cela il faut cliquer sur "... further results (xxx more)" puis dans la nouvelle page, on peux sélectionner le bouton blanc : 500 afin qu'il affiche 500 elements. Ensuite, on utilise le bouton "Previous" afin qu'il affiche les résultats de 1 à 500. Enfin on peux appuyer sur le bouton CSV afin d'obtenir le tableur.</p>
           

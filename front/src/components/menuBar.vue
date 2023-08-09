@@ -1,8 +1,12 @@
 <template>
 <div>
     <v-app-bar app dark color="black" >
-      <div style="width:300px; height:60px; position:absolute; top:0px; left:90px; height:10px; overflow: hhidden;">
+      {{$vuetify.breakpoint.width}}
+      <div v-if="$vuetify.breakpoint.width >= 950" style="width:300px; height:60px; position:absolute; top:0px; left:90px; overflow: hhidden;">
         <img style="width:150px;   object-fit: cover; object-position: 0px -0px;" :src="require('../assets/header.png')"/>
+      </div>
+      <div style="width:300px; position:absolute; bottom:0px; top:0px; left:90px; overflow: hidden;">
+        <img :style="{width:$vuetify.breakpoint.width >= 950 ? 150 + 'px' :130 + 'px', 'object-fit': 'cover'}" :src="require('../assets/header.png')"/>
       </div>
       <v-app-bar-nav-icon variant="text" @click="showDrawer=true"></v-app-bar-nav-icon>
       <router-link to="/">
@@ -72,8 +76,9 @@
       </div>
     </template>
 
-      <v-navigation-drawer v-model="showDrawer" absolute temporary
-        :src="require('../assets/menu.png')">
+      <v-navigation-drawer v-model="showDrawer" absolute temporary color="black">
+        
+        <img style="width:400px; height:600px; object-position: -100px 00px; object-fit:cover; position:absolute;" :src="require('../assets/menu.png')"/>
         <br>
         <div>
           <router-link to="/">
