@@ -1,10 +1,10 @@
 <template>
     <div>
         <h1>CHERCHER UNE CARTE</h1>
-        <h2>PAR LISTE DE NOMS</h2>
-        <p class="bg p5px">Parfois il peut être utile de vérifier si des cartes existent ou non dans le format MDOS. Pour cela, il vous suffit de renseigner le nom (en anglais) des cartes dans le champ ci-dessous séparées par un retour a la ligne.</p>
+        <h2>PAR LISTE DE NOM</h2>
+        <p class="bg p5px">Parfois il peut être utile de vérifier si des cartes existent ou non dans le format MDOS. Pour cela, il vous suffit de renseigner le nom (en anglais) des cartes dans le champ ci-dessous séparés par un retour a la ligne.</p>
         <v-textarea v-model="text" class="m5px" />
-        <div class="flex flex-center">
+        <div class="flex flex-center flex-wrap">
           <v-btn :class="{m5px:true, bg:lastCall==='mdos'}" @click="searchCards(store.cards, 'mdos')">Chercher dans les cartes MDOS</v-btn>
           <v-btn :class="{m5px:true, bg:lastCall==='ygo'}" @click="searchCards(allCards, 'ygo')">Chercher dans toutes les cartes YGO</v-btn>
         </div>

@@ -247,6 +247,7 @@
 
 .bg2 {
     background: #374C5F !important;
+    color:white !important
 }
 
 .bgRed {
@@ -335,6 +336,9 @@ h2 {
   .colorWhite{
     color:white !important;
   }
+
+  .absolute{position:absolute}
+  .relative{position:relative}
 
   
 .slideToLeft-enter-active {transition: .3s;}

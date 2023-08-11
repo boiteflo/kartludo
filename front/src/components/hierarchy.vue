@@ -1,5 +1,5 @@
 <template>
-    <div class="flex bg p5px">  
+    <div class="flex flex-wrap bg p5px">  
         <div v-for="(item,i) in items" :key="item.Id"> 
             <v-btn class="m5px bg2" @click="$emit('select', item)">
               <h3 style="color:white">{{item.Text}}</h3>

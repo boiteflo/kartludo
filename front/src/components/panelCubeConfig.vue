@@ -89,6 +89,9 @@
                             v-model="deck.Author">
                 </v-text-field>
             </div>
+            <v-alert type="info" class="m5px w100p" style="background: #212A3C !important">
+              Deck: {{deck.DeckLength}}, Monstres: {{deck.MonsterLength}}, Magies: {{deck.SpellLength}}, Pièges: {{deck.TrapLength}}, Extra: {{deck.ExtraLength}}
+            </v-alert>
             <div class="flex flex-responsive">
                 <panel-deck-cards class="bg2 flex-grow" 
                     :cards="deck.DeckListCards"  
@@ -154,7 +157,7 @@ import panelDeckCards from './panelDeckCards';
         cubesOpened: [],
         cubesOpenedIds: [],
         cubeBoosters: null,
-        deck: {},
+        deck: {DeckLength:0, MonsterLength:0, SpellLength:0, TrapLength:0, ExtraLength:0},
         deckCardsIds: [],
         showOptions: false,
         refreshCards:0,
@@ -202,7 +205,7 @@ import panelDeckCards from './panelDeckCards';
                 return;
             }
 
-            let alreadyExistCard = this.deck.DeckListCards.find(x=> x.IdName === card.IdName);
+            let alreadyExistCard = this.deck.DeckListCards.find(x=> x.Card.IdName === card.IdName);
             if(alreadyExistCard && alreadyExistCard.Quantity === "3"){
                 alert("Cette carte existe déjà en trois exemplaire dans le deck.");
                 return;
@@ -294,6 +297,7 @@ import panelDeckCards from './panelDeckCards';
         },
         refreshCardsDeck(){
             this.deck.DeckListCards =  ServiceDeck.sort(this.deck.DeckListCards);
+            this.deckObj.Errors = ServiceDeck.getErrors(this.deck, this.deck.DeckListCards);
             this.refreshCards++;
         },
         showCard(card){

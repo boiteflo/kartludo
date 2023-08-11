@@ -73,10 +73,43 @@
               </icon-theme>
             </div>
           </div>
+
+          <!-- Search Deck -->
+          <div v-else-if="searchDeck">
+            <h1>
+              Chercher un deck
+              <v-btn class="bg2 s40 m5px" @click="setSearchDeck(false)">
+                <v-icon > mdi-cancel</v-icon> Arreter la recherche
+              </v-btn>
+            </h1>
+            <div class="p5px flex flex-wrap">
+              <v-combobox class="m5px" 
+                v-model="deckAuthor"
+                :items="deckAuthors"
+                hide-details
+                label="Auteur"
+                @input="refreshSearchDeck()">
+              </v-combobox>
+            </div>
+            <combo-card @change="setDeckCardsIncluded">
+            </combo-card>
+            <div class="flex-wrap flex-space-around p5px bg2">
+              <div v-for="deck in deckFiltered" v-bind:key="'filteredDeck' + deck.Id" style="position:relative">
+                <iconDeck :deck="deck" v-on:select="selectDeck(deck)">
+                </iconDeck>
+              </div>
+            </div>
+          </div>
           
           <!-- Classement -->
-          <div v-else :key="refreshRanks">
-            <h1>Le classement des decks</h1>
+          <div v-else :key="refreshRanks" class="relative">
+            <h1>
+              Le classement des decks
+              <v-btn class="bg2 s40 m5px" @click="setSearchDeck(true)">
+                <v-icon > mdi-magnify</v-icon> Rechercher
+              </v-btn>
+            </h1>
+
             <div class="flex-wrap flex-space-around p5px bg2">
               <icon-theme v-for="rank in ranks" 
                 v-bind:key="rank.Id" 
@@ -132,6 +165,7 @@
 <script>
 import { forkJoin } from 'rxjs';
 import helperString from '../helpers/helperString'
+import helperArray from '../helpers/helperArray'
 import ServiceBack from '../services/serviceBack'
 
 import { store } from '../data/store.js'
@@ -139,10 +173,11 @@ import hierarchy from '../components/hierarchy';
 import panelDeck from '../components/panelDeck';
 import iconTheme from '../components/iconTheme';
 import iconDeck from '../components/iconDeck';
+import comboCard from '../components/comboCard';
 
 export default {
   name: 'pageDecks',
-  components: {iconTheme, iconDeck, panelDeck, hierarchy},
+  components: {iconTheme, iconDeck, panelDeck, hierarchy, comboCard},
   data: () => ({
     loading:true,
     store: store,
@@ -156,6 +191,13 @@ export default {
     rankDecks: [],
     themeDecks: [],
     currentThemeDecks : null,
+
+    searchDeck:false,
+    deckAuthor:'',
+    deckCardSearch:'',
+    deckCardsIncluded:[],
+    deckFiltered : [],
+    deckAuthors: [],
 
     hierarchyArray: [{Id:0, Text:'Classement et Tournois'}],
     refreshRanks: 0,
@@ -191,6 +233,8 @@ export default {
         this.decks = results[2];
         this.decksCube = this.decks.filter(x=> x.Rank === '5');
         this.decks = this.decks.filter(x=> x.Rank !== '5');
+        this.deckFiltered = [].concat(this.decks);
+        this.deckAuthors = [...new Set(this.decks.filter(x=> x.Author).map(x=> x.Author).sort())];
         this.tournaments = results[3];
         this.linkThemeWithDecks();
       });   
@@ -228,6 +272,7 @@ export default {
       if(item.Id === 0) this.showTournament(null);
       if(item.Id === 0) this.selectCubeMode=false;
       if(item.Id === 1) this.showTheme(null);
+      if(item.Id === 0) this.setSearchDeck(false);
     },
     showCubes(){
       this.selectCubeMode=true;
@@ -295,6 +340,30 @@ export default {
     duplicate(deck){
       ServiceBack.insert('deck/duplicate', deck)
         .then(res=> window.location.href = '/deck/id=' + res.data);
+    },
+
+    setSearchDeck(value){
+      this.searchDeck = value;
+    },
+    setDeckCardsIncluded(cards){
+      this.deckCardsIncluded = cards.map(x=> x.IdName);
+      this.refreshSearchDeck();
+    },
+    refreshSearchDeck(){
+        let result = [].concat(this.decks);
+
+        if(this.deckAuthor && this.deckAuthor.length > 0)
+          result = result.filter(x=> x.Author && x.Author.toLowerCase().includes(this.deckAuthor.toLowerCase()))
+
+        if(this.deckCardsIncluded && this.deckCardsIncluded.length > 0){
+          result = result.filter(deck=> {
+            let deckList = helperString.replaceAll(deck.DeckList, 'x2', '').split(',').map(x=> helperString.cleanup(x));
+            let matchs = helperArray.getMatch(deckList, this.deckCardsIncluded );
+            return matchs.length === this.deckCardsIncluded.length; 
+          });
+        }
+        
+        this.deckFiltered = result;
     }
   }
 };

@@ -3058,5 +3058,21 @@
 		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a52307_w420.webp",
 		"DeckLength": 41,
 		"Errors": null
+	},
+	{
+		"Id": "7b92ab73-5117-4fbb-9913-eecceac9ea1c",
+		"Format": "Cube LOB",
+		"Rank": "5",
+		"Title": "tet",
+		"IsDraft": true,
+		"Date": "09/08/2023",
+		"Author": "flo",
+		"MainCard": "Succubus Knight",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53831_w420.webp",
+		"Themes": "cube",
+		"DeckList": "Steel Ogre Grotto #1 x3, Succubus Knight, Spike Seadra, Misairuzame, Sand Stone, Tripwire Beast, Witty Phantom, Fiend Reflection #2, Lesser Dragon x2, Hitotsu-Me Giant, Uraby, Turtle Tiger, Trial of Nightmare, Fireyarou, Monster Egg x3, Dissolverock, Root Water x3, Ray & Temperature x2, Dark King of the Abyss, Kurama x2, Hard Armor, Larvas, Drooling Lizard, M-Warrior #1, Two-Mouth Darkruler, M-Warrior #2, King Fog, Basic Insect, Hinotama Soul, Firegrass, Skull Servant, Red Medicine x2, Fissure x3, Yami x2, Pot of Greed x2, Hinotama, Remove Trap x2, Wasteland, Forest, Flower Wolf, Darkfire Dragon",
+		"DeckLength": 54,
+		"Seed": "638271934355140000",
+		"Cube": "LOB&seed=638271934355140000"
 	}
 ]
