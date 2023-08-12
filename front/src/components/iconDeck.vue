@@ -23,7 +23,7 @@
                {{formatInt(deck.SR,2)}}SR
             </div>
             <div style="background:#673AB7; color:white; font-weight:bold; width:30px; height:15px; font-size:10px; text-align:center; font-style:bold">
-              {{formatInt(deck.SR,2)}}UR
+              {{formatInt(deck.UR,2)}}UR
             </div>
         </div>   
     </div>
