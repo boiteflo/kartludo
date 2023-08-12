@@ -30,6 +30,14 @@ class helperString {
           else
               return str.substring(0);
       }
+
+      static formatInt(number, targetLength) {
+        var output = number + '';
+        while (output.length < targetLength) {
+            output = '0' + output;
+        }
+        return output;
+    }
   }
  
   module.exports = helperString;

@@ -50,6 +50,8 @@ class managerDeck {
             .filter(x=> cardsIdName.includes(x.Card.IdName))
             .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
             .join(', ');
+        
+        this.rarityCount(deck, deckCards);
 
         let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
         
@@ -68,7 +70,10 @@ class managerDeck {
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-			Seed: deck.Seed
+			Seed: deck.Seed,
+            R : deck.R,
+            SR : deck.SR,
+            UR : deck.UR,
         };
         
         if(deck.Seed && deck.Seed.length > 0)
@@ -97,6 +102,8 @@ class managerDeck {
             .filter(x=> cardsIdName.includes(x.Card.IdName))
             .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
             .join(', ');
+        
+        this.rarityCount(deck, deckCards);
 
         let mainCardImage = cards.find(x=> x.IdName === deck.MainCard?.cleanup())?.ImageMDM;
         deck = {
@@ -114,7 +121,10 @@ class managerDeck {
 			DeckList: deckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-			Seed: deck.Seed
+			Seed: deck.Seed,
+            R : deck.R,
+            SR : deck.SR,
+            UR : deck.UR,
         };
         
         if(deck.Seed && deck.Seed.length > 0)
@@ -147,7 +157,10 @@ class managerDeck {
 			DeckList: deck.DeckList,
 			DeckLength: deck.DeckLength,
 			Errors: deck.Errors,
-            Seed : deck.Seed
+            Seed : deck.Seed,
+            R : deck.R,
+            SR : deck.SR,
+            UR : deck.UR,
         };
 
         this.saveDeck(deck, '');
@@ -271,6 +284,8 @@ class managerDeck {
                     deckCards.push({Card: card, Quantity: quantity});
             }
 
+            this.rarityCount(deck, deckCards);
+
             deckCards = this.sort(deckCards);
             deck.DeckList = deckCards
                 .map(x=> x.Card.NameEn + (x.Quantity === '2' ? ' x2' : '') + (x.Quantity === '3' ? ' x3' : ''))
@@ -292,6 +307,25 @@ class managerDeck {
         } 
 
         return decks;
+    }
+
+    static rarityCount(deck, deckCards){
+        deck.N = deckCards
+                .filter(x=> x.Card.Rarity==='N')
+                .map(x=> parseInt(x.Quantity))
+                .reduce((partialSum, a) => partialSum + a, 0);
+        deck.R = deckCards
+                .filter(x=> x.Card.Rarity==='R')
+                .map(x=> parseInt(x.Quantity))
+                .reduce((partialSum, a) => partialSum + a, 0);
+        deck.SR = deckCards
+            .filter(x=> x.Card.Rarity==='SR')
+            .map(x=> parseInt(x.Quantity))
+            .reduce((partialSum, a) => partialSum + a, 0);
+        deck.UR = deckCards
+            .filter(x=> x.Card.Rarity==='UR')
+            .map(x=> parseInt(x.Quantity))
+            .reduce((partialSum, a) => partialSum + a, 0);
     }
 
     static sort(deckCards)

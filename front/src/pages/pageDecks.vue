@@ -75,7 +75,7 @@
           </div>
 
           <!-- Search Deck -->
-          <div v-else-if="searchDeck">
+          <div v-else-if="searchDeck" :key="refreshFilteredDecks">
             <h1>
               Chercher un deck
               <v-btn class="bg2 s40 m5px" @click="setSearchDeck(false)">
@@ -93,9 +93,16 @@
             </div>
             <combo-card @change="setDeckCardsIncluded">
             </combo-card>
+            <v-btn class="m5px" 
+              @click="sortRarety()"
+              :class="{'bg2':sortByRarity}">
+              Trier par rareté
+            </v-btn>
             <div class="flex-wrap flex-space-around p5px bg2">
               <div v-for="deck in deckFiltered" v-bind:key="'filteredDeck' + deck.Id" style="position:relative">
-                <iconDeck :deck="deck" v-on:select="selectDeck(deck)">
+                <iconDeck :deck="deck" 
+                  v-on:select="selectDeck(deck)" 
+                  :rarity="sortByRarity">
                 </iconDeck>
               </div>
             </div>
@@ -192,6 +199,8 @@ export default {
     decksCube: null,
     themeDecks: [],
     currentThemeDecks : null,
+    refreshFilteredDecks: true,
+    sortByRarity:false,
 
     searchDeck:false,
     deckAuthor:'',
@@ -257,6 +266,14 @@ export default {
         let theme = this.themeSelected;
         if(this.rankSelected) this.selectRank(this.rankSelected);
         if(theme) this.showTheme(theme);
+    },
+    sortRarety(){
+      this.sortByRarity=this.sortByRarity ? false : true;
+      if(this.sortByRarity)
+        this.deckFiltered =helperArray.sortByProperties(this.deckFiltered, '<UR,<SR,<R');
+      else
+        this.deckFiltered =helperArray.sortByProperties(this.deckFiltered, '<Title');
+      this.refreshFilteredDecks++;
     },
     linkThemeWithDecks(){
       if(!this.themes || !this.decks || !this.ranks)

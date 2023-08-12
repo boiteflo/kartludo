@@ -113,6 +113,25 @@ class ServiceDeck {
 
         return errors.length < 1 ? null : errors.join('. ');
     }
+
+    static getCards(deckList, cards){
+        let result = [];
+        let deckListName = deckList.split(',');
+        for(let cardIndex =0 ; cardIndex< deckListName.length; cardIndex++)
+        {
+            const cardNameEn = deckListName[cardIndex];
+            let quantity = helperString.includesX3(cardNameEn) ? '3' 
+                : helperString.includesX2(cardNameEn) ? '2' : '1';
+            let cardIdName = helperString.removeX3(
+                             helperString.removeX2(
+                             helperString.cleanup(cardNameEn)));
+            const card = cards.find(x=> x.IdName === cardIdName);
+            if(card)
+                result.push({Order:cardIndex, Quantity: quantity, Card: card});
+        }
+
+        return result;
+    }
 }
 
 
