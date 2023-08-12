@@ -31,7 +31,11 @@
     <div v-else class="bgWhite">
     
         <v-dialog v-model="showFilter">
-            <panel-card-filter v-if="showFilter" :filter="filter" v-on:hide="showOrHideFilter" v-on:filter="defineFilter">
+            <panel-card-filter v-if="showFilter" 
+                :filter="filter" 
+                v-on:hide="showOrHideFilter" 
+                v-on:filter="defineFilter"
+                v-on:reset="resetFilter">
             </panel-card-filter>
         </v-dialog> 
 
@@ -300,7 +304,8 @@ let md5 = require('md5');
             this.refreshSearch();
         },
         resetFilter(){
-            this.filter = {...this.filterInit}
+            this.filter = {...this.filterInit};
+            this.showFilter=false;
             this.refreshSearch();
         },
         showOrHideFilter(){
