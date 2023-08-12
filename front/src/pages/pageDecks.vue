@@ -258,6 +258,7 @@ export default {
     refreshDecks(){  
         this.decks = this.decksAll.filter(x=> x.Format === this.store.formatSelected.Id);
         this.deckFiltered = [].concat(this.decks);
+        this.sortByRarity=false;
         this.deckAuthors = [...new Set(this.decks
           .filter(x=> x.Author)
           .map(x=> x.Author)

@@ -1,5 +1,5 @@
 <template>
-    <div class="bgWhite" :key="keyid + refreshComponent">    
+    <div class="bgWhite">    
       <table class="m5px" v-if="filterData">
         <tr>
           <td style="min-width:150px"><div class="m5px">Nom de la carte</div></td>
@@ -78,7 +78,7 @@
             </v-slider>
           </td>
         </tr>
-        <tr>
+        <tr :key="refreshLimitation">
           <td><div class="m5px">Limitation: </div></td>
           <td>
             <v-chip v-for="element in limited"
@@ -141,7 +141,7 @@
     data: () => ({
         filterData: null,
         currentSubType: null,
-        refreshComponent: 0,
+        refreshLimitation: 0,
         mainTypes : [{Id:'Monster', Name:'Monstre'},{Id:'Spell', Name:'Magie'},{Id:'Trap', Name:'Piège'}],
         subTypes : [
           {Id:'Counter', Name:'Contre', Parent:'Trap'},
@@ -272,7 +272,7 @@
           this.filterData.limitation = null;
         else
           this.filterData.limitation = element.Id;
-        this.refreshComponent++;
+        this.refreshLimitation++;
       },
       selectSort(element){
         let array = this.filterData.sort.split(',');
