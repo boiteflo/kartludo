@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.2.4';
+let version = 'V2.2.5';
 
 Vue.use(VueRouter)
 
@@ -76,7 +76,7 @@ const routes = [
     },
     {
         path: '/*',
-        name: version + 'MS Old School',
+        name: version + 'MDOS',
         component: () =>
             import ('../pages/pageHome.vue')
     },

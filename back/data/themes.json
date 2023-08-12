@@ -56,6 +56,13 @@
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53ccd_w420.webp"
 	},
 	{
+		"Id": "elfe",
+		"Title": "Elfe",
+		"CardIdName": "airknightparshath",
+		"CardNameEn": "Airknight Parshath",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513d1_w420.webp"
+	},
+	{
 		"Id": "vent",
 		"Title": "Vent",
 		"CardIdName": "harpielady1",
@@ -107,9 +114,9 @@
 	{
 		"Id": "hero",
 		"Title": "Héros",
-		"CardIdName": "elementalheroflamewingman",
-		"CardNameEn": "Elemental HERO Flame Wingman",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f83_w420.webp"
+		"CardIdName": "elementalheroneos",
+		"CardNameEn": "Elemental HERO Neos",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f9b_w420.webp"
 	},
 	{
 		"Id": "tombeau",
@@ -224,6 +231,13 @@
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a535f9_w420.webp"
 	},
 	{
+		"Id": "archdemon",
+		"Title": "Archdémon",
+		"CardIdName": "terrorkingarchfiend",
+		"CardNameEn": "Terrorking Archfiend",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a5399f_w420.webp"
+	},
+	{
 		"Id": "bani",
 		"Title": "Banissement",
 		"CardIdName": "macrocosmos",
@@ -236,13 +250,6 @@
 		"CardIdName": "batterymanindustrialstrength",
 		"CardNameEn": "Batteryman Industrial Strength",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a51659_w420.webp"
-	},
-	{
-		"Id": "elfe",
-		"Title": "Elfe",
-		"CardIdName": "airknightparshath",
-		"CardNameEn": "Airknight Parshath",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513d1_w420.webp"
 	},
 	{
 		"Id": "nuagien",
@@ -278,5 +285,54 @@
 		"CardIdName": "harpiequeen",
 		"CardNameEn": "Harpie Queen",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52598_w420.webp"
+	},
+	{
+		"Id": "ojama",
+		"Title": "Ojama",
+		"CardIdName": "ojamagreen",
+		"CardNameEn": "Ojama Green",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52f5f_w420.webp"
+	},
+	{
+		"Id": "compteur",
+		"Title": "Compteur",
+		"CardIdName": "spellpowergrasp",
+		"CardNameEn": "Spell Power Grasp",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a5370d_w420.webp"
+	},
+	{
+		"Id": "cyber",
+		"Title": "Cyber",
+		"CardIdName": "cyberdragon",
+		"CardNameEn": "Cyber Dragon",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ade_w420.webp"
+	},
+	{
+		"Id": "betegladiateur",
+		"Title": "Bête Gladiateur",
+		"CardIdName": "gladiatorbeastgaiodiaz",
+		"CardNameEn": "Gladiator Beast Gaiodiaz",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a5240f_w420.webp"
+	},
+	{
+		"Id": "amazonesse",
+		"Title": "Amazonesse",
+		"CardIdName": "amazonessswordswoman",
+		"CardNameEn": "Amazoness Swords Woman",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a51464_w420.webp"
+	},
+	{
+		"Id": "arcana",
+		"Title": "Force Arcane",
+		"CardIdName": "arcanaforcexivtemperance",
+		"CardNameEn": "Arcana Force XIV - Temperance",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a51523_w420.webp"
+	},
+	{
+		"Id": "chaos",
+		"Title": "Chaos",
+		"CardIdName": "chaossorcerer",
+		"CardNameEn": "Chaos Sorcerer",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51925_w420.webp"
 	}
 ]

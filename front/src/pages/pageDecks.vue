@@ -164,6 +164,7 @@
 
 <script>
 import { forkJoin } from 'rxjs';
+import { watch } from 'vue'
 import helperString from '../helpers/helperString'
 import helperArray from '../helpers/helperArray'
 import ServiceBack from '../services/serviceBack'
@@ -186,9 +187,9 @@ export default {
     themes: null,
     tournaments: null,
     decksObject: null,
+    decksAll: null,
     decks: null,
     decksCube: null,
-    rankDecks: [],
     themeDecks: [],
     currentThemeDecks : null,
 
@@ -229,35 +230,50 @@ export default {
             stapleTrap: results[0].find(x=> x.Id === 'stapleTrap')
         };
         this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
+        this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);   
         this.themes = results[1].concat([this.themeAll]);
-        this.decks = results[2];
-        this.decksCube = this.decks.filter(x=> x.Rank === '5');
-        this.decks = this.decks.filter(x=> x.Rank !== '5');
-        this.deckFiltered = [].concat(this.decks);
-        this.deckAuthors = [...new Set(this.decks.filter(x=> x.Author).map(x=> x.Author).sort())];
+
+        let decks= results[2];
+        this.decksCube = decks.filter(x=> x.Rank === '5');
+        this.decksAll = decks.filter(x=> x.Rank !== '5');
         this.tournaments = results[3];
+
+        this.refreshDecks();
         this.linkThemeWithDecks();
-      });   
+      });      
+      watch(store, () => { 
+          this.refreshDecks();
+      }) 
   },
   methods: {
+    refreshDecks(){  
+        this.decks = this.decksAll.filter(x=> x.Format === this.store.formatSelected.Id);
+        this.deckFiltered = [].concat(this.decks);
+        this.deckAuthors = [...new Set(this.decks
+          .filter(x=> x.Author)
+          .map(x=> x.Author)
+          .sort())];
+        this.linkThemeWithDecks();
+        let theme = this.themeSelected;
+        if(this.rankSelected) this.selectRank(this.rankSelected);
+        if(theme) this.showTheme(theme);
+    },
     linkThemeWithDecks(){
       if(!this.themes || !this.decks || !this.ranks)
-        return;
-
-      this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);      
+        return;   
 
       this.ranks.forEach(rank => {
         rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).ImageMDM;
-        let decks = this.decks.filter(x=> rank.Id==0 || x.Rank === rank.Id);
+        let deckArray = rank.CurrentFormat ? this.decks : this.decksAll;
+        let decks = deckArray.filter(x=> rank.Id==0 || x.Rank === rank.Id);
         rank.DecksLength =decks.length;
-        this.rankDecks.push({Id: rank.Id, Value:decks});
       });
 
       this.tournaments.filter(x=> !x.Actif).forEach(tournament => {
         tournament.Decks = [];
         tournament.Results.split(",").forEach(tournamendDeck => {
           let array = tournamendDeck.split(":");
-          let deck = this.decks.find(x=> x.Id === array[1]);
+          let deck = this.decksAll.find(x=> x.Id === array[1]);
           if(deck)
             tournament.Decks.push(deck);
         })
@@ -274,9 +290,13 @@ export default {
       if(item.Id === 1) this.showTheme(null);
       if(item.Id === 0) this.setSearchDeck(false);
     },
+    addToHieararchy(item){
+      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id < item.Id);
+      this.hierarchyArray.push(item);
+    },
     showCubes(){
       this.selectCubeMode=true;
-      this.hierarchyArray.push({Id:1, Text:'Format Cube'});
+      this.addToHieararchy({Id:1, Text:'Format Cube'});
     },
     selectRank(rank){
       this.rankSelected = rank;   
@@ -287,14 +307,16 @@ export default {
         return;
       }
 
-      this.hierarchyArray.push({Id:1, Text:rank.Title});
+      let deckArray = rank.CurrentFormat ? this.decks : this.decksAll;
+      let decks = deckArray.filter(x=> rank.Id==0 || x.Rank === rank.Id);
+      rank.DecksLength =decks.length;
+      this.addToHieararchy({Id:1, Text:rank.Title});
       this.themeDecks = [];
-      let rankDecks = this.rankDecks.find(x=> x.Id === rank.Id).Value;
       
       this.themes.forEach(theme => {
-        let decks = rankDecks.filter(x=> theme.Id==='tous' || helperString.replaceAll(x.Themes,' ','').split(',').includes(theme.Id));
-        theme.DecksLength = decks.length;
-        this.themeDecks.push({Id: theme.Id, Value: decks});
+        let decksTheme = decks.filter(x=> theme.Id==='tous' || helperString.replaceAll(x.Themes,' ','').split(',').includes(theme.Id));
+        theme.DecksLength = decksTheme.length;
+        this.themeDecks.push({Id: theme.Id, Value: decksTheme});
       });
       this.refreshThemes++;
 
@@ -307,7 +329,7 @@ export default {
         return;
       }
 
-      this.hierarchyArray.push({Id:2, Text:theme.Title});
+      this.addToHieararchy({Id:2, Text:theme.Title});
       this.currentThemeDecks = this.themeDecks.find(x=> x.Id === theme.Id).Value;
       window.scrollTo(0, 0);
     },
@@ -329,7 +351,7 @@ export default {
     showTournament(tournament){
       this.tournamentSelected=tournament;
       if(tournament){
-        this.hierarchyArray.push({Id:2, Text:tournament.Title});
+        this.addToHieararchy({Id:2, Text:tournament.Title});
       }
       window.scrollTo(0, 0);
     },
