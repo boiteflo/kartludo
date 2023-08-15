@@ -125,15 +125,17 @@ export default {
           cardsNotFinded.push(idName.name);
           return;
         }
-        
-        cardsFinded.push(card);
 
         if(call==='ygo-mods'){
           let mdosCard = this.store.cards.find(x=> x.IdName === idName.id);
           if(!mdosCard) {
             cardsNotMdos.push(idName.name);
           }
-        }
+          else  return;
+        }        
+
+        cardsFinded.push(card);
+        
       });
 
       this.lastCall = call;
