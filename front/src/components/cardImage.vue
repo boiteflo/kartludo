@@ -83,6 +83,7 @@
     methods: {
         copyClipboard(text) {
             navigator.clipboard.writeText(text);
+            this.$toastr.i("Le nom de cette carte (" + text + " ) a été copié dans le presse papier", "Copie de la carte");
         },
         getImgUrl(value){
             var images = require.context('../assets/', false, /\.webp$/)

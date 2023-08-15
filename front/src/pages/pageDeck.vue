@@ -4,7 +4,7 @@
           Chargement
         </div>
         <div v-else>
-          <v-alert type="warning" class="m5px" v-if="deck && deck.IdTournament">
+          <v-alert type="warning" class="m5px" v-if="deck && deck.IdTournament && deck.TournamentObject?.Actif">
               Notez bien l'url de cette page quelque part car ce deck n'est pas public. Vous ne serez plus capable d'y retourner par la suite.
           </v-alert>
 
@@ -105,6 +105,9 @@ export default {
           if(card)
               deck.DeckListCards.push({Order:cardIndex, Quantity: quantity, Card: card});
       }
+
+      if(deck.IdTournament)
+        deck.TournamentObject = this.tournaments.find(x=> x.Id === deck.IdTournament);
       
       deck.Errors = serviceDeck.getErrors(deck, deck.DeckListCards);
       this.deck = deck;

@@ -96,6 +96,8 @@ export default {
   }),
   
   mounted() {
+    // this.$toastr.s("Message", "Title");
+    
     this.version = this.$version;
     this.filter = {... this.filterInit};
     new Konami(() => this.konamiCode=true);

@@ -212,9 +212,9 @@
 	{
 		"Id": "normal",
 		"Title": "Normaux",
-		"CardIdName": "cosmoqueen",
-		"CardNameEn": "Cosmo Queen",
-		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51a32_w420.webp"
+		"CardIdName": "frostosaurus",
+		"CardNameEn": "Frostosaurus",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a52244_w420.webp"
 	},
 	{
 		"Id": "niveau",
