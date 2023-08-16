@@ -35,7 +35,7 @@
           item-text="Title"
           hide-details
           style="margin: 0px 5px 0px 5px; width:100px;"
-          @input="$emit('format')">
+          @input="$emit('format', store.formatSelected)">
         </v-combobox>
       </template>
       
@@ -57,7 +57,7 @@
         :items="store.formats" 
         item-text="Title"
         hide-details
-        @input="selectFormat">
+        @input="$emit('format', store.formatSelected)">
       </v-combobox>     
       <div class="flex">
         <v-btn class="w32" @click="$emit('filter')" style="height:50px;">

@@ -3738,5 +3738,27 @@
 		"UR": 5,
 		"DeckLength": 40,
 		"Errors": null
+	},
+	{
+		"Id": "9cb94c25-d75b-43a1-a700-8d6bb7673bd5",
+		"Format": "mdoldschoolv2",
+		"IdTournament": "",
+		"Rank": "3",
+		"Title": "Alien control ",
+		"IsDraft": false,
+		"Date": "15/08/2023",
+		"Author": "Xenos ",
+		"MainCard": "Brainwashing Beam",
+		"Themes": "alien",
+		"DeckList": "Alien Shocktrooper, Cosmic Horror Gangi'el, Alien Mother, Flying Saucer Muusik'i, Alien Hunter, Alien Hypno, Alien Kid, Alien Skull, Alien Telepath, Alien Warrior x2, Balloon Lizard, Alien Dog x2, Alien Mars, Alien Grey x2, Alien Infiltrator, Cobra Jar, Alien Psychic, Interplanetary Invader \"A\", \"A\" Cell Breeding Device, \"A\" Cell Incubator, Corruption Cell \"A\", Otherworld - The \"A\" Zone, Pot of Greed, Heavy Storm, Swords of Revealing Light, Monster Reborn, Mystical Space Typhoon, Creature Swap, Mirror Force, Mass Hypnosis, Interdimensional Warp, Dimensional Prison, Brainwashing Beam, Damage = Reptile, Snake Whistle, Crop Circles, Embodiment of Apophis",
+		"Seed": "",
+		"Cube": "mdoldschoolv2&seed=",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a517eb_w420.webp",
+		"N": 22,
+		"R": 10,
+		"SR": 5,
+		"UR": 3,
+		"DeckLength": 40,
+		"Errors": null
 	}
 ]

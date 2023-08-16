@@ -249,7 +249,7 @@ export default {
 
         this.refreshDecks();
         this.linkThemeWithDecks();
-      });      
+      });
       watch(store, () => { 
           this.refreshDecks();
       }) 
