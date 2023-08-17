@@ -2073,7 +2073,7 @@
 		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Héros MDOS",
-		"IsDraft": false,
+		"IsDraft": true,
 		"Date": "30/07/2023",
 		"Author": "_PtitBiscuit_",
 		"MainCard": "Elemental HERO Neos",
@@ -2087,7 +2087,7 @@
 		"SR": 10,
 		"UR": 7,
 		"DeckLength": 40,
-		"Errors": null
+		"Errors": "Il y a des carte limitées en doublon : Hero Blast. Il y a trop de jokers : 5. Ce groupe de limitation n est pas respecté :  Exiled Force, D.D. Assailant"
 	},
 	{
 		"Id": "b0209d7c-049b-4239-9a70-cff557335fa0",
@@ -2095,7 +2095,7 @@
 		"IdTournament": "",
 		"Rank": "3",
 		"Title": "Héros MDOS",
-		"IsDraft": false,
+		"IsDraft": true,
 		"Date": "30/07/2023",
 		"Author": "_PtitBiscuit- (Decklist Bludzee Tenebros)",
 		"MainCard": "Elemental HERO Neos",
@@ -2109,7 +2109,7 @@
 		"SR": 10,
 		"UR": 7,
 		"DeckLength": 40,
-		"Errors": null
+		"Errors": "Il y a des carte limitées en doublon : Hero Blast. Il y a trop de jokers : 5. Ce groupe de limitation n est pas respecté :  Exiled Force, D.D. Assailant"
 	},
 	{
 		"Id": "9560a76d-35de-42d6-87cf-a210fed8631b",
@@ -3722,22 +3722,22 @@
 		"Format": "mdoldschoolv2",
 		"IdTournament": "",
 		"Rank": "3",
-		"Title": "ExodiusNormal ",
+		"Title": "Nephtys",
 		"IsDraft": true,
-		"Date": "14/08/2023",
+		"Date": "16/08/2023",
 		"Author": "FlorentOutan ",
-		"MainCard": "Exodius the Ultimate Forbidden Lord",
-		"Themes": "exodia,equipement,pioche",
-		"DeckList": "Left Arm of the Forbidden One, Right Leg of the Forbidden One, Right Arm of the Forbidden One, Left Leg of the Forbidden One, Exodius the Ultimate Forbidden Lord x2, Necroface x2, Mystic Tomato, Exodia the Forbidden One, Morphing Jar #2, Morphing Jar, Apprentice Magician, Old Vindictive Magician, Iron Blacksmith Kotetsu, Magician of Faith, Cyber Valley, Forbidden Lance, Pot of Greed, Monster Reborn, Swords of Revealing Light, Mystical Space Typhoon, Heavy Storm, Book of Moon, Dark World Dealings, My Body as a Shield, Allure of Darkness, Upstart Goblin, Mist Body x2, Hidden Armory, Dark Hole, Half Shut, Malevolent Nuzzler, Curse of Anubis, Waboku, Jar of Avarice, Jar of Greed, Legacy of Yata-Garasu, Defense Draw",
+		"MainCard": "Sacred Phoenix of Nephthys",
+		"Themes": "feu,pioche",
+		"DeckList": "Exodius the Ultimate Forbidden Lord, Sacred Phoenix of Nephthys, Legendary Fiend, Necroface, UFO Turtle x2, Mystic Tomato, Flame Ruler, Flying Kamakiri #1, Enraged Battle Ox, Morphing Jar #2, Morphing Jar, Apprentice Magician, Old Vindictive Magician, Hand of Nephthys, Magician of Faith, Cyber Valley, Forbidden Lance, Pot of Greed, Monster Reborn, Swords of Revealing Light, Mystical Space Typhoon, Heavy Storm, Book of Moon, Dark World Dealings, Upstart Goblin, Dark Hole, Half Shut, The Shallow Grave, Curse of Anubis, Waboku, Jar of Avarice, Jar of Greed, Legacy of Yata-Garasu, Defense Draw, Magician's Circle, Phoenix Wing Wind Blast, Metal Reflect Slime, Embodiment of Apophis",
 		"Seed": "",
 		"Cube": "mdoldschoolv2&seed=",
-		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a5207b_w420.webp",
-		"N": 10,
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a5346d_w420.webp",
+		"N": 13,
 		"R": 15,
-		"SR": 10,
+		"SR": 6,
 		"UR": 5,
-		"DeckLength": 40,
-		"Errors": null
+		"DeckLength": 39,
+		"Errors": "Pas assez de cartes : 39"
 	},
 	{
 		"Id": "9cb94c25-d75b-43a1-a700-8d6bb7673bd5",
