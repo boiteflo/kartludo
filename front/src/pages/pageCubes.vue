@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <v-img v-if="$vuetify.breakpoint.width >= 800" style="width:250px" :src="cube.SubImage" />
+                        <v-img v-if="$vuetify.breakpoint.width >= 800" style="width:250px !important" :src="cube.SubImage" />
                     </div>
                 </div>
             </div>

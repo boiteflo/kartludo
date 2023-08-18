@@ -15,7 +15,7 @@
           <td>
             <v-text-field class="flex-grow"
                           v-model="filterData.searchEffect"
-                          label="Chercher une carte (FR ou EN)">
+                          label="Texte dans l'effet (EN)">
             </v-text-field>
           </td>
         </tr>

@@ -23,8 +23,7 @@ class ServiceMain {
                 || x.IdNameFr.toLowerCase().includes(search)
             );
         
-        let searchEffect = filter.searchEffect.toLowerCase();  
-        if(searchEffect && searchEffect.length > 1)
+        if(filter.searchEffect && filter.searchEffect.length > 1)
             result = result.filter(x=> x.Effect && 
             (helperString.cleanup(x.Effect).includes(helperString.cleanup(filter.searchEffect)) || x.Effect.includes(filter.searchEffect)));
 

@@ -122,8 +122,12 @@ export default {
       window.scrollTo(0, 0);
     },
     search(value){
-      this.filter.search = value;      
-      this.refreshSearch();
+      if(!this.filter.search || this.filter.search.trim().length < 1)
+        this.resetFilter();
+      else{
+        this.filter.search = value;      
+        this.refreshSearch();
+      }
     },
     showOrHideFilter(){
       this.showFilter=!this.showFilter;
