@@ -1,9 +1,11 @@
 
 import helperArray from '../helpers/helperArray'
+import helperString from '../helpers/helperString'
 
 class ServiceMain {
     static filterCard(cards, format, filter) {
         let isActive = (filter.search && filter.search.length > 0)
+            || (filter.searchEffect && filter.searchEffect.length > 0)
             || (filter.type && filter.type.length > 0)
             || (filter.limitation && filter.limitation.length > 0)
             || filter.showAll;
@@ -20,6 +22,11 @@ class ServiceMain {
                 || x.NameFr.toLowerCase().includes(search)
                 || x.IdNameFr.toLowerCase().includes(search)
             );
+        
+        let searchEffect = filter.searchEffect.toLowerCase();  
+        if(searchEffect && searchEffect.length > 1)
+            result = result.filter(x=> x.Effect && 
+            (helperString.cleanup(x.Effect).includes(helperString.cleanup(filter.searchEffect)) || x.Effect.includes(filter.searchEffect)));
 
         if(filter.type && filter.type.length>0) {
             result = result.filter(x=> x.Type && x.Type.includes(filter.type));

@@ -37,6 +37,18 @@ class helperString {
             output = '0' + output;
         }
         return output;
+      }
+      
+
+      static cut(str, cutChars) {
+        let indexes = [];
+        for (let i = 0; i < cutChars.length; i++) {
+          indexes.push(str.indexOf(cutChars.charAt(i)));
+        }
+        indexes = indexes.filter(x=> x && x >=0);
+
+        let cutIndex = indexes.length < 1 ? str.length : Math.min(...indexes);
+        return str.substring(0, cutIndex);
     }
   }
  

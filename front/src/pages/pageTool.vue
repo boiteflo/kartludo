@@ -3,6 +3,10 @@
         <h1>CHERCHER UNE CARTE</h1>
         <h2>PAR LISTE DE NOM</h2>
         <p class="bg p5px">Parfois il peut être utile de vérifier si des cartes existent ou non dans le format MDOS. Pour cela, il vous suffit de renseigner le nom (en anglais) des cartes dans le champ ci-dessous séparés par un retour a la ligne.</p>
+        <div class="flex flex-wrap">
+          <div class="m5px">Dans la liste de carte ci-dessous, la seule information qui compte est le nom de la carte en anglais. Parfois il arrive que les sites ajoutent d'autres informations. Par exemple yugioh.fandom.com indique le nom de la carte en anglais puis le caractère '|' puis le nom en japonnais. Le champ ci-dessous permet d'indiquer la liste des caractères a partir desquelles on considère la phrase comme terminé.</div>
+          <v-text-field class="m5px" v-model="ignoreChars" label="Ignorer la suite de la phrase" ></v-text-field>
+        </div>
         <div class="flex flew-wrap">
           <v-textarea v-model="text" class="flex-grow m5px" label="Chercher les cartes :" />
           <div class="flex-grow">
@@ -45,6 +49,7 @@
                         keyid="search"
                         :size="100" 
                         :cards="cardsFiltered"
+                        tooltip="text"
                         @hover="showCard"
                         @select="selectCard">
             </panel-cards>
@@ -77,9 +82,10 @@ export default {
   components: {panelCards, cardImage, textSpoiler},
   data: () => ({
     store: store,
-    text: 'Blue-Eyes Chaos MAX Dragon\nBlue-Eyes Shining Dragon',
+    text: 'Blue-Eyes Shining Dragon\nBlue-Eyes Chaos MAX Dragon|平仮名x\nMaiden with Eyes of Blue\tEffect Monster',
     cards: [],
     allCards: [],
+    ignoreChars:'\t|',
     lastCall:'',
     searchString:'',
     cardsFiltered:null,
@@ -109,7 +115,8 @@ export default {
     searchCards(cards, call){
       let ids = helperString.replaceAll(this.text,",","")
         .split('\n')
-        .filter(x=> x && x.trim().length > 0);
+        .filter(x=> x && x.trim().length > 0)
+        .map(x=> helperString.cut(x, this.ignoreChars));
 
       ids = [...new Set(ids)]
         .map(x=> {return {id: helperString.cleanup(x), name:x};});

@@ -104,7 +104,7 @@
                     </div>
                     <div style="flex-grow:1; max-width:357px;flex-basis: 0">
                         <div class="flex">
-                            <v-btn class="w32 m5px" @click="showOrHideFilter()" style="min-width:32px; height:48px;">
+                            <v-btn class="w32 m5px" @click="showOrHideFilter()" :style="{color: filter.isActive ? 'red' : 'black', 'min-width':'32px', height:'48px'}">
                                 <v-icon>mdi-filter</v-icon>
                             </v-btn>
                             <v-text-field
@@ -142,7 +142,7 @@
                             </v-btn>
                         </div>
                         <div class="flex">                            
-                            <v-btn class="w32 m5px" @click="showOrHideFilter()" style="min-width:32px; height:48px;">
+                            <v-btn class="w32 m5px" @click="showOrHideFilter()" :style="{color: filter.isActive ? 'red' : 'black', 'min-width':'32px', height:'48px'}">
                                 <v-icon>mdi-filter</v-icon>
                             </v-btn>
                             <v-text-field

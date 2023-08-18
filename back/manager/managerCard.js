@@ -88,7 +88,8 @@ class managerCard {
             Race : x.Race,
             Atk: x.Atk ? parseInt(x.Atk) : 0,
             Def: x.Def ? parseInt(x.Def) : 0,
-            TcgRelease :  x.TcgRelease
+            TcgRelease :  x.TcgRelease,
+            Effect: x.Effect
         }});
         
         helperJsonFile.savePath('./back/data/cards.json', cards);

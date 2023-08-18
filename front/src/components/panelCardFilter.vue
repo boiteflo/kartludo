@@ -2,10 +2,19 @@
     <div class="bgWhite">    
       <table class="m5px" v-if="filterData">
         <tr>
-          <td style="min-width:150px"><div class="m5px">Nom de la carte</div></td>
+          <td style="min-width:170px"><div class="m5px">Nom de la carte</div></td>
           <td>
             <v-text-field class="flex-grow"
                           v-model="filterData.search"
+                          label="Chercher une carte (FR ou EN)">
+            </v-text-field>
+          </td>
+        </tr>
+        <tr>
+          <td style="min-width:150px"><div class="m5px">Texte dans l'effet (EN)</div></td>
+          <td>
+            <v-text-field class="flex-grow"
+                          v-model="filterData.searchEffect"
                           label="Chercher une carte (FR ou EN)">
             </v-text-field>
           </td>
@@ -304,6 +313,7 @@
         };
 
         result.isActive =  (result.search && result.search.length > 0)
+          || (result.searchEffect && result.searchEffect.length > 0)
           || (result.type && result.type.length > 0)
           || (result.limitation && result.limitation.length > 0)
           || result.showAll;
