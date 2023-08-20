@@ -63,6 +63,20 @@
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a513d1_w420.webp"
 	},
 	{
+		"Id": "bete",
+		"Title": "Bête",
+		"CardIdName": "wildnaturesrelease",
+		"CardNameEn": "Wild Nature's Release",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53e0b_w420.webp"
+	},
+	{
+		"Id": "dinosaure",
+		"Title": "Dinosaure",
+		"CardIdName": "ultimatetyranno",
+		"CardNameEn": "Ultimate Tyranno",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aca0e24f2d54a53c4c_w420.webp"
+	},
+	{
 		"Id": "vent",
 		"Title": "Vent",
 		"CardIdName": "harpielady1",
@@ -334,5 +348,19 @@
 		"CardIdName": "chaossorcerer",
 		"CardNameEn": "Chaos Sorcerer",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51925_w420.webp"
+	},
+	{
+		"Id": "cyberdark",
+		"Title": "Cyberténébreux",
+		"CardIdName": "cyberdarkdragon",
+		"CardNameEn": "Cyberdark Dragon",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51b15_w420.webp"
+	},
+	{
+		"Id": "union",
+		"Title": "Union",
+		"CardIdName": "xyzdragoncannon",
+		"CardNameEn": "XYZ-Dragon Cannon",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53ee4_w420.webp"
 	}
 ]
