@@ -5,7 +5,7 @@
         <h2><v-icon color="red">mdi-cancel</v-icon> CARTES INTERDITES</h2>
         <panel-cards :cards="filterLimit(store.cards,'0')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
-        <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉS</h2>
+        <h2><v-icon color="red">mdi-alert</v-icon> CARTES LIMITÉES</h2>
         <h3 class="h3">A 1 EXEMPLAIRE STRICTE</h3>
         <panel-cards :cards="filterLimit(store.cards,'1')" :badgeoff="true" :center="true" tooltip="text">
         </panel-cards>
