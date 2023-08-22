@@ -1,12 +1,16 @@
 <template>
     <div style="position:relative">
-        <h1>LES CUBES DE DRAFT</h1>
-        <h2></h2>
+        <h2>DRAFT</h2>
         <div class="bg p5px"> 
             Le format Draft consiste a ouvrir un booster, chosir une seule carte et passez le reste a ses voisins. Puis répéter l'opération jusqu'a ce que chacun puisse créer un deck et faire des duels.
             Un cube de Draft est un ensemble de carte utilisées pour jouer en Draft. Au lieu d'ouvrir des boosters scellés, vous draftez des "boosters" de cartes que vous avez créé à partir de votre cube.
             Ce format permet de reproduire l'engouement d'ouvrir un lot de carte aléatoire avec des bonnes et mauvaises surprises. De devoir trouver une synergie et d'affronter ces adversaires dans un cadre non META.
         </div>
+        <h2>SEED</h2>
+        <div class="bg p5px"> 
+            Votre adversaire peut tricher en générant 100 fois son cube de draft afin d'obtenir le tirage parfait. Pour eviter cela, les joueurs de Draft peuvent créer une Seed. Une Seed est un texte permettant de généré des nombres aléatoires, c'est grâce a elle que le tirage des boosters est effectué. Ainsi, 2 tirages ayant la même Seed auront exactement le même résultat. La Seed peut être changé via l'url du cube de draft. Voici un exemple : le joueur 1 peut imposer au joueur2 la seed suivante : 'Super22082023' tandis que la seed suivante est imposé au joueur 1 : 'Genial22082023'.
+        </div>
+        <h2>CUBES</h2>
 
         <v-dialog v-model="dialogCards">   
             <v-btn class="w100p p5px" @click="dialogCards=false"><v-icon>mid-cancel</v-icon>Fermer</v-btn> 

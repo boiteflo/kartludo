@@ -115,10 +115,11 @@ import linkButton from './linkButton';
         searchString: '',
         showDrawer: false,
         links : [
-          {Text: 'Decks', Icon: 'mdi-cards-outline', Url:'/decks'},
-          {Text: 'Cubes', Icon: 'mdi-cube', Url:'/cubes'},
-          {Text: 'Outils', Icon: 'mdi-hammer-wrench', Url:'/tool'},
-          {Text: 'Discord', Icon: 'mdi-chat', Url:'https://discord.gg/zouloux', External:true},
+          {Text: 'DECKS', Icon: 'mdi-cards-outline', Url:'/decks'},
+          {Text: 'DRAFT', Icon: 'mdi-cube', Url:'/cubes'},
+          {Text: 'CLUB', Icon: 'mdi-account-group', Url:'/club'},
+          {Text: 'OUTILS', Icon: 'mdi-hammer-wrench', Url:'/tool'},
+          {Text: 'DISCORD', Icon: 'mdi-chat', Url:'https://discord.gg/zouloux', External:true},
         ]
     }),
     methods:{
