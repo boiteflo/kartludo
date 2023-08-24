@@ -26,6 +26,9 @@ Vue.mixin({
       else
         window.location.href =url;
     },
+    getCardImage(helperString, cards, card){
+      return cards.find(x=> x.IdName === helperString.cleanup(card))?.ImageMDM
+    },
     isMobileScreen(){
       return this.$vuetify.breakpoint.width < 900;
     },

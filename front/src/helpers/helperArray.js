@@ -147,6 +147,11 @@ class helperArray {
     static getMatch(array1, array2){
         return array1.filter(x=> array2.includes(x));
     }
+
+    static addMissing(array1, array2, propertyId){
+        const arrayIds = [ ...new Set(array1.map(x=> x[propertyId]))];
+        return array1.concat(array2.filter(x=> !arrayIds.includes(x[propertyId])));
+    }
   }
  
   module.exports = helperArray;

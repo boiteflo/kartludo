@@ -12,132 +12,73 @@
             <div v-if="deckSelected">
               <panel-deck :deck="deckSelected" 
                 :buttonpage="true" 
-                v-on:unselect="unselect" 
+                v-on:unselect="unselectDeck" 
                 @duplicate="duplicate">
               </panel-deck>
             </div>
           </v-dialog>
 
-          <!-- Format Cube -->
-          <div v-if="selectCubeMode" class="flex-wrap flex-center bg2">
-              <div v-for="deck in decksCube" 
-                v-bind:key="deck.Id" 
-                style="position:relative">
-                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
-                </iconDeck>
-              </div>
-          </div>
+          <div v-if="themeSelected"></div>
 
-          <!-- Tournoi sélectionné -->
-          <div v-else-if="tournamentSelected" style="position:relative">
-            <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
-              <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="tournamentSelected.CardImage" />
-            </div>
-
-            <h1>Tournoi : {{tournamentSelected.Title}}</h1>
-            <h1 style="padding-top:5px;">Les Decks </h1>
-            <div class="flex-wrap flex-center bg2">
-              <div v-for="deck in tournamentSelected.Decks" v-bind:key="deck.Id" style="position:relative">
-                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
-                </iconDeck>
-              </div>
+          <!-- Format selected Cube -->
+          <div v-else-if="formatSelected && formatSelected.Id==='cube'" :key="refreshFormat">
+            <h1>Les Boosters</h1>
+            <div class="flex-wrap flex-space-around p5px bg2">
+                <card-booster v-for="booster in boostersFiltered"
+                    :key="booster.Id"
+                    :booster="booster"
+                    :title="booster.Title" 
+                    :image="booster.Image"
+                    :color="boosterSelected && boosterSelected.Ref == booster.Ref ? '#3F51B5' : null"
+                    @click="selectBooster(booster)">
+                </card-booster>
             </div>
           </div>
 
-          <!-- Theme sélectionné -->
-          <div v-else-if="themeSelected" style="position:relative">
-            <div style="position:absolute; right:30px; top:5px; width:100px; height:100px; overflow: hidden;">
-              <img style="width: 150px; object-fit: cover; object-position: -20px -50px;" :src="themeSelected.CardImage" />
-            </div>
-
-            <h1>Thème : {{themeSelected.Title}}</h1>
-            <h1 style="padding-top:5px;">Les Decks </h1>
-            <div class="flex-wrap flex-center bg2">
-              <div v-for="deck in currentThemeDecks" v-bind:key="deck.Id" style="position:relative">
-                <iconDeck  :deck="deck" v-on:select="selectDeck(deck)">
-                </iconDeck>
-              </div>
-            </div>
-          </div>
-
-          <!-- Themes -->
-          <div v-else-if="rankSelected" :key="refreshThemes">
+          <!-- Format selected-->
+          <div v-else-if="formatSelected" :key="refreshFormat">
             <h1>Les Themes</h1>
             <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="theme in themes.filter(x=> rankSelected.Id==0 || x.DecksLength > 0)" 
+              <icon-theme v-for="theme in getThemes(formatSelected.Decks)" 
                 v-bind:key="theme.Id" 
-                v-on:select="showTheme(theme)" 
+                v-on:select="selectTheme(theme)" 
                 :text="theme.Title" 
                 :text1="theme.DecksLength + ' decks'"
                 :image="theme.CardImage">
               </icon-theme>
             </div>
           </div>
-
-          <!-- Search Deck -->
-          <div v-else-if="searchDeck" :key="refreshFilteredDecks">
-            <h1>
-              Chercher un deck
-              <v-btn class="bg2 s40 m5px" @click="setSearchDeck(false)">
-                <v-icon > mdi-cancel</v-icon> Arreter la recherche
-              </v-btn>
-            </h1>
-            <div class="p5px flex flex-wrap">
-              <v-combobox class="m5px" 
-                v-model="deckAuthor"
-                :items="deckAuthors"
-                hide-details
-                label="Auteur"
-                @input="refreshSearchDeck()">
-              </v-combobox>
-            </div>
-            <combo-card @change="setDeckCardsIncluded">
-            </combo-card>
-            <v-btn class="m5px" 
-              @click="sortRarety()"
-              :class="{'bg2':sortByRarity}">
-              Trier par rareté
-            </v-btn>
-            <div class="flex-wrap flex-space-around p5px bg2">
-              <div v-for="deck in deckFiltered" v-bind:key="'filteredDeck' + deck.Id" style="position:relative">
-                <iconDeck :deck="deck" 
-                  v-on:select="selectDeck(deck)" 
-                  :rarity="sortByRarity">
-                </iconDeck>
-              </div>
-            </div>
-          </div>
           
-          <!-- Classement -->
+          <div v-else-if="tournamentSelected"></div>
+          
+          <!-- Les Formats -->
           <div v-else :key="refreshRanks" class="relative">
-            <h1>
-              Le classement des decks
-              <v-btn class="bg2 s40 m5px" @click="setSearchDeck(true)">
+            <h1> LES FORMATS 
+              <v-btn class="bg2 s40 m5px" @click="goToSearch()">
                 <v-icon > mdi-magnify</v-icon> Rechercher
               </v-btn>
             </h1>
+              
 
             <div class="flex-wrap flex-space-around p5px bg2">
-              <icon-theme v-for="rank in ranks" 
-                v-bind:key="rank.Id" 
-                v-on:select="selectRank(rank)" 
-                :text="rank.Title" 
-                :text1="rank.DecksLength + ' decks'"
-                :image="rank.Image">
-              </icon-theme>
-              
-              <icon-theme  
-                v-on:select="showCubes()" 
-                text="Format Cube" 
-                :text1="decksCube.length + ' decks'"
-                :image="require('../assets/cube.jpg')">
+              <icon-theme v-for="format in formats" 
+                v-bind:key="format.Id" 
+                v-on:select="selectFormat(format)" 
+                :text="format.Title" 
+                :text1="format.Author"
+                :text2="format.Date"
+                :text3="format.DecksLength + ' decks'"
+                :image="format.Image"
+                :cards="store.cards"
+                :card="format.MainCard">
               </icon-theme>
             </div>
-            <h1>Les Tournois</h1>
+
+            <h1>LES TOURNOIS</h1>
             <div class="flex-wrap flex-space-around p5px bg2">
               <icon-theme v-for="tournament in tournaments" 
                 v-bind:key="tournament.Id" 
-                v-on:select="showTournament(tournament)" 
+                v-on:select="selectTournament(tournament)" 
                 :text="tournament.Title" 
                 :text1="tournament.Date"
                 :image="tournament.MainCardImage">
@@ -145,13 +86,79 @@
             </div>
           </div>
         
+        <div id="filterBar"></div>
+        <hierarchy v-if="!themeSelected && !tournamentSelected" class="bg" :items="hierarchyArray" @select="selectHierarchy"></hierarchy>
+
+        <!-- Filter bar -->
+        <div class="flex flex-wrap p5px">
+          <div class="flex-grow">
+            <combo-card @change="setDeckCardsIncluded">
+            </combo-card>
+          </div>
+          <div class="flex-grow">
+            <v-combobox class="m5px"
+              v-model="deckAuthor"
+              :items="deckAuthors"
+              hide-details
+              label="Auteur"
+              @input="refreshDecks()">
+            </v-combobox>
+          </div>
+          <div class="flex-grow">
+            <v-btn class="m5px" 
+              @click="selectRank(1)"
+              style="height:50px"
+              :class="{'bg2':rankSelected && rankSelected.Id == 1}">
+              <v-icon>mdi-podium-gold</v-icon>
+              META
+            </v-btn>
+            <v-btn class="m5px" 
+              @click="selectRank(2)"
+              style="height:50px"
+              :class="{'bg2':rankSelected && rankSelected.Id == 2}">
+              <v-icon>mdi-podium-silver</v-icon>
+              Tier 2
+            </v-btn>
+            <v-btn class="m5px" 
+              @click="sortRarety()"
+              style="height:50px"
+              :class="{'bg2':sortByRarity}">
+              <v-icon>mdi-gold</v-icon>
+              Rareté
+            </v-btn>
+          </div>
         </div>
+        
+        <!-- Decks -->
+        <div class="bg2 p5px">{{deckFiltered.length}} Decks</div>
+        <div class="flex-wrap flex-space-around p5px bg2">
+          <div v-for="deck in deckFiltered" v-bind:key="'filteredDeck' + deck.Id" style="position:relative">
+            <iconDeck :deck="deck" 
+              v-on:select="selectDeck(deck)" 
+              :rarity="sortByRarity">
+            </iconDeck>
+          </div>
+        </div>
+        <h2>LA COMMUNAUTÉ</h2>
+        <div class="flex-wrap p5px bg2">
+          <v-chip v-for="author in this.deckAuthors" 
+            :key="author" 
+            :class="{'bg2':sortByRarity, 'm5px':true, 'cursorHand':true}"
+            @click="selectAuthor(author)">
+            {{author}}
+          </v-chip>
+        </div>
+        
+
+
+        </div>
+
           <!-- Boutons -->
         <div class="flex-wrap flex-center">
-          <v-btn class="m5px" v-if="rankSelected || tournamentSelected" @click="selectRank(null)">
+          <v-btn class="m5px" v-if="formatSelected || tournamentSelected" @click="selectHierarchy({Id:0})">
               <v-icon color="red">mdi-arrow-left-bottom</v-icon> Revenir au classement
           </v-btn>
-          <v-btn class="m5px" v-if="themeSelected" @click="showTheme(null)">
+          <v-btn class="m5px" v-if="themeSelected" @click="selectHierarchy({Id:1})">
               <v-icon color="red">mdi-arrow-left-bottom</v-icon> Voir tous les thèmes
           </v-btn>
           <router-link :to="'/cubes'" >
@@ -171,7 +178,6 @@
 
 <script>
 import { forkJoin } from 'rxjs';
-import { watch } from 'vue'
 import helperString from '../helpers/helperString'
 import helperArray from '../helpers/helperArray'
 import ServiceBack from '../services/serviceBack'
@@ -182,16 +188,19 @@ import panelDeck from '../components/panelDeck';
 import iconTheme from '../components/iconTheme';
 import iconDeck from '../components/iconDeck';
 import comboCard from '../components/comboCard';
+import cardBooster from '../components/cardBooster';
 
 export default {
   name: 'pageDecks',
-  components: {iconTheme, iconDeck, panelDeck, hierarchy, comboCard},
+  components: {iconTheme, iconDeck, panelDeck, hierarchy, comboCard, cardBooster},
   data: () => ({
     loading:true,
     store: store,
+    formats: null,
     ranks: null,
     staples : null,
     themes: null,
+    boosters: null,
     tournaments: null,
     decksObject: null,
     decksAll: null,
@@ -202,18 +211,21 @@ export default {
     refreshFilteredDecks: true,
     sortByRarity:false,
 
-    searchDeck:false,
     deckAuthor:'',
+    deckFormat: null,
     deckCardSearch:'',
     deckCardsIncluded:[],
     deckFiltered : [],
     deckAuthors: [],
 
-    hierarchyArray: [{Id:0, Text:'Classement et Tournois'}],
+    hierarchyArray: [{Id:0, Text:'Formats et Tournois'}],
+    refreshFormat: 0,
     refreshRanks: 0,
     refreshThemes: 0,
+    formatSelected: null,
     rankSelected: null,
     themeSelected: null,
+    boosterSelected: null,
     deckSelected: null,
     tournamentSelected:null,
     showDeck: false,
@@ -231,7 +243,8 @@ export default {
         ServiceBack.getAll('data'),
         ServiceBack.getAll('theme'),
         ServiceBack.getAll('deck'),
-        ServiceBack.getAll('tournament')
+        ServiceBack.getAll('tournament'),
+        ServiceBack.getAll('booster'),
       ]).subscribe(results => {
         this.staples = {
             stapleMonster: results[0].find(x=> x.Id === 'stapleMonster'),
@@ -241,115 +254,171 @@ export default {
         this.ranks = JSON.parse(results[0].find(x=> x.Id === 'ranks').Value);
         this.ranks = this.ranks.concat([{ "Id":"0","Title": "Tous", "NameEn":"infinite cards"}]);   
         this.themes = results[1].concat([this.themeAll]);
+        this.themes.forEach((x,index)=> x.Index = index);
 
-        let decks= results[2];
-        this.decksCube = decks.filter(x=> x.Rank === '5');
-        this.decksAll = decks.filter(x=> x.Rank !== '5');
+        let formatIds = this.store.formats.map(x=> x.Id);
+        this.decks= results[2];
+        this.decks.forEach(x=> {
+          x.FormatId = formatIds.indexOf(x.Format);
+          x.RankTitle = this.ranks.find(y=> y.Id === x.Rank)?.Title
+        });
+
         this.tournaments = results[3];
+        this.boosters = results[4];
+
+        this.boostersFiltered = helperArray.sortByProperties([ ...new Set(this.decks.filter(x=> x.Rank === '5').map(x=> x.Format.replace("Cube ",""))
+                .reduce((partialSum, a) => partialSum + "+" + a, "")
+                .split('+')
+                .filter(x=> x && x.trim().length > 0))]
+                .map(x=> this.boosters.find(y=> y.Ref === x))
+                , "<Id");
+
+        this.formats = this.store.formats
+          .filter(x=> x.Title!= 'Test')
+          .map(format=> {
+            return {
+              ...format,
+              Image: this.getCardImage(helperString, this.store.cards, format.MainCard),
+              DecksLength: this.decks.filter(x=> x.Format === format.Id && x.Rank < 4).length
+            }})
+          .reverse()
+          .concat([
+            {Id:'tous', Title:'Tous', MainCard:'Infinite Cards', DecksLength:this.decks.length},
+            {Id:'anime', Title:'Animé', MainCard:'Yu-Jo Friendship', DecksLength:this.decks.filter(x=> x.Rank == 4).length},
+            {Id:'cube', Title:'Draft Cube', Image:require('../assets/cube.jpg'), DecksLength:this.decks.filter(x=> x.Rank === '5').length}
+          ]);
 
         this.refreshDecks();
-        this.linkThemeWithDecks();
+        this.loading=false;
       });
-      watch(store, () => { 
-          this.refreshDecks();
-      }) 
   },
   methods: {
-    refreshDecks(){  
-        this.decks = this.decksAll.filter(x=> x.Format === this.store.formatSelected.Id);
-        this.deckFiltered = [].concat(this.decks);
-        this.sortByRarity=false;
-        this.deckAuthors = [...new Set(this.decks
-          .filter(x=> x.Author)
-          .map(x=> x.Author)
-          .sort())];
-        this.linkThemeWithDecks();
-        let theme = this.themeSelected;
-        if(this.rankSelected) this.selectRank(this.rankSelected);
-        if(theme) this.showTheme(theme);
-    },
-    sortRarety(){
-      this.sortByRarity=this.sortByRarity ? false : true;
-      if(this.sortByRarity)
-        this.deckFiltered =helperArray.sortByProperties(this.deckFiltered, '<UR,<SR,<R');
-      else
-        this.deckFiltered =helperArray.sortByProperties(this.deckFiltered, '<Title');
-      this.refreshFilteredDecks++;
-    },
-    linkThemeWithDecks(){
-      if(!this.themes || !this.decks || !this.ranks)
-        return;   
-
-      this.ranks.forEach(rank => {
-        rank.Image = store.cards.find(x=> x.IdName === helperString.cleanup(rank.NameEn)).ImageMDM;
-        let deckArray = rank.CurrentFormat ? this.decks : this.decksAll;
-        let decks = deckArray.filter(x=> rank.Id==0 || x.Rank === rank.Id);
-        rank.DecksLength =decks.length;
-      });
-
-      this.tournaments.filter(x=> !x.Actif).forEach(tournament => {
-        tournament.Decks = [];
-        tournament.Results.split(",").forEach(tournamendDeck => {
-          let array = tournamendDeck.split(":");
-          let deck = this.decksAll.find(x=> x.Id === array[1]);
-          if(deck)
-            tournament.Decks.push(deck);
-        })
-      });
-
-      this.loading=false;
-      this.refreshRanks++;      
-    },
     selectHierarchy(item){
       this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id <= item.Id);
-      if(item.Id === 0) this.selectRank(null);
-      if(item.Id === 0) this.showTournament(null);
-      if(item.Id === 0) this.selectCubeMode=false;
-      if(item.Id === 1) this.showTheme(null);
-      if(item.Id === 0) this.setSearchDeck(false);
+      if(item.Id <1) this.selectFormat(null);
+      if(item.Id <1) this.selectTournament(null);
+      if(item.Id <2) this.selectTheme(null);
     },
     addToHieararchy(item){
       this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id < item.Id);
       this.hierarchyArray.push(item);
     },
-    showCubes(){
-      this.selectCubeMode=true;
-      this.addToHieararchy({Id:1, Text:'Format Cube'});
-    },
-    selectRank(rank){
-      this.rankSelected = rank;   
-      this.themeSelected = null;
-      this.deckSelected = null; 
-      if(!rank) {
-        this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=1);
-        return;
-      }
+    refreshDecks(){  
+        let decks = this.decks;
+        if(this.formatSelected && this.formatSelected.Id !== 'tous') {
+          if(this.formatSelected.Id === 'anime')
+            decks = decks.filter(x=> x.Rank == 4);
+          else if(this.formatSelected.Id === 'cube')
+            decks = decks.filter(x=> x.Rank == 5);
+          else
+            decks = decks.filter(x=> x.Format === this.formatSelected.Id);
+        }
 
-      let deckArray = rank.CurrentFormat ? this.decks : this.decksAll;
-      let decks = deckArray.filter(x=> rank.Id==0 || x.Rank === rank.Id);
-      rank.DecksLength =decks.length;
-      this.addToHieararchy({Id:1, Text:rank.Title});
-      this.themeDecks = [];
-      
-      this.themes.forEach(theme => {
-        let decksTheme = decks.filter(x=> theme.Id==='tous' || helperString.replaceAll(x.Themes,' ','').split(',').includes(theme.Id));
-        theme.DecksLength = decksTheme.length;
-        this.themeDecks.push({Id: theme.Id, Value: decksTheme});
+        if(this.rankSelected) 
+          decks = decks.filter(x=> x.Rank == this.rankSelected.Id);
+
+        if(this.boosterSelected) 
+          decks = decks.filter(x=> x.Format.replace("Cube ","").split('+').includes(this.boosterSelected.Ref));
+
+        if(this.themeSelected) 
+          decks = decks.filter(x=> x.Themes.split(',').includes(this.themeSelected.Id));
+
+        if(this.tournamentSelected) 
+          decks = decks.filter(x=> x.IdTournament && x.IdTournament === this.tournamentSelected.Id);
+        
+        if(this.deckAuthor && this.deckAuthor.length > 0)
+          decks = decks.filter(x=> x.Author && x.Author.toLowerCase().includes(this.deckAuthor.toLowerCase()))
+
+        if(this.deckCardsIncluded && this.deckCardsIncluded.length > 0){
+          decks = decks.filter(deck=> {
+            let deckList = helperString.replaceAll(deck.DeckList, 'x2', '').split(',').map(x=> helperString.cleanup(x));
+            let matchs = helperArray.getMatch(deckList, this.deckCardsIncluded );
+            return matchs.length === this.deckCardsIncluded.length; 
+          });
+        }
+
+        this.deckAuthors = [...new Set(decks
+          .filter(x=> x.Author)
+          .map(x=> x.Author.trim()))]
+          .sort();
+          
+        if(this.sortByRarity)
+          this.deckFiltered =helperArray.sortByProperties(decks, '<UR,<SR,<R');
+        else
+          this.deckFiltered =helperArray.sortByProperties(decks, '>FormatId,<Rank,>Title');
+        this.refreshFilteredDecks++;
+    },
+    getThemes(){
+      let themes= [];
+      this.deckFiltered.forEach(deck=> {
+        let deckThemesIds = deck.Themes.split(',');
+        let deckThemes = this.themes.filter(x=> deckThemesIds.includes(x.Id)).map(x=> {return {...x};});
+        themes = helperArray.addMissing(themes, deckThemes, 'Id');
+
+        themes
+          .filter(x=> deckThemesIds.includes(x.Id))
+          .forEach(x=> x.DecksLength = !x.DecksLength ? 1 : x.DecksLength+1);
       });
-      this.refreshThemes++;
 
+      return helperArray.sortByProperties(themes, '<Index');
+    },
+    selectFormat(format){
+      this.formatSelected = format;
+      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id<1);
+
+      if(format)
+        this.addToHieararchy({Id:1, Text:format.Title});
+
+      this.refreshDecks();
       window.scrollTo(0, 0);
     },
-    showTheme(theme){
+    selectTheme(theme){
       this.themeSelected = theme;
-      if(!theme) {
-        this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=2);
-        return;
-      }
+      this.hierarchyArray = this.hierarchyArray.filter(x=> x.Id!=2);
 
-      this.addToHieararchy({Id:2, Text:theme.Title});
-      this.currentThemeDecks = this.themeDecks.find(x=> x.Id === theme.Id).Value;
+      if(theme)
+        this.addToHieararchy({Id:2, Text:theme.Title});
+
+      this.refreshDecks();
       window.scrollTo(0, 0);
+    },
+    selectRank(id){
+      if(!id)
+        this.rankSelected=null;
+      else if (this.rankSelected && id == this.rankSelected.Id)
+        this.selectRank(null);
+      else 
+        this.rankSelected=this.ranks.find(x=> x.Id == id);
+
+      this.refreshDecks();
+    },
+    selectBooster(booster){
+      if (this.boosterSelected && booster && booster.Ref == this.boosterSelected.Ref)
+        this.selectBooster(null);
+      else
+        this.boosterSelected=booster;
+      
+      this.refreshDecks();
+      this.goToSearch();
+    },
+    selectAuthor(author){
+      if(this.deckAuthor && author && author == this.deckAuthor)
+        this.selectAuthor(null);
+      else
+        this.deckAuthor = author;
+      
+      this.refreshDecks();
+    },
+    sortRarety(){
+      this.sortByRarity=this.sortByRarity ? false : true;
+      this.refreshDecks();
+    },
+    setDeckCardsIncluded(cards){
+      this.deckCardsIncluded = cards.map(x=> x.IdName);
+      this.refreshDecks();
+    },
+    goToSearch(){
+      document.getElementById('filterBar').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     },
     selectDeck(deck){
       this.deckSelected=deck;
@@ -366,44 +435,20 @@ export default {
       }
       this.showDeck = true;
     },
-    showTournament(tournament){
+    selectTournament(tournament){
       this.tournamentSelected=tournament;
       if(tournament){
         this.addToHieararchy({Id:2, Text:tournament.Title});
       }
-      window.scrollTo(0, 0);
+      this.refreshDecks();
     },
-    unselect(){
+    unselectDeck(){
       this.deckSelected=null;
       this.showDeck = false;
     },
     duplicate(deck){
       ServiceBack.insert('deck/duplicate', deck)
         .then(res=> window.location.href = '/deck/id=' + res.data);
-    },
-
-    setSearchDeck(value){
-      this.searchDeck = value;
-    },
-    setDeckCardsIncluded(cards){
-      this.deckCardsIncluded = cards.map(x=> x.IdName);
-      this.refreshSearchDeck();
-    },
-    refreshSearchDeck(){
-        let result = [].concat(this.decks);
-
-        if(this.deckAuthor && this.deckAuthor.length > 0)
-          result = result.filter(x=> x.Author && x.Author.toLowerCase().includes(this.deckAuthor.toLowerCase()))
-
-        if(this.deckCardsIncluded && this.deckCardsIncluded.length > 0){
-          result = result.filter(deck=> {
-            let deckList = helperString.replaceAll(deck.DeckList, 'x2', '').split(',').map(x=> helperString.cleanup(x));
-            let matchs = helperArray.getMatch(deckList, this.deckCardsIncluded );
-            return matchs.length === this.deckCardsIncluded.length; 
-          });
-        }
-        
-        this.deckFiltered = result;
     }
   }
 };
