@@ -28,7 +28,7 @@ class managerCard {
             updateSheet.push({range: 'Extra!J' + (sheetLine+i), value:card.Atk});
             updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Def});
             updateSheet.push({range: 'Extra!L' + (sheetLine+i), value:card.ImageMDM});
-            updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Effect});
+            updateSheet.push({range: 'Extra!M' + (sheetLine+i), value:card.Effect});
 
             console.log((sheetLine+i) + card.NameEn);
         }
@@ -45,7 +45,8 @@ class managerCard {
         let updateSheet = [];
         let cards = require("../data/cards.js");
         
-        // Extra    
+        // Extra   
+        /* 
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -69,6 +70,7 @@ class managerCard {
                 })
             );
         }
+        */
 
         cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
 

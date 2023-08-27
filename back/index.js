@@ -97,9 +97,7 @@ app.listen(port, () => {
     managerMain.refresh();
     console.log(`Server started on port ${port}`);
 
-    setInterval(()=> {
-        axios.get('https://mdos.onrender.com/api/data/ranks')
-    }, 60000*12);
+    setInterval(()=> axios.get('https://mdos.onrender.com/api/data/ranks'), 60000*12);
 });
 
 
