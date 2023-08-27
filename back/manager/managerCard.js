@@ -46,7 +46,6 @@ class managerCard {
         let cards = require("../data/cards.js");
         
         // Extra   
-        /* 
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -70,7 +69,6 @@ class managerCard {
                 })
             );
         }
-        */
 
         cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
 
