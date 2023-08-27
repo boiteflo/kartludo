@@ -10011,7 +10011,25 @@
 		"Atk": 2400,
 		"Def": 1000,
 		"Effect": "When this card is Normal or Special Summoned: You can target up to 2 cards on the field; destroy those targets, and if you do, each player can draw 1 card for each of the cards they controlled that was destroyed by this effect. This card cannot attack during the turn it is Normal or Special Summoned."
-	},
+	},	
+	{
+		"Id": "60c2b3aba0e24f2d54a528e1",
+		"IdName": "kuwagataa",
+		"IdNameFr": "kuwagata",
+		"NameEn": "Kuwagata a",
+		"NameFr": "Kuwagata a",
+		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a528e1_w420.webp",
+		"Type": "Monster",
+		"TypeMonster": "Normal",
+		"ToExtraDeck": false,
+		"Rarity": "N",
+		"Race": "Insect",
+		"Attribute": "EARTH",
+		"Level": "4",
+		"Effect": "A very vicious stag beetle that goes for the head.",
+		"Atk": "1250",
+		"Def": "1000"
+	  },
 	{
 		"IdName": "kwagarhercules",
 		"IdNameFr": "herculekwagar",
@@ -53447,5 +53465,23 @@
 		"Def": 1200,
 		"TcgRelease": "2020_01_01",
 		"Effect": "Once per turn: You can target 1 Level 4 or lower Zombie monster in your opponent's GY, that was destroyed by battle; Special Summon that target."
-	}
+	},	
+	{
+		"Id": "60c2b3aaa0e24f2d54a520d6",
+		"IdName": "falchionbeta",
+		"IdNameFr": "fauchonb",
+		"NameEn": "Falchion Beta",
+		"NameFr": "Fauchon B",
+		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a520d6_w420.webp",
+		"Type": "Monster",
+		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
+		"Rarity": "N",
+		"Race": "Machine",
+		"Attribute": "LIGHT",
+		"Level": "4",
+		"Effect": "If this card destroys an opponent's monster by battle: Activate 1 of these effects.\n● Send 1 LIGHT Machine-Type monster with 1200 or less ATK from your Deck to your Graveyard.\n● Target 1 LIGHT Machine-Type monster with 1200 or less ATK in your Graveyard; Special Summon that target.",
+		"Atk": "1200",
+		"Def": "800"
+	  }
 ]
