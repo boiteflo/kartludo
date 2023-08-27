@@ -98,20 +98,20 @@ class managerTheme {
             Date:new Date().toLocaleDateString("fr"), 
             MainCard: ""
         };
-        format.Bonus = this.handleCardList(sheetData.Bonus, cards, updateSheet, errors);
+        format.Bonus = this.handleCardList(sheetData.Bonus, cards, updateSheet, errors, 'Bonus');
         
-        format.Limit0 = this.handleCardList(sheetData.Limit0, cards, updateSheet, errors);
+        format.Limit0 = this.handleCardList(sheetData.Limit0, cards, updateSheet, errors, 'Limit0');
         
-        format.Limit1 = this.handleCardList(sheetData.Limit1, cards, updateSheet, errors);
+        format.Limit1 = this.handleCardList(sheetData.Limit1, cards, updateSheet, errors, 'Limit1');
         
-        format.Joker = this.handleCardList(sheetData.Joker, cards, updateSheet, errors);
+        format.Joker = this.handleCardList(sheetData.Joker, cards, updateSheet, errors, 'Joker');
         
         format.Limit1Groups = helperArray.removeDuplicates(sheetData.Limit1.filter(x=> x[1]).map(x=> x[1])).join("| ");
 
         return {Errors: errors, Format: format}
     }
 
-    static handleCardList(data, cards, updateSheet, errors){
+    static handleCardList(data, cards, updateSheet, errors, page){
         let result = [];
         
         if(!data || data.length < 1)
@@ -125,9 +125,9 @@ class managerTheme {
             if(card) result.push(card.NameEn);
             else {
                 errorOccur=true;
-                errors.push({Index: i, From:'Limit1', Errors: cardNotFound + ' ' +  data[i][0]});
+                errors.push({Index: i, From:page, Errors: cardNotFound + ' ' +  data[i][0]});
             }
-            updateSheet.push({range: 'Limit1!A' + (i+2), value:errorOccur ? cardNotFound : ''});
+            updateSheet.push({range: page + '!A' + (i+2), value:errorOccur ? cardNotFound : ''});
         }
 
         return result.join(", ");

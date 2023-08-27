@@ -1,10 +1,23 @@
 <template>
     <div>
-        <div v-if="loading">
-          Chargement
+        <div v-if="loading" class="flex-center">
+          <v-progress-circular indeterminate :size="200" :width="20" style="margin-top:100px"></v-progress-circular>
         </div>
-        <div v-else>
+        <div v-else class="relative">
 
+          <!-- Boutons -->
+          <div :class="{flex:true, p5px:true, absolute:$vuetify.breakpoint.width >= 800, bg:$vuetify.breakpoint.width < 800}" style="top:0px; right:0px">
+            <router-link :to="'/cubes'" >
+              <v-btn target="_blank" text class="bg2 m5px">
+                <v-icon>mdi-cube</v-icon> Draft
+              </v-btn>
+            </router-link>
+            <router-link :to="'/deck/new'" >
+              <v-btn target="_blank" text class="bg2 m5px">
+                <v-icon>mdi-plus</v-icon> Ajouter deck
+              </v-btn>
+            </router-link>
+          </div>
           <hierarchy class="bg" :items="hierarchyArray" @select="selectHierarchy"></hierarchy>
 
           <!-- Deck sélectionné -->
@@ -149,10 +162,6 @@
           </v-chip>
         </div>
         
-
-
-        </div>
-
           <!-- Boutons -->
         <div class="flex-wrap flex-center">
           <v-btn class="m5px" v-if="formatSelected || tournamentSelected" @click="selectHierarchy({Id:0})">
@@ -172,6 +181,10 @@
             </v-btn>
           </router-link>
         </div>
+
+
+        </div>
+
     </div>
 </template>
 
@@ -285,7 +298,8 @@ export default {
           .concat([
             {Id:'tous', Title:'Tous', MainCard:'Infinite Cards', DecksLength:this.decks.length},
             {Id:'anime', Title:'Animé', MainCard:'Yu-Jo Friendship', DecksLength:this.decks.filter(x=> x.Rank == 4).length},
-            {Id:'cube', Title:'Draft Cube', Image:require('../assets/cube.jpg'), DecksLength:this.decks.filter(x=> x.Rank === '5').length}
+            {Id:'club', Title:'Club Yu-Gi-Oh!', Image:require('../assets/club.jpg'), DecksLength:0},
+            {Id:'cube', Title:'Draft Cube', Image:require('../assets/cube.jpg'), DecksLength:this.decks.filter(x=> x.Rank === '5').length},
           ]);
 
         this.refreshDecks();

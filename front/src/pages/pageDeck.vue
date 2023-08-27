@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-if="loading">
-          Chargement
+        <div v-if="loading" class="flex-center">            
+          <v-progress-circular indeterminate :size="200" :width="20" style="margin-top:100px"></v-progress-circular>
         </div>
         <div v-else>
           <v-alert type="warning" class="m5px" v-if="deck && deck.IdTournament && deck.TournamentObject?.Actif">

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-if="loading">
-            Chargement
+        <div v-if="loading" class="flex-center">            
+          <v-progress-circular indeterminate :size="200" :width="20" style="margin-top:100px"></v-progress-circular>
         </div>
         <panel-cube-config v-else-if="seed && cube" 
           :seed="seed"

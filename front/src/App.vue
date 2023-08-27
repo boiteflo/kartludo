@@ -9,8 +9,8 @@
       </menuBar>
       <div v-if="$vuetify.breakpoint.width >= 800" class="bg" style="height:60px;"></div>
 
-        <div class="bg w100p h100p" v-if=" !store.formatSelected">
-          CHARGEMENT EN COURS
+        <div class="bg w100p h100p flex-center" v-if=" !store.formatSelected">
+          <v-progress-circular indeterminate :size="200" :width="20" style="margin-top:100px"></v-progress-circular>
         </div>
         <div v-else >
           <img v-if="konamiCode" class="bg" style="width:100%; height:100%" :srcset="require('./assets/konamiCode.webp')">
