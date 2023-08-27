@@ -57995,5 +57995,41 @@ module.exports =
     "Effect": "When an opponent's monster declares an attack: Destroy the Attack Position monster your opponent controls with the highest ATK (your choice, if tied).",
     "Atk": null,
     "Def": null
-  }
+  },  
+	{
+		"Id": "60c2b3aaa0e24f2d54a520d6",
+		"IdName": "falchionbeta",
+		"IdNameFr": "fauchonb",
+		"NameEn": "Falchion Beta",
+		"NameFr": "Fauchon B",
+		"ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a520d6_w420.webp",
+		"Type": "Monster",
+		"TypeMonster": "Effect",
+		"ToExtraDeck": false,
+		"Rarity": "N",
+		"Race": "Machine",
+		"Attribute": "LIGHT",
+		"Level": "4",
+		"Effect": "If this card destroys an opponent's monster by battle: Activate 1 of these effects.\n● Send 1 LIGHT Machine-Type monster with 1200 or less ATK from your Deck to your Graveyard.\n● Target 1 LIGHT Machine-Type monster with 1200 or less ATK in your Graveyard; Special Summon that target.",
+		"Atk": "1200",
+		"Def": "800"
+	  },
+	  {
+		  "Id": "60c2b3aba0e24f2d54a528e1",
+		  "IdName": "kuwagataa",
+		  "IdNameFr": "kuwagata",
+		  "NameEn": "Kuwagata a",
+		  "NameFr": "Kuwagata a",
+		  "ImageMDM": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a528e1_w420.webp",
+		  "Type": "Monster",
+		  "TypeMonster": "Normal",
+		  "ToExtraDeck": false,
+		  "Rarity": "N",
+		  "Race": "Insect",
+		  "Attribute": "EARTH",
+		  "Level": "4",
+		  "Effect": "A very vicious stag beetle that goes for the head.",
+		  "Atk": "1250",
+		  "Def": "1000"
+		}
 ];
