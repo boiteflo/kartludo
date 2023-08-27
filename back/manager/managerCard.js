@@ -38,7 +38,7 @@ class managerCard {
         res.status(201).send('Les cartes ont été insérés dans la liste des cartes a ajouter.');
     }
     
-    static getSheetRanges(){return ["Extra!B3:K"];}
+    static getSheetRanges(){return ["Extra!B3:M"];}
 
     static refresh= (sheetData, sheets, spreedSheetId) => {
         let errors=[];
