@@ -7,7 +7,7 @@ class managerCard {
 
     static async insertMDM(cards, res){       
         const { sheets } = await helperGoogleApi.authSheets();
-        let requestsPages = ['Extra!B3:K'];  
+        let requestsPages = ['Extra!B3:M'];  
         const sheetData = await helperGoogleApi.getSheetMultipleContent(sheets,spreedSheetId, requestsPages);
 
         let errorMessage = '';
@@ -25,8 +25,10 @@ class managerCard {
             updateSheet.push({range: 'Extra!G' + (sheetLine+i), value:card.Level});
             updateSheet.push({range: 'Extra!H' + (sheetLine+i), value:card.Attribute});
             updateSheet.push({range: 'Extra!I' + (sheetLine+i), value:card.Rarity});
-            updateSheet.push({range: 'Extra!J' + (sheetLine+i), value:card.ImageMDM});
-            updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Image});
+            updateSheet.push({range: 'Extra!J' + (sheetLine+i), value:card.Atk});
+            updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Def});
+            updateSheet.push({range: 'Extra!L' + (sheetLine+i), value:card.ImageMDM});
+            updateSheet.push({range: 'Extra!K' + (sheetLine+i), value:card.Effect});
 
             console.log((sheetLine+i) + card.NameEn);
         }
@@ -43,7 +45,7 @@ class managerCard {
         let updateSheet = [];
         let cards = require("../data/cards.js");
         
-        // Extra        
+        // Extra    
         if(sheetData.Extra && sheetData.Extra.length > 0){
             sheetData.Extra.forEach(cardArray=>
                 cards.push({
@@ -57,17 +59,16 @@ class managerCard {
                     "Level": cardArray[5] ?? "",
                     "Attribute": cardArray[6] ?? "",
                     "Rarity": cardArray[7] ?? "",
-                    "ImageMDM":cardArray[8] ?? "",
-                    "Image":cardArray[9] ?? "",
+                    "Atk":cardArray[8] ?? "",
+                    "Def":cardArray[9] ?? "",
+                    "ImageMDM":cardArray[10] ?? "",
+                    "Effect":cardArray[11] ?? "",
                     "ToExtraDeck" : cardArray[3]?.includes("Fusion"),
-                    "Atk":"0",
-                    "Def":"0",
                     "TcgRelease" : "2020_01_01",
                     "Bonus": true
                 })
             );
         }
-        
 
         cards = helperArray.removeDuplicatesObjects(cards, 'IdName');
 

@@ -362,5 +362,12 @@
 		"CardIdName": "xyzdragoncannon",
 		"CardNameEn": "XYZ-Dragon Cannon",
 		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3ada0e24f2d54a53ee4_w420.webp"
+	},
+	{
+		"Id": "metamorphose",
+		"Title": "Métamorphose",
+		"CardIdName": "metamorphosis",
+		"CardNameEn": "Metamorphosis",
+		"CardImage": "https://s3.duellinksmeta.com/cards/60c2b3aba0e24f2d54a52c52_w420.webp"
 	}
 ]

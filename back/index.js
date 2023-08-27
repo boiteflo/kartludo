@@ -90,11 +90,16 @@ app.use(express.static(__dirname + '/public/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 const port = process.env.PORT || 5000;
 
+const axios = require('axios');
 
 const managerMain = require("./manager/managerMain");
 app.listen(port, () => {
     managerMain.refresh();
-    console.log(`Server started on port ${port}`)
+    console.log(`Server started on port ${port}`);
+
+    setInterval(()=> {
+        axios.get('https://mdos.onrender.com/api/data/ranks')
+    }, 60000*12);
 });
 
 
