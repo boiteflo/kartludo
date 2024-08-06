@@ -5,6 +5,8 @@ cd front
 npm run serve
 
 déployer sur render : 
+cd front
+npm run build 
 git push
 
 mettre a jour les paramètres : 
