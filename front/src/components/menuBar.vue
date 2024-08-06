@@ -117,7 +117,7 @@ import linkButton from './linkButton';
         links : [
           {Text: 'DECKS', Icon: 'mdi-cards-outline', Url:'/decks'},
           {Text: 'DRAFT', Icon: 'mdi-cube', Url:'/cubes'},
-          {Text: 'CLUB', Icon: 'mdi-account-group', Url:'/club'},
+          {Text: 'FIGHT', Icon: 'mdi-sword', Url:'/fight'},
           {Text: 'OUTILS', Icon: 'mdi-hammer-wrench', Url:'/tool'},
           {Text: 'DISCORD', Icon: 'mdi-chat', Url:'https://discord.gg/zouloux', External:true},
         ]

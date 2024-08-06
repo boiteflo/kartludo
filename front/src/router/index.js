@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.5.3';
+let version = 'V2.5.4';
 
 Vue.use(VueRouter)
 
@@ -33,10 +33,10 @@ const routes = [
             import ('../pages/pageFormat.vue')
     },
     {
-        path: '/club',
-        name: version + ' MDOS Club YGO',
+        path: '/fight',
+        name: version + ' Fight RPG',
         component: () =>
-            import ('../pages/pageClub.vue')
+            import ('../pages/pageFight.vue')
     },
     {
         path: '/decks',

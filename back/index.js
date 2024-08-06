@@ -86,6 +86,9 @@ app.use('/api/format', routeFormats)
 var routeCardsMDM = require('./routes/cardToAdd');
 app.use('/api/cardToAdd', routeCardsMDM)
 
+var routeFight = require('./routes/fight');
+app.use('/api/fight', routeFight)
+
 app.use(express.static(__dirname + '/public/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 const port = process.env.PORT || 5000;
