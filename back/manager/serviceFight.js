@@ -216,5 +216,4 @@ class ServiceFight {
       }
 }
 
-
-export default ServiceFight;
+module.exports = ServiceFight;
