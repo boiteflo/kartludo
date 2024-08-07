@@ -10,6 +10,12 @@ String.prototype.replaceMany = function(searchTxt, replaceTxt) {
     const regex = new RegExp(searchTxt, 'g');
     return this.replace(regex, replaceTxt) ;
 }
+String.prototype.replaceAll = function(search, replace) {
+    let result = this;
+    while(result.includes(search))
+        result = result.replace(search, replace);
+    return result;
+}
 String.prototype.includesX2 = function() {
     return this.toLowerCase().startsWith("x2") || this.toLowerCase().endsWith("x2");
 }

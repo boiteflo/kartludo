@@ -87,7 +87,7 @@ class ServiceFight {
           messages.push(attributeProperty + " x");
         else{
           let rollInstruction = attributeValue + "+" + instructions[i+1];
-          rollInstruction = rollInstruction.replaceMany("+-", "-");
+          rollInstruction = rollInstruction.replaceAll("+-", "-");
           const updateValue = this.handleRoll(rollInstruction);
           messages.push(attributeProperty + " " + updateValue.expression);
           creature[attributeProperty] = updateValue.value;
@@ -171,10 +171,10 @@ class ServiceFight {
     static handleRoll(command){
       if(!command) return;
       const cmd = command.toString()
-        .replaceMany("+"," + ")
-        .replaceMany("-"," - ")
-        .replaceMany("*"," * ")
-        .replaceMany("/"," / ");
+        .replaceAll("+"," + ")
+        .replaceAll("-"," - ")
+        .replaceAll("*"," * ")
+        .replaceAll("/"," / ");
       const isRoll = this.isIncludingOperator(cmd);
       if(!isRoll)
         return this.rollDice(cmd);
