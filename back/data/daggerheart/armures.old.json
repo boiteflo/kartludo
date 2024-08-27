@@ -1,0 +1,669 @@
+{
+  "package": "world.armures",
+  "metadata": {
+    "label": "Armures",
+    "type": "Item",
+    "name": "armures",
+    "path": "packs/armures",
+    "system": "custom-system-builder",
+    "ownership": {
+      "PLAYER": "OBSERVER",
+      "ASSISTANT": "OWNER"
+    },
+    "flags": {},
+    "package": "world",
+    "id": "world.armures",
+    "packageType": "world",
+    "packageName": "daggerheart"
+  },
+  "type": "Item",
+  "items": [
+    {
+      "folder": null,
+      "name": "Armure de mailles",
+      "type": "equippableItem",
+      "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "protection",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Protection",
+                  "defaultValue": "4",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "active",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Active ?",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "1",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "capacites",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Capacités et malus",
+                  "defaultValue": "",
+                  "size": null,
+                  "style": "dialog",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "oJ6TRoScvoNA0SlR",
+        "props": {
+          "name": "Armure de mailles",
+          "protection": "6",
+          "active": "1",
+          "capacites": "<p>Lourde (-1 &agrave; l'Esquive)</p>"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 3971040649
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718871850719,
+        "modifiedTime": 1724497556900,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "7Z41GZDpYsJTzZfu"
+    },
+    {
+      "folder": null,
+      "name": "Armure de cuir",
+      "type": "equippableItem",
+      "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "protection",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Protection",
+                  "defaultValue": "4",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "active",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Active ?",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "1",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "capacites",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Capacités et malus",
+                  "defaultValue": "",
+                  "size": null,
+                  "style": "dialog",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "oJ6TRoScvoNA0SlR",
+        "props": {
+          "name": "Armure de cuir",
+          "protection": "4",
+          "active": "1"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 3971040649
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718871850719,
+        "modifiedTime": 1724497556900,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "LwXXOcpw8TpbOycP"
+    },
+    {
+      "folder": null,
+      "name": "Armure souple",
+      "type": "equippableItem",
+      "img": "icons/equipment/chest/robe-layered-purple.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "protection",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Protection",
+                  "defaultValue": "4",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "active",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Active ?",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "1",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "capacites",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Capacités et malus",
+                  "defaultValue": "",
+                  "size": null,
+                  "style": "dialog",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "oJ6TRoScvoNA0SlR",
+        "props": {
+          "name": "Armure souple",
+          "protection": "2",
+          "active": "1",
+          "capacites": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 3971040649
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718871693373,
+        "modifiedTime": 1724497556900,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "Y5f1DZtqieQ1u8PS"
+    },
+    {
+      "folder": null,
+      "name": "Simple toge",
+      "type": "equippableItem",
+      "img": "icons/commodities/cloth/cloth-bolt-glow-white.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "protection",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Protection",
+                  "defaultValue": "4",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "active",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Active ?",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "1",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "capacites",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Capacités et malus",
+                  "defaultValue": "",
+                  "size": null,
+                  "style": "dialog",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "oJ6TRoScvoNA0SlR",
+        "props": {
+          "name": "Simple toge",
+          "protection": "1",
+          "active": "1"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 3971040649
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718211451522,
+        "modifiedTime": 1724497556900,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "uKjy1lj4QYgsjOFO"
+    },
+    {
+      "folder": null,
+      "name": "Armure de plate",
+      "type": "equippableItem",
+      "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "protection",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Protection",
+                  "defaultValue": "4",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "active",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Active ?",
+                  "defaultValue": "1",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "0",
+                  "maxVal": "1",
+                  "allowRelative": false,
+                  "showControls": false,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "capacites",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Capacités et malus",
+                  "defaultValue": "",
+                  "size": null,
+                  "style": "dialog",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "grid-2",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "oJ6TRoScvoNA0SlR",
+        "props": {
+          "name": "Armure de plate",
+          "protection": "8",
+          "active": "1",
+          "capacites": "<p>Tr&egrave;s lourde (-2 &agrave; l'Esquive, -1 aux jets d'Agilit&eacute;)</p>"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 3971040649
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718871915469,
+        "modifiedTime": 1724497556900,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "wQOH9jFbX4BZFPjj"
+    }
+  ],
+  "source": {
+    "world": "daggerheart",
+    "system": "custom-system-builder",
+    "version": {
+      "core": "11.315",
+      "system": "3.0.0"
+    }
+  },
+  "folders": []
+}

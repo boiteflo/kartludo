@@ -111,10 +111,11 @@
     </div>
 </template>
 
-
 <script>
 import ServiceFight from '../services/serviceFight'
 import ServiceBack from '../services/serviceBack'
+//import { io } from "socket.io-client";
+
 
 export default {
   name: 'pageClub',
@@ -138,6 +139,15 @@ export default {
     ServiceBack.getAll('fight').then(result => {
       this.fights = result;
     });
+    /*
+    var socket = io("http://localhost:5000");
+    socket.on('connect', function() {
+      console.log('connected to server');
+    });
+    socket.on('disconnect', function() {
+      console.log('disconnected from server');
+    });
+    */
   },
   methods: {
     selectSalon(salonSelected){

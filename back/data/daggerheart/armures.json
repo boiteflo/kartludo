@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Armure de mailles",
+		"protection": "6",
+		"active": "1",
+		"capacites": "<p>Lourde (-1 &agrave; l'Esquive)</p>"
+	},
+	{
+		"name": "Armure de cuir",
+		"protection": "4",
+		"active": "1"
+	},
+	{
+		"name": "Armure souple",
+		"protection": "2",
+		"active": "1",
+		"capacites": ""
+	},
+	{
+		"name": "Simple toge",
+		"protection": "1",
+		"active": "1"
+	},
+	{
+		"name": "Armure de plate",
+		"protection": "8",
+		"active": "1",
+		"capacites": "<p>Tr&egrave;s lourde (-2 &agrave; l'Esquive, -1 aux jets d'Agilit&eacute;)</p>"
+	}
+]

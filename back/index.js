@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const helperRouteJsonGet = require("./helper/helperRouteJsonGet");
+const helperRouteJsonGetFolder = require("./helper/helperRouteJsonGetFolder");
 
 String.prototype.stringify = function(obj) {
     return JSON.stringify(obj, null, "\t");
@@ -80,6 +81,9 @@ app.use('/api/cardMDM', helperRouteJsonGet.createDalRoute('back/data/cardsAll', 
 app.use('/api/extension', helperRouteJsonGet.createDalRoute('back/data/extensions', 'set_code'))
 app.use('/api/tournament', helperRouteJsonGet.createDalRoute('back/data/tournaments', 'Id'))
 
+//app.use('/api/daggerheart', helperRouteJsonGet.createDalRoute('back/data/daggerheart/class', 'name'))
+app.use('/api/daggerheart', helperRouteJsonGetFolder.createDalRoute('back/data/daggerheart'))
+
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)
 
@@ -100,9 +104,18 @@ app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 const port = process.env.PORT || 5000;
 
 const axios = require('axios');
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+
+io.on('connection', (socket) => {
+    console.log('a user connected');
+  });
 
 const managerMain = require("./manager/managerMain");
-app.listen(port, () => {
+server.listen(port, () => {
     managerMain.refresh();
     console.log(`Server started on port ${port}`);
     

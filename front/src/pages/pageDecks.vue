@@ -298,7 +298,6 @@ export default {
           .concat([
             {Id:'tous', Title:'Tous', MainCard:'Infinite Cards', DecksLength:this.decks.length},
             {Id:'anime', Title:'Animé', MainCard:'Yu-Jo Friendship', DecksLength:this.decks.filter(x=> x.Rank == 4).length},
-            {Id:'club', Title:'Club Yu-Gi-Oh!', Image:require('../assets/club.jpg'), DecksLength:0},
             {Id:'cube', Title:'Draft Cube', Image:require('../assets/cube.jpg'), DecksLength:this.decks.filter(x=> x.Rank === '5').length},
           ]);
 

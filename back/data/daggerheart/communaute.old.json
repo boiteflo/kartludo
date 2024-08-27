@@ -1,0 +1,1363 @@
+{
+  "package": "world.communaute",
+  "metadata": {
+    "label": "Communauté",
+    "type": "Item",
+    "name": "communaute",
+    "path": "packs/communaute",
+    "system": "custom-system-builder",
+    "ownership": {
+      "PLAYER": "OBSERVER",
+      "ASSISTANT": "OWNER"
+    },
+    "flags": {},
+    "package": "world",
+    "id": "world.communaute",
+    "packageType": "world",
+    "packageName": "daggerheart"
+  },
+  "type": "Item",
+  "items": [
+    {
+      "folder": null,
+      "name": "Communauté des bas-fonds",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Commaunte%CC%81%20des%20bas-fonds.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Vaurien</strong> : Vous avez l'avantage sur tous les jets pour n&eacute;gocier avec des criminels, d&eacute;tecter les mensonges ou trouver un endroit s&ucirc;r o&ugrave; se cacher.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des N&eacute;s-des-Rues signifie avoir grandi dans les bas-fonds de la soci&eacute;t&eacute;, entour&eacute; de criminels et d'escrocs.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "2ArDbMHah8lN03EP"
+    },
+    {
+      "folder": null,
+      "name": "Communauté nomade",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20nomade.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Sac de nomade</strong> : Ajoutez un Sac d nomade &agrave; votre inventaire. Une fois par session, vous pouvez d&eacute;penser un point d'Espoir pour plonger la main dans ce sac et en sortir un objet commun utile &agrave; la situation. Travaillez avec le MJ pour d&eacute;terminer ce qu'est cet objet.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des N&eacute;s-Nomades signifie que vous avez v&eacute;cu en tant que nomade, sans domicile permanent, mais en d&eacute;couvrant une grande vari&eacute;t&eacute; de cultures.</em></p>",
+          "type": "Communauté",
+          "cout": "1 espoir"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "DHDOFqYyDtMCCJtK"
+    },
+    {
+      "folder": null,
+      "name": "Communauté stricte",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20stricte.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>D&eacute;di&eacute;</strong> : Notez trois dictons ou valeurs que votre &eacute;ducation vous a inculqu&eacute;s. Une fois par repos court, lorsque vous d&eacute;crivez comment vous incarnez l'un de ces principes &agrave; travers votre action actuelle, vous pouvez lancer un d20 comme votre D&eacute; de l'Espoir au lieu d'un d12.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des Ordonn&eacute;s-N&eacute;s signifie que vous venez d'un collectif qui met l'accent sur la discipline ou la foi, et vous respectez un ensemble de principes refl&eacute;tant votre exp&eacute;rience l&agrave;-bas.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "Zg0QpZd2aR8S83nk"
+    },
+    {
+      "folder": null,
+      "name": "Communauté souterraine",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20souterraine.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Une vie sans lumi&egrave;re</strong> : Lorsque vous vous trouvez dans une zone &agrave; faible luminosit&eacute; ou fortement sombre, vous avez l'avantage sur les jets pour vous cacher, enqu&ecirc;ter ou percevoir des d&eacute;tails dans cette zone.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des N&eacute;s-des-Profondeurs signifie que vous venez d'une soci&eacute;t&eacute; souterraine.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "bkzg6e0EDAchACr5"
+    },
+    {
+      "folder": null,
+      "name": "Communauté montagnarde",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaut%C3%A9%20montagnarde.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Stable</strong> : Vous avez l'avantage sur les jets pour traverser des falaises et des rebords dangereux, naviguer dans des environnements hostiles et utiliser vos connaissances en survie. De plus, gagnez un emplacement d'armure &agrave; la cr&eacute;ation de votre personnage.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des N&eacute;s-des-Cr&ecirc;tes signifie que vous avez &eacute;lu domicile dans les sommets rocheux et les falaises abruptes des montagnes.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "cAMwjr63bQdqma8z"
+    },
+    {
+      "folder": null,
+      "name": "Communauté éduquée",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/haute%20e%CC%81ductation.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Lettr&eacute; :</strong> Vous avez un avantage sur tous les jets concernant l'histoire, la culture ou la politique d'une personne ou d'un lieu important.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des Savoirs-N&eacute;s signifie que vous venez d'une soci&eacute;t&eacute; qui privil&eacute;gie une grande prouesse acad&eacute;mique ou politique.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "mCdZ9Jm5r2z3btzq"
+    },
+    {
+      "folder": null,
+      "name": "Communauté sauvage",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20sauvage.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Pas L&eacute;ger</strong> : Votre d&eacute;placement est naturellement silencieux. Vous avez l'avantage sur les jets visant &agrave; vous d&eacute;placer sans &ecirc;tre entendu.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des Sauvagornes signifie que vous avez v&eacute;cu au c&oelig;ur de la for&ecirc;t profonde.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "mXQ3bqr92fXOW0Oc"
+    },
+    {
+      "folder": null,
+      "name": "Communauté noble",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20noble.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Privil&egrave;ge :</strong> Vous avez un avantage sur les jets que vous faites pour converser avec des nobles, n&eacute;gocier des prix ou utiliser votre r&eacute;putation pour obtenir ce que vous voulez.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des Haut-N&eacute;s signifie que vous &ecirc;tes n&eacute; dans une vie d'&eacute;l&eacute;gance, d'opulence et de prestige au sein des plus hauts &eacute;chelons de la soci&eacute;t&eacute;.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "ptJhesbVN93jRbBN"
+    },
+    {
+      "folder": null,
+      "name": "Communauté côtière",
+      "type": "equippableItem",
+      "img": "https://assets.forge-vtt.com/5f9a8e91a8920ad013b11d33/Daggerheart/Communaute%CC%81%20co%CC%82tie%CC%80re.png",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Haute naissance",
+          "description": "<p><strong>Connaissance de la Mar&eacute;e</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons &eacute;gal &agrave; votre Niveau. Avant de faire un jet d'action, vous pouvez d&eacute;penser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 &agrave; votre jet. &Agrave; la fin d'une session, d&eacute;faussez tous les jetons non utilis&eacute;s.</p>",
+          "flavor": "<p><em>Faire partie d'une communaut&eacute; des N&eacute;s-des-Mers signifie que vous avez v&eacute;cu sur ou pr&egrave;s d'un grand plan d'eau.</em></p>",
+          "type": "Communauté",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1718522716897,
+        "modifiedTime": 1724497620907,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "r7oKVy0dZdqEwkUI"
+    }
+  ],
+  "source": {
+    "world": "daggerheart",
+    "system": "custom-system-builder",
+    "version": {
+      "core": "11.315",
+      "system": "3.0.0"
+    }
+  },
+  "folders": []
+}

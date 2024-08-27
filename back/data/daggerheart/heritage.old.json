@@ -1,0 +1,2589 @@
+{
+  "package": "world.heritage",
+  "metadata": {
+    "label": "Héritage",
+    "type": "Item",
+    "name": "heritage",
+    "path": "packs/heritage",
+    "system": "custom-system-builder",
+    "ownership": {
+      "PLAYER": "OBSERVER",
+      "ASSISTANT": "OWNER"
+    },
+    "flags": {},
+    "package": "world",
+    "id": "world.heritage",
+    "packageType": "world",
+    "packageName": "daggerheart"
+  },
+  "type": "Item",
+  "items": [
+    {
+      "folder": null,
+      "name": "Drakona",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Souffle &Eacute;l&eacute;mentaire :</strong> Choisissez un &eacute;l&eacute;ment pour votre souffle (glace, feu, &eacute;lectricit&eacute;, etc.). Vous pouvez utiliser ce souffle contre une cible ou un groupe de cibles &agrave; port&eacute;e Tr&egrave;s Proche, en le traitant comme une arme d'Instinct infligeant 1d8 d&eacute;g&acirc;ts magiques en utilisant votre Ma&icirc;trise.</p>\n<p><strong>&Eacute;cailles :</strong> Vos &eacute;cailles naturelles agissent comme une protection, augmentant vos Seuils de blessure de +1.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "62GDZUIsTrKv62pj"
+    },
+    {
+      "folder": null,
+      "name": "Firbolg",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Calme Naturel :</strong> Chaque fois que vous devriez perdre un Stress, lancez un d6. Sur un r&eacute;sultat de 6, ne le perdez pas.</p>\n<p><strong>Charge :</strong> Lorsque vous r&eacute;ussissez un jet d'Agilit&eacute; pour passer d'une port&eacute;e Lointaine ou Tr&egrave;s Lointaine &agrave; la port&eacute;e de Corps &agrave; Corps avec une ou plusieurs cibles, marquez un Stress pour infliger 1d12 d&eacute;g&acirc;ts physiques &agrave; toutes les cibles.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "7izmQuRjygw7fBgr"
+    },
+    {
+      "folder": null,
+      "name": "Fée",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Fée",
+          "description": "<p><strong>Ailes :</strong> Vous pouvez voler. En volant, marquez un Stress avant le jet d'attaque d'un adversaire pour augmenter votre Esquive de +2 contre cette attaque.</p>\n<p><strong>Tisseur de Chance :</strong> Une fois par session, apr&egrave;s qu'un alli&eacute; ou vous-m&ecirc;me dans une port&eacute;e Pr&egrave;s a fait un jet d'action, vous pouvez d&eacute;penser 3 Espoirs pour relancer les d&eacute;s de dualit&eacute;. Vous devez accepter le nouveau r&eacute;sultat.</p>",
+          "flavor": "<p><em>flavor</em></p>",
+          "type": "héritage",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1721051466191,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "84weSkRWvKs5B2hu"
+    },
+    {
+      "folder": null,
+      "name": "Gobelin",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Sens du Danger :</strong> Une fois par repos court, marquez un Stress pour faire relancer une attaque contre vous ou un alli&eacute; &agrave; port&eacute;e Tr&egrave;s Proche de vous.</p>\n<p><strong>Pied s&ucirc;r :</strong> Vous ignorez le d&eacute;savantage sur les jets d'Agilit&eacute;.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "CrkIxhiUu9sHSIOQ"
+    },
+    {
+      "folder": null,
+      "name": "Galapa",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            },
+            {
+              "key": "cout",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "label": "Coût",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "maxLength": "",
+              "type": "textField"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Fée",
+          "description": "<p><strong>Carapace de Protection :</strong> Votre carapace fournit un bouclier naturel. Ajoutez votre Ma&icirc;trise &agrave; votre Protection.</p>\n<p><strong>Lent et S&ucirc;r :</strong> Pendant un combat, vous pouvez effectuer un jet d'attaque avec avantage en donnant un jeton d'action suppl&eacute;mentaire au MJ.</p>",
+          "flavor": "<p><em>flavor</em></p>",
+          "type": "héritage",
+          "cout": ""
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 1637881183
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1721051466191,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "H6ZqLSmb24c6XsLa"
+    },
+    {
+      "folder": null,
+      "name": "Halfelin",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p class=\"p1\"><strong>Esprit joyeux :</strong> Au d&eacute;but de chaque session, donnez un Point d'Espoir &agrave; chaque membre de votre groupe.</p>\n<p class=\"p1\"><strong>Petit Chanceux :</strong> Lorsque vous obtenez un 1 sur votre d&eacute; d'Espoir, vous pouvez le relancer, et vous devez prendre le nouveau r&eacute;sultat.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "JjbxVdU2X8kYQFum"
+    },
+    {
+      "folder": null,
+      "name": "Elfe",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<div class=\"flex-shrink-0 flex flex-col relative items-end\">\n<div>\n<div class=\"pt-0.5 juice:pt-0\">\n<div class=\"gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full juice:h-8 juice:w-8\">&nbsp;</div>\n</div>\n</div>\n</div>\n<div class=\"group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn\">\n<div class=\"flex-col gap-1 md:gap-3\">\n<div class=\"flex flex-grow flex-col max-w-full\">\n<div class=\"min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 juice:w-full juice:items-end overflow-x-auto gap-2\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"203f84e1-9d92-490a-9ed1-cf16b5a28413\">\n<div class=\"flex w-full flex-col gap-1 juice:empty:hidden juice:first:pt-[3px]\">\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\n<p><strong>Transe spirituelle :</strong> Pendant un repos, vous pouvez entrer en transe et effectuer une action suppl&eacute;mentaire de temps d'arr&ecirc;t.</p>\n<p><strong>R&eacute;actions Rapides :</strong> Vous pouvez marquer un Stress pour b&eacute;n&eacute;ficier d'un avantage sur un Jet de R&eacute;action.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "KNwpZC03QibaWcUZ"
+    },
+    {
+      "folder": null,
+      "name": "Halfelin",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p class=\"p1\"><strong>Esprit joyeux :</strong> Au d&eacute;but de chaque session, donnez un Point d'Espoir &agrave; chaque membre de votre groupe.</p>\n<p class=\"p1\"><strong>Petit Chanceux :</strong> Lorsque vous obtenez un 1 sur votre d&eacute; d'Espoir, vous pouvez le relancer, et vous devez prendre le nouveau r&eacute;sultat.</p>",
+          "flavor": "<p><em>flavor</em></p>",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "VjgPU1XwAo0qEttU"
+    },
+    {
+      "folder": null,
+      "name": "Humain",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<div class=\"flex-shrink-0 flex flex-col relative items-end\">\n<div>\n<div class=\"pt-0.5 juice:pt-0\">\n<div class=\"gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full juice:h-8 juice:w-8\">&nbsp;</div>\n</div>\n</div>\n</div>\n<div class=\"group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn\">\n<div class=\"flex-col gap-1 md:gap-3\">\n<div class=\"flex flex-grow flex-col max-w-full\">\n<div class=\"min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 juice:w-full juice:items-end overflow-x-auto gap-2\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"353e054f-d62e-4a3d-a153-0bfcd63c4855\">\n<div class=\"flex w-full flex-col gap-1 juice:empty:hidden juice:first:pt-[3px]\">\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\n<p><strong>Endurance &Eacute;lev&eacute;e :</strong> Notez une case de Stress suppl&eacute;mentaire lors de la cr&eacute;ation de personnage.</p>\n<p><strong>Adaptabilit&eacute; :</strong> Lorsque vous &eacute;chouez &agrave; un jet qui utilise l'une de vos Exp&eacute;riences, vous pouvez marquer un Stress pour relancer le d&eacute;. Vous devez accepter le nouveau r&eacute;sultat.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "WxCKbkxxztqWRjLX"
+    },
+    {
+      "folder": null,
+      "name": "Nain",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Fortitude Accrue :</strong> Vous pouvez d&eacute;penser 3 Espoirs pour r&eacute;duire de moiti&eacute; les d&eacute;g&acirc;ts physiques re&ccedil;us.</p>\n<p><strong>Peau &Eacute;paisse :</strong> Lorsque vous subissez une blessure mineure (1PV), lancez 1D6. Sur un r&eacute;sultat de 5+, vous ne subissez pas de blessure.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "ej7fdFmflDSUjjFg"
+    },
+    {
+      "folder": null,
+      "name": "Infernis",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Intr&eacute;pide</strong> : Lorsque vous faites un jet avec Peur, vous pouvez marquer 2 Stress pour en faire un jet avec Espoir &agrave; la place.</p>\n<p><strong>Visage Terrifiant</strong> : Vous avez l'avantage sur les jets pour intimider une cible hostile.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "iHgzcm5zf35qkNYw"
+    },
+    {
+      "folder": null,
+      "name": "Croa Croa",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Amphibie :</strong> Vous pouvez respirer et vous d&eacute;placer sous l'eau aussi facilement que sur terre.</p>\n<p><strong>Langue Longue :</strong> Vous pouvez utiliser votre longue langue pour attraper des objets &agrave; port&eacute;e de main. Vous pouvez &eacute;galement marquer un Stress pour l'utiliser comme une arme de Finesse &agrave; port&eacute;e proche infligeant&nbsp; des d12 de d&eacute;g&acirc;ts physiques en utilisant votre Ma&icirc;trise.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "jEnyGpFGZO0QxoBc"
+    },
+    {
+      "folder": null,
+      "name": "Géant",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Endurance :</strong> Gagnez une case suppl&eacute;mentaire de points de vie lors de la cr&eacute;ation du personnage.</p>\n<p><strong>Port&eacute;e :</strong> Consid&eacute;rez que les armes, les capacit&eacute; et les sorts avec une port&eacute;e M&ecirc;l&eacute;e ont une port&eacute;e Tr&egrave;s Proche &agrave; la place.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "mwNxHAgilXlhBs4w"
+    },
+    {
+      "folder": null,
+      "name": "Clank",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Design sp&eacute;cifique</strong> : D&eacute;cidez dans quel but vous avez &eacute;t&eacute; cr&eacute;&eacute;. Choisissez une Exp&eacute;rience que vous poss&eacute;dez qui refl&egrave;te cela et augmentez-la de +1.</p>\n<p><strong>Efficient</strong> : Lorsque vous prenez un repos court, vous pouvez substituer une action de repos long &agrave; l'une de vos actions de repos court.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        },
+        "core": {}
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "oXrKotL1pHX0AQRA"
+    },
+    {
+      "folder": null,
+      "name": "Katari",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Instincts f&eacute;lins :</strong> Lorsque vous faites un jet d'Agilit&eacute;, vous pouvez marquer un Stress pour relancer votre D&eacute; d'Espoir. Vous devez prendre le nouveau r&eacute;sultat.</p>\n<p><strong>Griffes r&eacute;tractiles :</strong> Vous pouvez faire un jet d'Agilit&eacute; pour griffer une cible &agrave; port&eacute;e de m&ecirc;l&eacute;e. En cas de succ&egrave;s, elle devient Vuln&eacute;rable.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "rIMkBNE59XCbUvMk"
+    },
+    {
+      "folder": null,
+      "name": "Fungil",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>R&eacute;seau Fongique :</strong> Vous pouvez effectuer un jet d'Instinct (12) pour communiquer avec d'autres membres de votre ascendance &agrave; n'importe quelle distance en utilisant votre r&eacute;seau myc&eacute;lien.</p>\n<p><strong>Connexion &agrave; la Mort :</strong> En touchant un cadavre r&eacute;cemment d&eacute;c&eacute;d&eacute;, vous pouvez marquer un Stress pour extraire un souvenir li&eacute; &agrave; une &eacute;motion ou sensation sp&eacute;cifique.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "tyIaIof3BPGglRLS"
+    },
+    {
+      "folder": null,
+      "name": "Simia",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Agile :</strong> Augmentez votre Esquive de +1 lors de la cr&eacute;ation de personnage.</p>\n<p><strong>Grimpeur Naturel :</strong> Vous avez l'avantage sur les jets d'Agilit&eacute; impliquant l'&eacute;quilibre et l'escalade.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "uqGZHvIReHhv3eGJ"
+    },
+    {
+      "folder": null,
+      "name": "Faune",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Saut :</strong> Vous pouvez facilement sauter jusqu'&agrave; une distance Proche &agrave; travers des &eacute;carts ou des gouffres sans effectuer de jet d'Agilit&eacute;.</p>\n<p><strong>Coup de Pied :</strong> Lors d'une attaque au corps &agrave; corps r&eacute;ussie, vous pouvez marquer un Stress pour vous propulser loin de votre cible, ajoutant 2d6 aux d&eacute;g&acirc;ts et repoussant soit la cible, soit vous-m&ecirc;me hors de la M&ecirc;l&eacute;e.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "wHF0DA58FOODYgCi"
+    },
+    {
+      "folder": null,
+      "name": "Orc",
+      "type": "equippableItem",
+      "img": "icons/environment/people/commoner.webp",
+      "system": {
+        "hidden": [],
+        "header": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Type",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "charList": "",
+                  "maxLength": "",
+                  "type": "textField"
+                }
+              ],
+              "flow": "horizontal",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_header",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "body": {
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "divBorder",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "description",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><strong>Description :</strong> Blabla</p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                },
+                {
+                  "key": "flavor",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "",
+                  "defaultValue": "<p><em>flavor</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "center",
+              "type": "panel"
+            }
+          ],
+          "key": "custom_body",
+          "cssClass": null,
+          "role": 0,
+          "permission": 0,
+          "tooltip": null,
+          "visibilityFormula": null,
+          "flow": null,
+          "align": null,
+          "type": "panel"
+        },
+        "display": {
+          "width": "600",
+          "height": "600",
+          "fix_size": false,
+          "pp_width": "64",
+          "pp_height": "64"
+        },
+        "template": "HKv3zxpNqXVwdMFT",
+        "props": {
+          "name": "Halfelin",
+          "description": "<p><strong>Robuste :</strong> Lorsque qu'il ne vous reste plus qu'un Point de Vie, votre Protection est doubl&eacute;e.</p>\n<p><strong>D&eacute;fenses :</strong> Apr&egrave;s avoir r&eacute;ussi une attaque de m&ecirc;l&eacute;e, vous pouvez d&eacute;penser de l'Espoir pour empaler la cible avec vos d&eacute;fenses, ajoutant +1d6 au jet de d&eacute;g&acirc;ts.</p>",
+          "flavor": "",
+          "type": "héritage"
+        },
+        "modifiers": [],
+        "unique": false,
+        "templateSystemUniqueVersion": 907406544
+      },
+      "effects": [],
+      "flags": {
+        "custom-system-builder": {
+          "version": "3.0.0"
+        }
+      },
+      "_stats": {
+        "systemId": "custom-system-builder",
+        "systemVersion": "3.0.0",
+        "coreVersion": "11.315",
+        "createdTime": 1717881967462,
+        "modifiedTime": 1724497629940,
+        "lastModifiedBy": "9fpDiPUD73GCeOkI"
+      },
+      "_id": "wh603y6R6BNJxWZJ"
+    }
+  ],
+  "source": {
+    "world": "daggerheart",
+    "system": "custom-system-builder",
+    "version": {
+      "core": "11.315",
+      "system": "3.0.0"
+    }
+  },
+  "folders": []
+}

@@ -1,0 +1,47 @@
+[
+	{
+		"id":"slyborne",
+		"name": "Communauté des bas-fonds",
+		"description": "<p><strong>Vaurien</strong> : Vous avez l'avantage sur tous les jets pour n&eacute;gocier avec des criminels, d&eacute;tecter les mensonges ou trouver un endroit s&ucirc;r o&ugrave; se cacher.</p>"
+	},
+	{
+		"id":"wanderborne",
+		"name": "Communauté nomade",
+		"description": "<p><strong>Sac de nomade</strong> : Ajoutez un Sac d nomade &agrave; votre inventaire. Une fois par session, vous pouvez d&eacute;penser un point d'Espoir pour plonger la main dans ce sac et en sortir un objet commun utile &agrave; la situation. Travaillez avec le MJ pour d&eacute;terminer ce qu'est cet objet.</p>"
+	},
+	{
+		"id":"orderborne",
+		"name": "Communauté stricte",
+		"description": "<p><strong>D&eacute;di&eacute;</strong> : Notez trois dictons ou valeurs que votre &eacute;ducation vous a inculqu&eacute;s. Une fois par repos court, lorsque vous d&eacute;crivez comment vous incarnez l'un de ces principes &agrave; travers votre action actuelle, vous pouvez lancer un d20 comme votre D&eacute; de l'Espoir au lieu d'un d12.</p>"
+	},
+	{
+		"id":"underborne",
+		"name": "Communauté souterraine",
+		"description": "<p><strong>Une vie sans lumi&egrave;re</strong> : Lorsque vous vous trouvez dans une zone &agrave; faible luminosit&eacute; ou fortement sombre, vous avez l'avantage sur les jets pour vous cacher, enqu&ecirc;ter ou percevoir des d&eacute;tails dans cette zone.</p>"
+	},
+	{
+		"id":"ridgeborne",
+		"name": "Communauté montagnarde",
+		"description": "<p><strong>Stable</strong> : Vous avez l'avantage sur les jets pour traverser des falaises et des rebords dangereux, naviguer dans des environnements hostiles et utiliser vos connaissances en survie. De plus, gagnez un emplacement d'armure &agrave; la cr&eacute;ation de votre personnage.</p>"
+	},
+	{
+		"id":"loreborne",
+		"name": "Communauté éduquée",
+		"description": "<p><strong>Lettr&eacute; :</strong> Vous avez un avantage sur tous les jets concernant l'histoire, la culture ou la politique d'une personne ou d'un lieu important.</p>"
+	},
+	{
+		"id":"wildborne",
+		"name": "Communauté sauvage",
+		"description": "<p><strong>Pas L&eacute;ger</strong> : Votre d&eacute;placement est naturellement silencieux. Vous avez l'avantage sur les jets visant &agrave; vous d&eacute;placer sans &ecirc;tre entendu.</p>"
+	},
+	{
+		"id":"highborne",
+		"name": "Communauté noble",
+		"description": "<p><strong>Privil&egrave;ge :</strong> Vous avez un avantage sur les jets que vous faites pour converser avec des nobles, n&eacute;gocier des prix ou utiliser votre r&eacute;putation pour obtenir ce que vous voulez.</p>"
+	},
+	{
+		"id":"seaborne",
+		"name": "Communauté côtière",
+		"description": "<p><strong>Connaissance de la Mar&eacute;e</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons &eacute;gal &agrave; votre Niveau. Avant de faire un jet d'action, vous pouvez d&eacute;penser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 &agrave; votre jet. &Agrave; la fin d'une session, d&eacute;faussez tous les jetons non utilis&eacute;s.</p>"
+	}
+]
