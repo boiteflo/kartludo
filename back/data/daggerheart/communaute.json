@@ -2,46 +2,46 @@
 	{
 		"id":"slyborne",
 		"name": "Communauté des bas-fonds",
-		"description": "<p><strong>Vaurien</strong> : Vous avez l'avantage sur tous les jets pour n&eacute;gocier avec des criminels, d&eacute;tecter les mensonges ou trouver un endroit s&ucirc;r o&ugrave; se cacher.</p>"
+		"description": "<p><i>Faire partie d'une communauté des bas-fonds signifie que vous avez grandi dans les bas-fonds de la société, entouré de criminels et d'escrocs.</i><br><br><strong>Vaurien</strong> : Vous avez l'avantage sur tous les jets pour négocier avec des criminels, détecter les mensonges ou trouver un endroit sûr où se cacher.</p>"
 	},
 	{
 		"id":"wanderborne",
 		"name": "Communauté nomade",
-		"description": "<p><strong>Sac de nomade</strong> : Ajoutez un Sac d nomade &agrave; votre inventaire. Une fois par session, vous pouvez d&eacute;penser un point d'Espoir pour plonger la main dans ce sac et en sortir un objet commun utile &agrave; la situation. Travaillez avec le MJ pour d&eacute;terminer ce qu'est cet objet.</p>"
+		"description": "<p><i>Faire partie d'une communauté nomade signifie que vous avez vécu comme un nomade, sans domicile permanent mais en découvrant une grande variété de cultures.</i><br><br><strong>Sac de nomade</strong> : Ajoutez un Sac d nomade à votre inventaire. Une fois par session, vous pouvez dépenser un point d'Espoir pour plonger la main dans ce sac et en sortir un objet commun utile à la situation. Travaillez avec le MJ pour déterminer ce qu'est cet objet.</p>"
 	},
 	{
 		"id":"orderborne",
-		"name": "Communauté stricte",
-		"description": "<p><strong>D&eacute;di&eacute;</strong> : Notez trois dictons ou valeurs que votre &eacute;ducation vous a inculqu&eacute;s. Une fois par repos court, lorsque vous d&eacute;crivez comment vous incarnez l'un de ces principes &agrave; travers votre action actuelle, vous pouvez lancer un d20 comme votre D&eacute; de l'Espoir au lieu d'un d12.</p>"
+		"name": "Communauté de l'ordre",
+		"description": "<p><i>Faire partie d'une communauté de l'ordre signifie que vous faites partie d'un collectif axé sur la discipline ou la foi, et que vous adhérez à un ensemble de principes qui reflètent votre expérience là-bas.</i><br><br><strong>Dédié</strong> : Notez trois dictons ou valeurs que votre éducation vous a inculqués. Une fois par repos court, lorsque vous décrivez comment vous incarnez l'un de ces principes à travers votre action actuelle, vous pouvez lancer un d20 comme votre Dé de l'Espoir au lieu d'un d12.</p>"
 	},
 	{
 		"id":"underborne",
 		"name": "Communauté souterraine",
-		"description": "<p><strong>Une vie sans lumi&egrave;re</strong> : Lorsque vous vous trouvez dans une zone &agrave; faible luminosit&eacute; ou fortement sombre, vous avez l'avantage sur les jets pour vous cacher, enqu&ecirc;ter ou percevoir des d&eacute;tails dans cette zone.</p>"
+		"description": "<p><i>Faire partie d'une communauté souterraine signifie que vous venez d'une société souterraine.</i><br><br><strong>Une vie sans lumière</strong> : Lorsque vous vous trouvez dans une zone à faible luminosité ou fortement sombre, vous avez l'avantage sur les jets pour vous cacher, enquêter ou percevoir des détails dans cette zone.</p>"
 	},
 	{
 		"id":"ridgeborne",
 		"name": "Communauté montagnarde",
-		"description": "<p><strong>Stable</strong> : Vous avez l'avantage sur les jets pour traverser des falaises et des rebords dangereux, naviguer dans des environnements hostiles et utiliser vos connaissances en survie. De plus, gagnez un emplacement d'armure &agrave; la cr&eacute;ation de votre personnage.</p>"
+		"description": "<p><i>Faire partie d'une communauté montagnarde signifie que vous avez appelé les sommets rocheux et les falaises escarpées de la montagne votre foyer.</i><br><br><strong>Stable</strong> : Vous avez l'avantage sur les jets pour traverser des falaises et des rebords dangereux, naviguer dans des environnements hostiles et utiliser vos connaissances en survie. De plus, gagnez un emplacement d'armure à la création de votre personnage.</p>"
 	},
 	{
 		"id":"loreborne",
-		"name": "Communauté éduquée",
-		"description": "<p><strong>Lettr&eacute; :</strong> Vous avez un avantage sur tous les jets concernant l'histoire, la culture ou la politique d'une personne ou d'un lieu important.</p>"
+		"name": "Communauté érudit",
+		"description": "<p><i>Faire partie d'une communauté érudit signifie que vous venez d'une société qui privilégie une grande prouesse académique ou politique.</i><br><br><strong>Lettré :</strong> Vous avez un avantage sur tous les jets concernant l'histoire, la culture ou la politique d'une personne ou d'un lieu important.</p>"
 	},
 	{
 		"id":"wildborne",
 		"name": "Communauté sauvage",
-		"description": "<p><strong>Pas L&eacute;ger</strong> : Votre d&eacute;placement est naturellement silencieux. Vous avez l'avantage sur les jets visant &agrave; vous d&eacute;placer sans &ecirc;tre entendu.</p>"
+		"description": "<p><i>Faire partie d'une communauté sauvage signifie que vous avez vécu au cœur de la forêt.</i><br><br><strong>Pas Léger</strong> : Votre déplacement est naturellement silencieux. Vous avez l'avantage sur les jets visant à vous déplacer sans être entendu.</p>"
 	},
 	{
 		"id":"highborne",
 		"name": "Communauté noble",
-		"description": "<p><strong>Privil&egrave;ge :</strong> Vous avez un avantage sur les jets que vous faites pour converser avec des nobles, n&eacute;gocier des prix ou utiliser votre r&eacute;putation pour obtenir ce que vous voulez.</p>"
+		"description": "<p><i>Faire partie d'une communauté noble signifie que vous êtes né dans une vie d'élégance, d'opulence et de prestige au sein des plus hautes sphères de la société.</i><br><br><strong>Privilège :</strong> Vous avez un avantage sur les jets que vous faites pour converser avec des nobles, négocier des prix ou utiliser votre réputation pour obtenir ce que vous voulez.</p>"
 	},
 	{
 		"id":"seaborne",
 		"name": "Communauté côtière",
-		"description": "<p><strong>Connaissance de la Mar&eacute;e</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons &eacute;gal &agrave; votre Niveau. Avant de faire un jet d'action, vous pouvez d&eacute;penser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 &agrave; votre jet. &Agrave; la fin d'une session, d&eacute;faussez tous les jetons non utilis&eacute;s.</p>"
+		"description": "<p><i>Faire partie d'une communauté côtière signifie que vous avez vécu sur ou près d'une grande étendue d'eau.</i><br><br><strong>Connaissance de la Marée</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons égal à votre Niveau. Avant de faire un jet d'action, vous pouvez dépenser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 à votre jet. &Agrave; la fin d'une session, défaussez tous les jetons non utilisés.</p>"
 	}
 ]

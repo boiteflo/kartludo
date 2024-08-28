@@ -124,7 +124,7 @@
           "name": "Armure de mailles",
           "protection": "6",
           "active": "1",
-          "capacites": "<p>Lourde (-1 &agrave; l'Esquive)</p>"
+          "capacites": "<p>Lourde (-1 à l'Esquive)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -634,7 +634,7 @@
           "name": "Armure de plate",
           "protection": "8",
           "active": "1",
-          "capacites": "<p>Tr&egrave;s lourde (-2 &agrave; l'Esquive, -1 aux jets d'Agilit&eacute;)</p>"
+          "capacites": "<p>Très lourde (-2 à l'Esquive, -1 aux jets d'Agilité)</p>"
         },
         "modifiers": [],
         "unique": false,

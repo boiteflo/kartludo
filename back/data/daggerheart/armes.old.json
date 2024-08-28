@@ -1248,7 +1248,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Puissance (permet de relancer 1 d&eacute; de d&eacute;g&acirc;ts au choix)</p>"
+          "capacites": "<p>Puissance (permet de relancer 1 dé de dégâts au choix)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -1666,7 +1666,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Ambidextre (+2 aux d&eacute;g&acirc;ts de l'arme primaire en m&ecirc;l&eacute;e)</p>"
+          "capacites": "<p>Ambidextre (+2 aux dégâts de l'arme primaire en mêlée)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -2917,7 +2917,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Rapide (pour 1 stress, choisissez une deuxi&egrave;me cible &agrave; port&eacute;e)</p>",
+          "capacites": "<p>Rapide (pour 1 stress, choisissez une deuxième cible à portée)</p>",
           "typedegats": "Physique"
         },
         "modifiers": [],
@@ -5412,7 +5412,7 @@
           "trait": "agilite",
           "valeur": "8",
           "bonus": "3",
-          "capacites": "<p>+1 &agrave; l'attaque</p>",
+          "capacites": "<p>+1 à l'attaque</p>",
           "active": "1",
           "primairesecondaire": "primaire",
           "bonusatt": "0",
@@ -5832,7 +5832,7 @@
           "trait": "finesse",
           "valeur": "8",
           "bonus": "1",
-          "capacites": "<p>Vous pouvez vous couper avec le masque, vous faisant perdre 1PV, mais le masque va se planter automatiquement dans le point faible d'une cible &agrave; port&eacute;e Loin ou moins, faisant 20 de d&eacute;g&acirc;ts. Il est ensuite perdu.</p>",
+          "capacites": "<p>Vous pouvez vous couper avec le masque, vous faisant perdre 1PV, mais le masque va se planter automatiquement dans le point faible d'une cible à portée Loin ou moins, faisant 20 de dégâts. Il est ensuite perdu.</p>",
           "bonusatt": "0",
           "niveau": "0",
           "autredesnombre": "0",
@@ -6674,7 +6674,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>&Eacute;norme (-1 aux jets d'Agilit&eacute;, mais permet de relancer 1 d&eacute; de d&eacute;g&acirc;ts au choix)</p>",
+          "capacites": "<p>Énorme (-1 aux jets d'Agilité, mais permet de relancer 1 dé de dégâts au choix)</p>",
           "portee": "melee",
           "typedegats": "phys"
         },
@@ -7094,7 +7094,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Ambidextre (+2 aux d&eacute;g&acirc;ts de l'arme primaire en m&ecirc;l&eacute;e)</p>"
+          "capacites": "<p>Ambidextre (+2 aux dégâts de l'arme primaire en mêlée)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -7511,7 +7511,7 @@
           "autredestype": "0",
           "autredesbonus": "0",
           "portee": "Mêlée",
-          "capacites": "<p>Lourd (-1 aux jets d'Agilit&eacute;)</p>",
+          "capacites": "<p>Lourd (-1 aux jets d'Agilité)</p>",
           "typedegats": "Physique"
         },
         "modifiers": [],
@@ -7930,7 +7930,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Tirer (en cas d'attaque r&eacute;ussie, vous pouvez tirer la cible en M&ecirc;l&eacute;e)</p>"
+          "capacites": "<p>Tirer (en cas d'attaque réussie, vous pouvez tirer la cible en Mêlée)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -8338,7 +8338,7 @@
           "trait": "agilite",
           "valeur": "8",
           "bonus": "0",
-          "capacites": "<p>+1 &agrave; l'attaque</p>",
+          "capacites": "<p>+1 à l'attaque</p>",
           "active": "1",
           "primairesecondaire": "primaire",
           "bonusatt": "1",
@@ -10017,7 +10017,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Manoeuvre (perdez 1 stress pour faire passer un ennemi en m&ecirc;l&eacute;e &agrave; la port&eacute;e Pr&egrave;s)</p>"
+          "capacites": "<p>Manoeuvre (perdez 1 stress pour faire passer un ennemi en mêlée à la portée Près)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -10852,7 +10852,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Vesatile (d10 d&eacute;g&acirc;ts en m&ecirc;l&eacute;e)</p>"
+          "capacites": "<p>Vesatile (d10 dégâts en mêlée)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -11687,7 +11687,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Mur (+3 &agrave; la Protection, -2 &agrave; l'Esquive)</p>"
+          "capacites": "<p>Mur (+3 à la Protection, -2 à l'Esquive)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -14190,7 +14190,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Parade (+1 &agrave; la Protection)</p>"
+          "capacites": "<p>Parade (+1 à la Protection)</p>"
         },
         "modifiers": [],
         "unique": false,
@@ -14608,7 +14608,7 @@
           "autredesnombre": "0",
           "autredestype": "0",
           "autredesbonus": "0",
-          "capacites": "<p>Vesatile (d10 d&eacute;g&acirc;ts en m&ecirc;l&eacute;e)</p>"
+          "capacites": "<p>Vesatile (d10 dégâts en mêlée)</p>"
         },
         "modifiers": [],
         "unique": false,

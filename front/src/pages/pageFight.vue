@@ -10,10 +10,12 @@
           <v-btn text @click="selectSalon('Temp')" :class="{bgWhite:salon=='Temp', bg2:salon!='Temp', m5px:true}">
             <v-icon>mdi-cube</v-icon> Salon Temporaire
           </v-btn>
+          <!--
           <v-btn v-for="fight in fights" :key="'Salon' + fight.id" text @click="selectSalon(fight.id)" 
             :class="{bgWhite:salon==fight.id, bg2:salon!=fight.id, m5px:true}">
             <v-icon>mdi-cube</v-icon> Salon {{ fight.id+1 }}
           </v-btn>
+          -->
         </div>
        
         <div v-if="salon == 'help'">

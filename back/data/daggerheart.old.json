@@ -140,7 +140,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Gardien du renouveau",
-          "description": "<p><strong>JET DE SORTS : INSTINCT</strong></p>\n<p><strong>Clart&eacute; de la Nature :</strong> Une fois par repos long, vous pouvez cr&eacute;er un espace de s&eacute;r&eacute;nit&eacute; naturelle autour de vous. Apr&egrave;s avoir pass&eacute; quelques minutes de repos dans cet espace, vous pouvez effacer du Stress &eacute;gal &agrave; votre trait Instinct, r&eacute;parti comme vous le souhaitez entre vous et vos alli&eacute;s.</p>\n<p><strong>R&eacute;g&eacute;n&eacute;ration :</strong> Utilisez une action et d&eacute;pensez 3 Espoirs pour donner 1d4 points de vie &agrave; une cr&eacute;ature que vous touchez.</p>",
+          "description": "<p><strong>JET DE SORTS : INSTINCT</strong><br><strong>Clarté de la Nature :</strong> Une fois par repos long, vous pouvez créer un espace de sérénité naturelle autour de vous. Après avoir passé quelques minutes de repos dans cet espace, vous pouvez effacer du Stress égal à votre trait Instinct, réparti comme vous le souhaitez entre vous et vos alliés.<br><strong>Régénération :</strong> Utilisez une action et dépensez 3 Espoirs pour donner 1d4 points de vie à une créature que vous touchez.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Druide - Fondation)",
           "cout": "3 espoirs"
@@ -288,7 +288,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p><strong>JET DE SORTS : FINESSE</strong></p>\n<p><strong>Marcheur des Ombres :</strong> Vous pouvez vous d&eacute;placer d'une ombre &agrave; l'autre. Lorsque vous entrez dans l'ombre projet&eacute;e par une autre cr&eacute;ature ou un objet, ou dans une zone d'obscurit&eacute;, marquez un point de Stress pour dispara&icirc;tre de l'endroit o&ugrave; vous vous trouvez et r&eacute;appara&icirc;tre &agrave; l'int&eacute;rieur de n'importe quelle autre ombre &agrave; port&eacute;e Loin. Apr&egrave;s cette action, vous &ecirc;tes Cach&eacute;.</p>",
+          "description": "<p><strong>JET DE SORTS : FINESSE</strong><br><strong>Marcheur des Ombres :</strong> Vous pouvez vous déplacer d'une ombre à l'autre. Lorsque vous entrez dans l'ombre projetée par une autre créature ou un objet, ou dans une zone d'obscurité, marquez un point de Stress pour disparaître de l'endroit où vous vous trouvez et réapparaître à l'intérieur de n'importe quelle autre ombre à portée Loin. Après cette action, vous êtes Caché.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Roublard - Fondation)",
           "cout": "1 stress"
@@ -436,7 +436,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p><strong>Lancer de Sorts : Savoir</strong></p>\n<p>Vous avez concentr&eacute; vos &eacute;tudes sur la mani&egrave;re de fa&ccedil;onner la magie de mani&egrave;re dangereuse et puissante. Gagnez un emplacement d'armure suppl&eacute;mentaire.</p>\n<p>Lorsque vous r&eacute;ussissez un jet d'attaque avec Peur, vous infligez 1d10 d&eacute;g&acirc;ts magiques suppl&eacute;mentaires.</p>",
+          "description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez concentré vos études sur la manière de fa&ccedil;onner la magie de manière dangereuse et puissante. Gagnez un emplacement d'armure supplémentaire.<br>Lorsque vous réussissez un jet d'attaque avec Peur, vous infligez 1d10 dégâts magiques supplémentaires.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Magicien - Fondation)",
           "cout": ""
@@ -584,8 +584,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Roublard",
-          "description": "<p style=\"text-align: left;\"><strong>Se Cacher :&nbsp;</strong>Lorsque vous vous d&eacute;placez dans un endroit o&ugrave; aucun ennemi ne peut vous voir, vous pouvez utiliser une action pour devenir Cach&eacute; (tous les jets contre vous sont d&eacute;savantag&eacute;s). En tant que Voleur, lorsque vous &ecirc;tes Cach&eacute;, les cibles ne peuvent pas non plus vous voir, m&ecirc;me si elles entrent dans votre champ de vision. Vous cessez d'&ecirc;tre Cach&eacute; d&egrave;s que vous bougez ou attaquez.</p>\n<p style=\"text-align: left;\"><strong>Attaque Sournoise : </strong>Chaque fois que vous effectuez une attaque pendant que vous &ecirc;tes Cach&eacute; ou qu'un alli&eacute; est en m&ecirc;l&eacute;e avec votre cible, ajoutez 1d6 &agrave; votre jet de d&eacute;g&acirc;ts. Lorsque vous utilisez Attaque Sournoise, vous pouvez &eacute;galement d&eacute;penser un nombre quelconque de points d'Espoir avant le jet d'attaque ; si l'attaque r&eacute;ussit, ajoutez &eacute;galement un nombre de d6 &eacute;gal aux points d'Espoir d&eacute;pens&eacute;s.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Voleur : </strong>D&eacute;pensez trois points d'Espoir pour augmenter vos d&eacute;g&acirc;ts d'Attaque Sournoise. Jusqu'&agrave; votre prochain repos court, vous ajoutez 3d6 au lieu de 1d6 &agrave; chaque jet de d&eacute;g&acirc;ts d'Attaque Sournoise.</p>",
-          "flavor": "<p><em>Domaines : Midnight et Gr&acirc;ce</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (11), Seuil Majeur (6), Seuil S&eacute;v&egrave;re (12)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Se Cacher :&nbsp;</strong>Lorsque vous vous déplacez dans un endroit où aucun ennemi ne peut vous voir, vous pouvez utiliser une action pour devenir Caché (tous les jets contre vous sont désavantagés). En tant que Voleur, lorsque vous êtes Caché, les cibles ne peuvent pas non plus vous voir, même si elles entrent dans votre champ de vision. Vous cessez d'être Caché dès que vous bougez ou attaquez.</p>\n<p style=\"text-align: left;\"><strong>Attaque Sournoise : </strong>Chaque fois que vous effectuez une attaque pendant que vous êtes Caché ou qu'un allié est en mêlée avec votre cible, ajoutez 1d6 à votre jet de dégâts. Lorsque vous utilisez Attaque Sournoise, vous pouvez également dépenser un nombre quelconque de points d'Espoir avant le jet d'attaque ; si l'attaque réussit, ajoutez également un nombre de d6 égal aux points d'Espoir dépensés.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Voleur : </strong>Dépensez trois points d'Espoir pour augmenter vos dégâts d'Attaque Sournoise. Jusqu'à votre prochain repos court, vous ajoutez 3d6 au lieu de 1d6 à chaque jet de dégâts d'Attaque Sournoise.</p>",
+          "flavor": "<p><em>Domaines : Midnight et Grâce</em><br><em>Traits à la création : Esquive (11), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
           "type": "Classe",
           "cout": "variable"
         },
@@ -691,7 +691,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "dfa",
-          "description": "<p><strong>(Tatou, Pangolin, Tortue, etc.)</strong><br>+1 Force | Attaque M&ecirc;l&eacute;e/Force/d8+2 (phy) | Esquive +1<br><strong>Avantages :</strong> Creuser, Prot&eacute;ger, Localiser<br><strong>Carapace Blind&eacute;e :</strong> Vous avez une R&eacute;sistance aux d&eacute;g&acirc;ts physiques. Vous pouvez &eacute;galement marquer une case d'armure pour vous replier dans votre carapace. Si vous le faites, les d&eacute;g&acirc;ts physiques sont &eacute;galement r&eacute;duits de votre Protection (apr&egrave;s avoir &eacute;t&eacute; r&eacute;duits de moiti&eacute;), mais vous ne pouvez effectuer aucune autre action &agrave; l'exception de vous d&eacute;placer sans quitter cette forme.<br><strong>Boulet de Canon :</strong> Vous pouvez marquer du Stress pour &ecirc;tre lanc&eacute; ou propuls&eacute; sur un adversaire. Un alli&eacute; effectue un jet d'attaque avec Agilit&eacute; ou Force contre une cible &agrave; port&eacute;e Pr&egrave;s. En cas de succ&egrave;s, infligez d12+2 d&eacute;g&acirc;ts en utilisant la Ma&icirc;trise de l'attaquant. S'il y a un autre ennemi Tr&egrave;s Pr&egrave;s de la cible, en cas de succ&egrave;s, vous pouvez &eacute;galement d&eacute;penser de l'Espoir pour ricocher sur le premier ennemi et frapper le second pour la moiti&eacute; des d&eacute;g&acirc;ts.</p>",
+          "description": "<p><strong>(Tatou, Pangolin, Tortue, etc.)</strong><br>+1 Force | Attaque Mêlée/Force/d8+2 (phy) | Esquive +1<br><strong>Avantages :</strong> Creuser, Protéger, Localiser<br><strong>Carapace Blindée :</strong> Vous avez une Résistance aux dégâts physiques. Vous pouvez également marquer une case d'armure pour vous replier dans votre carapace. Si vous le faites, les dégâts physiques sont également réduits de votre Protection (après avoir été réduits de moitié), mais vous ne pouvez effectuer aucune autre action à l'exception de vous déplacer sans quitter cette forme.<br><strong>Boulet de Canon :</strong> Vous pouvez marquer du Stress pour être lancé ou propulsé sur un adversaire. Un allié effectue un jet d'attaque avec Agilité ou Force contre une cible à portée Près. En cas de succès, infligez d12+2 dégâts en utilisant la Maîtrise de l'attaquant. S'il y a un autre ennemi Très Près de la cible, en cas de succès, vous pouvez également dépenser de l'Espoir pour ricocher sur le premier ennemi et frapper le second pour la moitié des dégâts.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -837,7 +837,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p><strong>JET DE SORTS : AGILIT&Eacute;</strong></p>\n<p>Vous avez un compagnon animal de votre choix (&agrave; la discr&eacute;tion du MJ). Ils restent toujours &agrave; vos c&ocirc;t&eacute;s sauf indication contraire.</p>\n<p>Prenez la fiche Compagnon Ranger. &Agrave; chaque niveau de votre personnage, choisissez &eacute;galement une option de mont&eacute;e en niveau pour votre compagnon sur cette fiche.</p>",
+          "description": "<p><strong>JET DE SORTS : AGILITÉ</strong><br>Vous avez un compagnon animal de votre choix (à la discrétion du MJ). Ils restent toujours à vos côtés sauf indication contraire.<br>Prenez la fiche Compagnon Ranger. &Agrave; chaque niveau de votre personnage, choisissez également une option de montée en niveau pour votre compagnon sur cette fiche.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Rôdeur - Fondation)",
           "cout": ""
@@ -985,7 +985,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : PR&Eacute;SENCE</strong></p>\n<p><strong>C&oelig;ur de Po&egrave;te :</strong> Lorsque vous parlez &agrave; une personne que vous essayez d'impressionner, de persuader ou d'offenser, vous pouvez d&eacute;penser 1 Espoir et ajouter 1d4 au jet d'action contre elle.</p>\n<p><strong>Discours Inspirant :</strong> Une fois par repos long, vous pouvez utiliser une action pour faire un discours sinc&egrave;re et inspirant. Tous les alli&eacute;s qui peuvent vous entendre r&eacute;cup&egrave;rent 2 Stress.</p>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : PRÉSENCE</strong><br><strong>Cœur de Poète :</strong> Lorsque vous parlez à une personne que vous essayez d'impressionner, de persuader ou d'offenser, vous pouvez dépenser 1 Espoir et ajouter 1d4 au jet d'action contre elle.<br><strong>Discours Inspirant :</strong> Une fois par repos long, vous pouvez utiliser une action pour faire un discours sincère et inspirant. Tous les alliés qui peuvent vous entendre récupèrent 2 Stress.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Barde - Fondation)",
           "cout": "1 espoir"
@@ -1092,7 +1092,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "FB Bête ailée",
-          "description": "<p><strong>(Corbeau, Faucon, Hibou, etc.)</strong><br>+1 Finesse | Attaque M&ecirc;l&eacute;e/Finesse/d4+2 (phy) | Esquive +3<br><strong>Avantages :</strong> Tromper, Localiser, Effrayer<br><strong>Vue d'Oiseau :</strong> Vous pouvez voler &agrave; volont&eacute; dans cette forme. Lorsque vous volez et regardez le paysage en dessous pour mieux comprendre une situation, faites un jet d'action. En cas de succ&egrave;s, vous obtenez de nouvelles informations utiles. Prenez avantage lorsque vous ou un alli&eacute; faites un jet pour agir en fonction de ces informations.<br><strong>Os Creux :</strong> Vous r&eacute;duisez vos Seuils de D&eacute;g&acirc;ts de -2 dans cette forme.</p>",
+          "description": "<p><strong>(Corbeau, Faucon, Hibou, etc.)</strong><br>+1 Finesse | Attaque Mêlée/Finesse/d4+2 (phy) | Esquive +3<br><strong>Avantages :</strong> Tromper, Localiser, Effrayer<br><strong>Vue d'Oiseau :</strong> Vous pouvez voler à volonté dans cette forme. Lorsque vous volez et regardez le paysage en dessous pour mieux comprendre une situation, faites un jet d'action. En cas de succès, vous obtenez de nouvelles informations utiles. Prenez avantage lorsque vous ou un allié faites un jet pour agir en fonction de ces informations.<br><strong>Os Creux :</strong> Vous réduisez vos Seuils de Dégâts de -2 dans cette forme.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -1197,7 +1197,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "aefa",
-          "description": "<p><strong>(Chien, Chat, Lapin, etc.)</strong><br>+1 Instinct | Attaque M&ecirc;l&eacute;e/Instinct/d6 (phy) | Esquive +2<br><strong>Avantages :</strong> Grimper, Localiser, Prot&eacute;ger<br><strong>Compagnon :</strong> Lorsque vous assistez un autre PJ, le d&eacute; d'avantage que vous lancez est un d8.<br><strong>Fragile :</strong> Lorsque vous subissez des d&eacute;g&acirc;ts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
+          "description": "<p><strong>(Chien, Chat, Lapin, etc.)</strong><br>+1 Instinct | Attaque Mêlée/Instinct/d6 (phy) | Esquive +2<br><strong>Avantages :</strong> Grimper, Localiser, Protéger<br><strong>Compagnon :</strong> Lorsque vous assistez un autre PJ, le dé d'avantage que vous lancez est un d8.<br><strong>Fragile :</strong> Lorsque vous subissez des dégâts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -1343,8 +1343,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Druide",
-          "description": "<p><strong>Toucher Sauvage :</strong> Vous pouvez effectuer &agrave; volont&eacute; des effets subtils et inoffensifs li&eacute;s &agrave; la nature. (Ex : faire pousser une fleur rapidement, invoquer une l&eacute;g&egrave;re brise, allumer un feu de camp, etc.)</p>\n<p><strong>Forme Bestiale :</strong> Marquez un Stress pour vous transformer en une cr&eacute;ature magique de votre niveau ou inf&eacute;rieur de la liste des formes bestiales. Pendant que vous &ecirc;tes transform&eacute;, vous ne pouvez pas utiliser vos armes ni lancer de sorts, mais vous gagnez les traits, les attaques et le bonus d'esquive de la cr&eacute;ature. Vous pouvez abandonner cette forme &agrave; tout moment. En forme bestiale, votre armure fait partie de votre corps et vous marquez les emplacements d'armure comme d'habitude ; lorsque vous quittez la forme bestiale, ces emplacements d'armure restent marqu&eacute;s. Si vous marquez votre dernier Point de Vie ou Stress, cette forme se dissipe automatiquement.</p>\n<p><strong>Espoir de druide : </strong>D&eacute;pensez trois points d'Espoir pendant que vous &ecirc;tes en Forme Bestiale pour augmenter vos Seuils de D&eacute;g&acirc;ts de +3 jusqu'&agrave; ce que vous quittiez cette forme.</p>",
-          "flavor": "<p><em>Domaines : Sagesse et Arcane</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (8), Seuil Majeur (7), Seuil S&eacute;v&egrave;re (14)</em></p>",
+          "description": "<p><strong>Toucher Sauvage :</strong> Vous pouvez effectuer à volonté des effets subtils et inoffensifs liés à la nature. (Ex : faire pousser une fleur rapidement, invoquer une légère brise, allumer un feu de camp, etc.)<br><strong>Forme Bestiale :</strong> Marquez un Stress pour vous transformer en une créature magique de votre niveau ou inférieur de la liste des formes bestiales. Pendant que vous êtes transformé, vous ne pouvez pas utiliser vos armes ni lancer de sorts, mais vous gagnez les traits, les attaques et le bonus d'esquive de la créature. Vous pouvez abandonner cette forme à tout moment. En forme bestiale, votre armure fait partie de votre corps et vous marquez les emplacements d'armure comme d'habitude ; lorsque vous quittez la forme bestiale, ces emplacements d'armure restent marqués. Si vous marquez votre dernier Point de Vie ou Stress, cette forme se dissipe automatiquement.<br><strong>Espoir de druide : </strong>Dépensez trois points d'Espoir pendant que vous êtes en Forme Bestiale pour augmenter vos Seuils de Dégâts de +3 jusqu'à ce que vous quittiez cette forme.</p>",
+          "flavor": "<p><em>Domaines : Sagesse et Arcane</em><br><em>Traits à la création : Esquive (8), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
           "type": "Classe",
           "cout": "1 stress"
         },
@@ -1450,7 +1450,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "Éclaireur Agile",
-          "description": "<p><strong>(Renard, Souris, Belette, etc.)</strong><br>+1 Agilit&eacute; | Morsure M&ecirc;l&eacute;e/Agilit&eacute;/d4 (phy) | Esquive +2<br><strong>Avantages :</strong> Tromper, Localiser, Se faufiler<br><strong>Agile :</strong> Vos mouvements sont silencieux et vous pouvez d&eacute;penser de l'Espoir pour vous rendre n'importe o&ugrave; &agrave; port&eacute;e Loin sans avoir besoin de faire un jet.<br><strong>Fragile :</strong> Lorsque vous subissez des d&eacute;g&acirc;ts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
+          "description": "<p><strong>(Renard, Souris, Belette, etc.)</strong><br>+1 Agilité | Morsure Mêlée/Agilité/d4 (phy) | Esquive +2<br><strong>Avantages :</strong> Tromper, Localiser, Se faufiler<br><strong>Agile :</strong> Vos mouvements sont silencieux et vous pouvez dépenser de l'Espoir pour vous rendre n'importe où à portée Loin sans avoir besoin de faire un jet.<br><strong>Fragile :</strong> Lorsque vous subissez des dégâts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -1596,8 +1596,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Barde",
-          "description": "<p><strong>Ralliement :</strong> Une fois par session, lorsque votre groupe se pr&eacute;pare &agrave; entrer dans une situation dangereuse ou difficile, d&eacute;crivez comment vous les ralliez et donnez &agrave; vous-m&ecirc;me et &agrave; chacun de vos alli&eacute;s un d&eacute; de Ralliement d6. Quiconque poss&egrave;de un d&eacute; de Ralliement peut le d&eacute;penser pour le lancer, ajoutant le r&eacute;sultat &agrave; un jet d'action, un jet de r&eacute;action, un jet de d&eacute;g&acirc;ts ou pour enlever un stress &eacute;gal au r&eacute;sultat du d&eacute; de Ralliement. &Agrave; la fin de chaque session, tous les d&eacute;s de Ralliement non d&eacute;pens&eacute;s sont supprim&eacute;s. Le d&eacute; de Ralliement que vous distribuez passe &agrave; 1d8 au niveau 5.</p>\n<p><strong>Espoir du Barde :</strong> Quand vous ou un alli&eacute; &agrave; port&eacute;e Tr&egrave;s Pr&egrave;s effectue un jet de Pr&eacute;sence et r&eacute;ussit avec la Peur ou &eacute;choue, d&eacute;pensez trois points d'Espoir pour annuler les cons&eacute;quences de ce jet en intervenant.</p>",
-          "flavor": "<p><em>Domaines : Gr&acirc;ce et Grimoire</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (9), Seuil Majeur (6), Seuil S&eacute;v&egrave;re (12)</em></p>",
+          "description": "<p><strong>Ralliement :</strong> Une fois par session, lorsque votre groupe se prépare à entrer dans une situation dangereuse ou difficile, décrivez comment vous les ralliez et donnez à vous-même et à chacun de vos alliés un dé de Ralliement d6. Quiconque possède un dé de Ralliement peut le dépenser pour le lancer, ajoutant le résultat à un jet d'action, un jet de réaction, un jet de dégâts ou pour enlever un stress égal au résultat du dé de Ralliement. &Agrave; la fin de chaque session, tous les dés de Ralliement non dépensés sont supprimés. Le dé de Ralliement que vous distribuez passe à 1d8 au niveau 5.<br><strong>Espoir du Barde :</strong> Quand vous ou un allié à portée Très Près effectue un jet de Présence et réussit avec la Peur ou échoue, dépensez trois points d'Espoir pour annuler les conséquences de ce jet en intervenant.</p>",
+          "flavor": "<p><em>Domaines : Grâce et Grimoire</em><br><em>Traits à la création : Esquive (9), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -1703,7 +1703,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "Bête Brutale",
-          "description": "<p><strong>(Ours, Taureau, &Eacute;lan, etc.)</strong><br>+1 Force | Attaque M&ecirc;l&eacute;e/Force/d10+4 (phy) | Esquive +3<br><strong>Avantages :</strong> Naviguer, Effrayer, Prot&eacute;ger<br><strong>Carnage :</strong> Lorsque vous lancez des d&eacute;s pour infliger des d&eacute;g&acirc;ts d'une attaque, pour chaque 1 que vous obtenez, vous pouvez lancer un autre d10 et l'ajouter &agrave; votre jet de d&eacute;g&acirc;ts. Avant de faire un jet d'attaque, vous pouvez marquer du Stress pour gagner +1 en Ma&icirc;trise pour l'attaque.<br><strong>Peau &Eacute;paisse :</strong> Vous augmentez vos Seuils de D&eacute;g&acirc;ts de +2 dans cette forme.</p>",
+          "description": "<p><strong>(Ours, Taureau, Élan, etc.)</strong><br>+1 Force | Attaque Mêlée/Force/d10+4 (phy) | Esquive +3<br><strong>Avantages :</strong> Naviguer, Effrayer, Protéger<br><strong>Carnage :</strong> Lorsque vous lancez des dés pour infliger des dégâts d'une attaque, pour chaque 1 que vous obtenez, vous pouvez lancer un autre d10 et l'ajouter à votre jet de dégâts. Avant de faire un jet d'attaque, vous pouvez marquer du Stress pour gagner +1 en Maîtrise pour l'attaque.<br><strong>Peau Épaisse :</strong> Vous augmentez vos Seuils de Dégâts de +2 dans cette forme.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -1849,7 +1849,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Fidèle",
-          "description": "<p style=\"text-align: left;\">Lorsque vous choisissez cette base, augmentez tous vos seuils de dommages de +1.</p>\n<p style=\"text-align: left;\">Lorsque vous subissez des dommages physiques, r&eacute;duisez-les toujours de votre Protection avant de les appliquer &agrave; vos seuils. Vous pouvez toujours d&eacute;penser des emplacements d'armure pour r&eacute;duire les dommages encore davantage.</p>",
+          "description": "<p style=\"text-align: left;\">Lorsque vous choisissez cette base, augmentez tous vos seuils de dommages de +1.</p>\n<p style=\"text-align: left;\">Lorsque vous subissez des dommages physiques, réduisez-les toujours de votre Protection avant de les appliquer à vos seuils. Vous pouvez toujours dépenser des emplacements d'armure pour réduire les dommages encore davantage.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Gardien - Fondation)",
           "cout": ""
@@ -1997,7 +1997,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : PR&Eacute;SENCE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous choisissez cette Fondation, d&eacute;crivez quel instrument vous ma&icirc;trisez. Vous pouvez utiliser une action pour jouer chaque chanson une fois par long repos :</p>\n<ul>\n<li style=\"text-align: left;\">\n<p>Lorsque vous jouez une chanson relaxante, vous et tous les alli&eacute;s proches r&eacute;cup&eacute;rez 1 point de vie.</p>\n</li>\n<li style=\"text-align: left;\">\n<p>Lorsque vous jouez une chanson &eacute;pique, une cible proche devient temporairement Vuln&eacute;rable.</p>\n</li>\n<li>\n<p style=\"text-align: left;\">Lorsque vous jouez une chanson d&eacute;chirante, vous et tous les alli&eacute;s proches prenez un Point d'Espoir.</p>\n</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : PRÉSENCE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous choisissez cette Fondation, décrivez quel instrument vous maîtrisez. Vous pouvez utiliser une action pour jouer chaque chanson une fois par long repos :</p>\n<ul>\n<li style=\"text-align: left;\">\n<p>Lorsque vous jouez une chanson relaxante, vous et tous les alliés proches récupérez 1 point de vie.</p>\n</li>\n<li style=\"text-align: left;\">\n<p>Lorsque vous jouez une chanson épique, une cible proche devient temporairement Vulnérable.</p>\n</li>\n<li>\n<p style=\"text-align: left;\">Lorsque vous jouez une chanson déchirante, vous et tous les alliés proches prenez un Point d'Espoir.</p>\n</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Barde - Fondation)",
           "cout": ""
@@ -2145,7 +2145,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Gardien du renouveau",
-          "description": "<p><strong>JET DE SORTS : INSTINCT</strong></p>\n<p><strong>Incarnation &Eacute;l&eacute;mentaire : </strong>Marquez un Stress pour incarner un esprit &eacute;l&eacute;mentaire de la liste ci-dessous. L'incarnation dure jusqu'&agrave; ce que vous subissiez des d&eacute;g&acirc;ts S&eacute;v&egrave;res ou jusqu'&agrave; votre prochain repos court. Cette capacit&eacute; peut coexister avec la forme bestiale.</p>\n<p><strong>Feu : </strong>Lorsqu'un ennemi en m&ecirc;l&eacute;e vous inflige des d&eacute;g&acirc;ts, il subit 1d10 de d&eacute;g&acirc;ts magiques. <strong>Terre :</strong> Vous gagnez +1 &agrave; votre Protection. <strong>Eau : </strong>Lorsque vous infligez des d&eacute;g&acirc;ts &agrave; un ennemi en m&ecirc;l&eacute;e, tous les autres ennemis dans une port&eacute;e Tr&egrave;s Proche marquent un Stress. <strong>Air : </strong>Vous pouvez flotter, ce qui vous donne l'avantage sur les jets d'Agilit&eacute;.</p>",
+          "description": "<p><strong>JET DE SORTS : INSTINCT</strong><br><strong>Incarnation Élémentaire : </strong>Marquez un Stress pour incarner un esprit élémentaire de la liste ci-dessous. L'incarnation dure jusqu'à ce que vous subissiez des dégâts Sévères ou jusqu'à votre prochain repos court. Cette capacité peut coexister avec la forme bestiale.<br><strong>Feu : </strong>Lorsqu'un ennemi en mêlée vous inflige des dégâts, il subit 1d10 de dégâts magiques. <strong>Terre :</strong> Vous gagnez +1 à votre Protection. <strong>Eau : </strong>Lorsque vous infligez des dégâts à un ennemi en mêlée, tous les autres ennemis dans une portée Très Proche marquent un Stress. <strong>Air : </strong>Vous pouvez flotter, ce qui vous donne l'avantage sur les jets d'Agilité.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Druide - Fondation)",
           "cout": "1 stress"
@@ -2252,7 +2252,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "safas",
-          "description": "<p><strong>(Chameau, Cheval, Z&egrave;bre, etc.)</strong><br>+1 Agilit&eacute; | Attaque M&ecirc;l&eacute;e/Agilit&eacute;/d8+1 (phy) | Esquive +2<br><strong>Avantages :</strong> Sauter, Orienter, Sprinter<br><strong>Porteur :</strong> Vous pouvez transporter jusqu'&agrave; 2 alli&eacute;s volontaires avec vous lorsque vous vous d&eacute;placez.<br><strong>Pi&eacute;tinement :</strong> Vous pouvez marquer du Stress pour vous d&eacute;placer jusqu'&agrave; port&eacute;e Proche en ligne droite et effectuer une attaque au corps &agrave; corps contre chaque cible que vous croisez pendant ce mouvement. Chaque cible touch&eacute;e subit d8+1 d&eacute;g&acirc;ts (phy) en utilisant votre comp&eacute;tence et est renvers&eacute;e, devenant temporairement Vuln&eacute;rable.</p>",
+          "description": "<p><strong>(Chameau, Cheval, Zèbre, etc.)</strong><br>+1 Agilité | Attaque Mêlée/Agilité/d8+1 (phy) | Esquive +2<br><strong>Avantages :</strong> Sauter, Orienter, Sprinter<br><strong>Porteur :</strong> Vous pouvez transporter jusqu'à 2 alliés volontaires avec vous lorsque vous vous déplacez.<br><strong>Piétinement :</strong> Vous pouvez marquer du Stress pour vous déplacer jusqu'à portée Proche en ligne droite et effectuer une attaque au corps à corps contre chaque cible que vous croisez pendant ce mouvement. Chaque cible touchée subit d8+1 dégâts (phy) en utilisant votre compétence et est renversée, devenant temporairement Vulnérable.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -2398,8 +2398,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Rôdeur",
-          "description": "<p style=\"text-align: left;\"><strong>Focus du R&ocirc;deur</strong> :&nbsp;D&eacute;pensez 1 Espoir et effectuez une attaque avec votre arme. En cas de succ&egrave;s, vous faites temporairement de cette cible votre Focus, en plus de causer des d&eacute;g&acirc;ts avec l'attaque. Jusqu'&agrave; ce que votre Focus se termine ou que vous d&eacute;signiez une autre cr&eacute;ature comme votre Focus, vous b&eacute;n&eacute;ficiez des avantages suivants :</p>\n<ul>\n<li>Vous savez pr&eacute;cis&eacute;ment dans quelle direction elle se trouve.</li>\n<li>Tous les jets de d&eacute;g&acirc;ts que vous effectuez contre elle infligent &eacute;galement un Stress.</li>\n<li>Lorsque vous manquez votre attaque contre elle, vous pouvez mettre fin au Focus pour relancer vos d&eacute;s de Dualit&eacute; et prendre le nouveau r&eacute;sultat.</li>\n</ul>\n<p><strong>Espoir de r&ocirc;deur : </strong>D&eacute;pensez trois points d'Espoir et augmentez votre Esquive de +1 jusqu'&agrave; votre prochain repos court.</p>",
-          "flavor": "<p><em>Domaines : Sagesse et Bones</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (10), Seuil Majeur (7), Seuil S&eacute;v&egrave;re (14)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Focus du Rôdeur</strong> :&nbsp;Dépensez 1 Espoir et effectuez une attaque avec votre arme. En cas de succès, vous faites temporairement de cette cible votre Focus, en plus de causer des dégâts avec l'attaque. Jusqu'à ce que votre Focus se termine ou que vous désigniez une autre créature comme votre Focus, vous bénéficiez des avantages suivants :</p>\n<ul>\n<li>Vous savez précisément dans quelle direction elle se trouve.</li>\n<li>Tous les jets de dégâts que vous effectuez contre elle infligent également un Stress.</li>\n<li>Lorsque vous manquez votre attaque contre elle, vous pouvez mettre fin au Focus pour relancer vos dés de Dualité et prendre le nouveau résultat.</li>\n</ul>\n<p><strong>Espoir de rôdeur : </strong>Dépensez trois points d'Espoir et augmentez votre Esquive de +1 jusqu'à votre prochain repos court.</p>",
+          "flavor": "<p><em>Domaines : Sagesse et Bones</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
           "type": "Classe",
           "cout": "1 espoir"
         },
@@ -2505,7 +2505,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "Prédateur",
-          "description": "<p><strong>&nbsp;(Loup, Coyote, Hy&egrave;ne, etc.)</strong><br>+2 Force | Attaque M&ecirc;l&eacute;e/Force/d8+2 (phy) | Esquive +1<br><strong>Avantages :</strong> Attaquer, Sprinter, Traquer<br><strong>Chasse en Meute :</strong> Lorsque vous faites un jet d'attaque sur la m&ecirc;me cible qu'un alli&eacute; juste avant vous, ajoutez un d8 suppl&eacute;mentaire &agrave; vos d&eacute;s de d&eacute;g&acirc;ts.<br><strong>Frappe Handicapante :</strong> Lorsque vous r&eacute;ussissez une attaque au corps &agrave; corps, vous pouvez marquer un Stress pour rendre la cible temporairement Vuln&eacute;rable.</p>",
+          "description": "<p><strong>&nbsp;(Loup, Coyote, Hyène, etc.)</strong><br>+2 Force | Attaque Mêlée/Force/d8+2 (phy) | Esquive +1<br><strong>Avantages :</strong> Attaquer, Sprinter, Traquer<br><strong>Chasse en Meute :</strong> Lorsque vous faites un jet d'attaque sur la même cible qu'un allié juste avant vous, ajoutez un d8 supplémentaire à vos dés de dégâts.<br><strong>Frappe Handicapante :</strong> Lorsque vous réussissez une attaque au corps à corps, vous pouvez marquer un Stress pour rendre la cible temporairement Vulnérable.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -2651,7 +2651,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "FA éclaireur aquatique",
-          "description": "<p><strong>(Poisson, Anguille, Pieuvre)</strong><br>+1 Agilit&eacute; | Attaque M&ecirc;l&eacute;e/Agilit&eacute;/d4 (phy) | Esquive +2<br><strong>Avantages :</strong> Naviguer, Se faufiler, Nager<br><strong>Aquatique :</strong> Vous pouvez respirer et vous d&eacute;placer naturellement sous l'eau.<br><strong>Fragile :</strong> Lorsque vous subissez des d&eacute;g&acirc;ts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
+          "description": "<p><strong>(Poisson, Anguille, Pieuvre)</strong><br>+1 Agilité | Attaque Mêlée/Agilité/d4 (phy) | Esquive +2<br><strong>Avantages :</strong> Naviguer, Se faufiler, Nager<br><strong>Aquatique :</strong> Vous pouvez respirer et vous déplacer naturellement sous l'eau.<br><strong>Fragile :</strong> Lorsque vous subissez des dégâts Majeurs ou plus, vous quittez la Forme Bestiale.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Forme bestiale",
           "cout": "1 stress"
@@ -2799,7 +2799,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p><strong>Lancer de Sorts : Savoir</strong></p>\n<p>Vous avez acquis des connaissances inestimables gr&acirc;ce &agrave; de longues &eacute;tudes. Vous avez ub avantage sur tous les jets de Savoir pour vous souvenir d'informations. Si ce jet concerne la nature magique d'une cr&eacute;ature ou d'un enchantement, gagnez un Espoir m&ecirc;me sur un jet avec Peur.</p>\n<p><strong>Adepte</strong> : Vous pouvez marquer un Stress au lieu de d&eacute;penser un Espoir pour utiliser une Exp&eacute;rience sur un jet. Si vous le faites, doublez le bonus d'Exp&eacute;rience pour ce jet.</p>",
+          "description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez acquis des connaissances inestimables grâce à de longues études. Vous avez ub avantage sur tous les jets de Savoir pour vous souvenir d'informations. Si ce jet concerne la nature magique d'une créature ou d'un enchantement, gagnez un Espoir même sur un jet avec Peur.<br><strong>Adepte</strong> : Vous pouvez marquer un Stress au lieu de dépenser un Espoir pour utiliser une Expérience sur un jet. Si vous le faites, doublez le bonus d'Expérience pour ce jet.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Magicien - Fondation)",
           "cout": "1 stress"
@@ -2947,8 +2947,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Guerrier",
-          "description": "<p style=\"text-align: left;\"><strong>Strat&egrave;ge de Bataille :</strong> Apr&egrave;s un jet d'attaque r&eacute;ussi, vous pouvez d&eacute;crire comment vous d&eacute;jouez votre cible, puis marquer un Stress pour lui infliger un Stress.</p>\n<p style=\"text-align: left;\"><strong>Attaque d'Opportunit&eacute; :</strong> Si un adversaire tente de quitter votre port&eacute;e de M&ecirc;l&eacute;e, faites un jet de r&eacute;action d'Agilit&eacute; contre sa difficult&eacute;. Choisissez un effet en cas de r&eacute;ussite, ou deux en cas de r&eacute;ussite critique : 1)&nbsp;Les emp&ecirc;cher de bouger. 2) Infliger les d&eacute;g&acirc;ts de votre arme principale. 3) Bouger avec eux.</p>\n<p style=\"text-align: left;\"><strong>Entra&icirc;nement au Combat :</strong> Ignorez l'encombrement lors de l'&eacute;quipement des armes. Chaque fois que vous lancez des d&eacute;s de d&eacute;g&acirc;ts, ajoutez des d&eacute;g&acirc;ts physiques suppl&eacute;mentaires &eacute;gaux &agrave; votre Niveau.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Guerrier</strong> : D&eacute;pensez trois points d'Espoir pour relancer n'importe quel nombre de vos d&eacute;s de d&eacute;g&acirc;ts lors d'une attaque.</p>",
-          "flavor": "<p><em>Domaines : Lames et Bones</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (10), Seuil Majeur (7), Seuil S&eacute;v&egrave;re (14)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Stratège de Bataille :</strong> Après un jet d'attaque réussi, vous pouvez décrire comment vous déjouez votre cible, puis marquer un Stress pour lui infliger un Stress.</p>\n<p style=\"text-align: left;\"><strong>Attaque d'Opportunité :</strong> Si un adversaire tente de quitter votre portée de Mêlée, faites un jet de réaction d'Agilité contre sa difficulté. Choisissez un effet en cas de réussite, ou deux en cas de réussite critique : 1)&nbsp;Les empêcher de bouger. 2) Infliger les dégâts de votre arme principale. 3) Bouger avec eux.</p>\n<p style=\"text-align: left;\"><strong>Entraînement au Combat :</strong> Ignorez l'encombrement lors de l'équipement des armes. Chaque fois que vous lancez des dés de dégâts, ajoutez des dégâts physiques supplémentaires égaux à votre Niveau.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Guerrier</strong> : Dépensez trois points d'Espoir pour relancer n'importe quel nombre de vos dés de dégâts lors d'une attaque.</p>",
+          "flavor": "<p><em>Domaines : Lames et Bones</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -3095,8 +3095,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Magicien",
-          "description": "<p style=\"text-align: left;\"><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs &agrave; volont&eacute;. Par exemple, vous pouvez changer la couleur d'un objet, cr&eacute;er une odeur, allumer une bougie, faire flotter un petit objet, &eacute;clairer une pi&egrave;ce ou r&eacute;parer un petit objet.</p>\n<p style=\"text-align: left;\"><strong>Sch&eacute;mas &Eacute;tranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un d&eacute; de Dualit&eacute;, gagnez un Espoir ou &eacute;liminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.</p>\n<p style=\"text-align: left;\"><strong>Espoir de magicien :</strong> D&eacute;pensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>",
-          "flavor": "<p><em>Domaines : Grimoire et Splendeur</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (10), Seuil Majeur (5), Seuil S&eacute;v&egrave;re (10)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs à volonté. Par exemple, vous pouvez changer la couleur d'un objet, créer une odeur, allumer une bougie, faire flotter un petit objet, éclairer une pièce ou réparer un petit objet.</p>\n<p style=\"text-align: left;\"><strong>Schémas Étranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un dé de Dualité, gagnez un Espoir ou éliminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.</p>\n<p style=\"text-align: left;\"><strong>Espoir de magicien :</strong> Dépensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>",
+          "flavor": "<p><em>Domaines : Grimoire et Splendeur</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (5), Seuil Sévère (10)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -3243,7 +3243,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FINESSE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous rencontrez un inconnu qui ne vous est pas hostile, vous avez un avantage pour n&eacute;gocier des biens ou des informations.&nbsp;</p>\n<p style=\"text-align: left;\">Une fois par s&eacute;ance, vous pouvez d&eacute;signer un PNJ membre de la tribu qui a une dette envers vous. Il acceptera de vous aider dans une certaine mesure sans demander de contrepartie.</p>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FINESSE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous rencontrez un inconnu qui ne vous est pas hostile, vous avez un avantage pour négocier des biens ou des informations.&nbsp;</p>\n<p style=\"text-align: left;\">Une fois par séance, vous pouvez désigner un PNJ membre de la tribu qui a une dette envers vous. Il acceptera de vous aider dans une certaine mesure sans demander de contrepartie.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Roublard - Fondation)",
           "cout": ""
@@ -3391,7 +3391,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p><strong>JET DE SORTS : AGILIT&Eacute;</strong></p>\n<p><strong>Pr&eacute;dateur Alpha :</strong> Marquez un Stress pour augmenter votre Ma&icirc;trise de +1 sur un jet de d&eacute;g&acirc;ts. De plus, chaque fois que vous infligez des d&eacute;g&acirc;ts S&eacute;v&egrave;res &agrave; un ennemi, il marque &eacute;galement un Stress.</p>\n<p><strong>Chemin Trac&eacute; :</strong> Lorsque vous vous dirigez vers un lieu que vous avez d&eacute;j&agrave; visit&eacute;, ou que vous portez avec vous un objet ayant &eacute;t&eacute; l&agrave; auparavant, vous pouvez identifier le chemin le plus court et le plus direct vers votre destination.</p>",
+          "description": "<p><strong>JET DE SORTS : AGILITÉ</strong><br><strong>Prédateur Alpha :</strong> Marquez un Stress pour augmenter votre Maîtrise de +1 sur un jet de dégâts. De plus, chaque fois que vous infligez des dégâts Sévères à un ennemi, il marque également un Stress.<br><strong>Chemin Tracé :</strong> Lorsque vous vous dirigez vers un lieu que vous avez déjà visité, ou que vous portez avec vous un objet ayant été là auparavant, vous pouvez identifier le chemin le plus court et le plus direct vers votre destination.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Rôdeur - Fondation)",
           "cout": "1 stress"
@@ -3539,7 +3539,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p>Lors d'un jet avec l'Espoir, vous pouvez placer un d6 sur cette carte au lieu de prendre un Espoir. Ceux-ci sont connus sous le nom de vos d&eacute;s de Tueur. Vous pouvez stocker un nombre de d&eacute;s de Tueur &eacute;gal &agrave; votre Ma&icirc;trise. Lorsque vous effectuez un jet d'attaque ou de d&eacute;g&acirc;ts, vous pouvez d&eacute;penser autant de d&eacute;s de Tueur que vous le souhaitez, les lan&ccedil;ant et ajoutant leur valeur &agrave; votre total. &Agrave; la fin d'une session, effacez tous les d&eacute;s de Tueur restants sur cette carte et gagnez autant d'Espoir.</p>",
+          "description": "<p>Lors d'un jet avec l'Espoir, vous pouvez placer un d6 sur cette carte au lieu de prendre un Espoir. Ceux-ci sont connus sous le nom de vos dés de Tueur. Vous pouvez stocker un nombre de dés de Tueur égal à votre Maîtrise. Lorsque vous effectuez un jet d'attaque ou de dégâts, vous pouvez dépenser autant de dés de Tueur que vous le souhaitez, les lan&ccedil;ant et ajoutant leur valeur à votre total. &Agrave; la fin d'une session, effacez tous les dés de Tueur restants sur cette carte et gagnez autant d'Espoir.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Guerrier - Fondation)",
           "cout": ""
@@ -3687,7 +3687,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Fidèle",
-          "description": "<p style=\"text-align: left;\">Lorsque vous choisissez cette Fondation :</p>\n<ul>\n<li style=\"text-align: left;\">Gagnez imm&eacute;diatement un emplacement d'armure suppl&eacute;mentaire.</li>\n<li style=\"text-align: left;\">Lorsque vous &ecirc;tes touch&eacute; par un ennemi en port&eacute;e M&ecirc;l&eacute;e, lancez imm&eacute;diatement un nombre de d6 &eacute;gal au nombre de points de vie que vous avez marqu&eacute;s. Pour chaque r&eacute;sultat de 5 ou plus, infligez un point de vie de d&eacute;g&acirc;ts &agrave; l'ennemi.</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\">Lorsque vous choisissez cette Fondation :</p>\n<ul>\n<li style=\"text-align: left;\">Gagnez immédiatement un emplacement d'armure supplémentaire.</li>\n<li style=\"text-align: left;\">Lorsque vous êtes touché par un ennemi en portée Mêlée, lancez immédiatement un nombre de d6 égal au nombre de points de vie que vous avez marqués. Pour chaque résultat de 5 ou plus, infligez un point de vie de dégâts à l'ennemi.</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Gardien - Fondation)",
           "cout": "x armure"
@@ -3835,7 +3835,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FINESSE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous arrivez dans une ville ou un environnement important, vous connaissez quelqu'un qui y habite. Donnez-lui un nom, notez comment vous pensez qu'il pourrait &ecirc;tre utile et choisissez une option parmi la liste ci-dessous :</p>\n<ul>\n<li style=\"text-align: left;\">Ils me doivent une faveur, mais ils seront difficiles &agrave; trouver.</li>\n<li style=\"text-align: left;\">Ils vont demander quelque chose en &eacute;change.</li>\n<li style=\"text-align: left;\">Ils ont toujours de gros ennuis.</li>\n<li style=\"text-align: left;\">Nous &eacute;tions ensemble avant. C&rsquo;est une longue histoire.</li>\n<li style=\"text-align: left;\">Nous ne nous sommes pas quitt&eacute;s en bons termes.</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FINESSE</strong></p>\n<p style=\"text-align: left;\">Lorsque vous arrivez dans une ville ou un environnement important, vous connaissez quelqu'un qui y habite. Donnez-lui un nom, notez comment vous pensez qu'il pourrait être utile et choisissez une option parmi la liste ci-dessous :</p>\n<ul>\n<li style=\"text-align: left;\">Ils me doivent une faveur, mais ils seront difficiles à trouver.</li>\n<li style=\"text-align: left;\">Ils vont demander quelque chose en échange.</li>\n<li style=\"text-align: left;\">Ils ont toujours de gros ennuis.</li>\n<li style=\"text-align: left;\">Nous étions ensemble avant. C&rsquo;est une longue histoire.</li>\n<li style=\"text-align: left;\">Nous ne nous sommes pas quittés en bons termes.</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Roublard - Fondation)",
           "cout": ""
@@ -3983,8 +3983,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Séraphin",
-          "description": "<p><strong>D&eacute;s de Pri&egrave;re</strong> : Au d&eacute;but de chaque session, lancez un nombre de d&eacute;s d4 &eacute;gal &agrave; votre trait de Lancer de Sorts et conservez-les sur le c&ocirc;t&eacute;. Vous pouvez d&eacute;penser un ou plusieurs de ces d&eacute;s &agrave; tout moment pour aider vous-m&ecirc;me ou un alli&eacute; &agrave; port&eacute;e Loin. Vous pouvez utiliser la valeur du d&eacute; d&eacute;pens&eacute; pour r&eacute;duire les d&eacute;g&acirc;ts entrants ou ajouter au r&eacute;sultat de tout jet apr&egrave;s le jet. De plus, vous pouvez &eacute;changer cette valeur contre autant de points d'Espoir que vous pouvez donner &agrave; un autre PJ &agrave; port&eacute;e. Effacez ces d&eacute;s &agrave; la fin de chaque session.</p>\n<p><strong>Espoir du Seraphin</strong> : D&eacute;pensez trois points d'Espoir et relancez un D&eacute; de Pri&egrave;re ou rafra&icirc;chissez un de vos D&eacute;s de Pri&egrave;re utilis&eacute;s.</p>",
-          "flavor": "<p><em>Domaines : Splendeur et Valeur</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (7), Seuil Majeur (8), Seuil S&eacute;v&egrave;re (16)</em></p>",
+          "description": "<p><strong>Dés de Prière</strong> : Au début de chaque session, lancez un nombre de dés d4 égal à votre trait de Lancer de Sorts et conservez-les sur le côté. Vous pouvez dépenser un ou plusieurs de ces dés à tout moment pour aider vous-même ou un allié à portée Loin. Vous pouvez utiliser la valeur du dé dépensé pour réduire les dégâts entrants ou ajouter au résultat de tout jet après le jet. De plus, vous pouvez échanger cette valeur contre autant de points d'Espoir que vous pouvez donner à un autre PJ à portée. Effacez ces dés à la fin de chaque session.<br><strong>Espoir du Seraphin</strong> : Dépensez trois points d'Espoir et relancez un Dé de Prière ou rafraîchissez un de vos Dés de Prière utilisés.</p>",
+          "flavor": "<p><em>Domaines : Splendeur et Valeur</em><br><em>Traits à la création : Esquive (7), Seuil Majeur (8), Seuil Sévère (16)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -4131,8 +4131,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Sorcier",
-          "description": "<p style=\"text-align: left;\"><strong>Sens Arcanique :</strong> Vous pouvez percevoir la pr&eacute;sence de cr&eacute;atures et d'objets magiques lorsque vous &ecirc;tes proche d'eux.</p>\n<p style=\"text-align: left;\"><strong>Illusion Mineure :</strong> Faites un Jet de Lancer de Sort (10). En cas de succ&egrave;s, vous cr&eacute;ez une illusion visuelle mineure, pas plus grande que vous-m&ecirc;me, &agrave; port&eacute;e Proche. Cette illusion est convaincante pour quiconque se trouve &agrave; port&eacute;e Lointaine ou plus loin.</p>\n<p style=\"text-align: left;\"><strong>Canaliser la Puissance Brute :</strong> Une fois par repos long, vous pouvez passer une carte de Domaine d'active &agrave; inactive et choisir soit de : 1) Gagner de l'Espoir &eacute;gal au niveau de la carte. 2) Am&eacute;liorer un sort de d&eacute;g&acirc;ts en infligeant des d&eacute;g&acirc;ts magiques suppl&eacute;mentaires &eacute;gaux au double du niveau de la carte. Pendant votre prochain repos court, vous pouvez r&eacute;cup&eacute;rer cette carte sans payer son co&ucirc;t de rappel.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Sorcier</strong> : D&eacute;pensez trois points d'Espoir apr&egrave;s un jet de Lancer de Sorts pour doubler le r&eacute;sultat de votre d&eacute; d'Espoir.</p>",
-          "flavor": "<p><em>Domaines : Arcane et Midnight</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (9), Seuil Majeur (6), Seuil S&eacute;v&egrave;re (12)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Sens Arcanique :</strong> Vous pouvez percevoir la présence de créatures et d'objets magiques lorsque vous êtes proche d'eux.</p>\n<p style=\"text-align: left;\"><strong>Illusion Mineure :</strong> Faites un Jet de Lancer de Sort (10). En cas de succès, vous créez une illusion visuelle mineure, pas plus grande que vous-même, à portée Proche. Cette illusion est convaincante pour quiconque se trouve à portée Lointaine ou plus loin.</p>\n<p style=\"text-align: left;\"><strong>Canaliser la Puissance Brute :</strong> Une fois par repos long, vous pouvez passer une carte de Domaine d'active à inactive et choisir soit de : 1) Gagner de l'Espoir égal au niveau de la carte. 2) Améliorer un sort de dégâts en infligeant des dégâts magiques supplémentaires égaux au double du niveau de la carte. Pendant votre prochain repos court, vous pouvez récupérer cette carte sans payer son coût de rappel.</p>\n<p style=\"text-align: left;\"><strong>Espoir du Sorcier</strong> : Dépensez trois points d'Espoir après un jet de Lancer de Sorts pour doubler le résultat de votre dé d'Espoir.</p>",
+          "flavor": "<p><em>Domaines : Arcane et Midnight</em><br><em>Traits à la création : Esquive (9), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -4238,7 +4238,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "qsdf",
-          "description": "<p><strong>(Tarantule, Araign&eacute;e-Loup, etc.)</strong><br>+1 Finesse | Attaque M&ecirc;l&eacute;e/Finesse/d6+1 (phy) | Esquive +2<br><strong>Avantages :</strong> Attaquer, Grimper, Se faufiler<br><strong>Lanceur de Toile :</strong> Vous avez la capacit&eacute; de cr&eacute;er du mat&eacute;riau en toile solide, utile tant pour l'aventure que pour le combat. Il est assez r&eacute;sistant pour supporter une seule cr&eacute;ature. Vous pouvez rendre une cible &agrave; port&eacute;e Proche Entrav&eacute;e en r&eacute;ussissant un jet de Finesse contre elle.<br><strong>Morsure Venimeuse :</strong> Lorsque vous r&eacute;ussissez une attaque au corps &agrave; corps, la cible devient temporairement Empoisonn&eacute;e. Une cr&eacute;ature Empoisonn&eacute;e subit 1d10 d&eacute;g&acirc;ts directs physiques chaque fois qu'elle agit. Cette condition ne peut pas s'accumuler.</p>",
+          "description": "<p><strong>(Tarantule, Araignée-Loup, etc.)</strong><br>+1 Finesse | Attaque Mêlée/Finesse/d6+1 (phy) | Esquive +2<br><strong>Avantages :</strong> Attaquer, Grimper, Se faufiler<br><strong>Lanceur de Toile :</strong> Vous avez la capacité de créer du matériau en toile solide, utile tant pour l'aventure que pour le combat. Il est assez résistant pour supporter une seule créature. Vous pouvez rendre une cible à portée Proche Entravée en réussissant un jet de Finesse contre elle.<br><strong>Morsure Venimeuse :</strong> Lorsque vous réussissez une attaque au corps à corps, la cible devient temporairement Empoisonnée. Une créature Empoisonnée subit 1d10 dégâts directs physiques chaque fois qu'elle agit. Cette condition ne peut pas s'accumuler.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -4384,8 +4384,8 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Gardien",
-          "description": "<p style=\"text-align: left;\"><strong>Inarr&ecirc;table</strong> Une fois par Long Repos, vous pouvez devenir Inarr&ecirc;table. Vous gagnez un d&eacute; Inarr&ecirc;table, qui commence comme un d4. Placez-le &agrave; droite, en commen&ccedil;ant avec la valeur \"1\" face visible. Chaque fois que vous infligez un ou plusieurs points de vie &agrave; un adversaire, augmentez la valeur du d&eacute; Inarr&ecirc;table de un. Lorsque vous augmentez la valeur au-del&agrave; du nombre le plus &eacute;lev&eacute; du d&eacute; ou lorsque la sc&egrave;ne se termine, retirez le d&eacute; et sortez de l'&eacute;tat Inarr&ecirc;table. Au Niveau 3, am&eacute;liorez votre d&eacute; Inarr&ecirc;table &agrave; un d6. Au Niveau 7, am&eacute;liorez-le &agrave; un d8.</p>\n<p style=\"text-align: left;\">Pendant que vous &ecirc;tes Inarr&ecirc;table, vous :</p>\n<ul>\n<li style=\"text-align: left;\">Gagnez une r&eacute;sistance aux d&eacute;g&acirc;ts physiques.</li>\n<li style=\"text-align: left;\">Augmentez votre Score d'Armure actuel de votre Ma&icirc;trise.</li>\n<li style=\"text-align: left;\">Ajoutez la valeur actuelle de votre d&eacute; Inarr&ecirc;table &agrave; votre total de d&eacute;g&acirc;ts.</li>\n<li style=\"text-align: left;\">Ne pouvez pas &ecirc;tre Immobilis&eacute; ou Vuln&eacute;rable.</li>\n</ul>\n<p><strong>Espoir du Gardien :</strong> D&eacute;pensez trois Espoirs et r&eacute;cup&eacute;rez jusqu'&agrave; trois emplacements d'armure.</p>",
-          "flavor": "<p><em>Domaines : Valeur et Bones</em></p>\n<p><em>Traits &agrave; la cr&eacute;ation : Esquive (8), Seuil Majeur (8), Seuil S&eacute;v&egrave;re (16)</em></p>",
+          "description": "<p style=\"text-align: left;\"><strong>Inarrêtable</strong> Une fois par Long Repos, vous pouvez devenir Inarrêtable. Vous gagnez un dé Inarrêtable, qui commence comme un d4. Placez-le à droite, en commen&ccedil;ant avec la valeur \"1\" face visible. Chaque fois que vous infligez un ou plusieurs points de vie à un adversaire, augmentez la valeur du dé Inarrêtable de un. Lorsque vous augmentez la valeur au-delà du nombre le plus élevé du dé ou lorsque la scène se termine, retirez le dé et sortez de l'état Inarrêtable. Au Niveau 3, améliorez votre dé Inarrêtable à un d6. Au Niveau 7, améliorez-le à un d8.</p>\n<p style=\"text-align: left;\">Pendant que vous êtes Inarrêtable, vous :</p>\n<ul>\n<li style=\"text-align: left;\">Gagnez une résistance aux dégâts physiques.</li>\n<li style=\"text-align: left;\">Augmentez votre Score d'Armure actuel de votre Maîtrise.</li>\n<li style=\"text-align: left;\">Ajoutez la valeur actuelle de votre dé Inarrêtable à votre total de dégâts.</li>\n<li style=\"text-align: left;\">Ne pouvez pas être Immobilisé ou Vulnérable.</li>\n</ul>\n<p><strong>Espoir du Gardien :</strong> Dépensez trois Espoirs et récupérez jusqu'à trois emplacements d'armure.</p>",
+          "flavor": "<p><em>Domaines : Valeur et Bones</em><br><em>Traits à la création : Esquive (8), Seuil Majeur (8), Seuil Sévère (16)</em></p>",
           "type": "Classe",
           "cout": ""
         },
@@ -4532,7 +4532,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p style=\"text-align: left;\"><strong>Lancer de Sorts : Instinct</strong></p>\n<p style=\"text-align: left;\">Votre origine primordiale vous permet de modifier l'essence m&ecirc;me de la magie. Apr&egrave;s avoir lanc&eacute; un sort ou utilis&eacute; une arme qui inflige des d&eacute;g&acirc;ts magiques, vous pouvez marquer un Stress pour faire l'une des actions suivantes :</p>\n<ul>\n<li style=\"text-align: left;\">&Eacute;tendre sa port&eacute;e d'une distance.</li>\n<li style=\"text-align: left;\">Ajouter +2 au r&eacute;sultat du jet d'action.</li>\n<li style=\"text-align: left;\">Relancer un nombre quelconque de d&eacute;s de d&eacute;g&acirc;ts.</li>\n<li style=\"text-align: left;\">Toucher une cible suppl&eacute;mentaire &agrave; port&eacute;e.</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\"><strong>Lancer de Sorts : Instinct</strong></p>\n<p style=\"text-align: left;\">Votre origine primordiale vous permet de modifier l'essence même de la magie. Après avoir lancé un sort ou utilisé une arme qui inflige des dégâts magiques, vous pouvez marquer un Stress pour faire l'une des actions suivantes :</p>\n<ul>\n<li style=\"text-align: left;\">Étendre sa portée d'une distance.</li>\n<li style=\"text-align: left;\">Ajouter +2 au résultat du jet d'action.</li>\n<li style=\"text-align: left;\">Relancer un nombre quelconque de dés de dégâts.</li>\n<li style=\"text-align: left;\">Toucher une cible supplémentaire à portée.</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Sorcier - Fondation)",
           "cout": "1 stress"
@@ -4680,7 +4680,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FORCE</strong></p>\n<ul>\n<li style=\"text-align: left;\">\n<p><strong>Arme Spirituelle :</strong> Lorsque vous avez une arme de m&ecirc;l&eacute;e &eacute;quip&eacute;e, elle peut voler de votre main pour frapper un ennemi &agrave; port&eacute;e Proche et revenir &agrave; vous. Vous pouvez marquer un Stress pour cibler un ennemi suppl&eacute;mentaire &agrave; port&eacute;e avec le m&ecirc;me jet d'attaque.</p>\n</li>\n<li>\n<p style=\"text-align: left;\"><strong>Toucher &Eacute;pargnant :</strong> Une fois par long repos, utilisez une action et touchez une cr&eacute;ature pour lui faire r&eacute;cup&eacute;rer 2 Points de Vie ou 2 Stress.</p>\n</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FORCE</strong></p>\n<ul>\n<li style=\"text-align: left;\">\n<p><strong>Arme Spirituelle :</strong> Lorsque vous avez une arme de mêlée équipée, elle peut voler de votre main pour frapper un ennemi à portée Proche et revenir à vous. Vous pouvez marquer un Stress pour cibler un ennemi supplémentaire à portée avec le même jet d'attaque.</p>\n</li>\n<li>\n<p style=\"text-align: left;\"><strong>Toucher Épargnant :</strong> Une fois par long repos, utilisez une action et touchez une créature pour lui faire récupérer 2 Points de Vie ou 2 Stress.</p>\n</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Séraphin - Fondation)",
           "cout": "1 stress"
@@ -4828,7 +4828,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Animal familier",
-          "description": "<p>Quand vous &eacute;chouez &agrave; un jet avec de la Peur, vous gagnez un Espoir.</p>\n<p>Une fois par long repos, avant de tenter quelque chose d'incroyablement dangereux ou d'affronter un ennemi clairement plus puissant que vous, d&eacute;crivez le rituel que vous effectuez ou la pr&eacute;paration que vous faites, puis effacez 2 Stress et gagnez 2 Espoir.</p>",
+          "description": "<p>Quand vous échouez à un jet avec de la Peur, vous gagnez un Espoir.<br>Une fois par long repos, avant de tenter quelque chose d'incroyablement dangereux ou d'affronter un ennemi clairement plus puissant que vous, décrivez le rituel que vous effectuez ou la préparation que vous faites, puis effacez 2 Stress et gagnez 2 Espoir.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Guerrier - Fondation)",
           "cout": ""
@@ -4935,7 +4935,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "sfa",
-          "description": "<p><strong>(Gu&eacute;pard, Lion, Panth&egrave;re, etc.)</strong><br>+1 Instinct | Attaque M&ecirc;l&eacute;e/Instinct/d8+6 (phy) | Esquive +3<br><strong>Avantages :</strong> Attaquer, Grimper, Se faufiler<br><strong>Rapide :</strong> Vous pouvez d&eacute;penser de l'Espoir pour vous d&eacute;placer n'importe o&ugrave; &agrave; port&eacute;e Loin sans avoir besoin de faire un jet.<br><strong>Bondir :</strong> Marquez un Stress pour vous d&eacute;placer en m&ecirc;l&eacute;e avec une cible et effectuer une attaque de base contre elle. En cas de succ&egrave;s, ajoutez +2 &agrave; la Ma&icirc;trise pour les d&eacute;g&acirc;ts et faites marquer du Stress &agrave; la cible.</p>",
+          "description": "<p><strong>(Guépard, Lion, Panthère, etc.)</strong><br>+1 Instinct | Attaque Mêlée/Instinct/d8+6 (phy) | Esquive +3<br><strong>Avantages :</strong> Attaquer, Grimper, Se faufiler<br><strong>Rapide :</strong> Vous pouvez dépenser de l'Espoir pour vous déplacer n'importe où à portée Loin sans avoir besoin de faire un jet.<br><strong>Bondir :</strong> Marquez un Stress pour vous déplacer en mêlée avec une cible et effectuer une attaque de base contre elle. En cas de succès, ajoutez +2 à la Maîtrise pour les dégâts et faites marquer du Stress à la cible.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -5081,7 +5081,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p style=\"text-align: left;\"><strong>Lancer de Sorts : Instinct</strong></p>\n<p style=\"text-align: left;\">Votre origine &eacute;l&eacute;mentaire vous permet de manipuler et modeler un certain type d'&eacute;l&eacute;ment. Choisissez-en un : <strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Eau, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Feu, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Air, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Foudre, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Terre</strong></p>\n<p style=\"text-align: left;\">Vous pouvez canaliser cet &eacute;l&eacute;ment pour cr&eacute;er des effets uniques et inoffensifs. De plus, vous pouvez d&eacute;penser un point d'Espoir et d&eacute;crire comment votre ma&icirc;trise de cet &eacute;l&eacute;ment aide un jet d'action que vous &ecirc;tes sur le point de faire, puis ajouter soit +2 au jet, soit +3 aux d&eacute;g&acirc;ts.</p>",
+          "description": "<p style=\"text-align: left;\"><strong>Lancer de Sorts : Instinct</strong></p>\n<p style=\"text-align: left;\">Votre origine élémentaire vous permet de manipuler et modeler un certain type d'élément. Choisissez-en un : <strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Eau, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Feu, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Air, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Foudre, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Terre</strong></p>\n<p style=\"text-align: left;\">Vous pouvez canaliser cet élément pour créer des effets uniques et inoffensifs. De plus, vous pouvez dépenser un point d'Espoir et décrire comment votre maîtrise de cet élément aide un jet d'action que vous êtes sur le point de faire, puis ajouter soit +2 au jet, soit +3 aux dégâts.</p>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Sorcier - Fondation)",
           "cout": "1 stress"
@@ -5188,7 +5188,7 @@
         "template": "nl9DU6tzsTcMqNhk",
         "props": {
           "name": "faaf",
-          "description": "<p><strong>(Vip&egrave;re, Cobra, Serpent &agrave; Sonnettes, etc.)</strong><br>+1 Finesse | Attaque Tr&egrave;s Pr&egrave;s/Finesse/d8+4 (phy) | Esquive +2<br><strong>Avantages :</strong> Attaquer, Grimper, Tromper<br><strong>Coup Venimeux :</strong> Attaquez toutes les cibles &agrave; port&eacute;e Tr&egrave;s Pr&egrave;s. Toute cible touch&eacute;e devient temporairement Empoisonn&eacute;e. Une cr&eacute;ature Empoisonn&eacute;e subit 1d10 d&eacute;g&acirc;ts physiques directs chaque fois qu'elle agit. Cette condition ne peut pas s'accumuler.</p>",
+          "description": "<p><strong>(Vipère, Cobra, Serpent à Sonnettes, etc.)</strong><br>+1 Finesse | Attaque Très Près/Finesse/d8+4 (phy) | Esquive +2<br><strong>Avantages :</strong> Attaquer, Grimper, Tromper<br><strong>Coup Venimeux :</strong> Attaquez toutes les cibles à portée Très Près. Toute cible touchée devient temporairement Empoisonnée. Une créature Empoisonnée subit 1d10 dégâts physiques directs chaque fois qu'elle agit. Cette condition ne peut pas s'accumuler.</p>",
           "cout": "1 stress"
         },
         "modifiers": [],
@@ -5334,7 +5334,7 @@
         "template": "HKv3zxpNqXVwdMFT",
         "props": {
           "name": "Porteur de foi",
-          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FORCE</strong></p>\n<p style=\"text-align: left;\">Vous pouvez voler. Pendant le vol, vous pouvez :</p>\n<ul>\n<li style=\"text-align: left;\">D&eacute;penser un Espoir pour ramasser et porter une autre cr&eacute;ature volontaire d'environ votre taille ou plus petite.</li>\n<li style=\"text-align: left;\">Marquer un Stress pour infliger 1d8 de d&eacute;g&acirc;ts suppl&eacute;mentaires lors d'une attaque r&eacute;ussie.</li>\n</ul>",
+          "description": "<p style=\"text-align: left;\"><strong>JET DE SORTS : FORCE</strong></p>\n<p style=\"text-align: left;\">Vous pouvez voler. Pendant le vol, vous pouvez :</p>\n<ul>\n<li style=\"text-align: left;\">Dépenser un Espoir pour ramasser et porter une autre créature volontaire d'environ votre taille ou plus petite.</li>\n<li style=\"text-align: left;\">Marquer un Stress pour infliger 1d8 de dégâts supplémentaires lors d'une attaque réussie.</li>\n</ul>",
           "flavor": "<p><em>flavor</em></p>",
           "type": "Sous-classe (Séraphin - Fondation)",
           "cout": "variable"

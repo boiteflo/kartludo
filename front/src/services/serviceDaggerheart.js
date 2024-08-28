@@ -4,9 +4,9 @@ class ServiceDaggerheart {
     static async loadCards() {
         let result = {};
         result.Class = await ServiceBack.get('daggerheart', 'class');
-        result.Ancestry = await ServiceBack.get('daggerheart', 'heritage');
+        result.Ancestry = await ServiceBack.get('daggerheart', 'ancestry');
         result.Community = await ServiceBack.get('daggerheart', 'communaute');
-        result.Domain = await ServiceBack.get('daggerheart', 'capacites');
+        result.Domain = await ServiceBack.get('daggerheart', 'domains');
         result.Domain = result.Domain.sort((a,b) => a.domaine - b.domaine);
         return result;
     }
