@@ -10,7 +10,7 @@
             mdi-plus
           </v-icon>
         </v-btn>
-        <v-btn style="height:500px; width:40%; margin:20px;" @click="selectChoice(3)">
+        <v-btn style="height:500px; width:40%; margin:20px;" @click="selectChoice(3)" class="bgRed">
           <p>Créer une multitude de carte</p>
           <v-icon dark>
             mdi-plus
@@ -62,7 +62,7 @@
           <h4 style="height:70px" v-if="$vuetify.breakpoint.width > 800"></h4>
           <p class="m5px text-center">L'image au format html</p>
           <div :key="refreshCard">
-            <div ref="CardTemplate" style="width:350px" class="container" v-for="template in getTemplate()"
+            <div ref="CardTemplate" class="container" v-for="template in getTemplate()"
               :key="'Template' + template.name">
 
               <img v-for="(image, index) in template.images" :key="'TemplateImage' + index" class="overlay-image"
@@ -148,25 +148,25 @@ p {
     templates: [
       {
         name:"Ancestry", 
-        template:"Template Ancestry\ntext font-family:system-ui font-weight:bold font-size:30px top:190px left:40px text-transform:uppercase\ntext color:black font-size:11px top:235px left:15px\nimage top:2px left:2px right:2px",
+        template:"Template Ancestry\ntext font-family:system-ui font-weight:bold font-size:30px top:190px left:40px text-transform:uppercase\ntext color:black font-size:11px top:235px left:15px right:15px\nimage top:2px left:2px right:2px",
         values:"Elf;<p><i>Les Elfes sont généralement des humanoïdes grands avec des oreilles pointues et des sens extrêmement aiguisés.</i><br><br><strong>Transe spirituelle :</strong> Pendant un repos, vous pouvez entrer en transe et effectuer une action supplémentaire de temps d'arrêt.<br><br><strong>Réactions Rapides :</strong> Vous pouvez marquer un Stress pour bénéficier d'un avantage sur un Jet de Réaction.</p>",
         images:[require('@/assets/Daggerheart/template/CardAncestry.png'), require('@/assets/Daggerheart/ancestry/elf.jpg')]
       },
       {
         name:"Community", 
-        template:"Template Community\ntext font-family:system-ui font-weight:bold font-size:20px top:245px left:40px text-transform:uppercase\ntext color:black font-size:12px top:275px left:15px\nimage top:2px left:2px right:2px",
+        template:"Template Community\ntext font-family:system-ui font-weight:bold font-size:20px top:245px left:40px text-transform:uppercase\ntext color:black font-size:12px top:275px left:15px right:15px\nimage top:2px left:2px right:2px",
         values:"Communauté côtière;<p><i>Faire partie d'une communauté côtière signifie que vous avez vécu sur ou près d'une grande étendue d'eau.</i><br><br><strong>Connaissance de la Marée</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons égal à votre Niveau. Avant de faire un jet d'action, vous pouvez dépenser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 à votre jet. &Agrave; la fin d'une session, défaussez tous les jetons non utilisés.</p>",
         images:[require('@/assets/Daggerheart/template/CardCommunity.png'), require('@/assets/Daggerheart/community/seaborne.jpg')]
       },
       {
         name:"Class", 
-        template:"Template Class\ntext font-family:system-ui font-weight:bold font-size:14px top:173px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext color:black font-size:10px top:198px left:15px\ntext top:455px font-size:10px text-align:center left:15px right:15px\nimage top:-20px left:2px right:2px\nimage top:2px left:20px width:70px height:118px",
+        template:"Template Class\ntext font-family:system-ui font-weight:bold font-size:14px top:172px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext color:black font-size:10px top:198px left:15px right:15px\ntext top:455px font-size:10px text-align:center left:15px right:15px\nimage top:-20px left:2px right:2px\nimage top:0px left:20px width:70px height:118px",
         values:"Magicien;<p><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs à volonté. Par exemple, vous pouvez changer la couleur d'un objet, créer une odeur, allumer une bougie, faire flotter un petit objet, éclairer une pièce ou réparer un petit objet.<br><strong>Schémas étranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un dé de Dualité, gagnez un Espoir ou éliminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.<br><strong>Espoir de magicien :</strong> Dépensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>;<p><b>Évasion : </b> 10, <b>Seuil de dégâts : </b> Majeur 5 / Sévère 10</p>",
         images:[require('@/assets/Daggerheart/template/CardClass.png'), require('@/assets/Daggerheart/class/wizard.jpg'), require('@/assets/Daggerheart/class/wizard-banner.webp')]
       },
       {
         name:"Domain", 
-        template:"Template Domain\ntext font-weight:bold font-size:14px top:228px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext font-weight:bold font-size:20px top:250px text-align:center  text-transform:uppercase right:20px left:20px\ntext color:black font-size:30px top:15px color:white left:45px font-weight:bold\ntext font-weight:bold font-size:21px top:20px right:26px color:white\ntext font-size:11px top:275px left:15px right:15px\ntext top:455px font-size:10px text-align:right right:15px\nimage top:2px left:2px right:2px\nimage top:2px left:20px width:70px height:118px\nimage top:20px right:20px width:35px height:35px",
+        template:"Template Domain\ntext font-weight:bold font-size:14px top:228px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext font-weight:bold font-size:20px top:250px text-align:center  text-transform:uppercase right:20px left:20px\ntext color:black font-size:30px top:15px color:white left:45px font-weight:bold\ntext font-weight:bold font-size:18px top:23px right:36px color:white\ntext font-size:11px top:275px left:15px right:15px\ntext top:455px font-size:10px text-align:right right:15px\nimage top:2px left:2px right:2px\nimage top:2px left:20px width:70px height:118px\nimage top:20px right:20px width:35px height:35px",
         values:"Habilité;Riposte;1;2;<p>Lorsque vous subissez des dégâts d'une créature en mêlée, vous pouvez marquer un Stress pour infliger immédiatement des dégâts d'arme à la créature à moitié de votre Maîtrise (arrondi à l'unité supérieure).</p>;<b>Domaines : </b> Lame",
         images:[require('@/assets/Daggerheart/template/CardDomain.png'), require('@/assets/Daggerheart/domain/blade.jpg'), require('@/assets/Daggerheart/domain/banner-blade.webp'), require('@/assets/Daggerheart/other/cost.webp')]
       }
