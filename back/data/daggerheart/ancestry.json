@@ -32,12 +32,12 @@
 	{
 		"id": "elf",
 		"name": "Elfe",
-		"description": "<p><i>Les Elfes sont généralement des humanoïdes grands avec des oreilles pointues et des sens extrêmement aiguisés.</i><br><br><strong>Transe spirituelle :</strong> Pendant un repos, vous pouvez entrer en transe et effectuer une action supplémentaire de temps d'arrêt.<br><br><strong>Réactions Rapides :</strong> Vous pouvez marquer un Stress pour bénéficier d'un avantage sur un Jet de Réaction.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
+		"description": "<p><i>Les Elfes sont généralement des humanoïdes grands avec des oreilles pointues et des sens extrêmement aiguisés.</i><br><br><strong>Transe spirituelle :</strong> Pendant un repos, vous pouvez entrer en transe et effectuer une action supplémentaire de temps d'arrêt.<br><br><strong>Réactions Rapides :</strong> Vous pouvez marquer un Stress pour bénéficier d'un avantage sur un Jet de Réaction.</p>"
 	},
 	{
 		"id": "human",
 		"name": "Humain",
-		"description": "<p><i>Ceux d'ascendance humaine sont le plus facilement reconnus par leurs mains agiles, leurs oreilles arrondies et leurs corps adaptés à l'endurance.</i><br><br><strong>Endurance Élevée :</strong> Notez une case de Stress supplémentaire lors de la création de personnage.<br><br><strong>Adaptabilité :</strong> Lorsque vous échouez à un jet qui utilise l'une de vos Expériences, vous pouvez marquer un Stress pour relancer le dé. Vous devez accepter le nouveau résultat.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
+		"description": "<p><i>Ceux d'ascendance humaine sont le plus facilement reconnus par leurs mains agiles, leurs oreilles arrondies et leurs corps adaptés à l'endurance.</i><br><br><strong>Endurance Élevée :</strong> Notez une case de Stress supplémentaire lors de la création de personnage.<br><br><strong>Adaptabilité :</strong> Lorsque vous échouez à un jet qui utilise l'une de vos Expériences, vous pouvez marquer un Stress pour relancer le dé. Vous devez accepter le nouveau résultat.</p>"
 	},
 	{
 		"id": "dwarf",

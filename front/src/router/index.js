@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.6.4';
+let version = 'V2.6.5';
 
 Vue.use(VueRouter)
 
@@ -37,6 +37,12 @@ const routes = [
         name: version + ' Daggerheart',
         component: () =>
             import ('../pages/pageDaggerheart.vue')
+    },
+    {
+        path: '/template',
+        name: version + ' Daggerheart',
+        component: () =>
+            import ('../pages/pageTemplate.vue')
     },
     {
         path: '/fight',
