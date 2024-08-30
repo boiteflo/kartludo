@@ -1,13 +1,100 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V2.6.7';
+let version = 'V3.0.0';
 
 Vue.use(VueRouter)
 
 Vue.prototype.$version = version;
 
 const routes = [
+    // Yu-Gi-Oh!
+    {
+        path: '/yugioh',
+        name: version + ' MDOS Yu-Gi-Oh!',
+        component: () =>
+            import ('../pages/yugioh/pageHomeYGO.vue')
+    },
+    {
+        path: '/cardAdd',
+        name: version + ' MDOS Carte',
+        component: () =>
+            import ('../pages/yugioh/pageAddCard.vue')
+    },
+    {
+        path: '/format',
+        name: version + ' MDOS Format',
+        component: () =>
+            import ('../pages/yugioh/pageFormat.vue')
+    },
+    {
+        path: '/decks',
+        name: version + ' MDOS Deck',
+        component: () =>
+            import ('../pages/yugioh/pageDecks.vue')
+    },
+    {
+        path: '/deck/:id',
+        name: version + ' MDOS Deck',
+        component: () =>
+            import ('../pages/yugioh/pageDeck.vue')
+    },
+    {
+        path: '/tool',
+        name: version + ' MDOS Outils',
+        component: () =>
+            import ('../pages/yugioh/pageTool.vue')
+    },
+    {
+        path: '/boosters',
+        name: version + ' MDOS Boosters',
+        component: () =>
+            import ('../pages/yugioh/pageBoosters.vue')
+    },
+    {
+        path: '/cube/:id',
+        name: version + ' MDOS Cube',
+        component: () =>
+            import ('../pages/yugioh/pageCube.vue')
+    },
+    {
+        path: '/cubes',
+        name: version + ' MDOS Cubes',
+        component: () =>
+            import ('../pages/yugioh/pageCubes.vue')
+    },
+    // Daggerheart
+    {
+        path: '/daggerheart',
+        name: version + ' Daggerheart',
+        component: () =>
+            import ('../pages/daggerheart/pageDaggerheart.vue')
+    },
+    {
+        path: '/character',
+        name: version + ' Daggerheart Personnage ',
+        component: () =>
+            import ('../pages/daggerheart/pageCharacter.vue')
+    },
+    {
+        path: '/cards',
+        name: version + ' Daggerheart Cartes',
+        component: () =>
+            import ('../pages/daggerheart/pageCards.vue')
+    },
+    {
+        path: '/template',
+        name: version + ' Créateur',
+        component: () =>
+            import ('../pages/daggerheart/pageTemplate.vue')
+    },
+    {
+        path: '/fight',
+        name: version + ' Fight RPG',
+        component: () =>
+            import ('../pages/daggerheart/pageFight.vue')
+    },
+    // Global
     {
         path: '/error/:id',
         name: version + ' MDOS Error',
@@ -19,78 +106,6 @@ const routes = [
         name: version + ' MDOS Error',
         component: () =>
             import ('../pages/pageSuccess.vue')
-    },
-    {
-        path: '/cardAdd',
-        name: version + ' MDOS Carte',
-        component: () =>
-            import ('../pages/pageAddCard.vue')
-    },
-    {
-        path: '/format',
-        name: version + ' MDOS Format',
-        component: () =>
-            import ('../pages/pageFormat.vue')
-    },
-    {
-        path: '/daggerheart',
-        name: version + ' Daggerheart',
-        component: () =>
-            import ('../pages/pageDaggerheart.vue')
-    },
-    {
-        path: '/template',
-        name: version + ' Daggerheart',
-        component: () =>
-            import ('../pages/pageTemplate.vue')
-    },
-    {
-        path: '/fight',
-        name: version + ' Fight RPG',
-        component: () =>
-            import ('../pages/pageFight.vue')
-    },
-    {
-        path: '/decks',
-        name: version + ' MDOS Deck',
-        component: () =>
-            import ('../pages/pageDecks.vue')
-    },
-    {
-        path: '/deck/:id',
-        name: version + ' MDOS Deck',
-        component: () =>
-            import ('../pages/pageDeck.vue')
-    },
-    {
-        path: '/duel',
-        name: version + ' MDOS Duel',
-        component: () =>
-            import ('../pages/pageDuel.vue')
-    },
-    {
-        path: '/tool',
-        name: version + ' MDOS Outils',
-        component: () =>
-            import ('../pages/pageTool.vue')
-    },
-    {
-        path: '/boosters',
-        name: version + ' MDOS Boosters',
-        component: () =>
-            import ('../pages/pageBoosters.vue')
-    },
-    {
-        path: '/cube/:id',
-        name: version + ' MDOS Cube',
-        component: () =>
-            import ('../pages/pageCube.vue')
-    },
-    {
-        path: '/cubes',
-        name: version + ' MDOS Cubes',
-        component: () =>
-            import ('../pages/pageCubes.vue')
     },
     {
         path: '/*',

@@ -197,7 +197,15 @@
     padding: 0px !important;
 }
 .t0px {top:0px !important;}
+.t5px{top:5px !important;} 
+.t10px{top:10px !important;} 
 .t100px {top:100px !important;}
+.r0px{right:0px;}
+.r5px{right:5px;}
+.r10px{right:10px;}
+.l0px{left:0px;}
+.l5px{left:5px;}
+.l10px{left:10px;}
 
 .textCenter {
     text-align: center;

@@ -1,10 +1,11 @@
 <template>
-    <v-container>
+    <v-container class="relative">
         <v-row justify="center">
             <v-col>
                 <div ref="editor" class="quill-editor"></div>
             </v-col>
         </v-row>
+        <slot></slot>
     </v-container>
 </template>
 
@@ -28,8 +29,14 @@ export default {
                 toolbar: [
                     ['bold', 'italic', 'underline'], // Options de mise en forme
                     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    [{ 'align': [] }], // Alignement
+                    [{ 'color': [] }, { 'background': [] }], // Couleur du texte et du fond
+                    ['clean'] // Bouton pour retirer la mise en forme
                 ],
             },
+            formats: [
+                'font', 'size', 'bold', 'italic', 'underline', 'color', 'background', 'align', 'link', 'image'
+            ]
         });
         this.quill.root.innerHTML = this.text;
         this.quill.on('text-change', this.onTextChange);
