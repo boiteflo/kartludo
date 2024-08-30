@@ -1,12 +1,11 @@
 class ServiceTemplate {
-    static create(template, values, images) {
+    static create(template, images) {
         let result = { 
             value: template, 
-            texts: [], images: [], 
-            values: values.split(';') 
+            texts: [], images: []
         };
         template.split('\n').forEach(line => this.handleCommand(result, line, images));
-        result.backgroundStyle = {background: "url('" + images[0] + "')"};
+        result.backgroundStyle = {'background-image': "url('" + images[0] + "')"};
         return result;
     }
 
@@ -27,9 +26,9 @@ class ServiceTemplate {
 
     static addImage(result, line, images) {
         //image top:2px left:2px right:2px
-        let style = this.getLineStyle(line);
         const image = result.images.length +1 >= images.length ? "" : images[result.images.length+1];
-        let img = { line, style, image};
+        let style = {'background-image': "url('" + image + "')", ...this.getLineStyle(line)};
+        let img = { line, style};
         result.images.push(img);
     }
 
