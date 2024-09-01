@@ -89,7 +89,9 @@
 .h100 {height: 100px !important;}
 .h200 {height: 200px !important;}
 .h300 {height: 300px !important;}
+.h476 {height:476px !important;}
 .h500 {height: 500px !important;}
+.hCard {height:476px !important;}
 
 .w100p { width: 100% !important;}
 .w66p { width: 66% !important;}
@@ -109,7 +111,9 @@
 .w200 { width: 200px !important;}
 .w250 { width: 250px !important;}
 .w300 { width: 300px !important;}
+.w340 { width: 340px !important;}
 .w500 { width: 500px !important;}
+.wCard { width: 340px !important;}
 
 .s25 { width: 25px !important; height: 25px !important;}
 .s32 { width: 32px !important;height: 32px !important;}
@@ -206,6 +210,7 @@
 .l0px{left:0px;}
 .l5px{left:5px;}
 .l10px{left:10px;}
+.rl5px{right: 5px; left: 5px;}
 
 .textCenter {
     text-align: center;
@@ -270,6 +275,10 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 90%);
 }
 
+.yellowGradient {
+    background: linear-gradient(to bottom, rgba(255, 255, 59, 0.5), rgba(255, 255, 59, 0) 90%);
+}
+
 .bold {font-weight: bold;}
 
 h1 {
@@ -309,6 +318,10 @@ h4 {
     color: yellow;
 }
 
+.bgImage{
+    background-size: cover;
+    background-position: center;
+}
 
 /* Tooltip container */
 .tooltip {
@@ -359,6 +372,10 @@ h4 {
 
   .colorWhite{
     color:white !important;
+  }
+
+  .colorBlack{
+    color:black !important;
   }
 
   .absolute{position:absolute}
