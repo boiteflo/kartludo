@@ -7,6 +7,9 @@ if (process.env.NODE_ENV === 'production') {
 
 
 class ServiceBack {
+    static getUrlFront(){return urlBack.replace("5000","8080").replace("/api","");}
+    static getUrlBack(){return urlBack;}
+
     static getAll(url) {
         return new Promise((resolve, reject) => {
             try{

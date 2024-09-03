@@ -37,6 +37,7 @@
       </div>
     </v-navigation-drawer>
     <div v-if="$vuetify.breakpoint.width >= 800" class="bg" style="height:60px;"></div>
+    <div v-if="$vuetify.breakpoint.width < 800" class="bg" style="height:20px;"></div>
   </div>
 </template>
 

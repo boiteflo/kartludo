@@ -1,290 +1,308 @@
 [
 	{
-		"id":"rogue",
-		"name": "Roublard",
-		"description": "<p><strong>Se Cacher : </strong>Lorsque vous vous déplacez dans un endroit où aucun ennemi ne peut vous voir, vous pouvez utiliser une action pour devenir Caché (tous les jets contre vous sont désavantagés). En tant que Voleur, lorsque vous êtes Caché, les cibles ne peuvent pas non plus vous voir, même si elles entrent dans votre champ de vision. Vous cessez d'être Caché dès que vous bougez ou attaquez.<br><strong>Attaque Sournoise : </strong>Chaque fois que vous effectuez une attaque pendant que vous êtes Caché ou qu'un allié est en mêlée avec votre cible, ajoutez 1d6 à votre jet de dégâts. Lorsque vous utilisez Attaque Sournoise, vous pouvez également dépenser un nombre quelconque de points d'Espoir avant le jet d'attaque ; si l'attaque réussit, ajoutez également un nombre de d6 égal aux points d'Espoir dépensés.<br><strong>Espoir du Voleur : </strong>Dépensez trois points d'Espoir pour augmenter vos dégâts d'Attaque Sournoise. Jusqu'à votre prochain repos court, vous ajoutez 3d6 au lieu de 1d6 à chaque jet de dégâts d'Attaque Sournoise.</p>",
-		"flavor": "<p><em>Domaines : Midnight et Grâce</em><br><em>Traits à la création : Esquive (11), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
-		"explication":"Les roublards sont des vauriens, souvent tant par leur attitude que par leurs pratiques. Largement connus comme des menteurs et des voleurs, les meilleurs parmi cette classe se déplacent dans le monde totalement incognito. Utilisant leur esprit vif et leur lame, les roublards peuvent tromper leurs ennemis par manipulation sociale aussi facilement qu'en forçant des serrures ou en grimpant par les fenêtres. Les membres de cette classe sont des maîtres de l'art magique, ajoutant une panoplie d'outils mortels à leur arsenal. Les roublards établissent fréquemment des guildes pour rencontrer de futurs complices, accepter des missions, et affiner des compétences jalousement gardées.",
-		"cout": "variable",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "Marcheur des ombres",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FINESSE</p><p><strong>Marcheur des Ombres :</strong> Vous pouvez vous déplacer d'une ombre à l'autre. Lorsque vous entrez dans l'ombre projetée par une autre créature ou un objet, ou dans une zone d'obscurité, marquez un point de Stress pour disparaître de l'endroit où vous vous trouvez et réapparaître à l'intérieur de n'importe quelle autre ombre à portée Loin. Après cette action, vous êtes Caché.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Roublard - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "Syndicat",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FINESSE</p><p style='margin-bottom:0px;'>Lorsque vous arrivez dans une ville ou un environnement important, vous connaissez quelqu'un qui y habite. Donnez-lui un nom, notez comment vous pensez qu'il pourrait être utile et choisissez une option parmi la liste ci-dessous :<ul><li>Ils me doivent une faveur, mais ils seront difficiles à trouver.</li><li>Ils vont demander quelque chose en échange.</li><li>Ils ont toujours de gros ennuis.</li><li>Nous étions ensemble avant. C&rsquo;est une longue histoire.</li><li>Nous ne nous sommes pas quittés en bons termes.</li></ul></p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Roublard - Fondation)",
-				"type2": "Sous-"
-			}
-		],
-		"evasion": "11",
-		"seuilMajeur": "6",
-		"seuilSevere": "12",
-		"domains": "Nuit et Grace"
-	},
-	{
-		"id":"druid",
-		"name": "Druide",
-		"description": "<p><strong>Toucher Sauvage :</strong> Vous pouvez effectuer à volonté des effets subtils et inoffensifs liés à la nature. (Ex : faire pousser une fleur rapidement, invoquer une légère brise, allumer un feu de camp, etc.)<br><strong>Forme Bestiale :</strong> Marquez un Stress pour vous transformer en une créature magique de votre niveau ou inférieur de la liste des formes bestiales. Pendant que vous êtes transformé, vous ne pouvez pas utiliser vos armes ni lancer de sorts, mais vous gagnez les traits, les attaques et le bonus d'esquive de la créature. Vous pouvez abandonner cette forme à tout moment. En forme bestiale, votre armure fait partie de votre corps et vous marquez les emplacements d'armure comme d'habitude ; lorsque vous quittez la forme bestiale, ces emplacements d'armure restent marqués. Si vous marquez votre dernier Point de Vie ou Stress, cette forme se dissipe automatiquement.<br><strong>Espoir de druide : </strong>Dépensez trois points d'Espoir pendant que vous êtes en Forme Bestiale pour augmenter vos Seuils de Dégâts de +3 jusqu'à ce que vous quittiez cette forme.</p>",
-		"flavor": "<p><em>Domaines : Sagesse et Arcane</em><br><em>Traits à la création : Esquive (8), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
-		"cout": "1 stress",
-		"explication":"Devenir druide est plus qu'une simple profession, c'est une vocation pour ceux qui souhaitent apprendre de la magie de la nature et la protéger. Les druides qui pratiquent l'art souvent discret de canaliser la flore sont susceptibles d'être sous-estimés ; tandis que ceux qui canalisent les forces brutales des animaux peuvent être une chose terrifiante à voir. Les druides sont connus pour cultiver leurs capacités en petits groupes, souvent liés par une éthique ou un lieu spécifique. Après des années d'études et de dévouement, les druides peuvent apprendre à se transformer en bêtes et à façonner la terre et tous ses organismes.",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "Gardien du renouveau",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>INSTINCT</p><p><strong>Clarté de la Nature :</strong> Une fois par repos long, vous pouvez créer un espace de sérénité naturelle autour de vous. Après avoir passé quelques minutes de repos dans cet espace, vous pouvez effacer du Stress égal à votre trait Instinct, réparti comme vous le souhaitez entre vous et vos alliés.<br><strong>Régénération :</strong> Utilisez une action et dépensez 3 Espoirs pour donner 1d4 points de vie à une créature que vous touchez.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "3 espoirs",
-				"type": "Sous-classe (Druide - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "Gardien des éléments",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>INSTINCT</p><p><strong>Incarnation élémentaire : </strong>Marquez un Stress pour incarner un esprit élémentaire de la liste ci-dessous. L'incarnation dure jusqu'à ce que vous subissiez des dégâts Sévères ou jusqu'à votre prochain repos court. Cette capacité peut coexister avec la forme bestiale.<br><strong>Feu : </strong>Lorsqu'un ennemi en mêlée vous inflige des dégâts, il subit 1d10 de dégâts magiques. <strong>Terre :</strong> Vous gagnez +1 à votre Protection. <strong>Eau : </strong>Lorsque vous infligez des dégâts à un ennemi en mêlée, tous les autres ennemis dans une portée Très Proche marquent un Stress. <strong>Air : </strong>Vous pouvez flotter, ce qui vous donne l'avantage sur les jets d'Agilité.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Druide - Fondation)",
-				"type2": "Sous-"
-			}
-		],
-		"evasion": "8",
-		"seuilMajeur": "7",
-		"seuilSevere": "14",
-		"domains": "Sagesse et Arcane"
-	},
-	{
 		"id":"bard",
 		"name": "Barde",
 		"description": "<p><strong>Ralliement :</strong> Une fois par session, lorsque votre groupe se prépare à entrer dans une situation dangereuse ou difficile, décrivez comment vous les ralliez et donnez à vous-même et à chacun de vos alliés un dé de Ralliement d6. Quiconque possède un dé de Ralliement peut le dépenser pour le lancer, ajoutant le résultat à un jet d'action, un jet de réaction, un jet de dégâts ou pour enlever un stress égal au résultat du dé de Ralliement. à la fin de chaque session, tous les dés de Ralliement non dépensés sont supprimés. Le dé de Ralliement que vous distribuez passe à 1d8 au niveau 5.<br><strong>Espoir du Barde :</strong> Quand vous ou un allié à portée Très Près effectue un jet de Présence et réussit avec la Peur ou échoue, dépensez trois points d'Espoir pour annuler les conséquences de ce jet en intervenant.</p>",
-		"flavor": "<p><em>Domaines : Grâce et Codex</em><br><em>Traits à la création : Esquive (9), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
-		"cout": "",
 		"explication":"Ceux qui deviennent bardes sont véritablement les membres les plus charismatiques de tous les royaumes. Les membres de cette classe sont des maîtres de la captivation et peuvent se spécialiser dans une variété de types de performances, y compris : le chant, le jeu d'instruments de musique, la narration d'histoires ou la plaisanterie. Que ce soit en se produisant devant un public ou en parlant à une personne en particulier, les bardes excellent dans leur art. Il existe de nombreuses écoles et guildes où les membres de cette profession se réunissent pour créer des liens et s'entraîner, mais il y a aussi une bonne dose d'ego chez ceux qui adoptent la persuasion bardique.",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "Beau parleur",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>PRÉSENCE</p><p><strong>Cœur de Poète :</strong> Lorsque vous parlez à une personne que vous essayez d'impressionner, de persuader ou d'offenser, vous pouvez dépenser 1 Espoir et ajouter 1d4 au jet d'action contre elle.<br><strong>Discours Inspirant :</strong> Une fois par repos long, vous pouvez utiliser une action pour faire un discours sincère et inspirant. Tous les alliés qui peuvent vous entendre récupèrent 2 Stress.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 espoir",
-				"type": "Sous-classe (Barde - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "Troubadour",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>PRÉSENCE</p><p style='margin-bottom:0px;'>Lorsque vous choisissez cette Fondation, décrivez quel instrument vous maîtrisez. Vous pouvez utiliser une action pour jouer chaque chanson une fois par long repos :</p><ul><li>Lorsque vous jouez une chanson relaxante, vous et tous les alliés proches récupérez 1 point de vie.</li><li>Lorsque vous jouez une chanson épique, une cible proche devient temporairement Vulnérable.</li><li>Lorsque vous jouez une chanson déchirante, vous et tous les alliés proches prenez un Point d'Espoir.</li></ul>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Barde - Fondation)",
-				"type2": "Sous-"
-			}
+		"caracteristique": "031021",
+		"arme_suggeree": "rapier,smalldagger",
+		"armure_suggeree": "gambeson",
+		"objets_de_classe": ["Un Roman d'Amour", "une Lettre Jamais Ouverte"],
+		"questions_de_fond": [
+		  "Qui dans ta communauté t'a appris à avoir une telle confiance en toi ?",
+		  "Tu as été amoureux(se) une fois. C'était avec qui, et comment t'ont-ils blessé ?",
+		  "Tu as toujours admiré un autre barde. Qui est-ce et pourquoi les idolâtres-tu ?"
+		],
+		"connexions": [
+		  "Qu'est-ce qui t'a fait réaliser que nous allions être de si bons amis ?",
+		  "Qu'est-ce que je fais qui t'agace ?",
+		  "Pourquoi me prends-tu la main la nuit ?"
 		],
 		"evasion": "9",
 		"seuilMajeur": "6",
 		"seuilSevere": "12",
-		"domains": "Grace et Codex"
+		"domains": "Grace et Codex",
+		"SousClass": [
+			{
+				"name": "Beau parleur",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>PRÉSENCE</p><p><strong>Cœur de Poète :</strong> Lorsque vous parlez à une personne que vous essayez d'impressionner, de persuader ou d'offenser, vous pouvez dépenser 1 Espoir et ajouter 1d4 au jet d'action contre elle.<br><strong>Discours Inspirant :</strong> Une fois par repos long, vous pouvez utiliser une action pour faire un discours sincère et inspirant. Tous les alliés qui peuvent vous entendre récupèrent 2 Stress.</p>"
+			},
+			{
+				"name": "Troubadour",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>PRÉSENCE</p><p style='margin-bottom:0px;'>Lorsque vous choisissez cette Fondation, décrivez quel instrument vous maîtrisez. Vous pouvez utiliser une action pour jouer chaque chanson une fois par long repos :</p><ul><li>Lorsque vous jouez une chanson relaxante, vous et tous les alliés proches récupérez 1 point de vie.</li><li>Lorsque vous jouez une chanson épique, une cible proche devient temporairement Vulnérable.</li><li>Lorsque vous jouez une chanson déchirante, vous et tous les alliés proches prenez un Point d'Espoir.</li></ul>"
+			}
+		]
+    },
+    {
+		"id":"druid",
+		"name": "Druide",
+		"description": "<p><strong>Toucher Sauvage :</strong> Vous pouvez effectuer à volonté des effets subtils et inoffensifs liés à la nature. (Ex : faire pousser une fleur rapidement, invoquer une légère brise, allumer un feu de camp, etc.)<br><strong>Forme Bestiale :</strong> Marquez un Stress pour vous transformer en une créature magique de votre niveau ou inférieur de la liste des formes bestiales. Pendant que vous êtes transformé, vous ne pouvez pas utiliser vos armes ni lancer de sorts, mais vous gagnez les traits, les attaques et le bonus d'esquive de la créature. Vous pouvez abandonner cette forme à tout moment. En forme bestiale, votre armure fait partie de votre corps et vous marquez les emplacements d'armure comme d'habitude ; lorsque vous quittez la forme bestiale, ces emplacements d'armure restent marqués. Si vous marquez votre dernier Point de Vie ou Stress, cette forme se dissipe automatiquement.<br><strong>Espoir de druide : </strong>Dépensez trois points d'Espoir pendant que vous êtes en Forme Bestiale pour augmenter vos Seuils de Dégâts de +3 jusqu'à ce que vous quittiez cette forme.</p>",
+		"explication":"Devenir druide est plus qu'une simple profession, c'est une vocation pour ceux qui souhaitent apprendre de la magie de la nature et la protéger. Les druides qui pratiquent l'art souvent discret de canaliser la flore sont susceptibles d'être sous-estimés ; tandis que ceux qui canalisent les forces brutales des animaux peuvent être une chose terrifiante à voir. Les druides sont connus pour cultiver leurs capacités en petits groupes, souvent liés par une éthique ou un lieu spécifique. Après des années d'études et de dévouement, les druides peuvent apprendre à se transformer en bêtes et à façonner la terre et tous ses organismes.",
+		"evasion": "8",
+		"seuilMajeur": "7",
+		"seuilSevere": "14",
+		"domains": "Sagesse et Arcane",
+		"caracteristique": "101230",
+		"arme_suggeree": "quarterstaff,roundshield",
+		"armure_suggeree": "leather",
+		"objets_de_classe": ["Un Petit Sac de Roches et d'Os", "un Pendentif Étrange Trouvé dans la Terre"],
+		"questions_de_fond": [
+		  "Pourquoi la communauté dans laquelle tu as grandi était-elle si dépendante de la nature et de ses créatures ?",
+		  "Quel a été le premier lien que tu as établi avec un animal sauvage ? Pourquoi cela a-t-il pris fin ?",
+		  "Qui a essayé de te traquer ? Que penses-tu qu'ils veulent de toi ?"
+		],
+		"connexions": [
+		  "Qu'as-tu avoué qui me pousse à me lancer dans le danger pour toi à chaque fois ?",
+		  "Quel animal te dis-je que tu me rappelles ?",
+		  "Quel surnom affectueux m'as-tu donné ?"
+		],
+		"SousClass": [
+			{
+				"name": "Gardien du renouveau",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>INSTINCT</p><p><strong>Clarté de la Nature :</strong> Une fois par repos long, vous pouvez créer un espace de sérénité naturelle autour de vous. Après avoir passé quelques minutes de repos dans cet espace, vous pouvez effacer du Stress égal à votre trait Instinct, réparti comme vous le souhaitez entre vous et vos alliés.<br><strong>Régénération :</strong> Utilisez une action et dépensez 3 Espoirs pour donner 1d4 points de vie à une créature que vous touchez.</p>"
+			},
+			{
+				"name": "Gardien des éléments",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>INSTINCT</p><p><strong>Incarnation élémentaire : </strong>Marquez un Stress pour incarner un esprit élémentaire de la liste ci-dessous. L'incarnation dure jusqu'à ce que vous subissiez des dégâts Sévères ou jusqu'à votre prochain repos court. Cette capacité peut coexister avec la forme bestiale.<br><strong>Feu : </strong>Lorsqu'un ennemi en mêlée vous inflige des dégâts, il subit 1d10 de dégâts magiques. <strong>Terre :</strong> Vous gagnez +1 à votre Protection. <strong>Eau : </strong>Lorsque vous infligez des dégâts à un ennemi en mêlée, tous les autres ennemis dans une portée Très Proche marquent un Stress. <strong>Air : </strong>Vous pouvez flotter, ce qui vous donne l'avantage sur les jets d'Agilité.</p>"
+			}
+		]
+	},	
+	{
+		"id":"guardian",
+		"name": "Gardien",
+		"description": "<p style='margin-bottom:0px;'><strong>Inarrêtable</strong> Une fois par Long Repos, vous pouvez devenir Inarrêtable. Vous gagnez un dé Inarrêtable, qui commence comme un d4. Placez-le à droite, en commençant avec la valeur \"1\" face visible. Chaque fois que vous infligez un ou plusieurs points de vie à un adversaire, augmentez la valeur du dé Inarrêtable de un. Lorsque vous augmentez la valeur au-delà du nombre le plus élevé du dé ou lorsque la scène se termine, retirez le dé et sortez de l'état Inarrêtable. Au Niveau 3, améliorez votre dé Inarrêtable à un d6. Au Niveau 7, améliorez-le à un d8. Pendant que vous êtes Inarrêtable, vous :<ul><li>Gagnez une résistance aux dégâts physiques.</li><li>Augmentez votre Score d'Armure actuel de votre Maîtrise.</li><li>Ajoutez la valeur actuelle de votre dé Inarrêtable à votre total de dégâts.</li><li>Ne pouvez pas être Immobilisé ou Vulnérable.</li></ul><strong>Espoir du Gardien :</strong> Dépensez trois Espoirs et récupérez jusqu'à trois emplacements d'armure.</p>",
+		"explication":"Les gardiens représentent une gamme de professions martiales, et ce titre parle plus de leur boussole morale et de leur incroyable fortitude que des moyens par lesquels ils combattent. Ceux de cette classe peuvent choisir de rejoindre des groupes de militants, pour un pays ou une cause, mais les gardiens sont plus susceptibles de suivre ceux qu'ils chérissent véritablement, quitte à défier la majorité. Les gardiens sont connus pour se battre avec une férocité remarquable même contre des chances écrasantes, et sont aptes à utiliser des tactiques défensives pour protéger leur cohorte plutôt que de foncer tête baissée. Malheur à ceux qui font du mal à un allié d'un gardien, car ils n'oublieront pas facilement une telle offense.",
+		"evasion": "8",
+		"seuilMajeur": "8",
+		"seuilSevere": "16",
+		"domains": "Valeur et Manoeuvre",
+		"caracteristique": "123010",
+		"arme_suggeree": "battleaxe",
+		"armure_suggeree": "chainmail",
+		"objets_de_classe": ["Un Totem en Pierre de Ton Mentor", "une Clé Secrète"],
+		"questions_de_fond": [
+		  "Qui dans ta communauté n'as-tu pas réussi à protéger, et pourquoi penses-tu toujours à eux ?",
+		  "On t'a récemment confié la tâche de protéger quelque chose d'important, avec l'objectif de le livrer dans un endroit dangereux. Qu'est-ce que c'est et où doit-il aller ?",
+		  "Tu considères un aspect de toi comme une 'faiblesse'. Qu'est-ce que c'est, et comment cela t'a-t-il affecté ?"
+		],
+		"connexions": [
+		  "Comment ai-je sauvé ta vie la première fois que nous nous sommes rencontrés ?",
+		  "Quel petit cadeau m'as-tu donné que tu remarques que je porte toujours avec moi ?",
+		  "Quelle fausse vérité t'ai-je faite croire à mon sujet et que tu crois absolument ?"
+		],
+		"SousClass": [
+			{
+				"name": "Fidèle",
+				"description": "<p>Lorsque vous choisissez cette base, augmentez tous vos seuils de dommages de +1.<br>Lorsque vous subissez des dommages physiques, réduisez-les toujours de votre Protection avant de les appliquer à vos seuils. Vous pouvez toujours dépenser des emplacements d'armure pour réduire les dommages encore davantage.</p>"
+			},
+			{
+				"name": "Vengeur",
+				"description": "<p>Lorsque vous choisissez cette Fondation :</p><ul><li>Gagnez immédiatement un emplacement d'armure supplémentaire.</li><li>Lorsque vous êtes touché par un ennemi en portée Mêlée, lancez immédiatement un nombre de d6 égal au nombre de points de vie que vous avez marqués. Pour chaque résultat de 5 ou plus, infligez un point de vie de dégâts à l'ennemi.</li></ul>"
+			}
+		]
 	},
 	{
 		"id":"ranger",
 		"name": "Rodeur",
 		"description": "<p><strong>Focus du Rôdeur</strong> :&nbsp;Dépensez 1 Espoir et effectuez une attaque avec votre arme. En cas de succès, vous faites temporairement de cette cible votre Focus, en plus de causer des dégâts avec l'attaque. Jusqu'à ce que votre Focus se termine ou que vous désigniez une autre créature comme votre Focus, vous bénéficiez des avantages suivants :<ul><li>Vous savez précisément dans quelle direction elle se trouve.</li><li>Tous les jets de dégâts que vous effectuez contre elle infligent également un Stress.</li><li>Lorsque vous manquez votre attaque contre elle, vous pouvez mettre fin au Focus pour relancer vos dés de Dualité et prendre le nouveau résultat.</li></ul><br><strong>Espoir de rôdeur : </strong>Dépensez trois points d'Espoir et augmentez votre Esquive de +1 jusqu'à votre prochain repos court.</p>",
-		"flavor": "<p><em>Domaines : Sagesse et Bones</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
-		"cout": "1 espoir",
 		"explication":"Les rangers sont des chasseurs hautement qualifiés qui, malgré leurs capacités martiales, prêtent rarement leurs compétences à une armée. Grâce à la maîtrise du corps et à une profonde compréhension de la nature, les rangers se transforment en tacticiens rusés, habitués à combattre sans l'aide d'une force militaire organisée. Cependant, de nombreux rangers se battent aux côtés d'un compagnon animal avec lequel ils ont forgé un lien puissant et spirituel. En perfectionnant leurs compétences dans la nature, les rangers deviennent des chasseurs et des traqueurs experts, et sont tout aussi susceptibles de piéger leurs ennemis que de les attaquer de front.",
-		"type": "Classe",
-		"type2": "Class",
+		"evasion": "10",
+		"seuilMajeur": "7",
+		"seuilSevere": "14",
+		"domains": "Sagesse et Manoeuvre",
+		"caracteristique": "201130",
+		"arme_suggeree": "shortbow",
+		"armure_suggeree": "leather",
+		"objets_de_classe": ["Un Trophée de Ton Premier Tueur", "une Boussole Apparemment Cassée"],
+		"questions_de_fond": [
+		  "Une créature terrible a blessé ta communauté, et tu as juré de les traquer. De quoi s'agit-il, et quelle trace unique ou signe laissent-ils partout où ils vont ?",
+		  "Ton premier tueur a failli te tuer aussi. C'était quoi, et quelle partie de toi n'a jamais été la même après cet événement ?",
+		  "Tu as voyagé dans de nombreux endroits dangereux, mais quel est l'endroit que tu refuses de visiter ?"
+		],
+		"connexions": [
+		  "Quelle compétition amicale avons-nous ?",
+		  "Pourquoi agis-tu différemment quand nous sommes seuls que quand les autres sont autour ?",
+		  "Qu'as-tu demandé à ce que je garde un œil sur, et pourquoi es-tu inquiet à ce sujet ?"
+		],
 		"SousClass": [
 			{
 				"name": "Maître des bêtes",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>AGILITÉ</p><p>Vous avez un compagnon animal de votre choix (à la discrétion du MJ). Ils restent toujours à vos côtés sauf indication contraire.<br>Prenez la fiche Compagnon Ranger. à chaque niveau de votre personnage, choisissez également une option de montée en niveau pour votre compagnon sur cette fiche.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Rôdeur - Fondation)",
-				"type2": "Sous-"
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>AGILITÉ</p><p>Vous avez un compagnon animal de votre choix (à la discrétion du MJ). Ils restent toujours à vos côtés sauf indication contraire.<br>Prenez la fiche Compagnon Ranger. à chaque niveau de votre personnage, choisissez également une option de montée en niveau pour votre compagnon sur cette fiche.</p>"
 			},
 			{
 				"name": "Pisteur",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>AGILITÉ</p><p><strong>Prédateur Alpha :</strong> Marquez un Stress pour augmenter votre Maîtrise de +1 sur un jet de dégâts. De plus, chaque fois que vous infligez des dégâts Sévères à un ennemi, il marque également un Stress.<br><strong>Chemin Tracé :</strong> Lorsque vous vous dirigez vers un lieu que vous avez déjà visité, ou que vous portez avec vous un objet ayant été là auparavant, vous pouvez identifier le chemin le plus court et le plus direct vers votre destination.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Rôdeur - Fondation)",
-				"type2": "Sous-"
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>AGILITÉ</p><p><strong>Prédateur Alpha :</strong> Marquez un Stress pour augmenter votre Maîtrise de +1 sur un jet de dégâts. De plus, chaque fois que vous infligez des dégâts Sévères à un ennemi, il marque également un Stress.<br><strong>Chemin Tracé :</strong> Lorsque vous vous dirigez vers un lieu que vous avez déjà visité, ou que vous portez avec vous un objet ayant été là auparavant, vous pouvez identifier le chemin le plus court et le plus direct vers votre destination.</p>"
 			}
-		],
-		"evasion": "10",
-		"seuilMajeur": "7",
-		"seuilSevere": "14",
-		"domains": "Sagesse et Manoeuvre"
+		]
 	},
 	{
-		"id":"warrior",
-		"name": "Guerrier",
-		"description": "<p><strong>Stratège de Bataille :</strong> Après un jet d'attaque réussi, vous pouvez décrire comment vous déjouez votre cible, puis marquer un Stress pour lui infliger un Stress.<br><strong>Attaque d'Opportunité :</strong> Si un adversaire tente de quitter votre portée de Mêlée, faites un jet de réaction d'Agilité contre sa difficulté. Choisissez un effet en cas de réussite, ou deux en cas de réussite critique : 1) Les empêcher de bouger. 2) Infliger les dégâts de votre arme principale. 3) Bouger avec eux.<br><strong>Entraînement au Combat :</strong> Ignorez l'encombrement lors de l'équipement des armes. Chaque fois que vous lancez des dés de dégâts, ajoutez des dégâts physiques supplémentaires égaux à votre Niveau.<br><strong>Espoir du Guerrier</strong> : Dépensez trois points d'Espoir pour relancer n'importe quel nombre de vos dés de dégâts lors d'une attaque.</p>",
-		"flavor": "<p><em>Domaines : Lames et Bones</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (7), Seuil Sévère (14)</em></p>",
-		"cout": "",
-		"explication":"Devenir un guerrier nécessite des années, souvent une vie entière, de formation et de dévouement à la maîtrise de la violence et des armes. Alors que beaucoup de ceux qui cherchent à se battre ne perfectionnent que leur force, les guerriers comprennent l'importance d'un corps et d'un esprit agiles, ce qui en fait certains des combattants les plus recherchés à travers les royaumes. De nombreux guerriers trouveront un emploi au sein d'une armée, d'un groupe de mercenaires, ou même au sein d'une garde royale, mais leur potentiel est gâché dans toute position où ils ne peuvent continuer à perfectionner et à élargir leurs compétences. Les guerriers sont connus pour avoir une arme de prédilection.",
-		"type": "Classe",
-		"type2": "Class",
+		"id":"rogue",
+		"name": "Roublard",
+		"description": "<p><strong>Se Cacher : </strong>Lorsque vous vous déplacez dans un endroit où aucun ennemi ne peut vous voir, vous pouvez utiliser une action pour devenir Caché (tous les jets contre vous sont désavantagés). En tant que Voleur, lorsque vous êtes Caché, les cibles ne peuvent pas non plus vous voir, même si elles entrent dans votre champ de vision. Vous cessez d'être Caché dès que vous bougez ou attaquez.<br><strong>Attaque Sournoise : </strong>Chaque fois que vous effectuez une attaque pendant que vous êtes Caché ou qu'un allié est en mêlée avec votre cible, ajoutez 1d6 à votre jet de dégâts. Lorsque vous utilisez Attaque Sournoise, vous pouvez également dépenser un nombre quelconque de points d'Espoir avant le jet d'attaque ; si l'attaque réussit, ajoutez également un nombre de d6 égal aux points d'Espoir dépensés.<br><strong>Espoir du Voleur : </strong>Dépensez trois points d'Espoir pour augmenter vos dégâts d'Attaque Sournoise. Jusqu'à votre prochain repos court, vous ajoutez 3d6 au lieu de 1d6 à chaque jet de dégâts d'Attaque Sournoise.</p>",
+		"explication":"Les roublards sont des vauriens, souvent tant par leur attitude que par leurs pratiques. Largement connus comme des menteurs et des voleurs, les meilleurs parmi cette classe se déplacent dans le monde totalement incognito. Utilisant leur esprit vif et leur lame, les roublards peuvent tromper leurs ennemis par manipulation sociale aussi facilement qu'en forçant des serrures ou en grimpant par les fenêtres. Les membres de cette classe sont des maîtres de l'art magique, ajoutant une panoplie d'outils mortels à leur arsenal. Les roublards établissent fréquemment des guildes pour rencontrer de futurs complices, accepter des missions, et affiner des compétences jalousement gardées.",
+		"evasion": "11",
+		"seuilMajeur": "6",
+		"seuilSevere": "12",
+		"domains": "Nuit et Grace",
+		"caracteristique": "132010",
+		"arme_suggeree": "dagger,smalldagger",
+		"armure_suggeree": "gambeson",
+		"objets_de_classe": ["Outils de Faux Documents", "un Crochet de Grappin"],
+		"questions_de_fond": [
+		  "Qu'as-tu fait qui t'a valu l'exil de ta communauté d'origine ?",
+		  "Tu avais une vie différente auparavant, mais tu as essayé de la laisser derrière toi. Qui de cette époque te poursuit encore ?",
+		  "Qui de cette autre vie as-tu été le plus triste de dire adieu ?"
+		],
+		"connexions": [
+		  "Qu'est-ce que j'ai récemment réussi à te convaincre de faire qui nous a mis tous les deux dans une situation délicate ?",
+		  "Qu'est-ce que j'ai découvert sur ton passé que je garde secret des autres ?",
+		  "Qui connais-tu de mon passé, et comment cela a-t-il affecté tes sentiments à mon égard ?"
+		],
 		"SousClass": [
 			{
-				"name": "Tueur de monstres",
-				"description": "<p>Lors d'un jet avec l'Espoir, vous pouvez placer un d6 sur cette carte au lieu de prendre un Espoir. Ceux-ci sont connus sous le nom de vos dés de Tueur. Vous pouvez stocker un nombre de dés de Tueur égal à votre Maîtrise. Lorsque vous effectuez un jet d'attaque ou de dégâts, vous pouvez dépenser autant de dés de Tueur que vous le souhaitez, les lançant et ajoutant leur valeur à votre total. à la fin d'une session, effacez tous les dés de Tueur restants sur cette carte et gagnez autant d'Espoir.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Guerrier - Fondation)",
-				"type2": "Sous-"
+				"name": "Marcheur des ombres",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FINESSE</p><p><strong>Marcheur des Ombres :</strong> Vous pouvez vous déplacer d'une ombre à l'autre. Lorsque vous entrez dans l'ombre projetée par une autre créature ou un objet, ou dans une zone d'obscurité, marquez un point de Stress pour disparaître de l'endroit où vous vous trouvez et réapparaître à l'intérieur de n'importe quelle autre ombre à portée Loin. Après cette action, vous êtes Caché.</p>"
 			},
 			{
-				"name": "Brave parmi les braves",
-				"description": "<p>Quand vous échouez à un jet avec de la Peur, vous gagnez un Espoir.<br>Une fois par long repos, avant de tenter quelque chose d'incroyablement dangereux ou d'affronter un ennemi clairement plus puissant que vous, décrivez le rituel que vous effectuez ou la préparation que vous faites, puis effacez 2 Stress et gagnez 2 Espoir.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Guerrier - Fondation)",
-				"type2": "Sous-"
+				"name": "Syndicat",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FINESSE</p><p style='margin-bottom:0px;'>Lorsque vous arrivez dans une ville ou un environnement important, vous connaissez quelqu'un qui y habite. Donnez-lui un nom, notez comment vous pensez qu'il pourrait être utile et choisissez une option parmi la liste ci-dessous :<ul><li>Ils me doivent une faveur, mais ils seront difficiles à trouver.</li><li>Ils vont demander quelque chose en échange.</li><li>Ils ont toujours de gros ennuis.</li><li>Nous étions ensemble avant. C&rsquo;est une longue histoire.</li><li>Nous ne nous sommes pas quittés en bons termes.</li></ul></p>"
 			}
-		],
-		"evasion": "10",
-		"seuilMajeur": "7",
-		"seuilSevere": "14",
-		"domains": "Lame et Manoeuvre"
-	},
-	{
-		"id":"wizard",
-		"name": "Magicien",
-		"description": "<p><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs à volonté. Par exemple, vous pouvez changer la couleur d'un objet, créer une odeur, allumer une bougie, faire flotter un petit objet, éclairer une pièce ou réparer un petit objet.<br><strong>Schémas étranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un dé de Dualité, gagnez un Espoir ou éliminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.<br><strong>Espoir de magicien :</strong> Dépensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>",
-		"flavor": "<p><em>Domaines : Codex et Splendeur</em><br><em>Traits à la création : Esquive (10), Seuil Majeur (5), Seuil Sévère (10)</em></p>",
-		"cout": "",
-		"explication":"Ceux qui acquièrent leur pouvoir magique après des années d'étude sont connus sous le nom de magiciens. Que ce soit par le biais d'une institution ou d'une étude individuelle, les magiciens utilisent une variété d'outils—y compris des livres, des parchemins ou des tablettes anciennes—pour perfectionner leur art. Souvent, les magiciens consacrent leur vie à la maîtrise d'une école de magie en particulier, tandis que d'autres tentent d'apprendre de diverses disciplines. De nombreux magiciens deviennent des figures sages et puissantes dans leurs communautés, conseillant les dirigeants, fournissant des médicaments et des soins, et même dirigeant des conseils de guerre.",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "École de la guerre",
-				"description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez concentré vos études sur la manière de façonner la magie de manière dangereuse et puissante. Gagnez un emplacement d'armure supplémentaire.<br>Lorsque vous réussissez un jet d'attaque avec Peur, vous infligez 1d10 dégâts magiques supplémentaires.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Magicien - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "École de la connaissance",
-				"description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez acquis des connaissances inestimables grâce à de longues études. Vous avez ub avantage sur tous les jets de Savoir pour vous souvenir d'informations. Si ce jet concerne la nature magique d'une créature ou d'un enchantement, gagnez un Espoir même sur un jet avec Peur.<br><strong>Adepte</strong> : Vous pouvez marquer un Stress au lieu de dépenser un Espoir pour utiliser une Expérience sur un jet. Si vous le faites, doublez le bonus d'Expérience pour ce jet.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Magicien - Fondation)",
-				"type2": "Sous-"
-			}
-		],
-		"evasion": "10",
-		"seuilMajeur": "5",
-		"seuilSevere": "10",
-		"domains": "Codex et Splendeur"
+		]
 	},
 	{
 		"id":"seraph",
 		"name": "Seraphin",
 		"description": "<p><strong>Dés de Prière</strong> : Au début de chaque session, lancez un nombre de dés d4 égal à votre trait de Lancer de Sorts et conservez-les sur le côté. Vous pouvez dépenser un ou plusieurs de ces dés à tout moment pour aider vous-même ou un allié à portée Loin. Vous pouvez utiliser la valeur du dé dépensé pour réduire les dégâts entrants ou ajouter au résultat de tout jet après le jet. De plus, vous pouvez échanger cette valeur contre autant de points d'Espoir que vous pouvez donner à un autre PJ à portée. Effacez ces dés à la fin de chaque session.<br><strong>Espoir du Seraphin</strong> : Dépensez trois points d'Espoir et relancez un Dé de Prière ou rafraîchissez un de vos Dés de Prière utilisés.</p>",
-		"flavor": "<p><em>Domaines : Splendeur et Valeur</em><br><em>Traits à la création : Esquive (7), Seuil Majeur (8), Seuil Sévère (16)</em></p>",
-		"cout": "",
 		"explication":"Guerriers et guérisseurs divins désignés par leur dieu, les séraphins sont investis d'une mission sacrée. Une large gamme de divinités existent dans les royaumes, et il y a donc de nombreux types différents de séraphins. L'éthique de chaque membre de cette classe s'aligne traditionnellement avec le domaine de leur dieu, y compris des missions telles que : défendre les faibles, exercer une vengeance, protéger une terre ou un artefact, et maintenir une foi. Certains séraphins s'allient à une armée ou à un lieu, pour la satisfaction de leurs dirigeants, mais certains de ces croisés se battent contre les folies du Royaume Mortel. Il est préférable d'être un allié d'un séraphin, car ils sont des ennemis terrifiants pour ceux qui les défient.",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "Porteur de foi",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FORCE</p><ul><li><p><strong>Arme Spirituelle :</strong> Lorsque vous avez une arme de mêlée équipée, elle peut voler de votre main pour frapper un ennemi à portée Proche et revenir à vous. Vous pouvez marquer un Stress pour cibler un ennemi supplémentaire à portée avec le même jet d'attaque.</p></li><li><p><strong>Toucher épargnant :</strong> Une fois par long repos, utilisez une action et touchez une créature pour lui faire récupérer 2 Points de Vie ou 2 Stress.</p></li></ul>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Séraphin - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "Sentinelle ailée",
-				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FORCE</p><p>Vous pouvez voler. Pendant le vol, vous pouvez :</p><ul><li>Dépenser un Espoir pour ramasser et porter une autre créature volontaire d'environ votre taille ou plus petite.</li><li>Marquer un Stress pour infliger 1d8 de dégâts supplémentaires lors d'une attaque réussie.</li></ul>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "variable",
-				"type": "Sous-classe (Séraphin - Fondation)",
-				"type2": "Sous-"
-			}
-		],
 		"evasion": "7",
 		"seuilMajeur": "8",
 		"seuilSevere": "16",
-		"domains": "Splendeur et Valeur"
-	},
+		"domains": "Splendeur et Valeur",
+		"caracteristique": "020113",
+		"arme_suggeree": "hallowedaxe,roundshield",
+		"armure_suggeree": "chainmail",
+		"objets_de_classe": ["Un Paquet d'Offrandes", "un Sceau de Ton Dieu"],
+		"questions_de_fond": [
+		  "Quel est le dieu auquel tu t'es consacré, et dans ton moment de désespoir, quel exploit incroyable a-t-il accompli pour toi qui t'a rendu redevable envers lui ?",
+		  "Comment ton apparence a-t-elle changé après avoir prêté ton serment ?",
+		  "De quelle manière étrange ou unique communiques-tu avec ton dieu ?"
+		],
+		"connexions": [
+		  "Quelle promesse m'as-tu demandé de faire, au cas où tu mourrais sur le champ de bataille ?",
+		  "Pourquoi me poses-tu autant de questions sur mon dieu ?",
+		  "Tu m'as dit de protéger un membre de ton groupe avant tout, même toi-même. Qui est-ce et pourquoi ?"
+		],
+		"SousClass": [
+			{
+				"name": "Porteur de foi",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FORCE</p><ul><li><p><strong>Arme Spirituelle :</strong> Lorsque vous avez une arme de mêlée équipée, elle peut voler de votre main pour frapper un ennemi à portée Proche et revenir à vous. Vous pouvez marquer un Stress pour cibler un ennemi supplémentaire à portée avec le même jet d'attaque.</p></li><li><p><strong>Toucher épargnant :</strong> Une fois par long repos, utilisez une action et touchez une créature pour lui faire récupérer 2 Points de Vie ou 2 Stress.</p></li></ul>"
+			},
+			{
+				"name": "Sentinelle ailée",
+				"description": "<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>FORCE</p><p>Vous pouvez voler. Pendant le vol, vous pouvez :</p><ul><li>Dépenser un Espoir pour ramasser et porter une autre créature volontaire d'environ votre taille ou plus petite.</li><li>Marquer un Stress pour infliger 1d8 de dégâts supplémentaires lors d'une attaque réussie.</li></ul>"
+			}
+		]
+	},	
 	{
 		"id":"sorcerer",
 		"name": "Sorcier",
 		"description": "<p><strong>Sens Arcanique :</strong> Vous pouvez percevoir la présence de créatures et d'objets magiques lorsque vous êtes proche d'eux.<br><strong>Illusion Mineure :</strong> Faites un Jet de Lancer de Sort (10). En cas de succès, vous créez une illusion visuelle mineure, pas plus grande que vous-même, à portée Proche. Cette illusion est convaincante pour quiconque se trouve à portée Lointaine ou plus loin.<br><strong>Canaliser la Puissance Brute :</strong> Une fois par repos long, vous pouvez passer une carte de Domaine d'active à inactive et choisir soit de : 1) Gagner de l'Espoir égal au niveau de la carte. 2) Améliorer un sort de dégâts en infligeant des dégâts magiques supplémentaires égaux au double du niveau de la carte. Pendant votre prochain repos court, vous pouvez récupérer cette carte sans payer son coût de rappel.<br><strong>Espoir du Sorcier</strong> : Dépensez trois points d'Espoir après un jet de Lancer de Sorts pour doubler le résultat de votre dé d'Espoir.</p>",
-		"flavor": "<p><em>Domaines : Arcane et Midnight</em><br><em>Traits à la création : Esquive (9), Seuil Majeur (6), Seuil Sévère (12)</em></p>",
-		"cout": "",
-		"explication":"Tous les utilisateurs de magie innée ne choisissent pas de perfectionner leur art, mais ceux qui le font peuvent devenir de puissants sorciers. Les dons de ces praticiens sont transmis de génération en génération, bien que toutes les familles ne soient pas conscientes, et encore moins choisissent de pratiquer, leurs compétences uniques. Les capacités d'un sorcier peuvent varier de l'élémentaire à l'illusion, et au-delà, et de nombreux membres de cette classe se regroupent en collectifs basés sur leurs talents. Devenir un sorcier redoutable ne consiste pas à acquérir du pouvoir, mais à apprendre à contrôler et à affiner le pouvoir que l'on possède déjà. La magie d'un sorcier mal orienté ou mal éduqué est une force dangereuse en effet.",
-		"type": "Classe",
-		"type2": "Class",
-		"SousClass": [
-			{
-				"name": "Origine Primordiale",
-				"description": "<p><strong>Lancer de Sorts : Instinct</strong><br>Votre origine primordiale vous permet de modifier l'essence même de la magie. Après avoir lancé un sort ou utilisé une arme qui inflige des dégâts magiques, vous pouvez marquer un Stress pour faire l'une des actions suivantes :</p><ul><li>étendre sa portée d'une distance.</li><li>Ajouter +2 au résultat du jet d'action.</li><li>Relancer un nombre quelconque de dés de dégâts.</li><li>Toucher une cible supplémentaire à portée.</li></ul>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Sorcier - Fondation)",
-				"type2": "Sous-"
-			},
-			{
-				"name": "Origine Élémentaire",
-				"description": "<p><strong>Lancer de Sorts : Instinct</strong><br>Votre origine élémentaire vous permet de manipuler et modeler un certain type d'élément. Choisissez-en un : <strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Eau, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Feu, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Air, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Foudre, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Terre</strong><br>Vous pouvez canaliser cet élément pour créer des effets uniques et inoffensifs. De plus, vous pouvez dépenser un point d'Espoir et décrire comment votre maîtrise de cet élément aide un jet d'action que vous êtes sur le point de faire, puis ajouter soit +2 au jet, soit +3 aux dégâts.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "1 stress",
-				"type": "Sous-classe (Sorcier - Fondation)",
-				"type2": "Sous-"
-			}
-		],
+		"explication":"Tous les utilisateurs de magie innée ne choisissent pas de perfectionner leur art, mais ceux qui le font peuvent devenir de puissants sorciers. Les dons de ces praticiens sont transmis de génération en génération, bien que toutes les familles ne soient pas conscientes, et encore moins choisissent de pratiquer, leurs compétences uniques. Les capacités d'un sorcier peuvent varier de l'élémentaire à l'illusion, et au-delà, et de nombreux membres de cette classe se regroupent en collectifs basés sur leurs talents. Devenir un sorcier redoutable ne consiste pas à acquérir du pouvoir, mais à apprendre à contrôler et à affiner le pouvoir que l'on possède déjà. La magie d'un sorcier mal orienté ou mal éduqué est une force dangereuse en effet.",		
 		"evasion": "9",
 		"seuilMajeur": "6",
 		"seuilSevere": "12",
-		"domains": "Arcane et Nuit"
-	},
-	{
-		"id":"guardian",
-		"name": "Gardien",
-		"description": "<p style='margin-bottom:0px;'><strong>Inarrêtable</strong> Une fois par Long Repos, vous pouvez devenir Inarrêtable. Vous gagnez un dé Inarrêtable, qui commence comme un d4. Placez-le à droite, en commençant avec la valeur \"1\" face visible. Chaque fois que vous infligez un ou plusieurs points de vie à un adversaire, augmentez la valeur du dé Inarrêtable de un. Lorsque vous augmentez la valeur au-delà du nombre le plus élevé du dé ou lorsque la scène se termine, retirez le dé et sortez de l'état Inarrêtable. Au Niveau 3, améliorez votre dé Inarrêtable à un d6. Au Niveau 7, améliorez-le à un d8. Pendant que vous êtes Inarrêtable, vous :<ul><li>Gagnez une résistance aux dégâts physiques.</li><li>Augmentez votre Score d'Armure actuel de votre Maîtrise.</li><li>Ajoutez la valeur actuelle de votre dé Inarrêtable à votre total de dégâts.</li><li>Ne pouvez pas être Immobilisé ou Vulnérable.</li></ul><strong>Espoir du Gardien :</strong> Dépensez trois Espoirs et récupérez jusqu'à trois emplacements d'armure.</p>",
-		"flavor": "<p><em>Domaines : Valeur et Bones</em><br><em>Traits à la création : Esquive (8), Seuil Majeur (8), Seuil Sévère (16)</em></p>",
-		"cout": "",
-		"explication":"Les gardiens représentent une gamme de professions martiales, et ce titre parle plus de leur boussole morale et de leur incroyable fortitude que des moyens par lesquels ils combattent. Ceux de cette classe peuvent choisir de rejoindre des groupes de militants, pour un pays ou une cause, mais les gardiens sont plus susceptibles de suivre ceux qu'ils chérissent véritablement, quitte à défier la majorité. Les gardiens sont connus pour se battre avec une férocité remarquable même contre des chances écrasantes, et sont aptes à utiliser des tactiques défensives pour protéger leur cohorte plutôt que de foncer tête baissée. Malheur à ceux qui font du mal à un allié d'un gardien, car ils n'oublieront pas facilement une telle offense.",
-		"type": "Classe",
-		"type2": "Class",
+		"domains": "Arcane et Nuit",
+		"caracteristique": "031210",
+		"arme_suggeree": "dualstaff",
+		"armure_suggeree": "gambeson",
+		"objets_de_classe": ["Un Orbe Murmurant", "un Héritage Familial"],
+		"questions_de_fond": [
+		  "Qu'as-tu fait qui a rendu les gens de ta communauté méfiants à ton égard ?",
+		  "Quel mentor t'a appris à contrôler ta magie sauvage, et pourquoi n'est-il plus en mesure de te guider ?",
+		  "Tu as une peur profonde que tu caches à tout le monde. Quelle est-elle, et pourquoi te fait-elle si peur ?"
+		],
+		"connexions": [
+		  "Pourquoi me fais-tu une confiance si profonde ?",
+		  "Qu'est-ce que j'ai fait qui te rend prudent(e) autour de moi ?",
+		  "Pourquoi gardons-nous notre passé commun secret ?"
+		],
 		"SousClass": [
 			{
-				"name": "Fidèle",
-				"description": "<p>Lorsque vous choisissez cette base, augmentez tous vos seuils de dommages de +1.<br>Lorsque vous subissez des dommages physiques, réduisez-les toujours de votre Protection avant de les appliquer à vos seuils. Vous pouvez toujours dépenser des emplacements d'armure pour réduire les dommages encore davantage.</p>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "",
-				"type": "Sous-classe (Gardien - Fondation)",
-				"type2": "Sous-"
+				"name": "Origine Primordiale",
+				"description": "<p><strong>Lancer de Sorts : Instinct</strong><br>Votre origine primordiale vous permet de modifier l'essence même de la magie. Après avoir lancé un sort ou utilisé une arme qui inflige des dégâts magiques, vous pouvez marquer un Stress pour faire l'une des actions suivantes :</p><ul><li>étendre sa portée d'une distance.</li><li>Ajouter +2 au résultat du jet d'action.</li><li>Relancer un nombre quelconque de dés de dégâts.</li><li>Toucher une cible supplémentaire à portée.</li></ul>"
 			},
 			{
-				"name": "Vengeur",
-				"description": "<p>Lorsque vous choisissez cette Fondation :</p><ul><li>Gagnez immédiatement un emplacement d'armure supplémentaire.</li><li>Lorsque vous êtes touché par un ennemi en portée Mêlée, lancez immédiatement un nombre de d6 égal au nombre de points de vie que vous avez marqués. Pour chaque résultat de 5 ou plus, infligez un point de vie de dégâts à l'ennemi.</li></ul>",
-				"flavor": "<p><em>flavor</em></p>",
-				"cout": "x armure",
-				"type": "Sous-classe (Gardien - Fondation)",
-				"type2": "Sous-"
+				"name": "Origine Élémentaire",
+				"description": "<p><strong>Lancer de Sorts : Instinct</strong><br>Votre origine élémentaire vous permet de manipuler et modeler un certain type d'élément. Choisissez-en un : <strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Eau, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Feu, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Air, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Foudre, </strong><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Terre</strong><br>Vous pouvez canaliser cet élément pour créer des effets uniques et inoffensifs. De plus, vous pouvez dépenser un point d'Espoir et décrire comment votre maîtrise de cet élément aide un jet d'action que vous êtes sur le point de faire, puis ajouter soit +2 au jet, soit +3 aux dégâts.</p>"
 			}
+		]
+	},
+	{
+		"id":"warrior",
+		"name": "Guerrier",
+		"description": "<p><strong>Stratège de Bataille :</strong> Après un jet d'attaque réussi, vous pouvez décrire comment vous déjouez votre cible, puis marquer un Stress pour lui infliger un Stress.<br><strong>Attaque d'Opportunité :</strong> Si un adversaire tente de quitter votre portée de Mêlée, faites un jet de réaction d'Agilité contre sa difficulté. Choisissez un effet en cas de réussite, ou deux en cas de réussite critique : 1) Les empêcher de bouger. 2) Infliger les dégâts de votre arme principale. 3) Bouger avec eux.<br><strong>Entraînement au Combat :</strong> Ignorez l'encombrement lors de l'équipement des armes. Chaque fois que vous lancez des dés de dégâts, ajoutez des dégâts physiques supplémentaires égaux à votre Niveau.<br><strong>Espoir du Guerrier</strong> : Dépensez trois points d'Espoir pour relancer n'importe quel nombre de vos dés de dégâts lors d'une attaque.</p>",
+		"explication":"Devenir un guerrier nécessite des années, souvent une vie entière, de formation et de dévouement à la maîtrise de la violence et des armes. Alors que beaucoup de ceux qui cherchent à se battre ne perfectionnent que leur force, les guerriers comprennent l'importance d'un corps et d'un esprit agiles, ce qui en fait certains des combattants les plus recherchés à travers les royaumes. De nombreux guerriers trouveront un emploi au sein d'une armée, d'un groupe de mercenaires, ou même au sein d'une garde royale, mais leur potentiel est gâché dans toute position où ils ne peuvent continuer à perfectionner et à élargir leurs compétences. Les guerriers sont connus pour avoir une arme de prédilection.",		
+		"evasion": "10",
+		"seuilMajeur": "7",
+		"seuilSevere": "14",
+		"domains": "Lame et Manoeuvre",
+		"caracteristique": "210130",
+		"arme_suggeree": "greatsword",
+		"armure_suggeree": "chainmail",
+		"objets_de_classe": ["Le Dessin d'un Amant", "une Pierre à Aiguiser"],
+		"questions_de_fond": [
+		  "Qui t'a appris à te battre, et pourquoi est-il resté derrière quand tu as quitté ta maison ?",
+		  "Quelqu'un t'a vaincu en bataille il y a des années et t'a laissé pour mort. Qui était-ce, et pourquoi cela a-t-il été une telle trahison ?",
+		  "Quel lieu légendaire as-tu toujours voulu visiter et pourquoi est-il si spécial ?"
 		],
-		"evasion": "8",
-		"seuilMajeur": "8",
-		"seuilSevere": "16",
-		"domains": "Valeur et Manoeuvre"
+		"connexions": [
+		  "Nous nous connaissions bien avant que ce groupe ne se forme. Comment ?",
+		  "Quelle chose banale en dehors du champ de bataille m'aides-tu généralement ?",
+		  "Quelle peur est-ce que je t'aide à surmonter ?"
+		],
+		"SousClass": [
+			{
+				"name": "Tueur de monstres",
+				"description": "<p>Lors d'un jet avec l'Espoir, vous pouvez placer un d6 sur cette carte au lieu de prendre un Espoir. Ceux-ci sont connus sous le nom de vos dés de Tueur. Vous pouvez stocker un nombre de dés de Tueur égal à votre Maîtrise. Lorsque vous effectuez un jet d'attaque ou de dégâts, vous pouvez dépenser autant de dés de Tueur que vous le souhaitez, les lançant et ajoutant leur valeur à votre total. à la fin d'une session, effacez tous les dés de Tueur restants sur cette carte et gagnez autant d'Espoir.</p>"
+			},
+			{
+				"name": "Brave parmi les braves",
+				"description": "<p>Quand vous échouez à un jet avec de la Peur, vous gagnez un Espoir.<br>Une fois par long repos, avant de tenter quelque chose d'incroyablement dangereux ou d'affronter un ennemi clairement plus puissant que vous, décrivez le rituel que vous effectuez ou la préparation que vous faites, puis effacez 2 Stress et gagnez 2 Espoir.</p>"
+			}
+		]
+	},
+	{
+		"id":"wizard",
+		"name": "Magicien",
+		"description": "<p><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs à volonté. Par exemple, vous pouvez changer la couleur d'un objet, créer une odeur, allumer une bougie, faire flotter un petit objet, éclairer une pièce ou réparer un petit objet.<br><strong>Schémas étranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un dé de Dualité, gagnez un Espoir ou éliminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.<br><strong>Espoir de magicien :</strong> Dépensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>",
+		"explication":"Ceux qui acquièrent leur pouvoir magique après des années d'étude sont connus sous le nom de magiciens. Que ce soit par le biais d'une institution ou d'une étude individuelle, les magiciens utilisent une variété d'outils—y compris des livres, des parchemins ou des tablettes anciennes—pour perfectionner leur art. Souvent, les magiciens consacrent leur vie à la maîtrise d'une école de magie en particulier, tandis que d'autres tentent d'apprendre de diverses disciplines. De nombreux magiciens deviennent des figures sages et puissantes dans leurs communautés, conseillant les dirigeants, fournissant des médicaments et des soins, et même dirigeant des conseils de guerre.",
+		"evasion": "10",
+		"seuilMajeur": "5",
+		"seuilSevere": "10",
+		"domains": "Codex et Splendeur",
+		"caracteristique": "300112",
+		"arme_suggeree": "wand",
+		"armure_suggeree": "leather",
+		"objets_de_classe": ["Un Livre que Tu Essaies de Traduire", "un Petit Animal Élementaire Inoffensif"],
+		"questions_de_fond": [
+		  "Sur quoi ta communauté comptait-elle autrefois ? Comment les as-tu déçus ?",
+		  "Tu as passé ta vie à chercher un objet ou un livre de grande importance. De quoi s'agit-il et pourquoi est-il si important pour toi ?",
+		  "Tu as un rival puissant. Qui est-ce, et pourquoi es-tu si déterminé(e) à mettre fin à ses jours ?"
+		],
+		"connexions": [
+		  "Quel service t'ai-je demandé que tu n'es pas sûr(e) de pouvoir accomplir ?",
+		  "Quel passe-temps étrange ou quelle fascination bizarre partageons-nous ?",
+		  "Quel secret sur toi-même m'as-tu confié en exclusivité ?"
+		],
+		"SousClass": [
+			{
+				"name": "École de la guerre",
+				"description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez concentré vos études sur la manière de façonner la magie de manière dangereuse et puissante. Gagnez un emplacement d'armure supplémentaire.<br>Lorsque vous réussissez un jet d'attaque avec Peur, vous infligez 1d10 dégâts magiques supplémentaires.</p>"
+			},
+			{
+				"name": "École de la connaissance",
+				"description": "<p><strong>Lancer de Sorts : Savoir</strong><br>Vous avez acquis des connaissances inestimables grâce à de longues études. Vous avez ub avantage sur tous les jets de Savoir pour vous souvenir d'informations. Si ce jet concerne la nature magique d'une créature ou d'un enchantement, gagnez un Espoir même sur un jet avec Peur.<br><strong>Adepte</strong> : Vous pouvez marquer un Stress au lieu de dépenser un Espoir pour utiliser une Expérience sur un jet. Si vous le faites, doublez le bonus d'Expérience pour ce jet.</p>"
+			}
+		]
 	}
 ]

@@ -1,12 +1,15 @@
 <template>
-    <div class="containerCard">
-        <div v-if="image" class="overlay-image" :style="{ 'background-image': 'url(' + image + ')' }"></div>
+    <div class="relative" @click="$emit('click')">
+        <div class="containerCard" @click="$emit('click')">
+            <div v-if="image" class="overlay-image" :style="{ 'background-image': 'url(' + image + ')' }" @click="$emit('click')"></div>
 
-        <div class="background-image" :style="{ 'background-image': 'url(' + bg + ')' }">
+            <div class="background-image" :style="{ 'background-image': 'url(' + bg + ')' }">
 
-            <slot></slot>
+                <slot></slot>
 
+            </div>
         </div>
+        <div :class="{ absolute:true, t0px:true, yellowGradient: highlight, w100p: true, h100p: true }" style="z-index:2"></div>
     </div>
 </template>
 
@@ -46,9 +49,9 @@
 <script>
 export default {
     name: 'card-small',
-    props: ['image', 'background'],
+    props: ['image', 'background', 'highlight'],
     data: () => ({
-        
+
     }),
     computed: {
         bg() {

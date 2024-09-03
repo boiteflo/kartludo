@@ -26,10 +26,10 @@ class ServiceDaggerheart {
 
     static getArmors(){
         return [
-            {id:"gambeson", name:"Armure Gambeson", armor:"3", feature:"<p><b>Flexible :</b> +1 d'Evasion</p>"},
-            {id:"leather", name:"Armure de Cuir", armor:"4", feature:""},
-            {id:"chainmail", name:"Cottes de Mailles", armor:"5", feature:"<p><b>Lourde :</b> -1 d'Evasion</p>"},
-            {id:"fullplate", name:"Armure de Plaque", armor:"6", feature:"<p><b>Trés Lourde :</b> -2 d'Evasion et -1 d'Agilité</p>"}
+            {id:"gambeson", name:"Armure Gambeson", armor:"3", feature:"<p><b>Flexible :</b> +1 d'Evasion</p>", image:"armors/gambeson.png"},
+            {id:"leather", name:"Armure de Cuir", armor:"4", feature:"", image:"armors/leather.png"},
+            {id:"chainmail", name:"Cottes de Mailles", armor:"5", feature:"<p><b>Lourde :</b> -1 d'Evasion</p>", image:"armors/chainmail.png"},
+            {id:"fullplate", name:"Armure de Plaque", armor:"6", feature:"<p><b>Trés Lourde :</b> -2 d'Evasion et -1 d'Agilité</p>", image:"armors/fullPlate.png"}
         ];
     }
 
