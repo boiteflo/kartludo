@@ -15,7 +15,7 @@
                         <h2>Choisir une Ascendence</h2>
                         <div class="flex flex-wrap m5px">
                             <cardImageButton v-for="(obj, index) in images.ascendences" :key="'Ancestry' + index"
-                                :image="obj.image" :selected="character.ancestry.name == obj.name"
+                                :image="obj.image" :selected="character.ancestry?.name == obj.name"
                                 @click="selectAncestry(obj)">
                             </cardImageButton>
                         </div>
@@ -28,7 +28,7 @@
                         <h2>Choisir une Communauté</h2>
                         <div class="flex flex-wrap m5px">
                             <cardImageButton v-for="(obj, index) in images.communautes" :key="'Community' + index"
-                                :image="obj.image" :selected="character.community.name == obj.name"
+                                :image="obj.image" :selected="character.community?.name == obj.name"
                                 @click="selectCommunity(obj)">
                             </cardImageButton>
                         </div>
@@ -42,13 +42,14 @@
                         <div class="flex flex-wrap m5px">
                             <div v-for="(obj, index) in images.classes" :key="'Class' + index">
                                 <!--
-                                <div class="wCard hCard cursorPointer bgImage"
-                                    :style="{ 'background-image': 'url(' + obj.basic + ')' }" @click="selectClass(obj)">
-                                    <div class="w100p h100p"
-                                        :class="{ yellowGradient: character.class.name == obj.name }">
+                                    <div class="wCard hCard cursorPointer bgImage"
+                                        :style="{ 'background-image': 'url(' + obj.basic + ')' }" @click="selectClass(obj)">
+                                        <div class="w100p h100p"
+                                            :class="{ yellowGradient: character.class.name == obj.name }">
+                                        </div>
                                     </div>
-                                </div>-->
-                                <cardImageButton :image="obj.details" :selected="character.class.name == obj.name"
+                                -->
+                                <cardImageButton :image="obj.details" :selected="character.class?.name == obj.name"
                                     @click="selectClass(obj)">
                                 </cardImageButton>
                             </div>
@@ -62,9 +63,9 @@
                         <h2>Choisir une sous classe</h2>
                         <div class="flex flex-wrap m5px">
                             <cardImageButton
-                                v-for="(obj, index) in images.sousClasses.filter(x => x.name.toLowerCase().startsWith(character.class.name.toLowerCase()))"
+                                v-for="(obj, index) in images.sousClasses.filter(x => x.name.toLowerCase().startsWith(character.class?.name.toLowerCase()))"
                                 :key="'SubClass' + index" :image="obj.image"
-                                :selected="character.subclass.name == obj.name" @click="selectSubClass(obj)">
+                                :selected="character.subclass?.name == obj.name" @click="selectSubClass(obj)">
                             </cardImageButton>
                         </div>
                     </div>
@@ -121,8 +122,8 @@
                         <h2>Choisir deux cartes de domaines</h2>
                         <div class="flex flex-wrap m5px">
                             <cardImageButton v-for="(obj, index) in getDomains()" :key="'Domains' + index"
-                                :image="obj.image"
-                                :selected="getCharacterDomains().includes(obj.name)" @click="selectDomain(obj)">
+                                :image="obj.image" :selected="getCharacterDomains().includes(obj.name)"
+                                @click="selectDomain(obj)">
                             </cardImageButton>
                         </div>
                     </div>
@@ -133,11 +134,9 @@
                     <div>
                         <h2>Choisir une armure</h2>
                         <div class="flex-wrap">
-                            <card-armor v-for="(obj, index) in armors" :key="'Armor' + index"
-                                :armor="obj" 
-                                :highlight="character.class.armure_suggeree == obj.id"
-                                :selected="character.armor.id == obj.id"
-                                @click="selectArmor(obj)">                                
+                            <card-armor v-for="(obj, index) in armors" :key="'Armor' + index" :armor="obj"
+                                :highlight="character.class?.armure_suggeree == obj.id"
+                                :selected="character.armor?.id == obj.id" @click="selectArmor(obj)">
                             </card-armor>
                         </div>
                     </div>
@@ -165,15 +164,10 @@
                 <v-tab-item>
                     <div class="colorBlack">
                         <h2>Définir son histoire</h2>
-                        <div class="flex flex-responsive">
-                            <img :src="character.image" style="width:200px; height:200px; object-fit: cover;">
-                            <div class="m10px pd10px colorBlack">
-                                <v-text-field v-model="character.name" label="Nom" class="m5px"></v-text-field>
-                                <!--<v-text-field v-model="character.pronouns" label="Pronoms" class="m5px"></v-text-field>-->
-                                <button-image :image="character.image" @change="setImage"></button-image>
-                            </div>
+                        <div>
                             <div class="m10px pd10px colorBlack w100p">
-                                <div v-for="index in 2" :key="'Expérience' + index" class="m10px p10px">
+                                <v-text-field v-model="character.name" label="Nom" class="m5px"></v-text-field>
+                                <div v-for="index in 2" :key="'Expérience' + index">
                                     <v-text-field v-model="character['experience' + index]"
                                         :label="'Expérience ' + index" class="m5px"></v-text-field>
                                 </div>
@@ -195,20 +189,38 @@
                         <div v-for="(obj, index) in character.domains" :key="'CharacterDomains' + index">
                             <img class="cursorPointer w340" :src="obj.image" @click="selectStep(5)">
                         </div>
-                        
+
                         <div>
                             <card-weapon v-for="(obj, index) in character.weapons" :key="'CharacterWeapon' + index"
-                                :weapon="obj" >                                
+                                :weapon="obj">
                             </card-weapon>
                         </div>
 
                         <card-armor :armor="character.armor" @click="selectStep(6)"></card-armor>
                     </div>
-                    <div class="10px p10px colorBlack">
+
+                    <div class="center w100p"><a :href="character.url">Lien de {{ character.name }}</a></div>
+
+                    <div class="m5px colorBlack">
                         <text-quill class="w100p" :text="character.resume">
                         </text-quill>
                     </div>
-                    {{ character.resume }}
+
+                    <div class="flex flex-responsive bg">
+
+                        <div class="p10px colorBlack bgWhite">
+                            <!--<v-text-field v-model="character.pronouns" label="Pronoms" class="m5px"></v-text-field>-->
+                            <button-image :image="character.image" @change="setImage"></button-image>
+                            <v-text-field v-model="character.image_position" label="Position de l'image"
+                                class="m5px" @change="refreshCard"></v-text-field>
+                        </div>
+                        <div ref="CardTemplate" class="bg">
+                            <card-character :character="character"
+                                :image_position="character.image_position"></card-character>
+                        </div>
+                        <img v-if="templateImage" style="width:340px" :src="templateImage" />
+                        <v-progress-circular v-else indeterminate></v-progress-circular>
+                    </div>
                 </v-tab-item>
 
             </v-tabs-items>
@@ -225,21 +237,23 @@ export default {
 <script>
 import serviceBack from '../../services/serviceBack'
 import serviceDaggerheart from '../../services/serviceDaggerheart'
+  import html2canvas from 'html2canvas';
 
 import menuBarDaggerheart from '../../components/menuBarDaggerheart';
 import dataTableSelection from '../../components/dataTableSelection';
 import cardImageButton from '../../components/cards/cardImageButton';
+import cardCharacter from '../../components/cards/cardCharacter';
 import tabsResponsive from '../../components/tabsResponsive';
 import cardWeapon from '../../components/cards/cardWeapon';
 import cardArmor from '../../components/cards/cardArmor';
 import buttonBig from '../../components/buttonBig';
-import cardSmall from '../../components/cardSmall';
+import cardSmall from '../../components/cards/cardSmall';
 import buttonImage from '../../components/buttonImage';
 import textQuill from '../../components/textQuill';
 
   export default {
   name: 'pageCharacter',
-  components: {menuBarDaggerheart, tabsResponsive, buttonBig, cardSmall, dataTableSelection, buttonImage, textQuill, cardImageButton, cardArmor, cardWeapon},
+  components: {menuBarDaggerheart, tabsResponsive, buttonBig, cardSmall, dataTableSelection, buttonImage, textQuill, cardImageButton, cardArmor, cardWeapon, cardCharacter},
   data: () => ({
     tab: 0,
     tabs: "ASCENDENCE,COMMUNAUTE,CLASSE,SOUS CLASSE,CARACTERISTIQUES,DOMAINS,ARMURE,ARMES,HISTOIRE,PERSONNAGE".split(','),
@@ -247,7 +261,7 @@ import textQuill from '../../components/textQuill';
     class: null,
     armors: null,
     weapons:null,
-    character : {url:'', class:{name:''}, domains:[], weapons:[], allowedDomains:["",""], image:require('@/assets/Daggerheart/other/character.png')},
+    character : {url:'', image_position:'0px 0px', class:{name:''}, domains:[], weapons:[], allowedDomains:["",""], image:require('@/assets/Daggerheart/other/character.png')},
     headers: [
           { text: 'Arme', value: 'nom' },
           { text: 'Trait', value: 'trait' },
@@ -256,8 +270,9 @@ import textQuill from '../../components/textQuill';
           { text: 'Type', value: 'type_de_degats' },
           { text: 'Mains', value: 'hands' },
           { text: 'Caractéristiques', value: 'caracteristique', isHtml:true }
-        ],
-        selected: [],
+    ],
+    selected: [],
+    templateImage: null
   }),
   async mounted(){
     const ascendences = serviceDaggerheart.ascendences.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/Ascendances/' + x +'.png')};});
@@ -292,6 +307,7 @@ import textQuill from '../../components/textQuill';
             
             this.character.class.questions_de_fond.forEach((obj, index) => this.character.resume+= `<p>${obj}</p>`);
             this.character.class.connexions.forEach((obj, index) => this.character.resume+= `<p>${obj}</p>`);
+            this.refreshCard();
         }
         this.tab = step;
         window.scrollTo(0,0);
@@ -318,10 +334,12 @@ import textQuill from '../../components/textQuill';
         uri = uri.substring(uri.indexOf('?')+1);
         const properties = uri.split('&');
         let traits = '';
+        if(properties.length < 2)
+            return;
         for (let i = 0; i < properties.length; i++) {
             const data = properties[i].split('=');
             const value=data[1];
-            if(value!= '_'){
+            if(value && value!= '_'){
                 if(i==0) this.character.ancestry = this.images.ascendences.find(x=> x.name == value);
                 else if(i==1) this.character.community = this.images.communautes.find(x=> x.name == value);
                 else if(i==2) {
@@ -333,9 +351,9 @@ import textQuill from '../../components/textQuill';
                 else if(i==5) this.character.domains = this.images.domaines.filter(x=> value.split('_').includes(x.name));
                 else if(i==6) this.character.armor = this.armors.find(x=> x.id == value);
                 else if(i==7) this.character.weapons = this.weapons.all.filter(x=> value.split('_').includes(x.id));
-                else if(i==8) this.character.name = value.replace("%20"," ");
-                else if(i==9) this.character.experience1 = value;
-                else if(i==10) this.character.experience2 = value;
+                else if(i==8) this.character.name = value.replaceAll("%20"," ");
+                else if(i==9) this.character.experience1 = value.replaceAll("%20"," ");
+                else if(i==10) this.character.experience2 = value.replaceAll("%20"," ");
             }
         }
         if(traits)
@@ -410,12 +428,22 @@ import textQuill from '../../components/textQuill';
     getSuggestedWeapons(){ return this.character.class && this.character.class.arme_suggeree && this.character.class.arme_suggeree.split(',');},
     setImage(image){
         this.character.image = image;
+        this.refreshCard();
     },
     finish(){
         this.refreshUrl();
         window.location.href = this.character.url;
     },
-    camelCase(text){return text[0].toUpperCase() + text.substring(1)}
+    camelCase(text){return text[0].toUpperCase() + text.substring(1)},
+    async refreshCard(){   
+        this.templateImage = null;    
+        await new Promise(resolve => setTimeout(resolve, 1000)); 
+        if(!this.$refs.CardTemplate)
+            return;
+        const canvas = await html2canvas(this.$refs.CardTemplate);
+        const dataURL = canvas.toDataURL('image/png');
+        this.templateImage = dataURL;
+    }
    }
   };
   </script>

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import cardSmall from '../cardSmall';
+import cardSmall from './cardSmall';
 
 export default {
     props: ['armor', 'highlight', 'selected'],

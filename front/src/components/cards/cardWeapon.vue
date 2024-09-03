@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import cardSmall from '../cardSmall';
+import cardSmall from './cardSmall';
 
 export default {
     props: ['weapon', 'selected'],

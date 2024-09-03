@@ -175,8 +175,6 @@ p {
 <script>
   import ServiceTemplate from '../../services/serviceTemplate'
   import html2canvas from 'html2canvas';
-  import Quill from 'quill';
-  import 'quill/dist/quill.snow.css';
   
   import menuBarDaggerheart from '../../components/menuBarDaggerheart';
   import hierarchy from '../../components/hierarchy';
