@@ -16,7 +16,7 @@
             </p>
         </div>
 
-        <div class="flex flex-responsive flex-space-around m5px w100p">
+        <div class="flex flex-wrap flex-space-around m5px w100p">
             <router-link to="/character">
                 <button-big 
                     text="Créer un personnage"

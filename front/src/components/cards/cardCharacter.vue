@@ -43,12 +43,6 @@
 
 <script>
 import cardMedium from './cardMedium';
-/*
-text font-weight:bold font-size:14px top:200px left:120px right:120px text-align:center color:white text-transform:uppercase
-text font-weight:bold font-size:20px top:220px left:15px right:15px text-transform:uppercase text-align:center
-text color:black font-size:10px top:250px left:15px right:15px
-text bottom:5px font-size:11px text-align:center left:15px right:15px font-weight:bold
-*/
 
 export default {
     props: ['character', 'image_position'],

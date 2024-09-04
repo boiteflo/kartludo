@@ -237,7 +237,7 @@ export default {
 <script>
 import serviceBack from '../../services/serviceBack'
 import serviceDaggerheart from '../../services/serviceDaggerheart'
-  import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas';
 
 import menuBarDaggerheart from '../../components/menuBarDaggerheart';
 import dataTableSelection from '../../components/dataTableSelection';

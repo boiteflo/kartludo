@@ -1,8 +1,14 @@
 <template>
     <div class="relative" @click="$emit('click')">
         <div class="containerCard" @click="$emit('click')">
-            <div v-if="image" class="overlay-image" :style="{ 'background-image': 'url(' + image + ')', 'background-position':img_position }"
+            <div v-if="image" class="overlay-image"
+                :style="{ 'background-image': 'url(' + image + ')', 'background-position': img_position }"
                 @click="$emit('click')"></div>
+
+
+            <div v-for="(obj, index) in images" :key="'Image' + index" :style="obj" @click="$emit('click')"
+                class="overlay-image">
+            </div>
 
             <div class="background-image" :style="{ 'background-image': 'url(' + bg + ')' }">
 
@@ -51,7 +57,7 @@
 <script>
 export default {
     name: 'card-small',
-    props: ['image', 'background', 'highlight', 'image_position'],
+    props: ['image', 'images', 'background', 'highlight', 'image_position'],
     data: () => ({
 
     }),
@@ -59,7 +65,7 @@ export default {
         bg() {
             return this.background || require('@/assets/Daggerheart/template/CardAncestry.png');
         },
-        img_position(){
+        img_position() {
             return this.image_position || '0px 0px';
         }
     }
