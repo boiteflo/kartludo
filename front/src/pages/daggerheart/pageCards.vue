@@ -12,12 +12,13 @@
         </div>
 
         <div v-else class="flex flex-wrap">
-            <div ref="CardTemplate" v-for="(obj, index) in domaines.filter(x=>x.domain=='valor')" :key="'classSub' + index">
-                <card-domain :obj="obj">
-                </card-domain>
+            <div ref="CardTemplate" v-for="(obj, index) in classsub" :key="'classSub' + index">
+                <card-class-sub :obj="obj">
+                </card-class-sub>
             </div>
         </div>
     -->
+
 
         <h2>Les Ascendences</h2>
         <img v-for="(obj, index) in refImages" :key="'refImage' + index" style="width:340px" :src="obj" />
@@ -39,8 +40,7 @@
         <h1></h1>
         <h2>Les Sous Classes</h2>
         <div class="flex flex-wrap">
-            <img style="width:340px" v-for="(image, index) in images.sousClasses" :key="'classSub' + index"
-                :src="image" />
+            <img style="width:340px" v-for="(obj, index) in classsub" :key="'classSubA' + index" :src="obj.img" />
         </div>
         <h1></h1>
         <h2>Les Domaines</h2>
@@ -67,13 +67,13 @@ export default {
   import serviceDaggerheart from '../../services/serviceDaggerheart'
 
   import menuBarDaggerheart from '../../components/menuBarDaggerheart';
-  //import cardClassSub from '../../components/cards/cardClassSub';
+  import cardClassSub from '../../components/cards/cardClassSub';
   import cardDomain from '../../components/cards/cardDomain';
   import html2canvas from 'html2canvas';
 
   export default {
   name: 'pageDaggerheartCards',
-  components: {menuBarDaggerheart, cardDomain},
+  components: {menuBarDaggerheart, cardDomain, cardClassSub},
   data: () => ({
     images: null,
     classsub: null,
@@ -89,16 +89,17 @@ export default {
         classes.push(require('@/assets/Daggerheart/Cartes/ClassesExplications/' + x +'.png'));
         classes.push(require('@/assets/Daggerheart/Cartes/Classes/' + x +'.png'));
     });
-    const sousClasses = serviceDaggerheart.sousClasses.map(x=> require('@/assets/Daggerheart/Cartes/SousClasses/' + x +'.png'));
     this.domaines = await serviceDaggerheart.get('domaines');
     this.domaines.forEach(x=> x.img= require('@/assets/Daggerheart/Cartes/Domaines2/' + x.image +'.png'));
     this.domaines = this.domaines.sort((a, b) =>  a.domaine.localeCompare(b.domaine) || a.niveau - b.niveau);
 
     const others = serviceDaggerheart.others.map(x=> require('@/assets/Daggerheart/' + x ));
     
-    this.images = {ascendences, communautes, classes, sousClasses, others };
+    this.images = {ascendences, communautes, classes, others };
 
     this.classsub = await serviceDaggerheart.get('classsub');
+    this.classsub.forEach(x=> x.img= require('@/assets/Daggerheart/Cartes/SousClasses2/' + x.image +'.png'));
+    this.classsub = this.classsub.sort((a, b) =>  a.image.localeCompare(b.image));
     this.turnDivsToImages();
   },
   methods: {

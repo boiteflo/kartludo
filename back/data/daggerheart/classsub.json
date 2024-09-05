@@ -1,26 +1,30 @@
 [
     {
+        "image":"RodeurMaitreDesBetes3",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Lié aux Bêtes",
+        "title": "Maitre des Bêtes",
         "type": "Maîtrise",
         "details": "<p>Lorsque vous choisissez cette spécialisation, obtenez immédiatement 2 options de montée en niveau pour votre compagnon.<br><br> Une fois par repos long, si les dégâts d'une attaque marqueraient les Derniers Points de Vie de votre compagnon ou des vôtres, et que vous êtes à portée de proximité, l'autre se précipite à ses côtés et prend les dégâts à la place.</p>"
     },
     {
+        "image":"RodeurMaitreDesBetes2",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Lié aux Bêtes",
+        "title": "Maitre des Bêtes",
         "type": "Spécialisation",
         "details": "Lorsque vous choisissez cette spécialisation, obtenez une option de montée en niveau supplémentaire pour votre compagnon. <br><br>Lorsque un ennemi vous attaque alors qu'il est dans la portée de mêlée de votre compagnon, vous gagnez +2 à votre Évasion contre l'attaque."
     },
     {
+        "image":"RodeurMaitreDesBetes1",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Lié aux Bêtes",
+        "title": "Maitre des Bêtes",
         "type": "Fondation",
         "details": "<center><b>INCANTATION : </b>AGILITÉ. </center>Vous avez un compagnon animal de votre choix (à la discrétion du MJ). Il reste toujours à vos côtés à moins que vous ne lui disiez le contraire. <br><br>Prenez la feuille de personnage du Ranger Compagnon. Chaque fois que vous montez en niveau, choisissez également une option de montée en niveau pour votre compagnon à partir de cette feuille."
     },
     {
+        "image":"GuerrierAppelDesBraves3",
         "class": "warrior",
         "classFr": "Guerrier",
         "title": "Appel des Braves",
@@ -28,6 +32,7 @@
         "details": "Votre courage inflexible est un point de ralliement pour vos alliés. Vous pouvez initier un Jet de Tag Team une fois de plus par session. De plus, lorsqu'un allié initie un Jet de Tag Team avec vous, il n'a besoin de dépenser que 2 Espoir pour le faire."
     },
     {
+        "image":"GuerrierAppelDesBraves2",
         "class": "warrior",
         "classFr": "Guerrier",
         "title": "Appel des Braves",
@@ -35,6 +40,7 @@
         "details": "Vous êtes vigilant face au danger croissant.<br><br>Lorsque vous avez moins de 2 Cases de Points de Vie marquées, votre dé d'Espoir devient un d20."
     },
     {
+        "image":"GuerrierAppelDesBraves1",
         "class": "warrior",
         "classFr": "Guerrier",
         "title": "Appel des Braves",
@@ -42,48 +48,55 @@
         "details": "Lorsque vous échouez un jet avec Peur, vous gagnez un Espoir. <br><br>Une fois par repos long, avant de tenter quelque chose d'incroyablement dangereux ou de vous confronter à un adversaire qui vous dépasse clairement, décrivez quel rituel vous effectuez ou quelle préparation vous faites, puis nettoyez 2 Stress et gagnez 2 Espoir."
     },
     {
+        "image":"GuerrierTueurDeMonstres3",
         "class": "warrior",
         "classFr": "Guerrier",
-        "title": "Appel des Tueurs",
+        "title": "Tueur de Monstres",
         "type": "Maîtrise",
         "details": "<b>Préparation Martiale :</b> Vous êtes devenu un guerrier inspirant pour tous ceux qui voyagent avec vous. Vous avez accès à la manœuvre de préparation martiale pendant le temps de repos. Pour l'utiliser pendant un repos, décrivez comment vous instruisez et vous entraînez avec votre groupe, puis donnez-vous et à chaque allié un dé de Tueur, qui est un d6. Les alliés peuvent dépenser votre dé de Tueur pour améliorer leurs propres jets d'Attaque ou de Dégâts."
     },
     {
+        "image":"GuerrierTueurDeMonstres2",
         "class": "warrior",
         "classFr": "Guerrier",
-        "title": "Appel des Tueurs",
+        "title": "Tueur de Monstres",
         "type": "Spécialisation",
         "details": "Vous pouvez manier plusieurs armes avec une facilité dangereuse. Lorsque vous effectuez un jet d'Attaque réussi, vous pouvez dépenser un Espoir pour ajouter un dé de dégâts d'une arme secondaire à vos dégâts. <br><br>De plus, une fois par repos long, lorsque vous lancez vos dés de Tueur, vous pouvez relancer les 1 une fois, en prenant le nouveau résultat."
     },
     {
+        "image":"GuerrierTueurDeMonstres1",
         "class": "warrior",
         "classFr": "Guerrier",
-        "title": "Appel des Tueurs",
+        "title": "Tueur de Monstres",
         "type": "Fondation",
         "details": "Sur un jet avec Espoir, vous pouvez placer un d6 sur cette carte au lieu de prendre un Espoir. Ceux-ci sont connus sous le nom de dés de Tueur. Vous pouvez stocker un nombre de dés de Tueur égal à votre maîtrise. Lorsque vous effectuez un jet d'attaque ou de dégâts, vous pouvez dépenser n'importe quel nombre de ces dés de Tueur, les lancer et ajouter leur valeur à votre total. À la fin d'une session, nettoyez les dés de Tueur restants sur cette carte et gagnez autant d'Espoir."
     },
     {
+        "image":"SeraphinPorteurDeFoi3",
         "class": "seraph",
         "classFr": "Seraphin",
-        "title": "Manieur Divin",
+        "title": "Porteur de Foi",
         "type": "Maîtrise",
         "details": "Lorsque vous lancez des dégâts pour votre Arme Spirituelle, si les valeurs de vos dés de dégâts correspondent, vous pouvez lancer un dé de dégâts supplémentaire pour chaque correspondance. Ces dés supplémentaires ne peuvent pas être utilisés pour faire correspondre et ajouter plus de dés. Par exemple, si vous lancez 3 dés de 5, ajoutez deux dés de dégâts à votre lancer."
     },
     {
+        "image":"SeraphinPorteurDeFoi2",
         "class": "seraph",
         "classFr": "Seraphin",
-        "title": "Manieur Divin",
+        "title": "Porteur de Foi",
         "type": "Spécialisation",
         "details": "<b>Dévot : </b>Lorsque vous lancez vos dés de prière, vous pouvez lancer un dé supplémentaire et ignorer la plus basse des options. De plus, votre caractéristique de Toucher Secourant peut maintenant être utilisée une fois de plus par repos long."
     },
     {
+        "image":"SeraphinPorteurDeFoi1",
         "class": "seraph",
         "classFr": "Seraphin",
-        "title": "Manieur Divin",
+        "title": "Porteur de Foi",
         "type": "Fondation",
         "details": "<center><b>INCANTATION : </b>FORCE.</center><b>Arme Spirituelle : </b>Lorsque vous avez une arme de mêlée équipée, elle peut voler de votre main pour frapper un ennemi dans la portée Proche et revenir à vous. Vous pouvez marquer un Stress pour cibler une cible supplémentaire dans la portée avec le même Jet d'Attaque. <br><br><b>Toucher Secourant : </b>Une fois par repos long, utilisez une action et touchez une créature pour nettoyer 2 Points de Vie ou 2 Stress d'elle."
     },
     {
+        "image":"SorcierOrigineElementaire3",
         "class": "sorcerer",
         "classFr": "Sorcier",
         "title": "Origine Élémentaire",
@@ -91,6 +104,7 @@
         "details": "Une fois par repos long, vous pouvez vous transformer en une forme élémentaire de votre élément choisi. Lorsque vous le faites, décrivez votre transformation et choisissez deux des avantages suivants à obtenir jusqu'à votre prochain court repos : <ul><li>+4 à votre Seuil de Dégâts Sévères</li><li> +1 à une Caractéristique de votre choix</li><li>+1 Maîtrise</li><li>+2 à votre Score d'Armure</li><li>+2 à votre Évasion</li></ul>"
     },
     {
+        "image":"SorcierOrigineElementaire2",
         "class": "sorcerer",
         "classFr": "Sorcier",
         "title": "Origine Élémentaire",
@@ -98,6 +112,7 @@
         "details": "Vous pouvez appeler votre élément choisi pour vous protéger contre les dommages. Lorsqu'un jet d'attaque contre vous réussit, vous pouvez dépenser un Stress et décrire comment vous canalisez votre élément pour vous défendre, puis ajouter 1d6 à votre Évasion contre l'attaque. Si la nouvelle Évasion est suffisamment élevée pour éviter l'attaque, elle le fait."
     },
     {
+        "image":"SorcierOrigineElementaire1",
         "class": "sorcerer",
         "classFr": "Sorcier",
         "title": "Origine Élémentaire",
@@ -105,48 +120,55 @@
         "details": "<center><b>INCANTATION : </b>INSTINCT</center>Votre origine élémentaire vous permet de manipuler et de façonner un certain type d'élément. Choisissez un élément : <br><b><center>Eau · Feu · Air · Foudre · Terre.</center></b><br> Vous pouvez canaliser cet élément en effets uniques et inoffensifs. De plus, vous pouvez dépenser un Espoir et décrire comment votre contrôle sur cet élément aide un jet d'action que vous êtes sur le point de faire, puis ajouter soit +2 au jet ou +3 aux dégâts."
     },
     {
+        "image":"RoublardMarcheurDesOmbres3",
         "class": "rogue",
         "classFr": "Roulbard",
-        "title": "Marcheur de la Nuit",
+        "title": "Marcheur des Ombres",
         "type": "Maîtrise",
         "details": "Votre évasion augmente définitivement de 1, et vous pouvez désormais utiliser le Pas dans l'Ombre pour vous déplacer à une portée Très Lointaine.<br><br> <b>Camouflé : </b>À tout moment, vous pouvez marquer un Stress pour vous camoufler. Pendant que vous êtes camouflé, vous bénéficiez des conditions Caché et perdez automatiquement la condition Restreint si vous l'avez. Vous cessez d'être camouflé lorsque vous effectuez un jet avec Peur ou commencez un court repos."
     },
     {
+        "image":"RoublardMarcheurDesOmbres2",
         "class": "rogue",
         "classFr": "Roulbard",
-        "title": "Marcheur de la Nuit",
+        "title": "Marcheur des Ombres",
         "type": "Spécialisation",
         "details": "<b>Nuage Sombre : </b>Effectuez un Jet d'Incantation (15). En cas de succès, créez un nuage sombre temporaire qui couvre une zone dans la portée Proche. Toute personne dans ce nuage ne peut pas voir à l'extérieur, et toute personne à l'extérieur ne peut pas voir à l'intérieur. Vous êtes considéré comme Caché de tout ennemi qu'il bloque la ligne de vue. <br><br><b>Adrénaline : </b>Lorsque vous êtes Vulnérable, vous ajoutez toujours votre Niveau à votre total de dégâts."
     },
     {
+        "image":"RoublardMarcheurDesOmbres1",
         "class": "rogue",
         "classFr": "Roulbard",
-        "title": "Marcheur de la Nuit",
+        "title": "Marcheur des Ombres",
         "type": "Fondation",
         "details": "<center><b>INCANTATION : </b>FINESSE.</center> <b>Pas dans l'Ombre : </b>Une fois par repos long, vous pouvez utiliser une action pour vous déplacer à une portée Lointaine sans être vu par les créatures dans la portée Proche. Les créatures au sein de cette portée peuvent entendre votre mouvement, mais elles ne peuvent pas vous voir ou vous cibler jusqu'à ce que vous quittiez la portée ou attaquiez. En cas de succès, vous pouvez utiliser cette fonctionnalité pour vous éloigner et agir immédiatement. En cas d'échec, vous pouvez utiliser une action pour vous éloigner et rester caché jusqu'à ce que vous fassiez un jet avec Espoir."
     },
     {
+        "image":"SorcierOriginePrimordiale3",
         "class": "sorcerer",
         "classFr": "Sorcier",
-        "title": "Origine Primal",
+        "title": "Origine Primordiale",
         "type": "Maîtrise",
         "details": "Vous pouvez rassembler de l’énergie magique pour améliorer vos capacités. Vous pouvez devenir chargé après avoir subi des dégâts magiques, ou lorsque vous dépensez 2 Espoirs pour devenir chargé. Lorsque vous lancez un sort avec succès en étant chargé, vous pouvez dépenser votre charge pour augmenter temporairement soit la Maîtrise des Dégâts de ce sort de +1, soit la Difficulté du Jet de Réaction de +3. <br><br>Vous cessez d’être chargé lorsque vous terminez un long repos."
     },
     {
+        "image":"SorcierOriginePrimordiale2",
         "class": "sorcerer",
         "classFr": "Sorcier",
-        "title": "Origine Primal",
+        "title": "Origine Primordiale",
         "type": "Spécialisation",
         "details": "Vous pouvez améliorer les pratiques magiques des autres avec votre essence. Lorsque vous aidez un allié sur un jet de lancer de sort, le dé d’avantage que vous lancez est un d8 au lieu d’un d6. Après les avoir aidés à faire leur jet de lancer de sort, une fois par long repos, vous pouvez échanger les valeurs de leurs dés de Dualité."
     },
     {
+        "image":"SorcierOriginePrimordiale1",
         "class": "sorcerer",
         "classFr": "Sorcier",
-        "title": "Origine Primal",
+        "title": "Origine Primordiale",
         "type": "Fondation",
         "details": "<p>Votre origine primordiale vous permet de modifier l'essence même de la magie. Lorsque vous lancez un sort ou utilisez une arme qui inflige des dégâts magiques, vous pouvez marquer un Stress pour faire l'une des actions suivantes :</p><ul><li>Étendre sa portée d'une portée.</li><li>Ajouter +2 au résultat du jet d'action.</li>  <li>Relancer un nombre quelconque de dés de dégâts.</li><li>Toucher une cible supplémentaire à portée.</li></ul>"
     },
     {
+        "image":"MagicienEcoleDeConnaissance3",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Connaissance",
@@ -154,6 +176,7 @@
         "details": "Lorsque vous prenez cette Maîtrise, choisissez deux Expériences et ajoutez +1 à chacune d'elles.<br><br> Chaque fois que vous souhaitez utiliser une Expérience, lancez un d6. Avec un résultat de 5 ou 6, vous pouvez le faire sans dépenser un Espoir."
     },
     {
+        "image":"MagicienEcoleDeConnaissance2",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Connaissance",
@@ -161,6 +184,7 @@
         "details": "Lorsque vous prenez cette Spécialisation, vous pouvez modifier une Expérience existante que vous avez, puis ajouter +1 à l'une de vos Expériences. <br><br>Une fois par court repos, lorsque vous vous rappelez une carte de Domaine dans votre coffre, vous pouvez réduire son Coût de Rappel de 1."
     },
     {
+        "image":"MagicienEcoleDeConnaissance1",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Connaissance",
@@ -168,6 +192,7 @@
         "details": "<center><b>INCANTATION : </b>CONNAISSANCE</center>Vous avez acquis une connaissance précieuse grâce à une grande étude. Vous avez un avantage sur tous les jets de Connaissance pour rappeler des informations. Si ce jet concerne la nature magique d'une créature ou d'un enchantement, gagnez un Espoir même avec un jet avec Peur. <br><br><b>Adeptes : </b>Vous pouvez marquer un Stress au lieu de dépenser un Espoir pour utiliser une Expérience sur un jet. Si vous le faites, doublez le modificateur d'Expérience pour ce jet."
     },
     {
+        "image":"MagicienEcoleDeGuerre3",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Guerre",
@@ -175,6 +200,7 @@
         "details": "Lorsque vous réussissez un jet d'attaque avec Espoir, vous pouvez choisir de le faire avec Peur à la place. <br><br>Les dégâts magiques supplémentaires de votre fonctionnalité de Fondation de l'École de Guerre augmentent à 3d10."
     },
     {
+        "image":"MagicienEcoleDeGuerre2",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Guerre",
@@ -182,6 +208,7 @@
         "details": "Vous pouvez vous concentrer pour maintenir une barrière protectrice de magie. Tant que vous avez au moins 2 Espoir, vous pouvez ajouter votre compétence à votre Évasion. <br><br>De plus, les dégâts magiques supplémentaires de votre fonctionnalité de Fondation de l'École de Guerre augmentent à 2d10."
     },
     {
+        "image":"MagicienEcoleDeGuerre1",
         "class": "wizard",
         "classFr": "Magicien",
         "title": "École de Guerre",
@@ -189,6 +216,7 @@
         "details": "<center><b>INCANTATION : </b>CONNAISSANCE</center>Vous avez concentré vos études sur la manipulation de la magie de manière dangereuse et puissante. Obtenez un emplacement d'armure supplémentaire.<br><br> Lorsque vous réussissez un jet d'Attaque avec Peur, vous infligez 1d10 de dégâts magiques supplémentaires."
     },
     {
+        "image":"GuardienResistant3",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Résistant",
@@ -196,6 +224,7 @@
         "details": "Lorsque vous prenez cette maîtrise, augmentez tous vos Seuils de Dégâts de +3. <br><br>Lorsque qu'un allié dans une distance Proche a 2 Points de Vie ou moins et devrait subir des dégâts, vous pouvez immédiatement marquer un Stress pour courir à ses côtés et prendre les dégâts à sa place."
     },
     {
+        "image":"GuardienResistant2",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Résistant",
@@ -203,6 +232,7 @@
         "details": "Lorsque vous prenez cette spécialisation, augmentez tous vos Seuils de Dégâts de +2. <br><br>Lorsque un allié Très Proche subit des dégâts, vous pouvez marquer un Emplacement d'Armure pour réduire les dégâts par votre Score d'Armure."
     },
     {
+        "image":"GuardienResistant1",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Résistant",
@@ -210,6 +240,7 @@
         "details": "Lorsque vous prenez cette fondation, augmentez tous vos Seuils de Dégâts de +1. <br><br>Lorsque vous subissez des dégâts physiques, réduisez-les toujours par votre score d'armure avant de les appliquer à vos seuils. Vous pouvez toujours dépenser des emplacements d'armure pour les réduire davantage."
     },
     {
+        "image":"RoublardSyndicat3",
         "class": "rogue",
         "classFr": "Roublard",
         "title": "Syndicat",
@@ -217,6 +248,7 @@
         "details": "Vous pouvez maintenant utiliser votre Fonctionnalité de Spécialisation trois fois par session. Vous pouvez également choisir parmi les options suivantes lorsque vous l'utilisez : <ul><li>Lorsque vous marquez au moins 1 Point de Vie, le contact se précipite pour vous protéger, réduisant les Points de Vie marqués de 1. </li><li>Lorsque vous effectuez un jet de Présence en conversation, ils vous soutiennent. Votre dé d'Espoir devient un d20 pour ce jet.</li></ul>"
     },
     {
+        "image":"RoublardSyndicat2",
         "class": "rogue",
         "classFr": "Roublard",
         "title": "Syndicat",
@@ -224,6 +256,7 @@
         "details": "Une fois par session, vous pouvez brièvement invoquer un contact louche. Choisissez immédiatement un des avantages ci-dessous et décrivez ce qui l'a amené à vous aider en ce moment : <ul><li>Ils fournissent une poignée d'or, un outil unique ou un objet banal dont la situation a besoin.</li><li>La prochaine fois que vous effectuez un jet d'Action, leur aide vous permet d'augmenter soit votre dé d'Espoir soit votre dé de Peur de 3.</li><li> La prochaine fois que vous infligez des dégâts, ils tirent des ombres, ajoutant 2d8 de dégâts à votre jet de dégâts.</li></ul>"
     },
     {
+        "image":"RoublardSyndicat1",
         "class": "rogue",
         "classFr": "Roublard",
         "title": "Syndicat",
@@ -231,6 +264,7 @@
         "details": "<center><b>INCANTATION : </b>FINESSE</center>Lorsque vous arrivez dans une ville ou un environnement important, vous connaissez quelqu'un qui appelle cet endroit chez lui. Donnez-leur un nom, notez comment vous pensez qu'ils pourraient être utiles, et choisissez-en un parmi la liste ci-dessous : <ul><li>Ils me doivent une faveur, mais ils seront difficiles à trouver.</li><li>Ils vont demander quelque chose en échange. </li><li>Ils sont toujours en grande difficulté.</li><li> Nous étions ensemble. C'est une longue histoire. </li><li>Nous ne nous sommes pas quittés en bons termes.</li></ul>"
     },
     {
+        "image":"BardeTroubadour3",
         "class": "bard",
         "classFr": "Barde",
         "title": "Troubadour",
@@ -238,6 +272,7 @@
         "details": "Votre art rivalise avec les grands, votre compétence et créativité sont illimitées. Vous pouvez interpréter chacune de vos chansons de Fondation une fois de plus par repos long."
     },
     {
+        "image":"BardeTroubadour2",
         "class": "bard",
         "classFr": "Barde",
         "title": "Troubadour",
@@ -245,6 +280,7 @@
         "details": "Vos chansons de ralliement aident également à renforcer le courage de ceux qui écoutent. Quiconque reçoit un dé de Ralliement de votre part via votre capacité de Ralliement peut également choisir soit de gagner un Espoir, soit de supprimer un Stress."
     },
     {
+        "image":"BardeTroubadour1",
         "class": "bard",
         "classFr": "Barde",
         "title": "Troubadour",
@@ -252,6 +288,7 @@
         "details": "<center><b>INCANTATION : </b>PRÉSENCE</center>Lorsque vous prenez cette Fondation, décrivez quel instrument vous maîtrisez. Vous pouvez utiliser une action pour interpréter chaque chanson une fois par repos long : <ul><li><b>Lorsque vous jouez une chanson relaxante</b>, vous et tous les alliés Proches guérissez 1 Point de Vie. </li><li><b>Lorsque vous jouez une chanson épique</b>, faites une cible Proche temporairement Vulnérable. </li><li><b>Lorsque vous jouez une chanson déchirante</b>, vous et tous les alliés Proches gagnez un Espoir.</li></ul>"
     },
     {
+        "image":"GuardienVengeance3",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Vengeance",
@@ -259,6 +296,7 @@
         "details": "Dépensez 2 Espoirs pour prioriser un ennemi jusqu'à votre prochain repos. Lorsque vous effectuez un jet d'Attaque contre votre ennemi priorisé, vous pouvez échanger les valeurs de vos dés d'Espoir et de Peur. Vous ne pouvez prioriser qu'un seul ennemi à la fois."
     },
     {
+        "image":"GuardienVengeance2",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Vengeance",
@@ -266,6 +304,7 @@
         "details": "Lorsque un ennemi endommage un allié dans votre portée de mêlée, la prochaine attaque réussie que vous effectuez contre cet ennemi a +1 de Compétence."
     },
     {
+        "image":"GuardienVengeance1",
         "class": "guardian",
         "classFr": "Guardien",
         "title": "Vengeance",
@@ -273,6 +312,7 @@
         "details": "Lorsque vous prenez cette Fondation, gagnez immédiatement un emplacement d'armure supplémentaire. Lorsque vous êtes frappé par un ennemi en portée de mêlée, lancez immédiatement un nombre de d6 égal à la quantité de points de vie que vous avez marqués. Pour chaque résultat de 5+, infligez un point de vie de retour à l'ennemi."
     },
     {
+        "image":"DruideGardienDuRenouveau3",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien du Renouveau",
@@ -280,6 +320,7 @@
         "details": "Votre transformation animale incarne un esprit gardien de guérison. Lorsque vous êtes en Forme de Bête, lorsqu'un allié dans une Portée Proche marque 2 Points de Vie ou plus, vous pouvez marquer un Stress pour réduire le nombre de Points de Vie qu'ils marquent de 1."
     },
     {
+        "image":"DruideGardienDuRenouveau2",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien du Renouveau",
@@ -287,6 +328,7 @@
         "details": "Vous pouvez maintenant utiliser Régénération sur une créature dans une portée Très Proche, au lieu de toucher. <br><br><b>Protection du Gardien : </b>Une fois par repos long, vous pouvez utiliser une action pour réparer magiquement une armure en dehors du temps de pause. Lorsque vous le faites, vous ou un allié dans votre Portée Proche pouvez effacer un nombre d'Emplacements d'Armure égal à votre Instinct."
     },
     {
+        "image":"DruideGardienDuRenouveau1",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien du Renouveau",
@@ -294,6 +336,7 @@
         "details": "<center><b>INCANTATION : </b>INSTINCT</center><b>Clarté de la Nature : </b>Une fois par repos long, vous pouvez créer un espace de sérénité naturelle autour de vous. Après avoir passé quelques minutes à vous reposer dans cet espace, vous pouvez effacer le Stress égal à votre trait Instinct, distribué comme vous le choisissez entre vous et vos alliés. <br><br><b>Régénération : </b>Utilisez une action et dépensez 3 Espoirs pour effacer 1d4 Points de Vie sur une créature que vous touchez."
     },
     {
+        "image":"DruideGardienDesElements3",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien des Éléments",
@@ -301,6 +344,7 @@
         "details": "<p>Lorsque vous êtes dans votre Incarnation Élémentaire, vous incarnez davantage l'esprit et obtenez le bénéfice suivant pour cet élément :</p><ul><li><strong>Feu :</strong> Votre Maîtrise augmente de +1 pour les attaques et les sorts qui infligent des dégâts.</li>  <li><strong>Terre :</strong> Lorsque vous marquez un Emplacement d'Armure, lancez 1d6. Sur un résultat de 5 ou 6, libérez un Emplacement d'Armure.</li><li><strong>Eau :</strong> Lorsque vous êtes touché par une attaque, vous pouvez marquer un Stress pour rendre l'attaquant Vulnérable.</li><li><strong>Air :</strong> Vous gagnez +1 en Évasion et pouvez voler.</li></ul>"
     },
     {
+        "image":"DruideGardienDesElements2",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien des Éléments",
@@ -308,6 +352,7 @@
         "details": "<p>Une fois par repos court, pendant votre Incarnation Élémentaire, vous pouvez assumer une aura élémentaire correspondant à votre élément incarné. Les effets de l’aura s’appliquent dans votre portée rapprochée, vous suivant jusqu’à la fin de l’Incarnation Élémentaire.</p><ul><li><strong>Feu :</strong> Chaque fois qu’un ennemi marque au moins 1 point de vie, il marque également un Stress.</li><li><strong>Terre :</strong> Vos alliés gagnent +1 à leur score d’armure.</li><li><strong>Eau :</strong> Après qu’un ennemi vous inflige des dégâts, vous pouvez marquer un Stress pour le déplacer n’importe où dans une portée très rapprochée.</li><li><strong>Air :</strong> Lorsque vous ou un allié subissez des dégâts d’une attaque au-delà de la portée de mêlée, réduisez-les de 1d8.</li></ul>"
     },
     {
+        "image":"DruideGardienDesElements1",
         "class": "druid",
         "classFr": "Druide",
         "title": "Gardien des Éléments",
@@ -315,27 +360,31 @@
         "details": "<center><b>LANCER DE SORT : </b>INSTINCT</center><b>Incarnation Élémentaire : </b>Marquez un Stress pour incarner un esprit élémentaire de la liste ci-dessous. L’incarnation dure jusqu’à ce que vous subissiez des dégâts sévères ou jusqu’à votre prochain repos court. Cette caractéristique peut se superposer avec la Forme Bestiale.</p><ul><li><strong>Feu :</strong> Lorsqu’un ennemi à portée de mêlée vous inflige des dégâts, il subit 1d10 dégâts magiques.</li><li><strong>Terre :</strong> Vous gagnez +1 à votre score d’armure.</li><li><strong>Eau :</strong> Lorsque vous infligez des dégâts à un ennemi à portée de mêlée, tous les autres ennemis à portée très rapprochée marquent un Stress.</li><li><strong>Air :</strong> Vous pouvez planer, gagnant un avantage sur les jets d’Agilité.</li></ul>"
     },
     {
+        "image":"RodeurPisteur3",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Guide",
+        "title": "Pisteur",
         "type": "Maîtrise",
         "details": "Avant de faire un Jet d'Attaque contre votre Focalisation, vous pouvez dépenser un Espoir. Si ce jet réussit, vous retirez une Peur du pool de Peur du MJ."
     },
     {
+        "image":"RodeurPisteur2",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Guide",
+        "title": "Pisteur",
         "type": "Spécialisation",
         "details": "Lorsque vous êtes attaqué par votre Focalisation, votre Évasion est augmentée de +2 contre l'attaque."
     },
     {
+        "image":"RodeurPisteur1",
         "class": "ranger",
         "classFr": "Rodeur",
-        "title": "Guide",
+        "title": "Pisteur",
         "type": "Fondation",
         "details": "<center><b>INCANTATION : </b>AGILITÉ.</center><b>Prédateur Suprême : </b>Marquez un Stress pour augmenter votre Maîtrise de 1 sur un jet de dommage. De plus, chaque fois que vous infligez des dommages Sévères à un ennemi, il marque également un Stress. <br><br><b>Chemin Avancé : </b>Lorsque vous êtes en route vers un endroit que vous avez précédemment visité, ou que vous portez un objet ayant été là auparavant, vous pouvez identifier le chemin le plus court et le plus direct vers votre destination."
     },
     {
+        "image":"SeraphinSentinelleAilee3",
         "class": "seraph",
         "classFr": "Seraphin",
         "title": "Sentinelle Ailée",
@@ -343,6 +392,7 @@
         "details": "Lorsque vous prenez cette maîtrise, augmentez votre Seuil de Dégâts Sévères de +4. <br><br>Pendant que vous volez, votre fonctionnalité de Sentinelle Ailée inflige des dégâts supplémentaires de 1d12 au lieu de 1d8."
     },
     {
+        "image":"SeraphinSentinelleAilee2",
         "class": "seraph",
         "classFr": "Seraphin",
         "title": "Sentinelle Ailée",
@@ -350,6 +400,7 @@
         "details": "Votre visage surnaturel inspire la crainte et l'admiration. Pendant que vous volez, vous avez un avantage sur les Jets de Présence, et si ce jet est un succès avec Espoir, vous pouvez retirer une Peur du pool de Peur du MJ au lieu de gagner un Espoir."
     },
     {
+        "image":"SeraphinSentinelleAilee1",
         "class": "seraph",
         "classFr": "Seraphin",
         "title": "Sentinelle Ailée",
@@ -357,23 +408,26 @@
         "details": "<center><b>INCANTATION : </b>FORCE.</center>Vous pouvez voler. En volant, vous pouvez : <ul><li>Dépenser un Espoir pour attraper et transporter une autre créature consentante d'une taille approximativement égale ou plus petite que la vôtre. </li><li>Marquer un Stress pour infliger 1d8 de dégâts supplémentaires lors d'une attaque réussie.</li></ul>"
     },
     {
+        "image":"BardeBeauParleur3",
         "class": "bard",
         "classFr": "Barde",
-        "title": "Barde des Mots",
+        "title": "Beau Parleur",
         "type": "Maîtrise",
         "details": "Le dé de Ralliement que vous distribuez augmente à un d10. <br><br>De plus, chaque fois que vous Aidez un Allié, si vous décrivez le moment comme si vous écriviez le récit de leur héroïsme dans un mémoire, le dé d'avantage pour les aider est un d10."
     },
     {
+        "image":"BardeBeauParleur2",
         "class": "bard",
         "classFr": "Barde",
-        "title": "Barde des Mots",
+        "title": "Beau Parleur",
         "type": "Spécialisation",
         "details": "Vous savez que vos mots inspirants peuvent rehausser le moral du groupe. Une fois par session, lorsque vous utilisez vos compétences de linguiste pour encourager ou exhorter un allié, vous pouvez faire l'une des choses suivantes : <ul><li>Leur permettre de trouver un objet ou outil banal dont ils ont besoin. </li><li>Aider un Allié sans dépenser d'Espoir.</li><li>Leur donner un mouvement supplémentaire pendant leur prochain repos.</li></ul>"
     },
     {
+        "image":"BardeBeauParleur1",
         "class": "bard",
         "classFr": "Barde",
-        "title": "Barde des Mots",
+        "title": "Beau Parleur",
         "type": "Fondation",
         "details": "<center><b>INCANTATION : </b>PRÉSENCE.</center><b>Cœur de Poète : </b>Lorsque vous parlez à une personne que vous essayez d'impressionner, de persuader ou d'offrir des conseils, décrivez comment vous usez de votre éloquence pour influencer leur comportement. Marquez un Stress pour obtenir +1 au jet de Présence ou au jet de Renseignement sur cette personne.<br><br><b> Éloge : </b>Lorsque vous effectuez un jet de Présence ou de Renseignement et que vous réussissez, vous pouvez décrire le moment où vous exprimez vos compétences avec élégance et obtenir un Espoir supplémentaire."
     }
