@@ -233,7 +233,7 @@ p {
   name: 'pageTemplate',
   components: {menuBarDaggerheart, hierarchy, buttonBig, textQuill, cardTemplate},
   data: () => ({
-    choice:3,
+    choice:0,
     templateImages: null,
     refreshCard:0,
     hierarchyArray: [{Id:0, Text:'Création'}],
