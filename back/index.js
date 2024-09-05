@@ -81,8 +81,10 @@ app.use('/api/cardMDM', helperRouteJsonGet.createDalRoute('back/data/cardsAll', 
 app.use('/api/extension', helperRouteJsonGet.createDalRoute('back/data/extensions', 'set_code'))
 app.use('/api/tournament', helperRouteJsonGet.createDalRoute('back/data/tournaments', 'Id'))
 
-//app.use('/api/daggerheart', helperRouteJsonGet.createDalRoute('back/data/daggerheart/class', 'name'))
 app.use('/api/daggerheart', helperRouteJsonGetFolder.createDalRoute('back/data/daggerheart'))
+
+var routeDaggerheartCsv = require('./routes/daggerheartCsv');
+app.use('/api/daggerheartcsv', routeDaggerheartCsv)
 
 var refreshRoute = require('./routes/refresh');
 app.use('/api/refresh', refreshRoute)

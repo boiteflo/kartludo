@@ -15,6 +15,57 @@
       </div>
     </div>
 
+    <!-- Create Multiple cards -->
+    <div v-if="choice == 3">
+      <h4>Créer une multitude de cartes</h4>
+      <p class="m10px">Le bouton suivant permet de télécharger cette archive : Ancestries.zip. Elle contient un fichier
+        daggerheart.csv et des images. Aprés avoir dézippé le fichier, il faut insérer le fichier csv en utilisant le
+        bouton a gauche et les images en utilisant le bouton de droite</p>
+      <a href="/api/daggerheartCsv">
+        <v-btn class="m5px bg">
+          Télécharger Ancestries.zip
+        </v-btn>
+      </a>
+
+
+      <div class="flex">
+        <div>
+          <h4>Données CSV</h4>
+          <input class="m5px" type="file" @change="uploadCsv" accept=".csv" />
+        </div>
+        <div class="w100p">
+          <h4>Images</h4>
+          <div class="m5px">
+
+            <input type="file" multiple @change="uploadImages" accept="image/*">
+            <div v-if="csvImages">
+              <div class="flex flex-wrap">
+                <div v-for="(obj, index) in csvImages" :key="index" class="image-preview">
+                  <img :src="obj.value" alt="Image preview" style="width: 20px; height: auto; margin:2px;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <v-progress-linear :value="loadingCard"></v-progress-linear>
+
+      <div class="bg" v-if="templatesCardImages && templatesCardImages.length > 0">
+        <div class="flex flex-wrap">
+
+          <img style="width:340px; object-fit:cover" v-for="(image, index) in templatesCardImages"
+            :key="'templatesCardImages' + index" :src="image" />
+        </div>
+      </div>
+      <div style="position:fixed; bottom:-10px; z-index: -1;" :key="refreshCdvCards" class="flex flex-wrap" >
+        <div v-for="(obj, index) in csv" :key="'cardTemplate' + index" ref="CardTemplateMultiple">
+          <card-template :template="obj.template" :values="obj.values"></card-template>
+        </div>
+      </div>
+
+    </div>
+
     <!-- Select a template -->
     <div v-if="choice == 1">
       <h4>Choisir un template</h4>
@@ -56,12 +107,7 @@
           <!-- Texts -->
           <p style="margin-left:5px; margin-top:-25px">Voici les textes utilisées sur la carte</p>
           <div v-for="index in texts.length" :key="'TextAdd' + index">
-            <text-quill class="w100p" :text="texts[index - 1]" @change="setText(index, $event)">
-              <div class="flex absolute t10px r10px">
-                <v-btn class="s40 m5px absolute t0px" disabled>
-                  <v-icon> mdi-edit</v-icon> Modifier en html
-                </v-btn>
-              </div>
+            <text-quill class="w100p" :text="texts[index - 1]" @change="setText(index, $event)" :textarea="true">
             </text-quill>
           </div>
           <br>
@@ -173,61 +219,39 @@ p {
 </style>
 
 <script>
-  import ServiceTemplate from '../../services/serviceTemplate'
   import html2canvas from 'html2canvas';
+  import ServiceTemplate from '../../services/serviceTemplate';
+  import serviceDaggerheart from '../../services/serviceDaggerheart';
   
   import menuBarDaggerheart from '../../components/menuBarDaggerheart';
   import hierarchy from '../../components/hierarchy';
   import buttonBig from '../../components/buttonBig';
   import textQuill from '../../components/textQuill';
+  import cardTemplate from '../../components/cards/cardTemplate';
   
   export default {
   name: 'pageTemplate',
-  components: {menuBarDaggerheart, hierarchy, buttonBig, textQuill},
+  components: {menuBarDaggerheart, hierarchy, buttonBig, textQuill, cardTemplate},
   data: () => ({
-    choice:0,
+    choice:3,
     templateImages: null,
     refreshCard:0,
     hierarchyArray: [{Id:0, Text:'Création'}],
-    templates: [
-      {
-        name:"Ancestry", 
-        template:"Template Ancestry\ntext font-weight:bold font-size:30px top:190px left:40px text-transform:uppercase\ntext color:black font-size:11px top:235px left:15px right:15px\nimage top:2px left:2px right:2px background-position:'0px -5px'",
-        texts:["Elf","<p><i>Les Elfes sont généralement des humanoïdes grands avec des oreilles pointues et des sens extrêmement aiguisés.</i></p><p><strong>Transe spirituelle :</strong> Pendant un repos, vous pouvez entrer en transe et effectuer une action supplémentaire de temps d'arrêt.</p><p><strong>Réactions Rapides :</strong> Vous pouvez marquer un Stress pour bénéficier d'un avantage sur un Jet de Réaction.</p>"],
-        images:[require('@/assets/Daggerheart/template/CardAncestry.png'), require('@/assets/Daggerheart/ancestry/elf.jpg')]
-      },
-      {
-        name:"Community", 
-        template:"Template Community\ntext font-weight:bold font-size:20px top:245px left:40px text-transform:uppercase\ntext color:black font-size:12px top:275px left:15px right:15px\nimage top:2px left:2px right:2px background-position:'0px -5px'",
-        texts:["Communauté côtière","<p><i>Faire partie d'une communauté côtière signifie que vous avez vécu sur ou près d'une grande étendue d'eau.</i></p><p><strong>Connaissance de la Marée</strong> : Vous pouvez sentir le flux et le reflux de la vie. Lorsque vous lancez un jet avec la Peur, placez un jeton sur cette carte. Vous pouvez conserver un nombre de jetons égal à votre Niveau. Avant de faire un jet d'action, vous pouvez dépenser un ou plusieurs de ces jetons pour les ajouter comme modificateurs de +1 à votre jet. A la fin d'une session, défaussez tous les jetons non utilisés.</p>"],
-        images:[require('@/assets/Daggerheart/template/CardCommunity.png'), require('@/assets/Daggerheart/community/seaborne.jpg')]
-      },
-      {
-        name:"Class", 
-        template:"Template Class\ntext font-weight:bold font-size:14px top:172px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext color:black font-size:10px top:198px left:15px right:15px\ntext top:455px font-size:10px text-align:center left:15px right:15px\nimage top:2px left:2px right:2px background-position:'0px -20px'\nimage top:0px left:20px width:70px height:118px",
-        texts:["Magicien","<p><strong>Prestidigitation :</strong> Vous pouvez effectuer des effets magiques subtils et inoffensifs à volonté. Par exemple, vous pouvez changer la couleur d'un objet, créer une odeur, allumer une bougie, faire flotter un petit objet, éclairer une pièce ou réparer un petit objet.</p><p><strong>Schémas étranges :</strong> Choisissez un nombre entre 1 et 12. Chaque fois que vous obtenez ce nombre sur un dé de Dualité, gagnez un Espoir ou éliminez un Stress. Vous pouvez changer ce nombre lorsque vous terminez un long repos.</p><p><strong>Espoir de magicien :</strong> Dépensez trois points d'Espoir au lieu de marquer votre dernier point de vie.</p>","<p><b>Évasion : </b> 10, <b>Seuil de dégâts : </b> Majeur 5 / Sévère 10</p>"],
-        images:[require('@/assets/Daggerheart/template/CardClass.png'), require('@/assets/Daggerheart/class/wizard.jpg'), require('@/assets/Daggerheart/class/wizard-banner.webp')]
-      },
-      {
-        name:"SousClasse", 
-        template:"Template SousClass\ntext font-weight:bold font-size:14px top:200px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext font-weight:bold font-size:20px top:220px left:15px right:15px text-transform:uppercase text-align:center\ntext color:black font-size:10px top:250px left:15px right:15px\ntext bottom:5px font-size:11px text-align:center left:15px right:15px font-weight:bold\nimage top:2px left:2px right:2px background-position:'0px -20px'\nimage top:0px left:20px width:70px height:118px",
-        texts:["Druide","Gardien des éléments","<p style='text-align:center; margin-bottom:0px;'><strong style='text-align:center'>JET DE SORTS : </strong>INSTINCT</p><p><strong>Incarnation élémentaire : </strong>Marquez un Stress pour incarner un esprit élémentaire de la liste ci-dessous. L'incarnation dure jusqu'à ce que vous subissiez des dégâts Sévères ou jusqu'à votre prochain repos court. Cette capacité peut coexister avec la forme bestiale.</p><ol><li data-list='bullet'><span class='ql-ui' contenteditable='false'></span><strong>Feu : </strong>Lorsqu'un ennemi en mêlée vous inflige des dégâts, il subit 1d10 de dégâts magiques. </li><li data-list='bullet'><span class='ql-ui' contenteditable='false'></span><strong>Terre :</strong> Vous gagnez +1 à votre Protection. </li><li data-list='bullet'><span class='ql-ui' contenteditable='false'></span><strong>Eau : </strong>Lorsque vous infligez des dégâts à un ennemi en mêlée, tous les autres ennemis dans une portée Très Proche marquent un Stress. </li><li data-list='bullet'><span class='ql-ui' contenteditable='false'></span><strong>Air : </strong>Vous pouvez flotter, ce qui vous donne l'avantage sur les jets d'Agilité.</li></ol>","Fondation"],
-        images:[require('@/assets/Daggerheart/template/CardSousClass.png'), require('@/assets/Daggerheart/class/druid.jpg'), require('@/assets/Daggerheart/class/druid-banner.webp')]
-      },
-      {
-        name:"Domain", 
-        template:"Template Domain\ntext font-weight:bold font-size:14px top:228px left:120px right:120px text-align:center color:white text-transform:uppercase\ntext font-weight:bold font-size:20px top:250px text-align:center  text-transform:uppercase right:20px left:20px\ntext color:black font-size:30px top:15px color:white left:45px font-weight:bold\ntext font-weight:bold font-size:18px top:23px right:36px color:white\ntext font-size:11px top:275px left:15px right:15px\ntext top:455px font-size:10px text-align:right right:15px\nimage top:2px left:2px right:2px background-position:'0px -10px'\nimage top:2px left:20px width:70px height:118px\nimage top:20px right:20px width:35px height:35px",
-        texts:["Habilité","Riposte","1","2","<p>Lorsque vous subissez des dégâts d'une créature en mêlée, vous pouvez marquer un Stress pour infliger immédiatement des dégâts d'arme à la créature à moitié de votre Maîtrise (arrondi à l'unité supérieure).</p>","<b>Domaines : </b> Lame"],
-        images:[require('@/assets/Daggerheart/template/CardDomain.png'), require('@/assets/Daggerheart/domain/blade.jpg'), require('@/assets/Daggerheart/domain/banner-blade.webp'), require('@/assets/Daggerheart/other/cost.webp')]
-      }
-    ],
+    templates: null,
     templateText: "",
     images: [],
     texts: [],
     setTemplate: false,
-    templateImage: null
+    templateImage: null,
+    csvFile:null,
+    csv:null,
+    csvImages: [],
+    templatesCardImages : null,
+    refreshCdvCards:0,
+    loadingCard:0
   }),
   async mounted(){    
+    this.templates = serviceDaggerheart.templates;
     this.templateImages = [
       {name:"Ascendance", value:"Ascendances/elfe"},
       {name:"Communauté", value:"Communautes/cotiere"},
@@ -235,16 +259,6 @@ p {
       {name:"Sous Classe", value:"SousClasses/DruideGardienDesElements"},
       {name:"Domaine", value:"Domaines/LameRiposte"}
     ].map(x=> { return {name:x.name, value:require('@/assets/Daggerheart/Cartes/' + x.value +'.png')};});
-    
-    this.quill = new Quill(this.$refs.editor, {
-      theme: 'snow',
-      modules: {
-        toolbar: [
-          ['bold', 'italic', 'underline'], // options de mise en forme
-          [{ 'list': 'ordered'}, { 'list': 'bullet' }]
-        ]
-      }
-    });
   },
   methods: {
     selectHierarchy(item){
@@ -256,10 +270,6 @@ p {
       this.choice = value;
       if(value==0) this.hierarchyArray = [{Id:0, Text:'Création'}];
       if(value==1) this.hierarchyArray = [{Id:0, Text:'Création'}, {Id:1, Text:'Choix du Modèle'}];
-      if(value==3) {
-        alert("Cette fonctionnalité n'est pas encore disponible");
-        this.choice = 0;
-      }
     },
     selectTemplate(name, templateIndex){
       const template = this.templates[templateIndex];
@@ -310,6 +320,67 @@ p {
       const canvas = await html2canvas(this.$refs.CardTemplate[0]);
       const dataURL = canvas.toDataURL('image/png');
       this.templateImage = dataURL;
+    },
+    uploadCsv(event){
+      const file = event.target.files[0]; 
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => this.refreshMultipleCards(e.target.result)
+        reader.readAsText(file);
+      }
+    },
+    async uploadImages(event) {
+      /*const images = [];
+      Array.from(event.target.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          images.push(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      });
+      this.csvImages= images;
+      setTimeout(() => {
+        this.refreshMultipleCards();  
+      }, 1000);*/
+      this.csvImages = await Promise.all(Array.from(event.target.files).map(file => this.readFileAsDataURL(file)));
+      this.refreshMultipleCards();  
+      
+    },
+    readFileAsDataURL(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          resolve({key:file.name, value:e.target.result});
+        } 
+        reader.readAsDataURL(file); 
+      });
+    },
+    refreshMultipleCards(csv){
+      if(csv)
+        this.csvFile = csv;
+      this.csv = ServiceTemplate.parseCSV(this.csvFile, this.csvImages);
+      this.refreshCdvCards++;
+      setTimeout(() => this.convertMultipleCardToImages(), 1000);
+      
+    },
+    async convertMultipleCardToImages(){      
+        const images = [];
+        if(!this.$refs.CardTemplateMultiple || this.$refs.CardTemplateMultiple.length <0)
+            return;
+        
+            const max = this.$refs.CardTemplateMultiple.length;
+        for(let i=0; i< max; i++){          
+          const image = await this.turnDivToImage(this.$refs.CardTemplateMultiple[i]);
+          images.push(image);
+          this.loadingCard = (i+1)*100/max;
+        }
+        
+        this.templatesCardImages = images;
+    },
+    async turnDivToImage(div){
+        const canvas = await html2canvas(div);
+        const dataURL = canvas.toDataURL('image/png');
+        return dataURL;
     }
   }
   };

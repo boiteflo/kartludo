@@ -1,11 +1,26 @@
 class ServiceTemplate {
+    static createFromCsv(template, values) {
+        let result = {
+            value: template,
+            texts: [], images: []
+        };
+        const textNumbers = template.split('\n').filter(x => x.startsWith("text")).length;
+        const images = values.slice(textNumbers);
+        result.backgroundStyle = images[0];
+        template.split('\n').forEach(line => this.handleCommand(result, line, images));
+        result.images = result.images.map(x => x.style);
+        const texts = values;
+        result.texts.forEach((x, i) => x.text = texts[i]);
+        return result;
+    }
+
     static create(template, images) {
-        let result = { 
-            value: template, 
+        let result = {
+            value: template,
             texts: [], images: []
         };
         template.split('\n').forEach(line => this.handleCommand(result, line, images));
-        result.backgroundStyle = {'background-image': "url('" + images[0] + "')"};
+        result.backgroundStyle = { 'background-image': "url('" + images[0] + "')" };
         return result;
     }
 
@@ -26,9 +41,9 @@ class ServiceTemplate {
 
     static addImage(result, line, images) {
         //image top:2px left:2px right:2px
-        const image = result.images.length +1 >= images.length ? "" : images[result.images.length+1];
-        let style = {'background-image': "url('" + image + "')", ...this.getLineStyle(line)};
-        let img = { line, style};
+        const image = result.images.length + 1 >= images.length ? "" : images[result.images.length + 1];
+        let style = { 'background-image': "url('" + image + "')", ...this.getLineStyle(line) };
+        let img = { line, style };
         result.images.push(img);
     }
 
@@ -65,11 +80,64 @@ class ServiceTemplate {
                 else value += line[i];
             }
         }
-        
+
         if (key)
-             result[key] = value;
+            result[key] = value;
 
         return result;
+    }
+
+    static parseCSV(csvContent, csvImages) {
+        const rows = [];
+        let currentLine = '';
+        let insideQuotes = false;
+        if (!csvContent)
+            return null;
+
+        for (let i = 0; i < csvContent.length; i++) {
+            const char = csvContent[i];
+            const nextChar = csvContent[i + 1];
+
+            if (char === '"') {
+                if (insideQuotes && nextChar === '"') { // Vérifier si le guillemet est un guillemet d'échappement ("")
+                    currentLine += '"';
+                    i++;
+                } else {
+                    insideQuotes = !insideQuotes;
+                }
+            } else if (char === '\n' && !insideQuotes) {
+                rows.push(currentLine.split('\t'));
+                currentLine = '';
+            } else {
+                currentLine += char;
+            }
+        }
+
+        if (currentLine) {
+            rows.push(currentLine.split('\t'));
+        }
+
+        return this.addTemplates(rows, csvImages);
+    }
+
+    static addTemplates(lines, csvImages) {
+        var currentTemplate = '';
+
+        return lines.map(x => {
+            if (x[0] == "template")
+                currentTemplate = x[2];
+            else
+                return { template: currentTemplate, values: x.map(y=> this.getValueOrImage(y, csvImages)) };
+        }).filter(x => x);
+    }
+
+    static getValueOrImage(value, csvImages) {
+        if (!value) return '';
+        const key = value.substring(1);
+        if (!value.startsWith('@'))
+            return value;
+        const item = csvImages.find(x => x.key == key);
+        return item ? item.value : value;
     }
 }
 

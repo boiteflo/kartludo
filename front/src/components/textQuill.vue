@@ -1,12 +1,27 @@
 <template>
-    <v-container class="relative">
-        <v-row justify="center">
-            <v-col>
-                <div ref="editor" class="quill-editor"></div>
-            </v-col>
-        </v-row>
-        <slot></slot>
-    </v-container>
+    <div>
+        <v-container class="relative">
+            <v-row justify="center">
+                <v-col>
+                    <div ref="editor" style="min-height: 40px;" class="quill-editor"></div>
+                    <div v-if="showHtml" class="borderBlack w100p h100p m5px absolute t0px bgWhite" style="z-index:2">
+                        <textarea @input="onTextareaChange" v-model="txt" class="w100p h100p"
+                            style="z-index:2"></textarea>
+
+                        <v-btn class="w100p m5px bg2" @click="setShowHtmml(false)">
+                            <v-icon> mdi-edit</v-icon> Modifier via l editeur
+                        </v-btn>
+                    </div>
+                </v-col>
+            </v-row>
+            <div v-if="textarea" class="flex absolute t10px r10px">
+                <v-btn class="s40 m5px absolute t0px" @click="setShowHtmml(true)">
+                    <v-icon> mdi-edit</v-icon> Modifier en html
+                </v-btn>
+            </div>
+            <slot></slot>
+        </v-container>
+    </div>
 </template>
 
 <script>
@@ -15,10 +30,12 @@ import 'quill/dist/quill.snow.css';
 
 export default {
     name: 'text-quill',
-    props: ['text'],
+    props: ['text', 'textarea'],
     data() {
         return {
-            quill: null
+            showHtml: false,
+            quill: null,
+            txt: ''
         };
     },
     mounted() {
@@ -48,6 +65,16 @@ export default {
             editor.style.height = 'auto';
             editor.style.height = editor.scrollHeight + 'px';
         },
+        setShowHtmml(value) {
+            if (value)
+                this.txt = this.quill.root.innerHTML;
+            else
+                 this.quill.root.innerHTML = this.txt;
+            this.showHtml = value;
+        },
+        onTextareaChange() {
+            this.$emit('change', this.txt);
+        }
     },
 };
 </script>
