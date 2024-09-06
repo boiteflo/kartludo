@@ -19,13 +19,20 @@
     <div v-if="choice == 3">
       <h4>Créer une multitude de cartes</h4>
       <p class="m10px">Le bouton suivant permet de télécharger cette archive : Ancestries.zip. Elle contient un fichier
-        daggerheart.csv et des images. Aprés avoir dézippé le fichier, il faut insérer le fichier csv en utilisant le
-        bouton a gauche et les images en utilisant le bouton de droite</p>
-      <a href="/api/daggerheartCsv">
-        <v-btn class="m5px bg">
-          Télécharger Ancestries.zip
-        </v-btn>
-      </a>
+        daggerheart.csv et des images. Aprés avoir dézippé le fichier, il faut insérer les images puis le fichier csv.</p>
+      <div class="flex flex-wrap">
+
+        <a href="/api/daggerheartCsv">
+          <v-btn class="m5px bg">
+            Télécharger Ancestries.zip
+          </v-btn>
+        </a>
+        <a href="/api/daggerheartCsv/csv">
+          <v-btn class="m5px bg">
+            Télécharger uniquement le CSV
+          </v-btn>
+        </a>
+      </div>
 
 
       <div class="flex">
@@ -58,7 +65,7 @@
             :key="'templatesCardImages' + index" :src="image" />
         </div>
       </div>
-      <div style="position:fixed; bottom:-10px; z-index: -1;" :key="refreshCdvCards" class="flex flex-wrap" >
+      <div style="position:fixed; bottom:-10px; z-index: -1;" :key="refreshCdvCards" class="flex flex-wrap">
         <div v-for="(obj, index) in csv" :key="'cardTemplate' + index" ref="CardTemplateMultiple">
           <card-template :template="obj.template" :values="obj.values"></card-template>
         </div>

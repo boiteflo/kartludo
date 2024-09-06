@@ -133,7 +133,8 @@ class ServiceTemplate {
 
     static getValueOrImage(value, csvImages) {
         if (!value) return '';
-        const key = value.substring(1);
+        let key = value.substring(1).replaceAll("\r",'');
+        "png,jpeg,jpg,webp,bmp".split(',').forEach(x=> key = key.replace("," + x, "." + x));
         if (!value.startsWith('@'))
             return value;
         const item = csvImages.find(x => x.key == key);

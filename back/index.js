@@ -12,9 +12,17 @@ String.prototype.replaceMany = function(searchTxt, replaceTxt) {
     return this.replace(regex, replaceTxt) ;
 }
 String.prototype.replaceAll = function(search, replace) {
-    let result = this;
-    while(result.includes(search))
-        result = result.replace(search, replace);
+    let result = '';
+  
+    for (let i = 0; i < this.length - search.length; i++) {
+      if (this.substr(i, search.length) === search) {
+        result += replace;
+        i += search.length - 1; 
+      } else {
+        result += this[i];
+      }
+    }
+    
     return result;
 }
 String.prototype.includesX2 = function() {
