@@ -231,10 +231,10 @@ p {
   import serviceDaggerheart from '../../services/serviceDaggerheart';
   
   import menuBarDaggerheart from '../../components/menuBarDaggerheart';
+  import cardTemplate from '../../components/cards/cardTemplate';
   import hierarchy from '../../components/hierarchy';
   import buttonBig from '../../components/buttonBig';
   import textQuill from '../../components/textQuill';
-  import cardTemplate from '../../components/cards/cardTemplate';
   
   export default {
   name: 'pageTemplate',

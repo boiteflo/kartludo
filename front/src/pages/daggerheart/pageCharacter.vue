@@ -182,12 +182,12 @@
                 <!-- Mon Personnage-->
                 <v-tab-item>
                     <div class="flex flex-wrap m5px" v-if="tab > 6">
-                        <img class="cursorPointer w340" :src="character.ancestry.image" @click="selectStep(0)">
-                        <img class="cursorPointer w340" :src="character.community.image" @click="selectStep(1)">
-                        <img class="cursorPointer w340" :src="character.class.details" @click="selectStep(2)">
-                        <img class="cursorPointer w340" :src="character.subclass.image" @click="selectStep(3)">
+                        <img class="cursorPointer w340" :src="character.ancestry.image">
+                        <img class="cursorPointer w340" :src="character.community.image">
+                        <img class="cursorPointer w340" :src="character.class.details">
+                        <img class="cursorPointer w340" :src="character.subclass.image">
                         <div v-for="(obj, index) in character.domains" :key="'CharacterDomains' + index">
-                            <img class="cursorPointer w340" :src="obj.image" @click="selectStep(5)">
+                            <img class="cursorPointer w340" :src="obj.image">
                         </div>
 
                         <div>
@@ -196,7 +196,7 @@
                             </card-weapon>
                         </div>
 
-                        <card-armor :armor="character.armor" @click="selectStep(6)"></card-armor>
+                        <card-armor :armor="character.armor"></card-armor>
                     </div>
 
                     <div class="center w100p"><a :href="character.url">Lien de {{ character.name }}</a></div>
