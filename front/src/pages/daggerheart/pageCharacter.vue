@@ -78,7 +78,7 @@
                         <p style="color:gray" class="p10px">Vous devez répartir les six valeurs suivantes : -1, 0, 0, 1,
                             1, 2
                         </p>
-                        <div class="flex flex-responsive flex-space-around">
+                        <div class="flex flex-responsive flex-space-around colorBlack">
                             <div>
                                 <v-text-field label="Agilité" hide-details v-model="character.agilite"
                                     class="m5px"></v-text-field>
