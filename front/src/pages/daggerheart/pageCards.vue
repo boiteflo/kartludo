@@ -3,25 +3,23 @@
         <menu-bar-daggerheart>
         </menu-bar-daggerheart>
 
-        <!--
-        <div class="bg" v-if="refImages.length > 0">
-            coucou
-            
-            <img style="width:340px; object-fit:cover" v-for="(image, index) in images.refImages" :key="'refImages' + index"
-                :src="image" />
+
+        <div class="bg2" v-if="refImages.length > 0">
+            <div>Résultat</div>
+            <div v-for="(image, index) in refImages" :key="'refImages' + index" style="display:inline">
+                <a :href="image.img" :download="image.id"><img style="width:340px; object-fit:cover" :src="image.img" /></a>
+            </div>
         </div>
 
         <div v-else class="flex flex-wrap">
-            <div ref="CardTemplate" v-for="(obj, index) in classsub" :key="'classSub' + index">
-                <card-class-sub :obj="obj">
-                </card-class-sub>
+            <div ref="CardTemplate" v-for="(obj, index) in domaines.slice(0, 0)" :key="'classSub' + index"
+                :id="obj.image">
+                <card-domain :obj="obj">
+                </card-domain>
             </div>
         </div>
-    -->
-
 
         <h2>Les Ascendences</h2>
-        <img v-for="(obj, index) in refImages" :key="'refImage' + index" style="width:340px" :src="obj" />
         <div class="flex flex-wrap">
             <img style="width:340px" v-for="(image, index) in images.ascendences" :key="'ascendance' + index"
                 :src="image" />
@@ -90,7 +88,7 @@ export default {
         classes.push(require('@/assets/Daggerheart/Cartes/Classes/' + x +'.png'));
     });
     this.domaines = await serviceDaggerheart.get('domaines');
-    this.domaines.forEach(x=> x.img= require('@/assets/Daggerheart/Cartes/Domaines2/' + x.image +'.png'));
+    this.domaines.forEach(x=> x.img= require('@/assets/Daggerheart/Cartes/Domaines3/' + x.image + '.png'));
     this.domaines = this.domaines.sort((a, b) =>  a.domaine.localeCompare(b.domaine) || a.niveau - b.niveau);
 
     const others = serviceDaggerheart.others.map(x=> require('@/assets/Daggerheart/' + x ));
@@ -114,7 +112,7 @@ export default {
     async turnDivToImage(div){   
         const canvas = await html2canvas(div);
         const dataURL = canvas.toDataURL('image/png');
-        this.refImages.push(dataURL);
+        this.refImages.push({id:div.id, img:dataURL});
     }
   }
   };

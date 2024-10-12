@@ -211,8 +211,8 @@
                         <div class="p10px colorBlack bgWhite">
                             <!--<v-text-field v-model="character.pronouns" label="Pronoms" class="m5px"></v-text-field>-->
                             <button-image :image="character.image" @change="setImage"></button-image>
-                            <v-text-field v-model="character.image_position" label="Position de l'image"
-                                class="m5px" @change="refreshCard"></v-text-field>
+                            <v-text-field v-model="character.image_position" label="Position de l'image" class="m5px"
+                                @change="refreshCard"></v-text-field>
                         </div>
                         <div ref="CardTemplate" class="bg">
                             <card-character :character="character"
@@ -284,7 +284,7 @@ import textQuill from '../../components/textQuill';
     });
     let classes = this.class;
     const sousClasses = serviceDaggerheart.sousClasses.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/SousClasses/' + x +'.png')};});
-    const domaines = serviceDaggerheart.domaines.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/Domaines/' + x +'.png')};});
+    const domaines = serviceDaggerheart.domaines.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/Domaines3/' + x )};});
     this.images = {ascendences, communautes, classes, sousClasses, domaines };
     this.armors = serviceDaggerheart.getArmors();
     this.weapons = {all : serviceDaggerheart.getWeapons()};
@@ -389,12 +389,12 @@ import textQuill from '../../components/textQuill';
         this.nextStep();
     },
     selectClass(obj){
-        this.nextStep();
         this.character.class = obj;
         this.character.allowedDomains = obj.domains.split(' et ');
         const caracs = "agilite,force,finesse,instinct,presence,savoir"
             .split(',')
             .forEach((x, i) => this.character[x]=parseInt(obj.caracteristique[i].replace("3","-1")));
+        this.nextStep();
     },
     selectSubClass(obj){
         this.character.subclass = obj;
@@ -410,7 +410,7 @@ import textQuill from '../../components/textQuill';
             this.nextStep();
     },
     getDomains(){
-        return this.images.domaines.filter(x=> x.name.startsWith(this.character.allowedDomains[0]) || x.name.startsWith(this.character.allowedDomains[1]));
+        return this.images.domaines.filter(x=> x.name.startsWith(this.character.allowedDomains[0].substring(0,4)) || x.name.startsWith(this.character.allowedDomains[1].substring(0,4)));
     },
     getCharacterDomains(){return this.character.domains.map(x=> x.name);},
     selectArmor(obj){
