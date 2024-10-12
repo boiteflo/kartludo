@@ -284,7 +284,7 @@ import textQuill from '../../components/textQuill';
     });
     let classes = this.class;
     const sousClasses = serviceDaggerheart.sousClasses.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/SousClasses/' + x +'.png')};});
-    const domaines = serviceDaggerheart.domaines.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/Domaines3/' + x )};});
+    const domaines = serviceDaggerheart.domaines.map(x=> {return {name:x, image:require('@/assets/Daggerheart/Cartes/Domaines3/' + x + '.png' )};});
     this.images = {ascendences, communautes, classes, sousClasses, domaines };
     this.armors = serviceDaggerheart.getArmors();
     this.weapons = {all : serviceDaggerheart.getWeapons()};
