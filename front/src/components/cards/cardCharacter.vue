@@ -1,5 +1,5 @@
 <template>
-    <card-medium :background="require('@/assets/Daggerheart/template/CardSousClass.png')" 
+    <card-medium :background="require('@/assets/Daggerheart/template/CardCharacter.png')" 
         :image="character.image"
         :class="{ cursorPointer: true, m5px: true }" 
         @click="$emit('click', character)"
@@ -8,31 +8,30 @@
         <div class="text textCenter rl5px"
             style="top:216px; font-size: 28px; font-weight: bold; text-transform: capitalize;"><b>{{ character.name
                 }}</b></div>
+        <div class="text" style="top: 15px; left: 27px; font-size:20px">
+            {{ character.agilite  }}<br>
+            {{ character.force  }}<br>
+            {{ character.finesse  }}<br>
+            {{ character.instinct  }}<br>
+            {{ character.presence  }}<br>
+            {{ character.savoir  }}<br>
+        </div>
         <div class="text l5px" style="top:248px; font-size: 20px;">
             <p class="textCenter rl5px">
                 {{ camelCase(character.ancestry.name) }}  {{ character.community.name }}
                 <br>
                 {{ getSubClassName(character.subclass.name) }}
                 <br>
-                <table class="w100p">
+                <table style="width:335px">
                     <tr>
-                        <td style="text-align: center; min-width: 75px;"> {{ character.agilite  }} </td><td style="text-align: left;"><b>Agilité</b></td>
-                        <td style="text-align: center; min-width: 75px;"> {{ character.instinct  }} </td><td style="text-align: left;"><b>Instinct</b></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;"> {{ character.force  }} </td><td style="text-align: left;"><b>Force</b></td>
-                        <td style="text-align: center;"> {{ character.presence  }} </td><td style="text-align: left;"><b>Présence</b></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;"> {{ character.finesse  }} </td><td style="text-align: left;"><b>Finesse</b></td>
-                        <td style="text-align: center;"> {{ character.savoir  }} </td><td style="text-align: left;"><b>Savoir</b></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;"> {{ character.class.evasion  }} </td><td style="text-align: left;"><b>Evasion</b></td>
-                        <td style="text-align: center;"> {{ character.class.seuilMajeur  }}/{{ character.class.seuilSevere  }} </td><td style="text-align: left;"><b>Seuils</b></td>
+                        <td style="text-align: center;"><b>Evasion</b> {{ character.class.evasion  }} </td>
+                        <td style="text-align: center;"> <b>Seuils</b> {{ character.class.seuilMajeur  }}/{{ character.class.seuilSevere  }}</td>
                     </tr>
                     <tr>
                         <td colspan="4"><b>Domains</b> {{ character.class.domains }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> <b>Expériences</b><br> {{ character.experience1 }} <br>{{ character.experience2 }}</td>
                     </tr>
                 </table>
             </p>
