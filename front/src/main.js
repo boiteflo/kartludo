@@ -3,6 +3,7 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 import VueToastr from "vue-toastr";
+import VueYoutube from 'vue-youtube'
 
 Vue.config.productionTip = false
 
@@ -49,6 +50,7 @@ Vue.mixin({
 Vue.use(VueToastr, {
   /* OverWrite Plugin Options if you need */
 });
+Vue.use(VueYoutube)
 
 new Vue({
   vuetify,

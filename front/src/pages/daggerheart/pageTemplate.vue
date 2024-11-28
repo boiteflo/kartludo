@@ -18,6 +18,17 @@
     <!-- Create Multiple cards -->
     <div v-if="choice == 3">
       <h4>Créer une multitude de cartes</h4>
+
+      <div class="flex-wrap">
+            <div class="m5px" style="flex: 1;">
+              <div style="font-size:30px; text-align: center; align-content: center;" class="h100p">
+                Voici un tuto de 5 minutes qui expliquent comment créer une multitude de cartes trés rapidement.
+              </div>
+            </div> 
+            <youtube :video-id="videoId"></youtube>
+      </div>  
+
+
       <div class="flex mp10px bg2">
           <div class="flex-wrap">
             <div class="m5px" style="flex: 1;">
@@ -264,7 +275,8 @@ p {
     csvImages: [],
     templatesCardImages : null,
     refreshCdvCards:0,
-    loadingCard:0
+    loadingCard:0,
+    videoId: 'Q6HIJdNs8Wc'
   }),
   async mounted(){    
     this.templates = serviceDaggerheart.templates;
