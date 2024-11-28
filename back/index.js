@@ -125,6 +125,27 @@ io.on('connection', (socket) => {
   });
 
 const managerMain = require("./manager/managerMain");
+const helperJsonFile = require('./helper/helperJsonFile');
+
+
+
+// Temp : Create CSV file of daggerheart domains
+/*
+function getValue(obj, index, property){
+    const value = obj[property];
+    if(index == 5) return "<b>Domaines:</b>" + value;
+    if(index == 6) return "@" + value + ".jpg";
+    if(index == 7) return "@banner-" + value + ".webp";
+    if(index == 8) return "@cost.webp";
+    return value;
+}
+const helperFile = require('./helper/helperFile');
+helperJsonFile.readPath('./back/data/daggerheart/domaines.json').then(json => {
+    const properties = "type,nom,niveau,cout,effet,domaine,domain,domain,domain".split(',');
+    const content = json.map(x=> properties.map((prop,index)=> getValue(x, index, prop)).join('\t')).join('\n')
+    helperFile.save("test.csv", content);
+});*/
+
 server.listen(port, () => {
     managerMain.refresh();
     console.log(`Server started on port ${port}`);

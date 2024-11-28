@@ -133,12 +133,12 @@ class ServiceTemplate {
 
     static getValueOrImage(value, csvImages) {
         if (!value) return '';
-        let key = value.substring(1).replaceAll("\r",'');
-        "png,jpeg,jpg,webp,bmp".split(',').forEach(x=> key = key.replace("," + x, "." + x));
         if (!value.startsWith('@'))
             return value;
+        let key = value.substring(1).replaceAll("\r",'');
+        "png,jpeg,jpg,webp,bmp".split(',').forEach(x=> key = key.replace("," + x, "." + x));
         const item = csvImages.find(x => x.key == key);
-        return item ? item.value : value;
+        return item ? item.value : key;
     }
 }
 

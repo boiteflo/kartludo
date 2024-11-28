@@ -18,23 +18,31 @@
     <!-- Create Multiple cards -->
     <div v-if="choice == 3">
       <h4>Créer une multitude de cartes</h4>
-      <p class="m10px">Le bouton suivant permet de télécharger cette archive : Ancestries.zip. Elle contient un fichier
-        daggerheart.csv et des images. Aprés avoir dézippé le fichier, il faut insérer les images puis le fichier csv.</p>
-      <div class="flex flex-wrap">
+      <div class="flex mp10px bg2">
+          <div class="flex-wrap">
+            <div class="m5px" style="flex: 1;">
+              <div style="font-size:30px; text-align: center; align-content: center;" class="h100p">
+                Pour créer des cartes, vous avez besoin d'un fichier csv et d'images. Voici plusieurs archives qui comportent ces fichiers.
+              </div>
+            </div>
 
-        <a href="/api/daggerheartCsv">
-          <v-btn class="m5px bg">
-            Télécharger Ancestries.zip
-          </v-btn>
-        </a>
-        <a href="/api/daggerheartCsv/csv">
-          <v-btn class="m5px bg">
-            Télécharger uniquement le CSV
-          </v-btn>
-        </a>
+            <a href="/api/daggerheartCsv/CsvAncestries">
+              <button-big text="Les Ascendences"
+                :image="require('@/assets/Daggerheart/other/multipleCards.png')"></button-big>
+            </a>
+            <a href="/api/daggerheartCsv/CsvSousClass">
+              <button-big text="Les Sous Classes"
+                :image="require('@/assets/Daggerheart/other/multipleCards.png')"></button-big>
+            </a>
+            <a href="/api/daggerheartCsv/CsvDomains">
+              <button-big text="Les Domaines"
+                :image="require('@/assets/Daggerheart/other/multipleCards.png')"></button-big>
+            </a>
+          </div>
       </div>
-
-
+        <div style="font-size:20px; text-align: center; align-content: center; padding:60px;">
+          Pour créer une multitude de carte, vous devez d'abord écrire un fichier de données au format CSV. Ensuite vous devez importer ce fichier en utilisant le bouton ci-dessous. Le bouton de droite permet d'importer des images.
+        </div>
       <div class="flex">
         <div>
           <h4>Données CSV</h4>
@@ -70,6 +78,7 @@
           <card-template :template="obj.template" :values="obj.values"></card-template>
         </div>
       </div>
+      <div class="bg" style="width:100%; height:300px;"></div>
 
     </div>
 

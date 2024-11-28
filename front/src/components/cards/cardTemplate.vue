@@ -1,8 +1,7 @@
 <template>
-    <card-medium :background="background" class="cursorPointer, m5px" :images="images"
-        @click="$emit('click')" :image_position="image_position">
-        <div v-for="(obj,index) in texts" :key="'Text' + index"
-            class="text" :style="obj.style" v-html="obj.text">
+    <card-medium :background="background" class="cursorPointer, m5px" :images="images" @click="$emit('click')"
+        :image_position="image_position">
+        <div v-for="(obj, index) in texts" :key="'Text' + index" class="text" :style="obj.style" v-html="obj.text">
         </div>
     </card-medium>
 </template>
@@ -22,7 +21,7 @@ export default {
     }),
     mounted() {
         const result = serviceTemplate.createFromCsv(this.template, this.values);
-        this.background = result.background;
+        this.background = result.backgroundStyle;
         this.images = result.images;
         this.texts = result.texts;
         return this.images;

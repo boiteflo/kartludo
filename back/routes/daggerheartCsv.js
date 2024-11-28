@@ -5,16 +5,18 @@ var express = require('express'),
     router = express.Router();
 
 
-router.get('/', async (req, res) => {
-    console.log("zip");
-    const filePath = path.join(__dirname, '../data/daggerheart', 'Ancestries.zip');
-    res.download(filePath, 'Ancestries.zip', (err) => {
-        if (err) {
-            console.error('Erreur lors du téléchargement du fichier :', err);
-            res.status(500).send('Erreur lors du téléchargement du fichier');
-        }
-    });
-});
+    router.get('/:id', async (req, res) => GetCsv(req.params.id, res));
+
+    function GetCsv(name, res){
+        const fileName = name + '.zip';
+        const filePath = path.join(__dirname, '../data/daggerheart', fileName);
+        res.download(filePath, fileName, (err) => {
+            if (err) {
+                console.error('Erreur lors du téléchargement du fichier :' + fileName, err);
+                res.status(500).send('Erreur lors du téléchargement du fichier : ' + fileName);
+            }
+        });
+    }
 
 router.get('/csv', async (req, res) => {
     const csv = [];

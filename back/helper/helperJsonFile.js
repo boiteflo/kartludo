@@ -5,7 +5,6 @@ class helperJsonFile {
     static exists= (file) => {
       const fs = require('fs');
       const result = fs.existsSync(`./${file}.json`);
-      console.log('this file exist ? ' + result + ', ' + file);
       return result;
     };
   
