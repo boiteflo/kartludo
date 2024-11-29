@@ -22,7 +22,7 @@
       <div class="flex-wrap">
             <div class="m5px" style="flex: 1;">
               <div style="font-size:30px; text-align: center; align-content: center;" class="h100p">
-                Voici un tuto de 5 minutes qui expliquent comment créer une multitude de cartes trés rapidement.
+                Voici un tuto de 5 minutes qui montre comment créer une multitude de cartes trés rapidement.
               </div>
             </div> 
             <youtube :video-id="videoId"></youtube>
