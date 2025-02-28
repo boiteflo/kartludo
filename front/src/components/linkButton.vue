@@ -5,6 +5,7 @@
         <a :href="url" v-if="external">
             <v-btn
             target=""
+            text
             @click="$emit('click')"
             >
             <v-icon class="colorWhite" v-if="icon">{{icon}}</v-icon>

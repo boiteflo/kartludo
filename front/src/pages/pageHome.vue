@@ -3,7 +3,7 @@
       <h1>BIENVENUE</h1>
       <h2>Choisissez votre centre d'intérêt</h2>
 
-      <div class="flex flex-responsive flex-space-around m5px">
+      <div class="flex flex-responsive flex-space-around p5px h100p" style="background-color: black;">
           <router-link to="/yugioh">
               <button-big 
                   text="Yu-Gi-Oh!"
@@ -14,6 +14,12 @@
               <button-big 
                   text="Daggerheart"
                   :image="require('@/assets/Daggerheart/other/logo.png')">
+              </button-big>
+          </router-link>
+          <router-link to="/gundam">
+              <button-big 
+                  text="Gundam"
+                  :image="require('@/assets/Gundam/GundamLogo2.png')">
               </button-big>
           </router-link>
       </div>

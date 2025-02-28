@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Accélération/Décélération</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="animatedBox"></div>
+
+    <script>
+        function easeInOut(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
+
+        function animateElement(element, startX, endX, duration) {
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1); // de 0 à 1
+                const easedProgress = easeInOut(progress);
+                const currentX = startX + (endX - startX) * easedProgress;
+
+                element.style.left = currentX + "px";
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        const box = document.getElementById("animatedBox");
+        animateElement(box, 100, 500, 2000); // Déplacer de 100px à 500px en 2 secondes
+    </script>
+</body>
+</html>

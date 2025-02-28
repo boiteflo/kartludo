@@ -63,6 +63,7 @@ const routes = [
         component: () =>
             import ('../pages/yugioh/pageCubes.vue')
     },
+
     // Daggerheart
     {
         path: '/daggerheart',
@@ -94,6 +95,21 @@ const routes = [
         component: () =>
             import ('../pages/daggerheart/pageFight.vue')
     },
+    
+    // Gundam
+    {
+        path: '/gundam',
+        name: version + ' Gundam',
+        component: () =>
+            import ('../pages/gundam/index.vue')
+    },
+    {
+        path: '/gundamTcgFight',
+        name: version + ' Gundam TCG',
+        component: () =>
+            import ('../pages/gundam/GundamTcgFight.vue')
+    },
+
     // Global
     {
         path: '/error/:id',
