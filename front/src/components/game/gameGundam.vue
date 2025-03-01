@@ -22,7 +22,7 @@
                 <!-- Player 1 -->
                 <div class="absolute bg2"
                     :style="{ top: getP1DeckY() + 'px', left: getP1DeckX() + 'px', width: '50px', height: gamesize.boxHeigth + 'px' }">
-                    deck {{ gameWorld?.player1.deck.length }}
+                    {{ gameWorld?.player1.deck.length }}
                 </div>
                 <div class="absolute bg2"
                     :style="{ top: getP1HandY() + 'px', left: getP1HandX() + 'px', width: gamesize.handWidth + 'px', height: gamesize.cardHeight + 'px' }">
@@ -45,7 +45,6 @@
                 </div>
                 <div class="absolute bg2"
                     :style="{ top: getP1BaseY() + 'px', left: getP1BaseX() + 'px', width: '50px', height: gamesize.boxHeigth + 'px' }">
-                    {{ gameWorld?.player1.base }}
                 </div>
                 <div class="absolute bg2"
                     :style="{ top: getP1FieldY() + 'px', left: getP1FieldX() + 'px', width: gamesize.fieldWidth + 'px', height: gamesize.cardHeight + 'px' }">
@@ -54,7 +53,7 @@
                 <!-- Player 2 -->
                 <div class="absolute bg"
                     :style="{ top: getP2DeckY() + 'px', left: getP2DeckX() + 'px', width: '50px', height: gamesize.boxHeigth + 'px' }">
-                    deck {{ gameWorld?.player2.deck.length }}
+                    {{ gameWorld?.player2.deck.length }}
                 </div>
                 <div class="absolute bg"
                     :style="{ top: getP2HandY() + 'px', left: getP2HandX() + 'px', width: gamesize.handWidth + 'px', height: gamesize.cardHeight + 'px' }">
@@ -77,7 +76,6 @@
                 </div>
                 <div class="absolute bg"
                     :style="{ top: getP2BaseY() + 'px', left: getP2BaseX() + 'px', width: '50px', height: gamesize.boxHeigth + 'px' }">
-                    {{ gameWorld?.player2.base }}
                 </div>
                 <div class="absolute bg"
                     :style="{ top: getP2FieldY() + 'px', left: getP2FieldX() + 'px', width: gamesize.fieldWidth + 'px', height: gamesize.cardHeight + 'px' }">
@@ -92,14 +90,14 @@
 
                 <div v-for="card in cards" :key="'B' + card.index">
 
-                    <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :width="gamesize.cardWidth"
-                        :x="card.position.x" :y="card.position.y" :class="{ borderYellow: card.selectable }"
+                    <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :width="card.width"
+                        :x="card.position.x" :y="card.position.y" :shine="card.selectable"
                         @mouseover="showCard" @click="selectCard">
                     </gameCard> 
                 </div>
             </div>
         </div>
-        {{ test }}
+        <br><br>{{ test}} 
     </div>
 
 </template>
@@ -142,34 +140,31 @@ export default {
         showCard(card) {
             this.showCardId = { id: card.id };
         },
-        selectCard(card){alert(card.name);},
         start() {
             const p1Positions = this.getPlayerPosition("P1");
             const p2Positions = this.getPlayerPosition("P2");
             const cardSize = { width: this.gamesize.cardWidth, height: this.gamesize.cardHeight };
-            this.gameWorld = gameGundamManager.createGame({ x: this.gamesize.centerX, y: this.gamesize.centerY }, cardSize, p1Positions, p2Positions);
-            console.log("start-cards:" + this.gameWorld.cards.filter(x => x.show).length);
+            const boxSize = { width: 50, height: this.boxHeigth, heightCard : this.boxHeigth * 107 / 150 };
+            this.gameWorld = gameGundamManager.createGame({ x: this.gamesize.centerX, y: this.gamesize.centerY }, cardSize, boxSize, p1Positions, p2Positions);
+            this.test = 'coucou';
             this.refreshGame();
         },
         nextTurn() {
             if (this.freeze) return;
-            console.log("nextTurn1-cards:" + this.gameWorld.cards.filter(x => x.show).length);
             this.gameWorld = gameGundamManager.nextTurn();
-            console.log("nextTurn2-cards:" + this.gameWorld.cards.filter(x => x.show).length);
             this.refreshGame();
         },
         refreshGame() {
             this.cards = this.gameWorld.cards.filter(x => x.show);
-            console.log("refreshGame-cards:" + this.gameWorld.cards.filter(x => x.show).length);
             this.refreshG++;
-            setTimeout(() => { this.updateGame(); }, 1);
+            setTimeout(() => { this.beginAnimation(); }, 1);
         },
-        updateGame() {
+        beginAnimation() {
             const cardsToAnimate = this.gameWorld.cards.filter(x => x.show && x.to);
             if (cardsToAnimate.length < 1) return;
 
             this.freeze = true;
-            const animationTime = 1000;
+            const animationTime = 500;
             cardsToAnimate.forEach(card => helperAnimation.animate('C' + card.index, card.position, card.to, false, animationTime));
 
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
@@ -177,6 +172,11 @@ export default {
         endAnimation() {
             gameGundamManager.endAnimation();
             this.freeze = false;
+        },
+        selectCard(card){
+            if (this.freeze) return;
+            this.gameWorld = gameGundamManager.selectCard(card);
+            this.refreshGame();
         },
         refreshGameSize() {
             const size = {};
@@ -211,15 +211,16 @@ export default {
         getPosY(index) { return index * this.gamesize.cardHeight; },
         getPlayerPosition(index) {
             const prefix = 'get' + index;
-            var incrementP2Hand = index == "P2" ? this.gamesize.handWidth - this.gamesize.cardWidth : 0;
-            var incrementP2Field = index == "P2" ? this.gamesize.fieldWidth : 0;
+            const incrementP2Hand = index == "P2" ? this.gamesize.handWidth - this.gamesize.cardWidth : 0;
+            const incrementP2Field = index == "P2" ? this.gamesize.fieldWidth : 0;
             return {
-                deck: { x: this[prefix + "DeckX"](), y: this[prefix + "DeckY"]() },
-                grave: { x: this[prefix + "GraveX"](), y: this[prefix + "GraveY"]() },
-                hand: { x: this[prefix + "HandX"]() + incrementP2Hand, y: this[prefix + "HandY"]() },
-                base: { x: this[prefix + "BaseX"](), y: this[prefix + "BaseY"]() },
-                shield: { x: this[prefix + "ShieldX"](), y: this[prefix + "ShieldY"]() },
-                field: { x: this[prefix + "FieldX"]() + incrementP2Field, y: this[prefix + "FieldY"]() },
+                deck: { x: this[prefix + "DeckX"](), y: this[prefix + "DeckY"](), rotation:0 },
+                grave: { x: this[prefix + "GraveX"](), y: this[prefix + "GraveY"](), rotation:0 },
+                hand: { x: this[prefix + "HandX"]() + incrementP2Hand, y: this[prefix + "HandY"](), rotation:0 },
+                base: { x: this[prefix + "BaseX"](), y: this[prefix + "BaseY"](), rotation:0 },
+                shield: { x: this[prefix + "ShieldX"](), y: this[prefix + "ShieldY"](), rotation:0 },
+                field: { x: this[prefix + "FieldX"]() + incrementP2Field, y: this[prefix + "FieldY"](), rotation:0 },
+                res: { x: this[prefix + "ResAX"](), y: this[prefix + "ResAY"](), rotation:0 },
             };
         },
 
@@ -254,8 +255,8 @@ export default {
 
         getP2DeckY() { return this.gamesize.infoLineY5; },
         getP2GraveY() { return this.gamesize.infoLineY6; },
-        getP2ResAY() { return this.gamesize.infoLineY7; },
-        getP2ResBY() { return this.gamesize.infoLineY8; },
+        getP2ResAY() { return this.gamesize.infoLineY8; },
+        getP2ResBY() { return this.gamesize.infoLineY7; },
         getP2BaseY() { return this.gamesize.infoLineY5; },
         getP2ShieldY() { return this.gamesize.infoLineY6; },
         getP2HandY() { return this.gamesize.infoLineY8; },

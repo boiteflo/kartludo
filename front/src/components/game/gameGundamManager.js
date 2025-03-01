@@ -6,15 +6,22 @@ class GameGundamManager {
     static cards = cards.cards;
     static centerPosition;
     static cardSize;
+    static boxSize;
     static p1Position;
     static p2Position;
     static index = 1;
     static isPlayer1LastTurn = true;
+    static locationDeck = 0; 
+    static locationShield = 1; 
+    static locationHand = 2; 
+    static locationField = 3; 
+    static locationGrave = 4;
 
     // ------------------ Setup
-    static createGame(center, cardSize, p1Positions, p2Positions) {
+    static createGame(center, cardSize, boxSize, p1Positions, p2Positions) {
         this.centerPosition = center;
         this.cardSize = cardSize;
+        this.boxSize = boxSize;
         this.p1Position = p1Positions;
         this.p2Position = p2Positions;
 
@@ -25,11 +32,12 @@ class GameGundamManager {
             turnPlayer:null
         };
 
-        this.world.cards = this.draw(this.world.player1, 5)
+        this.world.cards = [this.world.player1.base, this.world.player2.base]
+            .concat(this.draw(this.world.player1, 5))
             .concat(this.draw(this.world.player2, 5));
 
         this.isPlayer1LastTurn = Math.floor(Math.random() * 2);
-        var nonPlayerTurn = this.isPlayer1LastTurn ? this.world.player1 : this.world.player2;
+        const nonPlayerTurn = this.isPlayer1LastTurn ? this.world.player1 : this.world.player2;
         nonPlayerTurn.resourcesEx= 1;
 
         this.world.player1.shield = this.addToShield(this.world.player1, 6);
@@ -41,7 +49,7 @@ class GameGundamManager {
     }
 
     static createPlayer(position, isPlayer1) {
-        let deck = this.createDeck();
+        let deck = this.createDeck(isPlayer1);
         deck = this.sortRandom(deck);
         return {
             deck,
@@ -56,11 +64,21 @@ class GameGundamManager {
             resourcesRemaining : 0,
             resourcesEx : 0,
             resBString: "0",
-            base : "0AP 3HP"
-        }
+            base: this.createDefaultBase(position)
+        };
     }
 
-    static createDeck() {
+    static createDefaultBase(position){
+        const base = Object.assign({}, this.cards.find(x=> x.id ==="EXBP-001"));
+        base.index = this.index;
+        this.index++;
+        base.position = position.base;
+        base.width= this.boxSize.width;
+        base.show=true;
+        return base;
+    }
+
+    static createDeck(isPlayer1) {
         let result = [];
         this.cards.forEach(card => {
             result.push(Object.assign({}, card));
@@ -71,6 +89,8 @@ class GameGundamManager {
         result = result.splice(0, 50);
         result.forEach(x=>{
             x.index = this.index;
+            x.isPlayer1 = isPlayer1;
+            x.location = this.locationDeck;
             this.index++;
         })
         return result;
@@ -81,9 +101,11 @@ class GameGundamManager {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
             const card = player.deck.splice(0, 1)[0];
-            card.position = player.position.deck;
+            card.position = player.position.res;
             card.to = this.getHandPosition(player, result.length);
+            card.location = this.locationHand;
             card.show=true;
+            card.width= this.cardSize.width;
             result.push(card);
         }
         player.hand = player.hand.concat(result);
@@ -108,21 +130,53 @@ class GameGundamManager {
         return this.world;
     }
 
+    static selectCard(card){
+        const player = this.world.turnPlayer;
+        if(card.isPlayer1 != player.isPlayer1) return this.world;
+
+        let refreshLocationHand = false;
+        let refreshLocationField = false;
+
+        if(card.location === this.locationHand){
+            player.hand = player.hand.filter(x=> x.index !== card.index);
+            player.field.push(card);
+            card.location = this.locationField;
+            refreshLocationHand=true;
+            refreshLocationField= true;
+        }        
+        else if(card.location === this.locationField){
+            card.active = !card.active;
+            const degree = card.active ? 0 : 90;
+            card.to = {x: card.position.x, y: card.position.y, rotation:degree};
+        }
+
+        if(refreshLocationHand)
+            player.hand.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.hand, 0));
+
+        if(refreshLocationField)
+            player.field.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.field, 0));
+
+        return this.world;
+    }
+
     // ------------------ Utilities
     static addToShield(player, cardNumber) {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
             const card = player.deck.splice(0, 1)[0];
+            card.width= this.cardSize.width;
+            card.location = this.locationShield;
             card.show = false;
             result.push(card);
         }
         return result;
     }
 
-    static getHandPosition(player, handIncrement) {
-        var direction = player.isPlayer1 ? 1 : -1;
-        var base = player.position.hand.x;
-        return { x: base + ((handIncrement + player.hand.length) * direction * (this.cardSize.width + 5)), y: player.position.hand.y };
+    static getHandPosition(player, increment) { return this.getCardPosition(player, increment, player.position.hand, player.hand.length);}
+    static getFieldPosition(player, increment) { return this.getCardPosition(player, increment, player.position.field, player.field.length);}
+    static getCardPosition(player, increment, base, cardsAlreadyThere) {
+        const direction = player.isPlayer1 ? 1 : -1;
+        return { x: base.x + ((increment + cardsAlreadyThere) * direction * (this.cardSize.width + 15)), y: base.y };
     }
 
     static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }

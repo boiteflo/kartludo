@@ -1,6 +1,6 @@
 class helperAnimation {
 
-    static animateElement(element, from, to, duration, actionAfter = null) {
+    static animateElement(element, from, to, duration) {
         const startTime = performance.now();
 
         function update(currentTime) {
@@ -9,14 +9,16 @@ class helperAnimation {
             const easedProgress = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
             const currentX = from.x + (to.x - from.x) * easedProgress;
             const currentY = from.y + (to.y - from.y) * easedProgress;
+            const currentRotation = from.rotation + (to.rotation - from.rotation) * easedProgress;
+
 
             element.style.left = currentX + "px";
             element.style.top = currentY + "px";
+            element.style.transform = `rotate(${currentRotation}deg)`;
+
 
             if (t < 1) 
                 requestAnimationFrame(update);
-            else if(t >= 1 && actionAfter!=null)
-                actionAfter();
         }
 
         requestAnimationFrame(update);
@@ -27,22 +29,23 @@ class helperAnimation {
     }
 
     static add(val1, val2) {
-        return { x: val1.x + val2.x, y: val1.y + val2.y };
+        return { x: val1.x + val2.x, y: val1.y + val2.y, rotation : val1.rotation + val2.rotation };
     }
     static getRelativeTo0(val1, val2) {
         return { x: val2.x - val1.x, y: val2.y - val1.y };
     }
     static pxStringToInt(value){return parseInt(value.replace("px",""));}
 
-    static animate(id, from, to, isIncrement, duration = 500, actionAfter = null) {
+    static animate(id, from, to, isIncrement, duration = 500) {
         const element = document.getElementById(id);
         if(!element){
             console.log("element can't be found : " + id);
             return;
         }
-        const fromValue = from ?? { x: this.pxStringToInt(element.style.left), y: this.pxStringToInt(element.style.top) };
+        const fromValue = from ?? { x: this.pxStringToInt(element.style.left), y: this.pxStringToInt(element.style.top), rotation : element.style.rotation};
+        fromValue.rotation = fromValue.rotation ?? 0;
         const toValue = isIncrement ? this.add(fromValue, to) : to;
-        this.animateElement(element, fromValue, toValue, duration, actionAfter);
+        this.animateElement(element, fromValue, toValue, duration);
     }
 
     /*const newSize = initialSize + (targetSize - initialSize) * easedProgress;
