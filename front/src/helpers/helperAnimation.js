@@ -1,6 +1,6 @@
 class helperAnimation {
 
-    static animateElement(element, from, to, duration) {
+    static animateElement(element, from, to, duration, actionAfter = null) {
         const startTime = performance.now();
 
         function update(currentTime) {
@@ -13,9 +13,10 @@ class helperAnimation {
             element.style.left = currentX + "px";
             element.style.top = currentY + "px";
 
-            if (t < 1) {
+            if (t < 1) 
                 requestAnimationFrame(update);
-            }
+            else if(t >= 1 && actionAfter!=null)
+                actionAfter();
         }
 
         requestAnimationFrame(update);
@@ -33,11 +34,15 @@ class helperAnimation {
     }
     static pxStringToInt(value){return parseInt(value.replace("px",""));}
 
-    static animate(id, from, to, isIncrement, duration = 500) {
+    static animate(id, from, to, isIncrement, duration = 500, actionAfter = null) {
         const element = document.getElementById(id);
+        if(!element){
+            console.log("element can't be found : " + id);
+            return;
+        }
         const fromValue = from ?? { x: this.pxStringToInt(element.style.left), y: this.pxStringToInt(element.style.top) };
         const toValue = isIncrement ? this.add(fromValue, to) : to;
-        this.animateElement(element, fromValue, toValue, duration);
+        this.animateElement(element, fromValue, toValue, duration, actionAfter);
     }
 
     /*const newSize = initialSize + (targetSize - initialSize) * easedProgress;

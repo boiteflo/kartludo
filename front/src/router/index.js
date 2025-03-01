@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V3.0.14';
+let version = 'V3.1.01';
 
 Vue.use(VueRouter)
 

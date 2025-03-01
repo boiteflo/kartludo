@@ -11,6 +11,7 @@ class GameGundamManager {
     static index = 1;
     static isPlayer1LastTurn = true;
 
+    // ------------------ Setup
     static createGame(center, cardSize, p1Positions, p2Positions) {
         this.centerPosition = center;
         this.cardSize = cardSize;
@@ -29,7 +30,7 @@ class GameGundamManager {
 
         this.isPlayer1LastTurn = Math.floor(Math.random() * 2);
         var nonPlayerTurn = this.isPlayer1LastTurn ? this.world.player1 : this.world.player2;
-        nonPlayerTurn.resourcesExRemaining= 1;
+        nonPlayerTurn.resourcesEx= 1;
 
         this.world.player1.shield = this.addToShield(this.world.player1, 6);
         this.world.player2.shield = this.addToShield(this.world.player2, 6);
@@ -55,7 +56,7 @@ class GameGundamManager {
             resourcesRemaining : 0,
             resourcesEx : 0,
             resBString: "0",
-            base : "1"
+            base : "0AP 3HP"
         }
     }
 
@@ -74,9 +75,8 @@ class GameGundamManager {
         })
         return result;
     }
-
-    static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
-
+    
+    // ------------------ During game
     static draw(player, cardNumber) {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
@@ -90,6 +90,25 @@ class GameGundamManager {
         return result;
     }
 
+    static nextTurn(){
+        this.world.turnPlayer = this.isPlayer1LastTurn ? this.world.player2 : this.world.player1;
+        this.isPlayer1LastTurn = !this.isPlayer1LastTurn;
+
+        this.world.turnPlayer.field.forEach(card => {card.active = true; card.selectable = true;});
+        this.world.turnPlayer.resourcesMax+=1;
+        this.world.turnPlayer.resources = this.world.turnPlayer.resourcesMax + this.world.turnPlayer.resourcesEx;
+        this.world.turnPlayer.resAString= this.world.turnPlayer.resourcesMax + " + " + this.world.turnPlayer.resourcesEx;
+
+        this.world.cards = this.world.cards.concat(this.draw(this.world.turnPlayer, 1));
+
+        this.world.turnPlayer.hand.forEach(card => {
+            card.selectable = card.level <= this.world.turnPlayer.resources;
+        });
+
+        return this.world;
+    }
+
+    // ------------------ Utilities
     static addToShield(player, cardNumber) {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
@@ -106,19 +125,12 @@ class GameGundamManager {
         return { x: base + ((handIncrement + player.hand.length) * direction * (this.cardSize.width + 5)), y: player.position.hand.y };
     }
 
-    static nextTurn(){
-        this.world.turnPlayer = this.isPlayer1LastTurn ? this.world.player2 : this.world.player1;
-        this.isPlayer1LastTurn = !this.isPlayer1LastTurn;
+    static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
 
-        this.world.turnPlayer.field.forEach(card => {card.active = true; card.selectable = true;});
-        this.world.turnPlayer.resourcesMax+=1;
-        this.world.turnPlayer.resources = this.world.turnPlayer.resourcesMax + this.world.turnPlayer.resourcesEx;
-        this.world.turnPlayer.resAString= this.world.turnPlayer.resourcesMax + " + " + this.world.turnPlayer.resourcesEx;
-
-        this.world.cards = this.world.cards.concat(this.draw(this.world.turnPlayer, 1));
-
-        this.world.turnPlayer.hand.forEach(card => {
-            card.selectable = card.level <= this.world.turnPlayer.resources;
+    static endAnimation(){        
+        this.world.cards.filter(x=> x.show && x.to).forEach(card => {
+            card.position = card.to;
+            card.to = null;
         });
     }
 }
