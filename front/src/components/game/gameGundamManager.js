@@ -32,7 +32,10 @@ class GameGundamManager {
             turnPlayer:null
         };
 
-        this.world.cards = [this.world.player1.base, this.world.player2.base]
+        const cardTest = {index: -1, id:'ST02-010', show:true, width: this.cardSize.width, position:this.getFieldPosition(this.world.player1, 0, p1Positions.field, 0)};
+        cardTest.position.y+= (this.cardSize.height * 0.25);
+
+        this.world.cards = [this.world.player1.base, this.world.player2.base]// .concat([cardTest])
             .concat(this.draw(this.world.player1, 5))
             .concat(this.draw(this.world.player2, 5));
 
@@ -69,13 +72,13 @@ class GameGundamManager {
     }
 
     static createDefaultBase(position){
-        const base = Object.assign({}, this.cards.find(x=> x.id ==="EXBP-001"));
-        base.index = this.index;
+        const card = Object.assign({}, this.cards.find(x=> x.id ==="EXBP-001"));
+        card.index = this.index;
         this.index++;
-        base.position = position.base;
-        base.width= this.boxSize.width;
-        base.show=true;
-        return base;
+        card.position = Object.assign({}, position.base);
+        card.width= this.boxSize.width;
+        card.show=true;
+        return card;
     }
 
     static createDeck(isPlayer1) {
@@ -151,10 +154,10 @@ class GameGundamManager {
         }
 
         if(refreshLocationHand)
-            player.hand.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.hand, 0));
+            player.hand.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.hand, 0, false));
 
         if(refreshLocationField)
-            player.field.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.field, 0));
+            player.field.forEach((card,index) => card.to = this.getCardPosition(player, index, player.position.field, 0, true));
 
         return this.world;
     }
@@ -172,11 +175,12 @@ class GameGundamManager {
         return result;
     }
 
-    static getHandPosition(player, increment) { return this.getCardPosition(player, increment, player.position.hand, player.hand.length);}
-    static getFieldPosition(player, increment) { return this.getCardPosition(player, increment, player.position.field, player.field.length);}
-    static getCardPosition(player, increment, base, cardsAlreadyThere) {
+    static getHandPosition(player, increment) { return this.getCardPosition(player, increment, player.position.hand, player.hand.length, false);}
+    static getFieldPosition(player, increment) { return this.getCardPosition(player, increment, player.position.field, player.field.length, true);}
+    static getCardPosition(player, increment, base, cardsAlreadyThere, useRotateWidth) {
         const direction = player.isPlayer1 ? 1 : -1;
-        return { x: base.x + ((increment + cardsAlreadyThere) * direction * (this.cardSize.width + 15)), y: base.y };
+        const rotateWidth = !useRotateWidth ? 0 : (this.cardSize.height - this.cardSize.width) / 2;
+        return { x: (rotateWidth * direction) + base.x + ((increment + cardsAlreadyThere) * direction * (this.cardSize.width + 5 + rotateWidth)), y: base.y };
     }
 
     static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }

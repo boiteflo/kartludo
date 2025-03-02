@@ -6576,5 +6576,27 @@
 		"UR": 5,
 		"DeckLength": 40,
 		"Errors": null
+	},
+	{
+		"Id": "71203d0e-3fc4-4484-aced-3a71673e6c71",
+		"Format": "mdoldschoolv3",
+		"IdTournament": "",
+		"Rank": "3",
+		"Title": "Lumière ",
+		"IsDraft": true,
+		"Date": "02/03/2025",
+		"Author": "Darksoul24 ",
+		"MainCard": "Cyber Angel Izana",
+		"Themes": "elfe",
+		"DeckList": "Cyber Angel Izana, Cyber Angel Benten x2, Cyber Angel Idaten, Neo-Parshath the Sky Paladin, Soul of Purity and Light, Airknight Parshath, Shining Angel, Honest, Nova Summoner x2, Lyla Lightsworn Sorceress, Manju of the Ten Thousand Hands, Senju of the Thousand Hands, Sonic Bird, Barrier Statue of the Heavens, Zeradias Herald of Heaven, Banisher of the Light, Valhalla Hall of the Fallen, The Sanctuary in the Sky, Machine Angel Ritual x2, Pre-Preparation of Rites, Upstart Goblin, Pot of Greed, Monster Reborn, Heavy Storm, Swords of Revealing Light, Dark Hole, Enemy Controller, Monster Reincarnation, Fissure, Book of Moon, Scapegoat, Soul Exchange, Dimensional Prison, Compulsory Evacuation Device, Karma Cut, Floodgate Trap Hole, Bottomless Trap Hole",
+		"Seed": "",
+		"Cube": "mdoldschoolv3&seed=",
+		"MainCardImage": "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ad6_w420.webp",
+		"N": 7,
+		"R": 16,
+		"SR": 11,
+		"UR": 6,
+		"DeckLength": 40,
+		"Errors": null
 	}
 ]

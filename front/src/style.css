@@ -620,6 +620,7 @@ h4 {
 .capitalize {
     text-transform: capitalize;
 }
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -683,5 +684,11 @@ h4 {
 
 /* Game Cards */
 .card107 {
-    width:107px; height:150px
+    width: 107px;
+    height: 150px
+}
+
+.textVerticalCenter {
+    display: grid;
+    place-items: center;
 }

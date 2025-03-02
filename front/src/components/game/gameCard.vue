@@ -1,6 +1,6 @@
 <template>
   <img :class="{ absolute: true, bgRed: true, shine: shine }"
-    :style="{ left: x + 'px', top: y + 'px', width: width + 'px', 'aspect-ratio': 107 / 150 }"
+    :style="{ left: x + 'px', top: y + 'px', width: width + 'px', height: height + 'px', 'object-fit': 'cover', 'object-position': card.bgposition }"
     :src="require('@/assets/' + folder + card.id + '.webp')" @mouseover="$emit('mouseover', card)"
     @click="$emit('click', card)" @contextmenu.prevent="$emit('clickright', card)" />
 </template>
@@ -27,6 +27,6 @@
 <script>
 export default {
   name: 'game-card',
-  props: ['card', 'folder', 'x', 'y', 'width', 'shine']
+  props: ['card', 'folder', 'x', 'y', 'width', 'height', 'shine']
 }
 </script>

@@ -1,23 +1,28 @@
 class helperAnimation {
 
     static animateElement(element, from, to, duration) {
+        const anim = { element, from, to };
+        this.animateElements([anim], duration);
+    }
+    static animateElements(animations, duration) {
         const startTime = performance.now();
 
         function update(currentTime) {
             const elapsedTime = currentTime - startTime;
             const t = Math.min(elapsedTime / duration, 1); // de 0 à 1
             const easedProgress = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-            const currentX = from.x + (to.x - from.x) * easedProgress;
-            const currentY = from.y + (to.y - from.y) * easedProgress;
-            const currentRotation = from.rotation + (to.rotation - from.rotation) * easedProgress;
 
+            animations.forEach(anim => {
+                const currentX = anim.from.x + (anim.to.x - anim.from.x) * easedProgress;
+                const currentY = anim.from.y + (anim.to.y - anim.from.y) * easedProgress;
+                const currentRotation = anim.from.rotation + (anim.to.rotation - anim.from.rotation) * easedProgress;
 
-            element.style.left = currentX + "px";
-            element.style.top = currentY + "px";
-            element.style.transform = `rotate(${currentRotation}deg)`;
+                anim.element.style.left = currentX + "px";
+                anim.element.style.top = currentY + "px";
+                anim.element.style.transform = `rotate(${currentRotation}deg)`;
+            });
 
-
-            if (t < 1) 
+            if (t < 1)
                 requestAnimationFrame(update);
         }
 
@@ -29,23 +34,35 @@ class helperAnimation {
     }
 
     static add(val1, val2) {
-        return { x: val1.x + val2.x, y: val1.y + val2.y, rotation : val1.rotation + val2.rotation };
+        return { x: val1.x + val2.x, y: val1.y + val2.y, rotation: val1.rotation + val2.rotation };
     }
     static getRelativeTo0(val1, val2) {
         return { x: val2.x - val1.x, y: val2.y - val1.y };
     }
-    static pxStringToInt(value){return parseInt(value.replace("px",""));}
+    static pxStringToInt(value) { return parseInt(value.replace("px", "")); }
 
     static animate(id, from, to, isIncrement, duration = 500) {
-        const element = document.getElementById(id);
-        if(!element){
-            console.log("element can't be found : " + id);
-            return;
-        }
-        const fromValue = from ?? { x: this.pxStringToInt(element.style.left), y: this.pxStringToInt(element.style.top), rotation : element.style.rotation};
-        fromValue.rotation = fromValue.rotation ?? 0;
-        const toValue = isIncrement ? this.add(fromValue, to) : to;
-        this.animateElement(element, fromValue, toValue, duration);
+        return this.animateMultiple([{ id, from, to, isIncrement }], duration);
+    }
+
+    static animateMultiple(animations, duration = 500) {
+        const animationsArray = [];
+        animations.forEach(anim => {
+            const element = document.getElementById(anim.id);
+            if (!element) {
+                console.log("element can't be found : " + anim.id);
+                return;
+            }
+            const from = anim.from ?? { 
+                x: this.pxStringToInt(anim.element.style.left), 
+                y: this.pxStringToInt(anim.element.style.top), 
+                rotation: anim.element.style.rotation 
+            };
+            from.rotation = from.rotation ?? 0;
+            const to = anim.isIncrement ? this.add(from, anim.to) :anim.to;
+            animationsArray.push({element, from, to});
+        });
+        this.animateElements(animationsArray, duration);
     }
 
     /*const newSize = initialSize + (targetSize - initialSize) * easedProgress;
