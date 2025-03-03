@@ -12,7 +12,7 @@
                 </v-btn>
 
                 <div class="relative">
-                    <gameCard :card="showCardId" folder="Gundam/cards/" :width="300" :x="0" :y="0"></gameCard>
+                    <gameCard :card="showCardId" folder="Gundam/cards/"></gameCard>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                     {{ gameWorld?.player2.deck.length }}
                 </div>
                 <div class="absolute bg"
-                    :style="{ top: getP2HandY() + 'px', left: getP2HandX() + 'px', width: gamesize.handWidth + 'px', height: gamesize.cardHeight + 'px' }">
+                    :style="{ top: getP2HandY() + 'px', left: getP2HandX() + 'px', width: gamesize.handWidth + 'px', height: gamesize.handHeight + 'px' }">
                 </div>
                 <div class="absolute bg textVerticalCenter"
                     :style="{ top: getP2GraveY() + 'px', left: getP2GraveX() + 'px', width: gamesize.boxWidth + 'px', height: gamesize.boxHeight + 'px' }">
@@ -90,14 +90,30 @@
 
                 <div v-for="card in cards" :key="'B' + card.index">
 
-                    <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :width="card.width" :height="card.height"
-                        :x="card.position.x" :y="card.position.y" :shine="card.selectable"
+                    <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable"
                         @mouseover="showCard" @click="selectCard">
-                    </gameCard> 
+                    </gameCard>
                 </div>
             </div>
         </div>
-        <br><br>test : {{ test}} 
+        <div v-if="gameWorld?.popup" class="flex-center" style="z-index:3; width:100%; height: 450px; position:fixed; top:150px;">
+            <div style="background-color: #000000E0; width:90%; height:100%;">
+                <h2 class="text-center">{{ gameWorld.popup.text }}</h2>
+                <div class="flex-center">
+                    <span v-for="(choice, index) in gameWorld.popup.choices" :key="'Choice' + index">
+                        <v-btn v-if="choice.text" class="mp5px"
+                            :style="{ width: gamesize.cardWidth + 'px', height: gamesize.cardHeight + 'px' }"
+                            @click="selectChoice(choice)">
+                            {{ choice.text }}
+                        </v-btn>
+                        <gameCard v-if="choice.id" :card="choice" folder="Gundam/cards/" :shine="true"
+                            @mouseover="showCard" @click="selectChoiceCard(choice)">
+                        </gameCard>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br><br>test : {{ test }} {{ gameWorld?.player1.hand.length }}
     </div>
 
 </template>
@@ -117,10 +133,10 @@ export default {
         freeze: false,
         test: '',
         cards: [],
-        showCardId: { id: 'EXBP-001' },
+        showCardId: { id: 'EXBP-001', position: { x: 0, y: 0 }, width: 300 },
         gameWorld: null,
         cardsToAnimate: null,
-        gamesize: { }
+        gamesize: {}
     }),
     mounted() {
         this.refreshGameSize();
@@ -129,14 +145,14 @@ export default {
     methods: {
         showText(text) { alert(text); },
         showCard(card) {
-            this.showCardId = { id: card.id };
+            this.showCardId.id = card.id;
         },
         start() {
             const p1Positions = this.getPlayerPosition("P1");
             const p2Positions = this.getPlayerPosition("P2");
             const cardSize = { width: this.gamesize.cardWidth, height: this.gamesize.cardHeight };
-            const boxSize = { width: this.gamesize.boxWidth, height: this.gamesize.boxHeight, heightCard : this.gamesize.cardHeight};
-            this.gameWorld = gameGundamManager.createGame({ x: this.gamesize.centerX, y: this.gamesize.centerY }, cardSize, boxSize, p1Positions, p2Positions);
+            const boxSize = { width: this.gamesize.boxWidth, height: this.gamesize.boxHeight, heightCard: this.gamesize.cardHeight };
+            this.gameWorld = gameGundamManager.createGame({ x: this.gamesize.centerX, y: this.gamesize.centerY }, cardSize, boxSize, p1Positions, p2Positions, this.gamesize.handWidth, this.gamesize.fieldWidth);
             this.test = 'ok';
             this.refreshGame();
         },
@@ -145,10 +161,11 @@ export default {
             this.gameWorld = gameGundamManager.nextTurn();
             this.refreshGame();
         },
-        refreshGame() {
+        refreshGame(animate = true) {
             this.cards = this.gameWorld.cards.filter(x => x.show);
             this.refreshG++;
-            setTimeout(() => { this.beginAnimation(); }, 1);
+            if (animate)
+                setTimeout(() => { this.beginAnimation(); }, 1);
         },
         beginAnimation() {
             const cardsToAnimate = this.gameWorld.cards.filter(x => x.show && x.to);
@@ -156,18 +173,27 @@ export default {
 
             this.freeze = true;
             const animationTime = 500;
-            const animations = cardsToAnimate.map(card => {return {id:'C' + card.index, from:card.position, to:card.to, isIncrement:false};});
+            const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
             helperAnimation.animateMultiple(animations, animationTime);
 
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
         },
         endAnimation() {
-            gameGundamManager.endAnimation();
+            this.gameWorld = gameGundamManager.endAnimation();
             this.freeze = false;
+            this.refreshGame(false);
         },
-        selectCard(card){
+        selectCard(card) {
             if (this.freeze) return;
             this.gameWorld = gameGundamManager.selectCard(card);
+            this.refreshGame();
+        },
+        selectChoice(choice) {
+            this.gameWorld = gameGundamManager.selectChoiceType(choice);
+            this.refreshGame();
+        },
+        selectChoiceCard(choice){
+            this.gameWorld = gameGundamManager.selectChoiceCard(choice);
             this.refreshGame();
         },
         refreshGameSize() {
@@ -179,32 +205,30 @@ export default {
             size.gameWidth = desiredHeight < height ? width : desiredWidth;
             size.gameHeight = size.gameWidth * 9 / 16;
 
-            size.handHeight = (size.gameHeight - 6*9) / 4.5;
-            size.fieldHeight = size.handHeight * 1.25;
-            size.boxHeight = (size.handHeight -10) /2;
-            size.miniboxHeight = size.fieldHeight -size.handHeight;
-
-            size.cardHeight = size.handHeight;
+            size.fieldHeight = (size.gameHeight - 4 * 7) / 3;
+            size.handHeight = size.fieldHeight / 2;
+            size.boxHeight = (size.handHeight - 5) / 2;
+            size.cardHeight = size.fieldHeight * 0.75;
             size.cardWidth = size.cardHeight * 107 / 150;
             size.boxWidth = size.cardWidth;
-            size.handWidth = size.gameWidth - 25 - 20 - size.boxWidth;
-
+            size.handWidth = size.gameWidth - 10 - 10 - size.boxWidth;
+            size.miniboxHeight = size.fieldHeight - size.cardHeight;
 
             size.centerX = (size.gameWidth - size.boxWidth) / 2;
             size.centerY = (size.gameHeight - size.cardHeight) / 2;
-            size.infoLineX1 = 10;
-            size.infoLineX2 = 10 + size.boxWidth + 10;
-            size.infoLineX3 = size.gameWidth - 25 - size.boxWidth;
+            size.infoLineX1 = 5;
+            size.infoLineX2 = 5 + size.boxWidth + 5;
+            size.infoLineX3 = size.gameWidth - 10 - size.boxWidth;
 
-            size.infoLineY01 = 10;
-            size.infoLineY02 = size.infoLineY01 + 10 + size.boxHeight;
-            size.infoLineY03 = size.infoLineY02 + 10 + size.boxHeight;
-            size.infoLineY04 = size.infoLineY03 + 10 + size.boxHeight;
-            size.infoLineY05 = size.infoLineY03 + 10 + size.fieldHeight;
-            size.infoLineY07 = size.infoLineY05 + 10 + size.fieldHeight;
-            size.infoLineY06 = size.infoLineY07 - 10 - size.boxHeight;
-            size.infoLineY08 = size.infoLineY07 + 10 + size.boxHeight;
-            size.infoLineY04bis = size.infoLineY05 - 10 - size.cardHeight;
+            size.infoLineY01 = 7;
+            size.infoLineY02 = size.infoLineY01 + 5 + size.boxHeight;
+            size.infoLineY03 = size.infoLineY02 + 5 + size.boxHeight;
+            size.infoLineY04 = size.infoLineY03 + 5 + size.boxHeight;
+            size.infoLineY05 = size.infoLineY03 + 5 + size.fieldHeight;
+            size.infoLineY07 = size.infoLineY05 + 5 + size.fieldHeight;
+            size.infoLineY06 = size.infoLineY07 - 5 - size.boxHeight;
+            size.infoLineY08 = size.infoLineY07 + 5 + size.boxHeight;
+            size.infoLineY04bis = size.infoLineY05 - 5 - size.cardHeight;
             size.infoLineY06bis = size.infoLineY05 + size.cardHeight;
 
             size.fieldWidth = size.infoLineX3 - size.infoLineX2 - 10;
@@ -215,16 +239,14 @@ export default {
         getPosY(index) { return index * this.gamesize.cardHeight; },
         getPlayerPosition(index) {
             const prefix = 'get' + index;
-            const incrementP2Hand = index == "P2" ? this.gamesize.handWidth - this.gamesize.cardWidth : 0;
-            const incrementP2Field = index == "P2" ? this.gamesize.fieldWidth - this.gamesize.infoLineX2 : 0;
             return {
-                deck: { x: this[prefix + "DeckX"](), y: this[prefix + "DeckY"](), rotation:0 },
-                grave: { x: this[prefix + "GraveX"](), y: this[prefix + "GraveY"](), rotation:0 },
-                hand: { x: this[prefix + "HandX"]() + incrementP2Hand, y: this[prefix + "HandY"](), rotation:0 },
-                base: { x: this[prefix + "BaseX"](), y: this[prefix + "BaseY"](), rotation:0 },
-                shield: { x: this[prefix + "ShieldX"](), y: this[prefix + "ShieldY"](), rotation:0 },
-                field: { x: this[prefix + "FieldX"]() + incrementP2Field, y: this[prefix + "FieldY"](), rotation:0 },
-                res: { x: this[prefix + "ResAX"](), y: this[prefix + "ResAY"](), rotation:0 },
+                deck: { x: this[prefix + "DeckX"](), y: this[prefix + "DeckY"](), rotation: 0 },
+                grave: { x: this[prefix + "GraveX"](), y: this[prefix + "GraveY"](), rotation: 0 },
+                hand: { x: this[prefix + "HandX"](), y: this[prefix + "HandY"](), rotation: 0 },
+                base: { x: this[prefix + "BaseX"](), y: this[prefix + "BaseY"](), rotation: 0 },
+                shield: { x: this[prefix + "ShieldX"](), y: this[prefix + "ShieldY"](), rotation: 0 },
+                field: { x: this[prefix + "FieldX"](), y: this[prefix + "FieldY"](), rotation: 0 },
+                res: { x: this[prefix + "ResAX"](), y: this[prefix + "ResAY"](), rotation: 0 },
             };
         },
 
