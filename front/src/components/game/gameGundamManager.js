@@ -1,42 +1,32 @@
 import cards from '../../data/gundamCards.json';
+import GameGundamGridAndSize from './gameGundamGridAndSize';
 
 class GameGundamManager {
     static world = null;
     static cards = cards.cards;
-    static centerPosition;
-    static cardSize;
-    static boxSize;
-    static p1Position;
-    static p2Position;
-    static handWidth;
-    static fieldWidth;
+    static lastChoiceType;
+    static size;
     static index = 1;
     static isPlayer1Turn;
+
     static locationDeck = 0;
     static locationShield = 1;
     static locationHand = 2;
     static locationField = 3;
     static locationBase = 4;
     static locationGrave = 5;
-    static lastChoiceType;
 
     // ------------------ Setup
-    static createGame(center, cardSize, boxSize, p1Positions, p2Positions, handWidth, fieldWidth) {
-        this.centerPosition = center;
-        this.cardSize = cardSize;
-        this.boxSize = boxSize;
-        this.p1Position = p1Positions;
-        this.p2Position = p2Positions;
-        this.handWidth = handWidth;
-        this.fieldWidth = fieldWidth;
+    static createGame(width, height) {
+        this.size = GameGundamGridAndSize.calculateGameSize(width, height);
 
         this.world = {
+            size: this.size,
             cards: [],
             popup: null
         };
-        this.world.player1 = this.createPlayer(this.p1Position, true);
-        this.world.player2 = this.createPlayer(this.p2Position, false);
-        this.world.turnPlayer = null;
+        this.world.player1 = this.createPlayer(GameGundamGridAndSize.getPlayerPosition(true), true);
+        this.world.player2 = this.createPlayer(GameGundamGridAndSize.getPlayerPosition(false), false);
 
         this.draw(this.world.player1, 5);
         this.draw(this.world.player2, 5);
@@ -53,6 +43,10 @@ class GameGundamManager {
         opponent.hand.forEach((card, index) => card.to = this.getHandPosition(opponent, index));
 
         return this.world;
+    }
+
+    static refreshGameSize(width, height){
+        this.size = GameGundamGridAndSize.calculateGameSize(width, height);
     }
 
     static createPlayer(position, isPlayer1) {
@@ -111,23 +105,22 @@ class GameGundamManager {
     // ------------------ During game
     static nextTurn() {
         this.isPlayer1Turn = !this.isPlayer1Turn;
-        this.world.turnPlayer = this.isPlayer1Turn ? this.world.player1 : this.world.player2;
+        const turnPlayer = this.getPlayerTurn();
 
         this.world.cards.forEach(card => card.selectable = false);
-        this.world.turnPlayer.field.forEach(card => this.setActive(card, true));
-        this.world.turnPlayer.resourcesMax += 1;
-        this.world.turnPlayer.resourcesAvailable = this.world.turnPlayer.resourcesMax + this.world.turnPlayer.resourcesEx;
-        this.world.turnPlayer.resources = this.world.turnPlayer.resourcesMax;
-        this.world.turnPlayer.resAString = this.world.turnPlayer.resourcesAvailable + " (" + this.world.turnPlayer.resources + "+" + this.world.turnPlayer.resourcesEx + ")";
-        this.world.turnPlayer.resBString = this.world.turnPlayer.resources - this.world.turnPlayer.resourcesMax;
+        turnPlayer.field.forEach(card => this.setActive(card, true));
+        turnPlayer.resourcesMax += 1;
+        turnPlayer.resourcesAvailable = turnPlayer.resourcesMax + turnPlayer.resourcesEx;
+        turnPlayer.resources = turnPlayer.resourcesMax;
+        turnPlayer.resAString = turnPlayer.resourcesAvailable + " (" + turnPlayer.resources + "+" + turnPlayer.resourcesEx + ")";
 
-        this.draw(this.world.turnPlayer, 1);
+        this.draw(turnPlayer, 1);
 
-        this.world.turnPlayer.hand.forEach((card, index) => {
-            card.to = this.getHandPosition(this.world.turnPlayer, index);
-            card.selectable = this.isSelectable(this.world.turnPlayer, card);
+        turnPlayer.hand.forEach((card, index) => {
+            card.to = this.getHandPosition(turnPlayer, index);
+            card.selectable = this.isSelectable(turnPlayer, card);
         });
-        this.world.turnPlayer.field.forEach(card => {
+        turnPlayer.field.forEach(card => {
             card.active = true;
             card.selectable = true;
         });
@@ -169,7 +162,7 @@ class GameGundamManager {
     }
 
     static selectCard(card, choiceType, choiceCard) {
-        const player = this.world.turnPlayer;
+        const player = this.getPlayerTurn();
         if (card.isPlayer1 != player.isPlayer1 || !card.selectable) return this.world;
 
         let refreshLocationHand = false;
@@ -180,7 +173,7 @@ class GameGundamManager {
                 player.hand = player.hand.filter(x => x.index !== card.index);
                 player.field.push(card);
                 card.location = this.locationField;
-                card.height = this.cardSize.height;
+                card.height = this.size.cardSize.height;
                 card.selectable = false;
                 refreshLocationHand = true;
                 refreshLocationField = true;
@@ -212,13 +205,13 @@ class GameGundamManager {
                     }
 
                     this.world.popup = null;
-                    card.height = this.cardSize.height;
+                    card.height = this.size.cardSize.height;
                     player.hand = player.hand.filter(x => x.index !== card.index);
 
                     if (isPilot) {
                         this.pairCards(choiceCard, card);
                     } else {
-                        card.to = this.centerPosition;
+                        card.to = this.size.center;
                         card.explode = true;
                     }
                 }
@@ -236,7 +229,7 @@ class GameGundamManager {
         if (refreshLocationHand)
             player.hand.forEach((card, index) => {
                 card.to = this.getHandPosition(player, index);
-                card.selectable = this.isSelectable(this.world.turnPlayer, card);
+                card.selectable = this.isSelectable(player, card);
             });
 
         if (refreshLocationField)
@@ -248,7 +241,7 @@ class GameGundamManager {
     }
 
     static pairCards(cardUnit, cardPilot) {
-        const cardHeight25Percent = this.cardSize.height * 0.25;
+        const cardHeight25Percent = this.size.cardSize.height * 0.25;
         cardPilot.to = this.clone({ x: cardUnit.position.x, y: cardUnit.position.y + cardHeight25Percent });
         cardPilot.zindex = 1;
         cardPilot.active = false;
@@ -257,6 +250,7 @@ class GameGundamManager {
         cardUnit.pair = cardPilot;
         cardUnit.hp += cardPilot.hp;
         cardUnit.hp += cardPilot.hp;
+        
         if (this.isLink(cardUnit, cardPilot)) {
             cardUnit.link = true;
             cardPilot.link = true;
@@ -309,25 +303,25 @@ class GameGundamManager {
         if (location == this.locationHand) {
             card.position = player.position.res;
             player.hand.push(card);
-            card.height = this.boxSize.height * 2 + 5;
+            card.height = this.size.boxSize.height * 2 + 5;
         }
         if (location == this.locationShield) {
             card.position = player.position.shield;
             card.to = player.position.grave;
             player.shield = player.shield.filter(x => x.index !== card.index);
             player.grave.push(card);
-            card.height = this.cardSize.height;
+            card.height = this.size.cardSize.height;
             card.explode = true;
         }
         if (location == this.locationBase) {
             card.position = player.position.base;
-            card.width = this.boxSize.width;
+            card.width = this.size.boxSize.width;
             card.show = true;
             card.isTrash = true;
         }
         card.location = location;
         card.show = true;
-        card.width = this.cardSize.width;
+        card.width = this.size.cardSize.width;
         card.bgposition = 'top center';
         this.world.cards.push(card);
         return card;
@@ -357,7 +351,7 @@ class GameGundamManager {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
             const card = player.deck.splice(0, 1)[0];
-            card.width = this.cardSize.width;
+            card.width = this.size.cardSize.width;
             card.location = this.locationShield;
             card.show = false;
             result.push(card);
@@ -367,17 +361,17 @@ class GameGundamManager {
 
     static getHandPosition(player, index = -1) {
         const posIndex = index > -1 ? index : player.hand.length;
-        return this.getCardPosition(player, posIndex, player.position.hand, player.hand.length, false, this.handWidth);
+        return this.getCardPosition(player, posIndex, player.position.hand, player.hand.length, false, this.size.handWidth);
     }
     static getFieldPosition(player, card, index = -1) {
         const posIndex = index > -1 ? index : player.field.length;
-        const result = this.getCardPosition(player, posIndex, player.position.field, player.field.length, true, this.fieldWidth);
+        const result = this.getCardPosition(player, posIndex, player.position.field, player.field.length, true, this.size.fieldWidth);
         result.rotation = card.position.rotation;
         return result;
     }
     static getCardPosition(player, index, position, cardsLength, useRotateWidth, widthAvailable) {
-        const rotateWidth = !useRotateWidth ? 0 : (this.cardSize.height - this.cardSize.width) / 2;
-        let cardWidth = this.cardSize.width + 5 + rotateWidth;
+        const rotateWidth = !useRotateWidth ? 0 : (this.size.cardSize.height - this.size.cardSize.width) / 2;
+        let cardWidth = this.size.cardSize.width + 5 + rotateWidth;
         const result = this.getCenteredX(index, cardWidth, cardsLength, widthAvailable);
         return { x: position.x + result, y: position.y }; //(rotateWidth * direction) + position.x + (index * direction * cardWidth)
     }

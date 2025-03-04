@@ -1,5 +1,5 @@
 <template>
-  <img :class="{ absolute: true, bgRed: true, shine: shine }" :style="{
+  <img :class="{ absolute: true, shine: shine }" :style="{
     left: card.position.x + 'px', top: card.position.y + 'px',
     width: card.width + 'px', height: card.height + 'px', transform : 'rotate(' + card.position.rotation + 'deg)',
     'object-fit': 'cover', 'object-position': card.bgposition, 'z-index':card.zindex
