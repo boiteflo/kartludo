@@ -12,7 +12,7 @@
                 </v-btn>
 
                 <div class="relative">
-                    <gameCard :card="showCardId" folder="Gundam/cards/"></gameCard>
+                    <gameCard v-if="showCardId.id" :card="showCardId" folder="Gundam/cards/"></gameCard>
                 </div>
             </div>
 
