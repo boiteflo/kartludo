@@ -1,5 +1,5 @@
 /* eslint-disable */
-import GameGundamGlobal from './GameGundamGlobal';
+import GameGundamGlobal from '../GameGundamGlobal';
 
 class GameGundamCardCommand {
     static isCardUnit(card) { return card.type.includes(0); }
@@ -16,16 +16,19 @@ class GameGundamCardCommand {
     }
 
     static play(world, player, card, choiceCard) {
-        if (card.CommandTargetAvailable.length > 1 && !choiceCard) {
-            GameGundamGlobal.showPopupSelectCard(card, card.CommandTargetAvailable);
-            return GameGundamGlobal.world;
-        } else
-            choiceCard = GameGundamGlobal.getCardsByIndex(card.CommandTargetAvailable)[0];
+        if (card.CommandTargetAvailable) {
+            if (card.CommandTargetAvailable.length > 1 && !choiceCard) {
+                GameGundamGlobal.showPopupSelectCard(card, card.CommandTargetAvailable);
+                return { playCost: false, refreshHand: false, refreshField: false };
+            } else
+                choiceCard = GameGundamGlobal.getCardsByIndex(card.CommandTargetAvailable)[0];
+        }
 
         card.height = GameGundamGlobal.size.cardSize.height;
         player.hand = player.hand.filter(x => x.index !== card.index);
         card.to = GameGundamGlobal.size.center;
         card.explode = true;
+        return { playCost: true, refreshHand: true, refreshField: false };
     }
 
     static activate(world, player, card) {

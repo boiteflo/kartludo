@@ -1,5 +1,5 @@
 /* eslint-disable */
-import GameGundamGlobal from './GameGundamGlobal';
+import GameGundamGlobal from '../GameGundamGlobal';
 
 class GameGundamCardPilot {
 
@@ -17,13 +17,15 @@ class GameGundamCardPilot {
     static play(world, player, card, choiceCard) {
         if (card.PilotTargetAvailable.length > 1 && !choiceCard) {
             GameGundamGlobal.showPopupSelectCard(card, card.PilotTargetAvailable);
-            return GameGundamGlobal.world;
-        } else
+            return {playCost:false, refreshHand:false, refreshField:false};
+        } else if(!choiceCard){
             choiceCard = GameGundamGlobal.getCardsByIndex(card.PilotTargetAvailable)[0];
+        }
 
         card.height = GameGundamGlobal.size.cardSize.height;
         player.hand = player.hand.filter(x => x.index !== card.index);
-        GameGundamGlobal.pairCards(choiceCard, card);
+        GameGundamGlobal.pairCards(player, choiceCard, card);
+        return {playCost:true, refreshHand:true, refreshField:false};
     }
 
     static activate(world, player, card) {

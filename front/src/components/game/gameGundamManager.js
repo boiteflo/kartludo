@@ -1,93 +1,20 @@
 import GameGundamGlobal from './GameGundamGlobal';
+import GameGundamSetup from './gameGundamSetup';
+import GameGundamEffect from './gameGundamEffect';
 import GameGundamGridAndSize from './gameGundamGridAndSize';
 
 class GameGundamManager {
 
-    // ------------------ Setup
     static createGame(width, height) {
-        GameGundamGlobal.size = GameGundamGridAndSize.calculateGameSize(width, height);
-
-        GameGundamGlobal.world = {
-            size: GameGundamGlobal.size,
-            cards: [],
-            popup: null
-        };
-        GameGundamGlobal.world.player1 = this.createPlayer(GameGundamGridAndSize.getPlayerPosition(true), true);
-        GameGundamGlobal.world.player2 = this.createPlayer(GameGundamGridAndSize.getPlayerPosition(false), false);
-
-        this.draw(GameGundamGlobal.world.player1, 5);
-        this.draw(GameGundamGlobal.world.player2, 5);
-
-        GameGundamGlobal.isPlayer1Turn = false; //Math.floor(Math.random() * 2) == 1;
-        const nonPlayerTurn = GameGundamGlobal.getPlayerTurn(); //non player turn is the player turn of this turn0. (before nextTurn)
-        nonPlayerTurn.resourcesEx = 1;
-
-        GameGundamGlobal.world.player1.shield = this.addToShield(GameGundamGlobal.world.player1, 6);
-        GameGundamGlobal.world.player2.shield = this.addToShield(GameGundamGlobal.world.player2, 6);
-
+        const result = GameGundamSetup.createGame(width, height);
         this.nextTurn();
-        this.refreshHandPosition(GameGundamGlobal.getPlayerTurnOpponent());
+        result.player2.field.push();
+        const opponent = GameGundamGlobal.getPlayerTurnOpponent();
+        this.refreshHandPosition(opponent);
 
-        return GameGundamGlobal.world;
-    }
-
-    static createPlayer(position, isPlayer1) {
-        let deck = this.createDeck(isPlayer1);
-        deck = this.sortRandom(deck);
-        const result = {
-            deck,
-            position,
-            isPlayer1,
-            hand: [],
-            field: [],
-            shield: [],
-            grave: [],
-            resAString: "0",
-            resourcesMax: 8,
-            resourcesRemaining: 0,
-            resourcesEx: 0,
-            resBString: "0",
-
-        };
-        result.base = this.createDefaultBase(result);
         return result;
     }
 
-
-    static createDefaultBase(player) {
-        const card = GameGundamGlobal.clone(GameGundamGlobal.cards.find(x => x.id === "EXBP-001"));
-        card.index = GameGundamGlobal.index;
-        GameGundamGlobal.index++;
-        this.spawnCard(player, card, GameGundamGlobal.locationBase);
-        return card;
-    }
-
-    static createDeck(isPlayer1) {
-        let result = [];
-
-        // To delete after test
-        const gundam = GameGundamGlobal.cards.find(x => x.id === 'GD01-034');
-        const trowa = GameGundamGlobal.cards.find(x => x.id === 'ST02-012');
-        for (let i = 0; i < 21; i++)result = result.concat([GameGundamGlobal.clone(gundam), GameGundamGlobal.clone(trowa)]);
-
-        GameGundamGlobal.cards.forEach(card => {
-            result.push(GameGundamGlobal.clone(card));
-            result.push(GameGundamGlobal.clone(card));
-            result.push(GameGundamGlobal.clone(card));
-            result.push(GameGundamGlobal.clone(card));
-        });
-
-        result = result.splice(0, 50);
-        result.forEach(x => {
-            x.index = GameGundamGlobal.index;
-            x.isPlayer1 = isPlayer1;
-            x.location = GameGundamGlobal.locationDeck;
-            GameGundamGlobal.index++;
-        })
-        return result;
-    }
-
-    // ------------------ During game
     static nextTurn() {
         GameGundamGlobal.isPlayer1Turn = !GameGundamGlobal.isPlayer1Turn;
         const player = GameGundamGlobal.getPlayerTurn();
@@ -97,9 +24,9 @@ class GameGundamManager {
         player.resourcesMax += 1;
         player.resourcesAvailable = player.resourcesMax + player.resourcesEx;
         player.resources = player.resourcesMax;
-        player.resAString = player.resourcesAvailable + " (" + player.resources + "+" + player.resourcesEx + ") / " + player.resourcesMax;
+        player.resAString = GameGundamGlobal.getRes(player);
 
-        this.draw(player, 1);
+        GameGundamGlobal.draw(player, 1);
 
         this.refreshHandPosition(player, false);
         player.field.forEach(card => {
@@ -110,29 +37,25 @@ class GameGundamManager {
         return GameGundamGlobal.world;
     }
 
-    static refreshHandPosition(player, setSelectableOff=true){
+    static refreshHandPosition(player, setSelectableOff = true) {
         player.hand.forEach((card, index) => {
             card.to = this.getHandPosition(player, index);
-            card.selectable = setSelectableOff ? false :  this.isSelectable(player, card);
+            card.selectable = setSelectableOff ? false : this.isSelectable(player, card);
         });
     }
 
-    static refreshFieldPosition(player){
+    static refreshFieldPosition(player) {
         player.field.forEach((card, index) => {
             card.to = card.to ?? this.getFieldPosition(player, card, index);
-            if(card.pair && !card.pair.to)
-                card.pair.to = {x:card.to.x, y:card.pair.position.y};
+            if (card.pair && !card.pair.to)
+                card.pair.to = { x: card.to.x, y: card.pair.position.y };
         });
-    }
-
-    static draw(player, cardNumber) {
-        for (let i = 0; i < cardNumber; i++)
-            this.spawnCard(player, player.deck.splice(0, 1)[0], GameGundamGlobal.locationHand);
     }
 
     static isSelectable(player, card) {
         if (card.location === GameGundamGlobal.locationHand) {
-            const isCostAvailable = card.level <= player.resourcesMax && card.cost <= player.resourcesAvailable;
+            const resourcesMax = Math.max(player.resourcesMax, player.resourcesAvailable);
+            const isCostAvailable = card.level <= resourcesMax && card.cost <= player.resourcesAvailable;
             if (!isCostAvailable)
                 return false;
         }
@@ -142,98 +65,155 @@ class GameGundamManager {
 
     static selectCard(card, choiceType, choiceCard) {
         const player = GameGundamGlobal.getPlayerTurn();
-        if (card.isPlayer1 != player.isPlayer1 || !card.selectable) 
+
+        if (GameGundamGlobal.awaitingCardChoice && !choiceCard)
+            return this.selectChoiceCard(player, card);
+
+        if (GameGundamGlobal.awaitingAttackTarget && !choiceCard)
+            return this.selectAttackTarget(card);
+
+        if (card.isPlayer1 != player.isPlayer1 || !card.selectable)
             return GameGundamGlobal.world;
 
-        
         GameGundamGlobal.world.popup = null;
+        let playParams = { refreshHand: true, refreshField: true };
+
         if (card.location === GameGundamGlobal.locationHand) {
-            const playCost = GameGundamGlobal.getCardHandler(card, choiceType).play(GameGundamGlobal.world, player, card, choiceCard);
-            if(playCost)
+            playParams = GameGundamGlobal.getCardHandler(card, choiceType).play(GameGundamGlobal.world, player, card, choiceCard);
+            if (playParams.playCost)
                 this.playCardCost(player, card);
         }
         else if (card.location === GameGundamGlobal.locationField) {
             if (GameGundamGlobal.isCardUnit(card) && card.active) {
-                GameGundamGlobal.setActive(card, false);
-                this.attack(player, card);
+                playParams = this.attack(player, card, choiceCard);
             }
         }
 
-        this.refreshHandPosition(player, false);
-        this.refreshFieldPosition(player, false);
+        GameGundamEffect.apply(GameGundamEffect.onplay, player,card, choiceCard);
+
+        if (playParams.refreshHand) this.refreshHandPosition(player, false);
+        if (playParams.refreshField) this.refreshFieldPosition(player, false);
 
         return GameGundamGlobal.world;
     }
 
     static selectChoiceType(choice) {
+        if(GameGundamGlobal.awaitingAttackTarget)
+            return this.selectAttackTarget(choice);
+
         GameGundamGlobal.lastChoiceType = choice;
-        this.selectCard(GameGundamGlobal.world.popup.card, choice, null);
-        return GameGundamGlobal.world;
+        return this.selectCard(GameGundamGlobal.world.popup.card, choice, null);
     }
 
-    static selectChoiceCard(choiceCard) {
-        this.selectCard(GameGundamGlobal.world.popup.card, GameGundamGlobal.lastChoiceType, choiceCard);
-        return GameGundamGlobal.world;
+    static selectChoiceCard(player, choiceCard) {
+        const card = GameGundamGlobal.world.popup.card;
+        GameGundamGlobal.world.popup = null;
+
+        if (card.index == choiceCard.index) {
+            GameGundamGlobal.resetSelectable();
+            return GameGundamGlobal.world;
+        }
+
+        const result = this.selectCard(card, GameGundamGlobal.lastChoiceType, choiceCard);
+        GameGundamGlobal.awaitingCardChoice = false;
+        return result;
     }
 
-    static attack(player, card) {
+    static selectAttackTarget(choiceCard) {
+        const card = GameGundamGlobal.world.popup.card;
+        GameGundamGlobal.world.popup = null;
+
+        if (card.index == choiceCard.index) {
+            GameGundamGlobal.world.cards.forEach(card => {
+                card.selectable = card.selectableOld;
+                delete (card.selectableOld);
+            });
+            card.selectable = true;
+            return GameGundamGlobal.world;
+        }
+
+        const result = this.selectCard(card, GameGundamGlobal.lastChoiceType, choiceCard);
+        GameGundamGlobal.awaitingAttackTarget = false;
+        GameGundamGlobal.resetSelectable();
+        return result;
+    }
+
+    static attack(player, card, target) {
         const opponent = GameGundamGlobal.getPlayerTurnOpponent();
         card.selectable = false;
 
-        if (opponent.base) {
-            this.attackCard(card, opponent.base, opponent);
+        let targets = opponent.field.filter(x => !x.active);
+        if (opponent.base) targets.push(opponent.base);
+        else targets.push({ text: 'Shield' });
+
+        if (!target) {
+            if (targets.length > 1) {
+                GameGundamGlobal.showPopupSelectAttackTarget(card, targets, opponent.base);
+                return { playCost: false, refreshHand: false, refreshField: false };
+            } else if (opponent.base)
+                target = opponent.base
+            else
+                target = {text: 'Shield' };
+        }
+
+        const effectResult = GameGundamEffect.apply(GameGundamEffect.battle, player, card, target);
+        if(effectResult && effectResult.cancel){
+            card.active = false;
+            return { playCost: false, refreshHand: false, refreshField: false };
+        }
+
+        GameGundamGlobal.setActive(card, false);
+        if(target && target.id)
+            this.attackCard(player, opponent, card, target);
+
+        if (opponent.base && opponent.base.index == target.index)
             opponent.base = null;
-        } else if (opponent.shield.length < 1) {
-            this.endFight();
-        } else {
-            const shield = opponent.shield[0];
-            this.spawnCard(opponent, shield, GameGundamGlobal.locationShield);
+        else if (!target.index) {
+            if (opponent.shield.length < 1)
+                this.endFight();
+            else {
+                const shield = opponent.shield[0];
+                const effectResult = GameGundamEffect.apply(GameGundamEffect.burst, player, card, target);
+                if(effectResult && effectResult.cancel)
+                    GameGundamGlobal.spawnCard(opponent, shield, GameGundamGlobal.locationShield);
+            }
         }
+
+        card.active = false;
+
+        return { playCost: false, refreshHand: false, refreshField: false };
     }
 
-    static attackCard(attacker, target, targetPlayer) {
-        target.hp -= attacker.ap;
-        if (target.hp < 1)
-            GameGundamGlobal.sendToGrave(targetPlayer, target);
-    }
+    static attackCard(player, opponent, card, target) {
+        card.hp -= target.ap;
+        target.hp -= card.ap;
 
-    static spawnCard(player, card, location) {
-        if (location == GameGundamGlobal.locationHand) {
-            card.position = player.position.res;
-            player.hand.push(card);
-            card.height = GameGundamGlobal.size.boxSize.height * 2 + 5;
+        if (card.hp < 1) {
+            player.field = GameGundamGlobal.removeObj(player.field, card);
+            if (card.pair)
+                player.field = GameGundamGlobal.removeObj(player.field, card.pair);
+
+            GameGundamGlobal.sendToGrave(player, card);
         }
-        if (location == GameGundamGlobal.locationShield) {
-            card.position = player.position.shield;
-            card.to = player.position.grave;
-            player.shield = player.shield.filter(x => x.index !== card.index);
-            player.grave.push(card);
-            card.height = GameGundamGlobal.size.cardSize.height;
-            card.explode = true;
+
+        if (target.hp < 1) {
+            opponent.field = GameGundamGlobal.removeObj(opponent.field, target);
+            if (target.pair)
+                opponent.field = GameGundamGlobal.removeObj(opponent.field, target.pair);
+
+            GameGundamGlobal.sendToGrave(opponent, target);
         }
-        if (location == GameGundamGlobal.locationBase) {
-            card.position = player.position.base;
-            card.width = GameGundamGlobal.size.boxSize.width;
-            card.show = true;
-            card.isTrash = true;
-        }
-        card.location = location;
-        card.show = true;
-        card.width = GameGundamGlobal.size.cardSize.width;
-        card.bgposition = 'top center';
-        GameGundamGlobal.world.cards.push(card);
-        return card;
     }
 
     static endFight() {
         const message = GameGundamGlobal.isPlayer1Turn ? "Victory" : "Defeat";
-        alert(message);
+        this.showPopup(null, message,[]);
     }
 
     // ------------------ Utilities
-
-    static refreshGameSize(width, height){
+    static refreshGameSize(width, height) {
         GameGundamGlobal.size = GameGundamGridAndSize.calculateGameSize(width, height);
+        return GameGundamGlobal.world;
     }
 
     static playCardCost(player, card) {
@@ -246,20 +226,7 @@ class GameGundamManager {
             player.resources -= remainingCost;
         }
         player.resourcesAvailable = player.resources + player.resourcesEx;
-        player.resAString = player.resourcesAvailable + " (" + player.resources + "+" + player.resourcesEx + ")";
-        player.resBString = player.resourcesMax - player.resources;
-    }
-
-    static addToShield(player, cardNumber) {
-        const result = [];
-        for (let i = 0; i < cardNumber; i++) {
-            const card = player.deck.splice(0, 1)[0];
-            card.width = GameGundamGlobal.size.cardSize.width;
-            card.location = GameGundamGlobal.locationShield;
-            card.show = false;
-            result.push(card);
-        }
-        return result;
+        player.resAString = GameGundamGlobal.getRes(player);
     }
 
     static getHandPosition(player, index = -1) {
@@ -269,7 +236,7 @@ class GameGundamManager {
     static getFieldPosition(player, card, index = -1) {
         const posIndex = index > -1 ? index : player.field.length;
         const result = this.getCardPosition(player, posIndex, player.position.field, player.field.length, true, GameGundamGlobal.size.fieldWidth);
-        result.rotation = card.position.rotation;
+        result.rotation = card.position?.rotation;
         return result;
     }
     static getCardPosition(player, index, position, cardsLength, useRotateWidth, widthAvailable) {
@@ -287,7 +254,6 @@ class GameGundamManager {
         return result;
     }
 
-    static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
 
     static endAnimation() {
         GameGundamGlobal.world.cards.filter(x => x.show && x.to).forEach(card => {

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import GameGundamGlobal from './GameGundamGlobal';
+import GameGundamGlobal from '../GameGundamGlobal';
 
 class GameGundamCardBase {
 
@@ -13,6 +13,8 @@ class GameGundamCardBase {
         if (player.base)
             GameGundamGlobal.sendToGrave(player, player.base);
         player.base = card;
+        card.selectable=false;
+        return {playCost:true, refreshHand:true, refreshField:false};
     }
 
     static activate(world, player, card) {

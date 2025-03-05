@@ -1,5 +1,5 @@
 /* eslint-disable */
-import GameGundamGlobal from './GameGundamGlobal';
+import GameGundamGlobal from '../GameGundamGlobal';
 
 class GameGundamCardCommandPilot {
     static isCardUnit(card) { return card.type.includes(0); }
@@ -18,7 +18,7 @@ class GameGundamCardCommandPilot {
     }
     static play(world, player, card) {
         GameGundamGlobal.showPopupSelectPilotOrCommand(card);
-        return GameGundamGlobal.world;
+        return {playCost:false, refreshHand:false, refreshField:false};;
     }
 
     static activate(world, player, card) {

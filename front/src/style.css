@@ -692,3 +692,13 @@ h4 {
     display: grid;
     place-items: center;
 }
+
+.cirlce5px {
+    border-radius: 5px;
+}
+.cirlce10px {
+    border-radius: 10px;
+}
+.cirlce15px {
+    border-radius: 15px;
+}

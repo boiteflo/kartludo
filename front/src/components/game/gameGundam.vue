@@ -62,6 +62,15 @@
                     height: gameWorld?.size.cardHeight + 'px'
                 }">
                 </div>
+                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})"
+                    :style="{
+                        top: gameWorld?.player1.position.base.y + 'px',
+                        left: gameWorld?.player1.position.base.x + 'px',
+                        width: gameWorld?.size.boxWidth + 'px',
+                        height: gameWorld?.size.cardHeight + 'px',
+                        'background-color': '#FFFF00'
+                    }"> Shield
+                </div>
                 <div class="absolute bg2 textVerticalCenter" :style="{
                     top: gameWorld?.player1.position.shield.y + 'px',
                     left: gameWorld?.player1.position.shield.x + 'px',
@@ -117,6 +126,16 @@
                     height: gameWorld?.size.cardHeight + 'px'
                 }">
                 </div>
+                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})"
+                    :style="{
+                        top: gameWorld?.player2.position.base.y + 'px',
+                        left: gameWorld?.player2.position.base.x + 'px',
+                        width: gameWorld?.size.boxWidth + 'px',
+                        height: gameWorld?.size.cardHeight + 'px',
+                        'background-color': '#FFFF00'
+                    }"> Shield
+                </div>
+
                 <div class="absolute bg textVerticalCenter" :style="{
                     top: gameWorld?.player2.position.shield.y + 'px',
                     left: gameWorld?.player2.position.shield.x + 'px',
@@ -152,25 +171,19 @@
             </div>
         </div>
 
-        <div v-if="gameWorld?.popup" class="flex-center"
-            style="z-index:3; width:100%; height: 450px; position:fixed; top:150px;">
-            <div style="background-color: #000000E0; width:90%; height:100%;">
-                <h2 class="text-center">{{ gameWorld.popup.text }}</h2>
-                <div class="flex-center">
-                    <span v-for="(choice, index) in gameWorld.popup.choices" :key="'Choice' + index">
-                        <v-btn v-if="choice.text" class="mp5px"
-                            :style="{ width: gameWorld?.size.cardWidth + 'px', height: gameWorld?.size.cardHeight + 'px' }"
-                            @click="selectChoice(choice)">
-                            {{ choice.text }}
-                        </v-btn>
-                        <gameCard v-if="choice.id" :card="choice" folder="Gundam/cards/" :shine="true"
-                            @mouseover="showCard" @click="selectChoiceCard(choice)">
-                        </gameCard>
-                    </span>
-                </div>
+        <div v-if="gameWorld?.popup" class="textVerticalCenter"
+            style="z-index:6; width:100%; height: 64px; position:fixed; top:0px; left:120px;">
+
+            <div class="flex-wrap" style="background-color: #FFFF00E0; width:80%; height:100%;">
+                <h3 class="text-center m10px">{{ gameWorld.popup.text }}</h3>
+                <span v-for="(choice, index) in gameWorld.popup.choices" :key="'Choice' + index">
+                    <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
+                        {{ choice.text }}
+                    </v-btn>
+                </span>
             </div>
         </div>
-        <br><br> {{ gameWorld?.player1.hand.length }}
+        <br><br>
     </div>
 
 </template>
@@ -193,7 +206,7 @@ export default {
     }),
     mounted() {
         window.addEventListener("resize", () => {
-            this.gameGundamManager.refreshGameSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
+            this.gameWorld = this.gameGundamManager.refreshGameSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
             this.refreshG++;
         });
         this.start();
@@ -241,10 +254,6 @@ export default {
         },
         selectChoice(choice) {
             this.gameWorld = gameGundamManager.selectChoiceType(choice);
-            this.refreshGame();
-        },
-        selectChoiceCard(choice) {
-            this.gameWorld = gameGundamManager.selectChoiceCard(choice);
             this.refreshGame();
         }
     }
