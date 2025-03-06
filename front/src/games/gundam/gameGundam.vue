@@ -14,7 +14,7 @@
                     <v-icon>mdi-arrow-right-thin</v-icon>
                     End Turn
                 </v-btn>
-                <div class="mp5px" v-html="gameWorld.logs"></div>
+                <div class="mp5px" v-html="gameWorld?.logs"></div>
             </div>
 
             <div v-if="gameWorld" :key="refreshG" class="relative bgWhite" :style="{
@@ -23,6 +23,17 @@
                 'font-size': '12px',
                 'text-align': 'center'
             }">
+
+                
+                <div class="absolute bgYellow cirlce5px" :style="{
+                    top: gameWorld?.isPlayer1Turn ? gameWorld?.player1.position.field.y + 'px' : gameWorld?.size.infoLineY04 + 5 + gameWorld?.size.boxHeight + 'px',
+                    left: gameWorld?.isPlayer1Turn ? gameWorld?.player1.position.res.x + 'px' : gameWorld?.player2.position.res.x + 'px',
+                    width: gameWorld?.size.boxWidth + 'px'
+                }">
+                    <v-btn target="_blank" text class="bg shine" @click="nextTurn">
+                        End Turn
+                    </v-btn>
+                </div>
 
                 <!-- Player 1 -->
                 <div class="absolute bg2 textVerticalCenter" :style="{
@@ -175,17 +186,19 @@
 
             <div class="flex-wrap" style="background-color: #FFFF00E0; width:80%; height:100%;">
                 <h3 class="text-center m10px">{{ gameWorld.popup.text }}</h3>
-                <span v-for="(choice, index) in gameWorld.popup.choices" :key="'Choice' + index">
-                    <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
-                        {{ choice.text }}
-                    </v-btn>
+                <span class="relative">
+                    <span v-for="(choice, index) in gameWorld.popup.choices" :key="'Choice' + index">
+                        <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
+                            {{ choice.text }}
+                        </v-btn>
+                        <gameCard v-else-if="gameWorld.popup.showCards && choice.id" :card="choice"
+                            folder="Gundam/cards/" :shine="true" @mouseover="showCard" @click="selectCard">
+                        </gameCard>
+                    </span>
                 </span>
-                <gameCard v-for="(card,index) in gameWorld.popup.cards" :key="'B' + index" :card="card" folder="Gundam/cards/" :shine="true"
-                    @mouseover="showCard" @click="selectCard">
-                </gameCard>
             </div>
         </div>
-        <br><br><br>{{ gameWorld.player2.shield[0].name }}
+        <br><br><br>{{ gameWorld?.player2.shield[0].name }}
     </div>
 
 </template>

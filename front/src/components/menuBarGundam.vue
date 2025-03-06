@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app dark color="black">
+    <v-app-bar v-if="!hide" app dark color="black">
       <div style="width:320px; position:absolute; bottom:0px; top:0px; left:160px; overflow: hidden;">
         <img style="width:100px; " :src="require('../assets/Gundam/wingzero2.gif')" />
       </div>
@@ -23,6 +23,9 @@
       </link-button>
 
     </v-app-bar>
+    <div v-else class="absolute">
+      <v-app-bar-nav-icon style="z-index:10" variant="text" @click="showDrawer = true"></v-app-bar-nav-icon>
+    </div>
 
     <v-navigation-drawer v-model="showDrawer" absolute temporary color="black">
 
@@ -40,8 +43,8 @@
         </link-button>
       </div>
     </v-navigation-drawer>
-    <div v-if="$vuetify.breakpoint.width >= 800" class="bg" style="height:60px;"></div>
-    <div v-if="$vuetify.breakpoint.width < 800" class="bg" style="height:20px;"></div>
+    <div v-if="!hide && $vuetify.breakpoint.width >= 800" class="bg" style="height:60px;"></div>
+    <div v-if="!hide && $vuetify.breakpoint.width < 800" class="bg" style="height:20px;"></div>
   </div>
 </template>
 
@@ -53,7 +56,7 @@ import linkButton from './linkButton';
 export default {
   name: 'menuBarGundam',
   components: { linkButton },
-  props: ['filteractive'],
+  props: ['filteractive', 'hide'],
   data: () => ({
     store: store,
     version : '',

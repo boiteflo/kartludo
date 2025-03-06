@@ -39,7 +39,7 @@
                 {
                     "trigger": "onpair",
                     "effect": "breach",
-                    "value":3
+                    "value": 3
                 }
             ],
             "pilot": "",
@@ -81,7 +81,7 @@
                 {
                     "trigger": "onplay",
                     "effect": "breach",
-                    "value":3
+                    "value": 3
                 }
             ],
             "pilot": "",
@@ -139,7 +139,7 @@
                 {
                     "trigger": "burst",
                     "effect": "placeExResource",
-                    "value":1
+                    "value": 1
                 }
             ],
             "pilot": "",
@@ -161,14 +161,14 @@
             "effectText": "Breach 5. This Unit may choose an active enemy Unit that is Lv4 or lower as its attack target.",
             "effect": [
                 {
-                    "trigger":"onplay",
+                    "trigger": "onplay",
                     "effect": "breach",
-                    "value":5
+                    "value": 5
                 },
                 {
-                    "trigger":"onplay",
+                    "trigger": "onplay",
                     "effect": "attackActiveEnnemyLvXOrLower",
-                    "value":5
+                    "value": 5
                 }
             ],
             "pilot": "",
@@ -192,7 +192,7 @@
                 {
                     "trigger": "onplay",
                     "effect": "placeExResource",
-                    "value":1
+                    "value": 1
                 }
             ],
             "pilot": "",
@@ -267,7 +267,8 @@
                     "trigger": "command",
                     "effect": "gainThisTurn",
                     "target": "unit",
-                    "effect2": "breach3"
+                    "effect2": "breach",
+                    "value":3
                 }
             ],
             "pilot": "",
@@ -292,7 +293,7 @@
                 {
                     "trigger": "action",
                     "effect": "protectionShieldLvXOrLower",
-                    "value":4
+                    "value": 4
                 }
             ],
             "pilot": "",
@@ -316,11 +317,11 @@
             "effect": [
                 {
                     "trigger": "onplay",
-                    "effect": "get1ShieldToHand"
+                    "effect": "top2DeckCard1Top1Bottom"
                 },
                 {
                     "trigger": "onplay",
-                    "effect": "top2DeckCard1Top1Bottom"
+                    "effect": "get1ShieldToHand"
                 }
             ],
             "pilot": "",

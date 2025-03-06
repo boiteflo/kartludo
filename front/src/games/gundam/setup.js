@@ -15,7 +15,7 @@ class setup {
         global.world.player1 = this.createPlayer(gridAndSize.getPlayerPosition(true), true);
         global.world.player2 = this.createPlayer(gridAndSize.getPlayerPosition(false), false);
 
-        global.isPlayer1Turn = false; //Math.floor(Math.random() * 2) == 1;
+        global.isPlayer1Turn = Math.floor(Math.random() * 2) == 1;
         const nonPlayerTurn = global.getPlayerTurn();
         nonPlayerTurn.resourcesEx = 1;
 
@@ -41,7 +41,7 @@ class setup {
             shield: [],
             grave: [],
             resAString: "0",
-            resourcesMax: 8,
+            resourcesMax: 0,
             resourcesRemaining: 0,
             resourcesEx: 0,
             resBString: "0",
@@ -64,12 +64,10 @@ class setup {
         let result = [];
 
         // To delete after test
-        /*
-        const gundam = global.clone(global.cards.find(x => x.id === 'GD01-041'));
-        const pilot = global.cards.find(x => x.id === 'GD01-091');
+        const gundam = global.clone(global.cards.find(x => x.id === 'GD01-034'));
+        const pilot = global.cards.find(x => x.id === 'ST02-012');
         for (let i = 0; i < 8; i++)result = result.concat([global.clone(pilot)]);
         for (let i = 0; i < 8; i++)result = result.concat([global.clone(gundam)]);
-        */
 
         global.cards.forEach(card => {
             result.push(global.clone(card));

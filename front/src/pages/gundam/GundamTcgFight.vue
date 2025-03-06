@@ -1,6 +1,6 @@
 <template>
     <div class="bg2 h100p">
-        <menu-bar-gundam>
+        <menu-bar-gundam :hide="true">
         </menu-bar-gundam>
         <game-gundam></game-gundam>
     </div>

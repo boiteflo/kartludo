@@ -18,24 +18,6 @@
 </template>
 
 <style scoped>
-.shine {
-  -webkit-mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
-  -webkit-mask-size: 200%;
-  mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
-  mask-size: 200%;
-  animation: shinefx 1s infinite;
-  /* hidestat */
-}
-
-@keyframes shinefx {
-  from {
-    -webkit-mask-position: -200%;
-  }
-
-  to {
-    -webkit-mask-position: 0%;
-  }
-}
 </style>
 
 <script>

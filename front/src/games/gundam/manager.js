@@ -15,7 +15,10 @@ class manager {
     }
 
     static nextTurn() {
+        effects.removeOneTurnEffect(global.world.cards);
+
         global.isPlayer1Turn = !global.isPlayer1Turn;
+        global.world.isPlayer1Turn=global.isPlayer1Turn;
         const player = global.getPlayerTurn();
 
         global.world.cards.forEach(card => card.selectable = false);
@@ -25,7 +28,8 @@ class manager {
         player.resources = player.resourcesMax;
         player.resAString = global.getRes(player);
         
-        global.log(`-- New turn for player ${player.number}, ${player.resourcesAvailable} res.`);
+        const baseText = player.base ? player.base.hp + 'hp ' : '-';
+        global.log(`-- Turn player ${player.number}, ${player.resourcesAvailable}re, ${player.shield.length}sh, ${baseText}ba`);
 
         global.draw(player, 1);
 
@@ -83,6 +87,9 @@ class manager {
             playParams = this.play(player, card, choiceType, choiceCard);
         else if (card.location === global.locationField && global.isCardUnit(card) && card.active)
             playParams = this.attack(player, card, choiceCard);
+        
+        if (playParams.stop) 
+            return global.world;
 
         if (playParams.refreshHand) this.refreshHandPosition(player, false);
         if (playParams.refreshField) this.refreshFieldPosition(player, false);
@@ -91,11 +98,16 @@ class manager {
     }
 
     static play(player, card, choiceType, choiceCard) {
-        let playParams = global.getCardHandler(card, choiceType).play(global.world, player, card, choiceCard);
+        let playParams = effects.apply(effects.onplay, player, card, choiceCard);
+        if(playParams.stop)
+            return playParams;
+
+        playParams = global.getCardHandler(card, choiceType).play(global.world, player, card, choiceCard);
+        if (playParams.stop) 
+            return playParams;
+
         if (playParams.playCost)
             this.playCardCost(player, card);
-
-        effects.apply(effects.onplay, player, card, choiceCard);
 
         global.log(`For ${card.cost}, play ${card.name}`);
 

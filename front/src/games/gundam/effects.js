@@ -42,14 +42,22 @@ class GameGundamEffect {
 
         let result = {};
 
-        effects
-            .filter(effect => effect.trigger == trigger)
-            .forEach(effect => result = {...result, ...this.applyEffect(player, card1, card2, effect)});
+        effects.filter(effect => effect.trigger == trigger).forEach(effect => {
+            if (result.stop) return;
+            result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
+        });
 
         return result;
     }
 
     static applyEffect(player, card1, card2, effect) {
+        if (effect.target && !card2) {
+            if (effect.target === 'unit') {
+                global.showPopupSelectCard(card1, card1.CommandtargetAvailable);
+                return { stop: true }
+            }
+        }
+
         if (effect.effect === 'get1ShieldToHand') {
             if (player.shield.length < 1) return;
             const card = player.shield.splice(0, 1)[0];
@@ -57,20 +65,34 @@ class GameGundamEffect {
             card.position = player.position.shield;
         }
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
+            let deckCards = [player.deck[0], player.deck[1]];
+            if (!card2) {
+                global.showPopupSelectHiddenCard(card1, "which should go at the top deck ?", deckCards);
+                return { stop: true }
+            }
+
+            deckCards = player.deck.splice(0, 2);
+            const bottomCard = deckCards.find(x => x.index !== card2.index);
+            player.deck = [card2].concat(player.deck).concat([bottomCard]);
+
             global.log(`With ${card1.name}, move top 2 deck cards Above or bellow`);
         }
         else if (effect.effect === 'protectionShieldLvXOrLower') {
             if (player.base || card2.index) return;
             const shield = player.shield[0];
             const cancel = shield.level < effect.value;
-            if(cancel)
+            if (cancel)
                 global.log(`attack cancel because ${card1.name} has level < ${effect.value}`);
             return { cancel };
         }
         else if (effect.effect === 'gainThisTurn') {
-            // select a card
-            global.log(`${card1.name} give ${effect.effect2} to {targetUnit}`);
-            return {stop:true};
+            const effectClone = global.clone(effect);
+            delete effectClone.target;
+            effectClone.effect = effectClone.effect2;
+            global.log(`${card1.name} give ${effect.effect2} to ${card2.name}`);
+            this.applyEffect(player, card2, null, effectClone);
+            card2.removeEndTurn = [effectClone];
+            return { stop: true };
         }
         else if (effect.effect === 'incruise') {
             card1.ap += effect.ap;
@@ -82,7 +104,7 @@ class GameGundamEffect {
             global.spawnCard(player, card1, global.locationHand);
             card1.position = player.position.shield;
             global.log(`${card1.name} is send to hand`);
-            return {cancel:true, refreshHandOpponent:true};
+            return { cancel: true, refreshHandOpponent: true };
         }
         else if (effect.effect === 'placeExResource') {
             player.resourcesEx += effect.value;
@@ -96,8 +118,10 @@ class GameGundamEffect {
             global.log(`${card1.name} deploy ${effect.value} rested resource`);
         }
         else if (effect.effect === 'breach') {
-            card1.breach = effect.value;
-            global.log(`${card1.name} has breach ${effect.value}`);
+            if (!card1.breach || card1.breach < effect.value) {
+                card1.breach = effect.value;
+                global.log(`${card1.name} has breach ${effect.value}`);
+            }
         }
         else if (effect.effect === 'deploy') {
             const targets = player.hand.filter(x => x.name.includes(effect.target) || x.attribute.includes(effect.target));
@@ -111,15 +135,30 @@ class GameGundamEffect {
             GameGundamEffect.apply(GameGundamEffect.onplay, player, card, null);
         }
         else if (effect.effect === 'attackActiveEnnemyLvXOrLower') {
-            card1.attackActiveEnnemy = effect.value;
-            global.log(`${card1.name} can attack unit with AP < ${effect.value}`);
-        }
-        else if (effect.effect === 'immuneApXIfBreach') {
-            if (card1.breach){
-                card1.immuneAp = effect.value;
-                global.log(`${card1.name} is now immune to AP < ${effect.value}`);
+            if (!card1.attackActiveEnnemy || card1.attackActiveEnnemy < effect.value) {
+                card1.attackActiveEnnemy = effect.value;
+                global.log(`${card1.name} can attack unit with AP < ${effect.value}`);
             }
         }
+        else if (effect.effect === 'immuneApXIfBreach') {
+            if (card1.breach) {
+                if (!card1.immuneAp || card1.immuneAp < effect.value) {
+                    card1.immuneAp = effect.value;
+                    global.log(`${card1.name} is now immune to AP < ${effect.value}`);
+                }
+            }
+        }
+    }
+
+    static removeOneTurnEffect(cards) {
+        cards.filter(x => x.removeEndTurn).forEach(card => {
+            const lost = [];
+            card.removeEndTurn.forEach(fx => {
+                delete card[fx.effect];
+                lost.push(fx.effect);
+            })
+            global.log(`${card.name} lost ${lost.join(', ')}`);
+        });
     }
 }
 
