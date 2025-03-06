@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute" :style="{
+  <div class="absolute bgYellow" :style="{
     left: card.position.x + 'px',
     top: card.position.y + 'px',
     width: card.width + 'px',

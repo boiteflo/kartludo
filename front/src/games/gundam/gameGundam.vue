@@ -1,7 +1,11 @@
 <template>
     <div>
         <div class="flex">
-            <div class="bg" style="width:300px;">
+            <div class="bg" style="width:300px; height:100%">
+                <div class="relative">
+                    <gameCard v-if="showCardId.id" :card="showCardId" folder="Gundam/cards/"></gameCard>
+                </div>
+                <div style="height:420px"></div>
                 <v-btn target="_blank" text class="bg m5px" @click="start">
                     <v-icon>mdi-arrow-right-thin</v-icon>
                     Start
@@ -10,10 +14,7 @@
                     <v-icon>mdi-arrow-right-thin</v-icon>
                     End Turn
                 </v-btn>
-
-                <div class="relative">
-                    <gameCard v-if="showCardId.id" :card="showCardId" folder="Gundam/cards/"></gameCard>
-                </div>
+                <div class="mp5px" v-html="gameWorld.logs"></div>
             </div>
 
             <div v-if="gameWorld" :key="refreshG" class="relative bgWhite" :style="{
@@ -62,14 +63,13 @@
                     height: gameWorld?.size.cardHeight + 'px'
                 }">
                 </div>
-                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})"
-                    :style="{
-                        top: gameWorld?.player1.position.base.y + 'px',
-                        left: gameWorld?.player1.position.base.x + 'px',
-                        width: gameWorld?.size.boxWidth + 'px',
-                        height: gameWorld?.size.cardHeight + 'px',
-                        'background-color': '#FFFF00'
-                    }"> Shield
+                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})" :style="{
+                    top: gameWorld?.player1.position.base.y + 'px',
+                    left: gameWorld?.player1.position.base.x + 'px',
+                    width: gameWorld?.size.boxWidth + 'px',
+                    height: gameWorld?.size.cardHeight + 'px',
+                    'background-color': '#FFFF00'
+                }"> Shield
                 </div>
                 <div class="absolute bg2 textVerticalCenter" :style="{
                     top: gameWorld?.player1.position.shield.y + 'px',
@@ -126,14 +126,13 @@
                     height: gameWorld?.size.cardHeight + 'px'
                 }">
                 </div>
-                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})"
-                    :style="{
-                        top: gameWorld?.player2.position.base.y + 'px',
-                        left: gameWorld?.player2.position.base.x + 'px',
-                        width: gameWorld?.size.boxWidth + 'px',
-                        height: gameWorld?.size.cardHeight + 'px',
-                        'background-color': '#FFFF00'
-                    }"> Shield
+                <div v-if="gameWorld?.popup?.attackShield" class="absolute" @click="selectChoice({})" :style="{
+                    top: gameWorld?.player2.position.base.y + 'px',
+                    left: gameWorld?.player2.position.base.x + 'px',
+                    width: gameWorld?.size.boxWidth + 'px',
+                    height: gameWorld?.size.cardHeight + 'px',
+                    'background-color': '#FFFF00'
+                }"> Shield
                 </div>
 
                 <div class="absolute bg textVerticalCenter" :style="{
@@ -181,16 +180,19 @@
                         {{ choice.text }}
                     </v-btn>
                 </span>
+                <gameCard v-for="(card,index) in gameWorld.popup.cards" :key="'B' + index" :card="card" folder="Gundam/cards/" :shine="true"
+                    @mouseover="showCard" @click="selectCard">
+                </gameCard>
             </div>
         </div>
-        <br><br>
+        <br><br><br>{{ gameWorld.player2.shield[0].name }}
     </div>
 
 </template>
 
 <script>
 import helperAnimation from '../../helpers/helperAnimation';
-import gameGundamManager from './gameGundamManager';
+import gameGundamManager from './manager';
 import gameCard from './gameCard';
 
 export default {
@@ -206,7 +208,7 @@ export default {
     }),
     mounted() {
         window.addEventListener("resize", () => {
-            this.gameWorld = this.gameGundamManager.refreshGameSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
+            //this.gameWorld = this.gameGundamManager.refreshGameSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
             this.refreshG++;
         });
         this.start();

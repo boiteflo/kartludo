@@ -487,6 +487,10 @@
     background: red !important;
 }
 
+.bgYellow {
+    background: #FFEB3B !important;
+}
+
 .borderYellow {
     border: solid #FFEB3B 2px;
 }

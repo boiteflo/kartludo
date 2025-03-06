@@ -1,13 +1,13 @@
 /* eslint-disable */
-import GameGundamGlobal from '../GameGundamGlobal';
+import global from '../global';
 
 class GameGundamCardPilot {
 
     static isSelectable(world, player, card) {
-        if (card.location !== GameGundamGlobal.locationHand)
+        if (card.location !== global.locationHand)
             return false;
 
-        const unitsOnField = player.field.filter(x => GameGundamGlobal.isCardUnit(x));
+        const unitsOnField = player.field.filter(x => global.isCardUnit(x));
         const unitsOnFieldWithoutPilot = unitsOnField.filter(x => !x.pair);
         card.PilotTargetAvailable = unitsOnFieldWithoutPilot.map(x => x.index);
 
@@ -16,15 +16,15 @@ class GameGundamCardPilot {
 
     static play(world, player, card, choiceCard) {
         if (card.PilotTargetAvailable.length > 1 && !choiceCard) {
-            GameGundamGlobal.showPopupSelectCard(card, card.PilotTargetAvailable);
+            global.showPopupSelectCard(card, card.PilotTargetAvailable);
             return {playCost:false, refreshHand:false, refreshField:false};
         } else if(!choiceCard){
-            choiceCard = GameGundamGlobal.getCardsByIndex(card.PilotTargetAvailable)[0];
+            choiceCard = global.getCardsByIndex(card.PilotTargetAvailable)[0];
         }
 
-        card.height = GameGundamGlobal.size.cardSize.height;
+        card.height = global.size.cardSize.height;
         player.hand = player.hand.filter(x => x.index !== card.index);
-        GameGundamGlobal.pairCards(player, choiceCard, card);
+        global.pairCards(player, choiceCard, card);
         return {playCost:true, refreshHand:true, refreshField:false};
     }
 

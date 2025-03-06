@@ -1,12 +1,12 @@
 import cards from '../../data/gundamCards.json';
-import gameGundamCardUnit from './Card/gameGundamCardUnit';
-import gameGundamCardCommandPilot from './Card/gameGundamCardCommandPilot';
-import gameGundamCardCommand from './Card/gameGundamCardCommand';
-import gameGundamCardPilot from './Card/gameGundamCardPilot';
-import gameGundamCardBase from './Card/gameGundamCardBase';
-import GameGundamEffect from './gameGundamEffect';
+import cardUnit from './Card/cardUnit';
+import cardCommandPilot from './Card/cardCommandPilot';
+import cardCommand from './Card/cardCommand';
+import cardPilot from './Card/cardPilot';
+import cardBase from './Card/cardBase';
+import GameGundamEffect from './effects';
 
-class GameGundamGlobal {
+class global {
     static world = null;
     static cards = cards.cards;
     static lastChoiceType;
@@ -15,6 +15,17 @@ class GameGundamGlobal {
     static size;
     static index = 1;
     static isPlayer1Turn;
+    static phase = 0;
+
+    static phaseStart=0;
+    static phaseDraw=1;
+    static phaseResource=2;
+    static phaseMain=3;
+    static phaseAttack=4;
+    static phaseBlock=5;
+    static phaseAction=6;
+    static phaseDamage=7;
+    static phaseEnd=8;
 
     static locationDeck = 0;
     static locationShield = 1;
@@ -107,8 +118,8 @@ class GameGundamGlobal {
         const result = [];
         for (let i = 0; i < cardNumber; i++) {
             const card = player.deck.splice(0, 1)[0];
-            card.width = GameGundamGlobal.size.cardSize.width;
-            card.location = GameGundamGlobal.locationShield;
+            card.width = this.size.cardSize.width;
+            card.location = this.locationShield;
             card.show = false;
             result.push(card);
         }
@@ -153,7 +164,7 @@ class GameGundamGlobal {
     }
 
     static resetSelectable(){        
-        GameGundamGlobal.world.cards.forEach(card => {
+        this.world.cards.forEach(card => {
             card.selectable = card.selectableOld;
             delete (card.selectableOld);
         });
@@ -168,16 +179,18 @@ class GameGundamGlobal {
     static isCardBase(card) { return card.type.includes(3); }
     static getCardHandler(card, choiceType){
         if(choiceType)
-            return choiceType.text == 'Pilot' ? gameGundamCardPilot : gameGundamCardCommand;
+            return choiceType.text == 'Pilot' ? cardPilot : cardCommand;
 
-        if(this.isCardUnit(card)) return gameGundamCardUnit;
-        if(this.isCardCommandPilot(card)) return gameGundamCardCommandPilot;
-        if(this.isCardCommand(card)) return gameGundamCardCommand;
-        if(this.isCardPilot(card)) return gameGundamCardPilot;
-        if(this.isCardBase(card)) return gameGundamCardBase;
+        if(this.isCardUnit(card)) return cardUnit;
+        if(this.isCardCommandPilot(card)) return cardCommandPilot;
+        if(this.isCardCommand(card)) return cardCommand;
+        if(this.isCardPilot(card)) return cardPilot;
+        if(this.isCardBase(card)) return cardBase;
     }
 
     static getCardsByIndex(ids) { return this.world.cards.filter(x => ids.includes(x.index)); }
+
+    static log(text){this.world.logs = text + '<br>' + this.world.logs;}
 
     static clone(obj) { return Object.assign({}, obj); }
 
@@ -188,4 +201,4 @@ class GameGundamGlobal {
 }
 
 
-export default GameGundamGlobal;
+export default global;

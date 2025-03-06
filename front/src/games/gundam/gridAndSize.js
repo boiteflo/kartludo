@@ -1,4 +1,4 @@
-class GameGundamGridAndSize {
+class gridAndSize {
 
     static size;
 
@@ -74,4 +74,4 @@ class GameGundamGridAndSize {
 }
 
 
-export default GameGundamGridAndSize;
+export default gridAndSize;

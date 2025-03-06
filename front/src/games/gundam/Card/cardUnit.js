@@ -1,5 +1,5 @@
 /* eslint-disable */
-import GameGundamGlobal from '../GameGundamGlobal';
+import global from '../global';
 
 class GameGundamCardUnit {
 
@@ -10,8 +10,8 @@ class GameGundamCardUnit {
     static play(world, player, card, choiceType, choiceCard) {
         player.hand = player.hand.filter(x => x.index !== card.index);
         player.field.push(card);
-        card.location = GameGundamGlobal.locationField;
-        card.height = GameGundamGlobal.size.cardSize.height;
+        card.location = global.locationField;
+        card.height = global.size.cardSize.height;
         card.selectable = false;
         card.active = true;
         return {playCost:true, refreshHand:true, refreshField:true};

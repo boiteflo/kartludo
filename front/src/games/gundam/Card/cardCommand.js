@@ -1,5 +1,6 @@
 /* eslint-disable */
-import GameGundamGlobal from '../GameGundamGlobal';
+import global from '../global';
+import effects from '../effects';
 
 class GameGundamCardCommand {
     static isCardUnit(card) { return card.type.includes(0); }
@@ -18,16 +19,19 @@ class GameGundamCardCommand {
     static play(world, player, card, choiceCard) {
         if (card.CommandTargetAvailable) {
             if (card.CommandTargetAvailable.length > 1 && !choiceCard) {
-                GameGundamGlobal.showPopupSelectCard(card, card.CommandTargetAvailable);
+                global.showPopupSelectCard(card, card.CommandTargetAvailable);
                 return { playCost: false, refreshHand: false, refreshField: false };
             } else
-                choiceCard = GameGundamGlobal.getCardsByIndex(card.CommandTargetAvailable)[0];
+                choiceCard = global.getCardsByIndex(card.CommandTargetAvailable)[0];
         }
 
-        card.height = GameGundamGlobal.size.cardSize.height;
+        card.height = global.size.cardSize.height;
         player.hand = player.hand.filter(x => x.index !== card.index);
-        card.to = GameGundamGlobal.size.center;
+        card.to = global.size.center;
         card.explode = true;
+        
+        effects.apply(effects.command, player, card, choiceCard);
+
         return { playCost: true, refreshHand: true, refreshField: false };
     }
 

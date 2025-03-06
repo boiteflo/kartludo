@@ -1,9 +1,13 @@
 <template>
   <div>
     <v-app-bar app dark color="black">
-      <div style="width:300px; position:absolute; bottom:0px; top:5px; left:125px; overflow: hidden;">
-        <img style="width:100px; " :src="require('../assets/Gundam/gundam2.png')" />
+      <div style="width:320px; position:absolute; bottom:0px; top:0px; left:160px; overflow: hidden;">
+        <img style="width:100px; " :src="require('../assets/Gundam/wingzero2.gif')" />
       </div>
+      <div class="" style="width:100px; position:absolute; bottom:0px; top:0px; left:120px; overflow: hidden;">
+        <img style="width:100px; height:100%" :src="require('../assets/gradientBlack.png')" />
+      </div>
+      
       <v-app-bar-nav-icon variant="text" @click="showDrawer = true"></v-app-bar-nav-icon>
       <router-link to="/gundam">
         <v-btn target="_blank" style="position:relative" text @click="unselect()">

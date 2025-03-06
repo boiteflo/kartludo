@@ -132,7 +132,7 @@
             "effectText": "Main : Place 1 rested Resource.",
             "effect": [
                 {
-                    "trigger":"onplay",
+                    "trigger": "command",
                     "effect": "placeRestedResource",
                     "value": 1
                 },
@@ -264,10 +264,10 @@
             "effectText": "Main : Choose 1 of your Units. It gains Breach 3 during this turn.",
             "effect": [
                 {
-                    "command": true,
-                    "type": "gainThisTurn",
+                    "trigger": "command",
+                    "effect": "gainThisTurn",
                     "target": "unit",
-                    "effect": "breach3"
+                    "effect2": "breach3"
                 }
             ],
             "pilot": "",
@@ -290,9 +290,9 @@
             "effectText": "Action : during this battle, your shield area cards can't receive damage from ennemy Units that are Lv.4 or lower.",
             "effect": [
                 {
-                    "command": true,
-                    "trigger": "battle",
-                    "effect": "protectionShieldLv4OrLower"
+                    "trigger": "action",
+                    "effect": "protectionShieldLvXOrLower",
+                    "value":4
                 }
             ],
             "pilot": "",
