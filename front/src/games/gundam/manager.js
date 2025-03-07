@@ -188,7 +188,7 @@ class manager {
             this.attackCard(player, opponent, card, target, breach);
 
         if (opponent.base && opponent.base.index == target.index)
-            opponent.base = null;
+            opponent.base = opponent.base.hp > 0 ? opponent.base : null;
         else if (!target.index) {
             if (opponent.shield.length < 1)
                 this.endFight();
@@ -203,7 +203,7 @@ class manager {
             }
         }
 
-        if (!breach && global.isCardUnit(target) && card.breach) {
+        if (!breach && global.isCardUnit(target) && card.breach && target.hp < 1) {
             result =this.attack(player, card, opponent.base ?? { text: 'shield' }, card.breach);
         }
 

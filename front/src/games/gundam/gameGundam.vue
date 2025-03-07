@@ -30,7 +30,7 @@
                     left: gameWorld?.isPlayer1Turn ? gameWorld?.player1.position.res.x + 'px' : gameWorld?.player2.position.res.x + 'px',
                     width: gameWorld?.size.boxWidth + 'px'
                 }">
-                    <v-btn target="_blank" text class="bg shine" @click="nextTurn">
+                    <v-btn target="_blank" text class="bg shine w100p" @click="nextTurn">
                         End Turn
                     </v-btn>
                 </div>
