@@ -3,10 +3,11 @@ import global from '../global';
 
 class GameGundamCardBase {
 
-    static isSelectable(world, player, card) {
+    static isSelectable(player, card) {
         return true;
     }
-    static play(world, player, card) {
+    
+    static play(player, card) {
         card.height = global.size.cardSize.height;
         player.hand = player.hand.filter(x => x.index !== card.index);
         card.to = player.position.base;
@@ -15,9 +16,6 @@ class GameGundamCardBase {
         player.base = card;
         card.selectable=false;
         return {playCost:true, refreshHand:true, refreshField:false};
-    }
-
-    static activate(world, player, card) {
     }
 }
 

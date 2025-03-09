@@ -15,10 +15,12 @@ class helperAnimation {
             animations.forEach(anim => {
                 const currentX = anim.from.x + (anim.to.x - anim.from.x) * easedProgress;
                 const currentY = anim.from.y + (anim.to.y - anim.from.y) * easedProgress;
+                const currentHeight = anim.from.height + (anim.to.height - anim.from.height) * easedProgress;
                 const currentRotation = anim.from.rotation + (anim.to.rotation - anim.from.rotation) * easedProgress;
 
                 anim.element.style.left = currentX + "px";
                 anim.element.style.top = currentY + "px";
+                anim.element.style.height = currentHeight + "px";
                 anim.element.style.transform = `rotate(${currentRotation}deg)`;
             });
 
@@ -54,11 +56,13 @@ class helperAnimation {
                 return;
             }
             const from = anim.from ?? { 
-                x: this.pxStringToInt(anim.element.style.left), 
-                y: this.pxStringToInt(anim.element.style.top), 
-                rotation: anim.element.style.rotation 
+                x: this.pxStringToInt(element.style.left), 
+                y: this.pxStringToInt(element.style.top), 
+                rotation: element.style.rotation,
+                height: element.style.height
             };
             from.rotation = from.rotation ?? 0;
+            from.height = from.height ?? element.clientHeight;
             const to = anim.isIncrement ? this.add(from, anim.to) :anim.to;
             animationsArray.push({element, from, to});
         });

@@ -64,6 +64,7 @@ class GameGundamEffect {
             global.spawnCard(player, card, global.locationHand);
             card.position = player.position.shield;
         }
+
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
             let deckCards = [player.deck[0], player.deck[1]];
             if (!card2) {
@@ -77,6 +78,7 @@ class GameGundamEffect {
 
             global.log(`With ${card1.name}, move top 2 deck cards Above or bellow`);
         }
+
         else if (effect.effect === 'protectionShieldLvXOrLower') {
             if (player.base || card2.index) return;
             const shield = player.shield[0];
@@ -85,6 +87,7 @@ class GameGundamEffect {
                 global.log(`attack cancel because ${card1.name} has level < ${effect.value}`);
             return { cancel };
         }
+
         else if (effect.effect === 'gainThisTurn') {
             const effectClone = global.clone(effect);
             delete effectClone.target;
@@ -94,35 +97,49 @@ class GameGundamEffect {
             card2.removeEndTurn = [effectClone];
             return { stop: true };
         }
+
         else if (effect.effect === 'incruise') {
             card1.ap += effect.ap;
             card1.hp += effect.hp;
             global.log(`${card1.name} have been incruised by AP ${effect.ap} and HP ${effect.hp}`);
         }
+
         else if (effect.effect === 'sendToHand') {
             player.shield = global.removeObj(player.shield, card1);
             global.spawnCard(player, card1, global.locationHand);
             card1.position = player.position.shield;
             global.log(`${card1.name} is send to hand`);
             return { cancel: true, refreshHandOpponent: true };
+        } 
+
+        else if (effect.effect === 'sendToField') {
+            player.hand.push(card1);
+            global.spawnCard(player, card1, global.locationHand);
+            card1.position = player.position.shield;
+            global.log(`${card1.name} is send to hand`);
+            return { cancel: true, refreshHandOpponent: true };
         }
+
         else if (effect.effect === 'placeExResource') {
             player.resourcesEx += effect.value;
             player.resourcesAvailable += effect.value;
             player.resAString = global.getRes(player);
             global.log(`${card1.name} deploy ${effect.value} ex resource`);
         }
+
         else if (effect.effect === 'placeRestedResource') {
             player.resourcesMax += effect.value;
             player.resAString = global.getRes(player);
             global.log(`${card1.name} deploy ${effect.value} rested resource`);
         }
+
         else if (effect.effect === 'breach') {
             if (!card1.breach || card1.breach < effect.value) {
                 card1.breach = effect.value;
                 global.log(`${card1.name} has breach ${effect.value}`);
             }
         }
+
         else if (effect.effect === 'deploy') {
             const targets = player.hand.filter(x => x.name.includes(effect.target) || x.attribute.includes(effect.target));
             if (targets.length < 1) return;
@@ -134,12 +151,14 @@ class GameGundamEffect {
             global.log(`${card1.name} deploy ${card.name}`);
             GameGundamEffect.apply(GameGundamEffect.onplay, player, card, null);
         }
+
         else if (effect.effect === 'attackActiveEnnemyLvXOrLower') {
             if (!card1.attackActiveEnnemy || card1.attackActiveEnnemy < effect.value) {
                 card1.attackActiveEnnemy = effect.value;
                 global.log(`${card1.name} can attack unit with AP < ${effect.value}`);
             }
         }
+
         else if (effect.effect === 'immuneApXIfBreach') {
             if (card1.breach) {
                 if (!card1.immuneAp || card1.immuneAp < effect.value) {

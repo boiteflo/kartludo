@@ -3,7 +3,7 @@ import global from '../global';
 
 class GameGundamCardPilot {
 
-    static isSelectable(world, player, card) {
+    static isSelectable(player, card) {
         if (card.location !== global.locationHand)
             return false;
 
@@ -14,7 +14,7 @@ class GameGundamCardPilot {
         return card.PilotTargetAvailable.length > 0;
     }
 
-    static play(world, player, card, choiceCard) {
+    static play(player, card, choiceCard) {
         if (card.PilotTargetAvailable.length > 1 && !choiceCard) {
             global.showPopupSelectCard(card, card.PilotTargetAvailable);
             return {playCost:false, refreshHand:false, refreshField:false};
@@ -26,9 +26,6 @@ class GameGundamCardPilot {
         player.hand = player.hand.filter(x => x.index !== card.index);
         global.pairCards(player, choiceCard, card);
         return {playCost:true, refreshHand:true, refreshField:false};
-    }
-
-    static activate(world, player, card) {
     }
 }
 

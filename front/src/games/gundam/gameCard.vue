@@ -5,7 +5,8 @@
     width: card.width + 'px',
     height: card.height + 'px',
     transform: 'rotate(' + card.position.rotation + 'deg)',
-    'z-index': card.zindex
+    'z-index': card.zindex,
+    cursor: shine ? 'pointer' :''
   }">
     <img :class="{ shine: shine, w100p: true, h100p: true }"
       :style="{ 'object-fit': 'cover', 'object-position': card.bgposition }"

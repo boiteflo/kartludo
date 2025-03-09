@@ -2,26 +2,21 @@
 import global from '../global';
 
 class cardCommandPilot {
-    static isCardUnit(card) { return card.type.includes(0); }
-    static locationHand = 2;
 
-    static isSelectable(world, player, card){        
+    static isSelectable(player, card){        
 
-        if (card.location !== this.locationHand) return false;
+        if (card.location !== global.locationHand) return false;
 
-        const unitsOnField = player.field.filter(x => this.isCardUnit(x));
+        const unitsOnField = player.field.filter(x => global.isCardUnit(x));
         const unitsOnFieldWithoutPilot = unitsOnField.filter(x => !x.pair);
         card.PilotTargetAvailable = unitsOnFieldWithoutPilot.map(x => x.index);
         card.CommandtargetAvailable = unitsOnField.map(x => x.index);
 
         return !card.targetUnit ? true : card.PilotTargetAvailable.length > 0 || card.CommandtargetAvailable.length > 0;
     }
-    static play(world, player, card) {
+    static play(player, card) {
         global.showPopupSelectPilotOrCommand(card);
         return {playCost:false, refreshHand:false, refreshField:false};;
-    }
-
-    static activate(world, player, card) {
     }
 }
 

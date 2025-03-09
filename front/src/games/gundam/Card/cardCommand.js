@@ -3,7 +3,7 @@ import global from '../global';
 import effects from '../effects';
 
 class GameGundamCardCommand {
-    static isSelectable(world, player, card) {
+    static isSelectable(player, card) {
 
         if (card.location !== global.locationHand) return false;
 
@@ -13,7 +13,7 @@ class GameGundamCardCommand {
         return !card.targetUnit ? true : card.CommandtargetAvailable.length > 0;
     }
 
-    static play(world, player, card, choiceCard) {
+    static play(player, card, choiceCard) {
         if (card.CommandTargetAvailable) {
             if (card.CommandTargetAvailable.length > 1 && !choiceCard) {
                 global.showPopupSelectCard(card, card.CommandTargetAvailable);
@@ -33,9 +33,6 @@ class GameGundamCardCommand {
         
 
         return { playCost: true, refreshHand: true, refreshField: false };
-    }
-
-    static activate(world, player, card) {
     }
 }
 

@@ -64,10 +64,12 @@ class setup {
         let result = [];
 
         // To delete after test
+        /*
         const gundam = global.clone(global.cards.find(x => x.id === 'GD01-034'));
         const pilot = global.cards.find(x => x.id === 'ST02-012');
         for (let i = 0; i < 8; i++)result = result.concat([global.clone(pilot)]);
         for (let i = 0; i < 8; i++)result = result.concat([global.clone(gundam)]);
+        */
 
         global.cards.forEach(card => {
             result.push(global.clone(card));

@@ -65,7 +65,7 @@ class manager {
                 return false;
         }
 
-        return global.getCardHandler(card).isSelectable(global.world, player, card);
+        return global.getCardHandler(card).isSelectable(player, card);
     }
 
     static selectCard(card, choiceType, choiceCard) {
@@ -102,7 +102,7 @@ class manager {
         if(playParams.stop)
             return playParams;
 
-        playParams = global.getCardHandler(card, choiceType).play(global.world, player, card, choiceCard);
+        playParams = global.getCardHandler(card, choiceType).play(player, card, choiceCard);
         if (playParams.stop) 
             return playParams;
 
@@ -244,7 +244,7 @@ class manager {
 
     static endFight() {
         const message = global.isPlayer1Turn ? "Victory" : "Defeat";
-        this.showPopup(null, message, []);
+        global.showPopup(null, message, []);
     }
 
     // ------------------ Utilities
