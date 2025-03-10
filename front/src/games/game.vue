@@ -1,5 +1,6 @@
 <template>
     <div class="relative">
+        {{ $vuetify.breakpoint.width }} - {{ $vuetify.breakpoint.height }}
         <div class="flex">
             <div class="bg" style="width:300px; height:100%">
                 <div class="relative">
@@ -29,7 +30,7 @@
 <script>
 import helperAnimation from '../helpers/helperAnimation';
 import gameManager from './gameManager';
-import gundamManager from './gundam/manager';
+import gundamManager from './gundamold/manager';
 
 export default {
     name: 'game-vue',

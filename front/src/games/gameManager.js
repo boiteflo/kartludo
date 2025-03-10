@@ -1,4 +1,5 @@
 import gameTask from './gameTask';
+import grid from './grid';
 
 class gameManager {
 
@@ -8,6 +9,8 @@ class gameManager {
         manager.popup = null;
         gameTask.addTasks(manager.tasks, [gameTask.refreshHand(true), gameTask.refreshHand(false)]);
         this.nextTurn();
+
+        result.grid = grid.setup(width, height);
 
         return result;
     }

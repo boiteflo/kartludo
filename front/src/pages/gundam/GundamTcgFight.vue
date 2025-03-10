@@ -13,7 +13,7 @@ export default {
 
 <script>
 import menuBarGundam from '../../components/menuBarGundam';
-import gameGundam from '../../games/gundam/gameGundam';
+import gameGundam from '../../games/gundamold/gameGundam';
 
   export default {
   name: 'pageGundamTcgFight',
