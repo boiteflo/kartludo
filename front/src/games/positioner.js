@@ -21,7 +21,7 @@ class positioner {
         grid.hand = { width: (grid.box.width + grid.border) * divide - grid.border, height: 4 * (grid.box.height + grid.border) - grid.border };
         grid.field = { width: grid.hand.width - grid.box.width - grid.border, height: grid.hand.height };
 
-        grid.card = { height: height / 5 };
+        grid.card = { height: grid.field.height * 0.75 };
         grid.card.width = grid.card.height * 107 / 150;
 
         for (let i = 0; i < divide; i++) {
@@ -74,22 +74,21 @@ class positioner {
     }
 
     static getPositionHand(player, index, total) {
-        const half = total/2;
         const playerSens = player.isPlayer1 ? 1 : -1;
-        const degree = (-75*playerSens) / half;
-        const rotation = (half - index) * degree;
-        const alignDown = player.isPlayer1 ? 0 : player.positions.hand.height *0.15;
-        player.positions.hand.name = player.positions.hand.width / total;
-        return {
-            x: player.positions.hand.x + this.getXCenter(player.positions.hand.width, global.grid.card.width, total, index),
-            y: alignDown + player.positions.hand.y + playerSens * Math.abs(rotation)*1,
+        const mid = index < total/2  ? Math.floor(total/2) : Math.ceil(total /2);
+        const factorRotation = index - mid;
+        const rotation = playerSens * Math.round(20 * (factorRotation / mid));
+        const cardWidth = global.grid.card.width * 0.75;
+        const heightIncruise = playerSens * (cardWidth/4) * Math.abs(mid - index);
+        const result = {
+            x: player.positions.hand.x + (global.grid.hand.width/2) - (mid - index) * cardWidth,
+            y: player.positions.hand.y + heightIncruise,
             width: global.grid.card.width,
             height: global.grid.card.height,
             rotation
         };
+        return result;
     }
-
-    static isPair(x){return x%2==0}
 
     static getPositionField(player, index, total) {
         return {
@@ -100,9 +99,39 @@ class positioner {
         };
     }
 
+    static getPositionsTest(totalElements, i, maxY = 70, spacing = 100, maxRotation = 40) {
+        const mid = (totalElements - 1) / 2;
+        let x = i * spacing;
+        let factor = Math.abs(i - mid);
+        let factorRotation = i - mid;
+
+        let y = (this.isPair(totalElements) && i === mid || i === mid + 1) ? 0 : Math.round(maxY * (factor / mid));
+        let rotation = (this.isPair(totalElements) && i === mid || i === mid + 1) ? 0 : Math.round(maxRotation * (factorRotation / mid));
+
+        return { x, y, rotation };
+    }
+
+    static getPosition(index, total, position) {
+        return {
+            x: position.x + this.getCenter(position.width, global.grid.card.width, total, index),
+            y: position.y,
+            width: global.grid.card.width,
+            height: global.grid.card.height
+        };
+    }
+
+    static isPair(x) { return x % 2 == 0 }
+
+    static getCenter(totalWidth, elementWidth, total, index) {
+        const halfWidth = totalWidth / 2;
+        const half = total / 2;
+        const indexCenter = half - index;
+        return halfWidth - indexCenter * elementWidth;
+    }
+
     static getXCenter(totalWidth, elementWidth, total, index) {
         const sizeWidth = totalWidth / total;
-        return sizeWidth / 2 + sizeWidth * index - elementWidth/2;
+        return sizeWidth / 2 + sizeWidth * index - elementWidth / 2;
     }
 }
 

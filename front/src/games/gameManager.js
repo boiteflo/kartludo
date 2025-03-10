@@ -21,14 +21,12 @@ class gameManager {
 
         global.game.fields = positioner.createField(global.game.player1.positions, global.game.player2.positions);
 
-        for(let i=0; i<10; i++){
+        for(let i=0; i<5; i++){
             this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
             this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
-            if(i < 6){
-                this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationField, false);
-                this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationField, false);
-            }
         }
+        
+        this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
         
         positioner.refresh(global.game.player1, global.game.player1.hand, global.locationHand);
         positioner.refresh(global.game.player2, global.game.player2.hand, global.locationHand);

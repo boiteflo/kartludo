@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p h100p" :key="refreshG">
+    <div class="relative w100p h100p mask" :key="refreshG">
 
         <!-- Grid -->
         <div class="">
