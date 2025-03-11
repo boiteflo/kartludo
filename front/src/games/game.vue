@@ -2,7 +2,7 @@
     <div class="relative w100p h100p mask" :key="refreshG">
 
         <!-- Grid -->
-        <div class="">
+        <div class="hide">
             <div v-for="i in 16" :key="'x' + i"
                 :style="{ height: game?.grid.box.height + 'px', top: getGridY(i - 1) + 'px' }"
                 class="bgYellow absolute w100p"></div>

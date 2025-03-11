@@ -24,6 +24,7 @@ class gameManager {
         for(let i=0; i<5; i++){
             this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
             this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
+            this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationField, false);
         }
         
         this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, false);
