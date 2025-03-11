@@ -21,6 +21,7 @@ class global {
     static locationField = 3;
     static locationBase = 4;
     static locationTrash = 5;
+    static locationResource = 6;
 
     static getLocationArrayProperty(location){
         if(location == this.locationDeck) return 'deck';
@@ -28,6 +29,7 @@ class global {
         else if(location == this.locationHand) return 'hand';
         else if(location == this.locationField) return 'field';
         else if(location == this.locationBase) return 'base';
+        else if(location == this.locationResource) return 'resource';
         return 'trash';
     }
 

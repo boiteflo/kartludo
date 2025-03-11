@@ -38,28 +38,25 @@ class positioner {
 
 
     static getPositions(grid, isPlayer1) {
-        const base = isPlayer1 ? { x: grid.x15, y: grid.y8, width: grid.box.width, height: grid.box.height, name: 'base' }
-            : { x: grid.x0, y: grid.y7, width: grid.box.width, height: grid.box.height, name: 'base' };
-
-        const shield = isPlayer1 ? { x: grid.x15, y: grid.y9, width: grid.box.width, height: grid.box.height, name: 'shield' }
-            : { x: grid.x0, y: grid.y6, width: grid.box.width, height: grid.box.height, name: 'shield' };
-
-        const deck = isPlayer1 ? { x: grid.x15, y: grid.y10, width: grid.box.width, height: grid.box.height, name: 'deck' }
-            : { x: grid.x0, y: grid.y5, width: grid.box.width, height: grid.box.height, name: 'deck' };
-
-        const trash = isPlayer1 ? { x: grid.x15, y: grid.y11, width: grid.box.width, height: grid.box.height, name: 'trash' }
-            : { x: grid.x0, y: grid.y4, width: grid.box.width, height: grid.box.height, name: 'trash' };
-
-        const resource = isPlayer1 ? { x: grid.x15, y: grid.y12, width: grid.box.width, height: grid.box.height, name: 'res' }
-            : { x: grid.x0, y: grid.y3, width: grid.box.width, height: grid.box.height, name: 'res' };
-
-        const hand = isPlayer1 ? { x: grid.x0, y: grid.y13, width: grid.hand.width, height: grid.hand.height, name: 'hand' }
-            : { x: grid.x0, y: grid.y0, width: grid.hand.width, height: grid.hand.height, name: 'hand' };
-
-        const field = isPlayer1 ? { x: grid.x0, y: grid.y8, width: grid.field.width, height: grid.field.height, name: 'field' }
-            : { x: grid.x1, y: grid.y3, width: grid.field.width, height: grid.field.height, name: 'field' };
+        const base = this.createPoint(isPlayer1, grid.x15, grid.y8, grid.x0, grid.y7, grid.box.width, grid.box.height, 'base', global.locationBase);
+        const shield = this.createPoint(isPlayer1, grid.x15, grid.y9, grid.x0, grid.y6, grid.box.width, grid.box.height, 'shield', global.locationShield);
+        const deck = this.createPoint(isPlayer1, grid.x15, grid.y10, grid.x0, grid.y5, grid.box.width, grid.box.height, 'deck', global.locationDeck);
+        const trash = this.createPoint(isPlayer1, grid.x15, grid.y11, grid.x0, grid.y4, grid.box.width, grid.box.height, 'trash', global.locationTrash);
+        const resource = this.createPoint(isPlayer1, grid.x15, grid.y12, grid.x0, grid.y3, grid.box.width, grid.box.height, 'res', global.locationResource);
+        const hand = this.createPoint(isPlayer1, grid.x0, grid.y13, grid.x0, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand);
+        const field = this.createPoint(isPlayer1, grid.x0, grid.y8, grid.x1, grid.y3, grid.field.width, grid.field.height, 'field', global.locationField);
 
         return { deck, shield, hand, resource, field, trash, base };
+    }
+
+    static createPoint(isPlayer1, x1, y1, x2, y2, width, height, zone, location) {
+        const index = isPlayer1 ? '1' : '2';
+        return {
+            x: isPlayer1 ? x1 : x2,
+            y: isPlayer1 ? y1 : y2,
+            zone: zone + index,
+            width, height, location
+        };
     }
 
     static createField(p1, p2) {

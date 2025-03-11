@@ -8,7 +8,8 @@
       'z-index': card.zindex,
       cursor: shine ? 'pointer' :''
     }">
-      <img :class="{ shine: shine, w100p: true, h100p: true }"
+      <div v-if="!card">No card</div>
+      <img v-else :class="{ shine: shine, w100p: true, h100p: true }"
         :style="{ 'object-fit': 'cover', 'object-position': card.bgposition }"
         :src="require('@/assets/' + folder + card.id + '.webp')" @mouseover="$emit('mouseover', card)"
         @click="$emit('click', card)" @contextmenu.prevent="$emit('clickright', card)" />

@@ -1,7 +1,11 @@
+import setup from './setup';
+import cards from '../../data/gundamCards.json';
+
 class manager {
 
-    static createGame(width, height) {
-        return {};
+    static createGame(game) {
+        game.cards = cards.cards;
+        setup.createGame(game);
     }
 }
 

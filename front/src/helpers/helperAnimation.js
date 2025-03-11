@@ -16,11 +16,13 @@ class helperAnimation {
                 const currentX = anim.from.x + (anim.to.x - anim.from.x) * easedProgress;
                 const currentY = anim.from.y + (anim.to.y - anim.from.y) * easedProgress;
                 const currentHeight = anim.from.height + (anim.to.height - anim.from.height) * easedProgress;
+                const currentWidth = anim.from.width + (anim.to.width - anim.from.width) * easedProgress;
                 const currentRotation = anim.from.rotation + (anim.to.rotation - anim.from.rotation) * easedProgress;
 
                 anim.element.style.left = currentX + "px";
                 anim.element.style.top = currentY + "px";
                 anim.element.style.height = currentHeight + "px";
+                anim.element.style.width = currentWidth + "px";
                 anim.element.style.transform = `rotate(${currentRotation}deg)`;
             });
 
@@ -59,7 +61,8 @@ class helperAnimation {
                 x: this.pxStringToInt(element.style.left), 
                 y: this.pxStringToInt(element.style.top), 
                 rotation: element.style.rotation,
-                height: element.style.height
+                height: element.style.height,
+                width: element.style.width
             };
             from.rotation = from.rotation ?? 0;
             from.height = from.height ?? element.clientHeight;
