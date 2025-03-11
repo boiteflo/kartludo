@@ -41,7 +41,7 @@
         <div v-for="card in cards" :key="'B' + card.index" @dragover="onDragOver" @drop="onDrop($event, card)">
             <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable"
                 @mouseover="showCardMouseOver(card)" @click="showCard(card)" @dragover="onDragOver"
-                @drop="onDrop($event, card)">
+                @drop="onDrop($event, card)" draggable="true">
             </gameCard>
         </div>
 
@@ -148,13 +148,12 @@ export default {
             setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 0 }, { height: 100 }, false, animationTime); }, 10);
             setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 100 }, { height: 0 }, false, animationTime); }, 4.5 * (animationTime + 10));
         },
-        refreshGame() { //animate=true
+        refreshGame(animate = true) {
             this.cards = this.game.cards;
             setTimeout(() => { this.setDrag(); }, 10);
             this.refreshG++;
-            /*
             if (animate)
-                setTimeout(() => { this.beginAnimation(); }, 1);*/
+                setTimeout(() => { this.beginAnimation(); }, 1);
         },
         beginAnimation() {
             const cardsToAnimate = this.cards.filter(x => x.to);
@@ -168,18 +167,30 @@ export default {
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
         },
         endAnimation() {
+            this.cards.forEach(card => {
+                delete (card.to);
+                card.position = card.positionOld ?? card.position;
+            });
             //this.gameWorld = gameGundamManager.endAnimation();
             this.freeze = false;
-            this.refreshGame(false);
+            //this.refreshGame(false);
         },
         nextTurn() {
 
         },
         playCardOnZone(card, drop) {
             alert(card.name + ' in ' + drop.zone);
+            card.to = this.clone(card.position);
+            card.positionOld = this.clone(card.position);
+            card.position = { ...card.position, ...card.positionDrag };
+            this.beginAnimation();
         },
         playCardOnCard(card, cardDrop) {
             alert(card.name + ' in ' + cardDrop.name);
+            card.to = this.clone(card.position);
+            card.positionOld = this.clone(card.position);
+            card.position = { ...card.position, ...card.positionDrag };
+            this.beginAnimation();
         },
         getCard(index) {
             return this.cards.find(x => x.index == index);
@@ -189,7 +200,9 @@ export default {
             this.cards.forEach(card => {
                 const id = 'C' + card.index;
                 this.addEvent(id, 'dragstart', (event) => this.startDrag(event, card));
-                this.addEvent(id, 'touchstart', () => this.touchStart(card));
+                this.addEvent(id, 'dragover', (event) => this.moveCard(event, card));
+                this.addEvent(id, 'touchmove', (event) => this.moveCard(event, card));
+                this.addEvent(id, 'touchstart', (event) => this.touchStart(event, card));
                 this.addEvent(id, 'touchend', (event) => this.touchEnd(event, card));
             });
         },
@@ -198,49 +211,80 @@ export default {
             if (element)
                 element.addEventListener(event, (event) => action(event));
         },
+        moveCard(event, card) {
+            if (!card.moving) return;
+
+            // Gestion du touch ou de la souris
+            let x = event.touches ? event.touches[0].clientX : event.clientX;
+            let y = event.touches ? event.touches[0].clientY : event.clientY;
+
+            x -= card.position.width / 2;
+            y -= card.position.height / 2;
+
+            const element = document.getElementById('C' + card.index);
+            if (element) {
+                element.style.left = `${x}px`;
+                element.style.top = `${y}px`;
+                card.positionDrag = { x, y };
+            }
+        },
         startDrag(event, card) {
             event.dataTransfer.dropEffect = 'move';
             event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.setDragImage(new Image(), 0, 0);
             event.dataTransfer.setData('card', card.index);
-        },
-        touchStart(card) {
-            card.touchAt = Date.now();
-        },
-        touchEnd(event, card) {
-            const touch = event.changedTouches[0];
-            let zoneOrCard =this.getTouchZoneOrCard(touch.clientX, touch.clientY);
-            if(!zoneOrCard || card.index == zoneOrCard.index) 
-                return;
-
-            if(zoneOrCard.zone) 
-                this.playCardOnZone(card, zoneOrCard);
-            else
-                this.playCardOnCard(card, zoneOrCard);
-        },
-        getTouchZoneOrCard(x, y) {
-            const card = this.cards.find(card=> this.isInside(x,y,card.position));
-            const zone = card ? null : this.game.fields.find(zone=> this.isInside(x,y,zone));
-            return card || zone;
-        },
-        isInside(x,y, box){
-            const minX = box.x;
-            const minY=box.y;
-            const maxX = minX+box.width;
-            const maxY = minY+box.height;
-            return (x >= minX && x<= maxX) && (y >= minY && y <= maxY);
+            card.moving = true;
+            event.target.style.zIndex = "1000";
         },
         onDragOver(event) {
             event.preventDefault();
         },
         onDrop(event, drop) {
             event.preventDefault();
+            event.target.style.zIndex = "auto";
             const data = event.dataTransfer.getData("card");
             const card = this.getCard(data);
+            card.moving = false;
             if (drop.zone)
                 this.playCardOnZone(card, drop);
             else
                 this.playCardOnCard(card, drop);
-        }
+        },
+
+
+        // --------- Touch
+        touchStart(event, card) {
+            card.moving = true;
+            event.target.style.zIndex = "1000";
+        },
+        touchEnd(event, card) {
+            card.moving = false;
+            event.target.style.zIndex = "auto";
+            const touch = event.changedTouches[0];
+            let zoneOrCard = this.getTouchZoneOrCard(touch.clientX, touch.clientY);
+            if (!zoneOrCard || card.index == zoneOrCard.index)
+                return;
+
+            if (zoneOrCard.zone)
+                this.playCardOnZone(card, zoneOrCard);
+            else
+                this.playCardOnCard(card, zoneOrCard);
+        },
+        getTouchZoneOrCard(x, y) {
+            const card = this.cards.find(card => this.isInside(x, y, card.position));
+            const zone = card ? null : this.game.fields.find(zone => this.isInside(x, y, zone));
+            return card || zone;
+        },
+        isInside(x, y, box) {
+            const minX = box.x;
+            const minY = box.y;
+            const maxX = minX + box.width;
+            const maxY = minY + box.height;
+            return (x >= minX && x <= maxX) && (y >= minY && y <= maxY);
+        },
+
+        // Utils
+        clone(obj) { return Object.assign({}, obj); }
     }
 }
 </script>
