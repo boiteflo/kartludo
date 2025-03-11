@@ -181,9 +181,17 @@ export default {
         playCardOnCard(card, cardDrop) {
             alert(card.name + ' in ' + cardDrop.name);
         },
+        getCard(index) {
+            return this.cards.find(x => x.index == index);
+        },
         // --------- Drag and drop
         setDrag() {
-            this.cards.forEach(card => { this.addEvent('C' + card.index, 'dragstart', (event) => this.startDrag(event, card)); });
+            this.cards.forEach(card => {
+                const id = 'C' + card.index;
+                this.addEvent(id, 'dragstart', (event) => this.startDrag(event, card));
+                this.addEvent(id, 'touchstart', () => this.touchStart(card));
+                this.addEvent(id, 'touchend', (event) => this.touchEnd(event, card));
+            });
         },
         addEvent(id, event, action) {
             const element = document.getElementById(id);
@@ -195,11 +203,34 @@ export default {
             event.dataTransfer.effectAllowed = 'move';
             event.dataTransfer.setData('card', card.index);
         },
+        touchStart(card) {
+            card.touchAt = Date.now();
+        },
+        touchEnd(event, card) {
+            const touch = event.changedTouches[0];
+            let zoneOrCard =this.getTouchZoneOrCard(touch.clientX, touch.clientY);
+            if(!zoneOrCard || card.index == zoneOrCard.index) 
+                return;
+
+            if(zoneOrCard.zone) 
+                this.playCardOnZone(card, zoneOrCard);
+            else
+                this.playCardOnCard(card, zoneOrCard);
+        },
+        getTouchZoneOrCard(x, y) {
+            const card = this.cards.find(card=> this.isInside(x,y,card.position));
+            const zone = card ? null : this.game.fields.find(zone=> this.isInside(x,y,zone));
+            return card || zone;
+        },
+        isInside(x,y, box){
+            const minX = box.x;
+            const minY=box.y;
+            const maxX = minX+box.width;
+            const maxY = minY+box.height;
+            return (x >= minX && x<= maxX) && (y >= minY && y <= maxY);
+        },
         onDragOver(event) {
             event.preventDefault();
-        },
-        getCard(index) {
-            return this.cards.find(x => x.index == index);
         },
         onDrop(event, drop) {
             event.preventDefault();
