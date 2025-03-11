@@ -56,11 +56,6 @@
         <!-- Card center -->
         <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)">
         </gameCard>
-
-        <!-- width - height -->
-        <div class="absolute" style="right:100px; bottom:25px">
-            {{ $vuetify.breakpoint.width }} - {{ $vuetify.breakpoint.height }}
-        </div>
     </div>
 
 </template>
@@ -92,6 +87,7 @@ export default {
         title: '',
     }),
     mounted() {
+        document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
             this.refreshG++;
         });
