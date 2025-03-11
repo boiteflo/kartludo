@@ -65,6 +65,13 @@
 
 </template>
 
+<style scoped>
+html,
+body {
+    overflow: hidden;
+}
+</style>
+
 <script>
 import helperAnimation from '../helpers/helperAnimation';
 import gameManager from './gameManager';
