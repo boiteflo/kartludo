@@ -2,7 +2,6 @@ import global from './global';
 import setup from './setup';
 import effects from './effects';
 import gridAndSize from './gridAndSize';
-import cards from '../../data/gundamCards.json';
 
 class manager {
 
@@ -14,8 +13,6 @@ class manager {
 
         return result;
     }
-
-    static getCards(){return cards.cards;}
 
     static nextTurn() {
         effects.removeOneTurnEffect(global.world.cards);

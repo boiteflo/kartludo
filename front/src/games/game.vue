@@ -13,9 +13,13 @@
         </div>
 
         <!-- field -->
-        <div v-for="box in game?.fields" :key="box.name" :id="box.name" class="absolute bg" @dragover="onDragOver"
-            @drop="onDrop($event, box)" :style="getFieldStyle(box.x, box.y, box.width, box.height)">
-            {{ box.zone }}
+        <div v-for="box in game?.fields" :key="box.zone" :id="box.zone"
+            :class="{ absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
+                bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+             }"
+            :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
+            @drop="onDrop($event, box)">
+            {{ box.text }}
         </div>
 
         <!-- Show card -->
@@ -45,6 +49,11 @@
             </gameCard>
         </div>
 
+        <v-btn target="_blank" text class="bg m5px absolute" @click="nextTurn">
+            <v-icon>mdi-arrow-right-thin</v-icon>
+            End Turn
+        </v-btn>
+
         <!-- Title -->
         <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px;">
             <div class="relative">
@@ -56,6 +65,10 @@
         <!-- Card center -->
         <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)">
         </gameCard>
+
+        <div class="absolute hide">
+            hello world
+        </div>
     </div>
 
 </template>
@@ -65,6 +78,7 @@ html,
 body {
     overflow: hidden;
 }
+
 body {
     position: relative;
 }
@@ -73,7 +87,7 @@ body {
 <script>
 import helperAnimation from '../helpers/helperAnimation';
 import gameManager from './gameManager';
-import gundamManager from './gundamold/manager';
+import gundamManager from './gundam/manager';
 import gameCard from './card';
 
 export default {
@@ -97,9 +111,75 @@ export default {
         this.start();
     },
     methods: {
-        showText(text) { alert(text); },
-        getGridX(i) { return this.game?.grid['x' + i]; },
-        getGridY(i) { return this.game?.grid['y' + i]; },
+        start() {
+            this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
+            this.refreshGame();
+        },
+        nextTurn() {
+            this.game = gameManager.nextTurn(this.game);
+            this.refreshGame();
+        },
+        continue(){
+            this.game = gameManager.handleTasks(this.game);
+            if(this.game.refresh)
+                this.refreshGame();
+        },
+        playCardOnZone(card, drop) {
+            alert(card.name + ' in ' + drop.zone);
+            card.to = this.clone(card.position);
+            card.positionOld = this.clone(card.position);
+            card.position = { ...card.position, ...card.positionDrag };
+            this.beginAnimation();
+        },
+        playCardOnCard(card, cardDrop) {
+            alert(card.name + ' in ' + cardDrop.name);
+            card.to = this.clone(card.position);
+            card.positionOld = this.clone(card.position);
+            card.position = { ...card.position, ...card.positionDrag };
+            this.beginAnimation();
+        },
+        refreshGame() {
+            this.cards = this.game.cards;
+            setTimeout(() => { this.setDrag(); }, 10);
+
+            if (this.game.showTitle)
+                this.showTitle(this.game.showTitle);
+
+            this.refreshG++;
+            setTimeout(() => { this.beginAnimation(); }, 10);
+        },
+        beginAnimation() {
+            let animationTime = 500;
+            const cardsToAnimate = this.cards.filter(x => x.to);
+            animationTime = cardsToAnimate.length < 1 ? 10 : 500;
+            setTimeout(() => { this.endAnimation(); }, animationTime + 10);
+            if (cardsToAnimate.length < 1) 
+                return;
+
+            this.freeze = true;
+            const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
+            helperAnimation.animateMultiple(animations, animationTime);
+
+        },
+        endAnimation() {
+            this.cards.forEach(card => {
+                if (card.positionOld) card.position = card.positionOld;
+                if (card.to) card.position = card.to;
+                delete (card.to);
+            });
+            this.freeze = false;
+            delete (this.game.showTitle);
+            if(this.game.wait)
+                setTimeout(() => { this.continue(); }, this.game.wait);            
+        },
+        showTitle(text) {
+            this.title = text;
+            const animationTime = 200;
+            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 0 }, { height: 100 }, false, animationTime); }, 10);
+            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 100 }, { height: 0 }, false, animationTime); }, 4.5 * (animationTime + 10));
+        },
+
+        // --------- showCard
         showCardMouseOver(card) {
             if (this.aside)
                 this.showCard(card);
@@ -131,76 +211,7 @@ export default {
             }, 510);
 
         },
-        getGridPlace(x, y) {
-            return {
-                width: this.game?.grid.box.width + 'px', height: this.game?.grid.box.height + 'px',
-                left: this.getGridX(x) + 'px', top: this.getGridY(y) + 'px'
-            };
-        },
-        getFieldStyle(x, y, w, h) {
-            return {
-                width: w + 'px', height: h + 'px',
-                left: x + 'px', top: y + 'px'
-            };
-        },
-        start() {
-            this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
-            this.refreshGame();
-            this.showTitle('Draw phase');
-        },
-        showTitle(text) {
-            this.title = text;
-            const animationTime = 250;
-            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 0 }, { height: 100 }, false, animationTime); }, 10);
-            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 100 }, { height: 0 }, false, animationTime); }, 4.5 * (animationTime + 10));
-        },
-        refreshGame(animate = true) {
-            this.cards = this.game.cards;
-            setTimeout(() => { this.setDrag(); }, 10);
-            this.refreshG++;
-            if (animate)
-                setTimeout(() => { this.beginAnimation(); }, 1);
-        },
-        beginAnimation() {
-            const cardsToAnimate = this.cards.filter(x => x.to);
-            if (cardsToAnimate.length < 1) return;
 
-            this.freeze = true;
-            const animationTime = 500;
-            const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
-            helperAnimation.animateMultiple(animations, animationTime);
-
-            setTimeout(() => { this.endAnimation(); }, animationTime + 10);
-        },
-        endAnimation() {
-            this.cards.forEach(card => {
-                delete (card.to);
-                card.position = card.positionOld ?? card.position;
-            });
-            //this.gameWorld = gameGundamManager.endAnimation();
-            this.freeze = false;
-            //this.refreshGame(false);
-        },
-        nextTurn() {
-
-        },
-        playCardOnZone(card, drop) {
-            alert(card.name + ' in ' + drop.zone);
-            card.to = this.clone(card.position);
-            card.positionOld = this.clone(card.position);
-            card.position = { ...card.position, ...card.positionDrag };
-            this.beginAnimation();
-        },
-        playCardOnCard(card, cardDrop) {
-            alert(card.name + ' in ' + cardDrop.name);
-            card.to = this.clone(card.position);
-            card.positionOld = this.clone(card.position);
-            card.position = { ...card.position, ...card.positionDrag };
-            this.beginAnimation();
-        },
-        getCard(index) {
-            return this.cards.find(x => x.index == index);
-        },
         // --------- Drag and drop
         setDrag() {
             this.cards.forEach(card => {
@@ -227,12 +238,10 @@ export default {
             x -= card.position.width / 2;
             y -= card.position.height / 2;
 
-            const element = document.getElementById('C' + card.index);
-            if (element) {
-                element.style.left = `${x}px`;
-                element.style.top = `${y}px`;
-                card.positionDrag = { x, y };
-            }
+            const element = event.target;
+            element.style.left = `${x}px`;
+            element.style.top = `${y}px`;
+            card.positionDrag = { x, y };
         },
         startDrag(event, card) {
             event.dataTransfer.dropEffect = 'move';
@@ -247,10 +256,17 @@ export default {
         },
         onDrop(event, drop) {
             event.preventDefault();
+            const x = event.clientX || event.pageX || (event.touches ? event.touches[0].clientX : null);
+            const y = event.clientY || event.pageY || (event.touches ? event.touches[0].clientY : null);
+
             event.target.style.zIndex = "auto";
             const data = event.dataTransfer.getData("card");
             const card = this.getCard(data);
             card.moving = false;
+
+            if (drop.index === card.index)
+                drop = this.getTouchZoneOrCard(x, y, card.index);
+
             if (drop.zone)
                 this.playCardOnZone(card, drop);
             else
@@ -267,7 +283,7 @@ export default {
             card.moving = false;
             event.target.style.zIndex = "auto";
             const touch = event.changedTouches[0];
-            let zoneOrCard = this.getTouchZoneOrCard(touch.clientX, touch.clientY);
+            let zoneOrCard = this.getTouchZoneOrCard(touch.clientX, touch.clientY, card.index);
             if (!zoneOrCard || card.index == zoneOrCard.index)
                 return;
 
@@ -276,8 +292,8 @@ export default {
             else
                 this.playCardOnCard(card, zoneOrCard);
         },
-        getTouchZoneOrCard(x, y) {
-            const card = this.cards.find(card => this.isInside(x, y, card.position));
+        getTouchZoneOrCard(x, y, ignoreIndex) {
+            const card = this.cards.find(card => card.index !== ignoreIndex && this.isInside(x, y, card.position));
             const zone = card ? null : this.game.fields.find(zone => this.isInside(x, y, zone));
             return card || zone;
         },
@@ -290,7 +306,25 @@ export default {
         },
 
         // Utils
-        clone(obj) { return Object.assign({}, obj); }
+        clone(obj) { return Object.assign({}, obj); },
+        showText(text) { alert(text); },
+        getGridX(i) { return this.game?.grid['x' + i]; },
+        getGridY(i) { return this.game?.grid['y' + i]; },
+        getCard(index) {
+            return this.cards.find(x => x.index == index);
+        },
+        getGridPlace(x, y) {
+            return {
+                width: this.game?.grid.box.width + 'px', height: this.game?.grid.box.height + 'px',
+                left: this.getGridX(x) + 'px', top: this.getGridY(y) + 'px'
+            };
+        },
+        getFieldStyle(x, y, w, h) {
+            return {
+                width: w + 'px', height: h + 'px',
+                left: x + 'px', top: y + 'px'
+            };
+        }
     }
 }
 </script>

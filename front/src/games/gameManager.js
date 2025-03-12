@@ -1,65 +1,64 @@
 import gameTask from './gameTask';
-import positioner from './positioner';
 import global from './global';
+import setup from './setup';
 
 class gameManager {
 
     static createGame(manager, width, height) {
-        global.game = {cards:[], tasks:[], popup:[]};
-        global.cards = manager.getCards();
-        gameTask.addTasks(global.game.tasks, [gameTask.refreshHand(true), gameTask.refreshHand(false)]);
-        this.nextTurn();
+        setup.createGame(manager, width, height);
+        global.game.manager = manager;
+        manager.setup(global.game);
+        return this.nextTurn(global.game);
+    }
 
-        global.grid = positioner.createGrid(width, height);
-        global.game.grid = global.grid;
+    static nextTurn(game) {
+        global.isPlayer1 = !global.isPlayer1;
+        game.isPlayer1 = global.isPlayer1;
+        const playerId = global.isPlayer1 ? '1' : '2';     
 
-        global.game.player1 = {deck:[], shield:[], hand:[], field:[], trash:[], isPlayer1:true};
-        global.game.player2 = {deck:[], shield:[], hand:[], field:[], trash:[], isPlayer1:false};
+        gameTask.addTasks(game.tasks, [
+            { id: gameTask.taskShowTitle, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay:1200 },
+            { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay:500},
+            { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay:500}
+        ]);
 
-        global.game.player1.positions = positioner.getPositions(global.grid, true);
-        global.game.player2.positions = positioner.getPositions(global.grid, false);
+        return this.handleTasks(game);
+    }
 
-        global.game.fields = positioner.createField(global.game.player1.positions, global.game.player2.positions);
+    static handleTasks(game) {
+        let task = game.tasks.splice(0, 1)[0];
+        game.refresh= task ? true : false;
+        let i =0;
+        
+        while (task && i < 100) {
+            const player = task.isPlayer1 ? game.player1 : game.player2;
 
-        for(let i=0; i<5; i++){
-            this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, true);
-            this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationHand, true);
-            this.spawn(global.game.player2, this.createCard('GD01-028'), global.locationDeck, global.locationField, true);
+            if (task.id === gameTask.taskRefreshField)
+                game.manager.refreshFieldAndHand(player);
+
+            else if (task.id === gameTask.taskDrawToCenter){
+                const card = global.spawn(player, null, global.locationDeck, global.locationHand);
+                card.to = global.grid.center;
+                global.game.lastCard = card;
+            }
+
+            else if (task.id === gameTask.taskDrawToHand){
+                game.manager.refreshFieldAndHand(player);
+            }
+
+            else if (task.id === gameTask.taskShowTitle)
+                game.showTitle = task.value;
+
+            if(task.delay){
+                game.wait = task.delay;
+                return game;
+            }
+
+            task = game.tasks.splice(0, 1)[0];
+            i++;
         }
         
-        this.spawn(global.game.player1, this.createCard('GD01-028'), global.locationDeck, global.locationHand, true);
-        
-        positioner.refresh(global.game.player1, global.game.player1.hand, global.locationHand);
-        positioner.refresh(global.game.player2, global.game.player2.hand, global.locationHand);
-        positioner.refresh(global.game.player1, global.game.player1.field, global.locationField);
-        positioner.refresh(global.game.player2, global.game.player2.field, global.locationField);
-
-        return global.game;
-    }
-
-    static createCard(id){
-        const card = global.clone(global.cards.find(x => x.id === id));
-        card.index= global.getNextIndex();
-        return card;
-    }
-
-    static spawn(player, card, locationFrom, locationTo, ignore){
-        const from = global.getLocationArrayProperty(locationFrom);
-        const to = global.getLocationArrayProperty(locationTo);
-
-        player[from] = global.removeByIndex(player[from], card.index);
-        player[to] = global.addIn(player[to], card);
-
-        global.game.cards = global.addIn(global.game.cards, card);
-        
-        if(!ignore){
-            positioner.refresh(player, player[from], locationFrom);
-            positioner.refresh(player, player[to], locationTo);
-        }
-    }
-
-    static nextTurn() {
-        //console.log('test');
+        return game;
     }
 }
 

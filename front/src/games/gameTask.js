@@ -1,9 +1,9 @@
 class gameTask {
 
-    static task = {
-        refreshHand: 0,
-        refreshField: 1
-    };
+    static taskRefreshField = 1;
+    static taskShowTitle = 2;
+    static taskDrawToCenter = 3;
+    static taskDrawToHand = 4;
 
     static addTasks(list, tasks){
         tasks.forEach(task => {
@@ -16,11 +16,13 @@ class gameTask {
         return list.find(x=> this.isEqual(x, task));
     }
     static isEqual(task1, task2){
-        return task1.task === task2.task && task1.isPlayer1 === task1.isPlayer1;
+        const result = task1.id === task2.id 
+            && task1.isPlayer1 === task2.isPlayer1
+            && task1.value === task2.value;
+        return result;
     }
 
-    static refreshHand(isPlayer1=true) {return {'task':this.task.refreshHand, 'isPlayer1': isPlayer1}; }
-    static refreshField(isPlayer1=true) {return {'task':this.task.refreshField, 'isPlayer1': isPlayer1}; }
+    static refreshField(isPlayer1=true) {return {id:this.taskRefreshField, isPlayer1: isPlayer1}; }
 }
 
 

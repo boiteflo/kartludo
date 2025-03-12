@@ -84,7 +84,7 @@ class setup {
             x.isPlayer1 = isPlayer1;
             x.location = global.locationDeck;
             global.index++;
-        })
+        });
         return result;
     }
 }
