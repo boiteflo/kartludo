@@ -3,15 +3,26 @@ import global from '../global';
 import positioner from '../positioner';
 
 class manager {
-    static getCards(){return cards.cards;}
-    static getDeckLenth(){return 50;}
-    static getHandStartLength(){return 5;}
+    static getCards() { return cards.cards; }
+    static getDeckLenth() { return 50; }
+    static getHandStartLength() { return 5; }
 
-    static setup(game){
+    static setup(game) {
+        game.player1 = {
+            ...game.player1,
+            base: [], shield: [],
+            resAString: "0", resourcesMax: 0, resourcesRemaining: 0, resourcesEx: 0,
+        };
+        game.player2 = {
+            ...game.player2,
+            base: [], shield: [],
+            resAString: "0", resourcesMax: 0, resourcesRemaining: 0, resourcesEx: 0,
+        };
+
         this.createDefaultBase(game.player1);
         this.createDefaultBase(game.player2);
-        
-        for(let i=0; i <6; i++){
+
+        for (let i = 0; i < 6; i++) {
             global.spawnNotShown(game.player1, null, global.locationDeck, global.locationShield);
             global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
         }
@@ -23,10 +34,20 @@ class manager {
         return card;
     }
 
+    static nextTurn() {
+        const player = global.getPlayerTurn();
+        player.resource
+    }
+
     static refreshFieldAndHand(player) {
         positioner.refresh(player.hand, player.positions.hand);
-        positioner.refresh(player.field,player.positions.field);
+        positioner.refresh(player.field, player.positions.field);
         positioner.refresh(player.base, player.positions.base, true);
+
+        global.game.cards.forEach(card => card.selectable = false);
+        player.hand.forEach(card => {
+            card.selectable = true;
+        });
 
         player.positions.deck.text = player.deck.length;
         player.positions.shield.text = player.shield.length;

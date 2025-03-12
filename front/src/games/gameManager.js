@@ -22,6 +22,8 @@ class gameManager {
             { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay:500}
         ]);
 
+        game.manager.nextTurn();
+
         return this.handleTasks(game);
     }
 

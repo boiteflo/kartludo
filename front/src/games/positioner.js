@@ -5,7 +5,7 @@ class positioner {
     static createGrid(width, height) {
         const grid = {};
         grid.width = width;
-        grid.height = height-50;
+        grid.height = height-200;
         grid.border = 5;
         grid.border2 = grid.border * 2;
         const divide = 16;

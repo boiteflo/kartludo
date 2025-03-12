@@ -32,20 +32,8 @@ class setup {
         let deck = this.createDeck(isPlayer1);
         deck = global.sortRandom(deck);
         const result = {
-            deck,
-            position,
-            isPlayer1,
-            number : isPlayer1 ? 1 :2,
-            hand: [],
-            field: [],
-            shield: [],
-            grave: [],
-            resAString: "0",
-            resourcesMax: 0,
-            resourcesRemaining: 0,
-            resourcesEx: 0,
-            resBString: "0",
-
+            deck,  position, isPlayer1, number : isPlayer1 ? 1 :2,
+            hand: [], field: [], trash: []
         };
         result.base = this.createDefaultBase(result);
         return result;
