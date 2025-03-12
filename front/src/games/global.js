@@ -40,7 +40,7 @@ class global {
     static spawn(player, card, locationFrom, locationTo) {
         const cardSpawn = this.spawnNotShown(player,card, locationFrom, locationTo);
         global.game.cards = global.addIn(global.game.cards, cardSpawn);
-        gameTask.addTasks(global.game.tasks, [gameTask.refreshField(player.isPlayer1)]);
+        gameTask.addTasks(global.game.tasks, [{id:gameTask.taskRefreshField, isPlayer1:player.isPlayer1}]);
         return cardSpawn;
     }
 
@@ -56,6 +56,18 @@ class global {
         card.position = card.position ? card.position : this.getDefaultPosition(player, from);
 
         player[to] = global.addIn(player[to], card);
+
+        return card;
+    }
+
+    static move(player, card, locationFrom, locationTo) {
+        const from = global.getLocationArrayProperty(locationFrom);
+        const to = global.getLocationArrayProperty(locationTo);
+
+        player[from] = global.removeByIndex(player[from], card);
+        player[to] = global.addIn(player[to], card);
+
+        gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1}]);
 
         return card;
     }

@@ -21,8 +21,6 @@ class gameTask {
             && task1.value === task2.value;
         return result;
     }
-
-    static refreshField(isPlayer1=true) {return {id:this.taskRefreshField, isPlayer1: isPlayer1}; }
 }
 
 

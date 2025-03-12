@@ -1,6 +1,7 @@
 import cards from '../../data/gundamCards.json';
 import global from '../global';
 import positioner from '../positioner';
+import cardHandler from './cardHandler';
 
 class manager {
     static getCards() { return cards.cards; }
@@ -11,12 +12,12 @@ class manager {
         game.player1 = {
             ...game.player1,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 0, resourcesRemaining: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 0, resourcesRemaining: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
@@ -26,6 +27,9 @@ class manager {
             global.spawnNotShown(game.player1, null, global.locationDeck, global.locationShield);
             global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
         }
+
+        const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
+        playerOpponent.resourcesEx+=1;
     }
 
     static createDefaultBase(player) {
@@ -36,7 +40,9 @@ class manager {
 
     static nextTurn() {
         const player = global.getPlayerTurn();
-        player.resource
+        player.resourcesMax+=1;
+        player.resourcesAvailable = player.resourcesMax + player.resourcesEx;
+        cardHandler.nextTurn(player);
     }
 
     static refreshFieldAndHand(player) {
@@ -44,15 +50,20 @@ class manager {
         positioner.refresh(player.field, player.positions.field);
         positioner.refresh(player.base, player.positions.base, true);
 
-        global.game.cards.forEach(card => card.selectable = false);
-        player.hand.forEach(card => {
-            card.selectable = true;
-        });
+        global.game.cards.forEach(card => card.selectable = false);        
+
+        cardHandler.setSelectable(player);
 
         player.positions.deck.text = player.deck.length;
         player.positions.shield.text = player.shield.length;
         player.positions.trash.text = player.trash.length;
-        player.positions.resource.text = '1/1';
+        player.positions.resource.text = player.resourcesAvailable + '/' + player.resourcesMax;
+    }
+
+    static playCard(game, card1, card2, zone){     
+        const player = global.getPlayerTurn(); 
+        cardHandler.play(player, card1, card2, zone);
+        return game;
     }
 }
 

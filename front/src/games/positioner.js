@@ -5,7 +5,7 @@ class positioner {
     static createGrid(width, height) {
         const grid = {};
         grid.width = width;
-        grid.height = height-200;
+        grid.height = height-0;
         grid.border = 5;
         grid.border2 = grid.border * 2;
         const divide = 16;
@@ -40,7 +40,7 @@ class positioner {
                 deck: this.createZone(isPlayer1, grid.x15, grid.y10, grid.x0, grid.y5, grid.box.width, grid.box.height, 'deck', global.locationDeck),
                 trash: this.createZone(isPlayer1, grid.x15, grid.y11, grid.x0, grid.y4, grid.box.width, grid.box.height, 'trash', global.locationTrash),
                 resource: this.createZone(isPlayer1, grid.x15, grid.y12, grid.x0, grid.y3, grid.box.width, grid.box.height, 'res', global.locationResource),
-                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x0, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
+                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x1, grid.y0, grid.hand.width - 10-(grid.x1), grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x1, grid.y3, grid.field.width, grid.field.height, 'field', global.locationField)
             };
         else
@@ -79,6 +79,7 @@ class positioner {
         const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length);
         cards.forEach((card, index) => {
             card.to = this.getCardPosition(index, cards.length, position, cardSize);
+            card.location = position.location;
         });
     }
 

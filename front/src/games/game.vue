@@ -13,11 +13,10 @@
         </div>
 
         <!-- field -->
-        <div v-for="box in game?.fields" :key="box.zone" :id="box.zone"
-            :class="{ absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
-                bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
-             }"
-            :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
+        <div v-for="box in game?.fields" :key="box.zone" :id="box.zone" :class="{
+            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
+            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+        }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
         </div>
@@ -49,9 +48,13 @@
             </gameCard>
         </div>
 
-        <v-btn target="_blank" text class="bg m5px absolute" @click="nextTurn">
-            <v-icon>mdi-arrow-right-thin</v-icon>
-            End Turn
+        <div class="bgYellow absolute cirlce10px" 
+            :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
+        </div>
+
+        <v-btn target="_blank" text :class="{ bg: true, absolute: true, shine: !freeze, fontSize12:true }" @click="nextTurn"
+            :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px', 'min-width': '0px' }">
+            End <br>Turn
         </v-btn>
 
         <!-- Title -->
@@ -63,7 +66,8 @@
         </div>
 
         <!-- Card center -->
-        <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)">
+        <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)"
+            style="z-index: 12;">
         </gameCard>
 
         <div class="absolute hide">
@@ -119,24 +123,19 @@ export default {
             this.game = gameManager.nextTurn(this.game);
             this.refreshGame();
         },
-        continue(){
-            this.game = gameManager.handleTasks(this.game);
-            if(this.game.refresh)
+        continue() {
+            this.freeze = false;
+            this.game = gameManager.continue(this.game);
+            if (this.game.refresh)
                 this.refreshGame();
         },
         playCardOnZone(card, drop) {
-            alert(card.name + ' in ' + drop.zone);
-            card.to = this.clone(card.position);
-            card.positionOld = this.clone(card.position);
-            card.position = { ...card.position, ...card.positionDrag };
-            this.beginAnimation();
+            this.game = gameManager.playCard(this.game, card, null, drop);
+            this.refreshGame();
         },
         playCardOnCard(card, cardDrop) {
-            alert(card.name + ' in ' + cardDrop.name);
-            card.to = this.clone(card.position);
-            card.positionOld = this.clone(card.position);
-            card.position = { ...card.position, ...card.positionDrag };
-            this.beginAnimation();
+            this.game = gameManager.playCard(this.game, card, cardDrop, null);
+            this.refreshGame();
         },
         refreshGame() {
             this.cards = this.game.cards;
@@ -152,25 +151,19 @@ export default {
             let animationTime = 500;
             const cardsToAnimate = this.cards.filter(x => x.to);
             animationTime = cardsToAnimate.length < 1 ? 10 : 500;
+            this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
-            if (cardsToAnimate.length < 1) 
+
+            if (cardsToAnimate.length < 1)
                 return;
 
-            this.freeze = true;
             const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
             helperAnimation.animateMultiple(animations, animationTime);
 
         },
         endAnimation() {
-            this.cards.forEach(card => {
-                if (card.positionOld) card.position = card.positionOld;
-                if (card.to) card.position = card.to;
-                delete (card.to);
-            });
-            this.freeze = false;
-            delete (this.game.showTitle);
-            if(this.game.wait)
-                setTimeout(() => { this.continue(); }, this.game.wait);            
+            const wait = this.game.wait ? this.game.wait : 1;
+            setTimeout(() => { this.continue() }, wait);
         },
         showTitle(text) {
             this.title = text;
