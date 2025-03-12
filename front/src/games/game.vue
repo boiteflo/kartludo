@@ -65,6 +65,9 @@ html,
 body {
     overflow: hidden;
 }
+body {
+    position: relative;
+}
 </style>
 
 <script>

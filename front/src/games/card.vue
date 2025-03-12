@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute bgYellow" :style="{
+    <div class="absolute bgYellow" @click="$emit('click', card)" :style="{
       left: card.position.x + 'px',
       top: card.position.y + 'px',
       width: card.position.width + 'px',
@@ -12,7 +12,7 @@
       <img v-else :class="{ shine: shine, w100p: true, h100p: true }" draggable="false"
         :style="{ 'object-fit': 'cover', 'object-position': card.bgposition, 'pointer-events':'none' }"
         :src="require('@/assets/' + folder + card.id + '.webp')" @mouseover="$emit('mouseover', card)"
-        @click="$emit('click', card)" @contextmenu.prevent="$emit('clickright', card)" />
+         @contextmenu.prevent="$emit('clickright', card)" />
         <div v-if="!hidestat && (card.ap || card.hp)" class="absolute bg cirlce10px textVerticalCenter" style="width:25px; height:20px; top:-5px; right:-5px; font-size:8px">
           {{card.ap}} - {{card.hp}}
         </div>
