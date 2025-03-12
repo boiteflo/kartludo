@@ -4,6 +4,10 @@ class gameTask {
     static taskShowTitle = 2;
     static taskDrawToCenter = 3;
     static taskDrawToHand = 4;
+    static taskEndAnimation = 5;
+    static taskCardToCenter = 6;
+    static taskCardToTrash = 7;
+    static taskDeleteCard=8;
 
     static addTasks(list, tasks){
         tasks.forEach(task => {

@@ -53,7 +53,9 @@ class global {
         else
             player[from] = global.removeByIndex(player[from], card.index);
 
-        card.position = card.position ? card.position : this.getDefaultPosition(player, from);
+        card.position = player.positions[from];
+        card.isPlayer1 = player.isPlayer1;
+        card.active = true;
 
         player[to] = global.addIn(player[to], card);
 
@@ -86,14 +88,10 @@ class global {
     // Card
     static setActive(card, active) {
         card.active = active;
+        card.canAttack=active;
         const degree = card.active ? 0 : 90;
         if (!card.to) card.to = card.position;
-        card.to = { x: card.to.x, y: card.to.y, rotation: degree };
-    }
-
-    static getDefaultPosition(player, propertyFrom) {
-        const position = player.positions[propertyFrom];
-        return position;
+        card.to.rotation= degree;
     }
 
     // Player Turn
@@ -103,8 +101,18 @@ class global {
     static getPlayerTurnOpponent() {
         return global.isPlayer1 ? global.game.player2 : global.game.player1;
     }
+    static getPlayer(isPlayer1){
+        return isPlayer1 ? global.game.player1 : global.game.player2;
+    }
+    static getOpponent(isPlayer1){
+        return isPlayer1 ? global.game.player1 : global.game.player2;
+    }
 
     // Array
+    static getAndRemoveFirst(array){
+        return array.splice(0,1)[0];
+    }
+
     static removeByIndex(array, card) {
         return array.filter(x => x.index !== card.index);
     }

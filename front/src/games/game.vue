@@ -42,20 +42,22 @@
 
         <!-- cards -->
         <div v-for="card in cards" :key="'B' + card.index" @dragover="onDragOver" @drop="onDrop($event, card)">
-            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable"
+            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable" :hidestat="card.hidestat"
                 @mouseover="showCardMouseOver(card)" @click="showCard(card)" @dragover="onDragOver"
                 @drop="onDrop($event, card)" draggable="true">
             </gameCard>
         </div>
 
-        <div class="bgYellow absolute cirlce10px" 
-            :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
-        </div>
+        <div v-if="game">
+            <div class="bgYellow absolute cirlce10px"
+                :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
 
-        <v-btn target="_blank" text :class="{ bg: true, absolute: true, shine: !freeze, fontSize12:true }" @click="nextTurn"
-            :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px', 'min-width': '0px' }">
-            End <br>Turn
-        </v-btn>
+                <v-btn target="_blank" text :class="{ bg:true, w100p: true, h100p: true, shine: !freeze, fontSize12: true }"
+                    @click="nextTurn" style="min-width:0px;">
+                    End <br>Turn
+                </v-btn>
+            </div>
+        </div>
 
         <!-- Title -->
         <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px;">
@@ -242,6 +244,7 @@ export default {
             event.dataTransfer.setDragImage(new Image(), 0, 0);
             event.dataTransfer.setData('card', card.index);
             card.moving = true;
+            card.positionOld = this.clone(card.position);
             event.target.style.zIndex = "1000";
         },
         onDragOver(event) {
@@ -270,6 +273,7 @@ export default {
         // --------- Touch
         touchStart(event, card) {
             card.moving = true;
+            card.positionOld = this.clone(card.position);
             event.target.style.zIndex = "1000";
         },
         touchEnd(event, card) {

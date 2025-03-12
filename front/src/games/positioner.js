@@ -5,7 +5,7 @@ class positioner {
     static createGrid(width, height) {
         const grid = {};
         grid.width = width;
-        grid.height = height-0;
+        grid.height = height - 0;
         grid.border = 5;
         grid.border2 = grid.border * 2;
         const divide = 16;
@@ -33,18 +33,19 @@ class positioner {
 
 
     static getPositions(grid, isPlayer1) {
+        let result = {};
         if (grid.box.width > 50)
-            return {
+            result = {
                 base: this.createZone(isPlayer1, grid.x15, grid.y8, grid.x0, grid.y7, grid.box.width, grid.box.height, 'base', global.locationBase),
                 shield: this.createZone(isPlayer1, grid.x15, grid.y9, grid.x0, grid.y6, grid.box.width, grid.box.height, 'shield', global.locationShield),
                 deck: this.createZone(isPlayer1, grid.x15, grid.y10, grid.x0, grid.y5, grid.box.width, grid.box.height, 'deck', global.locationDeck),
                 trash: this.createZone(isPlayer1, grid.x15, grid.y11, grid.x0, grid.y4, grid.box.width, grid.box.height, 'trash', global.locationTrash),
                 resource: this.createZone(isPlayer1, grid.x15, grid.y12, grid.x0, grid.y3, grid.box.width, grid.box.height, 'res', global.locationResource),
-                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x1, grid.y0, grid.hand.width - 10-(grid.x1), grid.hand.height, 'hand', global.locationHand),
+                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x1, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x1, grid.y3, grid.field.width, grid.field.height, 'field', global.locationField)
             };
         else
-            return {
+            result = {
                 base: this.createZone(isPlayer1, grid.x14, grid.y8, grid.x0, grid.y7, grid.box.width * 2, grid.box.height, 'base', global.locationBase),
                 shield: this.createZone(isPlayer1, grid.x14, grid.y9, grid.x0, grid.y6, grid.box.width * 2, grid.box.height, 'shield', global.locationShield),
                 deck: this.createZone(isPlayer1, grid.x14, grid.y10, grid.x0, grid.y5, grid.box.width * 2, grid.box.height, 'deck', global.locationDeck),
@@ -53,6 +54,9 @@ class positioner {
                 hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x0, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x2, grid.y3, grid.field.width - 5 - grid.box.width, grid.field.height, 'field', global.locationField)
             };
+        if (!isPlayer1)
+            result.hand.width = result.hand.width -  grid.box.width - (2*grid.border2);
+        return result;
     }
 
     static createZone(isPlayer1, x1, y1, x2, y2, width, height, zone, location) {
@@ -71,14 +75,14 @@ class positioner {
         return result;
     }
 
-    static refresh(cards, position, useZoneSize=false) {
+    static refresh(cards, position, useZoneSize = false) {
         let zoneHeight = position.height;
-        if (position.location == global.locationField) 
+        if (position.location == global.locationField)
             zoneHeight *= 0.75;
 
         const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length);
         cards.forEach((card, index) => {
-            card.to = this.getCardPosition(index, cards.length, position, cardSize);
+            card.to = this.getCardPosition(index, cards.length, position, cardSize, card);
             card.location = position.location;
         });
     }
@@ -96,13 +100,14 @@ class positioner {
         return { x, y, width: desiredWidth, height: desiredHeight };
     }
 
-    static getCardPosition(index, total, position, cardSize) {
+    static getCardPosition(index, total, position, cardSize, card) {
+        const degree = card.active ? 0 : 90;
         return {
             x: position.x + this.getXCenter(position.width, cardSize.width, total, index),
             y: position.y,
             width: cardSize.width,
             height: cardSize.height,
-            rotation: 0
+            rotation: degree
         };
     }
 

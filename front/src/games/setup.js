@@ -18,7 +18,7 @@ class gameManager {
         global.game.player2.positions = positioner.getPositions(global.grid, false);
         global.game.fields = positioner.createField(global.game.player1.positions, global.game.player2.positions);
 
-        global.game.isPlayer1Turn = Math.floor(Math.random() * 2) == 1;
+        global.isPlayer1 = Math.floor(Math.random() * 2) == 1;
 
         for (let i = 0; i < manager.getHandStartLength(); i++) {
             global.spawn(global.game.player1, null, global.locationDeck, global.locationHand);

@@ -34,7 +34,6 @@ class gameManager {
 
     static endAnimation(game) {
         game.cards.forEach(card => {
-            if (card.positionOld) card.position = card.positionOld;
             if (card.positionDrag) card.position = {...card.position, x:card.positionDrag.x, y:card.positionDrag.y};
             if (card.to) card.position = card.to;
             delete (card.to);
@@ -46,6 +45,10 @@ class gameManager {
         game.refresh = true;
     }
 
+    static playCard(game, card1, card2, zone) {
+        return game.manager.playCard(game, card1, card2, zone);
+    }
+
     static handleTasks(game) {
         let task = game.tasks.splice(0, 1)[0];
         game.refresh = task ? true : false;
@@ -53,9 +56,10 @@ class gameManager {
 
         while (task && i < 100) {
             const player = task.isPlayer1 ? game.player1 : game.player2;
+            const opponent = task.isPlayer1 ? game.player2 : game.player1;
 
             if (task.id === gameTask.taskRefreshField){
-                this.endAnimation(game);
+                // this.endAnimation(game);
                 game.manager.refreshFieldAndHand(player);
             }
 
@@ -72,6 +76,29 @@ class gameManager {
             else if (task.id === gameTask.taskShowTitle)
                 game.showTitle = task.value;
 
+            else if(task.id === gameTask.taskEndAnimation)
+                this.endAnimation(game);
+
+            else if(task.id === gameTask.taskDeleteCard){
+                global.game.cards = global.removeByIndex(global.game.cards, task.card);
+                if(task.removeBase){
+                    global.getPlayer(task.card.isPlayer1).base=[];
+                }
+            }
+
+            else if(task.id === gameTask.taskCardToCenter){
+                task.card.to = global.grid.center;
+                task.card.zindex=11;
+            }
+
+            else if(task.id === gameTask.taskCardToTrash){
+                game.manager.refreshFieldAndHand(player);
+                game.manager.refreshFieldAndHand(opponent);
+                task.card.to = global.clone(global.getPlayer(task.card.isPlayer1).positions.trash);
+                task.card.hidestat=true;
+                task.card.to.height=0;
+            }
+
             if (task.delay) {
                 game.wait = task.delay;
                 return game;
@@ -82,18 +109,6 @@ class gameManager {
         }
 
         return game;
-    }
-
-    static playCard(game, card1, card2, zone) {
-        if(card1.isPlayer1 !== game.isPlayer1 || !card1.selectable)
-        {
-            card1.to = global.clone(card1.position);
-            card1.positionOld = global.clone(card1.position);
-            card1.position = { ...card1.position, ...card1.positionDrag };
-            game.refresh = true;
-            return game;
-        }
-        return game.manager.playCard(game, card1, card2, zone);
     }
 }
 

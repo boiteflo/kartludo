@@ -12,12 +12,12 @@ class manager {
         game.player1 = {
             ...game.player1,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 5, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 5, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
@@ -48,9 +48,7 @@ class manager {
     static refreshFieldAndHand(player) {
         positioner.refresh(player.hand, player.positions.hand);
         positioner.refresh(player.field, player.positions.field);
-        positioner.refresh(player.base, player.positions.base, true);
-
-        global.game.cards.forEach(card => card.selectable = false);        
+        positioner.refresh(player.base, player.positions.base, true);      
 
         cardHandler.setSelectable(player);
 
