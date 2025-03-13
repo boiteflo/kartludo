@@ -13,12 +13,26 @@
         </div>
 
         <!-- field -->
-        <div v-for="box in game?.fields" :key="box.zone" :id="box.zone" :class="{
+        <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
             bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
+        </div>
+
+        <!-- field centerMini -->
+        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
+            game.grid.centerMini.card1.width, game.grid.centerMini.card1.height)">
+        </div>
+
+        <!-- textEffect -->
+        <div v-if="game && game.textEffect" id="textEffect"
+            class="bgWhite absolute mask text-center textVerticalCenter fontSize20" :style="{
+                ...getFieldStyle(game.textEffect?.position.x, game.textEffect?.position.y,
+                    game.textEffect?.position.width, game.textEffect?.position.height), 'z-index': 11
+            }">
+            {{ game.textEffect?.text }}
         </div>
 
         <!-- Show card -->
@@ -42,25 +56,45 @@
 
         <!-- cards -->
         <div v-for="card in cards" :key="'B' + card.index" @dragover="onDragOver" @drop="onDrop($event, card)">
-            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable" :hidestat="card.hidestat"
-                @mouseover="showCardMouseOver(card)" @click="showCard(card)" @dragover="onDragOver"
-                @drop="onDrop($event, card)" draggable="true">
+            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable"
+                :hidestat="card.hidestat" @mouseover="showCardMouseOver(card)" @click="showCard(card)"
+                @dragover="onDragOver" @drop="onDrop($event, card)" draggable="true">
             </gameCard>
         </div>
 
+        <!-- End turn button -->
         <div v-if="game">
             <div class="bgYellow absolute cirlce10px"
                 :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
 
-                <v-btn target="_blank" text :class="{ bg:true, w100p: true, h100p: true, shine: !freeze, fontSize12: true }"
-                    @click="nextTurn" style="min-width:0px;">
+                <v-btn target="_blank" text
+                    :class="{ bg: true, w100p: true, h100p: true, shine: !freeze, fontSize12: true }" @click="nextTurn"
+                    style="min-width:0px;">
                     End <br>Turn
                 </v-btn>
             </div>
         </div>
 
+        <!-- Popup -->
+        <div class="textVerticalCenter hide"
+            style="z-index:6; width:100%; height: 64px; position:fixed; top:0px; left:120px;">
+
+            <div class="flex-wrap" style="background-color: #FFFF00E0; width:80%; height:100%;">
+                <h3 class="text-center m10px">Titre</h3>
+                <span class="relative">
+                    <span v-for="(choice, index) in []" :key="'Choice' + index">
+                        <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
+                            {{ choice.text }}
+                        </v-btn>
+                        <gameCard v-else-if="choice.id" :card="choice" folder="Gundam/cards/" :shine="true">
+                        </gameCard>
+                    </span>
+                </span>
+            </div>
+        </div>
+
         <!-- Title -->
-        <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px;">
+        <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px; z-index:2">
             <div class="relative">
                 <div class="text-center absolute w100p title" style="left:-000px; top:30px;">{{ title }}
                 </div>
@@ -132,12 +166,8 @@ export default {
             if (this.game.refresh)
                 this.refreshGame();
         },
-        playCardOnZone(card, drop) {
-            this.game = gameManager.playCard(this.game, card, null, drop);
-            this.refreshGame();
-        },
-        playCardOnCard(card, cardDrop) {
-            this.game = gameManager.playCard(this.game, card, cardDrop, null);
+        playCard(card1, card2, drop) {
+            this.game = gameManager.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
         refreshGame() {
@@ -151,9 +181,10 @@ export default {
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
         beginAnimation() {
-            let animationTime = 500;
+            let animationTime = 490;
+            const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            animationTime = cardsToAnimate.length < 1 ? 10 : 500;
+            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : 500;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
 
@@ -161,11 +192,17 @@ export default {
                 return;
 
             const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
+            if (this.game && this.game.textEffect && this.game.textEffect.to)
+                animations.push({ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false });
             helperAnimation.animateMultiple(animations, animationTime);
 
         },
         endAnimation() {
             const wait = this.game.wait ? this.game.wait : 1;
+            if (this.game && this.game.textEffect && this.game.textEffect.to) {
+                this.game.textEffect.position = this.game.textEffect.to;
+                delete (this.game.textEffect.to);
+            }
             setTimeout(() => { this.continue() }, wait);
         },
         showTitle(text) {
@@ -251,7 +288,7 @@ export default {
         onDragOver(event) {
             event.preventDefault();
         },
-        onDrop(event, drop) {
+        onDrop(event) {
             event.preventDefault();
             const x = event.clientX || event.pageX || (event.touches ? event.touches[0].clientX : null);
             const y = event.clientY || event.pageY || (event.touches ? event.touches[0].clientY : null);
@@ -261,13 +298,9 @@ export default {
             const card = this.getCard(data);
             card.moving = false;
 
-            if (drop.index === card.index)
-                drop = this.getTouchZoneOrCard(x, y, card.index);
-
-            if (drop.zone)
-                this.playCardOnZone(card, drop);
-            else
-                this.playCardOnCard(card, drop);
+            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(x, y, ca.position) && !ca.isPaired);
+            const zoneDrop = this.game.fields.find(zone => this.isInside(x, y, zone));
+            this.playCard(card, card2, zoneDrop);
         },
 
 
@@ -281,19 +314,10 @@ export default {
             card.moving = false;
             event.target.style.zIndex = "auto";
             const touch = event.changedTouches[0];
-            let zoneOrCard = this.getTouchZoneOrCard(touch.clientX, touch.clientY, card.index);
-            if (!zoneOrCard || card.index == zoneOrCard.index)
-                return;
 
-            if (zoneOrCard.zone)
-                this.playCardOnZone(card, zoneOrCard);
-            else
-                this.playCardOnCard(card, zoneOrCard);
-        },
-        getTouchZoneOrCard(x, y, ignoreIndex) {
-            const card = this.cards.find(card => card.index !== ignoreIndex && this.isInside(x, y, card.position));
-            const zone = card ? null : this.game.fields.find(zone => this.isInside(x, y, zone));
-            return card || zone;
+            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(touch.clientX, touch.clientY, ca.position) && !ca.isPaired);
+            const zone = card ? null : this.game.fields.find(zone => this.isInside(touch.clientX, touch.clientY, zone));
+            this.playCard(card, card2, zone);
         },
         isInside(x, y, box) {
             const minX = box.x;

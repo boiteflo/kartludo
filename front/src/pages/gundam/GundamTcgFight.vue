@@ -2,7 +2,7 @@
     <div class="bg2 h100p">
         <menu-bar-gundam :hide="true">
         </menu-bar-gundam>
-        <game-gundam></game-gundam>
+        <game></game>
     </div>
 </template>
 <script>
@@ -13,11 +13,11 @@ export default {
 
 <script>
 import menuBarGundam from '../../components/menuBarGundam';
-import gameGundam from '../../games/gundamold/gameGundam';
+import game from '../../games/game';
 
   export default {
   name: 'pageGundamTcgFight',
-  components: {menuBarGundam, gameGundam},
+  components: {menuBarGundam, game},
   data: () => ({ }),
   mounted(){},
   methods: { }

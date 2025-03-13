@@ -40,9 +40,13 @@ class manager {
 
     static nextTurn() {
         const player = global.getPlayerTurn();
+        // effects.removeOneTurnEffect(global.world.cards);
         player.resourcesMax+=1;
         player.resourcesAvailable = player.resourcesMax + player.resourcesEx;
         cardHandler.nextTurn(player);
+        
+        const baseText = player.base.length > 0 ? player.base[0].hp + 'hp ' : '-';
+        global.log(`-- Turn player ${player.number}, ${player.resourcesAvailable}re, ${player.shield.length}sh, ${baseText}ba`);
     }
 
     static refreshFieldAndHand(player) {
@@ -62,6 +66,10 @@ class manager {
         const player = global.getPlayerTurn(); 
         cardHandler.play(player, card1, card2, zone);
         return game;
+    }
+
+    static attack(player, opponent, card1, card2){
+        cardHandler.attackCard(player, opponent, card1, card2);
     }
 }
 

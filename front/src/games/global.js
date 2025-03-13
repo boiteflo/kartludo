@@ -38,9 +38,10 @@ class global {
     }
 
     static spawn(player, card, locationFrom, locationTo) {
-        const cardSpawn = this.spawnNotShown(player,card, locationFrom, locationTo);
+        const cardSpawn = this.spawnNotShown(player, card, locationFrom, locationTo);
+        cardSpawn.zindex = 11;
         global.game.cards = global.addIn(global.game.cards, cardSpawn);
-        gameTask.addTasks(global.game.tasks, [{id:gameTask.taskRefreshField, isPlayer1:player.isPlayer1}]);
+        gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
         return cardSpawn;
     }
 
@@ -62,16 +63,30 @@ class global {
         return card;
     }
 
-    static move(player, card, locationFrom, locationTo) {
+    static move(player, card, locationFrom, locationTo, ignoreRefresh) {
         const from = global.getLocationArrayProperty(locationFrom);
         const to = global.getLocationArrayProperty(locationTo);
 
         player[from] = global.removeByIndex(player[from], card);
         player[to] = global.addIn(player[to], card);
 
-        gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1}]);
+        if(!ignoreRefresh)
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
 
         return card;
+    }
+
+    static pair(player, cardUnit, cardPilot) {
+        const from = global.getLocationArrayProperty(cardPilot.location);
+        player[from] = global.removeByIndex(player[from], cardPilot);
+        cardUnit.pair = cardPilot;
+        cardPilot.selectable = false;
+        cardPilot.isPaired = true;
+        cardPilot.zindex=1;
+        cardUnit.zindex=2;
+        cardUnit.ap+=cardPilot.ap;
+        cardUnit.hp+=cardPilot.hp;
+        gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
     }
 
     static createCard(id) {
@@ -88,10 +103,11 @@ class global {
     // Card
     static setActive(card, active) {
         card.active = active;
-        card.canAttack=active;
+        card.canAttack = active;
         const degree = card.active ? 0 : 90;
-        if (!card.to) card.to = card.position;
-        card.to.rotation= degree;
+        if (!card.to) 
+            card.to = this.clone(card.position);
+        card.to.rotation = degree;
     }
 
     // Player Turn
@@ -101,16 +117,16 @@ class global {
     static getPlayerTurnOpponent() {
         return global.isPlayer1 ? global.game.player2 : global.game.player1;
     }
-    static getPlayer(isPlayer1){
+    static getPlayer(isPlayer1) {
         return isPlayer1 ? global.game.player1 : global.game.player2;
     }
-    static getOpponent(isPlayer1){
+    static getOpponent(isPlayer1) {
         return isPlayer1 ? global.game.player1 : global.game.player2;
     }
 
     // Array
-    static getAndRemoveFirst(array){
-        return array.splice(0,1)[0];
+    static getAndRemoveFirst(array) {
+        return array.splice(0, 1)[0];
     }
 
     static removeByIndex(array, card) {
@@ -125,7 +141,7 @@ class global {
     static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
 
     // Utils
-    static log(text) { this.world.logs = text + '<br>' + this.world.logs; }
+    static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
 
     static clone(obj) { return Object.assign({}, obj); }
 }

@@ -12,7 +12,6 @@ class positioner {
         grid.widthB = grid.width - (grid.border * (divide + 1));
         grid.heightB = grid.height - grid.border * (divide + 1);
 
-        grid.center = this.getCardSize(grid.width - grid.border2, grid.height - grid.border2, 1);
 
         grid.box = { height: grid.heightB / divide };
         grid.box.width = grid.widthB / divide;
@@ -27,6 +26,17 @@ class positioner {
             grid['x' + i] = 5 + (i * (grid.box.width + 5));
             grid['y' + i] = 5 + (i * (grid.box.height + 5));
         }
+
+        grid.center = this.getCardSize(grid.width - grid.border2, grid.height - grid.border2, 1);
+        grid.centerMini = {
+            x: grid.x2, y: grid.y2,
+            width: grid['x' + (divide - 2)] - grid.x2, height: grid['y' + (divide - 2)] - grid.y2, location: 0, zone: 'centerMini1'
+        };
+        grid.centerMini.card1 = this.getCardSize(grid.centerMini.width, grid.centerMini.height, 2);
+        grid.centerMini.card1.x = grid.centerMini.x;
+        grid.centerMini.card1.y = grid.centerMini.y;
+        grid.centerMini.card2 = global.clone(grid.centerMini.card1);
+        grid.centerMini.card2.x += grid.centerMini.card1.width;
 
         return grid;
     }
@@ -55,7 +65,7 @@ class positioner {
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x2, grid.y3, grid.field.width - 5 - grid.box.width, grid.field.height, 'field', global.locationField)
             };
         if (!isPlayer1)
-            result.hand.width = result.hand.width -  grid.box.width - (2*grid.border2);
+            result.hand.width = result.hand.width - grid.box.width - (2 * grid.border2);
         return result;
     }
 
@@ -65,13 +75,14 @@ class positioner {
             x: isPlayer1 ? x1 : x2,
             y: isPlayer1 ? y1 : y2,
             zone: zone + index,
-            width, height, location, isPlayer1
+            width, height, location, isPlayer1, show: true
         };
     }
 
     static createField(p1, p2) {
         let result = [p1.deck, p1.trash, p1.shield, p1.resource, p1.hand, p1.field, p1.base]
-            .concat([p2.deck, p2.trash, p2.shield, p2.resource, p2.hand, p2.field, p2.base]);
+            .concat([p2.deck, p2.trash, p2.shield, p2.resource, p2.hand, p2.field, p2.base])
+            .concat([global.game.grid.centerMini]);
         return result;
     }
 
@@ -84,7 +95,17 @@ class positioner {
         cards.forEach((card, index) => {
             card.to = this.getCardPosition(index, cards.length, position, cardSize, card);
             card.location = position.location;
+            card.zindex= card.pair ? 2 : 1;
+            if (position.location == global.locationField && card.pair)
+                card.pair.to = this.getPairPosition(card.to);
         });
+    }
+
+    static getPairPosition(position) {
+        const result = global.clone(position);
+        result.y += result.height * 0.25;
+        result.rotation = 0;
+        return result;
     }
 
     static getCardSize(width, height, count) {
