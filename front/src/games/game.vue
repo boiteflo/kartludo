@@ -83,6 +83,7 @@
 html,
 body {
     overflow: hidden;
+    overscroll-behavior: none;
 }
 
 body {
