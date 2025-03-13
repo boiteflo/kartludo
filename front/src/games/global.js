@@ -103,6 +103,7 @@ class global {
     // Card
     static setActive(card, active) {
         card.active = active;
+        card.selectable = false;
         card.canAttack = active;
         const degree = card.active ? 0 : 90;
         if (!card.to) 

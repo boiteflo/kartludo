@@ -12,7 +12,6 @@ class positioner {
         grid.widthB = grid.width - (grid.border * (divide + 1));
         grid.heightB = grid.height - grid.border * (divide + 1);
 
-
         grid.box = { height: grid.heightB / divide };
         grid.box.width = grid.widthB / divide;
         grid.boxbig = { height: 2 * grid.box.height + grid.border, width: 2 * grid.box.width + grid.border };
@@ -61,11 +60,11 @@ class positioner {
                 deck: this.createZone(isPlayer1, grid.x14, grid.y10, grid.x0, grid.y5, grid.box.width * 2, grid.box.height, 'deck', global.locationDeck),
                 trash: this.createZone(isPlayer1, grid.x14, grid.y11, grid.x0, grid.y4, grid.box.width * 2, grid.box.height, 'trash', global.locationTrash),
                 resource: this.createZone(isPlayer1, grid.x14, grid.y12, grid.x0, grid.y3, grid.box.width * 2, grid.box.height, 'res', global.locationResource),
-                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x0, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
+                hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x2, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x2, grid.y3, grid.field.width - 5 - grid.box.width, grid.field.height, 'field', global.locationField)
             };
         if (!isPlayer1)
-            result.hand.width = result.hand.width - grid.box.width - (2 * grid.border2);
+            result.hand.width = result.hand.width - grid.box.width - (3 * grid.border2);
         return result;
     }
 

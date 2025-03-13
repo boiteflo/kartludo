@@ -38,8 +38,8 @@ class cardHandler {
     }
 
     static sendCardBackToSquareOne(card) {
-        const degree = card.active ? 0 : 90;
-        card.to = {...global.clone(card.position), degree};
+        const rotation = card.active ? 0 : 90;
+        card.to = { ...global.clone(card.position), rotation };
         card.position = { ...card.position, ...card.positionDrag };
         global.game.refresh = true;
         return global.game;
@@ -130,7 +130,7 @@ class cardHandler {
             global.move(player, attacker, attacker.location, player.positions.trash.location, true);
             attacker.dead = true;
             const delayForTarget = target.hp < 1 ? null : 500;
-            tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card:attacker, isPlayer1: attacker.isPlayer1 });
+            tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card: attacker, isPlayer1: attacker.isPlayer1 });
         } else
             tasks.push({ id: gameTask.taskRefreshField, isPlayer1: attacker.isPlayer1 });
 

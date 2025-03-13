@@ -316,7 +316,7 @@ export default {
             const touch = event.changedTouches[0];
 
             const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(touch.clientX, touch.clientY, ca.position) && !ca.isPaired);
-            const zone = card ? null : this.game.fields.find(zone => this.isInside(touch.clientX, touch.clientY, zone));
+            const zone = this.game.fields.find(zone => this.isInside(touch.clientX, touch.clientY, zone));
             this.playCard(card, card2, zone);
         },
         isInside(x, y, box) {
