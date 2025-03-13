@@ -1,5 +1,6 @@
 import global from '../global';
 import gameTask from '../gameTask';
+import effects from './effects';
 
 class cardHandler {
     static nextTurn(player) {
@@ -51,9 +52,14 @@ class cardHandler {
             this.sendCardBackToSquareOne(card1);
             return;
         }
+        
+        const effectResult =effects.apply(effects.onplay, player, card1);
+        if(effectResult.stop){
+            return;
+        }
 
         if (this.isCardUnit(card1)) {
-            card1.canAttack = true;
+            card1.canAttack = false;
             player.resourcesAvailable -= card1.cost;
             global.move(player, card1, card1.location, player.positions.field.location);
             return;
@@ -71,8 +77,13 @@ class cardHandler {
         }
 
         if (this.isCardCommand(card1)) {
+            const effectResult =effects.apply(effects.command, player, card1);
+            if(effectResult.stop){
+                return;
+            }
+
             global.move(player, card1, card1.location, global.locationTrash);
-            this.moveCardToMiniCenterWithTextThenDeleteIt(card1, 'giant effect');
+            global.moveCardToMiniCenterWithTextThenDeleteIt(card1, 'giant effect');
             return;
         }
 
@@ -93,7 +104,7 @@ class cardHandler {
                 return;
             }
 
-            this.startAttackAnimation(player, opponent, card1, card2);
+            global.startAttackAnimation(player, opponent, card1, card2);
             return;
         }
 
@@ -102,20 +113,31 @@ class cardHandler {
 
         if (opponent.base.length > 0) {
             const target = opponent.base[0];
-            this.startAttackAnimation(player, opponent, card1, target);
+            global.startAttackAnimation(player, opponent, card1, target);
             return;
         } else {
-            const card = global.getAndRemoveFirst(opponent.shield);
-            // const effectResult = effects.apply(effects.burst, opponent, shield, card); -- effect burst
-            global.spawn(opponent, card, global.locationShield, global.locationTrash);
-            this.moveCardToCenterThenDeleteIt(card);
             global.setActive(card1, false);
+            
+            let card = opponent.shield[0];
+            const effectResult =effects.apply(effects.burst, opponent, card, card1);
+            if(effectResult.stop){
+                return;
+            }
+            
+            global.spawn(opponent, card, global.locationShield, global.locationTrash);
+            global.moveCardToCenterThenDeleteIt(card);
         }
 
         this.sendCardBackToSquareOne(card1);
     }
 
     static attackCard(player, opponent, attacker, target) {
+
+        const effectResult =effects.apply(effects.battle, player, attacker);
+        if(effectResult.stop){
+            return;
+        }
+
         const delay = 500;
         let damage = attacker.ap;
         target.hp -= damage;
@@ -157,54 +179,6 @@ class cardHandler {
             card.hp -= attack;
         }
                     */
-    }
-
-    static startAttackAnimation(player, opponent, attacker, target) {
-        const delay = 500;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card: attacker, isPlayer1: attacker.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay, card: target, isPlayer1: target.isPlayer1 },
-            { id: gameTask.taskAttack, player, opponent, attacker, target, delay }
-            ]);
-    }
-
-    static moveCardToMiniCenterThenBackToSquareOne(card, card2) {
-        const delay = 500;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay * 2, card: card2, isPlayer1: card2.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card2.isPlayer1 }
-            ]);
-    }
-
-    static moveCardToMiniCenterWithTextThenDeleteIt(card, text) {
-        const delay = 500;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskTextToMiniCenter2, delay: delay * 2, text },
-            { id: gameTask.taskTextToTrash },
-            { id: gameTask.taskCardToTrash, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteText },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 }
-            ]);
-    }
-
-    static moveCardToCenterThenDeleteIt(card, removeBase = false) {
-        const delay = 500;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskCardToTrash, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, removeBase, isPlayer1: card.isPlayer1 }
-            ]);
-    }
-
-    static moveCardToTrashThenDeleteIt(card, removeBase = false) {
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToTrash, delay: 500, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, removeBase, isPlayer1: card.isPlayer1 }
-            ]);
     }
 
     static end(opponent) {

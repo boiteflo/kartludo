@@ -499,6 +499,10 @@ body {
     background: red !important;
 }
 
+.bgRed2 {
+    background: #FF000050 !important;
+}
+
 .bgYellow {
     background: #FFEB3B !important;
 }

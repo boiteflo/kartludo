@@ -1,5 +1,5 @@
 /* eslint-disable */
-import global from './global';
+import global from '../global';
 
 class GameGundamEffect {
     // trigger
@@ -9,19 +9,6 @@ class GameGundamEffect {
     static battle = 'battle';
     static burst = 'burst';
     static command = 'command';
-
-    // effect
-    static deploy = 'deploy';
-    static get1ShieldToHand = 'get1ShieldToHand';
-    static top2DeckCard1Top1Bottom = 'top2DeckCard1Top1Bottom';
-    static protectionShieldLv4OrLower = 'protectionShieldLv4OrLower';
-    static breach3 = 'breach3';
-    static breach5 = 'breach5';
-    static ap1hp1 = 'ap1hp1';
-    static place1ExResource = 'place1ExResource';
-    static attackActiveEnnemyLv4OrLower = 'attackActiveEnnemyLv4OrLower';
-    static place1RestedResource = 'place1RestedResource';
-    static immuneAp3IfBreach = 'immuneAp3IfBreach';
 
     // target
     static self = 'self';
@@ -33,16 +20,16 @@ class GameGundamEffect {
     static gain = 'gain';
     static hand = 'hand';
 
-
     static apply(trigger, player, card1, card2) {
         const multiTriggers = [this.onpair, this.onlink];
         let effects = card1.effect;
         if (multiTriggers.includes(trigger))
             effects = effects.concat(card2.effect);
 
+        effects = effects.filter(effect => effect.trigger == trigger);
         let result = {};
 
-        effects.filter(effect => effect.trigger == trigger).forEach(effect => {
+        effects.forEach(effect => {
             if (result.stop) return;
             result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
         });
@@ -53,20 +40,21 @@ class GameGundamEffect {
     static applyEffect(player, card1, card2, effect) {
         if (effect.target && !card2) {
             if (effect.target === 'unit') {
-                global.showPopupSelectCard(card1, card1.CommandtargetAvailable);
+                // global.showPopupSelectCard(card1, card1.CommandtargetAvailable);
+                console.log('Can t handle this effect (because of target=unit) : ' + JSON.stringify(effect));
                 return { stop: true }
             }
         }
 
         if (effect.effect === 'get1ShieldToHand') {
             if (player.shield.length < 1) return;
-            const card = player.shield.splice(0, 1)[0];
-            global.spawnCard(player, card, global.locationHand);
-            card.position = player.position.shield;
+            global.spawn(player, null, global.locationShield, global.locationHand);
+            global.moveCardToMiniCenterWithTextThenBackToSquareOne(card1, 'Get one shield to hand');
+            return { stop: true }
         }
 
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
-            let deckCards = [player.deck[0], player.deck[1]];
+            /*let deckCards = [player.deck[0], player.deck[1]];
             if (!card2) {
                 global.showPopupSelectHiddenCard(card1, "which should go at the top deck ?", deckCards);
                 return { stop: true }
@@ -74,7 +62,7 @@ class GameGundamEffect {
 
             deckCards = player.deck.splice(0, 2);
             const bottomCard = deckCards.find(x => x.index !== card2.index);
-            player.deck = [card2].concat(player.deck).concat([bottomCard]);
+            player.deck = [card2].concat(player.deck).concat([bottomCard]);*/
 
             global.log(`With ${card1.name}, move top 2 deck cards Above or bellow`);
         }
@@ -105,25 +93,30 @@ class GameGundamEffect {
         }
 
         else if (effect.effect === 'sendToHand') {
-            player.shield = global.removeObj(player.shield, card1);
-            global.spawnCard(player, card1, global.locationHand);
-            card1.position = player.position.shield;
+            global.spawnCard(player, card1, card1.location, global.locationHand);
             global.log(`${card1.name} is send to hand`);
-            return { cancel: true, refreshHandOpponent: true };
+            return { stop:true, cancel: true, refreshHandOpponent: true };
         } 
 
         else if (effect.effect === 'sendToField') {
-            player.hand.push(card1);
-            global.spawnCard(player, card1, global.locationHand);
-            card1.position = player.position.shield;
+            global.move(player, card1, global.locationShield, global.locationField);
             global.log(`${card1.name} is send to hand`);
-            return { cancel: true, refreshHandOpponent: true };
+            return { stop:true, cancel: true, refreshHandOpponent: true };
+        }
+
+        else if (effect.effect === 'sendToBase') {            
+            player.base = [];
+            global.spawn(player, card1, global.locationShield, global.locationBase);
+            //global.moveCardToCenterThenBackToSquareOne(card1);
+            global.log(`${card1.name} is send to hand`);
+            this.apply(GameGundamEffect.onplay, player, card1, null);
+            return { stop:true, cancel: true, refreshHandOpponent: true };
         }
 
         else if (effect.effect === 'placeExResource') {
             player.resourcesEx += effect.value;
             player.resourcesAvailable += effect.value;
-            player.resAString = global.getRes(player);
+            player.resAString = player.resourcesAvailable + '/' + player.resourcesMax;
             global.log(`${card1.name} deploy ${effect.value} ex resource`);
         }
 
@@ -145,11 +138,10 @@ class GameGundamEffect {
             if (targets.length < 1) return;
             const card = targets[0];
             card.selectable = false;
-            card.height = global.size.cardSize.height;
-            player.hand = global.removeObj(player.hand, card);
-            player.field.push(card);
+            card.canAttack= false;
+            global.move(player, card, card.location, global.locationField);
             global.log(`${card1.name} deploy ${card.name}`);
-            GameGundamEffect.apply(GameGundamEffect.onplay, player, card, null);
+            this.apply(GameGundamEffect.onplay, player, card, null);
         }
 
         else if (effect.effect === 'attackActiveEnnemyLvXOrLower') {

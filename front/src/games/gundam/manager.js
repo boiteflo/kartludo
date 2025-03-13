@@ -2,6 +2,7 @@ import cards from '../../data/gundamCards.json';
 import global from '../global';
 import positioner from '../positioner';
 import cardHandler from './cardHandler';
+import effects from './effects';
 
 class manager {
     static getCards() { return cards.cards; }
@@ -12,20 +13,20 @@ class manager {
         game.player1 = {
             ...game.player1,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 5, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [],
-            resAString: "0", resourcesMax: 5, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
         this.createDefaultBase(game.player2);
 
         for (let i = 0; i < 6; i++) {
-            global.spawnNotShown(game.player1, null, global.locationDeck, global.locationShield);
-            global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
+            global.spawnNotShown(game.player1, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
+            global.spawnNotShown(game.player2, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
         }
 
         const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
@@ -40,7 +41,7 @@ class manager {
 
     static nextTurn() {
         const player = global.getPlayerTurn();
-        // effects.removeOneTurnEffect(global.world.cards);
+        effects.removeOneTurnEffect(global.game.cards);
         player.resourcesMax+=1;
         player.resourcesAvailable = player.resourcesMax + player.resourcesEx;
         cardHandler.nextTurn(player);
