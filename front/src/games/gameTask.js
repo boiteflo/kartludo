@@ -14,6 +14,7 @@ class gameTask {
     static taskCardToTrash = 12;
     static taskDeleteCard = 13;
     static taskAttack = 14;
+    static taskSelectCards = 15;
 
     static addTasks(list, tasks) {
         tasks.forEach(task => {

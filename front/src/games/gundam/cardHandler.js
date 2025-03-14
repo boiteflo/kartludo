@@ -181,6 +181,10 @@ class cardHandler {
                     */
     }
 
+    static selectChoiceCard(){ // game, card
+        alert('Changer tout le système pour inclure plus de task, du genre appliquer l effet de cette CaretPosition, etc ...');
+    }
+
     static end(opponent) {
         const message = opponent.isPlayer1 ? 'Defeat' : 'Victory';
         alert(message);

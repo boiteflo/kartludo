@@ -15,7 +15,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
-            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -76,21 +76,30 @@
         </div>
 
         <!-- Popup -->
-        <div class="textVerticalCenter hide"
-            style="z-index:6; width:100%; height: 64px; position:fixed; top:0px; left:120px;">
+        <div v-if="game?.popup" class="textVerticalCenter"
+            style="z-index:6; width:100%; height: 64px; position:fixed; top:0px; left:0px;">
 
-            <div class="flex-wrap" style="background-color: #FFFF00E0; width:80%; height:100%;">
-                <h3 class="text-center m10px">Titre</h3>
+            <div style="background-color: #FFFF00F0; width:100%; height:100%;">
+                <h3 class="text-center colorBlack textVerticalCenter w100p">{{ game?.popup.text }}</h3>
+                <div class="flex-wrap w100p">
+                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px">
+                        <img :style="getFieldStyleObj(game?.grid.card6)" @click="selectChoiceCard(card)"
+                         :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
+                    </div>
+                </div>
                 <span class="relative">
                     <span v-for="(choice, index) in []" :key="'Choice' + index">
                         <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
                             {{ choice.text }}
                         </v-btn>
-                        <gameCard v-else-if="choice.id" :card="choice" folder="Gundam/cards/" :shine="true">
-                        </gameCard>
                     </span>
                 </span>
             </div>
+        </div>
+
+        <!-- Popup -->
+        <div v-if="game?.popup">
+            {{ game.popup }}
         </div>
 
         <!-- Title -->
@@ -163,11 +172,19 @@ export default {
         continue() {
             this.freeze = false;
             this.game = gameManager.continue(this.game);
+            if (this.game.popup) {
+                this.freeze = true;
+                return;
+            }
             if (this.game.refresh)
                 this.refreshGame();
         },
         playCard(card1, card2, drop) {
             this.game = gameManager.playCard(this.game, card1, card2, drop);
+            this.refreshGame();
+        },
+        selectChoiceCard(card){
+            this.game = gameManager.selectChoiceCard(this.game, card);
             this.refreshGame();
         },
         refreshGame() {
@@ -340,6 +357,9 @@ export default {
                 width: this.game?.grid.box.width + 'px', height: this.game?.grid.box.height + 'px',
                 left: this.getGridX(x) + 'px', top: this.getGridY(y) + 'px'
             };
+        },
+        getFieldStyleObj(size){
+            return this.getFieldStyle(size.x, size.y, size.width, size.height);
         },
         getFieldStyle(x, y, w, h) {
             return {

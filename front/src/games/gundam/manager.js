@@ -72,6 +72,10 @@ class manager {
     static attack(player, opponent, card1, card2){
         cardHandler.attackCard(player, opponent, card1, card2);
     }
+
+    static selectChoiceCard(game, card) {
+        return cardHandler.selectChoiceCard(game, card);
+    }
 }
 
 

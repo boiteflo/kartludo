@@ -1,4 +1,5 @@
 /* eslint-disable */
+import gameTask from '../gameTask';
 import global from '../global';
 
 class GameGundamEffect {
@@ -29,6 +30,9 @@ class GameGundamEffect {
         effects = effects.filter(effect => effect.trigger == trigger);
         let result = {};
 
+        if (effects.length < 1)
+            return { nothing: true };
+
         effects.forEach(effect => {
             if (result.stop) return;
             result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
@@ -51,20 +55,22 @@ class GameGundamEffect {
             global.spawn(player, null, global.locationShield, global.locationHand);
             global.moveCardToMiniCenterWithTextThenBackToSquareOne(card1, 'Get one shield to hand');
             global.logEffect(effect, 'Get one shield to hand');
-            return { stop: true, cards:[card1] }
+            return { stop: true, cards: [card1] }
         }
 
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
-            /*let deckCards = [player.deck[0], player.deck[1]];
-            if (!card2) {
-                global.showPopupSelectHiddenCard(card1, "which should go at the top deck ?", deckCards);
-                return { stop: true }
-            }
+            /*const cards = [global.getAndRemoveFirst(player.deck), global.getAndRemoveFirst(player.deck)];
+            gameTask.addTasks(global.game.tasks, [{
+                id: gameTask.taskSelectCards,
+                text: 'Select the card that will go to the top deck, the other one will go bottom deck',
+                cards,
+                select: 'top2DeckCard1Top1BottomSelect'
+            }];
+            return { stop: true }*/
+            return {};
+        }
 
-            deckCards = player.deck.splice(0, 2);
-            const bottomCard = deckCards.find(x => x.index !== card2.index);
-            player.deck = [card2].concat(player.deck).concat([bottomCard]);*/
-
+        else if (effect.effect === 'top2DeckCard1Top1BottomSelect') {
             global.logEffect(effect, `With ${card1.name}, move top 2 deck cards Above or bellow`);
         }
 
@@ -96,22 +102,23 @@ class GameGundamEffect {
         else if (effect.effect === 'sendToHand') {
             global.spawnCard(player, card1, card1.location, global.locationHand);
             global.logEffect(effect, `${card1.name} is send to hand`);
-            return { stop:true, cancel: true, refreshHandOpponent: true };
-        } 
+            return { stop: true, cancel: true, refreshHandOpponent: true };
+        }
 
         else if (effect.effect === 'sendToField') {
             global.move(player, card1, global.locationShield, global.locationField);
             global.logEffect(effect, `${card1.name} is send to hand`);
-            return { stop:true, cancel: true, refreshHandOpponent: true };
+            return { stop: true, cancel: true, refreshHandOpponent: true };
         }
 
-        else if (effect.effect === 'sendToBase') {            
+        else if (effect.effect === 'sendToBase') {
             player.base = [];
             const card = global.spawn(player, null, global.locationShield, global.locationBase, true);
-            global.moveCardToCenterThenBackToSquareOne(card1);
-            global.logEffect(effect, `${card.name} is send to hand`);
             const result = this.apply(GameGundamEffect.onplay, player, card, null);
-            return { stop:true, ...result };
+            if (result.nothing)
+                global.moveCardToCenterThenBackToSquareOne(card1);
+            global.logEffect(effect, `${card.name} is send to hand`);
+            return { stop: true, ...result };
         }
 
         else if (effect.effect === 'placeExResource') {
@@ -139,7 +146,7 @@ class GameGundamEffect {
             if (targets.length < 1) return;
             const card = targets[0];
             card.selectable = false;
-            card.canAttack= false;
+            card.canAttack = false;
             global.move(player, card, card.location, global.locationField);
             global.logEffect(effect, `${card1.name} deploy ${card.name}`);
             this.apply(GameGundamEffect.onplay, player, card, null);

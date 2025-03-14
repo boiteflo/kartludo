@@ -4,7 +4,7 @@ import global from './global';
 class gameManager {
 
     static createGame(manager, width, height) {
-        global.game = { cards: [], tasks: [], popup: [] };
+        global.game = { cards: [], tasks: [], popup: null };
         global.cards = manager.getCards();
 
         global.grid = positioner.createGrid(width, height);

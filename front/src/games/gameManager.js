@@ -48,6 +48,10 @@ class gameManager {
         return game.manager.playCard(game, card1, card2, zone);
     }
 
+    static selectChoiceCard(game, card) {
+        return game.manager.selectChoiceCard(game, card);
+    }
+
     static handleTasks(game) {
         let task = game.tasks.splice(0, 1)[0];
         game.refresh = task ? true : false;
@@ -140,6 +144,11 @@ class gameManager {
 
             else if (task.id === gameTask.taskDeleteText) {
                 delete (game.textEffect);
+            }
+
+            else if (task.id === gameTask.taskSelectCards){
+                game.popup = task;
+                return game;
             }
 
             if (task.delay) {

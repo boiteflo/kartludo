@@ -21,6 +21,8 @@ class positioner {
         grid.hand.card = this.getCardSize(grid.hand.width, grid.hand.height, 6);
         grid.field.card = this.getCardSize(grid.field.width, grid.field.height, 6);
 
+        grid.card6 = this.getCardSize(grid.width, grid.height, 6);
+
         for (let i = 0; i < divide; i++) {
             grid['x' + i] = 5 + (i * (grid.box.width + 5));
             grid['y' + i] = 5 + (i * (grid.box.height + 5));
