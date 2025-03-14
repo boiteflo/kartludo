@@ -228,6 +228,10 @@ class global {
 
     // Utils
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
+    static logEffect(effect, text) { 
+        this.log(text);
+        effect.texts = (effect.texts ? effect.texts : []).concat([text]);
+    }
 
     static clone(obj) { return Object.assign({}, obj); }
 }

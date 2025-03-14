@@ -21,8 +21,8 @@ class manager {
             resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
         };
 
-        this.createDefaultBase(game.player1);
-        this.createDefaultBase(game.player2);
+        //this.createDefaultBase(game.player1);
+        //this.createDefaultBase(game.player2);
 
         for (let i = 0; i < 6; i++) {
             global.spawnNotShown(game.player1, global.createCard("ST02-015"), global.locationDeck, global.locationShield);

@@ -59,7 +59,7 @@ class cardHandler {
         }
 
         if (this.isCardUnit(card1)) {
-            card1.canAttack = false;
+            card1.canAttack = true;
             player.resourcesAvailable -= card1.cost;
             global.move(player, card1, card1.location, player.positions.field.location);
             return;
