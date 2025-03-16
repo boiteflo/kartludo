@@ -23,22 +23,36 @@ class GameGundamEffect {
 
     static apply(trigger, player, card1, card2) {
         const multiTriggers = [this.onpair, this.onlink];
-        let effects = card1.effect;
+        let effects = !card1.effect ? [] : card1.effect;
         if (multiTriggers.includes(trigger))
             effects = effects.concat(card2.effect);
 
-        effects = effects.filter(effect => effect.trigger == trigger);
+        card1.effectsRemaining = effects.filter(effect => effect.trigger == trigger);
         let result = {};
 
-        if (effects.length < 1)
+        if (card1.effectsRemaining.length < 1)
             return { nothing: true };
 
-        effects.forEach(effect => {
+        const toBeRemoved = [];
+        card1.effectsRemaining.forEach((effect, index) => {
             if (result.stop) return;
+            effect.index = index;
             result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
+            toBeRemoved.push(effect.index);
         });
 
+        card1.effectsRemaining = card1.effectsRemaining.filter(x => !toBeRemoved.includes(x.index));
+
         return result;
+    }
+
+    static getEffectsRemaining(trigger, card1, card2) {
+        const multiTriggers = [this.onpair, this.onlink];
+        let effects = !card1.effect ? [] : card1.effect;
+        if (multiTriggers.includes(trigger))
+            effects = effects.concat(card2.effect);
+
+        return effects.filter(effect => effect.trigger == trigger);
     }
 
     static applyEffect(player, card1, card2, effect) {
@@ -51,11 +65,21 @@ class GameGundamEffect {
         }
 
         if (effect.effect === 'get1ShieldToHand') {
-            if (player.shield.length < 1) return;
-            global.spawn(player, null, global.locationShield, global.locationHand);
-            global.moveCardToMiniCenterWithTextThenBackToSquareOne(card1, 'Get one shield to hand');
-            global.logEffect(effect, 'Get one shield to hand');
-            return { stop: true, cards: [card1] }
+            if (player.shield.length < 1)
+                return;
+            const card = player.shield[0];
+            const delay = this.animDuration;
+            const text = 'Get one shield to hand';
+            gameTask.addTasks(global.game.tasks,
+                [/*{ id: gameTask.taskCardToMiniCenter, card1:card1, isPlayer1: card.isPlayer1 },
+                { id: gameTask.taskTextToMiniCenter2, delay, text },*/
+                { id: gameTask.taskCardToHand, delay, card1:card, isPlayer1: card.isPlayer1 },
+                { id: gameTask.taskTextToTrash },
+                { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
+                { id: gameTask.taskDeleteText },
+                ]);
+            global.logEffect(effect, text);
+            return {};
         }
 
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
@@ -65,9 +89,8 @@ class GameGundamEffect {
                 text: 'Select the card that will go to the top deck, the other one will go bottom deck',
                 cards,
                 select: 'top2DeckCard1Top1BottomSelect'
-            }];
-            return { stop: true }*/
-            return {};
+            }]);*/
+            return {}
         }
 
         else if (effect.effect === 'top2DeckCard1Top1BottomSelect') {
@@ -112,13 +135,10 @@ class GameGundamEffect {
         }
 
         else if (effect.effect === 'sendToBase') {
-            player.base = [];
-            const card = global.spawn(player, null, global.locationShield, global.locationBase, true);
-            const result = this.apply(GameGundamEffect.onplay, player, card, null);
-            if (result.nothing)
-                global.moveCardToCenterThenBackToSquareOne(card1);
-            global.logEffect(effect, `${card.name} is send to hand`);
-            return { stop: true, ...result };
+            card1.location = global.locationShield;
+            card1.position = player.positions.shield;
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPlayCard, card1: player.shield[0], zone: player.positions.base }]);
+            return { stop: true };
         }
 
         else if (effect.effect === 'placeExResource') {

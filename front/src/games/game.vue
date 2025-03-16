@@ -15,7 +15,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
-            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -32,7 +32,7 @@
                 ...getFieldStyle(game.textEffect?.position.x, game.textEffect?.position.y,
                     game.textEffect?.position.width, game.textEffect?.position.height), 'z-index': 11
             }">
-            {{ game.textEffect?.text }}
+            <div v-html="game.textEffect.text"></div>
         </div>
 
         <!-- Show card -->
@@ -80,11 +80,11 @@
             style="z-index:6; width:100%; height: 64px; position:fixed; top:0px; left:0px;">
 
             <div style="background-color: #FFFF00F0; width:100%; height:100%;">
-                <h3 class="text-center colorBlack textVerticalCenter w100p">{{ game?.popup.text }}</h3>
+                <h3 class="text-center colorBlack textVerticalCenter w100p" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px">
                         <img :style="getFieldStyleObj(game?.grid.card6)" @click="selectChoiceCard(card)"
-                         :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
+                            :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
                 </div>
                 <span class="relative">
@@ -100,6 +100,10 @@
         <!-- Popup -->
         <div v-if="game?.popup">
             {{ game.popup }}
+        </div>
+
+        <div v-if="game && game.tasks" class="absolute" style="z-index:12;">
+            {{game.tasks.map(x => x.id)}}
         </div>
 
         <!-- Title -->
@@ -176,6 +180,9 @@ export default {
                 this.freeze = true;
                 return;
             }
+            if(this.game.refreshOnlyTextEffect)
+                this.animTextEffect();
+
             if (this.game.refresh)
                 this.refreshGame();
         },
@@ -183,7 +190,7 @@ export default {
             this.game = gameManager.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
-        selectChoiceCard(card){
+        selectChoiceCard(card) {
             this.game = gameManager.selectChoiceCard(this.game, card);
             this.refreshGame();
         },
@@ -197,11 +204,15 @@ export default {
             this.refreshG++;
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
+        animTextEffect(){
+            let animationTime = gundamManager.getAnimDuration();
+            helperAnimation.animateMultiple([{ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false }], animationTime);
+        },
         beginAnimation() {
-            let animationTime = 490;
+            let animationTime = gundamManager.getAnimDuration();
             const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : 500;
+            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : gundamManager.getAnimDuration();
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
 
@@ -254,7 +265,7 @@ export default {
                 };
 
             const animations = [{ id: 'cardCenter', from: this.cardCenter.position, to: this.cardCenter.to, isIncrement: false }];
-            helperAnimation.animateMultiple(animations, 500);
+            helperAnimation.animateMultiple(animations, gundamManager.getAnimDuration());
             setTimeout(() => {
                 this.cardCenter.position = this.cardCenter.to;
                 delete (this.cardCenter.to);
@@ -358,7 +369,7 @@ export default {
                 left: this.getGridX(x) + 'px', top: this.getGridY(y) + 'px'
             };
         },
-        getFieldStyleObj(size){
+        getFieldStyleObj(size) {
             return this.getFieldStyle(size.x, size.y, size.width, size.height);
         },
         getFieldStyle(x, y, w, h) {

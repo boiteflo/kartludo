@@ -7,6 +7,7 @@ import effects from './effects';
 class manager {
     static getCards() { return cards.cards; }
     static getDeckLenth() { return 50; }
+    static getAnimDuration() { return 500; }
     static getHandStartLength() { return 5; }
 
     static setup(game) {
@@ -21,13 +22,16 @@ class manager {
             resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
         };
 
-        //this.createDefaultBase(game.player1);
-        //this.createDefaultBase(game.player2);
+        // this.createDefaultBase(game.player1);
+        // this.createDefaultBase(game.player2);
 
         for (let i = 0; i < 6; i++) {
             global.spawnNotShown(game.player1, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
             global.spawnNotShown(game.player2, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
         }
+
+        game.player1.deck = [global.createCard("ST02-015")].concat(game.player1.deck);
+        game.player2.deck = [global.createCard("ST02-015")].concat(game.player2.deck);
 
         const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
         playerOpponent.resourcesEx+=1;
@@ -63,10 +67,8 @@ class manager {
         player.positions.resource.text = player.resourcesAvailable + '/' + player.resourcesMax;
     }
 
-    static playCard(game, card1, card2, zone){     
-        const player = global.getPlayerTurn(); 
-        cardHandler.play(player, card1, card2, zone);
-        return game;
+    static playCard(player, card1, card2, zone, isShowingEffect){
+        return cardHandler.play(player, card1, card2, zone, isShowingEffect);
     }
 
     static attack(player, opponent, card1, card2){

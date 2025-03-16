@@ -21,8 +21,8 @@ class gameManager {
         global.isPlayer1 = Math.floor(Math.random() * 2) == 1;
 
         for (let i = 0; i < manager.getHandStartLength(); i++) {
-            global.spawn(global.game.player1, null, global.locationDeck, global.locationHand);
-            global.spawn(global.game.player2, null, global.locationDeck, global.locationHand);
+            global.spawn(global.game.player1, null, global.locationDeck, global.locationHand, true);
+            global.spawn(global.game.player2, null, global.locationDeck, global.locationHand, true);
         }
 
         return global.game;

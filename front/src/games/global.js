@@ -6,6 +6,7 @@ class global {
     static grid;
     static index = 1;
     static isPlayer1;
+    static animDuration=500;
 
     static phase = 0;
     static phaseStart = 0;
@@ -64,6 +65,14 @@ class global {
         player[to] = global.addIn(player[to], card);
 
         return card;
+    }
+    
+    static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
+        const needSpawn = global.cards.includes(x=> x.index === card.index);
+        if(needSpawn) 
+            this.spawn(player, card, locationFrom, locationTo, ignoreRefresh);
+        else
+            this.move(player, card, locationFrom, locationTo, ignoreRefresh);
     }
 
     static move(player, card, locationFrom, locationTo, ignoreRefresh) {
@@ -160,69 +169,69 @@ class global {
 
     // Tasks 
     static startAttackAnimation(player, opponent, attacker, target) {
-        const delay = 500;
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card: attacker, isPlayer1: attacker.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay, card: target, isPlayer1: target.isPlayer1 },
+            [{ id: gameTask.taskCardToMiniCenter, card1: attacker, isPlayer1: attacker.isPlayer1 },
+            { id: gameTask.taskCardToMiniCenter2, delay: delay, card1: target, isPlayer1: target.isPlayer1 },
             { id: gameTask.taskAttack, player, opponent, attacker, target, delay }
             ]);
     }
 
-    static moveCardToMiniCenterThenBackToSquareOne(card, card2) {
-        const delay = 500;
+    static moveCardToMiniCenterThenBackToSquareOne(card1, card2) {
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay * 2, card: card2, isPlayer1: card2.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
+            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskCardToMiniCenter2, delay: delay * 2, card1: card2, isPlayer1: card2.isPlayer1 },
+            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskRefreshField, isPlayer1: card2.isPlayer1 }
             ]);
     }
 
-    static moveCardToMiniCenterWithTextThenBackToSquareOne(card, text) {
-        const delay = 500;
+    static moveCardToMiniCenterWithTextThenBackToSquareOne(card1, text) {
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card, isPlayer1: card.isPlayer1 },
+            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskTextToMiniCenter2, delay: delay * 2, text },
             { id: gameTask.taskTextToTrash },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
+            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskDeleteText },
             ]);
     }
 
-    static moveCardToMiniCenterWithTextThenDeleteIt(card, text) {
-        const delay = 500;
+    static moveCardToMiniCenterWithTextThenDeleteIt(card1, text) {
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card, isPlayer1: card.isPlayer1 },
+            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskTextToMiniCenter2, delay: delay * 2, text },
             { id: gameTask.taskTextToTrash },
-            { id: gameTask.taskCardToTrash, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, isPlayer1: card.isPlayer1 },
+            { id: gameTask.taskCardToTrash, delay, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskDeleteCard, card1, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskDeleteText },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 }
+            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 }
             ]);
     }
 
-    static moveCardToCenterThenDeleteIt(card, removeBase = false) {
-        const delay = 500;
+    static moveCardToCenterThenDeleteIt(card1, removeBase = false) {
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskCardToTrash, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, removeBase, isPlayer1: card.isPlayer1 }
+            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskCardToTrash, delay, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskDeleteCard, card1, removeBase, isPlayer1: card1.isPlayer1 }
             ]);
     }
 
-    static moveCardToCenterThenBackToSquareOne(card) {
-        const delay = 500;
+    static moveCardToCenterThenBackToSquareOne(card1) {
+        const delay = this.animDuration;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
+            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
             ]);
     }
 
-    static moveCardToTrashThenDeleteIt(card, removeBase = false) {
+    static moveCardToTrashThenDeleteIt(card1, removeBase = false) {
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToTrash, delay: 500, card, isPlayer1: card.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card, removeBase, isPlayer1: card.isPlayer1 }
+            [{ id: gameTask.taskCardToTrash, delay: this.animDuration, card1, isPlayer1: card1.isPlayer1 },
+            { id: gameTask.taskDeleteCard, card1, removeBase, isPlayer1: card1.isPlayer1 }
             ]);
     }
 

@@ -25,17 +25,19 @@ class cardHandler {
         });
     }
 
-    static play(player, card1, card2, zone) {
+    static play(player, card1, card2, zone, isShowingEffect) {
         const noDropZone = !card2 && !zone;
-        if (noDropZone || card1.isPlayer1 !== player.isPlayer1 || !card1.selectable) {
+        if (noDropZone) {
             this.sendCardBackToSquareOne(card1);
             return;
         }
 
         if (card1.location === global.locationHand)
-            this.playFromHand(player, card1, card2, zone);
+            return this.playFromHand(player, card1, card2, zone, isShowingEffect);
         else if (card1.location === global.locationField)
-            this.attack(player, card1, card2, zone);
+            return this.attack(player, card1, card2, zone);
+        else
+            return this.playCard(player, card1, card2, zone, isShowingEffect, false);
     }
 
     static sendCardBackToSquareOne(card) {
@@ -46,22 +48,57 @@ class cardHandler {
         return global.game;
     }
 
-    static playFromHand(player, card1, card2, zone) {
+    static playFromHand(player, card1, card2, zone, isShowingEffect) {
         const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
         if (!isSamePlayer || zone.location == global.locationHand) {
             this.sendCardBackToSquareOne(card1);
             return;
         }
-        
-        const effectResult =effects.apply(effects.onplay, player, card1);
-        if(effectResult.stop){
+
+        return this.playCard(player, card1, card2, zone, isShowingEffect, true);
+    }
+
+    static playCard(player, card1, card2, zone, isShowingEffect, playCost) {
+        if(!global.cards.includes(x=> x.index === card1.index)){
+            global.cards = global.cards.concat([card1]);
+        }
+
+        const effectsRemainings = effects.getEffectsRemaining(effects.onplay, card1, card2);
+        const text = effectsRemainings.map(x => `${x.effect} ${x.value}`).join('<br>');
+        const delay = global.animDuration;
+        if (effectsRemainings && effectsRemainings.length > 0) {
+            if (!isShowingEffect) {
+                gameTask.addTasks(global.game.tasks, [
+                    { id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 },
+                    { id: gameTask.taskTextToMiniCenter2, delay, text },
+                    { id: gameTask.taskPlayCardWithEffect, isPlayer1: card1.isPlayer1, card1, card2, zone }
+                ]);
+                return;
+            } else
+                gameTask.addTasks(global.game.tasks, [
+                    { id: gameTask.taskTextToTrash, delay },
+                    { id: gameTask.taskDeleteText },
+                ]);
+        }
+
+        const effectResult = effects.apply(effects.onplay, player, card1);
+        if (effectResult.stop) {
             return;
         }
 
         if (this.isCardUnit(card1)) {
             card1.canAttack = true;
-            player.resourcesAvailable -= card1.cost;
-            global.move(player, card1, card1.location, player.positions.field.location);
+            if (playCost)
+                player.resourcesAvailable -= card1.cost;
+            global.spawnOrMove(player, card1, card1.location, player.positions.field.location);
+            return;
+        }
+
+        if (this.isCardBase(card1)) {
+            if (player.base.length > 0)
+                gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskCardToTrash, card1: player.base[0] }]);
+
+            global.spawnOrMove(player, card1, card1.location, global.locationBase);
             return;
         }
 
@@ -71,18 +108,22 @@ class cardHandler {
                 return;
             }
 
-            player.resourcesAvailable -= card1.cost;
+            if (playCost)
+                player.resourcesAvailable -= card1.cost;
             global.pair(player, card2, card1);
             return;
         }
 
         if (this.isCardCommand(card1)) {
-            const effectResult =effects.apply(effects.command, player, card1);
-            if(effectResult.stop){
+            const effectResult = effects.apply(effects.command, player, card1);
+            if (effectResult.stop) {
                 return;
             }
 
-            global.move(player, card1, card1.location, global.locationTrash);
+            if (playCost)
+                player.resourcesAvailable -= card1.cost;
+
+            global.spawnOrMove(player, card1, card1.location, global.locationTrash);
             global.moveCardToMiniCenterWithTextThenDeleteIt(card1, 'giant effect');
             return;
         }
@@ -117,13 +158,13 @@ class cardHandler {
             return;
         } else {
             global.setActive(card1, false);
-            
+
             let card = opponent.shield[0];
-            const effectResult =effects.apply(effects.burst, opponent, card, card1);
-            if(effectResult.stop){
+            const effectResult = effects.apply(effects.burst, opponent, card, card1);
+            if (effectResult.stop) {
                 return;
             }
-            
+
             global.spawn(opponent, card, global.locationShield, global.locationTrash);
             global.moveCardToCenterThenDeleteIt(card);
         }
@@ -133,12 +174,12 @@ class cardHandler {
 
     static attackCard(player, opponent, attacker, target) {
 
-        const effectResult =effects.apply(effects.battle, player, attacker);
-        if(effectResult.stop){
+        const effectResult = effects.apply(effects.battle, player, attacker);
+        if (effectResult.stop) {
             return;
         }
 
-        const delay = 500;
+        const delay = global.animDuration;
         let damage = attacker.ap;
         target.hp -= damage;
 
@@ -151,22 +192,22 @@ class cardHandler {
         if (attacker.hp < 1) {
             global.move(player, attacker, attacker.location, player.positions.trash.location, true);
             attacker.dead = true;
-            const delayForTarget = target.hp < 1 ? null : 500;
-            tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card: attacker, isPlayer1: attacker.isPlayer1 });
+            const delayForTarget = target.hp < 1 ? null : global.animDuration;
+            tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card1: attacker, isPlayer1: attacker.isPlayer1 });
         } else
             tasks.push({ id: gameTask.taskRefreshField, isPlayer1: attacker.isPlayer1 });
 
         if (target.hp < 1) {
             global.move(opponent, target, target.location, opponent.positions.trash.location, true);
             target.dead = true;
-            tasks.push({ id: gameTask.taskCardToTrash, delay, card: target, isPlayer1: target.isPlayer1 });
+            tasks.push({ id: gameTask.taskCardToTrash, delay, card1: target, isPlayer1: target.isPlayer1 });
         } else
             tasks.push({ id: gameTask.taskRefreshField, isPlayer1: target.isPlayer1 });
 
         global.setActive(attacker, false);
 
-        if (attacker.hp < 1) tasks.push({ id: gameTask.taskDeleteCard, delay, card: attacker, isPlayer1: attacker.isPlayer1 });
-        if (target.hp < 1) tasks.push({ id: gameTask.taskDeleteCard, delay, card: target, isPlayer1: target.isPlayer1 });
+        if (attacker.hp < 1) tasks.push({ id: gameTask.taskDeleteCard, delay, card1: attacker, isPlayer1: attacker.isPlayer1 });
+        if (target.hp < 1) tasks.push({ id: gameTask.taskDeleteCard, delay, card1: target, isPlayer1: target.isPlayer1 });
 
         gameTask.addTasks(global.game.tasks, tasks);
         /*
@@ -181,7 +222,7 @@ class cardHandler {
                     */
     }
 
-    static selectChoiceCard(){ // game, card
+    static selectChoiceCard() { // game, card
         alert('Changer tout le système pour inclure plus de task, du genre appliquer l effet de cette CaretPosition, etc ...');
     }
 

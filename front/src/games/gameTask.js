@@ -1,20 +1,24 @@
 class gameTask {
 
-    static taskRefreshField = 1;
-    static taskShowTitle = 2;
-    static taskDrawToCenter = 3;
-    static taskDrawToHand = 4;
-    static taskEndAnimation = 5;
-    static taskCardToMiniCenter = 6;
-    static taskCardToMiniCenter2 = 7;
-    static taskTextToMiniCenter2 = 8;
-    static taskTextToTrash = 9;
-    static taskDeleteText = 10;
-    static taskCardToCenter = 11;
-    static taskCardToTrash = 12;
-    static taskDeleteCard = 13;
-    static taskAttack = 14;
-    static taskSelectCards = 15;
+    static taskRefreshField = 'RefreshField';
+    static taskShowTitle = 'ShowTitle';
+    static taskDrawToCenter = 'DrawToCenter';
+    static taskDrawToHand = 'DrawToHand';
+    static taskEndAnimation = 'EndAnimation';
+    static taskCardToMiniCenter = 'CardToMiniCenter';
+    static taskCardToMiniCenter2 = 'CardToMiniCenter2';
+    static taskTextToMiniCenter2 = 'TextToMiniCenter2';
+    static taskTextToTrash = 'TextToTrash';
+    static taskDeleteText = 'DeleteText';
+    static taskCardToCenter = 'CardToCenter';
+    static taskCardToTrash = 'CardToTrash';
+    static taskDeleteCard = 'DeleteCard';
+    static taskAttack = 'Attack';
+    static taskSelectCards = 'SelectCards';
+    static taskPlayCard = 'PlayCard';
+    static taskPlayCardWithEffect = 'PlayCardWithEffect';
+    static taskApplyEffect = 'ApplyEffect';
+    static taskCardToHand = 'CardToHand';
 
     static addTasks(list, tasks) {
         tasks.forEach(task => {

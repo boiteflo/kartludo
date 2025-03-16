@@ -45,11 +45,13 @@ class helperAnimation {
     }
     static pxStringToInt(value) { return parseInt(value.replace("px", "")); }
 
-    static animate(id, from, to, isIncrement, duration = 500) {
+    static animate(id, from, to, isIncrement, duration = global.animDuration) {
         return this.animateMultiple([{ id, from, to, isIncrement }], duration);
     }
 
-    static animateMultiple(animations, duration = 500) {
+    static animateMultiple(animations, duration = -1) {
+        if(duration === -1) 
+            duration = global.animDuration;
         const animationsArray = [];
         animations.forEach(anim => {
             const element = document.getElementById(anim.id);
