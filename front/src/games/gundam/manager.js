@@ -22,16 +22,16 @@ class manager {
             resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
         };
 
-        // this.createDefaultBase(game.player1);
-        // this.createDefaultBase(game.player2);
+        this.createDefaultBase(game.player1);
+        this.createDefaultBase(game.player2);
 
         for (let i = 0; i < 6; i++) {
-            global.spawnNotShown(game.player1, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
-            global.spawnNotShown(game.player2, global.createCard("ST02-015"), global.locationDeck, global.locationShield);
+            global.spawnNotShown(game.player1, null, global.locationDeck, global.locationShield);
+            global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
         }
 
-        game.player1.deck = [global.createCard("ST02-015")].concat(game.player1.deck);
-        game.player2.deck = [global.createCard("ST02-015")].concat(game.player2.deck);
+        game.player1.deck = [global.createCard("GD01-034")].concat(game.player1.deck);
+        game.player2.deck = [global.createCard("GD01-034")].concat(game.player2.deck);
 
         const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
         playerOpponent.resourcesEx+=1;
@@ -71,12 +71,16 @@ class manager {
         return cardHandler.play(player, card1, card2, zone, isShowingEffect);
     }
 
-    static attack(player, opponent, card1, card2){
-        cardHandler.attackCard(player, opponent, card1, card2);
+    static attack(player, opponent, card1, card2, zone){
+        cardHandler.attackCard(player, opponent, card1, card2, zone);
     }
 
     static selectChoiceCard(game, card) {
         return cardHandler.selectChoiceCard(game, card);
+    }
+
+    static pair(player, cardPilot, cardUnit, isShowingEffect){
+        return global.pair(player, cardUnit, cardPilot, isShowingEffect);
     }
 }
 

@@ -8,7 +8,7 @@ class gameManager {
         setup.createGame(manager, width, height);
         global.game.manager = manager;
         manager.setup(global.game);
-        global.animDuration = manager.getAnimDuration();
+        global.delay = manager.getAnimDuration();
         return this.nextTurn(global.game);
     }
 
@@ -21,7 +21,7 @@ class gameManager {
             { id: gameTask.taskRefreshField, isPlayer1: true },
             { id: gameTask.taskRefreshField, isPlayer1: false },
             { id: gameTask.taskShowTitle, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: 1200 },
-            { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay: global.animDuration }
+            { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay: global.delay }
         ]);
 
         game.manager.nextTurn();
@@ -53,7 +53,8 @@ class gameManager {
     }
 
     static selectChoiceCard(game, card) {
-        return game.manager.selectChoiceCard(game, card);
+        game.manager.selectChoiceCard(game, card);
+        return game;
     }
 
     static handleTasks(game) {
@@ -131,7 +132,7 @@ class gameManager {
             }
 
             else if (task.id === gameTask.taskAttack) {
-                game.manager.attack(task.player, task.opponent, task.attacker, task.target);
+                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone);
             }
 
             else if (task.id === gameTask.taskTextToMiniCenter2) {
@@ -144,19 +145,23 @@ class gameManager {
             }
 
             else if (task.id === gameTask.taskTextToTrash) {
-                game.textEffect.position.height = global.grid.centerMini.card2.height;
-                game.textEffect.to = { ...global.clone(game.textEffect.position), height: 0 };
-                game.refreshOnlyTextEffect=true;
+                if (game.textEffect) {
+                    game.textEffect.position.height = global.grid.centerMini.card2.height;
+                    game.textEffect.to = { ...global.clone(game.textEffect.position), height: 0 };
+                    game.refreshOnlyTextEffect = true;
+                }
             }
 
             else if (task.id === gameTask.taskDeleteText) {
-                game.refreshOnlyTextEffect=false;
+                game.refreshOnlyTextEffect = false;
                 delete (game.textEffect);
             }
 
             else if (task.id === gameTask.taskSelectCards) {
-                game.popup = task;
-                return game;
+                if (!game.cardChoice) {
+                    game.popup = task;
+                    return game;
+                }
             }
 
             else if (task.id === gameTask.taskCardToHand) {
@@ -170,11 +175,21 @@ class gameManager {
                     return game;
             }
 
-            else if(task.id === gameTask.taskPlayCardWithEffect){
+            else if (task.id === gameTask.taskPlayCardWithEffect) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
                 const result = game.manager.playCard(cardPlayer, task.card1, task.card2, task.zone, true);
                 if (result && result.stop)
                     return game;
+            }
+
+            else if(task.id === gameTask.taskPairCard) {
+                const cardPlayer = global.getPlayer(task.card1.isPlayer1);
+                game.manager.pair(cardPlayer, task.card1, task.card2);
+            }
+
+            else if(task.id === gameTask.taskPairCardWithEffect) {
+                const cardPlayer = global.getPlayer(task.card1.isPlayer1);
+                game.manager.pair(cardPlayer, task.card1, task.card2, true);
             }
 
             if (task.delay) {

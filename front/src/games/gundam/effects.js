@@ -35,10 +35,12 @@ class GameGundamEffect {
 
         const toBeRemoved = [];
         card1.effectsRemaining.forEach((effect, index) => {
-            if (result.stop) return;
+            if (result.stop)
+                return;
             effect.index = index;
             result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
-            toBeRemoved.push(effect.index);
+            if (!result.stop)
+                toBeRemoved.push(effect.index);
         });
 
         card1.effectsRemaining = card1.effectsRemaining.filter(x => !toBeRemoved.includes(x.index));
@@ -68,29 +70,37 @@ class GameGundamEffect {
             if (player.shield.length < 1)
                 return;
             const card = player.shield[0];
-            const delay = this.animDuration;
+            const delay = global.delay;
             const text = 'Get one shield to hand';
+            card.location = player.positions.shield.location;
             gameTask.addTasks(global.game.tasks,
-                [/*{ id: gameTask.taskCardToMiniCenter, card1:card1, isPlayer1: card.isPlayer1 },
-                { id: gameTask.taskTextToMiniCenter2, delay, text },*/
-                { id: gameTask.taskCardToHand, delay, card1:card, isPlayer1: card.isPlayer1 },
-                { id: gameTask.taskTextToTrash },
-                { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
-                { id: gameTask.taskDeleteText },
+                [
+                    { id: gameTask.taskCardToHand, delay, card1: card, isPlayer1: card.isPlayer1 },
+                    { id: gameTask.taskTextToTrash },
+                    { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
+                    { id: gameTask.taskDeleteText },
                 ]);
             global.logEffect(effect, text);
             return {};
         }
 
         else if (effect.effect === 'top2DeckCard1Top1Bottom') {
-            /*const cards = [global.getAndRemoveFirst(player.deck), global.getAndRemoveFirst(player.deck)];
-            gameTask.addTasks(global.game.tasks, [{
-                id: gameTask.taskSelectCards,
-                text: 'Select the card that will go to the top deck, the other one will go bottom deck',
-                cards,
-                select: 'top2DeckCard1Top1BottomSelect'
-            }]);*/
-            return {}
+            if (!global.game.cardChoice) {
+                const cards = [global.getAndRemoveFirst(player.deck), global.getAndRemoveFirst(player.deck)];
+                global.game.tasks = [{
+                    id: gameTask.taskSelectCards,
+                    text: 'Select the card that will go to the top deck, the other one will go bottom deck',
+                    cards,
+                    select: 'top2DeckCard1Top1BottomSelect'
+                }].concat(global.game.tasks);
+                return { stop: true }
+            }
+            else {
+                const bottomCard = global.game.popup.cards.filter(card => card.index !== global.game.cardChoice.index);
+                player.deck = [global.game.cardChoice].concat(player.deck).concat(bottomCard);
+                global.game.popup = null;
+                return {};
+            }
         }
 
         else if (effect.effect === 'top2DeckCard1Top1BottomSelect') {
@@ -135,9 +145,8 @@ class GameGundamEffect {
         }
 
         else if (effect.effect === 'sendToBase') {
-            card1.location = global.locationShield;
-            card1.position = player.positions.shield;
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPlayCard, card1: player.shield[0], zone: player.positions.base }]);
+            card1.location = player.positions.shield.location;
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPlayCard, card1: card1, zone: player.positions.field }]);
             return { stop: true };
         }
 

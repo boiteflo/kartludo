@@ -19,6 +19,8 @@ class gameTask {
     static taskPlayCardWithEffect = 'PlayCardWithEffect';
     static taskApplyEffect = 'ApplyEffect';
     static taskCardToHand = 'CardToHand';
+    static taskPairCard = 'PairCard';
+    static taskPairCardWithEffect = 'PairCardWithEffect';
 
     static addTasks(list, tasks) {
         tasks.forEach(task => {

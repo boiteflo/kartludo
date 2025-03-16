@@ -59,38 +59,20 @@ class cardHandler {
     }
 
     static playCard(player, card1, card2, zone, isShowingEffect, playCost) {
-        if(!global.cards.includes(x=> x.index === card1.index)){
-            global.cards = global.cards.concat([card1]);
+        if (!global.game.cards.find(x => x.index === card1.index)) {
+            global.game.cards.push(card1);
         }
 
-        const effectsRemainings = effects.getEffectsRemaining(effects.onplay, card1, card2);
-        const text = effectsRemainings.map(x => `${x.effect} ${x.value}`).join('<br>');
-        const delay = global.animDuration;
-        if (effectsRemainings && effectsRemainings.length > 0) {
-            if (!isShowingEffect) {
-                gameTask.addTasks(global.game.tasks, [
-                    { id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 },
-                    { id: gameTask.taskTextToMiniCenter2, delay, text },
-                    { id: gameTask.taskPlayCardWithEffect, isPlayer1: card1.isPlayer1, card1, card2, zone }
-                ]);
-                return;
-            } else
-                gameTask.addTasks(global.game.tasks, [
-                    { id: gameTask.taskTextToTrash, delay },
-                    { id: gameTask.taskDeleteText },
-                ]);
-        }
-
-        const effectResult = effects.apply(effects.onplay, player, card1);
-        if (effectResult.stop) {
-            return;
-        }
+        const task = { id: gameTask.taskPlayCardWithEffect, isPlayer1: card1.isPlayer1, card1, card2, zone };
+        const effectResult = global.handleEffects(player, card1, card2, isShowingEffect, effects.onplay, task);
+        if (effectResult.stop)
+            return effectResult;
 
         if (this.isCardUnit(card1)) {
-            card1.canAttack = true;
+            card1.canAttack = false;
             if (playCost)
                 player.resourcesAvailable -= card1.cost;
-            global.spawnOrMove(player, card1, card1.location, player.positions.field.location);
+            global.move(player, card1, card1.location, player.positions.field.location);
             return;
         }
 
@@ -98,19 +80,20 @@ class cardHandler {
             if (player.base.length > 0)
                 gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskCardToTrash, card1: player.base[0] }]);
 
-            global.spawnOrMove(player, card1, card1.location, global.locationBase);
+            global.move(player, card1, card1.location, global.locationBase);
+            card1.selectable = false;
             return;
         }
 
         if (this.isCardPilot(card1) && card2 && this.isCardUnit(card2)) {
-            if (card2.pair) {
+            if (card1.pair || card2.pair || card1.isPaired || card2.isPaired) {
                 this.sendCardBackToSquareOne(card1);
                 return;
             }
 
             if (playCost)
                 player.resourcesAvailable -= card1.cost;
-            global.pair(player, card2, card1);
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPairCard, card1, card2 }]);
             return;
         }
 
@@ -123,7 +106,7 @@ class cardHandler {
             if (playCost)
                 player.resourcesAvailable -= card1.cost;
 
-            global.spawnOrMove(player, card1, card1.location, global.locationTrash);
+            global.move(player, card1, card1.location, global.locationTrash);
             global.moveCardToMiniCenterWithTextThenDeleteIt(card1, 'giant effect');
             return;
         }
@@ -145,7 +128,7 @@ class cardHandler {
                 return;
             }
 
-            global.startAttackAnimation(player, opponent, card1, card2);
+            global.startAttackAnimation(player, opponent, card1, card2, zone);
             return;
         }
 
@@ -154,12 +137,12 @@ class cardHandler {
 
         if (opponent.base.length > 0) {
             const target = opponent.base[0];
-            global.startAttackAnimation(player, opponent, card1, target);
+            global.startAttackAnimation(player, opponent, card1, target, zone);
             return;
         } else {
             global.setActive(card1, false);
 
-            let card = opponent.shield[0];
+            let card = opponent.shield.splice(0,1)[0];
             const effectResult = effects.apply(effects.burst, opponent, card, card1);
             if (effectResult.stop) {
                 return;
@@ -172,14 +155,14 @@ class cardHandler {
         this.sendCardBackToSquareOne(card1);
     }
 
-    static attackCard(player, opponent, attacker, target) {
+    static attackCard(player, opponent, attacker, target, zone) {
 
         const effectResult = effects.apply(effects.battle, player, attacker);
         if (effectResult.stop) {
             return;
         }
 
-        const delay = global.animDuration;
+        const delay = global.delay;
         let damage = attacker.ap;
         target.hp -= damage;
 
@@ -192,7 +175,7 @@ class cardHandler {
         if (attacker.hp < 1) {
             global.move(player, attacker, attacker.location, player.positions.trash.location, true);
             attacker.dead = true;
-            const delayForTarget = target.hp < 1 ? null : global.animDuration;
+            const delayForTarget = target.hp < 1 ? null : global.delay;
             tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card1: attacker, isPlayer1: attacker.isPlayer1 });
         } else
             tasks.push({ id: gameTask.taskRefreshField, isPlayer1: attacker.isPlayer1 });
@@ -210,6 +193,10 @@ class cardHandler {
         if (target.hp < 1) tasks.push({ id: gameTask.taskDeleteCard, delay, card1: target, isPlayer1: target.isPlayer1 });
 
         gameTask.addTasks(global.game.tasks, tasks);
+        
+        if (this.isCardUnit(target) && attacker.breach && target.hp < 1) {
+            this.attack(player, attacker, null, zone);
+        }
         /*
                 if (!breach && global.isCardUnit(target) && card.breach && target.hp < 1) {
                     result =this.attack(player, card, opponent.base ?? { text: 'shield' }, card.breach);
@@ -222,8 +209,8 @@ class cardHandler {
                     */
     }
 
-    static selectChoiceCard() { // game, card
-        alert('Changer tout le système pour inclure plus de task, du genre appliquer l effet de cette CaretPosition, etc ...');
+    static selectChoiceCard(game, card) {
+        game.cardChoice = card;
     }
 
     static end(opponent) {
