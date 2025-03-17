@@ -30,6 +30,9 @@ class manager {
             global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
         }
 
+        game.player1.shield = [global.createCard("GD01-091")].concat(game.player1.shield).concat([global.createCard("GD01-091")]);
+        game.player2.shield = [global.createCard("GD01-091")].concat(game.player2.shield).concat([global.createCard("GD01-091")]);
+
         game.player1.deck = [global.createCard("GD01-034")].concat(game.player1.deck);
         game.player2.deck = [global.createCard("GD01-034")].concat(game.player2.deck);
 
@@ -79,8 +82,8 @@ class manager {
         return cardHandler.selectChoiceCard(game, card);
     }
 
-    static pair(player, cardPilot, cardUnit, isShowingEffect){
-        return global.pair(player, cardUnit, cardPilot, isShowingEffect);
+    static pair(player, card1, card2, isShowingEffect){
+        return global.pair(player, card1, card2, isShowingEffect);
     }
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import gameTask from '../gameTask';
 import global from '../global';
 
@@ -54,7 +53,10 @@ class GameGundamEffect {
         if (multiTriggers.includes(trigger))
             effects = effects.concat(card2.effect);
 
-        return effects.filter(effect => effect.trigger == trigger);
+        let result = effects.filter(effect => effect.trigger == trigger);
+        if(trigger === this.onlink)
+            result = result.concat(this.getEffectsRemaining(this.onpair, card1, card2));
+        return result;
     }
 
     static applyEffect(player, card1, card2, effect) {
@@ -103,10 +105,6 @@ class GameGundamEffect {
             }
         }
 
-        else if (effect.effect === 'top2DeckCard1Top1BottomSelect') {
-            global.logEffect(effect, `With ${card1.name}, move top 2 deck cards Above or bellow`);
-        }
-
         else if (effect.effect === 'protectionShieldLvXOrLower') {
             if (player.base || card2.index) return;
             const shield = player.shield[0];
@@ -133,9 +131,10 @@ class GameGundamEffect {
         }
 
         else if (effect.effect === 'sendToHand') {
-            global.spawnCard(player, card1, card1.location, global.locationHand);
+            //global.game.tasks = [{id: gameTask.taskMove, card1, location:global.locationHand}].concat(global.game.tasks);
+            gameTask.addTasks(global.game.tasks, [{id: gameTask.taskMove, card1, location:global.locationHand}]);
             global.logEffect(effect, `${card1.name} is send to hand`);
-            return { stop: true, cancel: true, refreshHandOpponent: true };
+            return {stop:true};
         }
 
         else if (effect.effect === 'sendToField') {

@@ -16,8 +16,9 @@ class cardHandler {
         player.hand.forEach(card => {
             const resourcesMax = Math.max(player.resourcesMax, player.resourcesAvailable);
             const isCostAvailable = card.level <= resourcesMax && card.cost <= player.resourcesAvailable;
+            const isTurnPlayer = global.isPlayer1 == card.isPlayer1;
 
-            card.selectable = isCostAvailable;
+            card.selectable = isCostAvailable && isTurnPlayer;
         });
 
         player.field.forEach(card => {

@@ -38,6 +38,9 @@ class positioner {
         grid.centerMini.card1.y = grid.centerMini.y;
         grid.centerMini.card2 = global.clone(grid.centerMini.card1);
         grid.centerMini.card2.x += grid.centerMini.card1.width;
+        grid.centerMini.text = {x: grid.x2, y:grid.y2 + grid.centerMini.card1.height, width: grid.centerMini.card1.width*2};
+        grid.centerMini.text.height = height - grid.centerMini.text.y - grid.border;
+        grid.centerMini.text.height = Math.min(grid.centerMini.text.height, 150);
 
         return grid;
     }

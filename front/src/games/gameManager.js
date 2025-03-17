@@ -107,7 +107,7 @@ class gameManager {
 
             else if (task.id === gameTask.taskCardToMiniCenter2) {
                 if (task.card1) {
-                    task.card1.to = global.grid.centerMini.card2;
+                    task.card1.to = global.clone(global.grid.centerMini.card2);
                     task.card1.zindex = 11;
                 }
             }
@@ -138,7 +138,7 @@ class gameManager {
             else if (task.id === gameTask.taskTextToMiniCenter2) {
                 game.textEffect = {
                     text: task.text,
-                    position: global.clone(global.grid.centerMini.card2)
+                    position: global.clone(global.grid.centerMini.text)
                 };
                 game.textEffect.to = global.clone(game.textEffect.position);
                 game.textEffect.position.height = 0;
@@ -146,7 +146,7 @@ class gameManager {
 
             else if (task.id === gameTask.taskTextToTrash) {
                 if (game.textEffect) {
-                    game.textEffect.position.height = global.grid.centerMini.card2.height;
+                    game.textEffect.position.height = global.grid.centerMini.text.height;
                     game.textEffect.to = { ...global.clone(game.textEffect.position), height: 0 };
                     game.refreshOnlyTextEffect = true;
                 }
@@ -190,6 +190,10 @@ class gameManager {
             else if(task.id === gameTask.taskPairCardWithEffect) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
                 game.manager.pair(cardPlayer, task.card1, task.card2, true);
+            }
+
+            else if(task.id === gameTask.taskMove){                
+                global.spawnOrMove(player, task.card1, task.card1.location, global.locationHand);
             }
 
             if (task.delay) {

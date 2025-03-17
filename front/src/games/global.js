@@ -68,8 +68,8 @@ class global {
     }
 
     static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
-        const needSpawn = global.game.cards.includes(x => x.index === card.index);
-        if (needSpawn)
+        const exist = global.game.cards.find(x => x.index === card.index);
+        if (!exist)
             this.spawn(player, card, locationFrom, locationTo, ignoreRefresh);
         else
             this.move(player, card, locationFrom, locationTo, ignoreRefresh);
@@ -88,10 +88,12 @@ class global {
         return card;
     }
 
-    static pair(player, cardUnit, cardPilot, isShowingEffect) {
+    static pair(player, card1, card2, isShowingEffect) {
+        const cardUnit = this.isCardUnit(card1) ? card1 : card2;
+        const cardPilot = this.isCardPilot(card1) ? card1 : card2;
         const isLink = this.isLink(cardUnit, cardPilot);
         const trigger = isLink ? effects.onlink : effects.onpair;
-        const task = { id: gameTask.taskPairCardWithEffect, card1: cardPilot, card2: cardUnit };
+        const task = { id: gameTask.taskPairCardWithEffect, card1: cardUnit, card2: cardPilot };
         const effectResult = global.handleEffects(player, cardUnit, cardPilot, isShowingEffect, trigger, task);
         if (effectResult.stop)
             return effectResult;
@@ -141,8 +143,8 @@ class global {
             if (!isShowingEffect) {
                 const taskShowCards = card2
                     ? [
-                        { id: gameTask.taskCardToMiniCenter2, card1: card1, isPlayer1: card1.isPlayer1 },
-                        { id: gameTask.taskCardToMiniCenter, card1: card2, isPlayer1: card1.isPlayer1 }
+                        { id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 },
+                        { id: gameTask.taskCardToMiniCenter2, card1: card2, isPlayer1: card1.isPlayer1 }
                     ]
                     : [{ id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 }];
 
@@ -266,6 +268,10 @@ class global {
             { id: gameTask.taskDeleteCard, card1, removeBase, isPlayer1: card1.isPlayer1 }
             ]);
     }
+
+    // Card Type
+    static isCardUnit(card) { return card.type?.includes(0); }
+    static isCardPilot(card) { return card.type?.includes(1); }
 
     // Utils
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
