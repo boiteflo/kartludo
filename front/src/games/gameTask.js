@@ -1,24 +1,18 @@
 class gameTask {
 
     static taskRefreshField = 'RefreshField';
-    static taskShowTitle = 'ShowTitle';
-    static taskDrawToCenter = 'DrawToCenter';
-    static taskDrawToHand = 'DrawToHand';
-    static taskEndAnimation = 'EndAnimation';
+    static taskTitleShow = 'TitleShow';
+    static taskTextShow = 'TextShow';
+    static taskTextHide = 'TextHide';
+    static taskTextDelete = 'TextDelete';
     static taskCardToMiniCenter = 'CardToMiniCenter';
     static taskCardToMiniCenter2 = 'CardToMiniCenter2';
-    static taskTextToMiniCenter2 = 'TextToMiniCenter2';
-    static taskTextToTrash = 'TextToTrash';
-    static taskDeleteText = 'DeleteText';
     static taskCardToCenter = 'CardToCenter';
-    static taskCardToTrash = 'CardToTrash';
-    static taskDeleteCard = 'DeleteCard';
-    static taskAttack = 'Attack';
-    static taskSelectCards = 'SelectCards';
+    static taskMove = 'Move';
+    static taskAttack = 'Attack';    
+    static taskPopup = 'Popup';    
     static taskPlayCard = 'PlayCard';
-    static taskPlayCardWithEffect = 'PlayCardWithEffect';
-    static taskApplyEffect = 'ApplyEffect';
-    static taskCardToHand = 'CardToHand';
+    static taskPlayCardWithEffect = 'PlayCardWithEffect';    
     static taskPairCard = 'PairCard';
     static taskPairCardWithEffect = 'PairCardWithEffect';
 

@@ -6,7 +6,8 @@ class global {
     static grid;
     static index = 1;
     static isPlayer1;
-    static delay = 500;
+    static delay;
+    static effects;
 
     static phase = 0;
     static phaseStart = 0;
@@ -19,14 +20,15 @@ class global {
     static phaseDamage = 7;
     static phaseEnd = 8;
 
-    static locationEmpty = 0;
-    static locationDeck = 1;
-    static locationShield = 2;
-    static locationHand = 3;
-    static locationField = 4;
-    static locationBase = 5;
-    static locationTrash = 6;
-    static locationResource = 7;
+    static locationEmpty = 'locationEmpty';
+    static locationTrash = 'locationTrash';
+    static locationDeck = 'locationDeck';
+    static locationShield = 'locationShield';
+    static locationHand = 'locationHand';
+    static locationField = 'locationField';
+    static locationBase = 'locationBase';
+    static locationResource = 'locationResource';
+    static locationPair = 'locationPair';
 
     static getLocationArrayProperty(location) {
         if (location == this.locationEmpty) return 'empty';
@@ -36,54 +38,72 @@ class global {
         else if (location == this.locationField) return 'field';
         else if (location == this.locationBase) return 'base';
         else if (location == this.locationResource) return 'resource';
+        else if (location == this.locationPair) return 'pair';
         return 'trash';
     }
 
-    static spawn(player, card, locationFrom, locationTo, ignoreRefresh) {
-        const cardSpawn = this.spawnNotShown(player, card, locationFrom, locationTo);
-        cardSpawn.zindex = 11;
-        global.game.cards = global.addIn(global.game.cards, cardSpawn);
-
-        if (!ignoreRefresh)
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
-        return cardSpawn;
+    static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
+        const cardSpawn = this.move(player, card, locationFrom, locationTo, ignoreRefresh);
+        this.spawnIfNot(cardSpawn);
     }
 
-    static spawnNotShown(player, card, locationFrom, locationTo) {
+    static spawnIfNot(card) {
+        if(!card)
+            return;
+
+        if (!global.game.cards.find(x => x.index === card.index))
+            global.game.cards = global.addIn(global.game.cards, card);
+        
+        const player = card.isPlayer1 ? global.game.player1 : global.game.player2;
+        if(!card.positon)
+            card.position = this.clone(player.positions.deck);
+        card.zindex = 11;
+    }
+
+    static move(player, card, locationFrom, locationTo, ignoreRefresh) {
+        if (!locationFrom && card && card.location)
+            locationFrom = card.location;
+
         const from = global.getLocationArrayProperty(locationFrom);
         const to = global.getLocationArrayProperty(locationTo);
 
         if (!card)
             card = player[from].splice(0, 1)[0];
         else
-            player[from] = global.removeByIndex(player[from], card.index);
+            player[from] = global.removeByIndex(player[from], card);
 
-        card.position = player.positions[from];
+        if (!card.isTemporaryCard)
+            player[to] = global.addIn(player[to], card);
+
+        if (from)
+            card.position = card.position ? card.position : this.clone(player.positions[from]);
+        if (from)
+            card.location = player.positions[from].location;
+
         card.isPlayer1 = player.isPlayer1;
         card.active = true;
+        card.hidestat = card.location === global.locationTrash;
 
-        player[to] = global.addIn(player[to], card);
+        if (card.pair) {
+            card.pair.isPaired = false;
+            card.pair.link = false;
+            this.move(player, card.pair, locationFrom, locationTo, ignoreRefresh);
+            delete (card.pair);
+            card.link = false;
+        }
 
-        return card;
-    }
+        const needToRefreshAllField = [global.locationHand, global.locationField].includes(locationTo);
+        if (!needToRefreshAllField) {
+            card.to = this.clone(player.positions[to]);
+            if (locationTo === this.locationTrash) {
+                card.to.height = 0;
+                card.hidestat = true;
+            }
+        }
 
-    static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
-        const exist = global.game.cards.find(x => x.index === card.index);
-        if (!exist)
-            this.spawn(player, card, locationFrom, locationTo, ignoreRefresh);
-        else
-            this.move(player, card, locationFrom, locationTo, ignoreRefresh);
-    }
-
-    static move(player, card, locationFrom, locationTo, ignoreRefresh) {
-        const from = global.getLocationArrayProperty(locationFrom);
-        const to = global.getLocationArrayProperty(locationTo);
-
-        player[from] = global.removeByIndex(player[from], card);
-        player[to] = global.addIn(player[to], card);
-
-        if (!ignoreRefresh)
+        if (!ignoreRefresh) {
             gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
+        }
 
         return card;
     }
@@ -103,6 +123,7 @@ class global {
         cardUnit.pair = cardPilot;
         cardPilot.selectable = false;
         cardPilot.isPaired = true;
+        cardPilot.location = global.locationPair;
         cardPilot.zindex = 1;
         cardUnit.zindex = 2;
         cardUnit.ap += cardPilot.ap;
@@ -148,12 +169,13 @@ class global {
                     ]
                     : [{ id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 }];
 
-                gameTask.addTasks(global.game.tasks, taskShowCards.concat([{ id: gameTask.taskTextToMiniCenter2, delay, text }, task]));
+                gameTask.addTasks(global.game.tasks, taskShowCards.concat([{ id: gameTask.taskTextShow, delay, text }, task]));
                 return { stop: true };
             } else
                 gameTask.addTasks(global.game.tasks, [
-                    { id: gameTask.taskTextToTrash, delay },
-                    { id: gameTask.taskDeleteText },
+                    { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
+                    { id: gameTask.taskTextHide, delay },
+                    { id: gameTask.taskTextDelete },
                 ]);
         }
 
@@ -225,10 +247,10 @@ class global {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
             [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskTextToMiniCenter2, delay: delay * 2, text },
-            { id: gameTask.taskTextToTrash },
-            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskDeleteText },
+            { id: gameTask.taskTextShow, delay: delay * 2, text },
+            { id: gameTask.taskTextHide },
+            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1, delay },
+            { id: gameTask.taskTextDelete },
             ]);
     }
 
@@ -236,22 +258,18 @@ class global {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
             [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskTextToMiniCenter2, delay: delay * 2, text },
-            { id: gameTask.taskTextToTrash },
-            { id: gameTask.taskCardToTrash, delay, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskDeleteText },
+            { id: gameTask.taskTextShow, delay: delay * 2, text },
+            { id: gameTask.taskTextHide },
+            { id: gameTask.taskMove, delay, card1, to: global.locationTrash, isPlayer1: card1.isPlayer1, ignoreRefresh: true },
+            { id: gameTask.taskTextDelete },
             { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 }
             ]);
     }
 
-    static moveCardToCenterThenDeleteIt(card1, removeBase = false) {
+    static moveCardToCenterThenDeleteIt(card1) {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskCardToTrash, delay, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card1, removeBase, isPlayer1: card1.isPlayer1 }
-            ]);
+            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 }]);
     }
 
     static moveCardToCenterThenBackToSquareOne(card1) {
@@ -259,13 +277,6 @@ class global {
         gameTask.addTasks(global.game.tasks,
             [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
-            ]);
-    }
-
-    static moveCardToTrashThenDeleteIt(card1, removeBase = false) {
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToTrash, delay: this.delay, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskDeleteCard, card1, removeBase, isPlayer1: card1.isPlayer1 }
             ]);
     }
 
@@ -277,7 +288,7 @@ class global {
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
     static logEffect(effect, text) {
         this.log(text);
-        effect.texts = (effect.texts ? effect.texts : []).concat([text]);
+        this.effects = this.effects ? this.effects.concat([text]) : [text];
     }
 
     static clone(obj) { return Object.assign({}, obj); }

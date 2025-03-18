@@ -105,8 +105,9 @@
                 {
                     "trigger": "onpair",
                     "target": "pairUnit",
-                    "effect": "immuneApXIfBreach",
-                    "value": 4
+                    "effect": "immuneAp",
+                    "value": 4,
+                    "oneTurn":true
                 },
                 {
                     "trigger": "burst",
@@ -167,7 +168,7 @@
                 },
                 {
                     "trigger": "onplay",
-                    "effect": "attackActiveEnnemyLvXOrLower",
+                    "effect": "attackActiveEnnemy",
                     "value": 5
                 }
             ],

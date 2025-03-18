@@ -17,11 +17,16 @@ class gameManager {
         game.isPlayer1 = global.isPlayer1;
         const playerId = global.isPlayer1 ? '1' : '2';
 
+        const player = global.isPlayer1 ? game.player1 : game.player2;
+        const card = player.deck[0];
+        const delay = global.delay;
         gameTask.addTasks(game.tasks, [
             { id: gameTask.taskRefreshField, isPlayer1: true },
             { id: gameTask.taskRefreshField, isPlayer1: false },
-            { id: gameTask.taskShowTitle, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: 1200 },
-            { id: gameTask.taskDrawToCenter, isPlayer1: global.isPlayer1, delay: global.delay }
+            { id: gameTask.taskTitleShow, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: 1200 },
+            { id: gameTask.taskMove, isPlayer1: global.isPlayer1, card1: card, from: global.locationDeck, to: global.locationHand, ignoreRefresh: true },
+            { id: gameTask.taskCardToCenter, isPlayer1: global.isPlayer1, card1: card, delay },
+            { id: gameTask.taskRefreshField, isPlayer1: global.isPlayer1, delay }
         ]);
 
         game.manager.nextTurn();
@@ -57,6 +62,11 @@ class gameManager {
         return game;
     }
 
+    static selectChoice(game, choice){
+        game.manager.selectChoice(game, choice);
+        return game;
+    }
+
     static handleTasks(game) {
         let task = game.tasks[0];// .splice(0, 1)[0];
         game.refresh = task ? true : false;
@@ -64,78 +74,16 @@ class gameManager {
 
         while (task && i < 100) {
             const player = task.isPlayer1 ? game.player1 : game.player2;
-            // const opponent = task.isPlayer1 ? game.player2 : game.player1;
 
             if (task.id === gameTask.taskRefreshField) {
-                // this.endAnimation(game);
                 game.manager.refreshFieldAndHand(player);
             }
 
-            else if (task.id === gameTask.taskDrawToCenter) {
-                const card = global.spawn(player, null, global.locationDeck, global.locationHand);
-                card.to = global.grid.center;
-                global.game.lastCard = card;
-            }
-
-            else if (task.id === gameTask.taskDrawToHand) {
-                game.manager.refreshFieldAndHand(player);
-            }
-
-            else if (task.id === gameTask.taskShowTitle) {
+            else if (task.id === gameTask.taskTitleShow) {
                 game.showTitle = task.value;
             }
 
-            else if (task.id === gameTask.taskEndAnimation) {
-                this.endAnimation(game);
-            }
-
-            else if (task.id === gameTask.taskDeleteCard) {
-                global.game.cards = global.removeByIndex(global.game.cards, task.card1);
-                if (task.removeBase) {
-                    global.getPlayer(task.card1.isPlayer1).base = [];
-                }
-                if (task.card1.pair) {
-                    global.game.cards = global.removeByIndex(global.game.cards, task.card1.pair);
-                    delete (task.card1.pair);
-                }
-            }
-
-            else if (task.id === gameTask.taskCardToMiniCenter) {
-                task.card1.to = global.grid.centerMini.card1;
-                task.card1.zindex = 11;
-            }
-
-            else if (task.id === gameTask.taskCardToMiniCenter2) {
-                if (task.card1) {
-                    task.card1.to = global.clone(global.grid.centerMini.card2);
-                    task.card1.zindex = 11;
-                }
-            }
-
-            else if (task.id === gameTask.taskCardToCenter) {
-                task.card1.to = global.grid.center;
-                task.card1.zindex = 11;
-            }
-
-            else if (task.id === gameTask.taskCardToTrash) {
-                const cardPlayer = global.getPlayer(task.card1.isPlayer1);
-                game.manager.refreshFieldAndHand(cardPlayer);
-                if (task.card1.location !== global.locationTrash)
-                    global.move(cardPlayer, task.card1, task.card1.location, global.locationTrash, true);
-                task.card1.to = global.clone(cardPlayer.positions.trash);
-                if (task.card1.pair) {
-                    task.card1.pair.to = task.card1.to;
-                    global.move(cardPlayer, task.card1.pair, task.card1.pair.location, global.locationTrash, true);
-                }
-                task.card1.hidestat = true;
-                task.card1.to.height = 0;
-            }
-
-            else if (task.id === gameTask.taskAttack) {
-                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
-            }
-
-            else if (task.id === gameTask.taskTextToMiniCenter2) {
+            else if (task.id === gameTask.taskTextShow) {
                 game.textEffect = {
                     text: task.text,
                     position: global.clone(global.grid.centerMini.text)
@@ -144,7 +92,7 @@ class gameManager {
                 game.textEffect.position.height = 0;
             }
 
-            else if (task.id === gameTask.taskTextToTrash) {
+            else if (task.id === gameTask.taskTextHide) {
                 if (game.textEffect) {
                     game.textEffect.position.height = global.grid.centerMini.text.height;
                     game.textEffect.to = { ...global.clone(game.textEffect.position), height: 0 };
@@ -152,20 +100,51 @@ class gameManager {
                 }
             }
 
-            else if (task.id === gameTask.taskDeleteText) {
+            else if (task.id === gameTask.taskTextDelete) {
                 game.refreshOnlyTextEffect = false;
                 delete (game.textEffect);
             }
 
-            else if (task.id === gameTask.taskSelectCards) {
-                if (!game.cardChoice) {
-                    game.popup = task;
-                    return game;
+            else if (task.id === gameTask.taskMove) {
+                global.spawnOrMove(player, task.card1, task.from, task.to, task.ignoreRefresh);
+            }
+
+            else if (task.id === gameTask.taskCardToMiniCenter) {
+                if (task.card1) {
+                    global.spawnIfNot(task.card1);
+                    task.card1.to = global.clone(global.grid.centerMini.card1);
+                    task.card1.to.rotation = 0;
+                    task.card1.zindex = 11;
                 }
             }
 
-            else if (task.id === gameTask.taskCardToHand) {
-                global.spawn(player, task.card1, task.card1.location, global.locationHand);
+            else if (task.id === gameTask.taskCardToMiniCenter2) {
+                if (task.card1) {
+                    global.spawnIfNot(task.card1);
+                    task.card1.to = global.clone(global.grid.centerMini.card2);
+                    task.card1.to.rotation = 0;
+                    task.card1.zindex = 11;
+                }
+            }
+
+            else if (task.id === gameTask.taskCardToCenter) {
+                if (task.card1) {
+                    global.spawnIfNot(task.card1);
+                    task.card1.to = global.clone(global.grid.center);
+                    task.card1.to.rotation = 0;
+                    task.card1.zindex = 11;
+                }
+            }
+
+            else if (task.id === gameTask.taskAttack) {
+                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
+            }
+
+            else if (task.id === gameTask.taskPopup) {
+                if (!game.cardChoice && !game.choice) {
+                    game.popup = task;
+                    return game;
+                }
             }
 
             else if (task.id === gameTask.taskPlayCard) {
@@ -182,18 +161,14 @@ class gameManager {
                     return game;
             }
 
-            else if(task.id === gameTask.taskPairCard) {
+            else if (task.id === gameTask.taskPairCard) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
                 game.manager.pair(cardPlayer, task.card1, task.card2);
             }
 
-            else if(task.id === gameTask.taskPairCardWithEffect) {
+            else if (task.id === gameTask.taskPairCardWithEffect) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
                 game.manager.pair(cardPlayer, task.card1, task.card2, true);
-            }
-
-            else if(task.id === gameTask.taskMove){
-                global.spawnOrMove(player, task.card1, task.card1.location, global.locationHand);
             }
 
             if (task.delay) {

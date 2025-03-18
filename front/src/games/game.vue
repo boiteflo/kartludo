@@ -15,7 +15,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
-            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -34,7 +34,7 @@
 
         <!-- textEffect -->
         <div v-if="game && game.textEffect" id="textEffect"
-            class="bgWhite absolute mask text-center textVerticalCenter fontSize20" :style="{
+            class="bgWhite absolute mask text-center textVerticalCenter fontSize150em" :style="{
                 ...getFieldStyle(game.textEffect?.position.x, game.textEffect?.position.y,
                     game.textEffect?.position.width, game.textEffect?.position.height), 'z-index': 11
             }">
@@ -62,7 +62,7 @@
 
         <!-- cards -->
         <div v-for="card in cards" :key="'B' + card.index" @dragover="onDragOver" @drop="onDrop($event, card)">
-            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable"
+            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
                 :hidestat="card.hidestat" @mouseover="showCardMouseOver(card)" @click="showCard(card)"
                 @dragover="onDragOver" @drop="onDrop($event, card)" draggable="true">
             </gameCard>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <span class="relative">
-                    <span v-for="(choice, index) in []" :key="'Choice' + index">
+                    <span v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
                         <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
                             {{ choice.text }}
                         </v-btn>
@@ -103,12 +103,7 @@
             </div>
         </div>
 
-        <!-- Popup -->
-        <div v-if="game?.popup">
-            {{ game.popup }}
-        </div>
-
-        <div v-if="game && game.tasks" class="absolute hide" style="z-index:12;">
+        <div v-if="game && game.tasks" class="absolute" style="z-index:12;">
             {{game.tasks.map(x => x.id)}}
         </div>
 
@@ -157,7 +152,7 @@ export default {
     data: () => ({
         refreshG: 0,
         aside: false,
-        freeze: false,
+        freeze: true,
         cards: [],
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
@@ -176,6 +171,8 @@ export default {
             this.refreshGame();
         },
         nextTurn() {
+            if(this.freeze)
+                return;
             this.game = gameManager.nextTurn(this.game);
             this.refreshGame();
         },
@@ -186,21 +183,31 @@ export default {
                 this.freeze = true;
                 return;
             }
-            if(this.game.refreshOnlyTextEffect)
+            if (this.game.refreshOnlyTextEffect)
                 this.animTextEffect();
 
             if (this.game.refresh)
                 this.refreshGame();
         },
         playCard(card1, card2, drop) {
+            if(this.freeze)
+                return;
+            this.freeze = true;
             this.game = gameManager.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
+        selectChoice(choice){
+            this.freeze = true;
+            this.game = gameManager.selectChoice(this.game, choice);
+            this.refreshGame();
+        },
         selectChoiceCard(card) {
+            this.freeze = true;
             this.game = gameManager.selectChoiceCard(this.game, card);
             this.refreshGame();
         },
         refreshGame() {
+            this.freeze = true;
             this.cards = this.game.cards;
             setTimeout(() => { this.setDrag(); }, 10);
 
@@ -210,7 +217,7 @@ export default {
             this.refreshG++;
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
-        animTextEffect(){
+        animTextEffect() {
             let animationTime = gundamManager.getAnimDuration();
             helperAnimation.animateMultiple([{ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false }], animationTime);
         },
@@ -267,7 +274,7 @@ export default {
                         y: this.game.grid.center.y,
                         width: this.game.grid.center.width,
                         height: this.game.grid.center.height,
-                        rotation:0
+                        rotation: 0
                     }
                 };
 
@@ -297,9 +304,9 @@ export default {
                 element.addEventListener(event, (event) => action(event));
         },
         moveCard(event, card) {
-            if (!card.moving) return;
+            if (!card && card.isPlayer1 !== this.game.isPlayer1 || !card) 
+                return;
 
-            // Gestion du touch ou de la souris
             let x = event.touches ? event.touches[0].clientX : event.clientX;
             let y = event.touches ? event.touches[0].clientY : event.clientY;
 
@@ -312,6 +319,8 @@ export default {
             card.positionDrag = { x, y };
         },
         startDrag(event, card) {
+            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
+                return;
             event.dataTransfer.dropEffect = 'move';
             event.dataTransfer.effectAllowed = 'move';
             event.dataTransfer.setDragImage(new Image(), 0, 0);
@@ -324,6 +333,8 @@ export default {
             event.preventDefault();
         },
         onDrop(event) {
+            if(this.freeze)
+                return;
             event.preventDefault();
             const x = event.clientX || event.pageX || (event.touches ? event.touches[0].clientX : null);
             const y = event.clientY || event.pageY || (event.touches ? event.touches[0].clientY : null);
@@ -331,6 +342,8 @@ export default {
             event.target.style.zIndex = "auto";
             const data = event.dataTransfer.getData("card");
             const card = this.getCard(data);
+            if(!card)
+                return;
             card.moving = false;
 
             const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(x, y, ca.position) && !ca.isPaired);
@@ -341,11 +354,15 @@ export default {
 
         // --------- Touch
         touchStart(event, card) {
+            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
+                return;
             card.moving = true;
             card.positionOld = this.clone(card.position);
             event.target.style.zIndex = "1000";
         },
         touchEnd(event, card) {
+            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1  || !card)
+                return;
             card.moving = false;
             event.target.style.zIndex = "auto";
             const touch = event.changedTouches[0];

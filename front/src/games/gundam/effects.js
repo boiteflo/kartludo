@@ -28,6 +28,7 @@ class GameGundamEffect {
 
         card1.effectsRemaining = effects.filter(effect => effect.trigger == trigger);
         let result = {};
+        global.effects = [];
 
         if (card1.effectsRemaining.length < 1)
             return { nothing: true };
@@ -36,8 +37,13 @@ class GameGundamEffect {
         card1.effectsRemaining.forEach((effect, index) => {
             if (result.stop)
                 return;
+
             effect.index = index;
             result = { ...result, ...this.applyEffect(player, card1, card2, effect) };
+
+            if (effect.oneTurn)
+                card1.removeEndTurn = card1.removeEndTurn ? card1.removeEndTurn.concat([effect]) : [effect];
+
             if (!result.stop)
                 toBeRemoved.push(effect.index);
         });
@@ -71,18 +77,11 @@ class GameGundamEffect {
         if (effect.effect === 'get1ShieldToHand') {
             if (player.shield.length < 1)
                 return;
-            const card = player.shield.splice(0,1)[0];
-            const delay = global.delay;
+            const card = player.shield.splice(0, 1)[0];
+            //const delay = global.delay;
             const text = 'Get one shield to hand';
             card.location = player.positions.shield.location;
-            gameTask.addTasks(global.game.tasks,
-                [
-                    { id: gameTask.taskCardToHand, delay, card1: card, isPlayer1: player.isPlayer1 },
-                    { id: gameTask.taskTextToTrash },
-                    { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
-                    { id: gameTask.taskDeleteText },
-                    { id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 },
-                ]);
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskMove, card1: card, to: global.locationHand, isPlayer1: player.isPlayer1 }]);
             global.logEffect(effect, text);
             return {};
         }
@@ -91,7 +90,7 @@ class GameGundamEffect {
             if (!global.game.cardChoice) {
                 const cards = [global.getAndRemoveFirst(player.deck), global.getAndRemoveFirst(player.deck)];
                 global.game.tasks = [{
-                    id: gameTask.taskSelectCards,
+                    id: gameTask.taskPopup,
                     text: 'Select the card that will go to the top deck, the other one will go bottom deck',
                     cards,
                     select: 'top2DeckCard1Top1BottomSelect'
@@ -101,7 +100,8 @@ class GameGundamEffect {
             else {
                 const bottomCard = global.game.popup.cards.filter(card => card.index !== global.game.cardChoice.index);
                 player.deck = [global.game.cardChoice].concat(player.deck).concat(bottomCard);
-                global.game.popup = null;
+                delete (global.game.popup);
+                delete (global.game.cardChoice)
                 return {};
             }
         }
@@ -109,10 +109,10 @@ class GameGundamEffect {
         else if (effect.effect === 'protectionShieldLvXOrLower') {
             if (player.base || card2.index) return;
             const shield = player.shield[0];
-            const cancel = shield.level < effect.value;
-            if (cancel)
+            const stop = shield.level < effect.value;
+            if (stop)
                 global.logEffect(effect, `attack cancel because ${card1.name} has level < ${effect.value}`);
-            return { cancel };
+            return { stop };
         }
 
         else if (effect.effect === 'gainThisTurn') {
@@ -122,7 +122,7 @@ class GameGundamEffect {
             global.logEffect(effect, `${card1.name} give ${effect.effect2} to ${card2.name}`);
             this.applyEffect(player, card2, null, effectClone);
             card2.removeEndTurn = [effectClone];
-            return { stop: true };
+            return { };
         }
 
         else if (effect.effect === 'incruise') {
@@ -132,10 +132,9 @@ class GameGundamEffect {
         }
 
         else if (effect.effect === 'sendToHand') {
-            //global.game.tasks = [{id: gameTask.taskMove, card1, location:global.locationHand}].concat(global.game.tasks);
             gameTask.addTasks(global.game.tasks, [
-                { id: gameTask.taskMove, card1, location: global.locationHand, isPlayer1: player.isPlayer1 }
-                , { id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }
+                { id: gameTask.taskCardToCenter, card1, isPlayer1: player.isPlayer1 },
+                { id: gameTask.taskMove, card1, to: global.locationHand, isPlayer1: player.isPlayer1 }
             ]);
             global.logEffect(effect, `${card1.name} is send to hand`);
             return { stop: true };
@@ -184,14 +183,14 @@ class GameGundamEffect {
             this.apply(GameGundamEffect.onplay, player, card, null);
         }
 
-        else if (effect.effect === 'attackActiveEnnemyLvXOrLower') {
+        else if (effect.effect === 'attackActiveEnnemy') {
             if (!card1.attackActiveEnnemy || card1.attackActiveEnnemy < effect.value) {
                 card1.attackActiveEnnemy = effect.value;
                 global.logEffect(effect, `${card1.name} can attack unit with AP < ${effect.value}`);
             }
         }
 
-        else if (effect.effect === 'immuneApXIfBreach') {
+        else if (effect.effect === 'immuneAp') {
             if (card1.breach) {
                 if (!card1.immuneAp || card1.immuneAp < effect.value) {
                     card1.immuneAp = effect.value;
