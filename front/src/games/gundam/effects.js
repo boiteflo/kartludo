@@ -54,7 +54,7 @@ class GameGundamEffect {
             effects = effects.concat(card2.effect);
 
         let result = effects.filter(effect => effect.trigger == trigger);
-        if(trigger === this.onlink)
+        if (trigger === this.onlink)
             result = result.concat(this.getEffectsRemaining(this.onpair, card1, card2));
         return result;
     }
@@ -71,16 +71,17 @@ class GameGundamEffect {
         if (effect.effect === 'get1ShieldToHand') {
             if (player.shield.length < 1)
                 return;
-            const card = player.shield[0];
+            const card = player.shield.splice(0,1)[0];
             const delay = global.delay;
             const text = 'Get one shield to hand';
             card.location = player.positions.shield.location;
             gameTask.addTasks(global.game.tasks,
                 [
-                    { id: gameTask.taskCardToHand, delay, card1: card, isPlayer1: card.isPlayer1 },
+                    { id: gameTask.taskCardToHand, delay, card1: card, isPlayer1: player.isPlayer1 },
                     { id: gameTask.taskTextToTrash },
                     { id: gameTask.taskRefreshField, isPlayer1: card.isPlayer1 },
                     { id: gameTask.taskDeleteText },
+                    { id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 },
                 ]);
             global.logEffect(effect, text);
             return {};
@@ -132,9 +133,12 @@ class GameGundamEffect {
 
         else if (effect.effect === 'sendToHand') {
             //global.game.tasks = [{id: gameTask.taskMove, card1, location:global.locationHand}].concat(global.game.tasks);
-            gameTask.addTasks(global.game.tasks, [{id: gameTask.taskMove, card1, location:global.locationHand}]);
+            gameTask.addTasks(global.game.tasks, [
+                { id: gameTask.taskMove, card1, location: global.locationHand, isPlayer1: player.isPlayer1 }
+                , { id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }
+            ]);
             global.logEffect(effect, `${card1.name} is send to hand`);
-            return {stop:true};
+            return { stop: true };
         }
 
         else if (effect.effect === 'sendToField') {
@@ -158,7 +162,7 @@ class GameGundamEffect {
 
         else if (effect.effect === 'placeRestedResource') {
             player.resourcesMax += effect.value;
-            player.resAString = global.getRes(player);
+            player.resAString = player.resourcesAvailable + '/' + player.resourcesMax;
             global.logEffect(effect, `${card1.name} deploy ${effect.value} rested resource`);
         }
 

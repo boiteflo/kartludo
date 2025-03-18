@@ -115,7 +115,7 @@ class cardHandler {
         this.sendCardBackToSquareOne(card1);
     }
 
-    static attack(player, card1, card2, zone) {
+    static attack(player, card1, card2, zone, breach) {
         const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
         if (isSamePlayer) {
             this.sendCardBackToSquareOne(card1);
@@ -129,7 +129,7 @@ class cardHandler {
                 return;
             }
 
-            global.startAttackAnimation(player, opponent, card1, card2, zone);
+            global.startAttackAnimation(player, opponent, card1, card2, zone, breach);
             return;
         }
 
@@ -156,20 +156,25 @@ class cardHandler {
         this.sendCardBackToSquareOne(card1);
     }
 
-    static attackCard(player, opponent, attacker, target, zone) {
-
+    static attackCard(player, opponent, attacker, target, zone, breach) {
         const effectResult = effects.apply(effects.battle, player, attacker);
         if (effectResult.stop) {
             return;
         }
 
         const delay = global.delay;
-        let damage = attacker.ap;
+
+        let damage = breach ? breach : attacker.ap;
+        if(target.immuneAp && damage < target.immuneAp) 
+            damage = 0;
         target.hp -= damage;
 
         damage = target.ap;
+        if(attacker.immuneAp && attacker < target.immuneAp) 
+            damage = 0;
         attacker.hp -= damage;
 
+        const activeBreach = !breach && this.isCardUnit(target) && attacker.breach && target.hp < 1;
         global.setActive(attacker, false);
         const tasks = [];
 
@@ -178,7 +183,7 @@ class cardHandler {
             attacker.dead = true;
             const delayForTarget = target.hp < 1 ? null : global.delay;
             tasks.push({ id: gameTask.taskCardToTrash, delay: delayForTarget, card1: attacker, isPlayer1: attacker.isPlayer1 });
-        } else
+        } else if(!activeBreach)
             tasks.push({ id: gameTask.taskRefreshField, isPlayer1: attacker.isPlayer1 });
 
         if (target.hp < 1) {
@@ -195,19 +200,9 @@ class cardHandler {
 
         gameTask.addTasks(global.game.tasks, tasks);
         
-        if (this.isCardUnit(target) && attacker.breach && target.hp < 1) {
-            this.attack(player, attacker, null, zone);
+        if (activeBreach) {
+            this.attack(player, attacker, null, zone, attacker.breach);
         }
-        /*
-                if (!breach && global.isCardUnit(target) && card.breach && target.hp < 1) {
-                    result =this.attack(player, card, opponent.base ?? { text: 'shield' }, card.breach);
-                }
-        if (!breach) {
-            attack = breach ?? target.ap;
-            attack = card.immuneAp && card.immuneAp > attack ? 0 : attack;
-            card.hp -= attack;
-        }
-                    */
     }
 
     static selectChoiceCard(game, card) {

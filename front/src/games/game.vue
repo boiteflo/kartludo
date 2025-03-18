@@ -14,8 +14,8 @@
 
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
-            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize12: true, textVerticalCenter: true, 'text-center': true,
-            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
+            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -74,7 +74,7 @@
                 :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
 
                 <v-btn target="_blank" text
-                    :class="{ bg: true, w100p: true, h100p: true, shine: !freeze, fontSize12: true }" @click="nextTurn"
+                    :class="{ bg: true, w100p: true, h100p: true, shine: !freeze, fontSize1em: true }" @click="nextTurn"
                     style="min-width:0px;">
                     End <br>Turn
                 </v-btn>

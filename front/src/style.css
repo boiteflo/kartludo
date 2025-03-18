@@ -756,6 +756,14 @@ h4 {
   }
 
   .hide {display:none}
+  
+  .fontSize05em {font-size: 0.5em !important;}
+  .fontSize075em {font-size: 0.75em !important;}
+  .fontSize1em {font-size: 1em !important;}
+  .fontSize125em {font-size: 1.25em !important;}
+  .fontSize150em {font-size: 1.5em !important;}
+  .fontSize175em {font-size: 1.75em !important;}
+  .fontSize2em {font-size: 2em !important;}
 
   .fontSize4 {font-size: 4px !important;}
   .fontSize6 {font-size: 6px !important;}

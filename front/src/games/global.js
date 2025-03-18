@@ -202,12 +202,12 @@ class global {
     static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
 
     // Tasks 
-    static startAttackAnimation(player, opponent, attacker, target, zone) {
+    static startAttackAnimation(player, opponent, attacker, target, zone, breach) {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
             [{ id: gameTask.taskCardToMiniCenter, card1: attacker, isPlayer1: attacker.isPlayer1 },
             { id: gameTask.taskCardToMiniCenter2, delay: delay, card1: target, isPlayer1: target.isPlayer1 },
-            { id: gameTask.taskAttack, player, opponent, attacker, target, delay, zone }
+            { id: gameTask.taskAttack, player, opponent, attacker, target, delay, zone, breach }
             ]);
     }
 

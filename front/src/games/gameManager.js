@@ -132,7 +132,7 @@ class gameManager {
             }
 
             else if (task.id === gameTask.taskAttack) {
-                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone);
+                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
             }
 
             else if (task.id === gameTask.taskTextToMiniCenter2) {
@@ -192,7 +192,7 @@ class gameManager {
                 game.manager.pair(cardPlayer, task.card1, task.card2, true);
             }
 
-            else if(task.id === gameTask.taskMove){                
+            else if(task.id === gameTask.taskMove){
                 global.spawnOrMove(player, task.card1, task.card1.location, global.locationHand);
             }
 

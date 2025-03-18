@@ -30,11 +30,8 @@ class manager {
             global.spawnNotShown(game.player2, null, global.locationDeck, global.locationShield);
         }
 
-        game.player1.shield = [global.createCard("GD01-091")].concat(game.player1.shield).concat([global.createCard("GD01-091")]);
-        game.player2.shield = [global.createCard("GD01-091")].concat(game.player2.shield).concat([global.createCard("GD01-091")]);
-
-        game.player1.deck = [global.createCard("GD01-034")].concat(game.player1.deck);
-        game.player2.deck = [global.createCard("GD01-034")].concat(game.player2.deck);
+        game.player1.deck = [global.createCard("ST02-015")].concat(game.player1.deck);
+        game.player2.deck = [global.createCard("ST02-015")].concat(game.player2.deck);
 
         const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
         playerOpponent.resourcesEx+=1;
@@ -74,8 +71,8 @@ class manager {
         return cardHandler.play(player, card1, card2, zone, isShowingEffect);
     }
 
-    static attack(player, opponent, card1, card2, zone){
-        cardHandler.attackCard(player, opponent, card1, card2, zone);
+    static attack(player, opponent, card1, card2, zone, breach){
+        cardHandler.attackCard(player, opponent, card1, card2, zone, breach);
     }
 
     static selectChoiceCard(game, card) {
