@@ -19,6 +19,8 @@ class cardHandler {
             const isTurnPlayer = global.isPlayer1 === card.isPlayer1;
 
             card.selectable = isCostAvailable && isTurnPlayer;
+            if(global.isCardUnit(card) && player.field.length > 5)
+                card.selectable=false;
         });
 
         player.field.forEach(card => {
@@ -91,7 +93,7 @@ class cardHandler {
         if (effectResult.stop)
             return effectResult;
 
-        if (this.isCardUnit(card1)) {
+        if (this.isCardUnit(card1) && player.field.length < 6) {
             card1.canAttack = false;
             if (playCost)
                 player.resourcesAvailable -= card1.cost;

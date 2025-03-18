@@ -29,16 +29,15 @@ class positioner {
         }
 
         grid.center = this.getCardSize(grid.width - grid.border2, grid.height - grid.border2, 1);
-        grid.centerMini = {
-            x: grid.x2, y: grid.y2,
-            width: grid['x' + (divide - 2)] - grid.x2, height: grid['y' + (divide - 2)] - grid.y2, location: 0, zone: 'centerMini1'
-        };
+        grid.centerMini = { width, height, location: 0, zone: 'centerMini1' };
         grid.centerMini.card1 = this.getCardSize(grid.centerMini.width, grid.centerMini.height, 2);
+        grid.centerMini.x = (width - (grid.centerMini.card1.width * 2)) / 2;
+        grid.centerMini.y = (height - (grid.centerMini.card1.height * 1.5)) / 2;
         grid.centerMini.card1.x = grid.centerMini.x;
         grid.centerMini.card1.y = grid.centerMini.y;
         grid.centerMini.card2 = global.clone(grid.centerMini.card1);
         grid.centerMini.card2.x += grid.centerMini.card1.width;
-        grid.centerMini.text = {x: grid.x2, y:grid.y2 + grid.centerMini.card1.height, width: grid.centerMini.card1.width*2};
+        grid.centerMini.text = { x: grid.centerMini.x, y: grid.centerMini.y + grid.centerMini.card1.height, width: grid.centerMini.card1.width * 2 };
         grid.centerMini.text.height = height - grid.centerMini.text.y - grid.border;
         grid.centerMini.text.height = Math.min(grid.centerMini.text.height, 150);
 
@@ -90,16 +89,17 @@ class positioner {
         return result;
     }
 
-    static refresh(cards, position, useZoneSize = false) {
+    static refresh(cards, position, useZoneSize, wrapCut) {
         let zoneHeight = position.height;
         if (position.location == global.locationField)
             zoneHeight *= 0.75;
 
         const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length);
         cards.forEach((card, index) => {
-            card.to = this.getCardPosition(index, cards.length, position, cardSize, card);
+            const degree = card.active ? 0 : 90;
+            card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
             card.location = position.location;
-            card.zindex= card.pair ? 2 : 1;
+            card.zindex = card.pair ? 2 : 1;
             if (position.location == global.locationField && card.pair)
                 card.pair.to = this.getPairPosition(card.to);
         });
@@ -123,17 +123,6 @@ class positioner {
         const x = (width - desiredWidth) / 2;
         const y = (height - desiredHeight) / 2;
         return { x, y, width: desiredWidth, height: desiredHeight };
-    }
-
-    static getCardPosition(index, total, position, cardSize, card) {
-        const degree = card.active ? 0 : 90;
-        return {
-            x: position.x + this.getXCenter(position.width, cardSize.width, total, index),
-            y: position.y,
-            width: cardSize.width,
-            height: cardSize.height,
-            rotation: degree
-        };
     }
 
     static getPositionHandWithRotation(player, card, index, total) {
@@ -178,6 +167,28 @@ class positioner {
         const half = total / 2;
         const indexCenter = half - index;
         return halfWidth - indexCenter * elementWidth;
+    }
+
+    static getWrapPosition(position, cardSize, total, index, degree, wrapCut) {
+        if (total < wrapCut || position.height < cardSize.height * 2)
+            return this.getCardPositionXY(position, cardSize, total, index, degree);
+
+        const mid = Math.floor(total / 2);
+        const indexLine = index < mid ? index : index - mid;
+        const totalLine = total - mid;
+        const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine);
+        const positionLine = index < mid ? position : { ...position, y: position.y + cardSizeLine.height };
+        return this.getCardPositionXY(positionLine, cardSizeLine, totalLine, indexLine, degree);
+    }
+
+    static getCardPositionXY(position, cardSize, total, index, degree) {
+        return {
+            x: position.x + this.getXCenter(position.width, cardSize.width, total, index),
+            y: position.y,
+            width: cardSize.width,
+            height: cardSize.height,
+            rotation: degree
+        };
     }
 
     static getXCenter(totalWidth, elementWidth, total, index) {

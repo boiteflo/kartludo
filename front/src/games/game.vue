@@ -15,7 +15,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
-            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}

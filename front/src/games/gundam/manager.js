@@ -59,8 +59,8 @@ class manager {
     }
 
     static refreshFieldAndHand(player) {
-        positioner.refresh(player.hand, player.positions.hand);
-        positioner.refresh(player.field, player.positions.field);
+        positioner.refresh(player.hand, player.positions.hand, false, 7);
+        positioner.refresh(player.field, player.positions.field, false, 3);
         positioner.refresh(player.base, player.positions.base, true);
         const cardsToRemoveIndex = player.trash.filter(x => !x.to).map(x => x.index);
         global.game.cards = global.game.cards.filter(x => !cardsToRemoveIndex.includes(x.index));
