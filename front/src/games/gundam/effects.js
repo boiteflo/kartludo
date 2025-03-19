@@ -122,7 +122,7 @@ class GameGundamEffect {
             global.logEffect(effect, `${card1.name} give ${effect.effect2} to ${card2.name}`);
             this.applyEffect(player, card2, null, effectClone);
             card2.removeEndTurn = [effectClone];
-            return { };
+            return {};
         }
 
         else if (effect.effect === 'incruise') {
@@ -198,6 +198,62 @@ class GameGundamEffect {
                 }
             }
         }
+    }
+
+    static noActionCard = 'no action card';
+
+    static askForActionCards(player, opponent) { //actionOpponent,actionPlayer, global.game.cardChoice && !global.game.choice
+        if (!global.game.actionOpponent) {
+            if (global.game.choice && global.game.choice.text === this.noActionCard)
+                global.game.actionOpponent = global.game.choice;
+            else if (global.game.cardChoice) {
+                global.game.choice = { text: 'Command' };
+                global.game.tasks = [{ id: gameTask.taskPlayCard, card1: global.game.cardChoice, zone: opponent.positions.field }]
+                    .concat(global.game.tasks);
+                global.deletePopup();
+                return { stop: true };
+            }
+            else {
+                const result = this.askForActionCardsForThisPlayer(opponent);
+                if (result && result.stop)
+                    return result;
+                global.game.actionOpponent = { text: this.noActionCard };
+            }
+        }
+
+        if (!global.game.actionPlayer) {
+            if (global.game.choice && global.game.choice.text === this.noActionCard)
+                global.game.actionPlayer = global.game.choice;
+            else if (global.game.cardChoice) {
+                global.game.choice = { text: 'Command' };
+                global.game.tasks = [{ id: gameTask.taskPlayCard, card1: global.game.cardChoice, zone: player.positions.field }]
+                    .concat(global.game.tasks);
+                global.deletePopup();
+                return { stop: true };
+            }
+            else {
+                const result = this.askForActionCardsForThisPlayer(player);
+                if (result && result.stop)
+                    return result;
+                global.game.actionPlayer = { text: this.noActionCard };
+            }
+        }
+
+        return {};
+    }
+
+    static askForActionCardsForThisPlayer(player) {
+        const actionCard = player.hand.filter(x => x.effect && x.effect.find(fx => fx.trigger === 'action'));
+        if (actionCard.length > 0) {
+            global.game.tasks = [{
+                id: gameTask.taskPopup,
+                text: 'Select an action card ?',
+                cards: actionCard,
+                choices: [{ text: this.noActionCard }]
+            }].concat(global.game.tasks);
+            return { stop: true };
+        }
+
     }
 
     static removeOneTurnEffect(cards) {

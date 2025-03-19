@@ -170,7 +170,7 @@ class global {
                     : [{ id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 }];
 
                 gameTask.addTasks(global.game.tasks, taskShowCards.concat([{ id: gameTask.taskTextShow, delay, text }, task]));
-                return { stop: true };
+                return { stop: true, destroy:true };
             } else
                 gameTask.addTasks(global.game.tasks, [
                     { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
@@ -278,6 +278,14 @@ class global {
             [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
             { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
             ]);
+    }
+
+    static deletePopup(){
+        delete(this.game.popup);
+        delete(this.game.choice);
+        delete(this.game.actionPlayer);
+        delete(this.game.actionOpponent);
+        delete(this.game.cardChoice);
     }
 
     // Card Type

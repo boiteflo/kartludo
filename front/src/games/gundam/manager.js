@@ -8,7 +8,7 @@ class manager {
     static getCards() { return cards.cards; }
     static getDeckLenth() { return 50; }
     static getAnimDuration() { return 400; }
-    static getHandStartLength() { return 12; }
+    static getHandStartLength() { return 5; }
 
     static setup(game) {
         game.player1 = {
@@ -33,8 +33,8 @@ class manager {
         game.player1.deck = [global.createCard("ST02-013")].concat(game.player1.deck);
         game.player2.deck = [global.createCard("ST02-013")].concat(game.player2.deck);
 
-        game.player1.shield = [global.createCard("ST02-013")].concat(game.player1.shield);
-        game.player2.shield = [global.createCard("ST02-013")].concat(game.player2.shield);
+        // game.player1.shield = [global.createCard("ST02-013")].concat(game.player1.shield);
+        // game.player2.shield = [global.createCard("ST02-013")].concat(game.player2.shield);
 
         // const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
         // playerOpponent.resourcesEx += 1;

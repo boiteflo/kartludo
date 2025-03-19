@@ -19,8 +19,8 @@ class cardHandler {
             const isTurnPlayer = global.isPlayer1 === card.isPlayer1;
 
             card.selectable = isCostAvailable && isTurnPlayer;
-            if(global.isCardUnit(card) && player.field.length > 5)
-                card.selectable=false;
+            if (global.isCardUnit(card) && player.field.length > 5)
+                card.selectable = false;
         });
 
         player.field.forEach(card => {
@@ -72,8 +72,7 @@ class cardHandler {
                     id: gameTask.taskPopup,
                     text: 'Do you want to play as pilot or command ?',
                     choices
-                }, { id: gameTask.taskPlayCard, isPlayer1: card1.isPlayer1, card1, card2, zone }
-                ].concat(global.game.tasks);
+                }].concat(global.game.tasks);
                 return { stop: true }
             } else {
                 isPilot = global.game.choice.text === 'Pilot';
@@ -146,8 +145,34 @@ class cardHandler {
         }
 
         const opponent = global.getPlayerTurnOpponent();
+        const blockers = opponent.field.filter(x => x.block && x.active);
+        let selectedAsBlocker = false;
+        if (!global.game.blocker && blockers.length > 0) {
+            if (!global.game.cardChoice && !global.game.choice) {
+                global.game.tasks = [{
+                    id: gameTask.taskPopup,
+                    text: 'Select a blocker ?',
+                    cards: blockers,
+                    choices: [{ text: 'none' }]
+                }
+                ].concat(global.game.tasks);
+                return { stop: true };
+            }
+
+            card2 = global.game.cardChoice;
+            global.game.blocker = card2;
+            selectedAsBlocker = true;
+        }
+
+        /*const actionCardResult = effects.askForActionCards(player, opponent);
+        if (actionCardResult && actionCardResult.stop)
+            return actionCardResult;*/
+
+        delete (global.game.blocker);
+        global.deletePopup();
+
         if (card2 && card2.isPlayer1 === opponent.isPlayer1) {
-            const isValidTarget = card1.attackActiveEnnemy ? card2.level < card1.attackActiveEnnemy : !card2.active;
+            const isValidTarget = card1.attackActiveEnnemy ? card2.level < card1.attackActiveEnnemy : selectedAsBlocker || !card2.active;
             if (!isValidTarget) {
                 this.sendCardBackToSquareOne(card1);
                 return;

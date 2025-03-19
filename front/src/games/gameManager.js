@@ -53,7 +53,7 @@ class gameManager {
     }
 
     static playCard(game, card1, card2, zone) {
-        game.manager.playCard(global.getPlayerTurn(), card1, card2, zone);
+        gameTask.addTasks(game.tasks, [{id:gameTask.taskPlayCard,card1, card2, zone}]);
         return game;
     }
 
@@ -137,7 +137,9 @@ class gameManager {
             }
 
             else if (task.id === gameTask.taskAttack) {
-                game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
+                const result =game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
+                if(result && result.stop)
+                    return game;
             }
 
             else if (task.id === gameTask.taskPopup) {
@@ -150,7 +152,7 @@ class gameManager {
             else if (task.id === gameTask.taskPlayCard) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
                 const result = game.manager.playCard(cardPlayer, task.card1, task.card2, task.zone);
-                if (result && result.stop)
+                if (result && result.stop && !result.destroy)
                     return game;
             }
 

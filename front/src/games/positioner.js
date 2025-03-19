@@ -32,7 +32,7 @@ class positioner {
         grid.centerMini = { width, height, location: 0, zone: 'centerMini1' };
         grid.centerMini.card1 = this.getCardSize(grid.centerMini.width, grid.centerMini.height, 2);
         grid.centerMini.x = (width - (grid.centerMini.card1.width * 2)) / 2;
-        grid.centerMini.y = (height - (grid.centerMini.card1.height * 1.5)) / 2;
+        grid.centerMini.y = 5; // (height - (grid.centerMini.card1.height * 1)) / 2;
         grid.centerMini.card1.x = grid.centerMini.x;
         grid.centerMini.card1.y = grid.centerMini.y;
         grid.centerMini.card2 = global.clone(grid.centerMini.card1);
