@@ -20,6 +20,37 @@ class GameGundamEffect {
     static gain = 'gain';
     static hand = 'hand';
 
+
+    static handleEffects(player, card1, card2, trigger) {
+        const effectsRemainings = this.getEffectsRemaining(trigger, card1, card2);
+        if (!effectsRemainings || effectsRemainings.length < 1)
+            return {};
+
+        const text = effectsRemainings.map(x => `${x.effect} ${x.value}`).join('<br>');
+        const delay = global.delay;
+        const isShowingEffect = global.cardHighlight.find(x => x.index === card1.index);
+
+        if (!isShowingEffect) {
+            const taskShowCards = card2
+                ? [
+                    { id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
+                    { id: gameTask.taskCardToMiniCenter2, card1: card2, isPlayer1: card2.isPlayer1 }
+                ]
+                : [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 }];
+
+            taskShowCards.push({ id: gameTask.taskTextShow, delay, text });
+            global.game.tasks = taskShowCards.concat(global.game.tasks);
+            return { stop: true };
+        } else
+            gameTask.addTasks(global.game.tasks, [
+                { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
+                { id: gameTask.taskTextHide, delay },
+                { id: gameTask.taskTextDelete },
+            ]);
+
+        return this.apply(trigger, player, card1, card2);
+    }
+
     static apply(trigger, player, card1, card2) {
         const multiTriggers = [this.onpair, this.onlink];
         let effects = !card1.effect ? [] : card1.effect;

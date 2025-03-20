@@ -11,10 +11,8 @@ class gameTask {
     static taskMove = 'Move';
     static taskAttack = 'Attack';    
     static taskPopup = 'Popup';    
-    static taskPlayCard = 'PlayCard';
-    static taskPlayCardWithEffect = 'PlayCardWithEffect';    
+    static taskPlayCard = 'PlayCard';   
     static taskPairCard = 'PairCard';
-    static taskPairCardWithEffect = 'PairCardWithEffect';
 
     static addTasks(list, tasks) {
         tasks.forEach(task => {

@@ -15,7 +15,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
-            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 3
+            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 3
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -103,12 +103,12 @@
             </div>
         </div>
 
-        <div v-if="game && game.tasks" class="absolute" style="z-index:12;">
+        <div v-if="game && game.tasks" class="absolute hide" style="z-index:12;">
             {{game.tasks.map(x => x.id)}}
         </div>
 
         <!-- Title -->
-        <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px; z-index:2">
+        <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px; z-index:13">
             <div class="relative">
                 <div class="text-center absolute w100p title" style="left:-000px; top:30px;">{{ title }}
                 </div>

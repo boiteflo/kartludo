@@ -8,6 +8,7 @@ class global {
     static isPlayer1;
     static delay;
     static effects;
+    static cardHighlight = [];
 
     static phase = 0;
     static phaseStart = 0;
@@ -55,7 +56,7 @@ class global {
             global.game.cards = global.addIn(global.game.cards, card);
         
         const player = card.isPlayer1 ? global.game.player1 : global.game.player2;
-        if(!card.positon)
+        if(!card.position)
             card.position = this.clone(player.positions.deck);
         card.zindex = 11;
     }
@@ -108,13 +109,12 @@ class global {
         return card;
     }
 
-    static pair(player, card1, card2, isShowingEffect) {
+    static pair(player, card1, card2) {
         const cardUnit = this.isCardUnit(card1) ? card1 : card2;
         const cardPilot = this.isCardPilot(card1) ? card1 : card2;
         const isLink = this.isLink(cardUnit, cardPilot);
         const trigger = isLink ? effects.onlink : effects.onpair;
-        const task = { id: gameTask.taskPairCardWithEffect, card1: cardUnit, card2: cardPilot };
-        const effectResult = global.handleEffects(player, cardUnit, cardPilot, isShowingEffect, trigger, task);
+        const effectResult = effects.handleEffects(player, cardUnit, cardPilot, trigger);
         if (effectResult.stop)
             return effectResult;
 
@@ -153,33 +153,6 @@ class global {
     static getNextIndex() {
         this.index++;
         return this.index;
-    }
-
-    // Effects 
-    static handleEffects(player, card1, card2, isShowingEffect, trigger, task) {
-        const effectsRemainings = effects.getEffectsRemaining(trigger, card1, card2);
-        const text = effectsRemainings.map(x => `${x.effect} ${x.value}`).join('<br>');
-        const delay = global.delay;
-        if (effectsRemainings && effectsRemainings.length > 0) {
-            if (!isShowingEffect) {
-                const taskShowCards = card2
-                    ? [
-                        { id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 },
-                        { id: gameTask.taskCardToMiniCenter2, card1: card2, isPlayer1: card1.isPlayer1 }
-                    ]
-                    : [{ id: gameTask.taskCardToMiniCenter, card1: card1, isPlayer1: card1.isPlayer1 }];
-
-                gameTask.addTasks(global.game.tasks, taskShowCards.concat([{ id: gameTask.taskTextShow, delay, text }, task]));
-                return { stop: true, destroy:true };
-            } else
-                gameTask.addTasks(global.game.tasks, [
-                    { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
-                    { id: gameTask.taskTextHide, delay },
-                    { id: gameTask.taskTextDelete },
-                ]);
-        }
-
-        return effects.apply(trigger, player, card1, card2);
     }
 
     // Card

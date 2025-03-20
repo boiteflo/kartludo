@@ -14,12 +14,12 @@ class manager {
         game.player1 = {
             ...game.player1,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 6, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
@@ -36,8 +36,8 @@ class manager {
         // game.player1.shield = [global.createCard("ST02-013")].concat(game.player1.shield);
         // game.player2.shield = [global.createCard("ST02-013")].concat(game.player2.shield);
 
-        // const playerOpponent = global.game.isPlayer1Turn ? game.player2 : game.player1;
-        // playerOpponent.resourcesEx += 1;
+        const playerOpponent = global.isPlayer1 ? game.player1 : game.player2;
+        playerOpponent.resourcesEx += 1;
     }
 
     static createDefaultBase(player) {

@@ -87,8 +87,7 @@ class cardHandler {
             global.game.cards.push(card1);
         }
 
-        const task = { id: gameTask.taskPlayCardWithEffect, isPlayer1: card1.isPlayer1, card1, card2, zone };
-        const effectResult = global.handleEffects(player, card1, card2, isShowingEffect, effects.onplay, task);
+        const effectResult = effects.handleEffects(player, card1, card2, effects.onplay);
         if (effectResult.stop)
             return effectResult;
 

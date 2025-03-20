@@ -112,6 +112,7 @@ class gameManager {
             else if (task.id === gameTask.taskCardToMiniCenter) {
                 if (task.card1) {
                     global.spawnIfNot(task.card1);
+                    global.cardHighlight.push(task.card1);
                     task.card1.to = global.clone(global.grid.centerMini.card1);
                     task.card1.to.rotation = 0;
                     task.card1.zindex = 11;
@@ -121,6 +122,7 @@ class gameManager {
             else if (task.id === gameTask.taskCardToMiniCenter2) {
                 if (task.card1) {
                     global.spawnIfNot(task.card1);
+                    global.cardHighlight.push(task.card1);
                     task.card1.to = global.clone(global.grid.centerMini.card2);
                     task.card1.to.rotation = 0;
                     task.card1.zindex = 11;
@@ -130,6 +132,7 @@ class gameManager {
             else if (task.id === gameTask.taskCardToCenter) {
                 if (task.card1) {
                     global.spawnIfNot(task.card1);
+                    global.cardHighlight.push(task.card1);
                     task.card1.to = global.clone(global.grid.center);
                     task.card1.to.rotation = 0;
                     task.card1.zindex = 11;
@@ -156,21 +159,11 @@ class gameManager {
                     return game;
             }
 
-            else if (task.id === gameTask.taskPlayCardWithEffect) {
-                const cardPlayer = global.getPlayer(task.card1.isPlayer1);
-                const result = game.manager.playCard(cardPlayer, task.card1, task.card2, task.zone, true);
-                if (result && result.stop)
-                    return game;
-            }
-
             else if (task.id === gameTask.taskPairCard) {
                 const cardPlayer = global.getPlayer(task.card1.isPlayer1);
-                game.manager.pair(cardPlayer, task.card1, task.card2);
-            }
-
-            else if (task.id === gameTask.taskPairCardWithEffect) {
-                const cardPlayer = global.getPlayer(task.card1.isPlayer1);
-                game.manager.pair(cardPlayer, task.card1, task.card2, true);
+                const result = game.manager.pair(cardPlayer, task.card1, task.card2);
+                if (result && result.stop && !result.destroy)
+                    return game;
             }
 
             if (task.delay) {

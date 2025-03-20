@@ -99,7 +99,10 @@ class positioner {
             const degree = card.active ? 0 : 90;
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
             card.location = position.location;
-            card.zindex = card.pair ? 2 : 1;
+            
+            if(!global.cardHighlight.find(x=> x.index === card.index))
+                card.zindex = card.pair ? 2 : 1;
+
             if (position.location == global.locationField && card.pair)
                 card.pair.to = this.getPairPosition(card.to);
         });
