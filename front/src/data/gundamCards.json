@@ -11,10 +11,10 @@
             "attribute": "(Operation Meteor)",
             "link": "[Quatre Raberba Winner]",
             "effectText": "Deploy Hand to Field (Maganac Corps)",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onplay",
-                    "effect": "deploy",
+                    "id": "deploy",
                     "target": "Maganac Corps"
                 }
             ],
@@ -35,10 +35,10 @@
             "attribute": "(Operation Meteor)",
             "link": "[Trowa Barton]",
             "effectText": "During Pair this unit gains Breach 3",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onpair",
-                    "effect": "breach",
+                    "id": "breach",
                     "value": 3
                 }
             ],
@@ -59,7 +59,7 @@
             "attribute": "(Operation Meteor)",
             "link": "[Heero Yuy]",
             "effectText": "",
-            "effect": [],
+            "effects": [],
             "pilot": "",
             "burstText": "",
             "targetUnit": false,
@@ -77,10 +77,10 @@
             "attribute": "(Operation Meteor)",
             "link": "[Chang Wufei]",
             "effectText": "Breach 3",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onplay",
-                    "effect": "breach",
+                    "id": "breach",
                     "value": 3
                 }
             ],
@@ -101,17 +101,17 @@
             "attribute": "(Operation Meteor)",
             "link": "",
             "effectText": "xxx",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onpair",
                     "target": "pairUnit",
-                    "effect": "immuneAp",
+                    "id": "immuneAp",
                     "value": 4,
                     "oneTurn":true
                 },
                 {
                     "trigger": "burst",
-                    "effect": "sendToHand"
+                    "id": "sendToHand"
                 }
             ],
             "pilot": "During your turn, if this Unit has Breach, it can't receive battle damage from enemy Units with 3 or less AP.",
@@ -131,15 +131,15 @@
             "attribute": "",
             "link": "",
             "effectText": "Main : Place 1 rested Resource.",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "command",
-                    "effect": "placeRestedResource",
+                    "id": "placeRestedResource",
                     "value": 1
                 },
                 {
                     "trigger": "burst",
-                    "effect": "placeExResource",
+                    "id": "placeExResource",
                     "value": 1
                 }
             ],
@@ -160,15 +160,15 @@
             "attribute": "(Operation Meteor)",
             "link": "[Heero Yuy]",
             "effectText": "Breach 5. This Unit may choose an active enemy Unit that is Lv4 or lower as its attack target.",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onplay",
-                    "effect": "breach",
+                    "id": "breach",
                     "value": 5
                 },
                 {
                     "trigger": "onplay",
-                    "effect": "attackActiveEnnemy",
+                    "id": "attackActiveEnnemy",
                     "value": 5
                 }
             ],
@@ -189,10 +189,10 @@
             "attribute": "(Operation Meteor)",
             "link": "[Heero Yuy]",
             "effectText": "Deploy : Place 1 Ex Resource",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onplay",
-                    "effect": "placeExResource",
+                    "id": "placeExResource",
                     "value": 1
                 }
             ],
@@ -211,7 +211,7 @@
                 0
             ],
             "attribute": "(Maganac Corps)",
-            "effect": [],
+            "effects": [],
             "link": "",
             "effectText": "",
             "pilot": "",
@@ -231,18 +231,18 @@
             "attribute": "(Operation Meteor)",
             "link": "",
             "effectText": "",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "onlink",
                     "type": "gain",
                     "target": "pairUnit",
-                    "effect": "incruise",
+                    "id": "incruise",
                     "ap": 1,
                     "hp": 1
                 },
                 {
                     "trigger": "burst",
-                    "effect": "sendToHand"
+                    "id": "sendToHand"
                 }
             ],
             "pilot": "This Unit get AP+1 and HP+1 while linked.",
@@ -263,10 +263,10 @@
             "attribute": "(Operation Meteor)",
             "link": "",
             "effectText": "Main : Choose 1 of your Units. It gains Breach 3 during this turn.",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "command",
-                    "effect": "gainThisTurn",
+                    "id": "gainThisTurn",
                     "target": "unit",
                     "effect2": "breach",
                     "value": 3
@@ -290,10 +290,10 @@
             "attribute": "(Operation Meteor)",
             "link": "",
             "effectText": "Action : during this battle, your shield area cards can't receive damage from ennemy Units that are Lv.4 or lower.",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "action",
-                    "effect": "protectionShieldLvXOrLower",
+                    "id": "protectionShieldLvXOrLower",
                     "value": 4
                 }
             ],
@@ -315,18 +315,18 @@
             "attribute": "(Academy) (Stronghold)",
             "link": "",
             "effectText": "Deploy : Add 1 of your Shields to your hand. Then look at the top 2 cards of your deck and return 1 to the top and 1 to the bottom.",
-            "effect": [
+            "effects": [
                 {
                     "trigger": "burst",
-                    "effect": "sendToBase"
+                    "id": "sendToBase"
                 },
                 {
                     "trigger": "onplay",
-                    "effect": "top2DeckCard1Top1Bottom"
+                    "id": "top2DeckCard1Top1Bottom"
                 },
                 {
                     "trigger": "onplay",
-                    "effect": "get1ShieldToHand"
+                    "id": "get1ShieldToHand"
                 }
             ],
             "pilot": "",
@@ -364,7 +364,7 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effect": [],
+            "effects": [],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],

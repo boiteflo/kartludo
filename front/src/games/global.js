@@ -9,6 +9,7 @@ class global {
     static delay;
     static effects;
     static cardHighlight = [];
+    static needTaskEndRefresh = false;
 
     static phase = 0;
     static phaseStart = 0;
@@ -46,17 +47,18 @@ class global {
     static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
         const cardSpawn = this.move(player, card, locationFrom, locationTo, ignoreRefresh);
         this.spawnIfNot(cardSpawn);
+        return cardSpawn;
     }
 
     static spawnIfNot(card) {
-        if(!card)
+        if (!card)
             return;
 
         if (!global.game.cards.find(x => x.index === card.index))
             global.game.cards = global.addIn(global.game.cards, card);
-        
+
         const player = card.isPlayer1 ? global.game.player1 : global.game.player2;
-        if(!card.position)
+        if (!card.position)
             card.position = this.clone(player.positions.deck);
         card.zindex = 11;
     }
@@ -103,7 +105,7 @@ class global {
         }
 
         if (!ignoreRefresh) {
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField.name, isPlayer1: player.isPlayer1 }]);
         }
 
         return card;
@@ -128,8 +130,6 @@ class global {
         cardUnit.zindex = 2;
         cardUnit.ap += cardPilot.ap;
         cardUnit.hp += cardPilot.hp;
-
-        gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField, isPlayer1: player.isPlayer1 }]);
 
         if (this.isLink(cardUnit, cardPilot)) {
             cardUnit.link = true;
@@ -181,6 +181,22 @@ class global {
     }
 
     // Array
+    static addListInArrayAfterIndex(array, index, list) {
+        if (!array)
+            return list;
+
+        if (!list)
+            return array;
+
+        if (index >= array.length)
+            return array.concat(list);
+
+        if (index < 0 || index >= array.length)
+            return list.concat(array);
+
+        return [...array.slice(0, index), ...list, ...array.slice(index)];
+    }
+
     static getAndRemoveFirst(array) {
         return array.splice(0, 1)[0];
     }
@@ -196,74 +212,20 @@ class global {
 
     static sortRandom(cards) { return cards.sort(() => Math.random() - 0.5); }
 
-    // Tasks 
-    static startAttackAnimation(player, opponent, attacker, target, zone, breach) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card1: attacker, isPlayer1: attacker.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay, card1: target, isPlayer1: target.isPlayer1 },
-            { id: gameTask.taskAttack, player, opponent, attacker, target, delay, zone, breach }
-            ]);
-    }
-
-    static moveCardToMiniCenterThenBackToSquareOne(card1, card2) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2, delay: delay * 2, card1: card2, isPlayer1: card2.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card2.isPlayer1 }
-            ]);
-    }
-
-    static moveCardToMiniCenterWithTextThenBackToSquareOne(card1, text) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskTextShow, delay: delay * 2, text },
-            { id: gameTask.taskTextHide },
-            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1, delay },
-            { id: gameTask.taskTextDelete },
-            ]);
-    }
-
-    static moveCardToMiniCenterWithTextThenDeleteIt(card1, text) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskTextShow, delay: delay * 2, text },
-            { id: gameTask.taskTextHide },
-            { id: gameTask.taskMove, delay, card1, to: global.locationTrash, isPlayer1: card1.isPlayer1, ignoreRefresh: true },
-            { id: gameTask.taskTextDelete },
-            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 }
-            ]);
-    }
-
-    static moveCardToCenterThenDeleteIt(card1) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 }]);
-    }
-
-    static moveCardToCenterThenBackToSquareOne(card1) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToCenter, delay, card1, isPlayer1: card1.isPlayer1 },
-            { id: gameTask.taskRefreshField, isPlayer1: card1.isPlayer1 },
-            ]);
-    }
-
-    static deletePopup(){
-        delete(this.game.popup);
-        delete(this.game.choice);
-        delete(this.game.actionPlayer);
-        delete(this.game.actionOpponent);
-        delete(this.game.cardChoice);
+    static deletePopup() {
+        delete (this.game.popup);
+        delete (this.game.choice);
+        delete (this.game.actionPlayer);
+        delete (this.game.actionOpponent);
+        delete (this.game.cardChoice);
     }
 
     // Card Type
     static isCardUnit(card) { return card.type?.includes(0); }
     static isCardPilot(card) { return card.type?.includes(1); }
+    static isCardCommand(card) { return card.type?.includes(2); }
+    static isCardCommandPilot(card) { return this.isCardPilot(card) && this.isCardCommand(card); }
+    static isCardBase(card) { return card.type?.includes(3); }
 
     // Utils
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }

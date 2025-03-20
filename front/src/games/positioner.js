@@ -19,7 +19,8 @@ class positioner {
         grid.field = { width: grid.hand.width - grid.box.width - grid.border, height: grid.hand.height + 2 * (grid.box.height + grid.border) };
 
         grid.hand.card = this.getCardSize(grid.hand.width, grid.hand.height, 6);
-        grid.field.card = this.getCardSize(grid.field.width, grid.field.height, 6);
+        // grid.field.cardHeightPercent = 0.54;
+        grid.field.card = this.getCardSize(grid.field.width, grid.field.height, 6, grid.field.cardHeightPercent);
 
         grid.card6 = this.getCardSize(grid.width, grid.height, 6);
 
@@ -67,12 +68,15 @@ class positioner {
                 hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x2, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x2, grid.y3, grid.field.width - 5 - grid.box.width, grid.field.height, 'field', global.locationField)
             };
+        
+        result.field.cardHeightPercent = global.grid.field.cardHeightPercent;
+
         if (!isPlayer1)
             result.hand.width = result.hand.width - grid.box.width - (3 * grid.border2);
         return result;
     }
 
-    static createZone(isPlayer1, x1, y1, x2, y2, width, height, zone, location) {
+    static createZone(isPlayer1, x1, y1, x2, y2, width, height, zone, location,) {
         const index = isPlayer1 ? '1' : '2';
         return {
             x: isPlayer1 ? x1 : x2,
@@ -94,9 +98,10 @@ class positioner {
         if (position.location == global.locationField)
             zoneHeight *= 0.75;
 
-        const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length);
+        const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length, position.cardHeightPercent);
         cards.forEach((card, index) => {
             const degree = card.active ? 0 : 90;
+            card.bgposition = '0 0';
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
             card.location = position.location;
             
@@ -115,12 +120,17 @@ class positioner {
         return result;
     }
 
-    static getCardSize(width, height, count) {
+    static getCardSize(width, height, count, cardHeightPercent) {
         let desiredWidth = width / (count + 0.25);
         let desiredHeight = desiredWidth * 150 / 107;
+        if(cardHeightPercent) 
+            desiredHeight*= cardHeightPercent;
+
         if (desiredHeight > height) {
             desiredHeight = height;
             desiredWidth = desiredHeight * 107 / 150;
+            if(cardHeightPercent) 
+                desiredWidth= desiredWidth * (1+(1-cardHeightPercent));
         }
 
         const x = (width - desiredWidth) / 2;
@@ -179,7 +189,7 @@ class positioner {
         const mid = Math.floor(total / 2);
         const indexLine = index < mid ? index : index - mid;
         const totalLine = total - mid;
-        const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine);
+        const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine, position.cardHeightPercent);
         const positionLine = index < mid ? position : { ...position, y: position.y + cardSizeLine.height };
         return this.getCardPositionXY(positionLine, cardSizeLine, totalLine, indexLine, degree);
     }

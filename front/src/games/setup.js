@@ -31,6 +31,8 @@ class gameManager {
 
     static createPlayer(cards, length, isPlayer1) {
         let result = [];
+
+        // TO DO : create deck by using decklist
         cards.forEach(card => {
             result.push(global.createCard(card.id));
             result.push(global.createCard(card.id));

@@ -1,5 +1,6 @@
 import cards from '../../data/gundamCards.json';
 import global from '../global';
+//import gameTask from '../gameTask';
 import positioner from '../positioner';
 import cardHandler from './cardHandler';
 import effects from './effects';
@@ -14,30 +15,33 @@ class manager {
         game.player1 = {
             ...game.player1,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
         this.createDefaultBase(game.player2);
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 0; i++) {
             global.move(game.player1, null, global.locationDeck, global.locationShield);
             global.move(game.player2, null, global.locationDeck, global.locationShield);
         }
-
-        game.player1.deck = [global.createCard("ST02-013")].concat(game.player1.deck);
-        game.player2.deck = [global.createCard("ST02-013")].concat(game.player2.deck);
 
         // game.player1.shield = [global.createCard("ST02-013")].concat(game.player1.shield);
         // game.player2.shield = [global.createCard("ST02-013")].concat(game.player2.shield);
 
         const playerOpponent = global.isPlayer1 ? game.player1 : game.player2;
         playerOpponent.resourcesEx += 1;
+
+        /*gameTask.addTasks(game.tasks, [{
+            id: gameTask.taskPopup.name,
+            text: 'Muligan ?',
+            choices: [{ text: 'yes', id: 'muligan' }, { text: 'no', id: 'muliganNo' }]
+        }]);*/
     }
 
     static createDefaultBase(player) {
@@ -50,7 +54,9 @@ class manager {
     static nextTurn() {
         const player = global.getPlayerTurn();
         effects.removeOneTurnEffect(global.game.cards);
-        player.resourcesMax += 1;
+        if (player.resourcesMax < 10)
+            player.resourcesMax += 1;
+
         player.resourcesAvailable = player.resourcesMax + player.resourcesEx;
         cardHandler.nextTurn(player);
 
@@ -73,8 +79,18 @@ class manager {
         player.positions.resource.text = player.resourcesAvailable + '/' + player.resourcesMax;
     }
 
-    static playCard(player, card1, card2, zone, isShowingEffect) {
-        return cardHandler.play(player, card1, card2, zone, isShowingEffect);
+    static playCard(player, card1, card2, zone, regularPlay) {
+        const result = cardHandler.play(player, card1, card2, zone, regularPlay);
+
+        if (result && result.end)
+            this.end(result.isPlayer1);
+
+        return result;
+    }
+
+    static end(isPlayer1) {
+        const message = isPlayer1 ? 'Defeat': 'Victory';
+        alert(message);
     }
 
     static attack(player, opponent, card1, card2, zone, breach) {
@@ -85,12 +101,31 @@ class manager {
         return cardHandler.selectChoiceCard(game, card);
     }
 
-    static selectChoice(game, choice){
-        return cardHandler.selectChoice(game, choice);
+    static selectChoice(game, choice) {
+        if (choice.id && choice.id.startsWith('muligan')) {
+            global.deletePopup();
+
+            if (choice.id == 'muligan')
+                this.doMuligan(game, game.player1);
+        }
+
+        cardHandler.selectChoice(game, choice);
     }
 
-    static pair(player, card1, card2, isShowingEffect) {
-        return global.pair(player, card1, card2, isShowingEffect);
+    static doMuligan(game, player) {
+        player.deck = global.sortRandom(player.deck.concat(player.hand));
+        const removeIds = player.hand.map(x => x.index);
+        game.cards = game.cards.filter(x => !removeIds.includes(x.index));
+        player.hand = [];
+
+        for (let i = 0; i < this.getHandStartLength(); i++)
+            global.spawnOrMove(player, null, global.locationDeck, global.locationHand, true);
+
+        this.refreshFieldAndHand(player);
+    }
+
+    static pair(player, card1, card2) {
+        return global.pair(player, card1, card2);
     }
 }
 
