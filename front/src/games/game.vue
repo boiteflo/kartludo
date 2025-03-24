@@ -15,20 +15,20 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
-            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
+            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
         </div>
 
         <!-- field centerMini -->
-        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
+        <div v-if="game" class="bgRed absolute" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
             game.grid.centerMini.card1.width, game.grid.centerMini.card1.height)">
         </div>
-        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card2.x, game.grid.centerMini.card2.y,
+        <div v-if="game" class="bgRed absolute" :style="getFieldStyle(game.grid.centerMini.card2.x, game.grid.centerMini.card2.y,
             game.grid.centerMini.card2.width, game.grid.centerMini.card2.height)">
         </div>
-        <div v-if="game" class="bgYellow absolute hide" :style="getFieldStyle(game.grid.centerMini.text.x, game.grid.centerMini.text.y,
+        <div v-if="game" class="bgYellow absolute" :style="getFieldStyle(game.grid.centerMini.text.x, game.grid.centerMini.text.y,
             game.grid.centerMini.text.width, game.grid.centerMini.text.height)">
         </div>
 

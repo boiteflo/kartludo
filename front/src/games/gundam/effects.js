@@ -43,11 +43,8 @@ class GameGundamEffect {
 
         if (!isShowingEffect) {
             const taskShowCards = card2
-                ? [
-                    { id: gameTask.taskCardToMiniCenter.name, card1, isPlayer1: card1.isPlayer1 },
-                    { id: gameTask.taskCardToMiniCenter2.name, card1: card2, isPlayer1: card2.isPlayer1 }
-                ]
-                : [{ id: gameTask.taskCardToMiniCenter.name, card1, isPlayer1: card1.isPlayer1 }];
+                ? [{ id: gameTask.taskCardsToMiniCenter.name, delay: delay, card1, card2 }]
+                : [{ id: gameTask.taskCardsToMiniCenter.name, card1}];
 
             taskShowCards.push({ id: gameTask.taskTextShow.name, delay, text });
             global.game.tasks = taskShowCards.concat(global.game.tasks);
@@ -62,15 +59,15 @@ class GameGundamEffect {
         return this.apply(trigger, player, card1, card2);
     }
 
-    static getEffectText(effect){
+    static getEffectText(effect) {
         const result = [effect.id?.toString(), effect.value?.toString(), effect.target?.toString(), effect.effect2?.toString()];
-        if(effect.ap) 
+        if (effect.ap)
             result.push('ap ' + effect.ap);
 
-        if(effect.hp) 
+        if (effect.hp)
             result.push('hp ' + effect.ap);
-        
-        return result.filter(x=> x && x.length > 0).join(' ');
+
+        return result.filter(x => x && x.length > 0).join(' ');
     }
 
     static apply(trigger, player, card1, card2) {

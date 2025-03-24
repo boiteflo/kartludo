@@ -41,7 +41,7 @@ class cardAttack {
             if (!isValidTarget)
                 return { sendBack: true };
 
-            global.startAttackAnimation(player, opponent, card1, card2, zone, breach);
+            this.startAttackAnimation(player, opponent, card1, card2, zone, breach);
             return;
         }
 
@@ -50,7 +50,7 @@ class cardAttack {
 
         if (opponent.base.length > 0) {
             const target = opponent.base[0];
-            global.startAttackAnimation(player, opponent, card1, target, zone);
+            this.startAttackAnimation(player, opponent, card1, target, zone);
             return;
         }        
         
@@ -73,8 +73,7 @@ class cardAttack {
     static startAttackAnimation(player, opponent, attacker, target, zone, breach) {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardToMiniCenter.name, card1: attacker, isPlayer1: attacker.isPlayer1 },
-            { id: gameTask.taskCardToMiniCenter2.name, delay: delay, card1: target, isPlayer1: target.isPlayer1 },
+            [{ id: gameTask.taskCardsToMiniCenter.name, delay: delay, card1:attacker, card2: target },
             { id: gameTask.taskAttack.name, player, opponent, attacker, target, delay, zone, breach }
             ]);
     }

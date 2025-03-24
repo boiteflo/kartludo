@@ -107,26 +107,24 @@ class gameTask {
         global.game.tasks = global.addListInArrayAfterIndex(global.game.tasks, 1, [taskCenter]);
     }
 
-    static taskCardToMiniCenter(game, task, player) {
+    static taskCardsToMiniCenter(game, task, player) {
         if (!task.card1)
             return;
 
         global.spawnIfNot(task.card1);
         global.cardHighlight.push(task.card1);
-        task.card1.to = global.clone(global.grid.centerMini.card1);
+        const destination = task.card2 ? global.grid.centerMini.card1 : global.grid.centerMini.card3;
+        task.card1.to = global.clone(destination);
         task.card1.to.rotation = 0;
         task.card1.zindex = 11;
-    }
 
-    static taskCardToMiniCenter2(game, task, player) {
-        if (!task.card1)
-            return;
-
-        global.spawnIfNot(task.card1);
-        global.cardHighlight.push(task.card1);
-        task.card1.to = global.clone(global.grid.centerMini.card2);
-        task.card1.to.rotation = 0;
-        task.card1.zindex = 11;
+        if(task.card2){
+            global.spawnIfNot(task.card2);
+            global.cardHighlight.push(task.card2);
+            task.card2.to = global.clone(global.grid.centerMini.card2);
+            task.card2.to.rotation = 0;
+            task.card2.zindex = 11;
+        }
     }
 
     static taskCardToCenter(game, task, player) {

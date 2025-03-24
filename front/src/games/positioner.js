@@ -38,6 +38,7 @@ class positioner {
         grid.centerMini.card1.y = grid.centerMini.y;
         grid.centerMini.card2 = global.clone(grid.centerMini.card1);
         grid.centerMini.card2.x += grid.centerMini.card1.width;
+        grid.centerMini.card3 = { ...grid.centerMini.card1, x: grid.centerMini.card1.x + (grid.centerMini.card1.width / 2) };
         grid.centerMini.text = { x: grid.centerMini.x, y: grid.centerMini.y + grid.centerMini.card1.height, width: grid.centerMini.card1.width * 2 };
         grid.centerMini.text.height = height - grid.centerMini.text.y - grid.border;
         grid.centerMini.text.height = Math.min(grid.centerMini.text.height, 150);
@@ -68,7 +69,7 @@ class positioner {
                 hand: this.createZone(isPlayer1, grid.x0, grid.y13, grid.x2, grid.y0, grid.hand.width, grid.hand.height, 'hand', global.locationHand),
                 field: this.createZone(isPlayer1, grid.x0, grid.y8, grid.x2, grid.y3, grid.field.width - 5 - grid.box.width, grid.field.height, 'field', global.locationField)
             };
-        
+
         result.field.cardHeightPercent = global.grid.field.cardHeightPercent;
 
         if (!isPlayer1)
@@ -104,8 +105,8 @@ class positioner {
             card.bgposition = '0 0';
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
             card.location = position.location;
-            
-            if(!global.cardHighlight.find(x=> x.index === card.index))
+
+            if (!global.cardHighlight.find(x => x.index === card.index))
                 card.zindex = card.pair ? 2 : 1;
 
             if (position.location == global.locationField && card.pair)
@@ -123,14 +124,14 @@ class positioner {
     static getCardSize(width, height, count, cardHeightPercent) {
         let desiredWidth = width / (count + 0.25);
         let desiredHeight = desiredWidth * 150 / 107;
-        if(cardHeightPercent) 
-            desiredHeight*= cardHeightPercent;
+        if (cardHeightPercent)
+            desiredHeight *= cardHeightPercent;
 
         if (desiredHeight > height) {
             desiredHeight = height;
             desiredWidth = desiredHeight * 107 / 150;
-            if(cardHeightPercent) 
-                desiredWidth= desiredWidth * (1+(1-cardHeightPercent));
+            if (cardHeightPercent)
+                desiredWidth = desiredWidth * (1 + (1 - cardHeightPercent));
         }
 
         const x = (width - desiredWidth) / 2;
