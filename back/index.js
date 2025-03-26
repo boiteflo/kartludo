@@ -109,6 +109,9 @@ app.use('/api/cardToAdd', routeCardsMDM)
 var routeFight = require('./routes/fight');
 app.use('/api/fight', routeFight)
 
+var routeDemoSheet = require('./routes/demoSheet');
+app.use('/api/demoSheet', routeDemoSheet )
+
 app.use(express.static(__dirname + '/public/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 const port = process.env.PORT || 5000;

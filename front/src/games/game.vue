@@ -22,13 +22,13 @@
         </div>
 
         <!-- field centerMini -->
-        <div v-if="game" class="bgRed absolute" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
+        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
             game.grid.centerMini.card1.width, game.grid.centerMini.card1.height)">
         </div>
-        <div v-if="game" class="bgRed absolute" :style="getFieldStyle(game.grid.centerMini.card2.x, game.grid.centerMini.card2.y,
+        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card2.x, game.grid.centerMini.card2.y,
             game.grid.centerMini.card2.width, game.grid.centerMini.card2.height)">
         </div>
-        <div v-if="game" class="bgYellow absolute" :style="getFieldStyle(game.grid.centerMini.text.x, game.grid.centerMini.text.y,
+        <div v-if="game" class="bgYellow absolute hide" :style="getFieldStyle(game.grid.centerMini.text.x, game.grid.centerMini.text.y,
             game.grid.centerMini.text.width, game.grid.centerMini.text.height)">
         </div>
 
