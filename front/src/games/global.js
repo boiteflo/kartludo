@@ -75,6 +75,12 @@ class global {
         else
             player[from] = global.removeByIndex(player[from], card);
 
+        if (!card && locationFrom === this.locationDeck)
+            this.end(player.isPlayer1);
+
+        if (!card)
+            return;
+
         if (!card.isTemporaryCard)
             player[to] = global.addIn(player[to], card);
 
@@ -142,6 +148,12 @@ class global {
 
     static isLink(cardUnit, cardPilot) {
         return cardUnit.link.includes(cardPilot.name);
+    }
+
+    static end(isPlayer1) {
+        this.game.end = true;
+        const message = isPlayer1 ? 'Defeat' : 'Victory';
+        alert(message);
     }
 
     static createCard(id) {
@@ -226,6 +238,8 @@ class global {
     static isCardCommand(card) { return card.type?.includes(2); }
     static isCardCommandPilot(card) { return this.isCardPilot(card) && this.isCardCommand(card); }
     static isCardBase(card) { return card.type?.includes(3); }
+    static isCardToken(card) { return card.type?.includes(4); }
+    static isCardResource(card) { return card.type?.includes(5); }
 
     // Utils
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }

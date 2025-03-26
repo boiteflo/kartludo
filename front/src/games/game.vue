@@ -1,6 +1,16 @@
 <template>
     <div class="relative w100p h100p mask" :key="refreshG">
 
+        <!-- DeckList -->
+        <div class="flex flex-wrap" v-if="!game">
+            <img v-for="(deck,index) in deckList" :key="'Deck' + index"
+                class="shine mp5px" 
+                style="object-fit: cover; width:15%"
+                :src="require('@/assets/Gundam/cards/' + deck.card + '.webp')"
+                @click="selectDeckList(deck)" />
+        </div>
+
+
         <!-- Grid -->
         <div class="hide">
             <div v-for="i in 16" :key="'x' + i"
@@ -15,7 +25,7 @@
         <!-- field -->
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
             absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
-            bgRed2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
+            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
@@ -157,21 +167,37 @@ export default {
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
         title: '',
+        decklistPlayer1:null,
+        decklistPlayer2:null,
+        deckList: [
+            { name: 'Origin blue', card: 'ST01-001_p1', list: '4xST01-001,4xST01-002,4xST01-005,4xST01-010,4xST01-012,4xST01-013,4xST01-015,4xGD01-004,4xGD01-008,4xGD01-009,4xGD01-013,4xGD01-015,4xGD01-099,4xGD01-124' },
+            { name: 'Witch from Mercury', card: 'GD01-070', list: '5xST01-007,5xST01-008,5xST01-011,5xST01-016,5xGD01-070,5xGD01-072,5xGD01-075,5xGD01-076,5xGD01-097,5xGD01-117' },
+            { name: 'Origin green', card: 'GD01-026_p1', list: '7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105' },
+            { name: 'Unicorn', card: 'GD01-005', list: '7xGD01-005,8xGD01-011,7xGD01-016,7xGD01-018,7xGD01-088,7xGD01-089,7xGD01-100' },
+            { name: 'Seed', card: 'ST04-001_p1', list: '5xST04-001,5xST04-002,5xST04-005,5xST04-010,5xST04-013,5xST04-015,4xGD01-068,4xGD01-077,4xGD01-081,4xGD01-118,4xGD01-120' },
+            { name: 'Wing', card: 'ST02-001_p1', list: '4xGD01-028,4xGD01-034,4xGD01-040,4xGD01-041,4xGD01-091,3xGD01-107,4xST02-001,4xST02-002,4xST02-005,4xST02-010,4xST02-012,4xST02-013,3xST02-015' }]
     }),
     mounted() {
         document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
             this.refreshG++;
         });
-        this.start();
     },
     methods: {
+        selectDeckList(decklist) {
+            if (!this.decklistPlayer1)
+                this.decklistPlayer1 = decklist.list;
+            else {
+                this.decklistPlayer2 = decklist.list;
+                this.start();
+            }
+        },
         start() {
-            this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height);
+            this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, this.decklistPlayer1, this.decklistPlayer2);
             this.refreshGame();
         },
         nextTurn() {
-            if(this.freeze)
+            if (this.freeze)
                 return;
             this.game = gameManager.nextTurn(this.game);
             this.refreshGame();
@@ -190,13 +216,13 @@ export default {
                 this.refreshGame();
         },
         playCard(card1, card2, drop) {
-            if(this.freeze)
+            if (this.freeze)
                 return;
             this.freeze = true;
             this.game = gameManager.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
-        selectChoice(choice){
+        selectChoice(choice) {
             this.freeze = true;
             this.game = gameManager.selectChoice(this.game, choice);
             this.refreshGame();
@@ -304,7 +330,7 @@ export default {
                 element.addEventListener(event, (event) => action(event));
         },
         moveCard(event, card) {
-            if (!card && card.isPlayer1 !== this.game.isPlayer1 || !card) 
+            if (!card && card.isPlayer1 !== this.game.isPlayer1 || !card)
                 return;
 
             let x = event.touches ? event.touches[0].clientX : event.clientX;
@@ -319,7 +345,7 @@ export default {
             card.positionDrag = { x, y };
         },
         startDrag(event, card) {
-            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
+            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
                 return;
             event.dataTransfer.dropEffect = 'move';
             event.dataTransfer.effectAllowed = 'move';
@@ -333,7 +359,7 @@ export default {
             event.preventDefault();
         },
         onDrop(event) {
-            if(this.freeze)
+            if (this.freeze)
                 return;
             event.preventDefault();
             const x = event.clientX || event.pageX || (event.touches ? event.touches[0].clientX : null);
@@ -342,7 +368,7 @@ export default {
             event.target.style.zIndex = "auto";
             const data = event.dataTransfer.getData("card");
             const card = this.getCard(data);
-            if(!card)
+            if (!card)
                 return;
             card.moving = false;
 
@@ -354,14 +380,14 @@ export default {
 
         // --------- Touch
         touchStart(event, card) {
-            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
+            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
                 return;
             card.moving = true;
             card.positionOld = this.clone(card.position);
             event.target.style.zIndex = "1000";
         },
         touchEnd(event, card) {
-            if(this.freeze || card.isPlayer1 !== this.game.isPlayer1  || !card)
+            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
                 return;
             card.moving = false;
             event.target.style.zIndex = "auto";

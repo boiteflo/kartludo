@@ -4,8 +4,8 @@ import setup from './setup';
 
 class gameManager {
 
-    static createGame(manager, width, height) {
-        setup.createGame(manager, width, height);
+    static createGame(manager, width, height, decklistPlayer1, decklistPlayer2) {
+        setup.createGame(manager, width, height, decklistPlayer1, decklistPlayer2);
         global.game.manager = manager;
         global.delay = manager.getAnimDuration();
         manager.setup(global.game);

@@ -3,7 +3,7 @@ import global from './global';
 
 class gameManager {
 
-    static createGame(manager, width, height) {
+    static createGame(manager, width, height, decklistPlayer1, decklistPlayer2) {
         global.game = { cards: [], tasks: [], popup: null };
         global.cards = manager.getCards();
 
@@ -11,8 +11,8 @@ class gameManager {
         global.game.grid = global.grid;
 
         const deckLength = manager.getDeckLenth();
-        global.game.player1 = this.createPlayer(global.cards, deckLength, true);
-        global.game.player2 = this.createPlayer(global.cards, deckLength, false);
+        global.game.player1 = this.createPlayer(manager, global.cards, decklistPlayer1, deckLength, true);
+        global.game.player2 = this.createPlayer(manager, global.cards, decklistPlayer2, deckLength, false);
 
         global.game.player1.positions = positioner.getPositions(global.grid, true);
         global.game.player2.positions = positioner.getPositions(global.grid, false);
@@ -29,16 +29,20 @@ class gameManager {
         return global.game;
     }
 
-    static createPlayer(cards, length, isPlayer1) {
+    static createPlayer(manager, cards, decklist, length, isPlayer1) {
         let result = [];
 
-        // TO DO : create deck by using decklist
-        cards.forEach(card => {
-            result.push(global.createCard(card.id));
-            result.push(global.createCard(card.id));
-            result.push(global.createCard(card.id));
-            result.push(global.createCard(card.id));
-        });
+        decklist.split(',').forEach(line => {
+            const info = line.split('x');
+            const quantity = parseInt(info[0]);
+            const id = info[1];
+
+            const card = cards.find(x => x.id == id);
+            if(!card)
+                throw new Error("This card doesn't exist : " + id); 
+            for (let i = 0; i < quantity; i++)
+                result.push(global.createCard(card.id));
+        })
 
         result = result.splice(0, length);
         result.forEach(x => {
@@ -46,8 +50,10 @@ class gameManager {
             x.isPlayer1 = isPlayer1;
             x.location = global.locationDeck;
         });
+
         result = global.sortRandom(result);
-        return { deck: result, shield: [], hand: [], field: [], trash: [], isPlayer1, base:[], empty:[]};
+
+        return { deck: result, shield: [], hand: [], field: [], trash: [], isPlayer1, base: [], empty: [] };
     }
 }
 

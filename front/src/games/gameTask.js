@@ -29,6 +29,11 @@ class gameTask {
     }
 
     static handleTasks(game) {
+        if (game.end){
+            game.tasks = [];
+            return game;
+        }
+
         let task = game.tasks[0];
         game.refresh = task ? true : false;
         let i = 0;
@@ -118,7 +123,7 @@ class gameTask {
         task.card1.to.rotation = 0;
         task.card1.zindex = 11;
 
-        if(task.card2){
+        if (task.card2) {
             global.spawnIfNot(task.card2);
             global.cardHighlight.push(task.card2);
             task.card2.to = global.clone(global.grid.centerMini.card2);
@@ -126,7 +131,7 @@ class gameTask {
             task.card2.zindex = 11;
         }
 
-        if(task.text){
+        if (task.text) {
             this.taskTextShow(game, task, player);
         }
     }
