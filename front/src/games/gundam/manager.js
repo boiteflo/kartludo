@@ -8,25 +8,25 @@ import effects from './effects';
 class manager {
     static getCards() { return cards.cards; }
     static getDeckLenth() { return 50; }
-    static getAnimDuration() { return 400; }
+    static getAnimDuration() { return 500; }
     static getHandStartLength() { return 5; }
 
     static setup(game) {
         game.player1 = {
             ...game.player1,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         this.createDefaultBase(game.player1);
         this.createDefaultBase(game.player2);
 
-        for (let i = 0; i < 0; i++) {
+        for (let i = 0; i < 6; i++) {
             global.move(game.player1, null, global.locationDeck, global.locationShield);
             global.move(game.player2, null, global.locationDeck, global.locationShield);
         }

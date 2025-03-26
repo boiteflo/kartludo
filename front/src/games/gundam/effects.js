@@ -42,12 +42,8 @@ class GameGundamEffect {
         const isShowingEffect = global.cardHighlight.find(x => x.index === card1.index);
 
         if (!isShowingEffect) {
-            const taskShowCards = card2
-                ? [{ id: gameTask.taskCardsToMiniCenter.name, delay: delay, card1, card2 }]
-                : [{ id: gameTask.taskCardsToMiniCenter.name, card1}];
-
-            taskShowCards.push({ id: gameTask.taskTextShow.name, delay, text });
-            global.game.tasks = taskShowCards.concat(global.game.tasks);
+            global.game.tasks = [{ id: gameTask.taskCardsToMiniCenter.name, delay, card1, card2, text }]
+                .concat(global.game.tasks);
             return { stop: true };
         } else
             gameTask.addTasks(global.game.tasks, [

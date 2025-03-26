@@ -125,6 +125,10 @@ class gameTask {
             task.card2.to.rotation = 0;
             task.card2.zindex = 11;
         }
+
+        if(task.text){
+            this.taskTextShow(game, task, player);
+        }
     }
 
     static taskCardToCenter(game, task, player) {
@@ -139,6 +143,7 @@ class gameTask {
     }
 
     static taskAttack(game, task, player) {
+        game.taskAttack = task;
         return game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
     }
 

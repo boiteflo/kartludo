@@ -73,7 +73,7 @@ class cardAttack {
     static startAttackAnimation(player, opponent, attacker, target, zone, breach) {
         const delay = this.delay;
         gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardsToMiniCenter.name, delay: delay, card1:attacker, card2: target },
+            [{ id: gameTask.taskCardsToMiniCenter.name, delay: global.delay, card1:attacker, card2: target },
             { id: gameTask.taskAttack.name, player, opponent, attacker, target, delay, zone, breach }
             ]);
     }
