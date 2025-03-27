@@ -1,15 +1,20 @@
 <template>
     <div class="relative w100p h100p mask" :key="refreshG">
 
-        <!-- DeckList -->
-        <div class="flex flex-wrap" v-if="!game">
-            <img v-for="(deck,index) in deckList" :key="'Deck' + index"
-                class="shine mp5px" 
-                style="object-fit: cover; width:15%"
-                :src="require('@/assets/Gundam/cards/' + deck.card + '.webp')"
-                @click="selectDeckList(deck)" />
-        </div>
+        <!-- DeckList Show-->
+        <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
+            style="top:50px" @cardclick="showCard" @cancel="showDeckList(null)" @validate="selectDeckList">
+        </deck-list>
 
+        <!-- DeckLists -->
+        <div v-if="!game">
+            <h2>Select deck for the {{ decklistPlayer1 ? 'opponent' : 'player' }}</h2>
+            <div class="flex flex-wrap flex-space-around fontSize32">
+                <deck v-for="(deck, index) in deckList" :key="'Deck' + index" :deck="deck" folder="Gundam/cards/"
+                    @click="showDeckList(deck)">
+                </deck>
+            </div>
+        </div>
 
         <!-- Grid -->
         <div class="hide">
@@ -153,12 +158,15 @@ body {
 import helperAnimation from '../helpers/helperAnimation';
 import gameManager from './gameManager';
 import gundamManager from './gundam/manager';
+import positioner from './positioner';
 import gameCard from './card';
+import deck from './deck';
+import deckList from './deckList';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard },
+    components: { gameCard, deck, deckList },
     data: () => ({
         refreshG: 0,
         aside: false,
@@ -167,23 +175,31 @@ export default {
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
         title: '',
-        decklistPlayer1:null,
-        decklistPlayer2:null,
+        center: null,
+        cardList: null,
+        decklistPlayer1: null,
+        decklistPlayer2: null,
+        decklistShow: null,
         deckList: [
-            { name: 'Origin blue', card: 'ST01-001_p1', list: '4xST01-001,4xST01-002,4xST01-005,4xST01-010,4xST01-012,4xST01-013,4xST01-015,4xGD01-004,4xGD01-008,4xGD01-009,4xGD01-013,4xGD01-015,4xGD01-099,4xGD01-124' },
-            { name: 'Witch from Mercury', card: 'GD01-070', list: '5xST01-007,5xST01-008,5xST01-011,5xST01-016,5xGD01-070,5xGD01-072,5xGD01-075,5xGD01-076,5xGD01-097,5xGD01-117' },
-            { name: 'Origin green', card: 'GD01-026_p1', list: '7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105' },
-            { name: 'Unicorn', card: 'GD01-005', list: '7xGD01-005,8xGD01-011,7xGD01-016,7xGD01-018,7xGD01-088,7xGD01-089,7xGD01-100' },
-            { name: 'Seed', card: 'ST04-001_p1', list: '5xST04-001,5xST04-002,5xST04-005,5xST04-010,5xST04-013,5xST04-015,4xGD01-068,4xGD01-077,4xGD01-081,4xGD01-118,4xGD01-120' },
-            { name: 'Wing', card: 'ST02-001_p1', list: '4xGD01-028,4xGD01-034,4xGD01-040,4xGD01-041,4xGD01-091,3xGD01-107,4xST02-001,4xST02-002,4xST02-005,4xST02-010,4xST02-012,4xST02-013,3xST02-015' }]
+            { name: 'Gundam', card1: 'ST01-001', card2: 'ST01-010', card3: 'ST01-015', list: '4xST01-001,4xST01-002,4xST01-005,4xST01-010,4xST01-012,4xST01-013,4xST01-015,4xGD01-004,4xGD01-008,4xGD01-009,4xGD01-013,4xGD01-015,4xGD01-099,4xGD01-124' },
+            { name: 'Mercury', card1: 'GD01-070', card2: 'ST01-011', card3: 'GD01-117', list: '5xST01-007,5xST01-008,5xST01-011,5xST01-016,5xGD01-070,5xGD01-075,5xGD01-076,5xGD01-097,5xGD01-117' },
+            { name: 'Zeon', card1: 'GD01-026', card2: 'ST03-011', card3: 'ST03-016', list: '7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105' },
+            { name: 'Unicorn', card1: 'GD01-005', card2: 'GD01-088', card3: 'GD01-100', list: '7xGD01-005,8xGD01-011,7xGD01-016,7xGD01-018,7xGD01-088,7xGD01-089,7xGD01-100' },
+            { name: 'Seed', card1: 'ST04-001', card2: 'ST04-010', card3: 'ST04-015', list: '4xGD01-072, 4xST04-001,4xST04-002,4xST04-005,4xST04-010,5xST04-013,5xST04-015,4xGD01-068,4xGD01-077,4xGD01-081,4xGD01-118,4xGD01-120' },
+            { name: 'Wing', card1: 'ST02-001', card2: 'ST02-010', card3: 'GD01-028', list: '4xGD01-028,4xGD01-034,4xGD01-040,4xGD01-041,4xGD01-091,3xGD01-107,4xST02-001,4xST02-002,4xST02-005,4xST02-010,4xST02-012,4xST02-013,3xST02-015' }]
     }),
     mounted() {
         document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
             this.refreshG++;
         });
+        this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
+        this.cardList = gundamManager.getCards();
     },
     methods: {
+        showDeckList(decklist) {
+            this.decklistShow = decklist;
+        },
         selectDeckList(decklist) {
             if (!this.decklistPlayer1)
                 this.decklistPlayer1 = decklist.list;
@@ -191,6 +207,7 @@ export default {
                 this.decklistPlayer2 = decklist.list;
                 this.start();
             }
+            this.decklistShow = null;
         },
         start() {
             this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, this.decklistPlayer1, this.decklistPlayer2);
@@ -285,6 +302,7 @@ export default {
                 this.showCard(card);
         },
         showCard(card) {
+            const center = this.game ? this.game.grid.center : this.center;
             if (!card)
                 this.cardCenter = {
                     id: this.cardCenter.id,
@@ -296,10 +314,10 @@ export default {
                     id: card.id,
                     position: card.position,
                     to: {
-                        x: this.game.grid.center.x,
-                        y: this.game.grid.center.y,
-                        width: this.game.grid.center.width,
-                        height: this.game.grid.center.height,
+                        x: center.x,
+                        y: center.y,
+                        width: center.width,
+                        height: center.height,
                         rotation: 0
                     }
                 };

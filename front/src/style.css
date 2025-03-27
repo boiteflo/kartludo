@@ -476,7 +476,7 @@ body {
 }
 
 .bgWhite {
-    background-color: white !important;
+    background-color: white;
     color: black;
 }
 
@@ -511,6 +511,14 @@ body {
     background: #FFEB3B50 !important;
 }
 
+.parentHover:hover .bgYellowParentHover{
+    background-color: #FFEB3B !important;
+}
+
+.bgYellowHover:hover{
+    background-color: #FFEB3B !important;
+}
+
 .borderYellow {
     border: solid #FFEB3B 2px;
 }
@@ -527,8 +535,8 @@ body {
     background: linear-gradient(to bottom, rgba(255, 255, 59, 0.5), rgba(255, 255, 59, 0) 90%);
 }
 
-.mask{
-    overflow:hidden;
+.mask {
+    overflow: hidden;
 }
 
 h1 {
@@ -538,6 +546,7 @@ h1 {
     font-weight: bold;
     padding: 20px 50px 0px 40px;
 }
+
 .title {
     font-size: 40px;
     font-weight: bold;
@@ -728,55 +737,113 @@ h4 {
 .cirlce5px {
     border-radius: 5px;
 }
+
 .cirlce10px {
     border-radius: 10px;
 }
+
 .cirlce15px {
     border-radius: 15px;
 }
 
-
-.shine {
+.shine, .shineHover, .shineParentHover {
     -webkit-mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
     -webkit-mask-size: 200%;
     mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
     mask-size: 200%;
+}
+
+.shineHover:hover, .parentHover:hover .shineParentHover{
     animation: shinefx 1s infinite;
-    /* hidestat */
-  }
-  
-  @keyframes shinefx {
+}
+
+.shine {    
+    animation: shinefx 1s infinite;
+}
+
+@keyframes shinefx {
     from {
-      -webkit-mask-position: -200%;
+        -webkit-mask-position: -200%;
     }
-  
+
     to {
-      -webkit-mask-position: 0%;
+        -webkit-mask-position: 0%;
     }
-  }
+}
 
-  .hide {display:none}
-  
-  .fontSize05em {font-size: 0.5em !important;}
-  .fontSize075em {font-size: 0.75em !important;}
-  .fontSize1em {font-size: 1em !important;}
-  .fontSize125em {font-size: 1.25em !important;}
-  .fontSize150em {font-size: 1.5em !important;}
-  .fontSize175em {font-size: 1.75em !important;}
-  .fontSize2em {font-size: 2em !important;}
+.hide {
+    display: none
+}
 
-  .fontSize4 {font-size: 4px !important;}
-  .fontSize6 {font-size: 6px !important;}
-  .fontSize8 {font-size: 8px !important;}
-  .fontSize10 {font-size: 10px !important;}
-  .fontSize12 {font-size: 12px !important;}
-  .fontSize14 {font-size: 14px !important;}
-  .fontSize16 {font-size: 16px !important;}
-  .fontSize20 {font-size: 20px !important;}
-  .fontSize32 {font-size: 32px !important;}
-  .fontSize64 {font-size: 64px !important;}
+.fontSize05em {
+    font-size: 0.5em !important;
+}
 
-  .centerDiv {
+.fontSize075em {
+    font-size: 0.75em !important;
+}
+
+.fontSize1em {
+    font-size: 1em !important;
+}
+
+.fontSize125em {
+    font-size: 1.25em !important;
+}
+
+.fontSize150em {
+    font-size: 1.5em !important;
+}
+
+.fontSize175em {
+    font-size: 1.75em !important;
+}
+
+.fontSize2em {
+    font-size: 2em !important;
+}
+
+.fontSize4 {
+    font-size: 4px !important;
+}
+
+.fontSize6 {
+    font-size: 6px !important;
+}
+
+.fontSize8 {
+    font-size: 8px !important;
+}
+
+.fontSize10 {
+    font-size: 10px !important;
+}
+
+.fontSize12 {
+    font-size: 12px !important;
+}
+
+.fontSize14 {
+    font-size: 14px !important;
+}
+
+.fontSize16 {
+    font-size: 16px !important;
+}
+
+.fontSize20 {
+    font-size: 20px !important;
+}
+
+.fontSize32 {
+    font-size: 32px !important;
+}
+
+.fontSize64 {
+    font-size: 64px !important;
+}
+
+.centerDiv {
     left: 50%;
     transform: translate(-50%, 0%);
-  }
+}
