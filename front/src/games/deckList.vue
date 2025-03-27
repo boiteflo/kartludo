@@ -19,6 +19,7 @@
 
 <script>
 import deck from './deck';
+import positioner from './positioner';
 
 export default {
     name: 'deck-list',
@@ -45,13 +46,6 @@ export default {
                 return result;
 
             const cards = decklist.split('\n');
-            const size = { width: this.$vuetify.breakpoint.width - 310, height: this.$vuetify.breakpoint.height };
-            const margin = 10;
-            size.widthMargin = size.width - (7 * margin);
-            const cardSize = { width: size.widthMargin / 6 };
-            cardSize.height = cardSize.width * 150 / 107;
-            let x = 300 + margin;
-            let y = margin;
             const listCorrect = [];
 
             cards.forEach(line => {
@@ -65,24 +59,23 @@ export default {
                     const card = this.cardlist?.find(x => x.id == id);
 
                     if (card) {
-                        for (let i = 0; i < quantity; i++)
-                            result.push({
-                                id, 
-                                position: { x, y: y + (i * 0.075 * cardSize.height), width:cardSize.width, height:cardSize.height }
-                            });
-
+                        result.push({ id, quantity });
                         resultText.push(`${quantity}x ${id} ${card.name}`);
                         listCorrect.push(`${quantity}x${id}`);
-
-                        x += cardSize.width + margin;
-                        if (x > size.width + 100) {
-                            x = 300 + margin;
-                            y += (cardSize.height * 1.30);
-                        }
                     } else
                         resultText.push(line);
                 }
             });
+
+            const ratio = 107 / 200;
+            positioner.getWrapMaxPositions(this.$vuetify.breakpoint.width - 310, this.$vuetify.breakpoint.height - 10, 300, 0, result, ratio);
+            result.forEach(card => {
+                for (let i = 1; i < card.quantity; i++) {
+                    result.push({ id: card.id, position: { ...card.position, y: card.position.y + (i * 0.06 * card.position.height) } });
+                }
+            });
+
+            //for (let i = 0; i < 1; i++) (i * 0.075 * cardSize.height)
 
             this.resume = `${result.length} cards`;
             this.listCorrect = listCorrect.join(',');

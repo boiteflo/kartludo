@@ -195,6 +195,10 @@ export default {
         });
         this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
         this.cardList = gundamManager.getCards();
+        /*this.decklistShow = this.deckList[0];
+        this.decklistPlayer1 =this.deckList[0].list;
+        this.decklistPlayer2 =this.deckList[2].list;
+        this.start();*/
     },
     methods: {
         showDeckList(decklist) {

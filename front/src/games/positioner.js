@@ -209,6 +209,49 @@ class positioner {
         const sizeWidth = totalWidth / total;
         return sizeWidth / 2 + sizeWidth * index - elementWidth / 2;
     }
+
+    static getWrapMaxPositions(width, height, originX, originY, cards, ratio) {
+        const margin = 10;
+        let maxSize = { width: 0, height: 0 };
+        for (let i = 2; i < 10; i++) {
+            const size = this.getCardSizeWrap(width, height, cards, margin, ratio, i);
+            if (maxSize.width < size.width)
+                maxSize = size;
+        }
+
+        let originXCenter = originX + ((width - (maxSize.width * maxSize.wrapCut))/2);
+        let x = margin + originXCenter;
+        let y = margin + originY;
+        let lineIndex = 0;
+        cards.forEach(card => {
+            card.position = { x, y, width: maxSize.width, height: maxSize.height };
+            lineIndex++;
+            if (lineIndex < maxSize.wrapCut)
+                x += margin + maxSize.width;
+            else {
+                lineIndex = 0;
+                y += margin + maxSize.height;
+                x = margin + originXCenter;
+            }
+        })
+    }
+
+    static getCardSizeWrap(width, height, cards, margin, ratio, wrapCut) {
+        const lineRequired = Math.ceil(cards.length / wrapCut);
+        const widthMargin = width - ((wrapCut + 1) * margin);
+        const heightMargin = height - ((lineRequired + 1) * margin);
+        const ratioInverted = 1 + (1 - ratio);
+
+        let heightDesired = heightMargin / lineRequired;
+        let widthDesired = heightDesired * ratio;
+
+        if (widthDesired > widthMargin / wrapCut) {
+            widthDesired = widthMargin / wrapCut;
+            heightDesired = widthDesired * ratioInverted;
+        }
+
+        return { width: widthDesired, height: heightDesired, wrapCut };
+    }
 }
 
 

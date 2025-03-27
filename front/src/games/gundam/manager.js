@@ -42,10 +42,14 @@ class manager {
         this.createDefaultBase(game.player1);
         this.createDefaultBase(game.player2);
 
-        for (let i = 0; i < 0; i++) {
+        for (let i = 0; i < 6; i++) {
             global.move(game.player1, null, global.locationDeck, global.locationShield);
             global.move(game.player2, null, global.locationDeck, global.locationShield);
         }
+
+        
+        //global.spawnOrMove(game.player1, global.createCard("GD01-041"), global.locationDeck, global.locationField);
+        //global.spawnOrMove(game.player2, global.createCard("GD01-041"), global.locationDeck, global.locationField);
 
         // game.player1.shield = [global.createCard("ST02-013")].concat(game.player1.shield);
         // game.player2.shield = [global.createCard("ST02-013")].concat(game.player2.shield);
