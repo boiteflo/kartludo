@@ -495,12 +495,26 @@ body {
     color: white !important
 }
 
-.bgRed {
-    background: red !important;
+.bgRed, .bgRedHover:hover {
+    background-color: red !important;
 }
 
 .bgRed2 {
     background: #FF000050 !important;
+}
+
+.bgRedHover {
+    background-color: #EF9A9A !important;
+    transition : background-color 0.5s ease;
+}
+
+.bgGreen, .bgGreenHover:hover{
+    background: green !important;
+}
+
+.bgGreenHover {
+    background-color: #C5E1A5 !important;
+    transition : background-color 0.5s ease;
 }
 
 .bgYellow {

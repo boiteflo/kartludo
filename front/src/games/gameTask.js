@@ -42,7 +42,10 @@ class gameTask {
             const isPlayer1 = task.isPlayer1 ? task.isPlayer1 : task.card1 && task.card1.isPlayer1 ? task.card1.isPlayer1 : task.isPlayer1;
             const player = isPlayer1 ? game.player1 : game.player2;
 
+            let tasksString = game.tasks.map(x=> x.id).join(', ');
             const result = this[task.id](game, task, player);
+            tasksString = game.tasks.map(x=> x.id).join(', ');
+            
             if (result && result.stop)
                 return game;
 
@@ -66,6 +69,8 @@ class gameTask {
     static taskEndRefresh(game) {
         global.needTaskEndRefresh = false;
         global.cardHighlight = [];
+        game.refreshOnlyTextEffect = false;
+        delete (game.textEffect);
         game.manager.refreshFieldAndHand(game.player1);
         game.manager.refreshFieldAndHand(game.player2);
         game.refresh = true;
@@ -97,17 +102,12 @@ class gameTask {
         game.refreshOnlyTextEffect = true;
     }
 
-    static taskTextDelete(game, task, player) {
-        game.refreshOnlyTextEffect = false;
-        delete (game.textEffect);
-    }
-
     static taskMove(game, task, player) {
-        global.spawnOrMove(player, task.card1, task.from, task.to, task.ignoreRefresh);
+        global.spawnOrMove(player, task.card1, task.from, task.to);
     }
 
     static taskMoveAndShowCenter(game, task, player) {
-        const card = global.spawnOrMove(player, task.card1, task.from, task.to, task.ignoreRefresh);
+        const card = global.spawnOrMove(player, task.card1, task.from, task.to);
         const taskCenter = { id: this.taskCardToCenter.name, card1: card, isPlayer1: task.isPlayer1, delay: global.delay };
         global.game.tasks = global.addListInArrayAfterIndex(global.game.tasks, 1, [taskCenter]);
     }
@@ -167,6 +167,10 @@ class gameTask {
     static taskPairCard(game, task, player) {
         const cardPlayer = global.getPlayer(task.card1.isPlayer1);
         return game.manager.pair(cardPlayer, task.card1, task.card2);
+    }
+
+    static taskApplyEffect(game, task, player) {
+        return game.manager.applyEffect(player, task.card1, task.card2, task.trigger);
     }
 }
 

@@ -210,7 +210,7 @@ class positioner {
         return sizeWidth / 2 + sizeWidth * index - elementWidth / 2;
     }
 
-    static getWrapMaxPositions(width, height, originX, originY, cards, ratio) {
+    static getWrapMaxPositions(width, height, cards, ratio) {
         const margin = 10;
         let maxSize = { width: 0, height: 0 };
         for (let i = 2; i < 10; i++) {
@@ -219,19 +219,20 @@ class positioner {
                 maxSize = size;
         }
 
-        let originXCenter = originX + ((width - (maxSize.width * maxSize.wrapCut))/2);
-        let x = margin + originXCenter;
-        let y = margin + originY;
+        const marginHorizontal = (width - (3*margin) - (maxSize.width * maxSize.wrapCut)) / (maxSize.wrapCut-1); 
+        //let originXCenter = originX + ((width - (maxSize.width * maxSize.wrapCut))/2);
+        let x = margin;
+        let y = margin;
         let lineIndex = 0;
         cards.forEach(card => {
             card.position = { x, y, width: maxSize.width, height: maxSize.height };
             lineIndex++;
             if (lineIndex < maxSize.wrapCut)
-                x += margin + maxSize.width;
+                x += marginHorizontal + maxSize.width;
             else {
                 lineIndex = 0;
                 y += margin + maxSize.height;
-                x = margin + originXCenter;
+                x = margin;
             }
         })
     }

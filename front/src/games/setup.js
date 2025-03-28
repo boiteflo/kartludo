@@ -22,9 +22,12 @@ class gameManager {
         global.isPlayer1 = isPlayer1;
 
         for (let i = 0; i < manager.getHandStartLength(); i++) {
-            global.spawnOrMove(global.game.player1, null, global.locationDeck, global.locationHand, true);
-            global.spawnOrMove(global.game.player2, null, global.locationDeck, global.locationHand, true);
+            global.spawnOrMove(global.game.player1, null, global.locationDeck, global.locationHand);
+            global.spawnOrMove(global.game.player2, null, global.locationDeck, global.locationHand);
         }
+
+        manager.refreshFieldAndHand(global.game.player1);
+        manager.refreshFieldAndHand(global.game.player2);
 
         return global.game;
     }

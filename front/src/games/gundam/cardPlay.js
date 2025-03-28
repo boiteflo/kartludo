@@ -59,14 +59,10 @@ class cardPlay {
         }
 
         if (isCommand) {
-            const effectResult = effects.handleEffects(player, card1, card2, effects.command);
-            if (effectResult.stop)
-                return effectResult;
-
             if (playCost)
                 this.playCardCost(player, card1);
-
-            global.move(player, card1, card1.location, global.locationTrash, true);
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskApplyEffect.name, card1, card2, trigger: effects.command }]);
+            global.move(player, card1, card1.location, global.locationTrash);
             return;
         }
 
@@ -74,12 +70,9 @@ class cardPlay {
     }
 
     static playCardCost(player, card) {
-        let costRemaining = card.cost;
-        if (player.resourcesEx > 0) {
-            costRemaining = Math.max(0, costRemaining - player.resourcesEx);
+        if (player.resourcesEx > 0)
             player.resourcesEx = Math.max(0, player.resourcesEx - card.cost);
-        }
-        player.resourcesAvailable -= costRemaining;
+        player.resourcesAvailable -= card.cost;
     }
 
     static askPilotOrCommand(card1, card2) {

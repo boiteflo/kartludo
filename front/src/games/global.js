@@ -1,4 +1,4 @@
-import gameTask from './gameTask';
+// import gameTask from './gameTask';
 import effects from './gundam/effects'
 
 class global {
@@ -44,8 +44,8 @@ class global {
         return 'trash';
     }
 
-    static spawnOrMove(player, card, locationFrom, locationTo, ignoreRefresh) {
-        const cardSpawn = this.move(player, card, locationFrom, locationTo, ignoreRefresh);
+    static spawnOrMove(player, card, locationFrom, locationTo) {
+        const cardSpawn = this.move(player, card, locationFrom, locationTo);
         this.spawnIfNot(cardSpawn);
         return cardSpawn;
     }
@@ -63,7 +63,7 @@ class global {
         card.zindex = 11;
     }
 
-    static move(player, card, locationFrom, locationTo, ignoreRefresh) {
+    static move(player, card, locationFrom, locationTo) {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 
@@ -81,7 +81,7 @@ class global {
         if (!card)
             return;
 
-        if (!card.isTemporaryCard)
+        if (!card.isTemporaryCard || (card.isTemporaryCard && locationTo === this.locationField) )
             player[to] = global.addIn(player[to], card);
 
         if (from)
@@ -96,7 +96,7 @@ class global {
         if (card.pair) {
             card.pair.isPaired = false;
             card.pair.link = false;
-            this.move(player, card.pair, locationFrom, locationTo, ignoreRefresh);
+            this.move(player, card.pair, locationFrom, locationTo);
             delete (card.pair);
             card.link = false;
         }
@@ -108,10 +108,6 @@ class global {
                 card.to.height = 0;
                 card.hidestat = true;
             }
-        }
-
-        if (!ignoreRefresh) {
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField.name, isPlayer1: player.isPlayer1 }]);
         }
 
         return card;
@@ -147,7 +143,12 @@ class global {
     }
 
     static isLink(cardUnit, cardPilot) {
-        return cardUnit.link.includes(cardPilot.name);
+        if(cardUnit.link.includes('['))
+            return cardUnit.link.includes(cardPilot.name);
+        else{
+            const targetStr = cardUnit.link.replace('(','').replace(')','');
+            return cardPilot.attribute.includes(targetStr);
+        }
     }
 
     static end(isPlayer1) {

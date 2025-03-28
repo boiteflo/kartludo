@@ -1,9 +1,9 @@
 <template>
-    <div class="relative w100p bg2 h100p">
-        <div v-for="(card, index) in cardData" :key="'Decklist card ' + index" class="absolute"
-            :style="{ width: card.position.width + 'px', top: card.position.y + 'px', left: card.position.x + 'px' }">
-            <img class="w100p" style="object-fit: cover;" :src="require('@/assets/' + folder + card.id + '.webp')"
-                @click="$emit('cardclick', card)">
+    <div class="w100p bg2 h100p">
+        <div class="relative w100p" style="margin-left:300px">
+            <decklist-card v-for="(card, index) in cardData" :key="'Decklist card ' + index" :card="card"
+                :folder="folder" @cardclick="$emit('cardclick', card)" @clickdown="incruise(card,-1)" @clickup="incruise(card,1)">
+            </decklist-card>
         </div>
         <div style="width: 300px;" class="m5px h100p bgWhite fontSize125em">
             <v-btn class="w100p bg" style="height:45px" @click="$emit('cancel')">Back</v-btn>
@@ -18,12 +18,13 @@
 </template>
 
 <script>
-import deck from './deck';
 import positioner from './positioner';
+import decklistCard from './deckListCard.vue';
+import deck from './deck';
 
 export default {
     name: 'deck-list',
-    components: { deck },
+    components: { deck, decklistCard },
     props: ['decklist', 'folder', 'cardlist'],
     data: () => ({
         list: '',
@@ -33,25 +34,25 @@ export default {
         stopRefresh: false
     }),
     mounted() {
-        this.refresh(this.decklist.list.split(',').join('\n'));
+        this.list = this.decklist.list.split(',').join('\n');
+        this.refresh();
     },
     methods: {
         validate() {
             this.$emit('validate', { list: this.listCorrect });
         },
-        refresh(decklist) {
+        refresh() {
             const result = [];
             const resultText = [];
-            if (!decklist)
-                return result;
-
-            const cards = decklist.split('\n');
+            const cards = this.list.split('\n');
             const listCorrect = [];
+            let index=0;
 
             cards.forEach(line => {
+                index+= line.length;
                 let info = line.split('x');
                 let quantity = parseInt(info[0]);
-                if (info.length < 2 || isNaN(quantity)) {
+                if (info.length < 2 || isNaN(quantity) || quantity < 1) {
                     resultText.push(line);
                 }
                 else {
@@ -59,27 +60,31 @@ export default {
                     const card = this.cardlist?.find(x => x.id == id);
 
                     if (card) {
-                        result.push({ id, quantity });
-                        resultText.push(`${quantity}x ${id} ${card.name}`);
+                        result.push({ id, quantity, buttons:quantity===1 });
                         listCorrect.push(`${quantity}x${id}`);
-                    } else
-                        resultText.push(line);
+                        resultText.push(`${quantity}x ${id} ${card.name}`);
+                        if(!line.includes(' ')){
+                            this.list = this.insertStringAt(this.list, index, ' ' + card.name + '\n');
+                            index+= 2 + card.name.length;
+                        }
+                    } 
                 }
+
             });
 
             const ratio = 107 / 200;
-            positioner.getWrapMaxPositions(this.$vuetify.breakpoint.width - 310, this.$vuetify.breakpoint.height - 10, 300, 0, result, ratio);
+            positioner.getWrapMaxPositions(this.$vuetify.breakpoint.width - 310, this.$vuetify.breakpoint.height - 10, result, ratio);
             result.forEach(card => {
                 for (let i = 1; i < card.quantity; i++) {
-                    result.push({ id: card.id, position: { ...card.position, y: card.position.y + (i * 0.06 * card.position.height) } });
+                    result.push({ 
+                        id: card.id, 
+                        buttons: i === card.quantity-1,
+                        position: { ...card.position, y: card.position.y + (i * 0.06 * card.position.height) } });
                 }
             });
 
-            //for (let i = 0; i < 1; i++) (i * 0.075 * cardSize.height)
-
             this.resume = `${result.length} cards`;
             this.listCorrect = listCorrect.join(',');
-            this.list = resultText.join('\n');
             this.cardData = result;
         },
         getId(str) {
@@ -89,8 +94,17 @@ export default {
             if (this.stopRefresh)
                 return;
             this.stopRefresh = true;
-            this.refresh(this.list);
+            this.refresh();
             this.stopRefresh = false;
+        },
+        incruise(card, pitch){
+            const index = this.list.indexOf(card.id);
+            const quantity = parseInt(this.list.charAt(index-2))+pitch;
+            this.list = this.insertStringAt(this.list, index-2, quantity);
+            this.setList();
+        },
+        insertStringAt(content, index, str){
+            return content.substring(0, index) + str + content.substring(index+1);
         }
     }
 }

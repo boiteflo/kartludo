@@ -11,22 +11,12 @@ class GameGundamEffect {
     static burst = 'burst';
     static command = 'command';
 
-    // target
-    static self = 'self';
-    static unit = 'unit';
-    static pairUnit = 'pairUnit';
-
-    // type
-    static gainThisTurn = 'gainThisTurn';
-    static gain = 'gain';
-    static hand = 'hand';
-
     static removeOneTurnEffect(cards) {
         cards.filter(x => x.removeEndTurn).forEach(card => {
             const lost = [];
             card.removeEndTurn.forEach(fx => {
-                delete card[fx.effect];
-                lost.push(fx.effect);
+                delete card[fx.id];
+                lost.push(fx.id);
             })
             global.log(`${card.name} lost ${lost.join(', ')}`);
         });
@@ -46,10 +36,16 @@ class GameGundamEffect {
                 .concat(global.game.tasks);
             return { stop: true };
         } else
+            // ----------------------------
+            // ----------------------------
+            // TO DO : don't add these twice (because of popup)
+            // ----------------------------
+            // ----------------------------
+
+
             gameTask.addTasks(global.game.tasks, [
                 { id: gameTask.taskRefreshField.name, isPlayer1: card1.isPlayer1 },
-                { id: gameTask.taskTextHide.name, delay },
-                { id: gameTask.taskTextDelete.name },
+                { id: gameTask.taskTextHide.name, delay }
             ]);
 
         return this.apply(trigger, player, card1, card2);
@@ -119,9 +115,9 @@ class GameGundamEffect {
                 global.logEffect(effect, 'Can t handle this effect (because of target=unit) : ' + JSON.stringify(effect));
                 return { stop: true }
             }
-
-            return this[effect.id](player, card1, card2, effect);
         }
+
+        return this[effect.id](player, card1, card2, effect);
     }
 
     static get1ShieldToHand(player, card1, card2, effect) {
@@ -172,7 +168,7 @@ class GameGundamEffect {
     static gainThisTurn(player, card1, card2, effect) {
         const effectClone = global.clone(effect);
         delete effectClone.target;
-        effectClone.effect = effectClone.effect2;
+        effectClone.id = effectClone.effect2;
         global.logEffect(effect, `${card1.name} give ${effect.effect2} to ${card2.name}`);
         this.applyEffect(player, card2, null, effectClone);
         card2.removeEndTurn = [effectClone];
@@ -185,24 +181,23 @@ class GameGundamEffect {
     }
 
     static sendToHand(player, card1, card2, effect) {
-        gameTask.addTasks(global.game.tasks, [
-            { id: gameTask.taskCardToCenter.name, card1, isPlayer1: player.isPlayer1 },
-            { id: gameTask.taskMove.name, card1, to: global.locationHand, isPlayer1: player.isPlayer1 }
-        ]);
+        global.move(player, card1, null, global.locationHand);
         global.logEffect(effect, `${card1.name} is send to hand`);
-        return { stop: true };
+        return {};
     }
 
     static sendToField(player, card1, card2, effect) {
-        global.move(player, card1, global.locationShield, global.locationField);
+        global.move(player, card1, null, global.locationField);
         global.logEffect(effect, `${card1.name} is send to hand`);
-        return { stop: true, cancel: true, refreshHandOpponent: true };
+        return {};
     }
 
     static sendToBase(player, card1, card2, effect) {
-        card1.location = player.positions.shield.location;
+        //global.move(player, card1, null, global.locationHand);
+        //global.logEffect(effect, `${card1.name} is send to hand`);
+        card1.location = global.locationShield;
         gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPlayCard.name, card1: card1, zone: player.positions.field }]);
-        return { stop: true };
+        return {};
     }
 
     static placeExResource(player, card1, card2, effect) {

@@ -3,7 +3,7 @@
 
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
-            style="top:50px" @cardclick="showCard" @cancel="showDeckList(null)" @validate="selectDeckList">
+            style="top:50px" @cardclick="showCardDeckList" @cancel="showDeckList(null)" @validate="selectDeckList">
         </deck-list>
 
         <!-- DeckLists -->
@@ -195,9 +195,10 @@ export default {
         });
         this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
         this.cardList = gundamManager.getCards();
-        /*this.decklistShow = this.deckList[0];
-        this.decklistPlayer1 =this.deckList[0].list;
-        this.decklistPlayer2 =this.deckList[2].list;
+        //this.decklistShow = this.deckList[0];
+        /*
+        this.decklistPlayer1 =this.deckList[5].list;
+        this.decklistPlayer2 =this.deckList[5].list;
         this.start();*/
     },
     methods: {
@@ -304,6 +305,11 @@ export default {
         showCardMouseOver(card) {
             if (this.aside)
                 this.showCard(card);
+        },
+        showCardDeckList(card){
+            const newCard = {...card};
+            newCard.position = {...card.position, x:card.position.x +300};
+            this.showCard(newCard);
         },
         showCard(card) {
             const center = this.game ? this.game.grid.center : this.center;

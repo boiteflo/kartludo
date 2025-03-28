@@ -37,7 +37,7 @@ class cardHandler {
         else if (card1.location === global.locationHand)
             result = cardPlay.playFromHand(player, card1, card2, zone, regularPlay);
         else if (card1.location === global.locationField)
-            result = this.attack(player, card1, card2, zone);
+            result = this.prepareAttack(player, card1, card2, zone);
         else
             result = cardPlay.playCard(player, card1, card2, zone, false);   
 
@@ -55,8 +55,12 @@ class cardHandler {
         return global.game;
     }
 
-    static attack(player, card1, card2, zone, breach) {
-        return cardAttack.attack(player, card1, card2, zone, breach);
+    static prepareAttack(player, card1, card2, zone, breach) {
+        return cardAttack.prepareAttack(player, card1, card2, zone, breach);
+    }
+
+    static attack(player, opponent, card1, zone) {
+        return cardAttack.attack(player, opponent, card1, zone);
     }
 
     static attackCard(player, opponent, attacker, target, zone, breach) {
