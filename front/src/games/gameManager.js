@@ -13,6 +13,8 @@ class gameManager {
     }
 
     static nextTurn(game) {
+        game.manager.endTurn();
+
         global.isPlayer1 = !global.isPlayer1;
         game.isPlayer1 = global.isPlayer1;
         const playerId = global.isPlayer1 ? '1' : '2';

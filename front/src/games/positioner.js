@@ -30,7 +30,7 @@ class positioner {
         }
 
         grid.center = this.getCardSize(grid.width - grid.border2, grid.height - grid.border2, 1);
-        grid.centerMini = { width, height, location: 0, zone: 'centerMini1' };
+        grid.centerMini = { width: width - (2 * grid.x1), height: height - (2 * grid.y1), location: 0, zone: 'centerMini1' };
         grid.centerMini.card1 = this.getCardSize(grid.centerMini.width, grid.centerMini.height, 2);
         grid.centerMini.x = (width - (grid.centerMini.card1.width * 2)) / 2;
         grid.centerMini.y = 5; // (height - (grid.centerMini.card1.height * 1)) / 2;
@@ -98,7 +98,6 @@ class positioner {
         let zoneHeight = position.height;
         if (position.location == global.locationField)
             zoneHeight *= 0.75;
-
         const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length, position.cardHeightPercent);
         cards.forEach((card, index) => {
             const degree = card.active ? 0 : 90;
@@ -219,7 +218,7 @@ class positioner {
                 maxSize = size;
         }
 
-        const marginHorizontal = (width - (3*margin) - (maxSize.width * maxSize.wrapCut)) / (maxSize.wrapCut-1); 
+        const marginHorizontal = (width - (3 * margin) - (maxSize.width * maxSize.wrapCut)) / (maxSize.wrapCut - 1);
         //let originXCenter = originX + ((width - (maxSize.width * maxSize.wrapCut))/2);
         let x = margin;
         let y = margin;

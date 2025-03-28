@@ -78,6 +78,7 @@ class gameTask {
 
     static taskRefreshField(game, task, player) {
         game.manager.refreshFieldAndHand(player);
+        this.taskTextHide(game, task, player);
     }
 
     static taskTitleShow(game, task, player) {
@@ -94,6 +95,7 @@ class gameTask {
     }
 
     static taskTextHide(game, task, player) {
+        game.refreshOnlyTextEffect = false;
         if (!game.textEffect)
             return;
 

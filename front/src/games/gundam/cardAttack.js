@@ -6,7 +6,7 @@ class cardAttack {
 
     static prepareAttack(player, card1, card2, zone, breach) {
         const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
-        if (isSamePlayer) {
+        if (isSamePlayer || !card1.canAttack) {
             return { sendBack: true };
         }
 
@@ -95,18 +95,13 @@ class cardAttack {
 
         const activeBreach = !breach && global.isCardUnit(target) && attacker.breach && target.hp < 1;
         global.setActive(attacker, false);
-        const tasks = [];
+        let tasks = [];
 
-        if (attacker.hp < 1) {
-            attacker.dead = true;
-            const delayForTarget = target.hp < 1 || activeBreach ? null : global.delay;
-            tasks.push({ id: gameTask.taskMove.name, delay: delayForTarget, card1: attacker, to: global.locationTrash, isPlayer1: attacker.isPlayer1 });
-        }
+        if (attacker.hp < 1)
+            tasks = tasks.concat(this.destroyUnit(attacker, target.hp < 1 || activeBreach));
 
-        if (target.hp < 1) {
-            target.dead = true;
-            tasks.push({ id: gameTask.taskMove.name, delay:global.delay, card1: target, to: global.locationTrash, isPlayer1: target.isPlayer1 });
-        }
+        if (target.hp < 1)
+            tasks = tasks.concat(this.destroyUnit(target, false));
 
         global.setActive(attacker, false);
 
@@ -114,6 +109,15 @@ class cardAttack {
             tasks.push({ id: gameTask.taskAttack.name, player, opponent, attacker, zone, breach: attacker.breach });
 
         gameTask.addTasks(global.game.tasks, tasks);
+    }
+
+    static destroyUnit(card1, avoidDelay) {
+        card1.dead = true;
+        const delayForTarget = avoidDelay ? null : global.delay;
+        return [
+            { id: gameTask.taskApplyEffect.name, card1, trigger: effects.ondestroyed },
+            { id: gameTask.taskMove.name, delay: delayForTarget, card1, to: global.locationTrash, isPlayer1: card1.isPlayer1 }
+        ];
     }
 }
 

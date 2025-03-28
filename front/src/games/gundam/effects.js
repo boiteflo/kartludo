@@ -10,6 +10,8 @@ class GameGundamEffect {
     static battle = 'battle';
     static burst = 'burst';
     static command = 'command';
+    static ondestroyed = 'ondestroyed';
+    static end = 'end';
 
     static removeOneTurnEffect(cards) {
         cards.filter(x => x.removeEndTurn).forEach(card => {
@@ -36,39 +38,27 @@ class GameGundamEffect {
                 .concat(global.game.tasks);
             return { stop: true };
         } else
-            // ----------------------------
-            // ----------------------------
-            // TO DO : don't add these twice (because of popup)
-            // ----------------------------
-            // ----------------------------
-
-
-            gameTask.addTasks(global.game.tasks, [
-                { id: gameTask.taskRefreshField.name, isPlayer1: card1.isPlayer1 },
-                { id: gameTask.taskTextHide.name, delay }
-            ]);
+            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskRefreshField.name, isPlayer1: card1.isPlayer1 }]);
 
         return this.apply(trigger, player, card1, card2);
     }
 
     static getEffectText(effect) {
-        const result = [effect.id?.toString(), effect.value?.toString(), effect.target?.toString(), effect.effect2?.toString()];
+        let result = [effect.id?.toString(), effect.value?.toString(), effect.target?.toString(), effect.effect2?.toString()];
         if (effect.ap)
             result.push('ap ' + effect.ap);
 
         if (effect.hp)
             result.push('hp ' + effect.ap);
 
+        if(effect.effects)
+            result = result.concat(effect.effects.map(x=> this.getEffectText(x)).join(', '));
+
         return result.filter(x => x && x.length > 0).join(' ');
     }
 
     static apply(trigger, player, card1, card2) {
-        const multiTriggers = [this.onpair, this.onlink];
-        let effects = !card1.effects ? [] : card1.effects;
-        if (multiTriggers.includes(trigger))
-            effects = effects.concat(card2.effects);
-
-        card1.effectsRemaining = effects.filter(effect => effect.trigger == trigger);
+        card1.effectsRemaining = this.getEffectsRemaining(trigger, card1, card2);
         let result = {};
         global.effects = [];
 
@@ -108,16 +98,85 @@ class GameGundamEffect {
     }
 
     static applyEffect(player, card1, card2, effect) {
-        if (effect.target && !card2) {
-            if (effect.target === 'unit') {
-                // global.showPopupSelectCard(card1, card1.CommandtargetAvailable);
-                alert('cant do that');
-                global.logEffect(effect, 'Can t handle this effect (because of target=unit) : ' + JSON.stringify(effect));
+        const opponent = global.getPlayer(!player.isPlayer1);
+        const needNewCard2 = ['opponentUnitHpUnderValue'];
+        let card2Obj = effect.target && needNewCard2.includes(effect.target) ? null : card2;
+
+        if (effect.target && !card2Obj) {
+            if(effect.card2){
+                card2Obj = effect.card2;
+            }
+            else if (global.game.cardChoice) {
+                card2Obj = global.game.cardChoice;
+                effect.card2 = card2Obj;
+                global.deletePopup();
+            }
+            else {
+                let cards = [];
+                if (effect.target === 'opponentUnitHpUnderValue') {
+                    cards = opponent.field.filter(x => global.isCardUnit(x) && x.hp < effect.value);
+                }
+                else if (effect.target === 'unit') {
+                    alert('cant do that');
+                    global.logEffect(effect, 'Can t handle this effect (because of target=unit) : ' + JSON.stringify(effect));
+                    return { stop: true }
+                }
+
+                if (cards.length < 1) {
+                    console.log(`Can't play the effect of ${card1.name} (${effect.id}) because there is no target available`);
+                    return {};
+                }
+                global.game.tasks = [{
+                    id: gameTask.taskPopup.name,
+                    text: 'Select available target',
+                    cards
+                }].concat(global.game.tasks);
                 return { stop: true }
             }
         }
 
-        return this[effect.id](player, card1, card2, effect);
+        return this[effect.id](player, card1, card2Obj, effect);
+    }
+
+    /*
+    -------------------------------- Effects ------------------------------------
+    */
+
+    static discard(player, card1, card2, effect){
+        const card = global.game.cardChoice;
+        if(!card){
+            global.game.tasks = [{
+                id: gameTask.taskPopup.name,
+                text: 'Select a card to discard',
+                cards: player.hand
+            }].concat(global.game.tasks);
+            return { stop: true }
+        }
+        
+        global.deletePopup();
+        global.move(player, card, null, global.locationTrash);
+    }
+
+    static pilotToHand(player, card1, card2, effect){
+        if(!card1.pair)
+            return;
+
+        const card = card1.pair;
+        delete(card1.pair);
+        card.isPaired=false;
+        global.move(player, card, null, global.locationHand);
+    }
+
+    static gainEffects(player, card1, card2, effect) {
+        card1.effects = card1.effects.concat(effect.effects);
+    }
+
+    static rest(player, card1, card2, effect) {
+        global.setActive(card2, false);
+    }
+
+    static repair(player, card1, card2, effect) {
+        card1.hp = Math.min(card1.hp + effect.value, card1.hpMax);
     }
 
     static get1ShieldToHand(player, card1, card2, effect) {
@@ -177,6 +236,7 @@ class GameGundamEffect {
     static incruise(player, card1, card2, effect) {
         card1.ap += effect.ap;
         card1.hp += effect.hp;
+        card1.hpMax += effect.hp;
         global.logEffect(effect, `${card1.name} have been incruised by AP ${effect.ap} and HP ${effect.hp}`);
     }
 

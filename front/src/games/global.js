@@ -40,7 +40,7 @@ class global {
         else if (location == this.locationField) return 'field';
         else if (location == this.locationBase) return 'base';
         else if (location == this.locationResource) return 'resource';
-        else if (location == this.locationPair) return 'pair';
+        else if (location == this.locationPair) return null;
         return 'trash';
     }
 
@@ -72,7 +72,7 @@ class global {
 
         if (!card)
             card = player[from].splice(0, 1)[0];
-        else
+        else if(from)
             player[from] = global.removeByIndex(player[from], card);
 
         if (!card && locationFrom === this.locationDeck)
@@ -160,6 +160,7 @@ class global {
     static createCard(id) {
         const card = this.clone(this.cards.find(x => x.id === id));
         card.index = this.getNextIndex();
+        card.hpMax = card.hp;
         return card;
     }
 

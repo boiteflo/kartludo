@@ -69,7 +69,19 @@
             "attribute": "(Earth Federation)(White Base Team)",
             "link": "(White Base Team)",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "end",
+                    "id": "repair",
+                    "value": 1
+                },
+                {
+                    "trigger": "onpair",
+                    "id": "rest",
+                    "target": "opponentUnitHpUnderValue",
+                    "value": 3
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -89,7 +101,23 @@
             "attribute": "xxx",
             "link": "[Banagher Links]",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "onlink",
+                    "id": "gainEffects",
+                    "effects": [
+                        {
+                            "trigger": "ondestroyed",
+                            "id": "pilotToHand"
+                        },
+                        {
+                            "trigger": "ondestroyed",
+                            "id": "discard",
+                            "value":1
+                        }
+                    ]
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -281,7 +309,7 @@
             "targetUnit": false,
             "ap": 4,
             "hp": 4,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-030",
@@ -346,7 +374,7 @@
             "targetUnit": false,
             "ap": 3,
             "hp": 4,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-040",
@@ -365,7 +393,7 @@
             "targetUnit": false,
             "ap": 4,
             "hp": 3,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-041",
@@ -390,7 +418,7 @@
             "targetUnit": false,
             "ap": 4,
             "hp": 3,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-068",
@@ -589,7 +617,7 @@
                     "target": "pairUnit",
                     "id": "immuneAp",
                     "value": 4,
-                    "oneTurn":true
+                    "oneTurn": true
                 },
                 {
                     "trigger": "burst",
@@ -601,7 +629,7 @@
             "targetUnit": false,
             "ap": 2,
             "hp": 1,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-097",
@@ -711,7 +739,7 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 0,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "GD01-117",
@@ -1014,7 +1042,7 @@
             "ap": 0,
             "hp": 5,
             "color": "white"
-        },        
+        },
         {
             "id": "ST02-001",
             "level": 6,
@@ -1043,7 +1071,7 @@
             "targetUnit": false,
             "ap": 4,
             "hp": 5,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-002",
@@ -1068,7 +1096,7 @@
             "targetUnit": false,
             "ap": 2,
             "hp": 2,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-005",
@@ -1087,7 +1115,7 @@
             "targetUnit": false,
             "ap": 3,
             "hp": 2,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-010",
@@ -1119,7 +1147,7 @@
             "targetUnit": false,
             "ap": 2,
             "hp": 1,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-012",
@@ -1147,7 +1175,7 @@
             "targetUnit": true,
             "ap": 1,
             "hp": 1,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-013",
@@ -1174,7 +1202,7 @@
             "targetUnit": false,
             "ap": 1,
             "hp": 1,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST02-015",
@@ -1206,7 +1234,7 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 5,
-            "color":"green"
+            "color": "green"
         },
         {
             "id": "ST03-007",
@@ -1415,7 +1443,8 @@
             "cost": 0,
             "name": "Gundam",
             "type": [
-                0, 4
+                0,
+                4
             ],
             "attribute": "xxx",
             "link": "",
@@ -1428,7 +1457,7 @@
             "ap": 3,
             "hp": 3,
             "color": "none",
-            "isTemporaryCard":true
+            "isTemporaryCard": true
         },
         {
             "id": "T-002",
@@ -1436,7 +1465,8 @@
             "cost": 0,
             "name": "Guncannon",
             "type": [
-                0, 4
+                0,
+                4
             ],
             "attribute": "xxx",
             "link": "",
@@ -1449,7 +1479,7 @@
             "ap": 2,
             "hp": 2,
             "color": "none",
-            "isTemporaryCard":true
+            "isTemporaryCard": true
         },
         {
             "id": "T-003",
@@ -1457,7 +1487,8 @@
             "cost": 0,
             "name": "Guntank",
             "type": [
-                0, 4
+                0,
+                4
             ],
             "attribute": "xxx",
             "link": "",
@@ -1470,7 +1501,7 @@
             "ap": 1,
             "hp": 1,
             "color": "none",
-            "isTemporaryCard":true
+            "isTemporaryCard": true
         },
         {
             "id": "T-006",
@@ -1478,7 +1509,8 @@
             "cost": 0,
             "name": "Char's Zaku II",
             "type": [
-                0, 4
+                0,
+                4
             ],
             "attribute": "xxx",
             "link": "",
@@ -1491,10 +1523,8 @@
             "ap": 3,
             "hp": 1,
             "color": "none",
-            "isTemporaryCard":true
+            "isTemporaryCard": true
         },
-
-
         {
             "id": "xxx",
             "level": 0,

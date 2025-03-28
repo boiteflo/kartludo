@@ -2,6 +2,7 @@ import cards from '../../data/gundamCards.json';
 import global from '../global';
 import positioner from '../positioner';
 import cardHandler from './cardHandler';
+import gameTask from '../gameTask';
 import effects from './effects';
 
 class manager {
@@ -54,13 +55,13 @@ class manager {
         }]);*/
     }
 
-    static createUniqueRare(player){
+    static createUniqueRare(player) {
         const rareKeyWord = "_p1";
-        var rareCards = cards.files.split(',').filter(x=> x.includes(rareKeyWord)).map(x=> x = x.replace(rareKeyWord,""));
-        rareCards.forEach(rareCard=> {
-            const firstCard = player.deck.find(x=> x.id === rareCard);
-            if(firstCard)
-                firstCard.id+=rareKeyWord;
+        var rareCards = cards.files.split(',').filter(x => x.includes(rareKeyWord)).map(x => x = x.replace(rareKeyWord, ""));
+        rareCards.forEach(rareCard => {
+            const firstCard = player.deck.find(x => x.id === rareCard);
+            if (firstCard)
+                firstCard.id += rareKeyWord;
         });
     }
 
@@ -82,6 +83,24 @@ class manager {
 
         const baseText = player.base.length > 0 ? player.base[0].hp + 'hp ' : '-';
         global.log(`-- Turn player ${player.number}, ${player.resourcesAvailable}re, ${player.shield.length}sh, ${baseText}ba`);
+    }
+
+    static endTurn() {
+        const player = global.getPlayerTurn();
+        const cards = player.field.filter(x => x.effects.find(y => y.trigger === effects.end));
+        const tasks = [];
+        cards.forEach(card => {
+            tasks.push({
+                id: gameTask.taskApplyEffect.name,
+                card1: card,
+                trigger: effects.end
+            });
+        });
+
+        tasks.push({ id: gameTask.taskRefreshField.name, isPlayer1: player.isPlayer1 });
+
+        gameTask.addTasks(global.game.tasks, tasks);
+
     }
 
     static refreshFieldAndHand(player) {
@@ -109,7 +128,7 @@ class manager {
     }
 
     static attack(player, opponent, card1, card2, zone, breach) {
-        if(card2)
+        if (card2)
             cardHandler.attackCard(player, opponent, card1, card2, zone, breach);
         else
             cardHandler.attack(player, opponent, card1, zone)
@@ -146,8 +165,8 @@ class manager {
         return global.pair(player, card1, card2);
     }
 
-    static applyEffect(player, card1, card2, trigger){
-        return  effects.handleEffects(player, card1, card2, trigger);
+    static applyEffect(player, card1, card2, trigger) {
+        return effects.handleEffects(player, card1, card2, trigger);
     }
 }
 

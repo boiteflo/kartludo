@@ -50,26 +50,30 @@ class helperAnimation {
     }
 
     static animateMultiple(animations, duration = -1) {
-        if(duration === -1) 
+        if (duration === -1)
             duration = global.delay;
         const animationsArray = [];
         animations.forEach(anim => {
+            if (!anim.to) {
+                // console.log("to is missing for animation : " + anim.id);
+                return;
+            }
             const element = document.getElementById(anim.id);
             if (!element) {
                 console.log("element can't be found : " + anim.id);
                 return;
             }
-            const from = anim.from ?? { 
-                x: this.pxStringToInt(element.style.left), 
-                y: this.pxStringToInt(element.style.top), 
+            const from = anim.from ?? {
+                x: this.pxStringToInt(element.style.left),
+                y: this.pxStringToInt(element.style.top),
                 rotation: element.style.rotation,
                 height: element.style.height,
                 width: element.style.width
             };
             from.rotation = from.rotation ?? 0;
             from.height = from.height ?? element.clientHeight;
-            const to = anim.isIncrement ? this.add(from, anim.to) :anim.to;
-            animationsArray.push({element, from, to});
+            const to = anim.isIncrement ? this.add(from, anim.to) : anim.to;
+            animationsArray.push({ element, from, to });
         });
         this.animateElements(animationsArray, duration);
     }

@@ -69,6 +69,14 @@ class cardPlay {
         this.sendCardBackToSquareOne(card1);
     }
 
+    static sendCardBackToSquareOne(card) {
+        const rotation = card.active ? 0 : 90;
+        card.to = { ...global.clone(card.position), rotation };
+        card.position = { ...card.position, ...card.positionDrag };
+        global.game.refresh = true;
+        return global.game;
+    }
+
     static playCardCost(player, card) {
         if (player.resourcesEx > 0)
             player.resourcesEx = Math.max(0, player.resourcesEx - card.cost);

@@ -42,17 +42,9 @@ class cardHandler {
             result = cardPlay.playCard(player, card1, card2, zone, false);   
 
         if (result && result.sendBack)
-            this.sendCardBackToSquareOne(card1);
+            cardPlay.sendCardBackToSquareOne(card1);
 
         return result;
-    }
-
-    static sendCardBackToSquareOne(card) {
-        const rotation = card.active ? 0 : 90;
-        card.to = { ...global.clone(card.position), rotation };
-        card.position = { ...card.position, ...card.positionDrag };
-        global.game.refresh = true;
-        return global.game;
     }
 
     static prepareAttack(player, card1, card2, zone, breach) {

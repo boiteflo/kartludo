@@ -103,7 +103,7 @@
             <div style="background-color: #FFFF00F0; width:100%; height:100%;">
                 <h3 class="text-center colorBlack textVerticalCenter w100p" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p">
-                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px">
+                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand">
                         <img :style="getFieldStyleObj(game?.grid.card6)" @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
@@ -196,9 +196,9 @@ export default {
         this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
         this.cardList = gundamManager.getCards();
         //this.decklistShow = this.deckList[0];
-        /*
-        this.decklistPlayer1 =this.deckList[5].list;
-        this.decklistPlayer2 =this.deckList[5].list;
+
+        /*this.decklistPlayer1 = this.deckList[3].list;
+        this.decklistPlayer2 = this.deckList[3].list;
         this.start();*/
     },
     methods: {
@@ -281,8 +281,9 @@ export default {
                 return;
 
             const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
-            if (this.game && this.game.textEffect && this.game.textEffect.to)
+            if (this.game && this.game.textEffect && this.game.textEffect.to) {
                 animations.push({ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false });
+            }
             helperAnimation.animateMultiple(animations, animationTime);
 
         },
@@ -306,9 +307,9 @@ export default {
             if (this.aside)
                 this.showCard(card);
         },
-        showCardDeckList(card){
-            const newCard = {...card};
-            newCard.position = {...card.position, x:card.position.x +300};
+        showCardDeckList(card) {
+            const newCard = { ...card };
+            newCard.position = { ...card.position, x: card.position.x + 300 };
             this.showCard(newCard);
         },
         showCard(card) {
