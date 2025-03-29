@@ -39,7 +39,7 @@ class cardHandler {
         else if (card1.location === global.locationField)
             result = this.prepareAttack(player, card1, card2, zone);
         else
-            result = cardPlay.playCard(player, card1, card2, zone, false);   
+            result = cardPlay.playCard(player, card1, card2, zone, false);
 
         if (result && result.sendBack)
             cardPlay.sendCardBackToSquareOne(card1);
@@ -48,15 +48,17 @@ class cardHandler {
     }
 
     static prepareAttack(player, card1, card2, zone, breach) {
-        return cardAttack.prepareAttack(player, card1, card2, zone, breach);
+        const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
+        if (isSamePlayer || !card1.canAttack) {
+            return { sendBack: true };
+        }
+        
+        const opponent = global.getPlayer(!player.isPlayer1);
+        cardAttack.createAttackTask(player, opponent, card1, card2, zone, breach);
     }
 
-    static attack(player, opponent, card1, zone) {
-        return cardAttack.attack(player, opponent, card1, zone);
-    }
-
-    static attackCard(player, opponent, attacker, target, zone, breach) {
-        return cardAttack.attackCard(player, opponent, attacker, target, zone, breach);
+    static attack(task) {
+        return cardAttack.attack(task);
     }
 
     static selectChoiceCard(game, card) {

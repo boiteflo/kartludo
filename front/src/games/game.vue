@@ -197,9 +197,9 @@ export default {
         this.cardList = gundamManager.getCards();
         //this.decklistShow = this.deckList[0];
 
-        /*this.decklistPlayer1 = this.deckList[3].list;
-        this.decklistPlayer2 = this.deckList[3].list;
-        this.start();*/
+        this.decklistPlayer1 = this.deckList[0].list;
+        this.decklistPlayer2 = this.deckList[0].list;
+        this.start();
     },
     methods: {
         showDeckList(decklist) {

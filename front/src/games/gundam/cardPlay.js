@@ -39,7 +39,7 @@ class cardPlay {
 
         if (global.isCardBase(card1)) {
             if (player.base.length > 0)
-                gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskMove.name, card1: player.base[0], to: global.locationTrash, isPlayer1: card1.isPlayer1 }]);
+                gameTask.addTasks([{ id: gameTask.taskMove.name, card1: player.base[0], to: global.locationTrash, isPlayer1: card1.isPlayer1 }]);
 
             global.move(player, card1, card1.location, global.locationBase);
             card1.selectable = false;
@@ -54,14 +54,14 @@ class cardPlay {
 
             if (playCost)
                 this.playCardCost(player, card1);
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskPairCard.name, card1, card2 }]);
+            gameTask.addTasks([{ id: gameTask.taskPairCard.name, card1, card2 }]);
             return;
         }
 
         if (isCommand) {
             if (playCost)
                 this.playCardCost(player, card1);
-            gameTask.addTasks(global.game.tasks, [{ id: gameTask.taskApplyEffect.name, card1, card2, trigger: effects.command }]);
+            gameTask.addTasks([{ id: gameTask.taskApplyEffect.name, card1, card2, trigger: effects.command }]);
             global.move(player, card1, card1.location, global.locationTrash);
             return;
         }

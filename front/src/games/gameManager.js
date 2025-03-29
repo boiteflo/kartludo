@@ -19,7 +19,7 @@ class gameManager {
         game.isPlayer1 = global.isPlayer1;
         const playerId = global.isPlayer1 ? '1' : '2';
 
-        gameTask.addTasks(game.tasks, [
+        gameTask.addTasks([
             { id: gameTask.taskTitleShow.name, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: 1200 },
             { id: gameTask.taskMoveAndShowCenter.name, isPlayer1: global.isPlayer1, from: global.locationDeck, to: global.locationHand }
         ]);
@@ -49,7 +49,7 @@ class gameManager {
 
     static playCard(game, card1, card2, zone) {
         global.needTaskEndRefresh=true;
-        gameTask.addTasks(game.tasks, [{id:gameTask.taskPlayCard.name,card1, card2, zone, regularPlay:true}]);
+        gameTask.addTasks([{id:gameTask.taskPlayCard.name,card1, card2, zone, regularPlay:true}]);
         return game;
     }
 

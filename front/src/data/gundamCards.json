@@ -137,7 +137,14 @@
             "attribute": "(Earth Federation) (White Base Team)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [                
+                {
+                    "trigger": "onplay",
+                    "target": "opponentUnitRested",
+                    "id": "dealDamage",
+                    "value":1
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -157,7 +164,15 @@
             "attribute": "(Earth Federation) (White Base Team)",
             "link": "(White Base Team)",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "onplay",
+                    "target": "playerUnitWithAttribute",
+                    "targetAttribute":"(White Base Team)",
+                    "id": "gainThisTurn",
+                    "effect2": "highManeuver"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -217,7 +232,14 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "battle",
+                    "target": "playerUnit",
+                    "id": "repair",
+                    "value": 1
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],

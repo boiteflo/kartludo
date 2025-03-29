@@ -99,7 +99,7 @@ class manager {
 
         tasks.push({ id: gameTask.taskRefreshField.name, isPlayer1: player.isPlayer1 });
 
-        gameTask.addTasks(global.game.tasks, tasks);
+        gameTask.addTasks(tasks);
 
     }
 
@@ -127,11 +127,8 @@ class manager {
         return result;
     }
 
-    static attack(player, opponent, card1, card2, zone, breach) {
-        if (card2)
-            cardHandler.attackCard(player, opponent, card1, card2, zone, breach);
-        else
-            cardHandler.attack(player, opponent, card1, zone)
+    static attack(task) {
+        return cardHandler.attack(task);
     }
 
     static selectChoiceCard(game, card) {

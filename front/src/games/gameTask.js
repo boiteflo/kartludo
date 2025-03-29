@@ -2,9 +2,14 @@ import global from './global';
 
 /* eslint-disable no-unused-vars */
 class gameTask {
-    static addTasks(list, tasks) {
+    static addTasks(tasks) {
         global.needTaskEndRefresh = true;
-        tasks.forEach(task => list.push(task));
+        global.game.tasks = global.game.tasks.concat(tasks);
+    }
+
+    static addTasksFirst(tasks) {
+        global.game.tasks = tasks.concat(global.game.tasks);
+        return { stop: true };
     }
 
     static alreadyInclude(list, task) {
@@ -29,7 +34,7 @@ class gameTask {
     }
 
     static handleTasks(game) {
-        if (game.end){
+        if (game.end) {
             game.tasks = [];
             return game;
         }
@@ -42,15 +47,15 @@ class gameTask {
             const isPlayer1 = task.isPlayer1 ? task.isPlayer1 : task.card1 && task.card1.isPlayer1 ? task.card1.isPlayer1 : task.isPlayer1;
             const player = isPlayer1 ? game.player1 : game.player2;
 
-            let tasksString = game.tasks.map(x=> x.id).join(', ');
+            let tasksString = game.tasks.map(x => x.id).join(', ');
             const result = this[task.id](game, task, player);
-            tasksString = game.tasks.map(x=> x.id).join(', ');
-            
+            tasksString = game.tasks.map(x => x.id).join(', ');
+
             if (result && result.stop)
                 return game;
 
             if (task.delay) {
-                game.wait = task.delay;
+                game.wait = task.delay === true ? global.delay : task.delay;
                 task = game.tasks.splice(0, 1)[0];
                 return game;
             }
@@ -74,6 +79,7 @@ class gameTask {
         game.manager.refreshFieldAndHand(game.player1);
         game.manager.refreshFieldAndHand(game.player2);
         game.refresh = true;
+        game.taskAttack = null;
     }
 
     static taskRefreshField(game, task, player) {
@@ -106,6 +112,12 @@ class gameTask {
 
     static taskMove(game, task, player) {
         global.spawnOrMove(player, task.card1, task.from, task.to);
+    }
+
+    static taskAttackPlayerAnimation(game, task, player) {
+        const opponent = global.getPlayer(!player.isPlayer1);
+        const heartPosition = opponent.isPlayer1 ? global.grid.player1Heart : global.grid.player2Heart;
+        task.card1.to = { ...task.card1.position, x: heartPosition.x, y: heartPosition.y };
     }
 
     static taskMoveAndShowCenter(game, task, player) {
@@ -150,8 +162,7 @@ class gameTask {
     }
 
     static taskAttack(game, task, player) {
-        game.taskAttack = task;
-        return game.manager.attack(task.player, task.opponent, task.attacker, task.target, task.zone, task.breach);
+        return game.manager.attack(task);
     }
 
     static taskPopup(game, task, player) {

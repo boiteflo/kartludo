@@ -1,4 +1,4 @@
-// import gameTask from './gameTask';
+import gameTask from './gameTask';
 import effects from './gundam/effects'
 
 class global {
@@ -92,6 +92,7 @@ class global {
         card.isPlayer1 = player.isPlayer1;
         card.active = true;
         card.hidestat = card.location === global.locationTrash;
+        card.location = locationTo;
 
         if (card.pair) {
             card.pair.isPaired = false;
@@ -151,16 +152,27 @@ class global {
         }
     }
 
+    static destroyUnit(card1, avoidDelay) {
+        card1.dead = true;
+        const delayForTarget = avoidDelay ? null : global.delay;
+        return [
+            { id: gameTask.taskApplyEffect.name, card1, trigger: effects.ondestroyed },
+            { id: gameTask.taskMove.name, delay: delayForTarget, card1, to: this.locationTrash, isPlayer1: card1.isPlayer1 }
+        ];
+    }
+
     static end(isPlayer1) {
         this.game.end = true;
         const message = isPlayer1 ? 'Defeat' : 'Victory';
         alert(message);
+        return {end:true};
     }
 
     static createCard(id) {
         const card = this.clone(this.cards.find(x => x.id === id));
         card.index = this.getNextIndex();
         card.hpMax = card.hp;
+        card.effects = !card.effects ? [] : card.effects.map(fx=> this.clone(fx));
         return card;
     }
 

@@ -4,120 +4,163 @@ import effects from './effects';
 
 class cardAttack {
 
-    static prepareAttack(player, card1, card2, zone, breach) {
-        const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
-        if (isSamePlayer || !card1.canAttack) {
-            return { sendBack: true };
+    static createAttackTask(player, opponent, card1, card2, zone, breach) {
+        gameTask.addTasks([{ id: gameTask.taskAttack.name, player, opponent, attacker: card1, target: card2, zone, breach }]);
+    }
+
+    static attack(task) {
+        global.game.taskAttack = task;
+        let result = {};
+        task.step = task.step ? task.step : this.attackStep[0];
+
+        while (!result.stop && !result.end) {
+            if (task.step === this.stepSelectBlocker)
+                result = this.selectBlocker(task);
+
+            else if (task.step === this.stepSelectActionCards)
+                result = this.selectCardAction(task);
+
+            else if (task.step === this.stepSelectCardOpponent)
+                result = this.selectCardOpponent(task);
+
+            else if (task.step === this.stepEffectBattle)
+                result = this.effectBattle(task);
+
+            else if (task.step === this.stepShowFight)
+                result = this.showFight(task);
+
+            else if (task.step === this.stepFight)
+                result = this.fight(task);
+
+            else
+                result.end = true;
+
+            if (!result.stop && !result.end)
+                this.nextStep(task);
         }
 
-        const opponent = global.getPlayerTurnOpponent();
-        const blockers = opponent.field.filter(x => x.block && x.active);
-        let selectedAsBlocker = false;
-        if (!global.game.blocker && blockers.length > 0) {
-            if (!global.game.cardChoice && !global.game.choice) {
-                global.game.tasks = [{
-                    id: gameTask.taskPopup.name,
-                    text: 'Select a blocker ?',
-                    cards: blockers,
-                    choices: [{ text: 'none' }]
-                }
-                ].concat(global.game.tasks);
-                return { stop: true };
-            }
+        return result;
+    }
 
-            card2 = global.game.cardChoice;
-            global.game.blocker = card2;
-            selectedAsBlocker = true;
-        }
+    static stepSelectBlocker = 'stepSelectBlocker';
+    static stepSelectActionCards = 'stepSelectActionCards';
+    static stepSelectCardOpponent = 'stepSelectCardOpponent';
+    static stepEffectBattle = 'stepEffectBattle';
+    static stepShowFight = 'stepShowFight';
+    static stepFight = 'stepFight';
+    static attackStep = [
+        this.stepSelectBlocker,
+        this.stepSelectActionCards,
+        this.stepSelectCardOpponent,
+        this.stepEffectBattle,
+        this.stepShowFight,
+        this.stepFight
+    ];
 
-        /*const actionCardResult = cardAction.askForActionCards(player, opponent);
+    static nextStep(task) {
+        const array = this.attackStep;
+        const index = array.indexOf(task.step);
+        if (index < array.length - 1)
+            task.step = array[index + 1];
+        else
+            task.step = 'end';
+        return {};
+    }
+
+    static selectBlocker(task) {
+        const blockers = task.opponent.field.filter(x => x.block && x.active);
+        if (task.attacker.highManeuver || task.blocker || blockers.length < 1)
+            return {};
+
+        if (!global.game.cardChoice && !global.game.choice)
+            return gameTask.addTasksFirst([{ id: gameTask.taskPopup.name, text: 'Select a blocker ?', cards: blockers, choices: [{ text: 'none' }] }]);
+
+        task.blocker = global.game.cardChoice;
+        global.deletePopup();
+        return {};
+    }
+
+    static selectCardAction() {// task
+        /*const actionCardResult = cardAction.askForActionCards(task.player, task.opponent);
         if (actionCardResult && actionCardResult.stop)
             return actionCardResult;*/
-
-        delete (global.game.blocker);
-        global.deletePopup();
-
-        if (card2 && card2.isPlayer1 === opponent.isPlayer1) {
-            const isValidTarget = selectedAsBlocker || !card2.active || card1.attackActiveEnnemy > card2.level;
-            if (!isValidTarget)
-                return { sendBack: true };
-
-            this.startAttackAnimation(player, opponent, card1, card2, zone, breach);
-            return;
-        }
-
-        return this.attack(player, opponent, card1, zone);
+        return {};
     }
 
-    static attack(player, opponent, card1, zone) {
-
-        if (opponent.shield < 1 && opponent.base.length < 1)
-            return { end: true, isPlayer1: opponent.isPlayer1 };
-
-        if (opponent.base.length > 0) {
-            const target = opponent.base[0];
-            this.startAttackAnimation(player, opponent, card1, target, zone);
-            return;
+    static selectCardOpponent(task) {
+        if (task.blocker) {
+            task.target = task.blocker;
+            return {};
         }
 
-        global.setActive(card1, false);
-        let card = opponent.shield.splice(0, 1)[0];
-        gameTask.addTasks(global.game.tasks, [
-            { id: gameTask.taskApplyEffect.name, card1: card, trigger: effects.burst },
-            { id: gameTask.taskMove.name, card1: card, to: global.locationTrash, isPlayer1: card.isPlayer1 }
-        ]);
-        return { sendBack: true };
-    }
+        if (task.target) {
+            const isValidTarget = task.target.isPlayer1 === task.opponent.isPlayer1
+                && (!task.target.active || (task.attacker.attackActiveEnnemy && task.attacker.attackActiveEnnemy > task.target.level));
+            return { end: !isValidTarget };
+        }
 
-    static startAttackAnimation(player, opponent, attacker, target, zone, breach) {
-        const delay = this.delay;
-        gameTask.addTasks(global.game.tasks,
-            [{ id: gameTask.taskCardsToMiniCenter.name, delay: global.delay, card1: attacker, card2: target },
-            { id: gameTask.taskAttack.name, player, opponent, attacker, target, delay, zone, breach }
+        if (task.opponent.base.length > 0) {
+            task.target = task.opponent.base[0];
+            return {};
+        }
+
+        if (task.opponent.shield.length > 0) {
+            task.step = 'end';
+            global.setActive(task.attacker, false);
+
+            gameTask.addTasks([
+                { id: gameTask.taskAttackPlayerAnimation.name, card1: task.attacker, delay: 200 },
+                { id: gameTask.taskMove.name, card1: task.opponent.shield[0], to: global.locationTrash }
             ]);
-    }
-
-    static attackCard(player, opponent, attacker, target, zone, breach) {
-        const effectResult = effects.apply(effects.battle, player, attacker);
-        if (effectResult.stop) {
-            return effectResult;
+            return { end: true };
         }
 
-        let damage = breach ? breach : attacker.ap;
-        if (target.immuneAp && damage < target.immuneAp)
-            damage = 0;
-        target.hp -= damage;
+        return global.end(task.player.isPlayer1);
+    }
 
-        damage = target.ap;
-        if (attacker.immuneAp && attacker < target.immuneAp)
-            damage = 0;
-        attacker.hp -= damage;
+    static effectBattle(task) {
+        return effects.handleEffects(task.player, task.attacker, task.target, effects.battle);
+    }
 
-        const activeBreach = !breach && global.isCardUnit(target) && attacker.breach && target.hp < 1;
-        global.setActive(attacker, false);
+    static showFight(task) {
+        gameTask.addTasksFirst([{ id: gameTask.taskCardsToMiniCenter.name, delay: global.delay, card1: task.attacker, card2: task.target }]);
+        this.nextStep(task);
+        return { stop: true };
+    }
+
+    static fight(task) {
+        let damage = task.breach ? task.breach : task.attacker.ap;
+        if (task.target.immuneAp && damage < task.target.immuneAp)
+            damage = 0;
+        task.target.hp -= damage;
+
+        damage = task.target.ap;
+        if (task.attacker.immuneAp && task.attacker < task.target.immuneAp)
+            damage = 0;
+        task.attacker.hp -= damage;
+
+        const activeBreach = !task.breach && global.isCardUnit(task.target) && task.attacker.breach && task.target.hp < 1;
+        global.setActive(task.attacker, false);
         let tasks = [];
 
-        if (attacker.hp < 1)
-            tasks = tasks.concat(this.destroyUnit(attacker, target.hp < 1 || activeBreach));
+        if (task.attacker.hp < 1)
+            tasks = tasks.concat(global.destroyUnit(task.attacker, task.target.hp < 1 || activeBreach));
 
-        if (target.hp < 1)
-            tasks = tasks.concat(this.destroyUnit(target, false));
+        if (task.target.hp < 1)
+            tasks = tasks.concat(global.destroyUnit(task.target, false));
 
-        global.setActive(attacker, false);
+        global.setActive(task.attacker, false);
 
         if (activeBreach)
-            tasks.push({ id: gameTask.taskAttack.name, player, opponent, attacker, zone, breach: attacker.breach });
+            tasks.push({
+                id: gameTask.taskAttack.name,
+                player: task.player, opponent: task.opponent,
+                attacker: task.attacker, zone: task.zone,
+                breach: task.attacker.breach
+            });
 
-        gameTask.addTasks(global.game.tasks, tasks);
-    }
-
-    static destroyUnit(card1, avoidDelay) {
-        card1.dead = true;
-        const delayForTarget = avoidDelay ? null : global.delay;
-        return [
-            { id: gameTask.taskApplyEffect.name, card1, trigger: effects.ondestroyed },
-            { id: gameTask.taskMove.name, delay: delayForTarget, card1, to: global.locationTrash, isPlayer1: card1.isPlayer1 }
-        ];
+        gameTask.addTasks(tasks);
+        return {};
     }
 }
 

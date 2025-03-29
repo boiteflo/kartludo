@@ -43,6 +43,9 @@ class positioner {
         grid.centerMini.text.height = height - grid.centerMini.text.y - grid.border;
         grid.centerMini.text.height = Math.min(grid.centerMini.text.height, 150);
 
+        grid.player1Heart = {x: width/2, y:height};
+        grid.player2Heart = {x: width/2, y:0};
+
         return grid;
     }
 
