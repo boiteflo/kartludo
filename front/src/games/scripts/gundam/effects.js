@@ -11,6 +11,7 @@ class GameGundamEffect {
     static burst = 'burst';
     static command = 'command';
     static ondestroyed = 'ondestroyed';
+    static onRefreshField = 'onRefreshField';
     static end = 'end';
 
     static removeOneTurnEffect(cards) {
@@ -30,11 +31,10 @@ class GameGundamEffect {
             return {};
 
         const text = effectsRemainings.map(x => this.getEffectText(x)).join('<br>');
-        const delay = global.delay;
         const isShowingEffect = global.cardHighlight.find(x => x.index === card1.index);
 
         if (!isShowingEffect) {
-            global.game.tasks = [{ id: gameTask.taskCardsToMiniCenter.name, delay, card1, card2, text }]
+            global.game.tasks = [{ id: gameTask.taskCardsToMiniCenter.name, delay:true, card1, card2, text }]
                 .concat(global.game.tasks);
             return { stop: true };
         } 
@@ -155,7 +155,7 @@ class GameGundamEffect {
     static dealDamage(player, card1, card2, effect) {
         card2.hp -= effect.value;
         if (card2.hp < 1) {
-            const tasks = global.destroyUnit(card2);
+            const tasks = global.destroyUnit(card2, false);
             gameTask.addTasks(tasks);
         }
     }

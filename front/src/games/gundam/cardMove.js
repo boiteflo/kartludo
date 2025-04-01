@@ -1,0 +1,75 @@
+class cardMove {
+    
+    static spawnOrMove(game, task, player) {
+        const cardSpawn = this.move(player, task.card1, task.from, task.to);
+        //this.spawnIfNot(cardSpawn);
+        return cardSpawn;
+    }
+
+    static spawnIfNot(card) {
+        if (!card)
+            return;
+
+        if (!this.game.cards.find(x => x.index === card.index))
+            this.game.cards = this.addIn(this.game.cards, card);
+
+        const player = card.isPlayer1 ? this.game.player1 : this.game.player2;
+        if (!card.position)
+            card.position = this.clone(player.positions.deck);
+        card.zindex = 11;
+    }
+
+    static move(player, card, locationFrom, locationTo) {
+        if (!locationFrom && card && card.location)
+            locationFrom = card.location;
+
+        const from = locationFrom && locationFrom != 'pair' ? locationFrom : null;
+        const to = locationTo;
+
+        if (!card)
+            card = player[from].splice(0, 1)[0];
+        else if (from)
+            player[from] = this.removeByIndex(player[from], card);
+
+        if (!card && locationFrom === this.locationDeck)
+            this.end(player.isPlayer1);
+
+        if (!card)
+            return;
+
+        if (!card.isTemporaryCard || (card.isTemporaryCard && locationTo === this.locationField))
+            player[to] = this.addIn(player[to], card);
+
+        if (from)
+            card.position = card.position ? card.position : this.clone(player.positions[from]);
+        if (from)
+            card.location = player.positions[from].location;
+
+        card.isPlayer1 = player.isPlayer1;
+        card.active = true;
+        card.hidestat = card.location === this.locationTrash;
+        card.location = locationTo;
+
+        if (card.pair) {
+            card.pair.isPaired = false;
+            card.pair.link = false;
+            this.move(player, card.pair, locationFrom, locationTo);
+            delete (card.pair);
+            card.link = false;
+        }
+
+        const needToRefreshAllField = [this.locationHand, this.locationField].includes(locationTo);
+        if (!needToRefreshAllField) {
+            card.to = this.clone(player.positions[to]);
+            if (locationTo === this.locationTrash) {
+                card.to.height = 0;
+                card.hidestat = true;
+            }
+        }
+
+        return card;
+    }
+}
+
+
+export default cardMove;

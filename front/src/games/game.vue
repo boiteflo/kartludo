@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p h100p mask" :key="refreshG">
+    <div class="relative w100p mask" :key="refreshG" style="height:92vh">
 
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
@@ -16,36 +16,104 @@
             </div>
         </div>
 
-        <!-- Grid -->
-        <div class="hide">
-            <div v-for="i in 16" :key="'x' + i"
-                :style="{ height: game?.grid.box.height + 'px', top: getGridY(i - 1) + 'px' }"
-                class="bgYellow absolute w100p"></div>
-            <div v-for="i in 16" :key="'y' + i"
-                :style="{ width: game?.grid.box.width + 'px', left: getGridX(i - 1) + 'px' }"
-                class="bgRed absolute h100p">
-            </div>
-        </div>
-
-        <!-- field -->
+        <!-- field
         <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
-            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
+            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), bg: box.zone.endsWith('0'), fontSize1em: true, textVerticalCenter: true, 'text-center': true,
             bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
         }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
             @drop="onDrop($event, box)">
             {{ box.text }}
         </div>
+         -->
 
-        <!-- field centerMini -->
-        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card1.x, game.grid.centerMini.card1.y,
-            game.grid.centerMini.card1.width, game.grid.centerMini.card1.height)">
-        </div>
-        <div v-if="game" class="bgRed absolute hide" :style="getFieldStyle(game.grid.centerMini.card2.x, game.grid.centerMini.card2.y,
-            game.grid.centerMini.card2.width, game.grid.centerMini.card2.height)">
-        </div>
-        <div v-if="game" class="bgYellow absolute hide" :style="getFieldStyle(game.grid.centerMini.text.x, game.grid.centerMini.text.y,
-            game.grid.centerMini.text.width, game.grid.centerMini.text.height)">
-        </div>
+        <span v-if="game">
+            <!-- Drag and drop field-->
+            <div class="absolute bg2" :style="getFieldStyleObj(game.grid.halfPlayer1)">
+            </div>
+            <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)">
+            </div>
+
+            <img class="w100p, absolute" :style="{ ...getFieldStyleObj(game.grid.centerZone), 'object-fit': 'cover' }"
+                :src="require('@/assets/Gundam/centerZone.png')" />
+
+            <!-- Player 1-->
+             {{  game.player1.deckIcon }}
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Base), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player1.baseIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Shield), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player1.shieldIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Deck), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player1.deckIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Trash), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player1.trashIcon)" />
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player1Base.text)">
+                Base {{ game.player1.deckIcon }}
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player1Shield.text)">
+                Shield : {{ game.player1.shield.length }}
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player1Deck.text)">
+                Deck : {{ game.player1.deck.length }}
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player1Trash.text)">
+                Trash : {{ game.player1.trash.length }}
+            </div>
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
+            </div>
+
+            <!-- Player 2-->
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Base), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player2.baseIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Shield), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player2.shieldIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Deck), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player2.deckIcon)" />
+            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Trash), 'object-fit': 'contain' }"
+                :src="require('@/assets/Gundam/' + game.player2.trashIcon)" />
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player2Base.text)">
+                Base
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player2Shield.text)">
+                Shield : {{ game.player2.shield.length }}
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player2Deck.text)">
+                Deck : {{ game.player2.deck.length }}
+            </div>
+            <div class="absolute fontSize1em text-center" :style="getFieldStyleObj(game.grid.player2Trash.text)">
+                Trash : {{ game.player2.trash.length }}
+            </div>
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player2Field)">
+            </div>
+
+            <!-- Highlight and TextZone-->
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardCenter)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardLeft)">
+            </div>
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.highlightCardRight)">
+            </div>
+
+            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.rightButton)">
+                <v-btn target="_blank"
+                    :class="{ bg2: true, shine: !freeze, fontSize1em: true, w100p: true, h100p: true }"
+                    @click="nextTurn" style="min-width:0px;">
+                    End Turn
+                </v-btn>
+            </div>
+
+            <div class="absolute" :style="getFieldStyleObj(game.grid.leftButton)">
+                <v-btn target="_blank" :class="{ bg: true, fontSize1em: true, w100p: true, h100p: true }"
+                    @click="nextTurn" style="min-width:0px;">
+                    Logs
+                </v-btn>
+            </div>
+        </span>
 
         <!-- textEffect -->
         <div v-if="game && game.textEffect" id="textEffect"
@@ -84,8 +152,8 @@
         </div>
 
         <!-- End turn button -->
-        <div v-if="game">
-            <div class="bgYellow absolute cirlce10px"
+        <div v-if="game && false">
+            <div class="bgYellow absolute circle10px"
                 :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
 
                 <v-btn target="_blank" text
@@ -156,12 +224,11 @@ body {
 
 <script>
 import helperAnimation from '../helpers/helperAnimation';
-import gameManager from './gameManager';
-import gundamManager from './gundam/manager';
-import positioner from './positioner';
+import gameGundam from './gundam/game';
 import gameCard from './card';
 import deck from './deck';
 import deckList from './deckList';
+import cards from '../data/gundamCards.json';
 
 export default {
     name: 'game-vue',
@@ -180,25 +247,17 @@ export default {
         decklistPlayer1: null,
         decklistPlayer2: null,
         decklistShow: null,
-        deckList: [
-            { name: 'Gundam', card1: 'ST01-001', card2: 'ST01-010', card3: 'ST01-015', list: '4xST01-001,4xST01-002,4xST01-005,4xST01-010,4xST01-012,4xST01-013,4xST01-015,4xGD01-004,4xGD01-008,4xGD01-009,4xGD01-013,4xGD01-015,4xGD01-099,4xGD01-124' },
-            { name: 'Mercury', card1: 'GD01-070', card2: 'ST01-011', card3: 'GD01-117', list: '5xST01-007,5xST01-008,5xST01-011,5xST01-016,5xGD01-070,5xGD01-075,5xGD01-076,5xGD01-097,5xGD01-117' },
-            { name: 'Zeon', card1: 'GD01-026', card2: 'ST03-011', card3: 'ST03-016', list: '7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105' },
-            { name: 'Unicorn', card1: 'GD01-005', card2: 'GD01-088', card3: 'GD01-100', list: '7xGD01-005,8xGD01-011,7xGD01-016,7xGD01-018,7xGD01-088,7xGD01-089,7xGD01-100' },
-            { name: 'Seed', card1: 'ST04-001', card2: 'ST04-010', card3: 'ST04-015', list: '4xGD01-072, 4xST04-001,4xST04-002,4xST04-005,4xST04-010,5xST04-013,5xST04-015,4xGD01-068,4xGD01-077,4xGD01-081,4xGD01-118,4xGD01-120' },
-            { name: 'Wing', card1: 'ST02-001', card2: 'ST02-010', card3: 'GD01-028', list: '4xGD01-028,4xGD01-034,4xGD01-040,4xGD01-041,4xGD01-091,3xGD01-107,4xST02-001,4xST02-002,4xST02-005,4xST02-010,4xST02-012,4xST02-013,3xST02-015' }]
+        deckList: []
     }),
     mounted() {
         document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
             this.refreshG++;
         });
-        this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
-        this.cardList = gundamManager.getCards();
-        //this.decklistShow = this.deckList[0];
-
-        this.decklistPlayer1 = this.deckList[0].list;
-        this.decklistPlayer2 = this.deckList[0].list;
+        //this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
+        this.cardList = cards.cards;
+        this.decklistPlayer1 = cards.decklist[3].list;
+        this.decklistPlayer2 = cards.decklist[3].list;
         this.start();
     },
     methods: {
@@ -215,18 +274,19 @@ export default {
             this.decklistShow = null;
         },
         start() {
-            this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, this.decklistPlayer1, this.decklistPlayer2);
+            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
+            // this.game = gameManager.createGame(gundamManager, this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, this.decklistPlayer1, this.decklistPlayer2);
             this.refreshGame();
         },
         nextTurn() {
             if (this.freeze)
                 return;
-            this.game = gameManager.nextTurn(this.game);
+            this.game = gameGundam.nextTurn(this.game);
             this.refreshGame();
         },
         continue() {
             this.freeze = false;
-            this.game = gameManager.continue(this.game);
+            this.game = gameGundam.continue(this.game);
             if (this.game.popup) {
                 this.freeze = true;
                 return;
@@ -241,17 +301,17 @@ export default {
             if (this.freeze)
                 return;
             this.freeze = true;
-            this.game = gameManager.playCard(this.game, card1, card2, drop);
+            this.game = gameGundam.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
         selectChoice(choice) {
             this.freeze = true;
-            this.game = gameManager.selectChoice(this.game, choice);
+            this.game = gameGundam.selectChoice(this.game, choice);
             this.refreshGame();
         },
         selectChoiceCard(card) {
             this.freeze = true;
-            this.game = gameManager.selectChoiceCard(this.game, card);
+            this.game = gameGundam.selectChoiceCard(this.game, card);
             this.refreshGame();
         },
         refreshGame() {
@@ -266,14 +326,15 @@ export default {
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
         animTextEffect() {
-            let animationTime = gundamManager.getAnimDuration();
+            let animationTime = gameGundam.delay;
             helperAnimation.animateMultiple([{ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false }], animationTime);
         },
         beginAnimation() {
-            let animationTime = gundamManager.getAnimDuration();
+            let animationTime = gameGundam.delay;
             const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : gundamManager.getAnimDuration();
+            console.log(JSON.stringify(cardsToAnimate));
+            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : gameGundam.delay;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
 
@@ -334,7 +395,7 @@ export default {
                 };
 
             const animations = [{ id: 'cardCenter', from: this.cardCenter.position, to: this.cardCenter.to, isIncrement: false }];
-            helperAnimation.animateMultiple(animations, gundamManager.getAnimDuration());
+            helperAnimation.animateMultiple(animations, gameGundam.delay);
             setTimeout(() => {
                 this.cardCenter.position = this.cardCenter.to;
                 delete (this.cardCenter.to);

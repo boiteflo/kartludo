@@ -141,49 +141,7 @@ class positioner {
         return { x, y, width: desiredWidth, height: desiredHeight };
     }
 
-    static getPositionHandWithRotation(player, card, index, total) {
-        const cardWidth = global.grid.card.width * 0.75;
-        const cardWidthHalf = cardWidth / 2;
-        const sens = index < total / 2 ? -1 : 1;
-        let factorRotation = 0;
-        let mid = total / 2;
-        let x = 0;
-
-        if (this.isPair(total)) {
-            const midX = global.grid.hand.width / 2 - cardWidthHalf + (cardWidthHalf * sens);
-            mid = index < total / 2 ? Math.floor(total / 2) - 1 : Math.ceil(total / 2);
-            x = midX + (Math.abs(mid - index) * cardWidth * sens);
-        } else {
-            const midX = global.grid.hand.width / 2 - cardWidthHalf;
-            x = midX + (Math.abs(mid - index) * cardWidth * sens);
-        }
-
-        const playerSens = player.isPlayer1 ? 1 : -1;
-        factorRotation = index - mid;
-        const rotation = playerSens * Math.round(20 * (factorRotation / mid));
-        const heightIncruise = playerSens * (cardWidth / 4) * Math.abs(mid - index);
-
-        card.ap = index;
-        card.hp = mid;
-
-        const result = {
-            x: player.positions.hand.x + x,
-            y: player.positions.hand.y + heightIncruise + 20,
-            width: global.grid.card.width,
-            height: global.grid.card.height,
-            rotation
-        };
-        return result;
-    }
-
     static isPair(x) { return x % 2 == 0 }
-
-    static getCenter(totalWidth, elementWidth, total, index) {
-        const halfWidth = totalWidth / 2;
-        const half = total / 2;
-        const indexCenter = half - index;
-        return halfWidth - indexCenter * elementWidth;
-    }
 
     static getWrapPosition(position, cardSize, total, index, degree, wrapCut) {
         if (total < wrapCut || position.height < cardSize.height * 2)
@@ -256,6 +214,51 @@ class positioner {
         return { width: widthDesired, height: heightDesired, wrapCut };
     }
 }
+
+/*
+
+    static getPositionHandWithRotation(player, card, index, total) {
+        const cardWidth = global.grid.card.width * 0.75;
+        const cardWidthHalf = cardWidth / 2;
+        const sens = index < total / 2 ? -1 : 1;
+        let factorRotation = 0;
+        let mid = total / 2;
+        let x = 0;
+
+        if (this.isPair(total)) {
+            const midX = global.grid.hand.width / 2 - cardWidthHalf + (cardWidthHalf * sens);
+            mid = index < total / 2 ? Math.floor(total / 2) - 1 : Math.ceil(total / 2);
+            x = midX + (Math.abs(mid - index) * cardWidth * sens);
+        } else {
+            const midX = global.grid.hand.width / 2 - cardWidthHalf;
+            x = midX + (Math.abs(mid - index) * cardWidth * sens);
+        }
+
+        const playerSens = player.isPlayer1 ? 1 : -1;
+        factorRotation = index - mid;
+        const rotation = playerSens * Math.round(20 * (factorRotation / mid));
+        const heightIncruise = playerSens * (cardWidth / 4) * Math.abs(mid - index);
+
+        card.ap = index;
+        card.hp = mid;
+
+        const result = {
+            x: player.positions.hand.x + x,
+            y: player.positions.hand.y + heightIncruise + 20,
+            width: global.grid.card.width,
+            height: global.grid.card.height,
+            rotation
+        };
+        return result;
+    }
+
+    static getCenter(totalWidth, elementWidth, total, index) {
+        const halfWidth = totalWidth / 2;
+        const half = total / 2;
+        const indexCenter = half - index;
+        return halfWidth - indexCenter * elementWidth;
+    }
+*/
 
 
 export default positioner;

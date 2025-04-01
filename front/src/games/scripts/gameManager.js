@@ -20,7 +20,7 @@ class gameManager {
         const playerId = global.isPlayer1 ? '1' : '2';
 
         gameTask.addTasks([
-            { id: gameTask.taskTitleShow.name, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: 1200 },
+            { id: gameTask.taskTitleShow.name, value: 'New turn for player ' + playerId, isPlayer1: global.isPlayer1, delay: true },
             { id: gameTask.taskMoveAndShowCenter.name, isPlayer1: global.isPlayer1, from: global.locationDeck, to: global.locationHand }
         ]);
 
@@ -54,12 +54,18 @@ class gameManager {
     }
 
     static selectChoiceCard(game, card) {
-        game.manager.selectChoiceCard(game, card);
+        game.cardChoice = card;
         return game;
     }
 
     static selectChoice(game, choice){
-        game.manager.selectChoice(game, choice);
+        game.choice = choice;
+        if (choice.id && choice.id.startsWith('muligan')) {
+            global.deletePopup();
+
+            if (choice.id == 'muligan')
+                global.game.manager.doMuligan(game, game.player1);
+        }
         return game;
     }
 }

@@ -12,27 +12,6 @@ class gameTask {
         return { stop: true };
     }
 
-    static alreadyInclude(list, task) {
-        return list.find(x => this.isEqual(x, task));
-    }
-
-    static isEqual(task1, task2) {
-        const result = task1.id === task2.id
-            && task1.isPlayer1 === task2.isPlayer1
-            && task1.value === task2.value;
-        if (result === false) return false;
-        if (task1.card && !task2.card) return false;
-        else if (!task1.card && task2.card) return false;
-        else if (task1.card && task2.card && task1.card.index === task2.card.index) return false;
-        return result;
-    }
-
-    static removeDelay(list, taskid) {
-        const task = [...list].reverse().find(t => t.id === taskid && t.delay);
-        if (task)
-            delete (task.delay);
-    }
-
     static handleTasks(game) {
         if (game.end) {
             game.tasks = [];
@@ -72,6 +51,7 @@ class gameTask {
     }
 
     static taskEndRefresh(game) {
+        game.manager.endRefresh();
         global.needTaskEndRefresh = false;
         global.cardHighlight = [];
         game.refreshOnlyTextEffect = false;
@@ -81,6 +61,8 @@ class gameTask {
         game.refresh = true;
         game.taskAttack = null;
     }
+
+    /* ----------------------------- Tasks  */
 
     static taskRefreshField(game, task, player) {
         game.manager.refreshFieldAndHand(player);
@@ -122,7 +104,7 @@ class gameTask {
 
     static taskMoveAndShowCenter(game, task, player) {
         const card = global.spawnOrMove(player, task.card1, task.from, task.to);
-        const taskCenter = { id: this.taskCardToCenter.name, card1: card, isPlayer1: task.isPlayer1, delay: global.delay };
+        const taskCenter = { id: this.taskCardToCenter.name, card1: card, isPlayer1: task.isPlayer1, delay: true };
         global.game.tasks = global.addListInArrayAfterIndex(global.game.tasks, 1, [taskCenter]);
     }
 

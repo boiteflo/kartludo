@@ -13,7 +13,7 @@
             <img class="w100p shineParentHover" style="object-fit: cover;"
                 :src="require('@/assets/' + folder + deck.card1 + '.webp')">
         </div>
-        <div id="title" class="bgWhite bgYellowParentHover absolute text-center textVerticalCenter cirlce15px"
+        <div id="title" class="bgWhite bgYellowParentHover absolute text-center textVerticalCenter circle15px"
             style="width:40%; top:65%; left:30%;">
             {{deck.name}}
         </div>

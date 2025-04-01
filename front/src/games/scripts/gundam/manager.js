@@ -1,4 +1,4 @@
-import cards from '../../data/gundamCards.json';
+import cards from '../../../data/gundamCards.json';
 import global from '../global';
 import positioner from '../positioner';
 import cardHandler from './cardHandler';
@@ -9,18 +9,18 @@ class manager {
     static getCards() { return cards.cards; }
     static getDeckLenth() { return 50; }
     static getAnimDuration() { return 500; }
-    static getHandStartLength() { return 5; }
+    static getHandStartLength() { return 15; }
 
     static setup(game) {
         game.player1 = {
             ...game.player1,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 8, resourcesAvailable: 0, resourcesEx: 0,
         };
         game.player2 = {
             ...game.player2,
             base: [], shield: [], pair: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 8, resourcesAvailable: 0, resourcesEx: 0,
         };
 
         /*
@@ -102,6 +102,11 @@ class manager {
         gameTask.addTasks(tasks);
 
     }
+    
+    static endRefresh(){
+        /*let player
+        onRefreshField*/
+    }    
 
     static refreshFieldAndHand(player) {
         positioner.refresh(player.hand, player.positions.hand, false, 7);
@@ -129,21 +134,6 @@ class manager {
 
     static attack(task) {
         return cardHandler.attack(task);
-    }
-
-    static selectChoiceCard(game, card) {
-        return cardHandler.selectChoiceCard(game, card);
-    }
-
-    static selectChoice(game, choice) {
-        if (choice.id && choice.id.startsWith('muligan')) {
-            global.deletePopup();
-
-            if (choice.id == 'muligan')
-                this.doMuligan(game, game.player1);
-        }
-
-        cardHandler.selectChoice(game, choice);
     }
 
     static doMuligan(game, player) {

@@ -1,5 +1,49 @@
 {
     "files": "EXB-001,EXBP-001,GD01-004,GD01-004_p1,GD01-005,GD01-008,GD01-009,GD01-011,GD01-013,GD01-015,GD01-016,GD01-018,GD01-026,GD01-026_p1,GD01-028,GD01-030,GD01-031,GD01-034,GD01-040,GD01-041,GD01-068,GD01-070,GD01-070_p1,GD01-072,GD01-075,GD01-076,GD01-077,GD01-081,GD01-088,GD01-088_p1,GD01-089,GD01-091,GD01-097,GD01-099,GD01-100,GD01-100_p1,GD01-105,GD01-107,GD01-107_p1,GD01-117,GD01-118,GD01-118_p1,GD01-120,GD01-124,R-001,R-002,ST01-001,ST01-001_p1,ST01-002,ST01-005,ST01-007,ST01-008,ST01-010,ST01-011,ST01-011_p1,ST01-012,ST01-013,ST01-015,ST01-016,ST02-001,ST02-001_p1,ST02-002,ST02-005,ST02-010,ST02-012,ST02-013,ST02-015,ST03-007,ST03-008,ST03-011,ST03-011_p1,ST03-016,ST04-001,ST04-001_p1,ST04-002,ST04-005,ST04-010,ST04-013,ST04-015,T-001,T-002,T-003,T-006",
+    "decklist": [
+        {
+            "name": "Gundam",
+            "card1": "ST01-001",
+            "card2": "ST01-010",
+            "card3": "ST01-015",
+            "list": "4xST01-001,4xST01-002,4xST01-005,4xST01-010,4xST01-012,4xST01-013,4xST01-015,4xGD01-004,4xGD01-008,4xGD01-009,4xGD01-013,4xGD01-015,4xGD01-099,4xGD01-124"
+        },
+        {
+            "name": "Mercury",
+            "card1": "GD01-070",
+            "card2": "ST01-011",
+            "card3": "GD01-117",
+            "list": "5xST01-007,5xST01-008,5xST01-011,5xST01-016,5xGD01-070,5xGD01-075,5xGD01-076,5xGD01-097,5xGD01-117"
+        },
+        {
+            "name": "Zeon",
+            "card1": "GD01-026",
+            "card2": "ST03-011",
+            "card3": "ST03-016",
+            "list": "7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105"
+        },
+        {
+            "name": "Unicorn",
+            "card1": "GD01-005",
+            "card2": "GD01-088",
+            "card3": "GD01-100",
+            "list": "7xGD01-005,8xGD01-011,7xGD01-016,7xGD01-018,7xGD01-088,7xGD01-089,7xGD01-100"
+        },
+        {
+            "name": "Seed",
+            "card1": "ST04-001",
+            "card2": "ST04-010",
+            "card3": "ST04-015",
+            "list": "4xGD01-072,4xST04-001,4xST04-002,4xST04-005,4xST04-010,5xST04-013,5xST04-015,4xGD01-068,4xGD01-077,4xGD01-081,4xGD01-118,4xGD01-120"
+        },
+        {
+            "name": "Wing",
+            "card1": "ST02-001",
+            "card2": "ST02-010",
+            "card3": "GD01-028",
+            "list": "4xGD01-028,4xGD01-034,4xGD01-040,4xGD01-041,4xGD01-091,3xGD01-107,4xST02-001,4xST02-002,4xST02-005,4xST02-010,4xST02-012,4xST02-013,3xST02-015"
+        }
+    ],
     "cards": [
         {
             "id": "R-001",
@@ -113,7 +157,7 @@
                         {
                             "trigger": "ondestroyed",
                             "id": "discard",
-                            "value":1
+                            "value": 1
                         }
                     ]
                 }
@@ -137,12 +181,12 @@
             "attribute": "(Earth Federation) (White Base Team)",
             "link": "",
             "effectText": "xxx",
-            "effects": [                
+            "effects": [
                 {
                     "trigger": "onplay",
                     "target": "opponentUnitRested",
                     "id": "dealDamage",
-                    "value":1
+                    "value": 1
                 }
             ],
             "pilot": "xxx",
@@ -168,7 +212,7 @@
                 {
                     "trigger": "onplay",
                     "target": "playerUnitWithAttribute",
-                    "targetAttribute":"(White Base Team)",
+                    "targetAttribute": "(White Base Team)",
                     "id": "gainThisTurn",
                     "effect2": "highManeuver"
                 }

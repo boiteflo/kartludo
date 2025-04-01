@@ -60,14 +60,6 @@ class cardHandler {
     static attack(task) {
         return cardAttack.attack(task);
     }
-
-    static selectChoiceCard(game, card) {
-        game.cardChoice = card;
-    }
-
-    static selectChoice(game, choice) {
-        game.choice = choice;
-    }
 }
 
 

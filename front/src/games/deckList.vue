@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import positioner from './positioner';
+import positioner from './scripts/positioner';
 import decklistCard from './deckListCard.vue';
 import deck from './deck';
 

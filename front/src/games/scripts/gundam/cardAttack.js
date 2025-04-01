@@ -109,7 +109,7 @@ class cardAttack {
             global.setActive(task.attacker, false);
 
             gameTask.addTasks([
-                { id: gameTask.taskAttackPlayerAnimation.name, card1: task.attacker, delay: 200 },
+                { id: gameTask.taskAttackPlayerAnimation.name, card1: task.attacker, delay: true },
                 { id: gameTask.taskMove.name, card1: task.opponent.shield[0], to: global.locationTrash }
             ]);
             return { end: true };
@@ -123,7 +123,7 @@ class cardAttack {
     }
 
     static showFight(task) {
-        gameTask.addTasksFirst([{ id: gameTask.taskCardsToMiniCenter.name, delay: global.delay, card1: task.attacker, card2: task.target }]);
+        gameTask.addTasksFirst([{ id: gameTask.taskCardsToMiniCenter.name, delay: true, card1: task.attacker, card2: task.target }]);
         this.nextStep(task);
         return { stop: true };
     }
@@ -144,10 +144,10 @@ class cardAttack {
         let tasks = [];
 
         if (task.attacker.hp < 1)
-            tasks = tasks.concat(global.destroyUnit(task.attacker, task.target.hp < 1 || activeBreach));
+            tasks = tasks.concat(global.destroyUnit(task.attacker, task.target.hp > 0 && !activeBreach));
 
         if (task.target.hp < 1)
-            tasks = tasks.concat(global.destroyUnit(task.target, false));
+            tasks = tasks.concat(global.destroyUnit(task.target));
 
         global.setActive(task.attacker, false);
 

@@ -22,26 +22,22 @@ class global {
     static phaseDamage = 7;
     static phaseEnd = 8;
 
-    static locationEmpty = 'locationEmpty';
-    static locationTrash = 'locationTrash';
-    static locationDeck = 'locationDeck';
-    static locationShield = 'locationShield';
-    static locationHand = 'locationHand';
-    static locationField = 'locationField';
-    static locationBase = 'locationBase';
-    static locationResource = 'locationResource';
-    static locationPair = 'locationPair';
+    static locationEmpty = 'empty';
+    static locationTrash = 'trash';
+    static locationDeck = 'deck';
+    static locationShield = 'shield';
+    static locationHand = 'hand';
+    static locationField = 'field';
+    static locationBase = 'base';
+    static locationResource = 'resource';
+    static locationPair = 'pair';
 
-    static getLocationArrayProperty(location) {
-        if (location == this.locationEmpty) return 'empty';
-        else if (location == this.locationDeck) return 'deck';
-        else if (location == this.locationShield) return 'shield';
-        else if (location == this.locationHand) return 'hand';
-        else if (location == this.locationField) return 'field';
-        else if (location == this.locationBase) return 'base';
-        else if (location == this.locationResource) return 'resource';
-        else if (location == this.locationPair) return null;
-        return 'trash';
+    static createCard(id) {
+        const card = this.clone(this.cards.find(x => x.id === id));
+        card.index = this.getNextIndex();
+        card.hpMax = card.hp;
+        card.effects = !card.effects ? [] : card.effects.map(fx=> this.clone(fx));
+        return card;
     }
 
     static spawnOrMove(player, card, locationFrom, locationTo) {
@@ -67,8 +63,8 @@ class global {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 
-        const from = global.getLocationArrayProperty(locationFrom);
-        const to = global.getLocationArrayProperty(locationTo);
+        const from = locationFrom && locationFrom!= 'pair' ? locationFrom: null;
+        const to = locationTo;
 
         if (!card)
             card = player[from].splice(0, 1)[0];
@@ -123,7 +119,7 @@ class global {
         if (effectResult.stop)
             return effectResult;
 
-        const from = global.getLocationArrayProperty(cardPilot.location);
+        const from = cardPilot.location;
         player[from] = global.removeByIndex(player[from], cardPilot);
         cardUnit.pair = cardPilot;
         cardPilot.selectable = false;
@@ -152,12 +148,11 @@ class global {
         }
     }
 
-    static destroyUnit(card1, avoidDelay) {
+    static destroyUnit(card1, delay =true) {
         card1.dead = true;
-        const delayForTarget = avoidDelay ? null : global.delay;
         return [
             { id: gameTask.taskApplyEffect.name, card1, trigger: effects.ondestroyed },
-            { id: gameTask.taskMove.name, delay: delayForTarget, card1, to: this.locationTrash, isPlayer1: card1.isPlayer1 }
+            { id: gameTask.taskMove.name, delay, card1, to: this.locationTrash, isPlayer1: card1.isPlayer1 }
         ];
     }
 
@@ -166,14 +161,6 @@ class global {
         const message = isPlayer1 ? 'Defeat' : 'Victory';
         alert(message);
         return {end:true};
-    }
-
-    static createCard(id) {
-        const card = this.clone(this.cards.find(x => x.id === id));
-        card.index = this.getNextIndex();
-        card.hpMax = card.hp;
-        card.effects = !card.effects ? [] : card.effects.map(fx=> this.clone(fx));
-        return card;
     }
 
     static getNextIndex() {
