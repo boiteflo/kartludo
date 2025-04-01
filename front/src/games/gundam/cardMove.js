@@ -2,7 +2,7 @@ class cardMove {
     
     static spawnOrMove(game, task, player) {
         const cardSpawn = this.move(player, task.card1, task.from, task.to);
-        //this.spawnIfNot(cardSpawn);
+        this.spawnIfNot(cardSpawn);
         return cardSpawn;
     }
 

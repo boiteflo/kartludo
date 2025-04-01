@@ -9,11 +9,12 @@ class setup {
 
         const handStartLength = 5;
         for (let i = 0; i < handStartLength; i++) {
-            this.addTasks({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
-            this.addTasks({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: false });
+            this.addTasks([
+                { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true },
+                { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: false }]);
         }
 
-        this.addTasks({ id: this.mulligan.name });
+        this.addTasks([{ id: this.mulligan.name }]);
     }
 
     static createPlayer(game, isPlayer1, decklist) {
@@ -21,13 +22,13 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            positions : {
-                deck : isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
-                shield : isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
-                hand : isPlayer1 ? game.grid.player1Hand : game.grid.player2Hand,
-                field : isPlayer1 ? game.grid.player1Field : game.grid.player2Field,
-                trash : isPlayer1 ? game.grid.player1Trash : game.grid.player2Trash,
-                base : isPlayer1 ? game.grid.player1Base : game.grid.player2Base,
+            positions: {
+                deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
+                shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
+                hand: isPlayer1 ? game.grid.player1Hand : game.grid.player2Hand,
+                field: isPlayer1 ? game.grid.player1Field : game.grid.player2Field,
+                trash: isPlayer1 ? game.grid.player1Trash : game.grid.player2Trash,
+                base: isPlayer1 ? game.grid.player1Base : game.grid.player2Base,
                 empty: {}
             }
         };

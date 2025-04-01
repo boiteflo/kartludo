@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask" :key="refreshG" style="height:92vh">
+    <div class="relative w100p mask h100p" :key="refreshG">
 
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
@@ -219,6 +219,7 @@ body {
 
 body {
     position: relative;
+    height: 92vh;
 }
 </style>
 
@@ -333,7 +334,6 @@ export default {
             let animationTime = gameGundam.delay;
             const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            console.log(JSON.stringify(cardsToAnimate));
             animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : gameGundam.delay;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);

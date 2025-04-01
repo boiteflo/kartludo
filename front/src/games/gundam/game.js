@@ -9,7 +9,7 @@ import array from './array';
 class game {
     static game = null;
     static index = 1;
-    static delay;
+    static delay = 500;
     static needTaskEndRefresh;
     static cardHighlight = [];
 
