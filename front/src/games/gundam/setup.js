@@ -2,19 +2,19 @@
 
 class setup {
 
+    static handStartLength=5;
+    static shieldStartLength=6;
+
     static setupGame(game) {
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
 
-        const handStartLength = 5;
-        for (let i = 0; i < handStartLength; i++) {
+        for (let i = 0; i < this.handStartLength; i++) {
             this.addTasks([
                 { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true },
                 { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: false }]);
         }
-
-        this.addTasks([{ id: this.mulligan.name }]);
     }
 
     static createPlayer(game, isPlayer1, decklist) {
@@ -77,10 +77,41 @@ class setup {
         return this.index;
     }
 
-    static mulligan() {
-        console.log('mulligan ?');
+    static mulligan(game, task) {
+        task.choice = {};
+        if (!task.choice) {
+            return this.addTaskFirst({ id: this.popup.name, task, text: 'Do you want to do a mulligan ?', choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }] });
+        } else {
+            let tasks = [];
+            if (task.choice.id === 'yes') {
+                game.player1.deck = this.sortRandom(game.player1.deck.concat(game.player1.hand));
+                const removeIds = game.player1.hand.map(x => x.index);
+                game.cards = game.cards.filter(x => !removeIds.includes(x.index));
+                game.player1.hand = [];
+
+                for (let i = 0; i < this.handStartLength; i++) 
+                    tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
+            }
+            
+            tasks = tasks.concat(this.addShielsAndBase(game));
+            tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
+            this.addTasks(tasks);
+        }
+    }
+
+    static addShielsAndBase(game){
+        let tasks = [];
+        
+        for (let i = 0; i < this.shieldStartLength; i++) {
+            tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: true });
+            tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
+        }
+
+        game.player1.base = [this.createCard('EXB-001')];
+        game.player2.base = [this.createCard('EXB-001')];
+
+        return tasks;
     }
 }
-
 
 export default setup;

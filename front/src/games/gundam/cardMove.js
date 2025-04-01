@@ -1,9 +1,13 @@
 class cardMove {
     
     static spawnOrMove(game, task, player) {
-        const cardSpawn = this.move(player, task.card1, task.from, task.to);
+        const cardSpawn = this.moveCard(player, task.card1, task.from, task.to);
         this.spawnIfNot(cardSpawn);
         return cardSpawn;
+    }
+    
+    static move(game, task, player) {
+        return this.moveCard(player, task.card1, task.from, task.to);
     }
 
     static spawnIfNot(card) {
@@ -19,7 +23,7 @@ class cardMove {
         card.zindex = 11;
     }
 
-    static move(player, card, locationFrom, locationTo) {
+    static moveCard(player, card, locationFrom, locationTo) {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 

@@ -21,7 +21,9 @@ class tasks {
             const opponent = isPlayer1 ? game.player2 : game.player1;
 
             let tasksString = game.tasks.map(x => x.id).join(', ');
-            const result = {}; this[task.id](game, task, player, opponent);
+            if(!this[task.id])
+                throw new Error(`Can't handle this tasks : ${JSON.stringify(task)}`);
+            const result = this[task.id](game, task, player, opponent);
             tasksString = game.tasks.map(x => x.id).join(', ');
 
             if (result && result.stop)

@@ -1,9 +1,12 @@
-import setup from './setup';
+
 import positioner from './positioner';
 import cardMove from './cardMove';
 import refresh from './refresh';
+import setup from './setup';
+import popup from './popup';
 import tasks from './tasks';
 import array from './array';
+import turn from './turn';
 
 /* eslint-disable no-unused-vars */
 class game {
@@ -12,34 +15,43 @@ class game {
     static delay = 500;
     static needTaskEndRefresh;
     static cardHighlight = [];
+    static isStart;
 
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2) {
         this.cards = cards.cards;
-        this.game = {cards:[], tasks:[{id:'setupGame'}], cardList: cards.cards, decklistPlayer1, decklistPlayer2};
-        this.addFunction([tasks, array, setup, positioner, refresh, cardMove], this);
-        this.game.grid=this.createGrid(width, height);
-        return this.continue(this.game);
+        this.game = { cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, decklistPlayer1, decklistPlayer2 };
+        this.addFunction([tasks, array, popup, setup, positioner, turn, refresh, cardMove], this);
+        this.game.grid = this.createGrid(width, height);
+        this.continue(this.game);
+        this.isStart = true;
+        return this.game;
     }
 
-    static continue(game){
-        // this.endAnimation(game);
+    static continue(game) {
+        if (this.isStart) {
+            this.addTaskFirst({ id: this.mulligan.name });
+            this.isStart = false;
+        }
+        this.endAnimation(game);
         return this.handleTasks(game);
     }
 
-    static playCard(game, card1, card2, drop){
-        
+    static playCard(game, card1, card2, drop) {
+        return game;
     }
 
-    static selectChoice(game, choice){
-        
+    static selectChoice(game, choice) {
+        game.popup.task.choice = choice;
+        return game;
     }
 
-    static selectChoiceCard(game, card){
-        
+    static selectChoiceCard(game, card) {
+        game.popup.task.cardChoice = card;
+        return game;
     }
 
-    static nextTurn(game, card1, card2, drop){
-        
+    static endTurn(game, card1, card2, drop) {
+        return game;
     }
 
 
@@ -130,15 +142,6 @@ class game {
     }
         */
 
-
-    static deletePopup() {
-        delete (this.game.popup);
-        delete (this.game.choice);
-        delete (this.game.actionPlayer);
-        delete (this.game.actionOpponent);
-        delete (this.game.cardChoice);
-    }
-
     // Card Type
     static isCardUnit(card) { return card.type?.includes(0); }
     static isCardPilot(card) { return card.type?.includes(1); }
@@ -162,13 +165,16 @@ class game {
         cla.forEach(c => {
             Object.getOwnPropertyNames(c).forEach(method => {
                 if (!ignore.includes(method))
-                    obj[method] = c[method];
+                    if (obj[method]) 
+                        throw new Error(`cette fonction existe deja : ${c.name}.${method}`)
+                    else
+                        obj[method] = c[method];
             });
         });
     }
-    
 
-    static test(message){
+
+    static test(message) {
         alert(message);
     }
 }

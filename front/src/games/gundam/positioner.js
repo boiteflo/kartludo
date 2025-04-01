@@ -29,7 +29,8 @@ class positioner {
         };
         grid.centerZone.heightQuarter = grid.centerZone.height / 4;
 
-        let width = (grid.width - 100 - (10 * grid.border)) / 8;
+        const gundamHead = grid.width * 0.04; // > 500 ? 100 : 50;
+        let width = (grid.width - gundamHead - (10 * grid.border)) / 8;
         const textHeight = grid.border * 4;
         const iconHeight = grid.centerZone.heightQuarter * 2 - textHeight;
 
@@ -96,9 +97,9 @@ class positioner {
         };
 
         // Buttons
-        width = ((grid.width - 100) / 4) - (2 * grid.border2);
+        width = ((grid.width) / 4) - grid.border2;
         let height = grid.centerZone.heightQuarter - grid.border2;
-        let y = grid.centerZone.y + grid.border;
+        let y = grid.centerZone.y;
         grid.rightButton = {
             width, height, y, x: grid.width - width - grid.border2,
         };
@@ -146,7 +147,8 @@ class positioner {
     }
 
     static getDeckX(grid, width, index, isPlayer1) {
-        let value = 55 + (index * (width + grid.border));
+        const gundamSize = width > 500 ? 55 : 25;
+        let value = gundamSize + (index * (width + grid.border));
         value = isPlayer1 ? value : -1 * value - width;
         return (grid.width / 2) + value;
     }
