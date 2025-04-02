@@ -5,15 +5,13 @@ class refresh {
         this.refreshPlayerField(player.field, player.positions.field, false, 3);
         this.refreshPlayerField(player.base, player.positions.base, true);
         
-        /*
         const cardsToRemoveIndex = player.trash.filter(x => !x.to).map(x => x.index);
-        global.game.cards = global.game.cards.filter(x => !cardsToRemoveIndex.includes(x.index));
-        */
+        game.cards = game.cards.filter(x => !cardsToRemoveIndex.includes(x.index));
 
-        // this.setSelectable(player);
+        this.setSelectable(game, player);
 
         player.resource = player.resourcesAvailable + '/' + player.resourcesMax;
-        player.baseIcon = player.base.length > 0 ? 'cards/' + player.base[0].id + '.webp' : 'deck6.png';
+        player.baseIcon = 'deck6.png';
         player.shieldIcon = this.getIcon(player.shield.length);
         player.deckIcon = this.getIcon(player.deck.length);
         player.trashIcon = this.getIcon(player.trash.length);

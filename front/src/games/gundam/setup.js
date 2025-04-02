@@ -2,13 +2,16 @@
 
 class setup {
 
-    static handStartLength=5;
-    static shieldStartLength=6;
+    static handStartLength = 5;
+    static shieldStartLength = 6;
 
     static setupGame(game) {
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
+        
+        const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
+        playerOpponent.resourcesEx += 1;
 
         for (let i = 0; i < this.handStartLength; i++) {
             this.addTasks([
@@ -22,6 +25,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
+            resAString: "0", resourcesMax: 8, resourcesAvailable: 0, resourcesEx: 0,
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
@@ -47,38 +51,31 @@ class setup {
             if (!card)
                 throw new Error("This card doesn't exist : " + id);
             for (let i = 0; i < quantity; i++)
-                result.push(this.createCard(card.id));
+                result.push(this.createCard(card.id, isPlayer1));
         })
 
-        result.forEach(x => {
-            x.index = this.getNextIndex();
-            x.isPlayer1 = isPlayer1;
-            x.location = this.locationDeck;
-        });
+        this.createUniqueRare(game, result);
 
         result = this.sortRandom(result);
         return result;
     }
 
-    static createCard(id) {
-        const card = this.clone(this.cards.find(x => x.id === id));
-        card.index = this.getNextIndex();
-        card.hpMax = card.hp;
-        card.effects = !card.effects ? [] : card.effects.map(fx => this.clone(fx));
-        return card;
+    static createUniqueRare(game, deck) {
+        const rareKeyWord = "_p1";
+        var rareCards = game.gundamCards.files.split(',').filter(x => x.includes(rareKeyWord)).map(x => x = x.replace(rareKeyWord, ""));
+        rareCards.forEach(rareCard => {
+            const firstCard = deck.find(x => x.id === rareCard);
+            if (firstCard)
+                firstCard.id += rareKeyWord;
+        });
     }
 
     static sortRandom(cards) {
         return cards.sort(() => Math.random() - 0.5);
     }
 
-    static getNextIndex() {
-        this.index++;
-        return this.index;
-    }
-
     static mulligan(game, task) {
-        task.choice = {};
+        //task.choice = {};
         if (!task.choice) {
             return this.addTaskFirst({ id: this.popup.name, task, text: 'Do you want to do a mulligan ?', choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }] });
         } else {
@@ -89,26 +86,26 @@ class setup {
                 game.cards = game.cards.filter(x => !removeIds.includes(x.index));
                 game.player1.hand = [];
 
-                for (let i = 0; i < this.handStartLength; i++) 
+                for (let i = 0; i < this.handStartLength; i++)
                     tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
             }
-            
+
             tasks = tasks.concat(this.addShielsAndBase(game));
             tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
             this.addTasks(tasks);
         }
     }
 
-    static addShielsAndBase(game){
+    static addShielsAndBase(game) {
         let tasks = [];
-        
+
         for (let i = 0; i < this.shieldStartLength; i++) {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: true });
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        game.player1.base = [this.createCard('EXB-001')];
-        game.player2.base = [this.createCard('EXB-001')];
+        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true))];
+        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false))];
 
         return tasks;
     }

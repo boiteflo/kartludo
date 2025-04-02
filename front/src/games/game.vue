@@ -90,6 +90,8 @@
             </div>
 
             <!-- Highlight and TextZone-->
+            <div class="absolute" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
+            </div>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
             </div>
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardCenter)">
@@ -191,9 +193,10 @@
         </div>
 
         <!-- Title -->
-        <div id="divTitleParent" class="absolute bgWhite mask" style="top:80px; width: 100%; height:0px; z-index:13">
+        <div id="divTitleParent" class="absolute bgWhite mask"
+            :style="{ top: '80px', width: '100%', height: (title ? 100 : 0) + 'px', 'z-index': 13 }">
             <div class="relative">
-                <div class="text-center absolute w100p title" style="left:-000px; top:30px;">{{ title }}
+                <div class="text-center absolute w100p title" style="top:30px;">{{ title }}
                 </div>
             </div>
         </div>
@@ -240,8 +243,7 @@ export default {
         cards: [],
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
-        title: '',
-        center: null,
+        title: null,
         cardList: null,
         decklistPlayer1: null,
         decklistPlayer2: null,
@@ -253,11 +255,12 @@ export default {
         window.addEventListener("resize", () => {
             this.refreshG++;
         });
-        //this.center = positioner.getCardSize(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, 1, 1);
+
         this.cardList = cards.cards;
         this.decklistPlayer1 = cards.decklist[3].list;
         this.decklistPlayer2 = cards.decklist[3].list;
-        this.start();
+        this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
+        this.refreshGame();
     },
     methods: {
         showDeckList(decklist) {
@@ -271,10 +274,6 @@ export default {
                 this.start();
             }
             this.decklistShow = null;
-        },
-        start() {
-            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
-            this.continue();
         },
         nextTurn() {
             if (this.freeze)
@@ -317,21 +316,21 @@ export default {
             this.cards = this.game.cards;
             setTimeout(() => { this.setDrag(); }, 10);
 
-            if (this.game.showTitle)
-                this.showTitle(this.game.showTitle);
+            this.showTitle(this.game.showTitle);
 
             this.refreshG++;
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
         animTextEffect() {
             let animationTime = gameGundam.delay;
+            console.log(JSON.stringify(this.game.textEffect));
             helperAnimation.animateMultiple([{ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false }], animationTime);
         },
         beginAnimation() {
             let animationTime = gameGundam.delay;
             const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 ? 10 : gameGundam.delay;
+            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 && !this.game.showTitle ? 10 : gameGundam.delay;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
 
@@ -354,10 +353,17 @@ export default {
             setTimeout(() => { this.continue() }, wait);
         },
         showTitle(text) {
-            this.title = text;
+            if (!text && !this.title)
+                return;
+
             const animationTime = 200;
-            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 0 }, { height: 100 }, false, animationTime); }, 10);
-            setTimeout(() => { helperAnimation.animate('divTitleParent', { height: 100 }, { height: 0 }, false, animationTime); }, 4.5 * (animationTime + 10));
+            const divId = 'divTitleParent';
+
+            if (!this.title) {
+                this.title = text;
+                setTimeout(() => { helperAnimation.animate(divId, { height: 0 }, { height: 100 }, false, animationTime); }, 10);
+            } else
+                setTimeout(() => { helperAnimation.animate(divId, { height: 100 }, { height: 0 }, false, animationTime); }, 10);
         },
 
         // --------- showCard
@@ -371,7 +377,7 @@ export default {
             this.showCard(newCard);
         },
         showCard(card) {
-            const center = this.game ? this.game.grid.center : this.center;
+            const center = this.game ? this.game.grid.highlightCardCenter : { x: 0, y: 0, width: 200, height: 280 };
             if (!card)
                 this.cardCenter = {
                     id: this.cardCenter.id,

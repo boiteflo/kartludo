@@ -21,6 +21,7 @@ class cardMove {
         if (!card.position)
             card.position = this.clone(player.positions.deck);
         card.zindex = 11;
+        return card;
     }
 
     static moveCard(player, card, locationFrom, locationTo) {

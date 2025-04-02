@@ -1,11 +1,14 @@
-
 import positioner from './positioner';
+import selectable from './selectable';
 import cardMove from './cardMove';
+import cardLife from './cardLife';
+import effects from './effects';
 import refresh from './refresh';
 import setup from './setup';
 import popup from './popup';
 import tasks from './tasks';
-import array from './array';
+import utils from './utils';
+import show from './show';
 import turn from './turn';
 
 /* eslint-disable no-unused-vars */
@@ -19,8 +22,8 @@ class game {
 
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2) {
         this.cards = cards.cards;
-        this.game = { cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, decklistPlayer1, decklistPlayer2 };
-        this.addFunction([tasks, array, popup, setup, positioner, turn, refresh, cardMove], this);
+        this.game = { logs:'', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards:cards, decklistPlayer1, decklistPlayer2 };
+        utils.addFunction([tasks, utils, popup, setup, positioner, turn, refresh, cardMove, cardLife, effects, selectable, show], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
         this.isStart = true;
@@ -29,7 +32,7 @@ class game {
 
     static continue(game) {
         if (this.isStart) {
-            this.addTaskFirst({ id: this.mulligan.name });
+            this.addTaskFirst({ id: this.mulligan.name }, { id: this.nextTurn.name });
             this.isStart = false;
         }
         this.endAnimation(game);
@@ -54,128 +57,11 @@ class game {
         return game;
     }
 
-
-    /*
-
-
-    static pair(player, card1, card2) {
-        const cardUnit = this.isCardUnit(card1) ? card1 : card2;
-        const cardPilot = this.isCardPilot(card1) ? card1 : card2;
-        const isLink = this.isLink(cardUnit, cardPilot);
-        const trigger = isLink ? effects.onlink : effects.onpair;
-        const effectResult = effects.handleEffects(player, cardUnit, cardPilot, trigger);
-        if (effectResult.stop)
-            return effectResult;
-
-        const from = cardPilot.location;
-        player[from] = global.removeByIndex(player[from], cardPilot);
-        cardUnit.pair = cardPilot;
-        cardPilot.selectable = false;
-        cardPilot.isPaired = true;
-        cardPilot.location = global.locationPair;
-        cardPilot.zindex = 1;
-        cardUnit.zindex = 2;
-        cardUnit.ap += cardPilot.ap;
-        cardUnit.hp += cardPilot.hp;
-
-        if (this.isLink(cardUnit, cardPilot)) {
-            cardUnit.link = true;
-            cardPilot.link = true;
-            cardUnit.active = true;
-            cardUnit.selectable = true;
-            cardUnit.canAttack = true;
-        }
-    }
-
-    static isLink(cardUnit, cardPilot) {
-        if (cardUnit.link.includes('['))
-            return cardUnit.link.includes(cardPilot.name);
-        else {
-            const targetStr = cardUnit.link.replace('(', '').replace(')', '');
-            return cardPilot.attribute.includes(targetStr);
-        }
-    }
-
-    static destroyUnit(card1, delay = true) {
-        card1.dead = true;
-        return [
-            { id: gameTask.taskApplyEffect.name, card1, trigger: effects.ondestroyed },
-            { id: gameTask.taskMove.name, delay, card1, to: this.locationTrash, isPlayer1: card1.isPlayer1 }
-        ];
-    }
-
     static end(isPlayer1) {
         this.game.end = true;
         const message = isPlayer1 ? 'Victory' : 'Defeat';
         alert(message);
         return { end: true };
-    }
-
-    static getNextIndex() {
-        this.index++;
-        return this.index;
-    }
-
-    // Card
-    static setActive(card, active) {
-        card.active = active;
-        card.selectable = false;
-        card.canAttack = active;
-        const degree = card.active ? 0 : 90;
-        if (!card.to)
-            card.to = this.clone(card.position);
-        card.to.rotation = degree;
-    }
-
-    // Player Turn
-    static getPlayerTurn() {
-        return global.isPlayer1 ? global.game.player1 : global.game.player2;
-    }
-    static getPlayerTurnOpponent() {
-        return global.isPlayer1 ? global.game.player2 : global.game.player1;
-    }
-    static getPlayer(isPlayer1) {
-        return isPlayer1 ? global.game.player1 : global.game.player2;
-    }
-    static getOpponent(isPlayer1) {
-        return isPlayer1 ? global.game.player1 : global.game.player2;
-    }
-        */
-
-    // Card Type
-    static isCardUnit(card) { return card.type?.includes(0); }
-    static isCardPilot(card) { return card.type?.includes(1); }
-    static isCardCommand(card) { return card.type?.includes(2); }
-    static isCardCommandPilot(card) { return this.isCardPilot(card) && this.isCardCommand(card); }
-    static isCardBase(card) { return card.type?.includes(3); }
-    static isCardToken(card) { return card.type?.includes(4); }
-    static isCardResource(card) { return card.type?.includes(5); }
-
-    // Utils
-    static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
-    static logEffect(effect, text) {
-        this.log(text);
-        this.effects = this.effects ? this.effects.concat([text]) : [text];
-    }
-
-    static clone(obj) { return Object.assign({}, obj); }
-
-    static addFunction(cla, obj) {
-        const ignore = ['length', 'name', 'prototype'];
-        cla.forEach(c => {
-            Object.getOwnPropertyNames(c).forEach(method => {
-                if (!ignore.includes(method))
-                    if (obj[method]) 
-                        throw new Error(`cette fonction existe deja : ${c.name}.${method}`)
-                    else
-                        obj[method] = c[method];
-            });
-        });
-    }
-
-
-    static test(message) {
-        alert(message);
     }
 }
 

@@ -1,8 +1,4 @@
-import global from '../global';
-import gameTask from '../gameTask';
-import effects from './effects';
-
-class cardAttack {
+class attack {
 
     static createAttackTask(player, opponent, card1, card2, zone, breach) {
         gameTask.addTasks([{ id: gameTask.taskAttack.name, player, opponent, attacker: card1, target: card2, zone, breach }]);
@@ -165,4 +161,4 @@ class cardAttack {
 }
 
 
-export default cardAttack;
+export default attack;

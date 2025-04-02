@@ -1,5 +1,3 @@
-
-
 /* eslint-disable no-unused-vars */
 class tasks {    
 
@@ -60,7 +58,6 @@ class tasks {
     }
 
     static taskEndRefresh(game) {
-        //game.endRefresh();
         this.needTaskEndRefresh = false;
         game.refreshOnlyTextEffect = false;
         delete (game.textEffect);

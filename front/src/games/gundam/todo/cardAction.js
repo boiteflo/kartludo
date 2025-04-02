@@ -1,7 +1,4 @@
-import gameTask from '../gameTask';
-import global from '../global';
-
-class cardAction {
+class cardAction {    
     static noActionCard = 'no action card';
 
     static askForActionCards(player, opponent) {
@@ -69,5 +66,6 @@ class cardAction {
         });
     }
 }
+
 
 export default cardAction;
