@@ -27,7 +27,7 @@ class positioner {
 
         const textHeight = grid.border * 2;
         const iconHeight = grid.centerZone.heightQuarter * 2;
-        const iconWidth = iconHeight * 107 / 150; //(grid.width - gundamHead - (10 * grid.border)) / 8;
+        const iconWidth = iconHeight * 107 / 150;
         const gundamHead = grid.width * 0.05; 
         const halfWidth = grid.width / 2 - gundamHead;
 
@@ -56,96 +56,62 @@ class positioner {
         const lineText = grid.centerZone.y + grid.centerZone.heightQuarter - grid.border - textHeight;
         const lineDeck = grid.centerZone.y + grid.centerZone.heightQuarter;   
 
-        let x = halfWidth + this.getXCenter(halfWidth, width, 4, 1);
-        grid.player1Base = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationBase
-        };
+        const properties = 'player1Base,player1Shield,player1Deck,player1Trash'.split(',');
+        properties.forEach((property, index) => {
+            const x = halfWidth + this.getXCenter(halfWidth, width, 4, (index+1));
+            grid[property] = {
+                x, y: lineDeck, width, height: iconHeight,
+                text: { x, y: lineText, width, height: textHeight }
+            };
+        });
 
-        x = halfWidth + this.getXCenter(halfWidth, width, 4, 2);
-        grid.player1Shield = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationShield
-        };
-
-        x = halfWidth + this.getXCenter(halfWidth, width, 4, 3);
-        grid.player1Deck = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationDeck
-        };
-
-        x = halfWidth + this.getXCenter(halfWidth, width, 4, 4);
-        grid.player1Trash = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationTrash
-        };
-
-        x = 0;
+        let x = 0;
         width = grid.width;
         let height = grid.height / 2;
         grid.halfPlayer1 = { x, width, height, y: grid.height / 2 };
 
         grid.player1Hand = {
-            x: 0, y: grid.height - grid.border - grid.boxHeight,
+            x, y: grid.height - grid.border - grid.boxHeight,
             width: grid.width - grid.border2, height: grid.boxHeight,
             location: this.locationHand
         }
         grid.player1Field = {
-            x: 0, y: grid.centerZone.y + grid.centerZone.height + grid.border,
+            x, y: grid.centerZone.y + grid.centerZone.height + grid.border,
             width: grid.width - grid.border2, height: grid.boxHeight * 1.5,
             location: this.locationField
         }
-        return x;
+
+        grid.player1Resource = {
+            x:grid.border, y:grid.player1Hand.y - (grid.border*6),
+            width: grid.width - grid.border2, height:grid.border*3
+        }
     }
 
     static createPlayer2Field(grid, halfWidth, width, iconHeight, textHeight) {
         const lineText = grid.centerZone.y + (3 * grid.centerZone.heightQuarter) + grid.border;
         const lineDeck = grid.centerZone.y + (3 * grid.centerZone.heightQuarter) - iconHeight - grid.border;
+        
+        const properties = 'player2Trash,player2Deck,player2Shield,player2Base'.split(',');
+        properties.forEach((property, index) => {
+            const x = this.getXCenter(halfWidth, width, 4, index);
+            grid[property] = {
+                x, y: lineDeck, width, height: iconHeight,
+                text: { x, y: lineText, width, height: textHeight }
+            };
+        });
 
-        let x = this.getXCenter(halfWidth, width, 4, 3);
-        grid.player2Base = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationBase
-        };
-
-        x = this.getXCenter(halfWidth, width, 4, 2);
-        grid.player2Shield = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationShield
-        };
-
-        x = this.getXCenter(halfWidth, width, 4, 1);
-        grid.player2Deck = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationDeck
-        };
-
-        x = this.getXCenter(halfWidth, width, 4, 0);
-        grid.player2Trash = {
-            x, y: lineDeck, width, height: iconHeight,
-            text: { x, y: lineText, width, height: textHeight },
-            location: this.locationTrash
-        };
-
-        x = 0;
+        let x = 0;
         width = grid.width;
         let height = grid.height / 2;
         grid.halfPlayer2 = { x, width, height, y: 0 };
 
         grid.player2Hand = {
-            x: 0, y: grid.border,
+            x, y: grid.border,
             width: (grid.width / 2) - grid.border2, height: grid.boxHeight,
             location: this.locationHand
         }
         grid.player2Field = {
-            x: 0, y: grid.player2Hand.y + grid.player2Hand.height + grid.border,
+            x, y: grid.player2Hand.y + grid.player2Hand.height + grid.border,
             width: grid.width - grid.border2, height: grid.boxHeight * 1.5,
             location: this.locationHand
         }

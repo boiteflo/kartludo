@@ -62,6 +62,19 @@
             </div>
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
             </div>
+            <div v-if="game" class="absolute" :style="getFieldStyleObj(game.grid.player1Resource)">
+                <v-slider class="absolute w100p h100p" readonly max="12" min="0" track-color="red" color="yellow"
+                    :value="game.player1.resourcesAvailable" thumb-label="always">
+                    <template v-slot:thumb-label="props">
+                        <span class="colorBlack">
+                            {{ props.value }}
+                        </span>
+                    </template>
+                </v-slider>
+                <v-range-slider v-if="game.player1.resourcesEx" class="absolute w100p h100p" readonly max="12" min="0" track-color="transparent" color="green"
+                    :value="game.player1.resourcesArray" thumb-label="always">
+                </v-range-slider>
+            </div>
 
             <!-- Player 2-->
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Base), 'object-fit': 'contain' }"
@@ -116,15 +129,6 @@
                 </v-btn>
             </div>
         </span>
-
-        <!-- textEffect -->
-        <div v-if="game && game.textEffect" id="textEffect"
-            class="bgWhite absolute mask text-center textVerticalCenter fontSize150em" :style="{
-                ...getFieldStyle(game.textEffect?.position.x, game.textEffect?.position.y,
-                    game.textEffect?.position.width, game.textEffect?.position.height), 'z-index': 11
-            }">
-            <div v-html="game.textEffect.text"></div>
-        </div>
 
         <!-- Show card -->
         <div class="flex absolute" v-if="aside">
@@ -192,9 +196,17 @@
             {{game.tasks.map(x => x.id)}}
         </div>
 
+        <!-- textEffect -->
+        <div v-if="game" id="divTextEffect" class="bgWhite absolute mask text-center textVerticalCenter fontSize150em"
+            :style="{
+                ...getFieldStyleObj(game.grid.textZone), 'z-index': 11, height: 0
+            }">
+            <div v-html="text"></div>
+        </div>
+
         <!-- Title -->
         <div id="divTitleParent" class="absolute bgWhite mask"
-            :style="{ top: '80px', width: '100%', height: (title ? 100 : 0) + 'px', 'z-index': 13 }">
+            :style="{ top: '80px', width: '100%', height: '0px', 'z-index': 13 }">
             <div class="relative">
                 <div class="text-center absolute w100p title" style="top:30px;">{{ title }}
                 </div>
@@ -205,10 +217,6 @@
         <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)"
             style="z-index: 12;">
         </gameCard>
-
-        <div class="absolute hide">
-            hello world
-        </div>
     </div>
 
 </template>
@@ -244,6 +252,8 @@ export default {
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
         title: null,
+        text: null,
+        ignoreEvent: [],
         cardList: null,
         decklistPlayer1: null,
         decklistPlayer2: null,
@@ -257,10 +267,9 @@ export default {
         });
 
         this.cardList = cards.cards;
-        this.decklistPlayer1 = cards.decklist[3].list;
-        this.decklistPlayer2 = cards.decklist[3].list;
-        this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
-        this.refreshGame();
+        this.deckList = cards.decklist;
+        //this.decklistPlayer1 = cards.decklist[3].list;
+        //this.decklistPlayer2 = cards.decklist[3].list;
     },
     methods: {
         showDeckList(decklist) {
@@ -274,6 +283,10 @@ export default {
                 this.start();
             }
             this.decklistShow = null;
+        },
+        start() {
+            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
+            this.refreshGame();
         },
         nextTurn() {
             if (this.freeze)
@@ -316,21 +329,20 @@ export default {
             this.cards = this.game.cards;
             setTimeout(() => { this.setDrag(); }, 10);
 
-            this.showTitle(this.game.showTitle);
+            this.showTextEffect(this.game.showTitle, 'title', 'divTitleParent', { height: 0 });
+            this.showTextEffect(this.game.textEffect?.text, 'text', 'divTextEffect', { height: 0 });
 
             this.refreshG++;
             setTimeout(() => { this.beginAnimation(); }, 10);
         },
         animTextEffect() {
             let animationTime = gameGundam.delay;
-            console.log(JSON.stringify(this.game.textEffect));
             helperAnimation.animateMultiple([{ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false }], animationTime);
         },
         beginAnimation() {
             let animationTime = gameGundam.delay;
-            const needToAnimateTextEffect = this.game && this.game.textEffect && this.game.textEffect.to ? true : false;
             const cardsToAnimate = this.cards.filter(x => x.to);
-            animationTime = !needToAnimateTextEffect && cardsToAnimate.length < 1 && !this.game.showTitle ? 10 : gameGundam.delay;
+            animationTime = cardsToAnimate.length < 1 && !this.game.showTitle && !this.game.textEffect ? 10 : gameGundam.delay;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
 
@@ -338,32 +350,23 @@ export default {
                 return;
 
             const animations = cardsToAnimate.map(card => { return { id: 'C' + card.index, from: card.position, to: card.to, isIncrement: false }; });
-            if (this.game && this.game.textEffect && this.game.textEffect.to) {
-                animations.push({ id: 'textEffect', from: this.game.textEffect.position, to: this.game.textEffect.to, isIncrement: false });
-            }
             helperAnimation.animateMultiple(animations, animationTime);
-
         },
         endAnimation() {
             const wait = this.game.wait ? this.game.wait : 1;
-            if (this.game && this.game.textEffect && this.game.textEffect.to) {
-                this.game.textEffect.position = this.game.textEffect.to;
-                delete (this.game.textEffect.to);
-            }
             setTimeout(() => { this.continue() }, wait);
         },
-        showTitle(text) {
-            if (!text && !this.title)
+        showTextEffect(text, property, divId, to) {
+            if (!text || this.ignoreEvent.includes(property))
                 return;
 
             const animationTime = 200;
-            const divId = 'divTitleParent';
+            this.ignoreEvent.push(property);
+            this[property] = text;
 
-            if (!this.title) {
-                this.title = text;
-                setTimeout(() => { helperAnimation.animate(divId, { height: 0 }, { height: 100 }, false, animationTime); }, 10);
-            } else
-                setTimeout(() => { helperAnimation.animate(divId, { height: 100 }, { height: 0 }, false, animationTime); }, 10);
+            setTimeout(() => { helperAnimation.animate(divId, { height: 0 }, { height: 100 }, false, animationTime); }, 10);
+            setTimeout(() => { helperAnimation.animate(divId, { height: 100 }, to, false, animationTime); }, 10 + animationTime * 4);
+            setTimeout(() => { this.ignoreEvent = this.ignoreEvent.filter(x => x !== property); }, 10 + animationTime * 6);
         },
 
         // --------- showCard

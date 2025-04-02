@@ -9,15 +9,22 @@ class setup {
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
-        
+
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
         playerOpponent.resourcesEx += 1;
 
+        let tasks = [];
         for (let i = 0; i < this.handStartLength; i++) {
-            this.addTasks([
+            tasks = tasks.concat([
                 { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true },
                 { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: false }]);
         }
+
+        tasks = tasks.concat([
+            { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: true },
+            { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: false }]);
+
+        this.addTasks(tasks);
     }
 
     static createPlayer(game, isPlayer1, decklist) {
@@ -25,7 +32,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resAString: "0", resourcesMax: 8, resourcesAvailable: 0, resourcesEx: 0,
+            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 1, resourcesArray: [8,9],
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
@@ -75,7 +82,7 @@ class setup {
     }
 
     static mulligan(game, task) {
-        //task.choice = {};
+        task.choice = {};
         if (!task.choice) {
             return this.addTaskFirst({ id: this.popup.name, task, text: 'Do you want to do a mulligan ?', choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }] });
         } else {
