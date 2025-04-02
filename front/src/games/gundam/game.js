@@ -54,6 +54,7 @@ class game {
     }
 
     static endTurn(game, card1, card2, drop) {
+        game.tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
         return game;
     }
 

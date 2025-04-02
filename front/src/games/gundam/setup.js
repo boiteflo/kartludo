@@ -32,7 +32,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resAString: "0", resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 1, resourcesArray: [8,9],
+            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,

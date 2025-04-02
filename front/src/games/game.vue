@@ -62,19 +62,6 @@
             </div>
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
             </div>
-            <div v-if="game" class="absolute" :style="getFieldStyleObj(game.grid.player1Resource)">
-                <v-slider class="absolute w100p h100p" readonly max="12" min="0" track-color="red" color="yellow"
-                    :value="game.player1.resourcesAvailable" thumb-label="always">
-                    <template v-slot:thumb-label="props">
-                        <span class="colorBlack">
-                            {{ props.value }}
-                        </span>
-                    </template>
-                </v-slider>
-                <v-range-slider v-if="game.player1.resourcesEx" class="absolute w100p h100p" readonly max="12" min="0" track-color="transparent" color="green"
-                    :value="game.player1.resourcesArray" thumb-label="always">
-                </v-range-slider>
-            </div>
 
             <!-- Player 2-->
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Base), 'object-fit': 'contain' }"
@@ -103,7 +90,7 @@
             </div>
 
             <!-- Highlight and TextZone-->
-            <div class="absolute" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
+            <div class="absolute vertical-scroll" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
             </div>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
             </div>
@@ -121,7 +108,6 @@
                     <span v-if="game.grid.rightButton.width > 50">End Turn</span><span v-else>End</span>
                 </v-btn>
             </div>
-
             <div class="absolute" :style="getFieldStyleObj(game.grid.leftButton)">
                 <v-btn target="_blank" :class="{ bg: true, fontSize075em: true, w100p: true, h100p: true }"
                     @click="nextTurn" style="min-width:0px;">
@@ -155,6 +141,18 @@
                 :hidestat="card.hidestat" @mouseover="showCardMouseOver(card)" @click="showCard(card)"
                 @dragover="onDragOver" @drop="onDrop($event, card)" draggable="true">
             </gameCard>
+        </div>
+
+        <!-- Sliders Resources -->
+        <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player1Resource), 'z-index':10}">
+            <slider-resource label="Resources :" :value1="game.player1.resourcesAvailable"
+                :value2="game.player1.resourcesEx">
+            </slider-resource>
+        </div>
+        <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player2Resource), 'z-index':10}">
+            <slider-resource label="Resources :" :value1="game.player2.resourcesAvailable"
+                :value2="game.player2.resourcesEx">
+            </slider-resource>
         </div>
 
         <!-- End turn button -->
@@ -234,16 +232,17 @@ body {
 
 <script>
 import helperAnimation from '../helpers/helperAnimation';
+import cards from '../data/gundamCards.json';
 import gameGundam from './gundam/game';
+import sliderResource from './sliderResource';
 import gameCard from './card';
 import deck from './deck';
 import deckList from './deckList';
-import cards from '../data/gundamCards.json';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard, deck, deckList },
+    components: { gameCard, deck, deckList, sliderResource },
     data: () => ({
         refreshG: 0,
         aside: false,
@@ -268,8 +267,9 @@ export default {
 
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
-        //this.decklistPlayer1 = cards.decklist[3].list;
-        //this.decklistPlayer2 = cards.decklist[3].list;
+        this.decklistPlayer1 = cards.decklist[5].list;
+        this.decklistPlayer2 = cards.decklist[4].list;
+        this.start();
     },
     methods: {
         showDeckList(decklist) {

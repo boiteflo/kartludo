@@ -32,6 +32,7 @@ class effects {
             });
         });
         this.addTasks(tasks);
+        return tasks.length > 0;
     }
 
     static applyEffectTrigger(game, task) {
