@@ -17,6 +17,7 @@ class positioner {
         grid.width = screenWidth;
         grid.height = screenHeight;
         grid.boxHeight = (grid.height - (grid.border * 6)) / 6;
+        grid.card100 = {width:107, height: 150};
 
         let height = grid.boxHeight;
         grid.centerZone = {
@@ -65,6 +66,8 @@ class positioner {
             };
         });
 
+        grid.player1Base.location = this.locationBase;
+
         let x = 0;
         width = grid.width;
         let height = grid.height / 2;
@@ -100,6 +103,8 @@ class positioner {
                 text: { x, y: lineText, width, height: textHeight }
             };
         });
+
+        grid.player2Base.location = this.locationBase;
 
         let x = 0;
         width = grid.width;

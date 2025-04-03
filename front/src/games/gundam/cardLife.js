@@ -8,13 +8,13 @@ class cardLife {
     static isCardToken(card) { return card.type?.includes(4); }
     static isCardResource(card) { return card.type?.includes(5); }
 
-    static createCard(id, isPlayer1) {
+    static createCard(id, isPlayer1, location) {
         const card = this.clone(this.cards.find(x => x.id === id));
         card.index = this.getNextIndex();
         card.hpMax = card.hp;
         card.active=true;
         card.isPlayer1 = isPlayer1;
-        card.location = this.locationDeck;
+        card.location = location ? location : this.locationDeck;
         card.effects = !card.effects ? [] : card.effects.map(fx => this.clone(fx));
         return card;
     }

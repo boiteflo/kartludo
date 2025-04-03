@@ -27,10 +27,6 @@ class refresh {
             card.bgposition = '0 0';
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
             card.location = position.location;
-
-            if (!this.cardHighlight.find(x => x.index === card.index))
-                card.zindex = card.pair ? 2 : 1;
-
             if (position.location == this.locationField && card.pair)
                 card.pair.to = this.getPairPosition(card.to);
         });
@@ -56,6 +52,12 @@ class refresh {
         delete (game.wait);
         delete (game.showTitle);
         game.refresh = true;
+    }
+
+    static resetZIndex(game){
+        game.cards.forEach(card=> {
+            card.zindex = card.isPaired ? 1 : 2;
+        });
     }
 }
 

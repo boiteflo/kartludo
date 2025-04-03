@@ -81,7 +81,14 @@ class setup {
     static mulligan(game, task) {
         task.choice = {};
         if (!task.choice) {
-            return this.addTaskFirst({ id: this.popup.name, task, text: 'Do you want to do a mulligan ?', choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }] });
+            return this.addTaskFirst(
+                {
+                    id: this.popup.name,
+                    task,
+                    text: 'Do you want to do a mulligan ?',
+                    choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }]
+                }
+            );
         } else {
             let tasks = [];
             if (task.choice.id === 'yes') {
@@ -108,8 +115,8 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true))];
-        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false))];
+        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
 
         return tasks;
     }

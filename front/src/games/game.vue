@@ -145,13 +145,17 @@
 
         <!-- Sliders Resources -->
         <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player1Resource), 'z-index':10}">
-            <slider-resource label="Resources :" :value1="game.player1.resourcesAvailable"
-                :value2="game.player1.resourcesEx">
+            <slider-resource label="Resources :" 
+                :value1="game.player1.resourcesAvailable"
+                :value2="game.player1.resourcesEx"
+                :valuemax="game.player1.resourcesMax">
             </slider-resource>
         </div>
         <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player2Resource), 'z-index':10}">
-            <slider-resource label="Resources :" :value1="game.player2.resourcesAvailable"
-                :value2="game.player2.resourcesEx">
+            <slider-resource label="Resources :" 
+                :value1="game.player2.resourcesAvailable"
+                :value2="game.player2.resourcesEx"
+                :valuemax="game.player2.resourcesMax">
             </slider-resource>
         </div>
 
@@ -176,7 +180,7 @@
                 <h3 class="text-center colorBlack textVerticalCenter w100p" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand">
-                        <img :style="getFieldStyleObj(game?.grid.card6)" @click="selectChoiceCard(card)"
+                        <img :style="getFieldStyleObj(game?.grid.card100)" @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
                 </div>

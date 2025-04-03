@@ -1,5 +1,11 @@
 class attack {
 
+    static taskAttackPlayerAnimation(game, task, player) {
+        const opponent = global.getPlayer(!player.isPlayer1);
+        const heartPosition = opponent.isPlayer1 ? global.grid.player1Heart : global.grid.player2Heart;
+        task.card1.to = { ...task.card1.position, x: heartPosition.x, y: heartPosition.y };
+    }
+    
     static createAttackTask(player, opponent, card1, card2, zone, breach) {
         gameTask.addTasks([{ id: gameTask.taskAttack.name, player, opponent, attacker: card1, target: card2, zone, breach }]);
     }

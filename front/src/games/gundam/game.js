@@ -43,6 +43,7 @@ class game {
     }
 
     static playCard(game, card1, card2, zone) {
+        this.resetZIndex(game);
         this.addTask({ id: this.play.name, card1, card2, zone, regularPlay:true });
         return this.continue(game);
     }
@@ -58,6 +59,7 @@ class game {
     }
 
     static endTurn(game, card1, card2, drop) {
+        this.resetZIndex(game);
         game.tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
         return game;
     }

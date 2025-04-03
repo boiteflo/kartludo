@@ -101,7 +101,7 @@ class cardPlay {
                 this.playCardCost(player, task.card1);
             
             this.addTasks([
-                { id: this.applyEffectTrigger.name, card1: task.card1, card2:task.card2, trigger: this.trigger_command },
+                { id: this.applyEffectCard.name, card1: task.card1, card2:task.card2, trigger: this.trigger_command },
                 { id: this.move.name, card1: task.card1, to: this.locationTrash }
             ]);
             return;
@@ -120,22 +120,20 @@ class cardPlay {
         if (!task.card2 || !this.isCardPilot(task.card1) || !this.isCardCommand(task.card1))
             return;
 
+        if (task.choice) 
+            task.pilotOrCommand = task.choice.text;
+
         if (task.pilotOrCommand) {
             const isPilot = task.pilotOrCommand === 'Pilot';
             const isCommand = task.pilotOrCommand === 'Command';
             return { isPilot, isCommand };
         }
 
-        if (task.choice) {
-            const isPilot = this.game.choice.text === 'Pilot';
-            const isCommand = this.game.choice.text === 'Command';
-            return { isPilot, isCommand };
-        }
-
         this.addTaskFirst({
             id: this.popup.name,
             text: 'Do you want to play as pilot or command ?',
-            choices: [{ text: 'Pilot' }, { text: 'Command' }]
+            choices: [{ text: 'Pilot' }, { text: 'Command' }],
+            task
         });
         return { stop: true }
     }

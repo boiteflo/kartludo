@@ -59,8 +59,8 @@ class effects {
 
         const card1 = player.shield.splice(0, 1)[0];
         card1.location = player.positions.shield.location;
-        this.addTaskPos2({ id: this.move.name, card1, to: this.locationHand });
-        this.log(`${card1.name} is move from shield to hand`);
+        this.addTaskPos2({ id: this.spawnOrMove.name, card1, to: this.locationHand });
+        this.log(`One card is move from shield to hand`);
     }
 
     static top2DeckCard1Top1Bottom(game, task, player, opponent) {
@@ -68,6 +68,7 @@ class effects {
             task.cards = [this.getAndRemoveFirst(player.deck), this.getAndRemoveFirst(player.deck)];
             this.addTaskFirst({
                 id: this.popup.name,
+                task,
                 text: 'Select the card that will go to the top deck, the other one will go bottom deck',
                 cards: task.cards
             });
