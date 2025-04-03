@@ -28,7 +28,7 @@ class cardMove {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 
-        const from = locationFrom && locationFrom != 'pair' ? locationFrom : null;
+        const from = locationFrom && locationFrom != 'pair' ? locationFrom : card?.location;
         const to = locationTo;
 
         if (!card)
@@ -47,8 +47,6 @@ class cardMove {
 
         if (from)
             card.position = card.position ? card.position : this.clone(player.positions[from]);
-        if (from)
-            card.location = player.positions[from].location;
 
         card.isPlayer1 = player.isPlayer1;
         card.active = true;

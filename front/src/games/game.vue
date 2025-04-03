@@ -271,9 +271,9 @@ export default {
 
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
-        this.decklistPlayer1 = cards.decklist[5].list;
-        this.decklistPlayer2 = cards.decklist[4].list;
-        this.start();
+        //this.decklistPlayer1 = cards.decklist[5].list;
+        //this.decklistPlayer2 = cards.decklist[4].list;
+        //this.start();
     },
     methods: {
         showDeckList(decklist) {

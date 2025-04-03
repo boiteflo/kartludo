@@ -9,7 +9,7 @@ class cardPlay {
             result = this.playFromHand(player, task);
 
         else if (task.card1.location === this.locationField)
-            result = this.prepareAttack(player, task);
+            result = this.prepareAttack(task, player);
 
         else
             result = this.playThisCard(player, task, false);
@@ -20,14 +20,13 @@ class cardPlay {
         return result;
     }
 
-    static prepareAttack(player, card1, card2, zone, breach) {
-        const isSamePlayer = zone.isPlayer1 == player.isPlayer1;
-        if (isSamePlayer || !card1.canAttack) {
+    static prepareAttack(task, player) {
+        const isSamePlayer = task.zone.isPlayer1 == player.isPlayer1;
+        if (isSamePlayer || !task.card1.canAttack) {
             return { sendBack: true };
         }
-
-        const opponent = this.getPlayer(!player.isPlayer1);
-        this.addTasks([{ id: 'this.attack.name', player, opponent, attacker: card1, target: card2, zone, breach }]);
+        
+        this.addTask({ id: this.attack.name, attacker: task.card1, target: task.card2, isPlayer1: task.card1.isPlayer1, breach:null });
     }
 
     static playFromHand(player, task) {
@@ -71,7 +70,7 @@ class cardPlay {
             task.card1.canAttack = false;
             if (playCost)
                 this.playCardCost(player, task.card1);
-            this.addTask({ id: this.move.name, card1: task.card1, to: this.locationField, isPlayer1: true });
+            this.addTask({ id: this.move.name, card1: task.card1, to: this.locationField });
             return;
         }
 

@@ -6,6 +6,7 @@ import cardLife from './cardLife';
 import cardPlay from './cardPlay';
 import refresh from './refresh';
 import effects from './effects';
+import attack from './attack';
 import setup from './setup';
 import popup from './popup';
 import tasks from './tasks';
@@ -25,8 +26,11 @@ class game {
 
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2) {
         this.cards = cards.cards;
-        this.game = { logs:'', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards:cards, decklistPlayer1, decklistPlayer2 };
-        utils.addFunction([tasks, utils, popup, setup, positioner, turn, refresh, cardMove, cardLife, cardPlay, selectable, show, effectsLuncher, effects, pair], this);
+        this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
+        utils.addFunction([
+            tasks, utils, popup, setup, positioner, turn, refresh,
+            cardLife, cardMove, cardPlay, selectable, show, effectsLuncher, effects, pair, attack
+        ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
         this.isStart = true;
@@ -44,7 +48,7 @@ class game {
 
     static playCard(game, card1, card2, zone) {
         this.resetZIndex(game);
-        this.addTask({ id: this.play.name, card1, card2, zone, regularPlay:true });
+        this.addTask({ id: this.play.name, card1, card2, zone, regularPlay: true });
         return this.continue(game);
     }
 

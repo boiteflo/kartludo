@@ -1,4 +1,5 @@
 class title {
+
     static showTitle(game, task) {
         game.showTitle = task.value;
     }
@@ -13,8 +14,10 @@ class title {
     }
 
     static showCards(game, task) {
-        if (!task.card1)
+        if (!task.card1 || this.cardHighlight.find(x=> x.index === task.card1.index)){
+            task.delay = null;
             return;
+        }
 
         this.spawnIfNot(task.card1);
         this.cardHighlight.push(task.card1);

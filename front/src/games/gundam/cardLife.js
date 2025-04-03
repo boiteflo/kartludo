@@ -37,8 +37,8 @@ class cardLife {
     static destroyUnit(card1, delay = true) {
         card1.dead = true;
         return [
-            { id: 'gameTask.taskApplyEffect.name', card1, trigger: this.effectsOndestroyed },
-            { id: 'gameTask.taskMove.name', delay, card1, to: this.locationTrash, isPlayer1: card1.isPlayer1 }
+            { id: this.applyEffectCard.name, card1, trigger: this.trigger_ondestroyed },
+            { id: this.move.name, delay, card1, to: this.locationTrash}
         ];
     }
 }

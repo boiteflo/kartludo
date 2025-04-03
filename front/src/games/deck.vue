@@ -1,6 +1,6 @@
 <template>
     <div @click="$emit('click', deck)" class="relative cursorHand parentHover"
-        style="width:400px; height:340px;">
+        style="width:300px; height:255px;">
         <div id="cardLeft" style="width:50%; transform: rotate(-15deg); left:30px; height: 82%; top:30px" class="bgYellow absolute card">
             <img class="w100p shineParentHover" style="object-fit: cover;"
                 :src="require('@/assets/' + folder + deck.card2 + '.webp')">

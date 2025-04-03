@@ -2,7 +2,7 @@
 
 class setup {
 
-    static handStartLength = 10;
+    static handStartLength = 5;
     static shieldStartLength = 6;
 
     static setupGame(game) {
@@ -29,7 +29,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
+            resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
@@ -79,7 +79,8 @@ class setup {
     }
 
     static mulligan(game, task) {
-        task.choice = {};
+        //task.choice = {};
+
         if (!task.choice) {
             return this.addTaskFirst(
                 {
