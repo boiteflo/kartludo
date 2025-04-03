@@ -1,6 +1,6 @@
 class refresh {
 
-    static refreshFieldAndHand(game, player) {
+    static refreshFieldAndHand(game, task, player) {
         this.refreshPlayerField(player.hand, player.positions.hand, false, 7);
         this.refreshPlayerField(player.field, player.positions.field, false, 3);
         this.refreshPlayerField(player.base, player.positions.base, true);

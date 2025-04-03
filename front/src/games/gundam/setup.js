@@ -3,9 +3,15 @@
 class setup {
 
     static handStartLength = 5;
+    static resourceStart = 0;
     static shieldStartLength = 6;
 
     static setupGame(game) {
+        if(this.quickstart){
+            this.handStartLength=15;
+            this.resourceStart=8;
+        }
+        
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
@@ -29,7 +35,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resourcesMax: this.resourceStart, resourcesAvailable: 0, resourcesEx: 0,
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,
@@ -79,7 +85,8 @@ class setup {
     }
 
     static mulligan(game, task) {
-        //task.choice = {};
+        if(this.quickstart)
+            task.choice = {};
 
         if (!task.choice) {
             return this.addTaskFirst(
@@ -103,6 +110,10 @@ class setup {
             }
 
             tasks = tasks.concat(this.addShielsAndBase(game));
+            
+            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1:true });
+            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1:false });
+
             tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
             this.addTasks(tasks);
         }

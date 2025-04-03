@@ -72,7 +72,7 @@ export default {
 
             });
 
-            const ratio = 107 / 200;
+            const ratio = 107 / 220;
             positioner.getWrapMaxPositions(this.$vuetify.breakpoint.width - 310, this.$vuetify.breakpoint.height - 10, result, ratio);
             result.forEach(card => {
                 for (let i = 1; i < card.quantity; i++) {

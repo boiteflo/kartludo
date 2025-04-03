@@ -138,22 +138,28 @@ class attack {
         const activeBreach = !task.breach && this.isCardUnit(task.target) && task.attacker.breach && task.target.hp < 1;
         this.setActive(task.attacker, false);
         let tasks = [];
+        const delay = activeBreach;
+        let tasksAttackerDead= [];
 
-        const delay = false; //task.target.hp > 0 && !activeBreach;
-        if (task.attacker.hp < 1)
-            tasks = tasks.concat(this.destroyUnit(task.attacker, delay));
+        if (!task.breach && task.attacker.hp < 1)
+            tasksAttackerDead= this.destroyUnit(task.attacker, false);
 
         if (task.target.hp < 1)
-            tasks = tasks.concat(this.destroyUnit(task.target));
+            tasks = this.destroyUnit(task.target, delay);
 
         this.setActive(task.attacker, false);
 
-        if (activeBreach)
+        if (activeBreach){
+            this.cardHighlight = this.cardHighlight.filter(x=> x.index !== task.attacker.index);
             tasks.push({
-                id: this.attack.name,
+                id: this.attack.name, step:this.stepSelectCardOpponent,
                 attacker: task.attacker, isPlayer1: task.attacker.isPlayer1,
-                breach: task.attacker.breach
+                breach: task.attacker.breach, delay:true
             });
+        }
+
+        if(tasksAttackerDead.length > 0)
+            tasks = tasks.concat(tasksAttackerDead);
 
         this.addTasks(tasks);
         return {};

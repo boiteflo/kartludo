@@ -56,7 +56,7 @@ class cardMove {
         if (card.pair) {
             card.pair.isPaired = false;
             card.pair.link = false;
-            this.move(player, card.pair, locationFrom, locationTo);
+            this.moveCard(player, card.pair, locationFrom, locationTo);
             delete (card.pair);
             card.link = false;
         }

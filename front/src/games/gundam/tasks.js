@@ -82,8 +82,8 @@ class tasks {
         delete (game.textEffect);
         this.cardHighlight = [];
 
-        this.refreshFieldAndHand(game, game.player1);
-        this.refreshFieldAndHand(game, game.player2);
+        this.refreshFieldAndHand(game, {}, game.player1);
+        this.refreshFieldAndHand(game, {}, game.player2);
         game.refresh = true;
         game.taskAttack = null;
     }

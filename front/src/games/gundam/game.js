@@ -23,9 +23,11 @@ class game {
     static needTaskEndRefresh;
     static cardHighlight = [];
     static isStart;
+    static quickstart;
 
-    static setup(width, height, cards, decklistPlayer1, decklistPlayer2) {
+    static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart) {
         this.cards = cards.cards;
+        this.quickstart = quickstart;
         this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
         utils.addFunction([
             tasks, utils, popup, setup, positioner, turn, refresh,

@@ -9,7 +9,7 @@
         <!-- DeckLists -->
         <div v-if="!game">
             <h2>Select deck for the {{ decklistPlayer1 ? 'opponent' : 'player' }}</h2>
-            <div class="flex flex-wrap flex-space-around fontSize32">
+            <div class="flex flex-wrap flex-space-around fontSize150em">
                 <deck v-for="(deck, index) in deckList" :key="'Deck' + index" :deck="deck" folder="Gundam/cards/"
                     @click="showDeckList(deck)">
                 </deck>
@@ -144,18 +144,14 @@
         </div>
 
         <!-- Sliders Resources -->
-        <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player1Resource), 'z-index':10}">
-            <slider-resource label="Resources :" 
-                :value1="game.player1.resourcesAvailable"
-                :value2="game.player1.resourcesEx"
-                :valuemax="game.player1.resourcesMax">
+        <div v-if="game" class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Resource), 'z-index': 10 }">
+            <slider-resource label="Resources :" :value1="game.player1.resourcesAvailable"
+                :value2="game.player1.resourcesEx" :valuemax="game.player1.resourcesMax">
             </slider-resource>
         </div>
-        <div v-if="game" class="absolute" :style="{...getFieldStyleObj(game.grid.player2Resource), 'z-index':10}">
-            <slider-resource label="Resources :" 
-                :value1="game.player2.resourcesAvailable"
-                :value2="game.player2.resourcesEx"
-                :valuemax="game.player2.resourcesMax">
+        <div v-if="game" class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Resource), 'z-index': 10 }">
+            <slider-resource label="Resources :" :value1="game.player2.resourcesAvailable"
+                :value2="game.player2.resourcesEx" :valuemax="game.player2.resourcesMax">
             </slider-resource>
         </div>
 
@@ -261,7 +257,8 @@ export default {
         decklistPlayer1: null,
         decklistPlayer2: null,
         decklistShow: null,
-        deckList: []
+        deckList: [],
+        quickstart: false
     }),
     mounted() {
         document.body.style.overflow = "hidden";
@@ -271,9 +268,11 @@ export default {
 
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
-        //this.decklistPlayer1 = cards.decklist[5].list;
-        //this.decklistPlayer2 = cards.decklist[4].list;
-        //this.start();
+        if (this.quickstart) {
+            this.decklistPlayer1 = cards.decklist[5].list;
+            this.decklistPlayer2 = cards.decklist[4].list;
+            this.start();
+        }
     },
     methods: {
         showDeckList(decklist) {
@@ -289,7 +288,7 @@ export default {
             this.decklistShow = null;
         },
         start() {
-            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2);
+            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2, this.quickstart);
             this.refreshGame();
         },
         nextTurn() {
