@@ -23,10 +23,6 @@ class array {
 
     // Log
     static log(text) { this.game.logs = text + '<br>' + this.game.logs; }
-    static logEffect(effect, text) {
-        this.log('utils.logEffect:' + text);
-        this.effects = this.effects ? this.effects.concat([text]) : [text];
-    }
 
     // Utils
     static isPair(x) { return x % 2 == 0 }

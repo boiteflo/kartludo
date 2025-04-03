@@ -1,15 +1,18 @@
+import effectsLuncher from './effectsLuncher';
 import positioner from './positioner';
 import selectable from './selectable';
 import cardMove from './cardMove';
 import cardLife from './cardLife';
-import effects from './effects';
+import cardPlay from './cardPlay';
 import refresh from './refresh';
+import effects from './effects';
 import setup from './setup';
 import popup from './popup';
 import tasks from './tasks';
 import utils from './utils';
 import show from './show';
 import turn from './turn';
+import pair from './pair';
 
 /* eslint-disable no-unused-vars */
 class game {
@@ -23,7 +26,7 @@ class game {
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2) {
         this.cards = cards.cards;
         this.game = { logs:'', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards:cards, decklistPlayer1, decklistPlayer2 };
-        utils.addFunction([tasks, utils, popup, setup, positioner, turn, refresh, cardMove, cardLife, effects, selectable, show], this);
+        utils.addFunction([tasks, utils, popup, setup, positioner, turn, refresh, cardMove, cardLife, cardPlay, selectable, show, effectsLuncher, effects, pair], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
         this.isStart = true;
@@ -39,8 +42,9 @@ class game {
         return this.handleTasks(game);
     }
 
-    static playCard(game, card1, card2, drop) {
-        return game;
+    static playCard(game, card1, card2, zone) {
+        this.addTask({ id: this.play.name, card1, card2, zone, regularPlay:true });
+        return this.continue(game);
     }
 
     static selectChoice(game, choice) {

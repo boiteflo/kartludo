@@ -681,7 +681,7 @@
                 {
                     "trigger": "onpair",
                     "target": "pairUnit",
-                    "id": "immuneAp",
+                    "id": "immuneApIfBreach",
                     "value": 4,
                     "oneTurn": true
                 },

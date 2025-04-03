@@ -58,9 +58,9 @@
             <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Trash.text)">
                 Trash {{ game.player1.trash.length }}
             </div>
-            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
+            <div v-if="game" class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
-            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
+            <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
             </div>
 
             <!-- Player 2-->

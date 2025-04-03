@@ -2,13 +2,14 @@
 
 class setup {
 
-    static handStartLength = 5;
+    static handStartLength = 10;
     static shieldStartLength = 6;
 
     static setupGame(game) {
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
+        game.fields = [game.grid.player1Hand, game.grid.player1Field, game.grid.player2Hand, game.grid.player2Field];
 
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
         playerOpponent.resourcesEx += 1;
@@ -20,10 +21,6 @@ class setup {
                 { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: false }]);
         }
 
-        tasks = tasks.concat([
-            { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: true },
-            { id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: false }]);
-
         this.addTasks(tasks);
     }
 
@@ -32,7 +29,7 @@ class setup {
 
         const result = {
             isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resAString: "0", resourcesMax: 0, resourcesAvailable: 0, resourcesEx: 0,
+            resourcesMax: 7, resourcesAvailable: 0, resourcesEx: 0,
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,

@@ -72,12 +72,14 @@ class positioner {
 
         grid.player1Hand = {
             x, y: grid.height - grid.border - grid.boxHeight,
-            width: grid.width - grid.border2, height: grid.boxHeight
+            width: grid.width - grid.border2, height: grid.boxHeight,
+            isPlayer1: true, location : this.locationHand
         }
+
         grid.player1Field = {
             x, y: grid.centerZone.y + grid.centerZone.height - grid.border2,
             width: grid.width - grid.border2, height: grid.boxHeight * 1.5,
-            location: this.locationField
+            isPlayer1: true, location : this.locationField
         }
 
         grid.player1Resource = {
@@ -106,13 +108,16 @@ class positioner {
 
         grid.player2Hand = {
             x, y: grid.border,
-            width: (grid.width / 2) - grid.border2, height: grid.boxHeight
+            width: (grid.width / 2) - grid.border2, height: grid.boxHeight,
+            isPlayer1: false, location : this.locationHand
         }
+
         grid.player2Field = {
             x, y: grid.player2Hand.y + grid.player2Hand.height + (5*grid.border),
             width: grid.width - grid.border2, height: grid.boxHeight * 1.5,
-            location: this.locationField
+            isPlayer1: false, location : this.locationField
         }
+
         grid.player2Resource = {
             x:grid.border, y:grid.player2Field.y - (4*grid.border),
             width: grid.width - grid.border2, height:grid.border*3

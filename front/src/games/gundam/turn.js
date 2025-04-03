@@ -4,16 +4,14 @@ class turn {
     static getPlayerTurnOpponent() { return this.getOpponent(this.game.isPlayer1); }
     static getOpponent(isPlayer1) { return isPlayer1 ? global.game.player2 : global.game.player1; }
 
-    static turnIndex=0;
+    static turnIndex = 0;
 
     static nextTurn(game, task, player) {
-        let isExisting = !task.effectsEndAlreadyDone
-            ? this.lunchEffectTrigger(player.field, this.effectsEnd)
-            : false;
-        if (isExisting) {
-            task.effectsEndAlreadyDone = true;
+        let isExisting = task.effectsAlreadyDone ? false
+            : this.lunchEffectTriggerMultiple(player.field, this.trigger_end);
+        task.effectsAlreadyDone = true;
+        if (isExisting)
             return { stop: true };
-        }
 
         game.isPlayer1 = !game.isPlayer1;
         const newPlayer = this.getPlayerTurn();

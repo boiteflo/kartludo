@@ -1,25 +1,35 @@
 class pair {
-    static pair(player, card1, card2) {
-        const cardUnit = this.isCardUnit(card1) ? card1 : card2;
-        const cardPilot = this.isCardPilot(card1) ? card1 : card2;
+    static pair(game, task, player) {
+        const cardUnit = this.isCardUnit(task.card1) ? task.card1 : task.card2;
+        const cardPilot = this.isCardPilot(task.card1) ? task.card1 : task.card2;
         const isLink = this.isLink(cardUnit, cardPilot);
-        const trigger = isLink ? effects.onlink : effects.onpair;
-        const effectResult = effects.handleEffects(player, cardUnit, cardPilot, trigger);
-        if (effectResult.stop)
-            return effectResult;
+
+        const isExistingPairEffects = task.effectsAlreadyDonePair ? false
+            : this.lunchEffectTriggerForTwoCard(cardUnit, cardPilot, this.trigger_onpair);
+        task.effectsAlreadyDonePair = true;
+        if (isExistingPairEffects)
+            return { stop: true };
+
+        if (isLink) {
+            const isExistingLinkEffects = task.effectsAlreadyDoneLink ? false
+                : this.lunchEffectTriggerForTwoCard(cardUnit, cardPilot, this.trigger_onlink);
+            task.effectsAlreadyDoneLink = true;
+            if (isExistingLinkEffects)
+                return { stop: true };
+        }
 
         const from = cardPilot.location;
-        player[from] = global.removeByIndex(player[from], cardPilot);
+        player[from] = this.removeByIndex(player[from], cardPilot);
         cardUnit.pair = cardPilot;
         cardPilot.selectable = false;
         cardPilot.isPaired = true;
-        cardPilot.location = global.locationPair;
+        cardPilot.location = this.locationPair;
         cardPilot.zindex = 1;
         cardUnit.zindex = 2;
         cardUnit.ap += cardPilot.ap;
         cardUnit.hp += cardPilot.hp;
 
-        if (this.isLink(cardUnit, cardPilot)) {
+        if (isLink) {
             cardUnit.link = true;
             cardPilot.link = true;
             cardUnit.active = true;

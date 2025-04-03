@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
+
 class tasks {    
+    static indexTask=1;
 
     static handleTasks(game) {
         if (game.end) {
@@ -27,13 +29,13 @@ class tasks {
             if (result && result.stop)
                 return game;
 
+            game.tasks = game.tasks.filter(x=> x.index !== task.index);
+
             if (task.delay) {
                 game.wait = task.delay === true ? this.delay : task.delay;
-                task = game.tasks.splice(0, 1)[0];
                 return game;
             }
 
-            task = game.tasks.splice(0, 1)[0];
             task = game.tasks[0];
             i++;
         }
@@ -43,10 +45,18 @@ class tasks {
 
         return game;
     }
+
+    static addTasksIndex(tasks){
+        tasks.forEach(x=> {
+            x.index = this.indexTask;
+            this.indexTask++;
+        });
+    }
     
-    static addTask(task) { return this.addTasks[task]; }
+    static addTask(task) { return this.addTasks([task]); }
     static addTasks(tasks) {
         this.needTaskEndRefresh = true;
+        this.addTasksIndex(tasks);
         this.game.tasks = this.game.tasks.concat(tasks);
         return {};
     }
@@ -54,6 +64,15 @@ class tasks {
     static addTaskFirst(task) { return this.addTasksFirst([task]); }
     static addTasksFirst(tasks) {
         this.game.tasks = tasks.concat(this.game.tasks);
+        this.addTasksIndex(tasks);
+        return { stop: true };
+    }
+
+    static addTaskPos2(task) { return this.addTasksPos2([task]); }
+    static addTasksPos2(tasks) {
+        const first = this.game.tasks.splice(0,1)[0];
+        this.game.tasks = [first].concat(tasks).concat(this.game.tasks);
+        this.addTasksIndex(tasks);
         return { stop: true };
     }
 
