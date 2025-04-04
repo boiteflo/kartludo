@@ -1,9 +1,9 @@
 class refresh {
 
     static refreshFieldAndHand(game, task, player) {
-        this.refreshPlayerField(player.hand, player.positions.hand, false, 7);
-        this.refreshPlayerField(player.field, player.positions.field, false, 3);
-        this.refreshPlayerField(player.base, player.positions.base, true);
+        this.refreshPlayerArea(player.hand, player.positions.hand, false, 7, false);
+        this.refreshPlayerArea(player.field, player.positions.field, false, 3, true);
+        this.refreshPlayerArea(player.base, player.positions.base, true);
         
         const cardsToRemoveIndex = player.trash.filter(x => !x.to).map(x => x.index);
         game.cards = game.cards.filter(x => !cardsToRemoveIndex.includes(x.index));
@@ -17,7 +17,7 @@ class refresh {
         player.trashIcon = this.getIcon(player.trash.length);
     }
     
-    static refreshPlayerField(cards, position, useZoneSize, wrapCut) {
+    static refreshPlayerArea(cards, position, useZoneSize, wrapCut, centerEmptyZone) {
         let zoneHeight = position.height;
         if (position.location == this.locationField)
             zoneHeight *= 0.75;
@@ -25,7 +25,7 @@ class refresh {
         cards.forEach((card, index) => {
             const degree = card.active ? 0 : 90;
             card.bgposition = '0 0';
-            card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut);
+            card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut, centerEmptyZone);
             card.location = position.location;
             if (position.location == this.locationField && card.pair)
                 card.pair.to = this.getPairPosition(card.to);

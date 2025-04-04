@@ -169,12 +169,12 @@
         </div>
 
         <!-- Popup -->
-        <div v-if="game?.popup" class="textVerticalCenter"
-            style="z-index:12; width:100%; height: 64px; position:fixed; top:0px; left:0px;">
+        <div v-if="game?.popup" class="textVerticalCenter h100p"
+            style="z-index:12; width:100%; position:fixed; left:0px;">
 
-            <div style="background-color: #FFFF00F0; width:100%; height:100%;">
-                <h3 class="text-center colorBlack textVerticalCenter w100p" v-html="game?.popup.text"></h3>
-                <div class="flex-wrap w100p">
+            <div style="background-color: #FFFF00F0; width:100%; flex-direction: column-reverse" class="flex">
+                <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
+                <div class="flex-wrap w100p horizontal-scroll">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand">
                         <img :style="getFieldStyleObj(game?.grid.card100)" @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />

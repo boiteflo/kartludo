@@ -126,6 +126,14 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: true });
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
+        
+        for (let i = 0; i < 5; i++) {
+            tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: true });
+        }
+        
+        for (let i = 0; i < 4; i++) {
+            tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: false });
+        }
 
         if (!this.quickstart) {
             game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];

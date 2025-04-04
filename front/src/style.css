@@ -557,6 +557,11 @@
     overflow-x: hidden;
 }
 
+.horizontal-scroll {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
 h1 {
     background-color: #212A3C;
     color: white;

@@ -16,15 +16,15 @@ class positioner {
         grid.border2 = grid.border * 2;
         grid.width = screenWidth;
         grid.height = screenHeight;
-        grid.boxHeight = (grid.height - (grid.border * 6)) / 6;
+        grid.boxHeight = (grid.height - (grid.border * 6)) / 5.5;
         grid.card100 = {width:107, height: 150};
 
         let height = grid.boxHeight;
         grid.centerZone = {
-            x: 0, y: (0.5 * grid.height) - (0.5 * height),
+            x: 0, y: (0.5 * grid.height) - (0.75 * height),
             width: grid.width, height: height
         };
-        grid.centerZone.heightQuarter = grid.centerZone.height / 4;
+        grid.centerZone.heightQuarter = grid.centerZone.height / 5;
 
         const textHeight = grid.border * 2;
         const iconHeight = grid.centerZone.heightQuarter * 2;
@@ -113,7 +113,7 @@ class positioner {
 
         grid.player2Hand = {
             x, y: grid.border,
-            width: (grid.width / 2) - grid.border2, height: grid.boxHeight,
+            width: (grid.width / 2) - grid.border2, height: grid.boxHeight /2,
             isPlayer1: false, location : this.locationHand
         }
 
@@ -166,15 +166,17 @@ class positioner {
         return { x, y, width: desiredWidth, height: desiredHeight };
     }
 
-    static getWrapPosition(position, cardSize, total, index, degree, wrapCut) {
-        if (total < wrapCut || position.height < cardSize.height * 2)
-            return this.getCardPositionXY(position, cardSize, total, index, degree);
+    static getWrapPosition(position, cardSize, total, index, degree, wrapCut, centerEmptyZone) {
+        const totalCards = centerEmptyZone ? total +1 : total;
+        const mid = Math.floor(totalCards / 2);
+        const indexModified = centerEmptyZone && index >= mid ? index+1: index;
+        if (totalCards < wrapCut || position.height < cardSize.height * 2)
+            return this.getCardPositionXY(position, cardSize, totalCards, indexModified, degree);
 
-        const mid = Math.floor(total / 2);
-        const indexLine = index < mid ? index : index - mid;
-        const totalLine = total - mid;
+        const indexLine = indexModified < mid ? indexModified : indexModified - mid;
+        const totalLine = totalCards - mid;
         const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine, position.cardHeightPercent);
-        const positionLine = index < mid ? position : { ...position, y: position.y + cardSizeLine.height };
+        const positionLine = indexModified < mid ? position : { ...position, y: position.y + cardSizeLine.height };
         return this.getCardPositionXY(positionLine, cardSizeLine, totalLine, indexLine, degree);
     }
 
