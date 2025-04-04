@@ -135,13 +135,13 @@ class ai {
     }
 
     static handleAiPopup(game, task) {
-        if (task.cards && task.cards.length > 0) {
-            task.task.cardChoice = task.cards[0];
+        if (task.choices && task.choices.length > 0) {
+            task.task.choice = task.choices[0];
             return {};
         }
 
-        if (task.choices && task.choices.length > 0) {
-            task.task.choice = task.choices[0];
+        if (task.cards && task.cards.length > 0) {
+            task.task.cardChoice = task.cards[0];
             return {};
         }
 
@@ -151,7 +151,7 @@ class ai {
 
     static getPlayCardTasks(player, card1, card2) {
         return [
-            { id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true, delay: true },
+            { id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true },
             { id: this.taskEndRefresh.name, delay: true }
         ]
     }

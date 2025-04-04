@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute bgYellow circle15px" @click="$emit('click', card)" :style="{
+  <div class="absolute bgYellow circle15px elevation-24" @click="$emit('click', card)" :style="{
     left: card.position.x + 'px',
     top: card.position.y + 'px',
     width: card.position.width + 'px',
