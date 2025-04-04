@@ -258,7 +258,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: false
+        quickstart: true
     }),
     mounted() {
         document.body.style.overflow = "hidden";

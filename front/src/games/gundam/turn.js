@@ -19,7 +19,7 @@ class turn {
 
         const tasks = [
             { id: this.showTitle.name, value: 'New turn for player ' + playerId, isPlayer1: game.isPlayer1, delay: true },
-            { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand }
+            { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand, verso:!game.isPlayer1 }
         ];
 
         if(!game.isPlayer1)

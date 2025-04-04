@@ -9,11 +9,14 @@
     cursor: shine ? 'pointer' : ''
   }">
     <div v-if="!card">No card</div>
+    <img v-else-if="card.verso" :class="{ w100p: true, h100p: true, absolute:true }" draggable="false"
+      :style="{ 'object-fit': 'cover', 'object-position': card.bgposition, 'pointer-events': 'none' }"
+      :src="require('@/assets/' + folder + 'empty.webp')"  />
     <img v-else :class="{ w100p: true, h100p: true, shine: shine, absolute:true }" draggable="false"
       :style="{ 'object-fit': 'cover', 'object-position': card.bgposition, 'pointer-events': 'none' }"
       :src="require('@/assets/' + folder + card.id + '.webp')" @mouseover="$emit('mouseover', card)"
       @contextmenu.prevent="$emit('clickright', card)" />
-    <div v-if="!hidestat && (card.ap || card.hp)" class="absolute circle10px textVerticalCenter centerDiv colorBlack fontSize1em"
+    <div v-if="!card.verso && !hidestat && (card.ap || card.hp)" class="absolute circle10px textVerticalCenter centerDiv colorBlack fontSize1em"
       style="width:40px; height:25px; top:0px; background-color: #FFFFFFB0;">
       {{ card.ap }} - {{ card.hp }}
     </div>
