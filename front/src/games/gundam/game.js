@@ -15,6 +15,7 @@ import utils from './utils';
 import show from './show';
 import turn from './turn';
 import pair from './pair';
+import ai from './ai';
 
 /* eslint-disable no-unused-vars */
 class game {
@@ -32,7 +33,7 @@ class game {
         this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
         utils.addFunction([
             tasks, utils, popup, setup, positioner, turn, refresh, selectable, show,
-            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effects, pair, attack
+            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effects, pair, attack, ai
         ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);

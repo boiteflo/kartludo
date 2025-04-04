@@ -90,6 +90,7 @@ class effectsLuncher {
 
         this.game.tasks = [{
             id: this.popup.name,
+            isPlayer1:player.isPlayer1,
             task,
             text: 'Select available target',
             cards

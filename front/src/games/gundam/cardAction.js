@@ -38,7 +38,7 @@ class cardAction {
                 id: this.popup.name,
                 text: `Select an action card for player ${playerIndex} ?`,
                 cards: actionCard,
-                task,
+                task,  isPlayer1:player.isPlayer1,
                 choices: [{ text: this.noActionCard }]
             }].concat(game.tasks);
             return { stop: true };

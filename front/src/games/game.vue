@@ -174,7 +174,7 @@
 
             <div style="background-color: #FFFF00F0; width:100%; flex-direction: column-reverse" class="flex">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
-                <div class="flex-wrap w100p horizontal-scroll">
+                <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand">
                         <img :style="getFieldStyleObj(game?.grid.card100)" @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
@@ -258,7 +258,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: true
+        quickstart: false
     }),
     mounted() {
         document.body.style.overflow = "hidden";

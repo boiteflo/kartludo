@@ -66,11 +66,18 @@ class attack {
             return {};
 
         if (!task.cardChoice && !task.choice)
-            return this.addTaskFirst({ id: this.popup.name, task, text: 'Select a blocker ?', cards: blockers, choices: [{ text: 'none' }] });
+            return this.addTaskFirst({
+                id: this.popup.name,
+                isPlayer1: opponent.isPlayer1,
+                task,
+                text: 'Select a blocker ?',
+                cards: blockers,
+                choices: [{ text: 'none' }]
+            });
 
         task.blocker = task.cardChoice;
-        delete(task.cardChoice);
-        delete(task.choice);
+        delete (task.cardChoice);
+        delete (task.choice);
         return {};
     }
 
@@ -94,11 +101,11 @@ class attack {
         if (opponent.shield.length > 0) {
             task.step = 'end';
             this.setActive(task.attacker, false);
-            if(task.shieldProtection)
+            if (task.shieldProtection)
                 return { end: true };
 
-            const card1 =opponent.shield[0];
-            card1.position = this.clone(opponent.positions.shield);            
+            const card1 = opponent.shield[0];
+            card1.position = this.clone(opponent.positions.shield);
             task.attacker.to = { ...task.attacker.position, x: opponent.positions.shield.x, y: opponent.positions.shield.y };
 
             this.addTasks([
@@ -122,7 +129,7 @@ class attack {
     }
 
     static showFight(game, task, player, opponent) {
-        this.addTaskFirst({ id: this.showCards.name, card1: task.attacker, card2:task.target, delay: true });
+        this.addTaskFirst({ id: this.showCards.name, card1: task.attacker, card2: task.target, delay: true });
         this.nextStep(task);
         return { stop: true };
     }
@@ -142,26 +149,26 @@ class attack {
         this.setActive(task.attacker, false);
         let tasks = [];
         const delay = activeBreach;
-        let tasksAttackerDead= [];
+        let tasksAttackerDead = [];
 
         if (!task.breach && task.attacker.hp < 1)
-            tasksAttackerDead= this.destroyUnit(task.attacker, false);
+            tasksAttackerDead = this.destroyUnit(task.attacker, false);
 
         if (task.target.hp < 1)
             tasks = this.destroyUnit(task.target, delay);
 
         this.setActive(task.attacker, false);
 
-        if (activeBreach){
-            this.cardHighlight = this.cardHighlight.filter(x=> x.index !== task.attacker.index);
+        if (activeBreach) {
+            this.cardHighlight = this.cardHighlight.filter(x => x.index !== task.attacker.index);
             tasks.push({
-                id: this.attack.name, step:this.stepSelectCardOpponent,
+                id: this.attack.name, step: this.stepSelectCardOpponent,
                 attacker: task.attacker, isPlayer1: task.attacker.isPlayer1,
-                breach: task.attacker.breach, delay:true
+                breach: task.attacker.breach, delay: true
             });
         }
 
-        if(tasksAttackerDead.length > 0)
+        if (tasksAttackerDead.length > 0)
             tasks = tasks.concat(tasksAttackerDead);
 
         this.addTasks(tasks);

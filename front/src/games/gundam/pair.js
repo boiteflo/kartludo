@@ -39,11 +39,11 @@ class pair {
     }
 
     static isLink(cardUnit, cardPilot) {
-        if (cardUnit.link.includes('['))
+        if (cardUnit.link?.includes('['))
             return cardUnit.link.includes(cardPilot.name);
         else {
             const targetStr = cardUnit.link.replace('(', '').replace(')', '');
-            return cardPilot.attribute.includes(targetStr);
+            return cardPilot.attribute?.includes(targetStr);
         }
     }
 }

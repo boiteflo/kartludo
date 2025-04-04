@@ -4,6 +4,9 @@ class popup {
         if(!task.task)
             throw new Error('Il faut préciser la task de la popup !');
         
+        if(!task.isPlayer1)
+            return this.handleAiPopup(game,task);
+        
         if (!game.popup || !game.popup.task || (!game.popup.task.cardChoice && !game.popup.task.choice)) {
             game.popup = task;
             return { stop: true };

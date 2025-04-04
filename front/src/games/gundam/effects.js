@@ -15,6 +15,7 @@ class effects {
         if (!card1) {
             this.addTaskFirst({
                 id: this.popup.name,
+                isPlayer1:player.isPlayer1,
                 task,
                 text: 'Select a card to discard',
                 cards: player.hand
@@ -69,6 +70,7 @@ class effects {
             task.cards = [this.getAndRemoveFirst(player.deck), this.getAndRemoveFirst(player.deck)];
             this.addTaskFirst({
                 id: this.popup.name,
+                isPlayer1:player.isPlayer1,
                 task,
                 text: 'Select the card that will go to the top deck, the other one will go bottom deck',
                 cards: task.cards

@@ -26,7 +26,7 @@ class cardPlay {
             return { sendBack: true };
         }
         
-        this.addTask({ id: this.attack.name, attacker: task.card1, target: task.card2, isPlayer1: task.card1.isPlayer1, breach:null });
+        this.addTaskPos2({ id: this.attack.name, attacker: task.card1, target: task.card2, isPlayer1: task.card1.isPlayer1, breach:null });
     }
 
     static playFromHand(player, task) {
@@ -51,7 +51,7 @@ class cardPlay {
         let isPilot = this.isCardPilot(task.card1);
         let isCommand = this.isCardCommand(task.card1);
 
-        const pilotOrCommand = this.askPilotOrCommand(task);
+        const pilotOrCommand = this.askPilotOrCommand(player, task);
         isPilot = pilotOrCommand ? pilotOrCommand.isPilot : isPilot;
         isCommand = pilotOrCommand ? pilotOrCommand.isCommand : isCommand;
         if (pilotOrCommand && pilotOrCommand.stop)
@@ -70,15 +70,15 @@ class cardPlay {
             task.card1.canAttack = false;
             if (playCost)
                 this.playCardCost(player, task.card1);
-            this.addTask({ id: this.move.name, card1: task.card1, to: this.locationField });
+            this.addTaskPos2({ id: this.move.name, card1: task.card1, to: this.locationField });
             return;
         }
 
         if (this.isCardBase(task.card1)) {
             if (player.base.length > 0)
-                this.addTask({ id: this.move.name, card1: player.base[0], to: this.locationTrash });
+                this.addTaskPos2({ id: this.move.name, card1: player.base[0], to: this.locationTrash });
 
-            this.addTask({ id: this.move.name, card1: task.card1, to: this.locationBase });
+            this.addTaskPos2({ id: this.move.name, card1: task.card1, to: this.locationBase });
             task.card1.selectable = false;
             return;
         }
@@ -91,7 +91,7 @@ class cardPlay {
 
             if (playCost)
                 this.playCardCost(player, task.card1);
-            this.addTask({ id: this.pair.name, card1: task.card1, card2: task.card2 });
+            this.addTaskPos2({ id: this.pair.name, card1: task.card1, card2: task.card2 });
             return;
         }
 
@@ -99,7 +99,7 @@ class cardPlay {
             if (playCost)
                 this.playCardCost(player, task.card1);
             
-            this.addTasks([
+            this.addTasksPos2([
                 { id: this.applyEffectCard.name, card1: task.card1, card2:task.card2, trigger: this.trigger_command },
                 { id: this.move.name, card1: task.card1, to: this.locationTrash }
             ]);
@@ -115,7 +115,7 @@ class cardPlay {
         player.resourcesAvailable -= card.cost;
     }
 
-    static askPilotOrCommand(task) {
+    static askPilotOrCommand(player, task) {
         if (!task.card2 || !this.isCardPilot(task.card1) || !this.isCardCommand(task.card1))
             return;
 
@@ -130,6 +130,7 @@ class cardPlay {
 
         this.addTaskFirst({
             id: this.popup.name,
+            isPlayer1:player.isPlayer1,
             text: 'Do you want to play as pilot or command ?',
             choices: [{ text: 'Pilot' }, { text: 'Command' }],
             task

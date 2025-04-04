@@ -17,10 +17,15 @@ class turn {
         const newPlayer = this.getPlayerTurn();
         const playerId = game.isPlayer1 ? '1' : '2';
 
-        this.addTasks([
+        const tasks = [
             { id: this.showTitle.name, value: 'New turn for player ' + playerId, isPlayer1: game.isPlayer1, delay: true },
             { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand }
-        ]);
+        ];
+
+        if(!game.isPlayer1)
+            tasks.push({id: this.newTurnForAI.name});
+        
+        this.addTasks(tasks);
 
         this.removeOneTurnEffect(game.cards);
 

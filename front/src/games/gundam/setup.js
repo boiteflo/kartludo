@@ -8,13 +8,13 @@ class setup {
 
     static setupGame(game) {
         if (this.quickstart) {
-            this.handStartLength = 15;
-            this.resourceStart = 8;
+            this.handStartLength = 5;
+            this.resourceStart = 0;
         }
 
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
-        game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
+        game.isPlayer1 = this.quickstart ? true : Math.floor(Math.random() * 2) == 1;
         game.fields = [game.grid.player1Hand, game.grid.player1Field, game.grid.player2Hand, game.grid.player2Field];
 
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
@@ -92,6 +92,7 @@ class setup {
             return this.addTaskFirst(
                 {
                     id: this.popup.name,
+                    isPlayer1:true,
                     task,
                     text: 'Do you want to do a mulligan ?',
                     choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }]
@@ -126,19 +127,9 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: true });
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
-        
-        for (let i = 0; i < 5; i++) {
-            tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: true });
-        }
-        
-        for (let i = 0; i < 4; i++) {
-            tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationField, isPlayer1: false });
-        }
 
-        if (!this.quickstart) {
-            game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
-            game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
-        }
+        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
 
         return tasks;
     }
