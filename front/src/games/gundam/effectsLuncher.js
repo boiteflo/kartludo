@@ -5,6 +5,7 @@ class effectsLuncher {
     static trigger_battle = 'battle';
     static trigger_burst = 'burst';
     static trigger_command = 'command';
+    static trigger_action = 'action';
     static trigger_ondestroyed = 'ondestroyed';
     static trigger_onRefreshField = 'onRefreshField';
     static trigger_end = 'end';
@@ -89,6 +90,7 @@ class effectsLuncher {
 
         this.game.tasks = [{
             id: this.popup.name,
+            task,
             text: 'Select available target',
             cards
         }].concat(this.game.tasks);

@@ -1,6 +1,7 @@
 import effectsLuncher from './effectsLuncher';
 import positioner from './positioner';
 import selectable from './selectable';
+import cardAction from './cardAction';
 import cardMove from './cardMove';
 import cardLife from './cardLife';
 import cardPlay from './cardPlay';
@@ -30,8 +31,8 @@ class game {
         this.quickstart = quickstart;
         this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
         utils.addFunction([
-            tasks, utils, popup, setup, positioner, turn, refresh,
-            cardLife, cardMove, cardPlay, selectable, show, effectsLuncher, effects, pair, attack
+            tasks, utils, popup, setup, positioner, turn, refresh, selectable, show,
+            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effects, pair, attack
         ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);

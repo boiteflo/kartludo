@@ -26,7 +26,7 @@ class attack {
                 result = this.selectBlocker(game, task, player, opponent);
 
             else if (task.step === this.stepSelectActionCards)
-                result = this.selectCardAction(game, task, player, opponent);
+                result = this.askForActionCards(game, task, player, opponent);
 
             else if (task.step === this.stepSelectCardOpponent)
                 result = this.selectCardOpponent(game, task, player, opponent);
@@ -43,7 +43,7 @@ class attack {
             else
                 result.end = true;
 
-            if (!result.stop && !result.end)
+            if (!result || (!result.stop && !result.end))
                 this.nextStep(task);
         }
 
@@ -74,13 +74,6 @@ class attack {
         return {};
     }
 
-    static selectCardAction(game, task, player, opponent) {// task
-        /*const actionCardResult = cardAction.askForActionCards(task.player, opponent);
-        if (actionCardResult && actionCardResult.stop)
-            return actionCardResult;*/
-        return {};
-    }
-
     static selectCardOpponent(game, task, player, opponent) {
         if (task.blocker) {
             task.target = task.blocker;
@@ -101,8 +94,12 @@ class attack {
         if (opponent.shield.length > 0) {
             task.step = 'end';
             this.setActive(task.attacker, false);
+            if(task.shieldProtection)
+                return { end: true };
+
             const card1 =opponent.shield[0];
-            card1.position = this.clone(opponent.positions.shield);
+            card1.position = this.clone(opponent.positions.shield);            
+            task.attacker.to = { ...task.attacker.position, x: opponent.positions.shield.x, y: opponent.positions.shield.y };
 
             this.addTasks([
                 { id: this.showCards.name, card1, delay: 100 },
@@ -115,7 +112,13 @@ class attack {
     }
 
     static effectBattle(game, task, player, opponent) {
-        return {}; // effects.handleEffects(player, task.attacker, task.target, effects.battle);
+        let isExisting = task.battleEffectsAlreadyDone ? false
+            : this.lunchEffectTriggerForOneCard(task.attacker, task.target, this.trigger_battle);
+        if (isExisting) {
+            task.battleEffectsAlreadyDone = true;
+            return { stop: true };
+        }
+        return {};
     }
 
     static showFight(game, task, player, opponent) {
@@ -164,14 +167,6 @@ class attack {
         this.addTasks(tasks);
         return {};
     }
-
-    /*
-    static taskAttackPlayerAnimation(game, task, player) {
-        const opponent = this.getPlayer(!player.isPlayer1);
-        const heartPosition = opponent.isPlayer1 ? this.grid.player1Heart : this.grid.player2Heart;
-        task.card1.to = { ...task.card1.position, x: heartPosition.x, y: heartPosition.y };
-    }
-        */
 }
 
 

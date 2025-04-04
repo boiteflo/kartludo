@@ -7,11 +7,11 @@ class setup {
     static shieldStartLength = 6;
 
     static setupGame(game) {
-        if(this.quickstart){
-            this.handStartLength=15;
-            this.resourceStart=8;
+        if (this.quickstart) {
+            this.handStartLength = 15;
+            this.resourceStart = 8;
         }
-        
+
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = false; // Math.floor(Math.random() * 2) == 1;
@@ -85,7 +85,7 @@ class setup {
     }
 
     static mulligan(game, task) {
-        if(this.quickstart)
+        if (this.quickstart)
             task.choice = {};
 
         if (!task.choice) {
@@ -110,9 +110,9 @@ class setup {
             }
 
             tasks = tasks.concat(this.addShielsAndBase(game));
-            
-            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1:true });
-            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1:false });
+
+            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
+            tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });
 
             tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
             this.addTasks(tasks);
@@ -127,8 +127,10 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
-        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        if (!this.quickstart) {
+            game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+            game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        }
 
         return tasks;
     }

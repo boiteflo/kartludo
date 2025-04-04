@@ -15,6 +15,7 @@ class effects {
         if (!card1) {
             this.addTaskFirst({
                 id: this.popup.name,
+                task,
                 text: 'Select a card to discard',
                 cards: player.hand
             });
@@ -81,7 +82,14 @@ class effects {
     }
 
     static protectionShieldLvXOrLower(game, task, player, opponent) {
-        throw new Error('cant handle this effect : ' + JSON.stringify(task.effect));
+        if(!task.taskAttack || !task.taskAttack.attacker)
+            throw new Error('cant handle this effect : ' + JSON.stringify(task.effect));
+
+        task.taskAttack.shieldProtection=task.taskAttack.attacker.level <= task.effect.value;
+        if(task.taskAttack.shieldProtection)
+            this.log(`Shield are protected`);
+        else
+        this.log(`Shield are not protected because attacker is level ${task.taskAttack.attacker.level}`);
     }
 
     static gainThisTurn(game, task, player, opponent) {

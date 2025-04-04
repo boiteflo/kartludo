@@ -258,7 +258,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: false
+        quickstart: true
     }),
     mounted() {
         document.body.style.overflow = "hidden";
@@ -270,7 +270,7 @@ export default {
         this.deckList = cards.decklist;
         if (this.quickstart) {
             this.decklistPlayer1 = cards.decklist[5].list;
-            this.decklistPlayer2 = cards.decklist[4].list;
+            this.decklistPlayer2 = cards.decklist[5].list;
             this.start();
         }
     },
