@@ -36,12 +36,21 @@ class effectsLuncher {
     }
 
     static lunchEffectTriggerForOneCard(card1, card2, trigger) {
-        const isExisting = card1.effects && card1.effects.find(y => y.trigger === trigger);
-        if (!isExisting)
-            return false;
+        const result = {isEffectExisting:false};
+        const effects = card1.effects && card1.effects.filter(y => y.trigger === trigger);
+        if (!effects || effects.length < 1)
+            return result;
 
+        result.isEffectExisting=true;
+        result.cancelMoveToTrash = this.getCancelMoveToTrash(effects);
         this.addTaskFirst({ id: this.applyEffectCard.name, card1, card2, trigger });
-        return true;
+
+        return result;
+    }
+
+    static getCancelMoveToTrash(effects){
+        const effectsThantCancelMoveToTrash = [this.sendToHand.name, this.sendToField.name, this.sendToBase.name];
+        return effects.find(effect=> effectsThantCancelMoveToTrash.includes(effect.id)) ? true : false;
     }
 
     static lunchEffectTriggerForTwoCard(card1, card2, trigger) {

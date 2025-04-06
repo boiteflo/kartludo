@@ -47,7 +47,14 @@ class game {
             this.isStart = false;
         }
         this.endAnimation(game);
-        return this.handleTasks(game);
+        let result = this.handleTasks(game);
+        if(!game.refresh && !game.isPlayer1)
+        {
+            this.addTask({id: this.newTurnForAI.name});
+            result = this.continue(game);
+        }
+        
+        return result;
     }
 
     static playCard(game, card1, card2, zone) {

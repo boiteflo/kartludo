@@ -21,7 +21,7 @@ class ai {
             return result;
 
         result = this.handleAiField(game, task, player);
-        if (result.stop)
+        if (result.attack)
             return result;
 
         this.endTurn(game);
@@ -77,7 +77,7 @@ class ai {
     }
 
     static hasLinkEffect(card) {
-        return card && card.effects && card.effects.find(x => x.trigger === this.trigger_onlink);
+        return card && card.effects && card.effects.find(x => x.trigger === this.trigger_onlink) ? true : false;
     }
 
     static handleAiHand(game, task, player, cardsAvailable, combos) {
@@ -118,20 +118,22 @@ class ai {
     }
 
     static handleAiField(game, task, player) {
-        const unitsThatCanAttack = player.field.filter(card => this.isCardUnit(card) && card.canAttack);
-        let tasks = [];
-        unitsThatCanAttack.forEach(x => {
-            tasks = tasks.concat([
-                {
-                    id: this.attack.name,
-                    attacker: x, isPlayer1: false,
-                    breach: x.breach
-                },
-                { id: this.taskEndRefresh.name, delay: true }
-            ]);
-        });
-        this.addTasksFirst(tasks);
-        return {};
+        const unitsThatCanAttack = player.field
+            .filter(card => this.isCardUnit(card) && card.canAttack)
+            .sort((a, b) => b.ap - a.ap);
+        const attacker = unitsThatCanAttack[0];
+        if (!attacker)
+            return {};
+
+        this.addTasksFirst([
+            {
+                id: this.attack.name,
+                attacker, isPlayer1: false,
+                breach: attacker.breach
+            },
+            { id: this.taskEndRefresh.name, delay: true }
+        ]);
+        return { attack: true };
     }
 
     static handleAiPopup(game, task) {

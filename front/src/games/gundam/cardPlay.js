@@ -25,8 +25,8 @@ class cardPlay {
         if (isSamePlayer || !task.card1.canAttack) {
             return { sendBack: true };
         }
-        
-        this.addTaskPos2({ id: this.attack.name, attacker: task.card1, target: task.card2, isPlayer1: task.card1.isPlayer1, breach:null });
+
+        this.addTaskPos2({ id: this.attack.name, attacker: task.card1, target: task.card2, isPlayer1: task.card1.isPlayer1, breach: null });
     }
 
     static playFromHand(player, task) {
@@ -58,9 +58,9 @@ class cardPlay {
             return pilotOrCommand;
 
         this.spawnIfNot(task.card1);
-        
+
         let isExisting = task.effectsAlreadyDone ? false
-            : this.lunchEffectTriggerForOneCard(task.card1, task.card2, this.trigger_onplay);
+            : this.lunchEffectTriggerForOneCard(task.card1, task.card2, this.trigger_onplay).isEffectExisting;
         if (isExisting) {
             task.effectsAlreadyDone = true;
             return { stop: true };
@@ -98,9 +98,9 @@ class cardPlay {
         if (isCommand) {
             if (playCost)
                 this.playCardCost(player, task.card1);
-            
+
             this.addTasksPos2([
-                { id: this.applyEffectCard.name, card1: task.card1, card2:task.card2, trigger: this.trigger_command },
+                { id: this.applyEffectCard.name, card1: task.card1, card2: task.card2, trigger: this.trigger_command },
                 { id: this.move.name, card1: task.card1, to: this.locationTrash }
             ]);
             return;
@@ -119,7 +119,7 @@ class cardPlay {
         if (!task.card2 || !this.isCardPilot(task.card1) || !this.isCardCommand(task.card1))
             return;
 
-        if (task.choice) 
+        if (task.choice)
             task.pilotOrCommand = task.choice.text;
 
         if (task.pilotOrCommand) {
@@ -130,7 +130,7 @@ class cardPlay {
 
         this.addTaskFirst({
             id: this.popup.name,
-            isPlayer1:player.isPlayer1,
+            isPlayer1: player.isPlayer1,
             text: 'Do you want to play as pilot or command ?',
             choices: [{ text: 'Pilot' }, { text: 'Command' }],
             task

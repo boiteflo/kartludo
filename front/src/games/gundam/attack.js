@@ -108,10 +108,15 @@ class attack {
             card1.position = this.clone(opponent.positions.shield);
             task.attacker.to = { ...task.attacker.position, x: opponent.positions.shield.x, y: opponent.positions.shield.y };
 
-            this.addTasks([
-                { id: this.showCards.name, card1, delay: 100 },
-                { id: this.spawnOrMove.name, card1, to: this.locationTrash }
-            ]);
+            const burstEffect = this.lunchEffectTriggerForOneCard(card1, null, this.trigger_burst);
+            const tasks = [];
+            if(!burstEffect.isEffectExisting)
+                tasks.push({ id: this.showCards.name, card1, delay: 100 });
+
+            if(!burstEffect.cancelMoveToTrash)
+                tasks.push({ id: this.spawnOrMove.name, card1, to: this.locationTrash });
+
+            this.addTasks(tasks);
             return { end: true };
         }
 

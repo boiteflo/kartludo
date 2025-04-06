@@ -28,7 +28,8 @@ class cardMove {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 
-        const from = locationFrom && locationFrom != 'pair' ? locationFrom : card?.location;
+        let from = locationFrom ? locationFrom : card?.location;
+        from = from == "pair" ? null : from;
         const to = locationTo;
 
         if (!card)

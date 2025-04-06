@@ -155,17 +155,17 @@ class effects {
     }
 
     static deploy(game, task, player, opponent) {
-        const targets = player.hand.filter(x => x.name.includes(task.effect.target) || x.attribute.includes(task.effect.target));
+        const targets = player.hand.filter(x => x.name.includes(task.effect.attribute) || x.attribute.includes(task.effect.attribute));
         if (targets.length < 1) {
             this.log(`${task.card1.name} can't deploy anything because no targat available`);
             return;
         }
 
-        const card = targets[0];
-        card.selectable = false;
-        card.canAttack = false;
-        this.log(`${task.card1.name} deploy ${card.name}`);
-        this.addTaskPos2({ id: this.play.name, card1: task.card1, zone: player.positions.field });
+        const card1 = targets[0];
+        card1.selectable = false;
+        card1.canAttack = false;
+        this.log(`${task.card1.name} deploy ${card1.name}`);
+        this.addTask({ id: this.play.name, card1, zone: player.positions.field, regularPlay:false });
     }
 
     static attackActiveEnnemy(game, task, player, opponent) {

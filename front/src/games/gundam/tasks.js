@@ -85,7 +85,7 @@ class tasks {
         this.refreshFieldAndHand(game, {}, game.player1);
         this.refreshFieldAndHand(game, {}, game.player2);
         game.refresh = true;
-        game.taskAttack = null;
+        game.taskAttack = null;        
     }
 }
 

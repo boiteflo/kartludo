@@ -8,8 +8,8 @@ class setup {
 
     static setupGame(game) {
         if (this.quickstart) {
-            this.handStartLength = 5;
-            this.resourceStart = 0;
+            this.handStartLength = 15;
+            this.resourceStart = 10;
         }
 
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
@@ -92,7 +92,7 @@ class setup {
             return this.addTaskFirst(
                 {
                     id: this.popup.name,
-                    isPlayer1:true,
+                    isPlayer1: true,
                     task,
                     text: 'Do you want to do a mulligan ?',
                     choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }]

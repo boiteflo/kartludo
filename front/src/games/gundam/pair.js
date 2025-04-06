@@ -28,6 +28,8 @@ class pair {
         cardUnit.zindex = 2;
         cardUnit.ap += cardPilot.ap;
         cardUnit.hp += cardPilot.hp;
+        cardUnit.verso = false;
+        cardPilot.verso = false;
 
         if (isLink) {
             cardUnit.link = true;
