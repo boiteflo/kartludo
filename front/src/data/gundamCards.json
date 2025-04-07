@@ -779,7 +779,13 @@
             "attribute": "(Academy)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "id": "sendToHand"
+                }
+
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -799,7 +805,26 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "target": "opponentUnitHpUnderValue",
+                    "value": 6,
+                    "id": "rest"
+                },
+                {
+                    "trigger": "command",
+                    "target": "opponentUnitHpUnderValue",
+                    "value": 3,
+                    "id": "rest"
+                },
+                {
+                    "trigger": "command",
+                    "target": "opponentUnitHpUnderValue",
+                    "value": 3,
+                    "id": "rest"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -819,7 +844,13 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "command",
+                    "id": "draw",
+                    "value": 2
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -839,7 +870,13 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "id": "sendToHand",
+					"target": "myself"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -885,12 +922,24 @@
             "cost": 2,
             "name": "The Witch and the Bride",
             "type": [
-                0
+                2
             ],
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "id": "deploy",
+					"target": "myself"
+                },
+                {
+                    "trigger": "command",
+                    "id": "sendToHand",
+					"target": "opponentUnitHpUnderValue",
+                    "value": 6
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -905,12 +954,22 @@
             "cost": 1,
             "name": "Overflowing Affection",
             "type": [
-                0
+                2
             ],
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "command",
+                    "id": "draw",
+                    "value": 2
+                },
+                {
+                    "trigger": "command",
+                    "id": "discard"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -925,12 +984,27 @@
             "cost": 1,
             "name": "Naval Bombardment",
             "type": [
-                0
+                2
             ],
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "target":"opponentUnit",
+                    "id": "incruise",
+                    "ap":-3,
+                    "hp":0
+                },
+                {
+                    "trigger": "command",
+                    "target":"playerUnitBlocker",
+                    "id": "incruise",
+                    "ap":3,
+                    "hp":0
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -950,7 +1024,16 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "burst",
+                    "id": "sendToBase"
+                },
+                {
+                    "trigger": "onplay",
+                    "id": "get1ShieldToHand"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -970,7 +1053,13 @@
             "attribute": "xxx",
             "link": "[Amuro Ray]",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "end",
+                    "id": "repair",
+                    "value":2
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -990,7 +1079,12 @@
             "attribute": "xxx",
             "link": "[Amuro Ray]",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [                
+                {
+                    "trigger": "onpair",
+                    "id": "draw"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -1050,7 +1144,12 @@
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [                
+                {
+                    "trigger": "onplay",
+                    "id": "blocker"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -1070,7 +1169,19 @@
             "attribute": "(Earth Federation) (White Base Team) (Newtype)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "onpair",
+                    "target": "opponentUnitHpUnderValue",
+                    "value":6,
+                    "id": "rest"
+                },
+                {
+                    "trigger": "burst",
+                    "target": "myself",
+                    "id": "sendToHand"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -1090,7 +1201,17 @@
             "attribute": "(Academy)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [                
+                {
+                    "trigger": "battle",
+                    "target": "unrestResource"
+                },
+                {
+                    "trigger": "burst",
+                    "target": "myself",
+                    "id": "sendToHand"
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -1111,7 +1232,14 @@
             "attribute": "(Earth Federation) (White Base Team)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger": "command",
+                    "target": "opponentUnitRested",
+                    "id": "dealDamage",
+                    "value":1
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -1132,7 +1260,14 @@
             "attribute": "(Earth Federation) (White Base Team)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [                
+                {
+                    "trigger": "command",
+                    "target": "playerUnit",
+                    "id": "repair",
+                    "value":3
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],

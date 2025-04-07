@@ -131,8 +131,7 @@ class ai {
             {
                 id: this.attack.name,
                 attacker, isPlayer1: false,
-                target,
-                breach: attacker.breach
+                target
             }
         ]);
         return { taskAdded: true };

@@ -86,8 +86,14 @@ class effectsLuncher {
         else if (task.effect.target === 'opponentUnitRested')
             cards = opponent.field.filter(x => this.isCardUnit(x) && !x.active);
 
+            else if (task.effect.target === 'opponentUnit')
+                cards = opponent.field.filter(x => this.isCardUnit(x));
+
         else if (task.effect.target === 'playerUnit')
             cards = player.field.filter(x => this.isCardUnit(x));
+
+        else if (task.effect.target === 'playerUnitBlocker')
+            cards = player.field.filter(x => this.isCardUnit(x) && this.hadBlocker(x));
 
         else if (task.effect.target === 'playerUnitWithAttribute')
             cards = player.field.filter(x => this.isCardUnit(x) && x.attribute.includes(task.effect.targetAttribute));
@@ -130,19 +136,15 @@ class effectsLuncher {
 
         let result = true;
         task.effect.conditions.forEach(condition => {
-            if(condition.id === 'unitHas'){
-                const hasProperty = task.card2[condition.value];
-                const hasEffect = task.card2.effects.find(fx=> fx.id === condition.value);
-                if(!hasProperty && !hasEffect)
-                    result= false;
-            }
+            if(condition.id === 'unitHas')
+                result = result && this.hasEffect(task.card2, condition.value);
         });
 
         return result;
     }
 
     static applyEffect(game, task, player, opponent) {
-        const needNewCard2 = ['opponentUnitHpUnderValue', 'opponentActiveUnitHpUnderValue', 'opponentUnitRested', 'playerUnitWithAttribute', 'playerUnit'];
+        const needNewCard2 = ['opponentUnitHpUnderValue', 'opponentActiveUnitHpUnderValue', 'opponentUnitRested',  'opponentUnit', 'playerUnitWithAttribute', 'playerUnit', 'playerUnitBlocker'];
         let card2Obj = task.effect.target && needNewCard2.includes(task.effect.target) ? task.cardChoice : task.card2;
 
         if (task.effect.target) {

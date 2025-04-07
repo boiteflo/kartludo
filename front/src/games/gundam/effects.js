@@ -1,15 +1,27 @@
 /* eslint-disable no-unused-vars */
 
 class effects {
-    static draw(game, task, player, opponent){
-        this.addTaskFirst({ id: this.taskMoveAndShowCenter.name, isPlayer1: player.isPlayer1, from: this.locationDeck, to: this.locationHand, verso:!player.isPlayer1, delay:true });
+    static draw(game, task, player, opponent) {
+        const value = task.effect.value ? task.effect.value : 1;
+        const tasks = [];
+        for (let i = 0; i < value; i++)
+            tasks.push({
+                id: this.taskMoveAndShowCenter.name,
+                isPlayer1: player.isPlayer1,
+                from: this.locationDeck,
+                to: this.locationHand,
+                verso: !player.isPlayer1,
+                delay: true
+            });
+
+        this.addTasksFirst(tasks);
     }
 
-    static playToken(game, task, player, opponent){
-        if(!task.effect.value)
+    static playToken(game, task, player, opponent) {
+        if (!task.effect.value)
             throw new Error('Missing effect.value :' + JSON.stringify(task));
         const isPlayer1 = player.isPlayer1;
-        this.addTaskFirst( { id: this.spawnOrMove.name, card1: this.createCard(task.effect.value, isPlayer1), to: this.locationField, isPlayer1 });
+        this.addTaskFirst({ id: this.spawnOrMove.name, card1: this.createCard(task.effect.value, isPlayer1), to: this.locationField, isPlayer1 });
     }
 
     static dealDamage(game, task, player, opponent) {
@@ -120,6 +132,10 @@ class effects {
     }
 
     static incruise(game, task, player, opponent) {
+        if(!task.card2){
+            this.log(`${task.card1.name} can't use this effect because no target available.`);
+            return;
+        }
         task.card2.ap += task.effect.ap;
         task.card2.hp += task.effect.hp;
         task.card2.hpMax += task.effect.hp;
@@ -141,6 +157,12 @@ class effects {
         this.log(`${task.card1.name} is send to base`);
         this.addTasksPos2([{ id: this.play.name, card1: task.card1, zone: player.positions.field }]);
         return {};
+    }
+
+    static unrestResource(game, task, player, opponent){
+        const value = task.effect.value ? task.effect.value : 1;
+        if(player.resourcesAvailable < player.resourcesMax)
+            player.resourcesAvailable+=value;
     }
 
     static placeExResource(game, task, player, opponent) {
@@ -176,17 +198,21 @@ class effects {
     }
 
     static deploy(game, task, player, opponent) {
-        const targets = player.hand.filter(x => x.name.includes(task.effect.attribute) || x.attribute.includes(task.effect.attribute));
-        if (targets.length < 1) {
-            this.log(`${task.card1.name} can't deploy anything because no targat available`);
-            return;
+        let card1 = task.card2;
+        if (!task.card2 && task.effect.attribute) {
+            const targets = player.hand.filter(x => x.name.includes(task.effect.attribute) || x.attribute.includes(task.effect.attribute));
+            if (targets.length < 1) {
+                this.log(`${task.card1.name} can't deploy anything because no targat available`);
+                return;
+            }
+            card1 = targets[0];
         }
 
-        const card1 = targets[0];
         card1.selectable = false;
         card1.canAttack = false;
+        const cardPlayer = this.getPlayer(card1.isPlayer1);
         this.log(`${task.card1.name} deploy ${card1.name}`);
-        this.addTask({ id: this.play.name, card1, zone: player.positions.field, regularPlay: false });
+        this.addTask({ id: this.play.name, card1, zone: cardPlayer.positions.field, regularPlay: false });
     }
 
     static attackActiveEnnemy(game, task, player, opponent) {

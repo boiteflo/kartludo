@@ -41,6 +41,16 @@ class cardLife {
             { id: this.move.name, delay, card1, to: this.locationTrash}
         ];
     }
+
+    static hadBlocker(card){
+        return this.hasEffect(card, 'blocker');
+    }
+
+    static hasEffect(card, effect){        
+        const hasProperty = card[effect];
+        const hasEffect = card.effects.find(fx=> fx.id === effect);
+        return hasProperty || hasEffect;
+    }
 }
 
 
