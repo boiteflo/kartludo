@@ -44,7 +44,9 @@ class pair {
         if (cardUnit.link?.includes('['))
             return cardUnit.link.includes(cardPilot.name);
         else {
-            const targetStr = cardUnit.link.replace('(', '').replace(')', '');
+            const targetStr = cardUnit.link.replace('(', '').replace(')', '').trim();
+            if (!targetStr && targetStr.length < 1)
+                return false;
             return cardPilot.attribute?.includes(targetStr);
         }
     }

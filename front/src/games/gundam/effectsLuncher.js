@@ -26,7 +26,7 @@ class effectsLuncher {
         let tasks = [];
 
         cardsList.forEach(card1 => {
-            tasks.push({ id: this.applyEffectTrigger.name, card1, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1, trigger });
         });
 
         if (tasks.length > 0)
@@ -80,6 +80,9 @@ class effectsLuncher {
         if (task.effect.target === 'opponentUnitHpUnderValue')
             cards = opponent.field.filter(x => this.isCardUnit(x) && x.hp < task.effect.value);
 
+        else if(task.effect.target === 'opponentActiveUnitHpUnderValue')
+            cards = opponent.field.filter(x => this.isCardUnit(x) && x.hp < task.effect.value && x.active);
+
         else if (task.effect.target === 'opponentUnitRested')
             cards = opponent.field.filter(x => this.isCardUnit(x) && !x.active);
 
@@ -122,11 +125,15 @@ class effectsLuncher {
     }
 
     static applyEffect(game, task, player, opponent) {
-        const needNewCard2 = ['opponentUnitHpUnderValue', 'opponentUnitRested', 'playerUnitWithAttribute', 'playerUnit'];
+        const needNewCard2 = ['opponentUnitHpUnderValue', 'opponentActiveUnitHpUnderValue', 'opponentUnitRested', 'playerUnitWithAttribute', 'playerUnit'];
         let card2Obj = task.effect.target && needNewCard2.includes(task.effect.target) ? task.cardChoice : task.card2;
 
-        if (task.effect.target && !card2Obj)
-            return this.popupTargetCards(game, task, player, opponent);
+        if (task.effect.target){
+            if(!card2Obj)
+                return this.popupTargetCards(game, task, player, opponent);
+            
+            task.card2 = card2Obj;
+        }
 
         if (task.effect.oneTurn)
             task.card1.removeEndTurn = !task.card1.removeEndTurn ? [task.effect]

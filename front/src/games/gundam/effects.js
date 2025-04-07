@@ -15,7 +15,7 @@ class effects {
         if (!card1) {
             this.addTaskFirst({
                 id: this.popup.name,
-                isPlayer1:player.isPlayer1,
+                isPlayer1: player.isPlayer1,
                 task,
                 text: 'Select a card to discard',
                 cards: player.hand
@@ -40,7 +40,7 @@ class effects {
 
     static gainEffects(game, task, player, opponent) {
         task.card1.effects = task.card1.effects.concat(task.effect.effects);
-        this.log(`${task.card1.name} gain these effects : ${task.effect.effects.map(x=> x.id)}`);
+        this.log(`${task.card1.name} gain these effects : ${task.effect.effects.map(x => x.id)}`);
     }
 
     static rest(game, task, player, opponent) {
@@ -49,7 +49,7 @@ class effects {
 
     static repair(game, task, player, opponent) {
         const card = task.card2 ? task.card2 : task.card1;
-        if(card.hp < card.hpMax){
+        if (card.hp < card.hpMax) {
             this.log(`${task.card2.name} HP is repaired by ${task.effect.value}`);
             card.hp = Math.min(card.hp + task.effect.value, card.hpMax);
         }
@@ -70,7 +70,7 @@ class effects {
             task.cards = [this.getAndRemoveFirst(player.deck), this.getAndRemoveFirst(player.deck)];
             this.addTaskFirst({
                 id: this.popup.name,
-                isPlayer1:player.isPlayer1,
+                isPlayer1: player.isPlayer1,
                 task,
                 text: 'Select the card that will go to the top deck, the other one will go bottom deck',
                 cards: task.cards
@@ -84,21 +84,24 @@ class effects {
     }
 
     static protectionShieldLvXOrLower(game, task, player, opponent) {
-        if(!task.taskAttack || !task.taskAttack.attacker)
+        if (!task.taskAttack || !task.taskAttack.attacker)
             throw new Error('cant handle this effect : ' + JSON.stringify(task.effect));
 
-        task.taskAttack.shieldProtection=task.taskAttack.attacker.level <= task.effect.value;
-        if(task.taskAttack.shieldProtection)
+        task.taskAttack.shieldProtection = task.taskAttack.attacker.level <= task.effect.value;
+        if (task.taskAttack.shieldProtection)
             this.log(`Shield are protected`);
         else
-        this.log(`Shield are not protected because attacker is level ${task.taskAttack.attacker.level}`);
+            this.log(`Shield are not protected because attacker is level ${task.taskAttack.attacker.level}`);
     }
 
     static gainThisTurn(game, task, player, opponent) {
+        if (!task.card2)
+            task.card2 = task.card1;
+
         const effect = this.clone(task.effect);
         delete effect.target;
         effect.id = effect.effect2;
-        effect.oneTurn=true;
+        effect.oneTurn = true;
         this.log(`${task.card1.name} give ${task.effect.effect2} to ${task.card2.name} for this turn`);
         this.applyEffect(game, {
             id: this.applyEffect.name, card1: task.card2, effect
@@ -165,7 +168,7 @@ class effects {
         card1.selectable = false;
         card1.canAttack = false;
         this.log(`${task.card1.name} deploy ${card1.name}`);
-        this.addTask({ id: this.play.name, card1, zone: player.positions.field, regularPlay:false });
+        this.addTask({ id: this.play.name, card1, zone: player.positions.field, regularPlay: false });
     }
 
     static attackActiveEnnemy(game, task, player, opponent) {

@@ -17,11 +17,11 @@ class ai {
         const combos = this.getAiCombos(game, task, player, cardsAvailable);
 
         let result = this.handleAiHand(game, task, player, cardsAvailable, combos);
-        if (result.stop)
+        if (result.stop || result.taskAdded)
             return result;
 
         result = this.handleAiField(game, task, player);
-        if (result.attack)
+        if (result.taskAdded)
             return result;
 
         this.endTurn(game);
@@ -84,7 +84,7 @@ class ai {
         if (player.base.length < 1) {
             const bases = cardsAvailable.filter(card => this.isCardBase(card));
             if (bases.length > 0)
-                this.addTasksFirst(this.getPlayCardTasks(player, bases[0]));
+                return this.playCombo(player, bases[0]);
         }
 
         if (combos.pilotLinkUnits.length > 0)
@@ -114,7 +114,7 @@ class ai {
             tasks = tasks.concat(this.getPlayCardTasks(player, combo.pilot, combo.unit));
 
         this.addTasksFirst(tasks);
-        return { stop: tasks.length > 0 };
+        return { taskAdded: tasks.length > 0 };
     }
 
     static handleAiField(game, task, player) {
@@ -125,19 +125,35 @@ class ai {
         if (!attacker)
             return {};
 
+        const notEnoughShield = this.getNotEnoughShield(game, task, player, unitsThatCanAttack);
+        const target = this.getTarget(game, task, player, attacker, notEnoughShield);
         this.addTasksFirst([
             {
                 id: this.attack.name,
                 attacker, isPlayer1: false,
+                target,
                 breach: attacker.breach
-            },
-            { id: this.taskEndRefresh.name, delay: true }
+            }
         ]);
-        return { attack: true };
+        return { taskAdded: true };
+    }
+
+    static getNotEnoughShield(game, task, player, unitsThatCanAttack) {
+        return game.player1.base.concat(game.player1.shield).length < unitsThatCanAttack.length;
+    }
+
+    static getTarget(game, task, player, attacker, notEnoughShield) {
+        if (notEnoughShield)
+            return null;
+
+        const targets = game.player1.field.filter(x => this.isValidTarget(game.player1, attacker, x) && x.hp <= attacker.ap);
+        if (targets.length > 0)
+            return targets.sort((a, b) => b.level - a.level)[0];
     }
 
     static handleAiPopup(game, task) {
-        if (task.choices && task.choices.length > 0) {
+        const selectChoiceNull = task.text.includes('action card');
+        if (selectChoiceNull && task.choices && task.choices.length > 0) {
             task.task.choice = task.choices[0];
             return {};
         }
@@ -147,15 +163,17 @@ class ai {
             return {};
         }
 
+        if (task.choices && task.choices.length > 0) {
+            task.task.choice = task.choices[0];
+            return {};
+        }
+
         this.deletePopup();
         return {};
     }
 
     static getPlayCardTasks(player, card1, card2) {
-        return [
-            { id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true },
-            { id: this.taskEndRefresh.name, delay: true }
-        ]
+        return [{ id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true }]
     }
 }
 

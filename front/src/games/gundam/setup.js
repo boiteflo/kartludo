@@ -8,13 +8,14 @@ class setup {
 
     static setupGame(game) {
         if (this.quickstart) {
-            this.handStartLength = 15;
-            this.resourceStart = 10;
+            this.handStartLength = 5;
+            this.resourceStart = 0;
+            this.shieldStartLength = 6;
         }
 
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
-        game.isPlayer1 = this.quickstart ? true : Math.floor(Math.random() * 2) == 1;
+        game.isPlayer1 = this.quickstart ? false : Math.floor(Math.random() * 2) == 1;
         game.fields = [game.grid.player1Hand, game.grid.player1Field, game.grid.player2Hand, game.grid.player2Field];
 
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
@@ -111,6 +112,20 @@ class setup {
             }
 
             tasks = tasks.concat(this.addShielsAndBase(game));
+
+            /*
+            if (this.quickstart) {
+                const ids = 'GD01-004,GD01-004'.split(',');
+                ids.forEach(id => {
+                    tasks = tasks.concat([
+                        { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationHand, isPlayer1: true },
+                        { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationHand, isPlayer1: false },
+                        { id: this.move.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationShield, isPlayer1: true },
+                        { id: this.move.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationShield, isPlayer1: false },
+                    ]);
+                });
+            }
+                */
 
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });

@@ -88,8 +88,7 @@ class attack {
         }
 
         if (task.target) {
-            const isValidTarget = task.target.isPlayer1 === opponent.isPlayer1
-                && (!task.target.active || (task.attacker.attackActiveEnnemy && task.attacker.attackActiveEnnemy > task.target.level));
+            const isValidTarget = this.isValidTarget(opponent, task.attacker, task.target);
             return { end: !isValidTarget };
         }
 
@@ -121,6 +120,11 @@ class attack {
         }
 
         return this.end(player.isPlayer1);
+    }
+
+    static isValidTarget(opponent, attacker, target){
+        return target.isPlayer1 === opponent.isPlayer1
+            && (!target.active || (attacker.attackActiveEnnemy && attacker.attackActiveEnnemy > target.level));
     }
 
     static effectBattle(game, task, player, opponent) {
