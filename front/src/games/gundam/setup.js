@@ -8,8 +8,8 @@ class setup {
 
     static setupGame(game) {
         if (this.quickstart) {
-            this.handStartLength = 5;
-            this.resourceStart = 0;
+            this.handStartLength = 15;
+            this.resourceStart = 10;
             this.shieldStartLength = 6;
         }
 
@@ -113,19 +113,18 @@ class setup {
 
             tasks = tasks.concat(this.addShielsAndBase(game));
 
-            /*
             if (this.quickstart) {
-                const ids = 'GD01-004,GD01-004'.split(',');
+                const ids = 'GD01-004'.split(',');
                 ids.forEach(id => {
                     tasks = tasks.concat([
                         { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationHand, isPlayer1: true },
                         { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationHand, isPlayer1: false },
-                        { id: this.move.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationShield, isPlayer1: true },
-                        { id: this.move.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationShield, isPlayer1: false },
+                        { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationField, isPlayer1: true }
                     ]);
                 });
+
+                game.player2.shield = [this.createCard('ST02-010', false, this.locationShield)].concat(game.player2.shield);
             }
-                */
 
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });
@@ -143,8 +142,10 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
-        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        if (!this.quickstart) {
+            game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+            game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        }
 
         return tasks;
     }

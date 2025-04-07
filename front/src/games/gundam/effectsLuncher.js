@@ -36,21 +36,21 @@ class effectsLuncher {
     }
 
     static lunchEffectTriggerForOneCard(card1, card2, trigger) {
-        const result = {isEffectExisting:false};
+        const result = { isEffectExisting: false };
         const effects = card1.effects && card1.effects.filter(y => y.trigger === trigger);
         if (!effects || effects.length < 1)
             return result;
 
-        result.isEffectExisting=true;
+        result.isEffectExisting = true;
         result.cancelMoveToTrash = this.getCancelMoveToTrash(effects);
         this.addTaskFirst({ id: this.applyEffectCard.name, card1, card2, trigger });
 
         return result;
     }
 
-    static getCancelMoveToTrash(effects){
+    static getCancelMoveToTrash(effects) {
         const effectsThantCancelMoveToTrash = [this.sendToHand.name, this.sendToField.name, this.sendToBase.name];
-        return effects.find(effect=> effectsThantCancelMoveToTrash.includes(effect.id)) ? true : false;
+        return effects.find(effect => effectsThantCancelMoveToTrash.includes(effect.id)) ? true : false;
     }
 
     static lunchEffectTriggerForTwoCard(card1, card2, trigger) {
@@ -70,7 +70,7 @@ class effectsLuncher {
     static applyEffectCard(game, task) {
         const effects = task.card1.effects.filter(x => x.trigger == task.trigger);
         const text = effects.map(fx => this.getEffectText(fx)).join('<br>');
-        const tasks = [{ ...task, id: this.showCards.name, text, delay:true }]
+        const tasks = [{ ...task, id: this.showCards.name, text, delay: true }]
             .concat(effects.map(effect => { return { ...task, id: this.applyEffect.name, effect }; }));
         this.addTasksFirst(tasks);
     }
@@ -80,7 +80,7 @@ class effectsLuncher {
         if (task.effect.target === 'opponentUnitHpUnderValue')
             cards = opponent.field.filter(x => this.isCardUnit(x) && x.hp < task.effect.value);
 
-        else if(task.effect.target === 'opponentActiveUnitHpUnderValue')
+        else if (task.effect.target === 'opponentActiveUnitHpUnderValue')
             cards = opponent.field.filter(x => this.isCardUnit(x) && x.hp < task.effect.value && x.active);
 
         else if (task.effect.target === 'opponentUnitRested')
@@ -102,7 +102,7 @@ class effectsLuncher {
 
         this.game.tasks = [{
             id: this.popup.name,
-            isPlayer1:player.isPlayer1,
+            isPlayer1: player.isPlayer1,
             task,
             text: 'Select available target',
             cards
@@ -124,20 +124,44 @@ class effectsLuncher {
         return result.filter(x => x && x.length > 0).join(' ');
     }
 
+    static isEffectMatchConditions(game, task) {
+        if(!task.effect.conditions || task.effect.conditions.length < 1)
+            return true;
+
+        let result = true;
+        task.effect.conditions.forEach(condition => {
+            if(condition.id === 'unitHas'){
+                const hasProperty = task.card2[condition.value];
+                const hasEffect = task.card2.effects.find(fx=> fx.id === condition.value);
+                if(!hasProperty && !hasEffect)
+                    result= false;
+            }
+        });
+
+        return result;
+    }
+
     static applyEffect(game, task, player, opponent) {
         const needNewCard2 = ['opponentUnitHpUnderValue', 'opponentActiveUnitHpUnderValue', 'opponentUnitRested', 'playerUnitWithAttribute', 'playerUnit'];
         let card2Obj = task.effect.target && needNewCard2.includes(task.effect.target) ? task.cardChoice : task.card2;
 
-        if (task.effect.target){
-            if(!card2Obj)
+        if (task.effect.target) {
+            if (task.effect.target == "myself")
+                task.card2 = task.card1;
+            else if (!card2Obj)
                 return this.popupTargetCards(game, task, player, opponent);
-            
-            task.card2 = card2Obj;
+            else
+                task.card2 = card2Obj;
         }
 
         if (task.effect.oneTurn)
             task.card1.removeEndTurn = !task.card1.removeEndTurn ? [task.effect]
                 : task.card1.removeEndTurn.concat([task.effect]);
+
+
+        if(!this.isEffectMatchConditions(game, task, player, opponent)){
+            return{};
+        }
 
         return this[task.effect.id](game, task, player, opponent);
     }

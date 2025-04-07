@@ -1,6 +1,17 @@
 /* eslint-disable no-unused-vars */
 
 class effects {
+    static draw(game, task, player, opponent){
+        this.addTaskFirst({ id: this.taskMoveAndShowCenter.name, isPlayer1: player.isPlayer1, from: this.locationDeck, to: this.locationHand, verso:!player.isPlayer1, delay:true });
+    }
+
+    static playToken(game, task, player, opponent){
+        if(!task.effect.value)
+            throw new Error('Missing effect.value :' + JSON.stringify(task));
+        const isPlayer1 = player.isPlayer1;
+        this.addTaskFirst( { id: this.spawnOrMove.name, card1: this.createCard(task.effect.value, isPlayer1), to: this.locationField, isPlayer1 });
+    }
+
     static dealDamage(game, task, player, opponent) {
         task.card2.hp -= task.effect.value;
         this.log(`${task.card2.name} HP is reduced by ${task.effect.value}`);
@@ -116,8 +127,8 @@ class effects {
     }
 
     static sendToHand(game, task, player, opponent) {
-        this.log(`${task.card1.name} is send to hand`);
-        this.addTaskPos2({ id: this.move.name, card1: task.card1, to: this.locationHand });
+        this.log(`${task.card2.name} is send to hand`);
+        this.addTaskPos2({ id: this.move.name, card1: task.card2, to: this.locationHand });
     }
 
     static sendToField(game, task, player, opponent) {
@@ -147,6 +158,13 @@ class effects {
         if (!task.card1.breach || task.card1.breach < task.effect.value) {
             task.card1.breach = task.effect.value;
             this.log(`${task.card1.name} has breach ${task.effect.value}`);
+        }
+    }
+
+    static blocker(game, task, player, opponent) {
+        if (!task.card1.blocker) {
+            task.card1.blocker = true;
+            this.log(`${task.card1.name} has blocker`);
         }
     }
 

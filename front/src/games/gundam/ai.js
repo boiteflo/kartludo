@@ -84,7 +84,7 @@ class ai {
         if (player.base.length < 1) {
             const bases = cardsAvailable.filter(card => this.isCardBase(card));
             if (bases.length > 0)
-                return this.playCombo(player, bases[0]);
+                return this.playCombo(player, {unit:bases[0]});
         }
 
         if (combos.pilotLinkUnits.length > 0)

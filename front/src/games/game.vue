@@ -269,8 +269,8 @@ export default {
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
         if (this.quickstart) {
-            this.decklistPlayer1 = cards.decklist[5].list;
-            this.decklistPlayer2 = cards.decklist[5].list;
+            this.decklistPlayer1 = cards.decklist[3].list;
+            this.decklistPlayer2 = cards.decklist[3].list;
             this.start();
         }
     },
