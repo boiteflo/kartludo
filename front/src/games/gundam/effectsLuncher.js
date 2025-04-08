@@ -130,7 +130,7 @@ class effectsLuncher {
         return result.filter(x => x && x.length > 0).join(' ');
     }
 
-    static isEffectMatchConditions(game, task) {
+    static isEffectMatchConditions(game, task, player) {
         if(!task.effect.conditions || task.effect.conditions.length < 1)
             return true;
 
@@ -138,6 +138,10 @@ class effectsLuncher {
         task.effect.conditions.forEach(condition => {
             if(condition.id === 'unitHas')
                 result = result && this.hasEffect(task.card2, condition.value);
+            else if(condition.id === 'isPlayerTurn')
+                result = result && game.isPlayer1 === player.isPlayer1;
+            else if(condition.id === 'pilotLevelMin')
+                result = result && task.card2 && task.card2.level>= condition.value;
         });
 
         return result;
