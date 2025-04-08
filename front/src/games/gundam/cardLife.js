@@ -51,6 +51,17 @@ class cardLife {
         const hasEffect = card.effects.find(fx=> fx.id === effect);
         return hasProperty || hasEffect;
     }
+
+    static hasAttribute(card, attribute){
+        if (attribute.includes('['))
+            return attribute.includes(card.name);
+        else {
+            const targetStr = attribute.replace('(', '').replace(')', '').trim();
+            if (!targetStr && targetStr.length < 1)
+                return false;
+            return card.attribute?.includes(targetStr);
+        }
+    }
 }
 
 

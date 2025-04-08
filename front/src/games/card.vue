@@ -6,7 +6,8 @@
     height: card.position.height + 'px',
     transform: 'rotate(' + card.position.rotation + 'deg)',
     'z-index': card.zindex,
-    cursor: shine ? 'pointer' : ''
+    cursor: shine ? 'pointer' : '',
+    border: card.fx ? '1px solid yellow' : ''
   }">
     <div v-if="!card">No card</div>
     <img v-else-if="card.verso" :class="{ w100p: true, h100p: true, absolute:true }" draggable="false"

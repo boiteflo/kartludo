@@ -76,7 +76,17 @@ class tasks {
         return { stop: true };
     }
 
+    static startTasks(game){
+        game.triggerRefreshAlreadyDone=false;
+        this.resetZIndex(game);
+    }
+
     static taskEndRefresh(game) {
+        if(!game.triggerRefreshAlreadyDone){        
+            this.lunchEffectTriggerMultiple(game.cards, this.trigger_refresh);
+            game.triggerRefreshAlreadyDone = true;
+        }
+
         this.needTaskEndRefresh = false;
         game.refreshOnlyTextEffect = false;
         delete (game.textEffect);
@@ -85,7 +95,7 @@ class tasks {
         this.refreshFieldAndHand(game, {}, game.player1);
         this.refreshFieldAndHand(game, {}, game.player2);
         game.refresh = true;
-        game.taskAttack = null;        
+        game.taskAttack = null;
     }
 }
 

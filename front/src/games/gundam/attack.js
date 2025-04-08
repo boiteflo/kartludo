@@ -61,7 +61,7 @@ class attack {
     }
 
     static selectBlocker(game, task, player, opponent) {
-        const blockers = opponent.field.filter(x => x.block && x.active);
+        const blockers = opponent.field.filter(x => x.blocker && x.active);
         if (task.attacker.highManeuver || task.blocker || blockers.length < 1)
             return {};
 

@@ -16,12 +16,13 @@ class turn {
         game.isPlayer1 = !game.isPlayer1;
         const newPlayer = this.getPlayerTurn();
         const playerId = game.isPlayer1 ? '1' : '2';
+        this.startTasks(game);
 
         const tasks = [
             { id: this.showTitle.name, value: 'New turn for player ' + playerId, isPlayer1: game.isPlayer1, delay: true },
-            { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand, verso:!game.isPlayer1 }
+            { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand, verso: !game.isPlayer1 }
         ];
-        
+
         this.addTasks(tasks);
 
         this.removeOneTurnEffect(game.cards);

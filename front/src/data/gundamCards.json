@@ -142,7 +142,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Civilian)",
             "link": "[Banagher Links]",
             "effectText": "xxx",
             "effects": [
@@ -233,7 +233,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation)",
             "link": "(Earth Federation)",
             "effectText": "xxx",
             "effects": [],
@@ -253,7 +253,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation) (White Base Team)",
             "link": "[Amuro Ray]",
             "effectText": "xxx",
             "effects": [],
@@ -273,7 +273,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -300,10 +300,24 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation)",
             "link": "",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger":"refresh",
+                    "target":"myself",
+                    "hide":true,
+                    "id": "setCost",
+                    "value":-1,
+                    "conditions": [
+                        {"id":"isInHand"}
+                    ],
+                    "conditionsAfter": [
+                        { "id":"MinimumXUnitsWithAttribute", "value":2, "attribute":"(Earth Federation)"}
+                    ]
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -320,7 +334,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -340,7 +354,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "[Char Aznable]",
             "effectText": "xxx",
             "effects": [
@@ -397,7 +411,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -423,7 +437,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "(Zeon)",
             "effectText": "xxx",
             "effects": [],
@@ -512,7 +526,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Triple Ship Alliance)",
             "link": "(Earth Alliance)",
             "effectText": "xxx",
             "effects": [
@@ -543,10 +557,24 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy)",
             "link": "[Suletta Mercury]",
             "effectText": "xxx",
-            "effects": [],
+            "effects": [
+                {
+                    "trigger":"refresh",
+                    "target":"myself",
+                    "hide":true,
+                    "id": "setCost",
+                    "value":-2,
+                    "conditions": [
+                        {"id":"isInHand"}
+                    ],
+                    "conditionsAfter": [
+                        { "id":"minimumXCommandInTrash", "value":4}
+                    ]
+                }
+            ],
             "pilot": "xxx",
             "burstText": "",
             "burst": [],
@@ -563,7 +591,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance)",
             "link": "(Earth Alliance)",
             "effectText": "xxx",
             "effects": [
@@ -588,7 +616,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy)",
             "link": "(Academy)",
             "effectText": "xxx",
             "effects": [
@@ -615,7 +643,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy)",
             "link": "(Academy)",
             "effectText": "xxx",
             "effects": [],
@@ -635,7 +663,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance)",
             "link": "[Kira Yamato]",
             "effectText": "xxx",
             "effects": [],
@@ -655,7 +683,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Triple Ship Alliance)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1021,7 +1049,7 @@
             "type": [
                 3
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation) (Stronghold)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -1051,7 +1079,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation) (White Base Team)",
             "link": "[Amuro Ray]",
             "effectText": "xxx",
             "effects": [
@@ -1077,7 +1105,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation) (White Base Team)",
             "link": "[Amuro Ray]",
             "effectText": "xxx",
             "effects": [                
@@ -1102,7 +1130,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1122,7 +1150,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy)",
             "link": "[Suletta Mercury]",
             "effectText": "xxx",
             "effects": [],
@@ -1142,7 +1170,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy)",
             "link": "",
             "effectText": "xxx",
             "effects": [                
@@ -1285,7 +1313,7 @@
             "type": [
                 3
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Federation) (White Base Team) (Warship)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -1317,7 +1345,7 @@
             "type": [
                 3
             ],
-            "attribute": "xxx",
+            "attribute": "(Academy) (Stronghold)",
             "link": "",
             "effectText": "xxx",
             "effects": [                
@@ -1542,7 +1570,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1562,7 +1590,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -1635,7 +1663,7 @@
             "type": [
                 3
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon) (Warship)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -1673,7 +1701,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance)",
             "link": "[Kira Yamato]",
             "effectText": "xxx",
             "effects": [
@@ -1707,7 +1735,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance)",
             "link": "[Kira Yamato]",
             "effectText": "xxx",
             "effects": [
@@ -1736,7 +1764,7 @@
             "type": [
                 0
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1817,7 +1845,7 @@
             "type": [
                 3
             ],
-            "attribute": "xxx",
+            "attribute": "(Earth Alliance) (Warship)",
             "link": "",
             "effectText": "xxx",
             "effects": [
@@ -1848,7 +1876,7 @@
                 0,
                 4
             ],
-            "attribute": "xxx",
+            "attribute": "(White Base Team)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1870,7 +1898,7 @@
                 0,
                 4
             ],
-            "attribute": "xxx",
+            "attribute": "(White Base Team)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1892,7 +1920,7 @@
                 0,
                 4
             ],
-            "attribute": "xxx",
+            "attribute": "(White Base Team)",
             "link": "",
             "effectText": "xxx",
             "effects": [],
@@ -1914,7 +1942,7 @@
                 0,
                 4
             ],
-            "attribute": "xxx",
+            "attribute": "(Zeon)",
             "link": "",
             "effectText": "xxx",
             "effects": [],

@@ -17,6 +17,14 @@ class effects {
         this.addTasksFirst(tasks);
     }
 
+    static setCost(game, task, player, opponent) {
+        task.card2.costOrigin = task.card2.costOrigin ? task.card2.costOrigin : task.card2.cost;
+        const isConditionsAfterRespected = this.isConditionsAfterRespected(game, task, player, opponent);
+        const reduceValue = isConditionsAfterRespected ? task.effect.value : 0;
+        task.card2.cost = task.card2.costOrigin + reduceValue;
+        task.card2.fx=isConditionsAfterRespected;
+    }
+
     static playToken(game, task, player, opponent) {
         if (!task.effect.value)
             throw new Error('Missing effect.value :' + JSON.stringify(task));
@@ -132,7 +140,7 @@ class effects {
     }
 
     static incruise(game, task, player, opponent) {
-        if(!task.card2){
+        if (!task.card2) {
             this.log(`${task.card1.name} can't use this effect because no target available.`);
             return;
         }
@@ -159,10 +167,10 @@ class effects {
         return {};
     }
 
-    static unrestResource(game, task, player, opponent){
+    static unrestResource(game, task, player, opponent) {
         const value = task.effect.value ? task.effect.value : 1;
-        if(player.resourcesAvailable < player.resourcesMax)
-            player.resourcesAvailable+=value;
+        if (player.resourcesAvailable < player.resourcesMax)
+            player.resourcesAvailable += value;
     }
 
     static placeExResource(game, task, player, opponent) {

@@ -9,7 +9,11 @@ class ai {
             return { stop: true };
         }
 
-        return this.refreshAiTurn(game, task, game.player2);
+        const result = this.refreshAiTurn(game, task, game.player2);
+        if (result && result.taskAdded)
+            this.startTasks(game);
+
+        return result;
     }
 
     static refreshAiTurn(game, task, player) {
@@ -25,6 +29,7 @@ class ai {
             return result;
 
         this.endTurn(game);
+        return {};
     }
 
     static getAiCombos(game, task, player, cardsAvailable) {
@@ -84,7 +89,7 @@ class ai {
         if (player.base.length < 1) {
             const bases = cardsAvailable.filter(card => this.isCardBase(card));
             if (bases.length > 0)
-                return this.playCombo(player, {unit:bases[0]});
+                return this.playCombo(player, { unit: bases[0] });
         }
 
         if (combos.pilotLinkUnits.length > 0)

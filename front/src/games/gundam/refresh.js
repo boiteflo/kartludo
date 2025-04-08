@@ -25,6 +25,7 @@ class refresh {
         cards.forEach((card, index) => {
             const degree = card.active ? 0 : 90;
             card.bgposition = '0 0';
+            card.fx=false;
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut, centerEmptyZone);
             card.location = position.location;
             if (position.location == this.locationField && card.pair)

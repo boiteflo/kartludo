@@ -1,7 +1,9 @@
 import effectsLuncher from './effectsLuncher';
+import effectsTarget from './effectsTarget';
 import positioner from './positioner';
 import selectable from './selectable';
 import cardAction from './cardAction';
+import conditions from './conditions';
 import cardMove from './cardMove';
 import cardLife from './cardLife';
 import cardPlay from './cardPlay';
@@ -33,7 +35,7 @@ class game {
         this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
         utils.addFunction([
             tasks, utils, popup, setup, positioner, turn, refresh, selectable, show,
-            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effects, pair, attack, ai
+            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack, ai
         ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
@@ -58,7 +60,7 @@ class game {
     }
 
     static playCard(game, card1, card2, zone) {
-        this.resetZIndex(game);
+        this.startTasks(game);
         this.addTask({ id: this.play.name, card1, card2, zone, regularPlay: true });
         return this.continue(game);
     }
@@ -74,7 +76,7 @@ class game {
     }
 
     static endTurn(game, card1, card2, drop) {
-        this.resetZIndex(game);
+        this.startTasks(game);
         game.tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
         return game;
     }

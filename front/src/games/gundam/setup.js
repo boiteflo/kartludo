@@ -114,7 +114,7 @@ class setup {
             tasks = tasks.concat(this.addShielsAndBase(game));
 
             if (this.quickstart) {
-                const ids = 'GD01-072,ST01-010'.split(',');
+                const ids = this.quickstart.split(',');
                 ids.forEach(id => {
                     tasks = tasks.concat([
                         { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationHand, isPlayer1: true },
