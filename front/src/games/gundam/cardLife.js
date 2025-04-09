@@ -28,7 +28,7 @@ class cardLife {
         return this.index;
     }
 
-    static setActive(card, active) {
+    static setActive(game, card, active) {
         card.active = active;
         card.selectable = false;
         card.canAttack = active;
@@ -36,6 +36,7 @@ class cardLife {
         if (!card.to)
             card.to = this.clone(card.position);
         card.to.rotation = degree;
+        this.handleMainEffectsCard(game, card, active);
     }
 
     static destroyUnit(card1, delay = true) {

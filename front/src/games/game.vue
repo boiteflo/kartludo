@@ -33,8 +33,18 @@
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)">
             </div>
 
+            <!--
             <img class="w100p, absolute" :style="{ ...getFieldStyleObj(game.grid.centerZone), 'object-fit': 'cover' }"
                 :src="require('@/assets/Gundam/centerZone.png')" />
+        -->
+            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.centerButton)">
+                <v-btn target="_blank"
+                    :class="{ bg2: true, shine: !freeze && game.effects.length > 0, fontSize075em: true, w100p: true, h100p: true }"
+                    @click="useEffect" style="min-width:0px;">
+                    <span>Use Effect</span>
+                </v-btn>
+            </div>
+
 
             <!-- Player 1 -->
             {{ game.player1.deckIcon }}
@@ -175,8 +185,10 @@
             <div style="background-color: #FFFF00F0; width:100%; flex-direction: column-reverse" class="flex">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
-                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand">
-                        <img :style="getFieldStyleObj(game?.grid.card100)" @click="selectChoiceCard(card)"
+                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand" :style="{width:game?.grid.card100.height + 'px'}">
+                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1? '1' : '2' }}</div>
+                        <img :style="{ ...getFieldStyleObj(game?.grid.card100), transform: 'rotate(' + card.position.rotation + 'deg)' }"
+                            @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
                 </div>
@@ -309,6 +321,12 @@ export default {
 
             if (this.game.refresh)
                 this.refreshGame();
+        },
+        useEffect() {
+            if (this.freeze)
+                return;
+            this.game = gameGundam.useEffect(this.game);
+            this.continue();
         },
         playCard(card1, card2, drop) {
             if (this.freeze)

@@ -119,8 +119,8 @@ class setup {
                     tasks = tasks.concat([
                         { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationHand, isPlayer1: true },
                         { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationHand, isPlayer1: false },
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationField, isPlayer1: true },
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationField, isPlayer1: false }
+                        //{ id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationField, isPlayer1: true },
+                        //{ id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationField, isPlayer1: false }
                     ]);
 
                     game.player1.trash = [this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck)]
@@ -155,7 +155,7 @@ class setup {
 
             cardsBall.forEach(card1 => {
                 tasks.push({ id: this.spawnOrMove.name, card1, to: this.locationField });
-                // tasks.push({ id: this.applyEffect.name, card1, effect: { id: this.rest.name } });
+                tasks.push({ id: this.applyEffect.name, card1, effect: { id: this.rest.name } });
             });
         }
 

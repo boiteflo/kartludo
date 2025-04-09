@@ -73,7 +73,7 @@ class effects {
     }
 
     static rest(game, task, player, opponent) {
-        this.setActive(task.card2, false);
+        this.setActive(game, task.card2, false);
     }
 
     static repair(game, task, player, opponent) {

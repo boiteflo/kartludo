@@ -63,6 +63,7 @@ class tasks {
 
     static addTaskFirst(task) { return this.addTasksFirst([task]); }
     static addTasksFirst(tasks) {
+        this.needTaskEndRefresh = true;
         this.game.tasks = tasks.concat(this.game.tasks);
         this.addTasksIndex(tasks);
         return { stop: true };
@@ -70,6 +71,7 @@ class tasks {
 
     static addTaskPos2(task) { return this.addTasksPos2([task]); }
     static addTasksPos2(tasks) {
+        this.needTaskEndRefresh = true;
         const first = this.game.tasks.splice(0,1)[0];
         this.game.tasks = [first].concat(tasks).concat(this.game.tasks);
         this.addTasksIndex(tasks);

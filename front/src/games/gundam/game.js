@@ -1,5 +1,6 @@
 import effectsLuncher from './effectsLuncher';
 import effectsTarget from './effectsTarget';
+import mainEffects from './mainEffects';
 import positioner from './positioner';
 import selectable from './selectable';
 import cardAction from './cardAction';
@@ -35,11 +36,19 @@ class game {
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart) {
         this.cards = cards.cards;
         this.quickstart = quickstart;
-        this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2, incruises:[] };
+        this.game = { logs: '', 
+            cards: [], 
+            tasks: [{ id: 'setupGame' }], 
+            cardList: cards.cards, 
+            gundamCards: cards, 
+            decklistPlayer1, decklistPlayer2, 
+            incruises:[],
+            effects: []
+        };
         utils.addFunction([
-            tasks, utils, popup, setup, positioner, turn, refresh, selectable, show,
+            tasks, utils, popup, setup, positioner, turn, refresh, selectable, show, mainEffects,
             cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack, 
-            ai, aiCombos,aiPlay,aiStrategy
+            ai, aiCombos, aiPlay, aiStrategy
         ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
@@ -67,6 +76,11 @@ class game {
         this.startTasks(game);
         this.addTask({ id: this.play.name, card1, card2, zone, regularPlay: true });
         return this.continue(game);
+    }
+
+    static useEffect(game){
+        this.startTasks(game);
+        return this.lunchMainEffectCard(game);
     }
 
     static selectChoice(game, choice) {

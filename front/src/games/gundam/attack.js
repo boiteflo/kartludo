@@ -99,13 +99,13 @@ class attack {
 
         if(task.attacker.ap < 1){
             task.step = 'end';
-            this.setActive(task.attacker, false);
+            this.setActive(game, task.attacker, false);
             return {end: true};
         }
 
         if (opponent.shield.length > 0) {
             task.step = 'end';
-            this.setActive(task.attacker, false);
+            this.setActive(game, task.attacker, false);
             if (task.shieldProtection)
                 return { end: true };
 
@@ -161,7 +161,7 @@ class attack {
         task.attacker.hp -= damage;
 
         const activeBreach = !task.breach && this.isCardUnit(task.target) && task.attacker.breach && task.target.hp < 1;
-        this.setActive(task.attacker, false);
+        this.setActive(game, task.attacker, false);
         let tasks = [];
         const delay = activeBreach;
         let tasksAttackerDead = [];
@@ -172,7 +172,7 @@ class attack {
         if (task.target.hp < 1)
             tasks = this.destroyUnit(task.target, delay);
 
-        this.setActive(task.attacker, false);
+        this.setActive(game, task.attacker, false);
 
         if (activeBreach) {
             this.cardHighlight = this.cardHighlight.filter(x => x.index !== task.attacker.index);

@@ -1,13 +1,13 @@
 class cardMove {
     
     static spawnOrMove(game, task, player) {
-        const cardSpawn = this.moveCard(player, task.card1, task.from, task.to);
+        const cardSpawn = this.moveCard(game, player, task.card1, task.from, task.to);
         this.spawnIfNot(cardSpawn);
         return cardSpawn;
     }
     
     static move(game, task, player) {
-        return this.moveCard(player, task.card1, task.from, task.to);
+        return this.moveCard(game, player, task.card1, task.from, task.to);
     }
 
     static spawnIfNot(card) {
@@ -24,7 +24,7 @@ class cardMove {
         return card;
     }
 
-    static moveCard(player, card, locationFrom, locationTo) {
+    static moveCard(game, player, card, locationFrom, locationTo) {
         if (!locationFrom && card && card.location)
             locationFrom = card.location;
 
@@ -55,10 +55,13 @@ class cardMove {
         card.hidestat = card.location !== this.locationField;
         card.verso = card.location === this.locationHand && !card.isPlayer1;
 
+        if(card.location === this.locationField || card.location === this.locationBase)
+            this.handleMainEffectsCard(game, card, true);
+
         if (card.pair) {
             card.pair.isPaired = false;
             card.pair.link = false;
-            this.moveCard(player, card.pair, locationFrom, locationTo);
+            this.moveCard(game, player, card.pair, locationFrom, locationTo);
             delete (card.pair);
             card.link = false;
         }

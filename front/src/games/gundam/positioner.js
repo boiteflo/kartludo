@@ -25,6 +25,10 @@ class positioner {
             width: grid.width, height: height
         };
         grid.centerZone.heightQuarter = grid.centerZone.height / 5;
+        let width=100;
+        grid.centerButton = {
+            x:(grid.width/2) - (width/2), y:grid.centerZone.y, width:width, height:width
+        };
 
         const textHeight = grid.border * 2;
         const iconHeight = grid.centerZone.heightQuarter * 2;
@@ -36,7 +40,7 @@ class positioner {
         this.createPlayer2Field(grid, halfWidth, iconWidth, iconHeight, textHeight);
 
         // Buttons
-        let width = ((grid.width) / 4) - grid.border2;
+        width = ((grid.width) / 4) - grid.border2;
         height = grid.centerZone.heightQuarter - grid.border2;
         let y = grid.centerZone.y - textHeight;
         grid.rightButton = { width, height, y, x: grid.width - width - grid.border2 };

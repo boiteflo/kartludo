@@ -9,6 +9,7 @@ class effectsLuncher {
     static trigger_action = 'action';
     static trigger_ondestroyed = 'ondestroyed';
     static trigger_end = 'end';
+    static trigger_main = 'main';
 
     static lunchEffectTriggerMultiple(cards, trigger) {
         const cardsList = cards.filter(x => x.effects && x.effects.find(y => y.trigger === trigger));
@@ -137,7 +138,7 @@ class effectsLuncher {
             task.card2.fx = task.isConditionsAfterRespected;
 
         if(task.effect.rest)
-            this.setActive(task.card2, false);
+            this.setActive(game, task.card1, false);
 
         return this[task.effect.id](game, task, player, opponent);
     }
