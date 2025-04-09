@@ -976,6 +976,7 @@
             "type": [
                 2
             ],
+            "strategy":"playIfOpponentUnitsRested",
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
@@ -983,6 +984,13 @@
                 {
                     "trigger": "burst",
                     "id": "sendToHand"
+                },
+                {
+                    "trigger": "command",
+                    "id": "incruisePlayerField",
+                    "removeEndTurn": true,
+                    "ap":2,
+                    "hp":0
                 }
             ],
             "pilot": "xxx",
@@ -1032,6 +1040,7 @@
             "type": [
                 2
             ],
+            "strategy":"playIfOpponentUnits",
             "attribute": "xxx",
             "link": "",
             "effectText": "xxx",
@@ -1042,6 +1051,12 @@
                 },
                 {
                     "trigger": "command",
+                    "id": "sendToHand",
+                    "target": "opponentUnitHpUnderValue",
+                    "value": 6
+                },
+                {
+                    "trigger": "action",
                     "id": "sendToHand",
                     "target": "opponentUnitHpUnderValue",
                     "value": 6

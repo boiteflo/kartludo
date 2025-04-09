@@ -18,6 +18,9 @@ import show from './show';
 import turn from './turn';
 import pair from './pair';
 import ai from './ai';
+import aiCombos from './aiCombos';
+import aiPlay from './aiPlay';
+import aiStrategy from './aiStrategy';
 
 /* eslint-disable no-unused-vars */
 class game {
@@ -32,10 +35,11 @@ class game {
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart) {
         this.cards = cards.cards;
         this.quickstart = quickstart;
-        this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2 };
+        this.game = { logs: '', cards: [], tasks: [{ id: 'setupGame' }], cardList: cards.cards, gundamCards: cards, decklistPlayer1, decklistPlayer2, incruises:[] };
         utils.addFunction([
             tasks, utils, popup, setup, positioner, turn, refresh, selectable, show,
-            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack, ai
+            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack, 
+            ai, aiCombos,aiPlay,aiStrategy
         ], this);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);

@@ -92,8 +92,12 @@ class tasks {
         delete (game.textEffect);
         this.cardHighlight = [];
 
-        this.refreshFieldAndHand(game, {}, game.player1);
-        this.refreshFieldAndHand(game, {}, game.player2);
+        const players = [game.player1, game.player2];
+        players.forEach(player => {            
+            player.field.forEach(card=> this.recalculateApHp(game, player,card));
+            this.refreshFieldAndHand(game, {}, player);
+        });
+
         game.refresh = true;
         game.taskAttack = null;
     }

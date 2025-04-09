@@ -139,16 +139,33 @@ class effects {
             return;
 
         task.card2.incruise = task.isConditionsAfterRespected;
-        task.card2.apOrigin = task.card2.apOrigin ? task.card2.apOrigin : task.card2.ap;
-        task.card2.hpOrigin = task.card2.hpOrigin ? task.card2.hpOrigin : task.card2.hp;
-        task.card2.hpMaxOrigin = task.card2.hpMaxOrigin ? task.card2.hpMaxOrigin : task.card2.hpMax;
-        const apIncruise = task.isConditionsAfterRespected ? task.effect.ap : 0;
-        const hpIncruise = task.isConditionsAfterRespected ? task.effect.hp : 0;
+        const ap = task.isConditionsAfterRespected ? task.effect.ap : 0;
+        const hp = task.isConditionsAfterRespected ? task.effect.hp : 0;
 
-        task.card2.ap = task.card2.apOrigin + apIncruise;
-        task.card2.hp = task.card2.hpOrigin + hpIncruise;
-        task.card2.hpMax = task.card2.hpMaxOrigin + hpIncruise;
-        this.log(`${task.card2.name} have been incruised by AP ${apIncruise} and HP ${hpIncruise}`);
+        task.card2.incruises = task.card2.incruises.filter(x=> x.index != task.card1.index);
+        task.card2.incruises.push({
+            ap,
+            hp, 
+            index:task.card1.index,
+            source:task.card1.name,
+            removeEndTurn: task.effect.removeEndTurn
+        });
+        const cardPlayer = this.getPlayer(task.card2.isPlayer1);
+
+        this.recalculateApHp(game, cardPlayer, task.card2);
+        this.log(`${task.card2.name} have been incruised by AP ${ap} and HP ${hp}`);
+    }
+
+    static incruisePlayerField(game, task, player, opponent){
+        player.incruises = player.incruises.filter(x=> x.index != task.card1.index);
+        player.incruises.push({
+            ap:task.effect.ap, 
+            hp:task.effect.hp, 
+            index:task.card1.index, 
+            source:task.card1.name,
+            removeEndTurn: task.effect.removeEndTurn
+        });
+        this.log(`Player${player.index} field have been incruised by AP ${task.effect.ap} and HP ${task.effect.hp}`);
     }
 
     static sendToHand(game, task, player, opponent) {

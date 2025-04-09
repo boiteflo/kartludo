@@ -35,8 +35,8 @@ class setup {
         const deck = this.createDeck(game, isPlayer1, decklist);
 
         const result = {
-            isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [],
-            resourcesMax: this.resourceStart, resourcesAvailable: 0, resourcesEx: 0,
+            isPlayer1, deck, shield: [], hand: [], field: [], trash: [], base: [], empty: [], incruises: [],
+            resourcesMax: this.resourceStart, resourcesAvailable: 0, resourcesEx: 0, index: isPlayer1 ? '1' : '2',
             positions: {
                 deck: isPlayer1 ? game.grid.player1Deck : game.grid.player2Deck,
                 shield: isPlayer1 ? game.grid.player1Shield : game.grid.player2Shield,

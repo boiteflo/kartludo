@@ -10,7 +10,7 @@ class turn {
         let isExisting = task.effectsAlreadyDone ? false
             : this.lunchEffectTriggerMultiple(player.field, this.trigger_end);
         task.effectsAlreadyDone = true;
-        
+
         if (isExisting) {
             this.addTasks([{ id: this.refreshFieldAndHand.name, isPlayer1: true }, { id: this.refreshFieldAndHand.name, isPlayer1: false, delay: true }]);
             return { stop: true };
@@ -28,7 +28,7 @@ class turn {
 
         this.addTasks(tasks);
 
-        this.removeOneTurnEffect(game.cards);
+        this.removeOneTurnEffect(game);
 
         if (newPlayer.resourcesMax < 1)
             newPlayer.resourcesMax = 1;

@@ -98,8 +98,19 @@ class effectsLuncher {
         return result.filter(x => x && x.length > 0).join(' ');
     }
 
-    static removeOneTurnEffect(cards) {
-        cards.filter(x => x.removeEndTurn).forEach(card => {
+    static removeOneTurnEffect(game) {
+        game.incruises = game.incruises.filter(x => !x.removeEndTurn);
+        const players = [game.player1, game.player2];
+        players.forEach(player => {
+            player.incruises = player.incruises.filter(x => !x.removeEndTurn);
+            player.field.forEach(card => {
+                card.incruises = card.incruises.filter(x => !x.removeEndTurn);
+                this.recalculateApHp(game, player, card);
+            });
+        });
+
+
+        game.cards.filter(x => x.removeEndTurn).forEach(card => {
             const lost = [];
             card.removeEndTurn.forEach(fx => {
                 delete card[fx.id];
