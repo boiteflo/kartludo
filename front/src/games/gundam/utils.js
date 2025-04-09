@@ -56,6 +56,12 @@ class array {
         if (array && !array.includes(x => x.index === card.index))
             return array.concat([card]);
     }
+
+    static alreadyDone(valueOld, valueNew){
+        if(valueOld === undefined && !valueNew)
+            return true;
+        return valueOld == valueNew;
+    }
 }
 
 

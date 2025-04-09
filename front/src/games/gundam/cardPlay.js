@@ -60,7 +60,7 @@ class cardPlay {
         this.spawnIfNot(task.card1);
 
         let isExisting = task.effectsAlreadyDone ? false
-            : this.lunchEffectTriggerForOneCard(task.card1, task.card2, this.trigger_onplay).isEffectExisting;
+            : this.lunchEffectTriggerForOneCard(task.card1, this.trigger_onplay).isEffectExisting;
         if (isExisting) {
             task.effectsAlreadyDone = true;
             return { stop: true };

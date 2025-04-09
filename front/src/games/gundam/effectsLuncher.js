@@ -24,36 +24,50 @@ class effectsLuncher {
         return tasks.length > 0;
     }
 
-    static lunchEffectTriggerForOneCard(card1, card2, trigger) {
+    static lunchEffectTriggerForOneCard(card1, trigger) {
         const result = { isEffectExisting: false };
-        const effects = card1.effects && card1.effects.filter(y => y.trigger === trigger);
+        const effects = this.getEffects(card1, trigger);
         if (!effects || effects.length < 1)
             return result;
 
         result.isEffectExisting = true;
         result.cancelMoveToTrash = this.getCancelMoveToTrash(effects);
-        this.addTaskFirst({ id: this.applyEffectCard.name, card1, card2, trigger });
+        this.addTaskFirst({ id: this.applyEffectCard.name, card1, trigger });
 
         return result;
     }
 
-    static getCancelMoveToTrash(effects) {
-        const effectsThantCancelMoveToTrash = [this.sendToHand.name, this.sendToField.name, this.sendToBase.name];
-        return effects.find(effect => effectsThantCancelMoveToTrash.includes(effect.id)) ? true : false;
-    }
-
     static lunchEffectTriggerForTwoCard(card1, card2, trigger) {
-        const isExistingCard1Effect = card1.effects && card1.effects.find(y => y.trigger === trigger);
-        const isExistingCard2Effect = card2.effects && card2.effects.find(y => y.trigger === trigger);
+        const isExistingCard1Effect = this.getEffects(card1, trigger);
+        const isExistingCard2Effect = this.getEffects(card2, trigger);
         if (!isExistingCard1Effect && !isExistingCard2Effect)
             return false;
 
+        const tasks = [];
+
         if (isExistingCard1Effect)
-            this.addTaskFirst({ id: this.applyEffectCard.name, card1, card2, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1, cardUnit: card1, trigger });
 
         if (isExistingCard2Effect)
-            this.addTaskFirst({ id: this.applyEffectCard.name, card1: card2, card2: card1, trigger });
-        return true;
+            tasks.push({ id: this.applyEffectCard.name, card1: card2, cardUnit: card1, trigger });
+
+        this.addTasksFirst(tasks);
+        return tasks.length > 0;
+    }
+
+    static getEffects(card, trigger) {
+        let result = [];
+        if (!card || !card.effects)
+            return result;
+        result = card.effects.filter(y => y.trigger === trigger);
+        if (card.pair && card.pair.effects)
+            result = result.concat(card.pair.effects.filter(y => y.trigger === trigger));
+        return result;
+    }
+
+    static getCancelMoveToTrash(effects) {
+        const effectsThatCancelMoveToTrash = [this.sendToHand.name, this.deploy.name];
+        return effects.find(effect => effectsThatCancelMoveToTrash.includes(effect.id)) ? true : false;
     }
 
     static applyEffectCard(game, task) {
@@ -97,7 +111,7 @@ class effectsLuncher {
 
     static applyEffect(game, task, player, opponent) {
         const targetResult = this.handleEffectTarget(game, task, player, opponent);
-        if (targetResult.stop)
+        if (targetResult.stop || targetResult.end)
             return targetResult;
 
         if (!this.isEffectMatchConditions(game, task, player, opponent))
@@ -106,6 +120,10 @@ class effectsLuncher {
         if (task.effect.oneTurn)
             task.card1.removeEndTurn = !task.card1.removeEndTurn ? [task.effect]
                 : task.card1.removeEndTurn.concat([task.effect]);
+
+        task.isConditionsAfterRespected = this.isConditionsAfterRespected(game, task, player, opponent);
+        if (task.card2)
+            task.card2.fx = task.isConditionsAfterRespected;
 
         return this[task.effect.id](game, task, player, opponent);
     }

@@ -22,6 +22,9 @@ class conditions {
             else if(condition.id === 'isInHand')
                 result = result && task.card2.location === this.locationHand;
 
+            else if(condition.id === 'isInField')
+                result = result && task.card2.location === this.locationField;
+
             else if(condition.id === 'isPlayerTurn')
                 result = result && game.isPlayer1 === player.isPlayer1;
 

@@ -51,8 +51,8 @@ class cardMove {
 
         card.isPlayer1 = player.isPlayer1;
         card.active = true;
-        card.hidestat = card.location === this.locationTrash;
         card.location = locationTo;
+        card.hidestat = card.location !== this.locationField;
         card.verso = card.location === this.locationHand && !card.isPlayer1;
 
         if (card.pair) {

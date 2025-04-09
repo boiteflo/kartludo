@@ -19,10 +19,8 @@ class effects {
 
     static setCost(game, task, player, opponent) {
         task.card2.costOrigin = task.card2.costOrigin ? task.card2.costOrigin : task.card2.cost;
-        const isConditionsAfterRespected = this.isConditionsAfterRespected(game, task, player, opponent);
-        const reduceValue = isConditionsAfterRespected ? task.effect.value : 0;
+        const reduceValue = task.isConditionsAfterRespected ? task.effect.value : 0;
         task.card2.cost = task.card2.costOrigin + reduceValue;
-        task.card2.fx=isConditionsAfterRespected;
     }
 
     static playToken(game, task, player, opponent) {
@@ -59,19 +57,19 @@ class effects {
     }
 
     static pilotToHand(game, task, player, opponent) {
-        if (!task.card1.pair)
+        if (!task.card2.pair)
             return;
 
-        const card1 = task.card1.pair;
-        delete (task.card1.pair);
+        const card1 = task.card2.pair;
+        delete (task.card2.pair);
         card1.isPaired = false;
         this.addTaskPos2({ id: this.move.name, card1, to: this.locationHand });
         this.log(`${card1.name} return to hand`);
     }
 
     static gainEffects(game, task, player, opponent) {
-        task.card1.effects = task.card1.effects.concat(task.effect.effects);
-        this.log(`${task.card1.name} gain these effects : ${task.effect.effects.map(x => x.id)}`);
+        task.card2.effects = task.card2.effects.concat(task.effect.effects);
+        this.log(`${task.card2.name} gain these effects : ${task.effect.effects.map(x => x.id)}`);
     }
 
     static rest(game, task, player, opponent) {
@@ -79,10 +77,9 @@ class effects {
     }
 
     static repair(game, task, player, opponent) {
-        const card = task.card2 ? task.card2 : task.card1;
-        if (card.hp < card.hpMax) {
+        if (task.card2.hp < task.card2.hpMax) {
             this.log(`${task.card2.name} HP is repaired by ${task.effect.value}`);
-            card.hp = Math.min(card.hp + task.effect.value, card.hpMax);
+            task.card2.hp = Math.min(task.card2.hp + task.effect.value, task.card2.hpMax);
         }
     }
 
@@ -126,45 +123,37 @@ class effects {
     }
 
     static gainThisTurn(game, task, player, opponent) {
-        if (!task.card2)
-            task.card2 = task.card1;
-
         const effect = this.clone(task.effect);
         delete effect.target;
         effect.id = effect.effect2;
         effect.oneTurn = true;
-        this.log(`${task.card1.name} give ${task.effect.effect2} to ${task.card2.name} for this turn`);
+        this.log(`${task.card2.name} get ${task.effect.effect2} for this turn`);
         this.applyEffect(game, {
             id: this.applyEffect.name, card1: task.card2, effect
         }, player, opponent)
     }
 
-    static incruise(game, task, player, opponent) {
-        if (!task.card2) {
-            this.log(`${task.card1.name} can't use this effect because no target available.`);
+    static incruise(game, task, player, opponent) {        
+        const alreadyDone = this.alreadyDone(task.card2.incruise, task.isConditionsAfterRespected);
+        if (alreadyDone) 
             return;
-        }
-        task.card2.ap += task.effect.ap;
-        task.card2.hp += task.effect.hp;
-        task.card2.hpMax += task.effect.hp;
-        this.log(`${task.card2.name} have been incruised by AP ${task.effect.ap} and HP ${task.effect.hp}`);
+
+        task.card2.incruise = task.isConditionsAfterRespected;
+        task.card2.apOrigin = task.card2.apOrigin ? task.card2.apOrigin : task.card2.ap;
+        task.card2.hpOrigin = task.card2.hpOrigin ? task.card2.hpOrigin : task.card2.hp;
+        task.card2.hpMaxOrigin = task.card2.hpMaxOrigin ? task.card2.hpMaxOrigin : task.card2.hpMax;
+        const apIncruise = task.isConditionsAfterRespected ? task.effect.ap : 0;
+        const hpIncruise = task.isConditionsAfterRespected ? task.effect.hp : 0;
+
+        task.card2.ap = task.card2.apOrigin + apIncruise;
+        task.card2.hp = task.card2.hpOrigin + hpIncruise;
+        task.card2.hpMax = task.card2.hpMaxOrigin + hpIncruise;
+        this.log(`${task.card2.name} have been incruised by AP ${apIncruise} and HP ${hpIncruise}`);
     }
 
     static sendToHand(game, task, player, opponent) {
         this.log(`${task.card2.name} is send to hand`);
         this.addTaskPos2({ id: this.move.name, card1: task.card2, to: this.locationHand });
-    }
-
-    static sendToField(game, task, player, opponent) {
-        this.log(`${task.card1.name} is send to field`);
-        this.addTaskPos2({ id: this.play.name, card1: task.card1, to: this.locationField });
-    }
-
-    static sendToBase(game, task, player, opponent) {
-        task.card1.location = this.locationShield;
-        this.log(`${task.card1.name} is send to base`);
-        this.addTasksPos2([{ id: this.play.name, card1: task.card1, zone: player.positions.field }]);
-        return {};
     }
 
     static unrestResource(game, task, player, opponent) {
@@ -176,66 +165,58 @@ class effects {
     static placeExResource(game, task, player, opponent) {
         player.resourcesEx += task.effect.value;
         player.resourcesAvailable += task.effect.value;
-        this.log(`${task.card1.name} deploy ${task.effect.value} ex resource(s)`);
+        this.log(`${task.card2.name} deploy ${task.effect.value} ex resource(s)`);
     }
 
     static placeRestedResource(game, task, player, opponent) {
         player.resourcesMax += task.effect.value;
-        this.log(`${task.card1.name} deploy ${task.effect.value} rested resource(s)`);
+        this.log(`${task.card2.name} deploy ${task.effect.value} rested resource(s)`);
     }
 
     static breach(game, task, player, opponent) {
-        if (!task.card1.breach || task.card1.breach < task.effect.value) {
-            task.card1.breach = task.effect.value;
-            this.log(`${task.card1.name} has breach ${task.effect.value}`);
+        if (!task.card2.breach || task.card2.breach < task.effect.value) {
+            task.card2.breach = task.effect.value;
+            this.log(`${task.card2.name} has breach ${task.effect.value}`);
         }
     }
 
     static blocker(game, task, player, opponent) {
-        if (!task.card1.blocker) {
-            task.card1.blocker = true;
-            this.log(`${task.card1.name} has blocker`);
-        }
+        const alreadyDone = this.alreadyDone(task.card2.blocker, task.isConditionsAfterRespected);
+        if (alreadyDone) 
+            return;
+        
+        task.card2.blocker = task.isConditionsAfterRespected;
+        const text = task.isConditionsAfterRespected ? 'has blocker' : 'don t has blocker';
+        this.log(`${task.card2.name} ${text}`);
     }
 
     static highManeuver(game, task, player, opponent) {
-        if (!task.card1.highManeuver) {
-            task.card1.highManeuver = true;
-            this.log(`${task.card1.name} has highManeuver`);
+        if (!task.card2.highManeuver) {
+            task.card2.highManeuver = true;
+            this.log(`${task.card2.name} has highManeuver`);
         }
     }
 
     static deploy(game, task, player, opponent) {
         let card1 = task.card2;
-        if (!task.card2 && task.effect.attribute) {
-            const targets = player.hand.filter(x => x.name.includes(task.effect.attribute) || x.attribute.includes(task.effect.attribute));
-            if (targets.length < 1) {
-                this.log(`${task.card1.name} can't deploy anything because no targat available`);
-                return;
-            }
-            card1 = targets[0];
-        }
-
         card1.selectable = false;
         card1.canAttack = false;
         const cardPlayer = this.getPlayer(card1.isPlayer1);
-        this.log(`${task.card1.name} deploy ${card1.name}`);
+        this.log(`${card1.name} is deployed`);
         this.addTask({ id: this.play.name, card1, zone: cardPlayer.positions.field, regularPlay: false });
     }
 
     static attackActiveEnnemy(game, task, player, opponent) {
-        if (!task.card1.attackActiveEnnemy || task.card1.attackActiveEnnemy < task.effect.value) {
-            task.card1.attackActiveEnnemy = task.effect.value;
-            this.log(`${task.card1.name} can now attack unit with AP < ${task.effect.value}`);
+        if (!task.card2.attackActiveEnnemy || task.card2.attackActiveEnnemy < task.effect.value) {
+            task.card2.attackActiveEnnemy = task.effect.value;
+            this.log(`${task.card2.name} can now attack unit with AP < ${task.effect.value}`);
         }
     }
 
-    static immuneApIfBreach(game, task, player, opponent) {
-        if (task.card1.breach) {
-            if (!task.card1.immuneAp || task.card1.immuneAp < task.effect.value) {
-                task.card1.immuneAp = task.effect.value;
-                this.log(`${task.card1.name} is now immune to AP < ${task.effect.value}`);
-            }
+    static immune(game, task, player, opponent) {
+        if (!task.card2.immuneAp || task.card2.immuneAp < task.effect.value) {
+            task.card2.immuneAp = task.effect.value;
+            this.log(`${task.card2.name} is now immune to AP < ${task.effect.value}`);
         }
     }
 }

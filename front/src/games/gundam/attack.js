@@ -107,7 +107,7 @@ class attack {
             card1.position = this.clone(opponent.positions.shield);
             task.attacker.to = { ...task.attacker.position, x: opponent.positions.shield.x, y: opponent.positions.shield.y };
 
-            const burstEffect = this.lunchEffectTriggerForOneCard(card1, null, this.trigger_burst);
+            const burstEffect = this.lunchEffectTriggerForOneCard(card1, this.trigger_burst);
             const tasks = [];
             if(!burstEffect.isEffectExisting)
                 tasks.push({ id: this.showCards.name, card1, delay: 100 });
@@ -129,7 +129,7 @@ class attack {
 
     static effectBattle(game, task, player, opponent) {
         let isExisting = task.battleEffectsAlreadyDone ? false
-            : this.lunchEffectTriggerForOneCard(task.attacker, task.target, this.trigger_battle);
+            : this.lunchEffectTriggerForOneCard(task.attacker, this.trigger_battle);
         if (isExisting) {
             task.battleEffectsAlreadyDone = true;
             return { stop: true };

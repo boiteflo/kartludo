@@ -10,8 +10,11 @@ class turn {
         let isExisting = task.effectsAlreadyDone ? false
             : this.lunchEffectTriggerMultiple(player.field, this.trigger_end);
         task.effectsAlreadyDone = true;
-        if (isExisting)
+        
+        if (isExisting) {
+            this.addTasks([{ id: this.refreshFieldAndHand.name, isPlayer1: true }, { id: this.refreshFieldAndHand.name, isPlayer1: false, delay: true }]);
             return { stop: true };
+        }
 
         game.isPlayer1 = !game.isPlayer1;
         const newPlayer = this.getPlayerTurn();

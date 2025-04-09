@@ -15,6 +15,8 @@ class refresh {
         player.shieldIcon = this.getIcon(player.shield.length);
         player.deckIcon = this.getIcon(player.deck.length);
         player.trashIcon = this.getIcon(player.trash.length);
+        
+        game.textEffect = task.textEffect;
     }
     
     static refreshPlayerArea(cards, position, useZoneSize, wrapCut, centerEmptyZone) {
