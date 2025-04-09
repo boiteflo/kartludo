@@ -97,6 +97,12 @@ class attack {
             return {};
         }
 
+        if(task.attacker.ap < 1){
+            task.step = 'end';
+            this.setActive(task.attacker, false);
+            return {end: true};
+        }
+
         if (opponent.shield.length > 0) {
             task.step = 'end';
             this.setActive(task.attacker, false);

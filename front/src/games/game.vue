@@ -258,7 +258,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: 'GD01-105'
+        quickstart: false//'GD01-124'
     }),
     mounted() {
         document.body.style.overflow = "hidden";
@@ -269,8 +269,8 @@ export default {
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
         if (this.quickstart) {
-            this.decklistPlayer1 = cards.decklist[2].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
-            this.decklistPlayer2 = cards.decklist[2].list;
+            this.decklistPlayer1 = cards.decklist[0].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
+            this.decklistPlayer2 = cards.decklist[0].list;
             this.start();
         }
     },

@@ -136,6 +136,9 @@ class effectsLuncher {
         if (task.card2)
             task.card2.fx = task.isConditionsAfterRespected;
 
+        if(task.effect.rest)
+            this.setActive(task.card2, false);
+
         return this[task.effect.id](game, task, player, opponent);
     }
 }

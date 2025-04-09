@@ -1116,6 +1116,7 @@
                     "trigger": "burst",
                     "target": "opponentUnit",
                     "id": "incruise",
+                    "removeEndTurn": true,
                     "ap": -3,
                     "hp": 0
                 },
@@ -1123,6 +1124,7 @@
                     "trigger": "command",
                     "target": "playerUnitBlocker",
                     "id": "incruise",
+                    "removeEndTurn": true,
                     "ap": 3,
                     "hp": 0
                 }
@@ -1146,6 +1148,7 @@
             "attribute": "(Earth Federation) (Stronghold)",
             "link": "",
             "effectText": "xxx",
+            "mainEffect":true,
             "effects": [
                 {
                     "trigger": "burst",
@@ -1154,6 +1157,12 @@
                 {
                     "trigger": "onplay",
                     "id": "get1ShieldToHand"
+                },
+                {
+                    "trigger": "main",
+                    "rest":true,
+                    "target":"playerUnit",
+                    "id": "repair"
                 }
             ],
             "pilot": "xxx",
