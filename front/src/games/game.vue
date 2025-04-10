@@ -270,7 +270,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: 'ST04-001'
+        quickstart: false
     }),
     mounted() {
         document.body.style.overflow = "hidden";

@@ -7,12 +7,6 @@ class setup {
     static shieldStartLength = 6;
 
     static setupGame(game) {
-        if (this.quickstart) {
-            this.handStartLength = 15;
-            this.resourceStart = 10;
-            this.shieldStartLength = 6;
-        }
-
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = this.quickstart ? false : Math.floor(Math.random() * 2) == 1;
@@ -113,22 +107,6 @@ class setup {
 
             tasks = tasks.concat(this.addShielsAndBase(game));
 
-            if (this.quickstart) {
-                const ids = this.quickstart.split(',');
-                ids.forEach(id => {
-                    tasks = tasks.concat([
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationHand, isPlayer1: true },
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationHand, isPlayer1: false },
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, true, this.locationDeck), to: this.locationField, isPlayer1: true },
-                        { id: this.spawnOrMove.name, card1: this.createCard(id, false, this.locationDeck), to: this.locationField, isPlayer1: false }
-                    ]);
-
-                    game.player1.trash = [this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck), this.createCard('GD01-120', true, this.locationDeck)]
-                    game.player1.shield = [this.createCard(id, true, this.locationShield)].concat(game.player1.shield);
-                    game.player2.shield = [this.createCard(id, false, this.locationShield)].concat(game.player2.shield);
-                });
-            }
-
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });
 
@@ -145,19 +123,8 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        if (!this.quickstart) {
-            game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
-            game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
-        } else {
-            const ids = 'GD01-015,ST01-002'.split(',');
-            const cardsBall = ids.map(id => this.createCard(id, true, this.locationDeck))
-                .concat(ids.map(id => this.createCard(id, false, this.locationDeck)));
-
-            cardsBall.forEach(card1 => {
-                tasks.push({ id: this.spawnOrMove.name, card1, to: this.locationField });
-                tasks.push({ id: this.applyEffect.name, effect: { id: this.rest.name, card:card1 } });
-            });
-        }
+        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
 
         return tasks;
     }
