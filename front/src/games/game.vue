@@ -39,7 +39,7 @@
         -->
             <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.centerButton)">
                 <v-btn target="_blank"
-                    :class="{ bg2: true, shine: !freeze && game.effects.length > 0, fontSize075em: true, w100p: true, h100p: true }"
+                    :class="{ bg2: true, shine: !freeze && game.player1.hasEffects, fontSize075em: true, w100p: true, h100p: true }"
                     @click="useEffect" style="min-width:0px;">
                     <span>Use Effect</span>
                 </v-btn>
@@ -187,7 +187,7 @@
                 <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand" :style="{width:game?.grid.card100.height + 'px'}">
                         <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1? '1' : '2' }}</div>
-                        <img :style="{ ...getFieldStyleObj(game?.grid.card100), transform: 'rotate(' + card.position.rotation + 'deg)' }"
+                        <img :style="{ ...getFieldStyleObj(game?.grid.card100), transform: 'rotate(' + card.position?.rotation ?? 0 + 'deg)' }"
                             @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
@@ -270,7 +270,7 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
-        quickstart: false//'GD01-124'
+        quickstart: 'ST04-001'
     }),
     mounted() {
         document.body.style.overflow = "hidden";
@@ -281,8 +281,8 @@ export default {
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
         if (this.quickstart) {
-            this.decklistPlayer1 = cards.decklist[0].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
-            this.decklistPlayer2 = cards.decklist[0].list;
+            this.decklistPlayer1 = cards.decklist[4].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
+            this.decklistPlayer2 = cards.decklist[4].list;
             this.start();
         }
     },
@@ -489,7 +489,7 @@ export default {
                 return;
             card.moving = false;
 
-            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(x, y, ca.position) && !ca.isPaired);
+            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(x, y, ca.position) && !ca.pairedWith);
             const zoneDrop = this.game.fields.find(zone => this.isInside(x, y, zone));
             this.playCard(card, card2, zoneDrop);
         },
@@ -510,7 +510,7 @@ export default {
             event.target.style.zIndex = "auto";
             const touch = event.changedTouches[0];
 
-            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(touch.clientX, touch.clientY, ca.position) && !ca.isPaired);
+            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(touch.clientX, touch.clientY, ca.position) && !ca.pairedWith);
             const zone = this.game.fields.find(zone => this.isInside(touch.clientX, touch.clientY, zone));
             this.playCard(card, card2, zone);
         },

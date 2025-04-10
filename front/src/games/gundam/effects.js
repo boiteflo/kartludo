@@ -30,6 +30,18 @@ class effects {
         this.addTaskFirst({ id: this.spawnOrMove.name, card1: this.createCard(task.effect.value, isPlayer1), to: this.locationField, isPlayer1 });
     }
 
+    static playTokenByUnitsNumber(game, task, player, opponent) {
+        for (let i = 0; i < task.effect.values.length; i++) {
+            const value = task.effect.values[i];
+            if (value.min !== undefined && player.field.length >= value.min) {
+                return this.playToken(game, { effect: { value: value.id } }, player, opponent);
+            }
+            else if (value.max !== undefined && player.field.length <= value.max) {
+                return this.playToken(game, { effect: { value: value.id } }, player, opponent);
+            }
+        }
+    }
+
     static dealDamage(game, task, player, opponent) {
         task.card2.hp -= task.effect.value;
         this.log(`${task.card2.name} HP is reduced by ${task.effect.value}`);
@@ -62,7 +74,7 @@ class effects {
 
         const card1 = task.card2.pair;
         delete (task.card2.pair);
-        card1.isPaired = false;
+        card1.pairedWith = null;
         this.addTaskPos2({ id: this.move.name, card1, to: this.locationHand });
         this.log(`${card1.name} return to hand`);
     }
@@ -74,6 +86,15 @@ class effects {
 
     static rest(game, task, player, opponent) {
         this.setActive(game, task.card2, false);
+    }
+
+    static unrest(game, task, player, opponent) {
+        this.setActive(game, task.card2, true);
+    }
+
+    static unrestButCantAttack(game, task, player, opponent) {
+        this.setActive(game, task.card2, true);
+        task.card2.canAttack = false;
     }
 
     static repair(game, task, player, opponent) {
@@ -127,27 +148,26 @@ class effects {
         delete effect.target;
         effect.id = effect.effect2;
         effect.oneTurn = true;
+        effect.card = task.card2;
         this.log(`${task.card2.name} get ${task.effect.effect2} for this turn`);
-        this.applyEffect(game, {
-            id: this.applyEffect.name, card1: task.card2, effect
-        }, player, opponent)
+        this.applyEffect(game, { id: this.applyEffect.name, effect }, player, opponent)
     }
 
-    static incruise(game, task, player, opponent) {        
+    static incruise(game, task, player, opponent) {
         const alreadyDone = this.alreadyDone(task.card2.incruise, task.isConditionsAfterRespected);
-        if (alreadyDone) 
+        if (alreadyDone)
             return;
 
         task.card2.incruise = task.isConditionsAfterRespected;
         const ap = task.isConditionsAfterRespected ? task.effect.ap : 0;
         const hp = task.isConditionsAfterRespected ? task.effect.hp : 0;
 
-        task.card2.incruises = task.card2.incruises.filter(x=> x.index != task.card1.index);
+        task.card2.incruises = task.card2.incruises.filter(x => x.index != task.effect.card.index);
         task.card2.incruises.push({
             ap,
-            hp, 
-            index:task.card1.index,
-            source:task.card1.name,
+            hp,
+            index: task.effect.card.index,
+            source: task.effect.card.name,
             removeEndTurn: task.effect.removeEndTurn
         });
         const cardPlayer = this.getPlayer(task.card2.isPlayer1);
@@ -156,13 +176,13 @@ class effects {
         this.log(`${task.card2.name} have been incruised by AP ${ap} and HP ${hp}`);
     }
 
-    static incruisePlayerField(game, task, player, opponent){
-        player.incruises = player.incruises.filter(x=> x.index != task.card1.index);
+    static incruisePlayerField(game, task, player, opponent) {
+        player.incruises = player.incruises.filter(x => x.index != task.effect.card.index);
         player.incruises.push({
-            ap:task.effect.ap, 
-            hp:task.effect.hp, 
-            index:task.card1.index, 
-            source:task.card1.name,
+            ap: task.effect.ap,
+            hp: task.effect.hp,
+            index: task.effect.card.index,
+            source: task.effect.card.name,
             removeEndTurn: task.effect.removeEndTurn
         });
         this.log(`Player${player.index} field have been incruised by AP ${task.effect.ap} and HP ${task.effect.hp}`);
@@ -175,8 +195,10 @@ class effects {
 
     static unrestResource(game, task, player, opponent) {
         const value = task.effect.value ? task.effect.value : 1;
-        if (player.resourcesAvailable < player.resourcesMax)
-            player.resourcesAvailable += value;
+        if (player.resourcesAvailable < player.resourcesMax) {
+            player.resourcesAvailable = Math.min(player.resourcesMax, player.resourcesAvailable + value);
+            this.log(`Player${player.index} resources have been incruised by ${value}`);
+        }
     }
 
     static placeExResource(game, task, player, opponent) {
@@ -199,9 +221,9 @@ class effects {
 
     static blocker(game, task, player, opponent) {
         const alreadyDone = this.alreadyDone(task.card2.blocker, task.isConditionsAfterRespected);
-        if (alreadyDone) 
+        if (alreadyDone)
             return;
-        
+
         task.card2.blocker = task.isConditionsAfterRespected;
         const text = task.isConditionsAfterRespected ? 'has blocker' : 'don t has blocker';
         this.log(`${task.card2.name} ${text}`);

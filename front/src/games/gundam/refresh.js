@@ -59,7 +59,7 @@ class refresh {
 
     static resetZIndex(game){
         game.cards.forEach(card=> {
-            card.zindex = card.isPaired ? 1 : 2;
+            card.zindex = card.pairedWith ? 1 : 2;
         });
     }
 }

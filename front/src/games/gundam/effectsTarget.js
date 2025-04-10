@@ -2,19 +2,22 @@ class effectsTarget {
 
     static handleEffectTarget(game, task, player, opponent) {
         if (task.effect.target) {
-            if(task.choice)
-                return {end:true};
+            if (task.choice)
+                return { end: true };
             else if (!task.cardChoice)
                 return this.popupTargetCards(game, task, player, opponent);
             else
                 task.card2 = task.cardChoice;
         }
 
-        if(task.cardUnit)
+        if (!task.card2 && task.effect.card.pairedWith)
+            task.cardUnit = game.cards.find(x => x.index === task.effect.card.pairedWith);
+
+        if (!task.card2 && task.cardUnit)
             task.card2 = task.cardUnit;
 
         if (!task.card2)
-            task.card2 = task.card1;
+            task.card2 = task.effect.card;
 
         return {};
     }
@@ -45,17 +48,20 @@ class effectsTarget {
         else if (task.effect.target === 'playerUnitWithAttribute')
             cards = player.field.filter(x => this.isCardUnit(x) && x.attribute.includes(task.effect.targetAttribute));
 
+        else if (task.effect.target === 'playerUnitWithEffect')
+            cards = player.field.filter(x => this.isCardUnit(x) && this.hasEffect(x, task.effect.effect));
+
         else if (task.effect.target === 'unit')
             throw new Error("Can't handle this tast target : 'unit'");
 
         if (cards.length < 1) {
-            this.log(`Can't play ${task.card1.name} (${task.effect.id}) because there is no target available`);
+            this.log(`Can't play ${task.effect.card.name} (${task.effect.id}) because there is no target available`);
             return { end: true };
         }
 
         const choices = [];
-        if(task.effect.optional)
-            choices.push({text:'None'});
+        if (task.effect.optional)
+            choices.push({ text: 'None' });
 
         this.game.tasks = [{
             id: this.popup.name,

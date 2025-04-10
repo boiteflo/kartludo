@@ -46,13 +46,7 @@ class aiPlay {
 
         const notEnoughShield = this.getNotEnoughShield(game, task, player, unitsThatCanAttack);
         const target = this.getTarget(game, task, player, attacker, notEnoughShield);
-        this.addTasksFirst([
-            {
-                id: this.attack.name,
-                attacker, isPlayer1: false,
-                target
-            }
-        ]);
+        this.declareAiAttack(attacker, target);
         return { taskAdded: true };
     }
 
@@ -70,7 +64,23 @@ class aiPlay {
     }
 
     static getPlayCardTasks(player, card1, card2) {
-        return [{ id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true }]
+        const value = `I Play ${card1.name} ${card2 ? 'with ' + card2.name : ''}`;
+        return [
+            { id: this.showTitle.name, value, isPlayer1: false, delay: true },
+            { id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true }
+        ]
+    }
+
+    static declareAiAttack(attacker, target) {
+        const value = `I attack with ${attacker.name} (Level ${attacker.level}, AP ${attacker.ap}) ${target ? 'against ' + target.name : ''}`;
+        this.addTasksFirst([
+            { id: this.showTitle.name, value, isPlayer1: false, delay: true },
+            {
+                id: this.attack.name,
+                attacker, isPlayer1: false,
+                target
+            }
+        ]);
     }
 }
 

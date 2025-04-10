@@ -69,12 +69,15 @@ class cardPlay {
         if (this.isCardUnit(task.card1) && player.field.length < 6) {
             task.card1.canAttack = false;
             if (playCost)
-                this.playCardCost(player, task.card1);
+                this.playCardCost(player, task.card1.cost);
             this.addTaskPos2({ id: this.move.name, card1: task.card1, to: this.locationField });
             return;
         }
 
         if (this.isCardBase(task.card1)) {
+            if (playCost)
+                this.playCardCost(player, task.card1.cost);
+            
             if (player.base.length > 0)
                 this.addTaskPos2({ id: this.move.name, card1: player.base[0], to: this.locationTrash });
 
@@ -84,20 +87,20 @@ class cardPlay {
         }
 
         if (isPilot && task.card2 && this.isCardUnit(task.card2)) {
-            if (task.card1.pair || task.card2.pair || task.card1.isPaired || task.card2.isPaired) {
+            if (task.card1.pair || task.card2.pair || task.card1.pairedWith || task.card2.pairedWith) {
                 this.sendCardBackToSquareOne(task.card1);
                 return;
             }
 
             if (playCost)
-                this.playCardCost(player, task.card1);
+                this.playCardCost(player, task.card1.cost);
             this.addTaskPos2({ id: this.pair.name, card1: task.card1, card2: task.card2 });
             return;
         }
 
         if (isCommand) {
             if (playCost)
-                this.playCardCost(player, task.card1);
+                this.playCardCost(player, task.card1.cost);
 
             this.addTasksPos2([
                 { id: this.applyEffectCard.name, card1: task.card1, card2: task.card2, trigger: this.trigger_command },
@@ -109,10 +112,10 @@ class cardPlay {
         this.sendCardBackToSquareOne(task.card1);
     }
 
-    static playCardCost(player, card) {
+    static playCardCost(player, cost) {
         if (player.resourcesEx > 0)
-            player.resourcesEx = Math.max(0, player.resourcesEx - card.cost);
-        player.resourcesAvailable -= card.cost;
+            player.resourcesEx = Math.max(0, player.resourcesEx - cost);
+        player.resourcesAvailable -= cost;
     }
 
     static askPilotOrCommand(player, task) {

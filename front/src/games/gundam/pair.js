@@ -22,14 +22,16 @@ class pair {
         player[from] = this.removeByIndex(player[from], cardPilot);
         cardUnit.pair = cardPilot;
         cardPilot.selectable = false;
-        cardPilot.isPaired = true;
+        cardPilot.pairedWith = cardUnit.index;
         cardPilot.location = this.locationPair;
         cardPilot.zindex = 1;
         cardUnit.zindex = 2;
-        cardUnit.ap += cardPilot.ap;
-        cardUnit.hp += cardPilot.hp;
+        cardUnit.apOrigin += cardPilot.ap;
+        cardUnit.hpOrigin += cardPilot.hp;
+        cardUnit.hpMaxOrigin += cardPilot.hp;
         cardUnit.verso = false;
         cardPilot.verso = false;
+        this.handleMainEffectsCard(game, cardPilot, true);
 
         if (isLink) {
             cardUnit.link = true;
@@ -37,17 +39,6 @@ class pair {
             cardUnit.active = true;
             cardUnit.selectable = true;
             cardUnit.canAttack = true;
-        }
-    }
-
-    static isLink(cardUnit, cardPilot) {
-        if (cardUnit.link?.includes('['))
-            return cardUnit.link.includes(cardPilot.name);
-        else {
-            const targetStr = cardUnit.link.replace('(', '').replace(')', '').trim();
-            if (!targetStr && targetStr.length < 1)
-                return false;
-            return cardPilot.attribute?.includes(targetStr);
         }
     }
 }

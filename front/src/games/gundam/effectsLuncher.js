@@ -47,22 +47,25 @@ class effectsLuncher {
         const tasks = [];
 
         if (isExistingCard1Effect)
-            tasks.push({ id: this.applyEffectCard.name, card1, cardUnit: card1, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1, cardUnit: card1, cardPilot: card2, trigger });
 
         if (isExistingCard2Effect)
-            tasks.push({ id: this.applyEffectCard.name, card1: card2, cardUnit: card1, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1: card2, cardUnit: card1, cardPilot: card2, trigger });
 
         this.addTasksFirst(tasks);
         return tasks.length > 0;
     }
 
-    static getEffects(card, trigger) {
+    static getEffects(card, trigger, ignorePair) {
         let result = [];
         if (!card || !card.effects)
             return result;
-        result = card.effects.filter(y => y.trigger === trigger);
-        if (card.pair && card.pair.effects)
-            result = result.concat(card.pair.effects.filter(y => y.trigger === trigger));
+
+        result = card.effects.filter(y => y.trigger === trigger).map(fx => { return { ...fx, card } });
+
+        if (!ignorePair && card.pair && card.pair.effects)
+            result = result.concat(card.pair.effects.filter(y => y.trigger === trigger).map(fx => { return { ...fx, card: card.pair } }));
+
         return result;
     }
 
@@ -72,17 +75,25 @@ class effectsLuncher {
     }
 
     static applyEffectCard(game, task) {
-        const effects = task.card1.effects.filter(x => x.trigger == task.trigger);
-        const text = effects.map(fx => this.getEffectText(fx)).join('<br>');
-        let tasks = [];
-        const show = effects.filter(fx => !fx.hide).length > 0;
+        if (!task.card1)
+            return;
 
-        if (show)
-            tasks.push({ ...task, id: this.showCards.name, text, delay: true });
+        const effects = this.getEffects(task.card1, task.trigger, true);
+        if (effects.length > 0) {
+            const text = effects.map(fx => this.getEffectText(fx)).join('<br>');
+            let tasks = [];
+            const show = effects.filter(fx => !fx.hide).length > 0;
 
-        tasks = tasks.concat(effects.map(effect => { return { ...task, id: this.applyEffect.name, effect }; }));
+            if (show)
+                tasks.push({ ...task, id: this.showCards.name, text, delay: true });
 
-        this.addTasksFirst(tasks);
+            tasks = tasks.concat(effects.map(effect => { return { ...task, id: this.applyEffect.name, effect }; }));
+
+            this.addTasksFirst(tasks);
+        }
+
+        if (task.card1.pair)
+            this.applyEffectCard(game, { ...task, card1: task.card1.pair });
     }
 
     static getEffectText(effect) {
@@ -110,7 +121,6 @@ class effectsLuncher {
             });
         });
 
-
         game.cards.filter(x => x.removeEndTurn).forEach(card => {
             const lost = [];
             card.removeEndTurn.forEach(fx => {
@@ -129,16 +139,25 @@ class effectsLuncher {
         if (!this.isEffectMatchConditions(game, task, player, opponent))
             return {};
 
+        if (task.effect.cost) {
+            if (player.resourcesAvailable < task.effect.cost) {
+                this.log(`Can't play ${task.effect.card.name} because cost can't be played : ${task.effect.cost}`);
+                return {};
+            }
+
+            this.playCardCost(player, task.effect.cost);
+        }
+
         if (task.effect.oneTurn)
-            task.card1.removeEndTurn = !task.card1.removeEndTurn ? [task.effect]
-                : task.card1.removeEndTurn.concat([task.effect]);
+            task.card2.removeEndTurn = !task.card2.removeEndTurn ? [task.effect]
+                : task.card2.removeEndTurn.concat([task.effect]);
 
         task.isConditionsAfterRespected = this.isConditionsAfterRespected(game, task, player, opponent);
         if (task.card2)
             task.card2.fx = task.isConditionsAfterRespected;
 
-        if(task.effect.rest)
-            this.setActive(game, task.card1, false);
+        if (task.effect.rest)
+            this.setActive(game, task.effect.card, false);
 
         return this[task.effect.id](game, task, player, opponent);
     }

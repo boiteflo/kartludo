@@ -97,17 +97,15 @@ class attack {
             return {};
         }
 
-        if(task.attacker.ap < 1){
-            task.step = 'end';
+        if (task.attacker.ap < 1) {
             this.setActive(game, task.attacker, false);
-            return {end: true};
+            return {};
         }
 
         if (opponent.shield.length > 0) {
-            task.step = 'end';
             this.setActive(game, task.attacker, false);
             if (task.shieldProtection)
-                return { end: true };
+                return {};
 
             const card1 = opponent.shield[0];
             card1.position = this.clone(opponent.positions.shield);
@@ -115,20 +113,20 @@ class attack {
 
             const burstEffect = this.lunchEffectTriggerForOneCard(card1, this.trigger_burst);
             const tasks = [];
-            if(!burstEffect.isEffectExisting)
+            if (!burstEffect.isEffectExisting)
                 tasks.push({ id: this.showCards.name, card1, delay: 100 });
 
-            if(!burstEffect.cancelMoveToTrash)
+            if (!burstEffect.cancelMoveToTrash)
                 tasks.push({ id: this.spawnOrMove.name, card1, to: this.locationTrash });
 
             this.addTasks(tasks);
-            return { end: true };
+            return {};
         }
 
         return this.end(player.isPlayer1);
     }
 
-    static isValidTarget(opponent, attacker, target){
+    static isValidTarget(opponent, attacker, target) {
         return target.isPlayer1 === opponent.isPlayer1
             && (!target.active || (attacker.attackActiveEnnemy && attacker.attackActiveEnnemy > target.level));
     }
@@ -144,21 +142,30 @@ class attack {
     }
 
     static showFight(game, task, player, opponent) {
+        if (!task.target)
+            return {};
+
         this.addTaskFirst({ id: this.showCards.name, card1: task.attacker, card2: task.target, delay: true });
         this.nextStep(task);
         return { stop: true };
     }
 
     static fight(game, task, player, opponent) {
+        if (!task.target)
+            return {};
+        
         let damage = task.breach ? task.breach : task.attacker.ap;
         if (task.target.immuneAp && damage < task.target.immuneAp)
             damage = 0;
         task.target.hp -= damage;
+        task.target.hpOrigin -= damage;
+        
 
         damage = task.target.ap;
         if (task.attacker.immuneAp && task.attacker < task.target.immuneAp)
             damage = 0;
         task.attacker.hp -= damage;
+        task.attacker.hpOrigin -= damage;
 
         const activeBreach = !task.breach && this.isCardUnit(task.target) && task.attacker.breach && task.target.hp < 1;
         this.setActive(game, task.attacker, false);

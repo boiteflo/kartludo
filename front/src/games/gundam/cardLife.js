@@ -72,6 +72,10 @@ class cardLife {
         }
     }
 
+    static isLink(cardUnit, cardPilot) {
+        return this.hasAttribute(cardPilot, cardUnit.link);
+    }
+
     static recalculateApHp(game, player, card) {
         let ap = 0;
         let hp = 0;
