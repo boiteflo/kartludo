@@ -25,10 +25,6 @@ class positioner {
             width: grid.width, height: height
         };
         grid.centerZone.heightQuarter = grid.centerZone.height / 5;
-        let width=100;
-        grid.centerButton = {
-            x:(grid.width/2) - (width/2), y:grid.centerZone.y, width:width, height:width
-        };
 
         const textHeight = grid.border * 2;
         const iconHeight = grid.centerZone.heightQuarter * 2;
@@ -40,11 +36,17 @@ class positioner {
         this.createPlayer2Field(grid, halfWidth, iconWidth, iconHeight, textHeight);
 
         // Buttons
-        width = ((grid.width) / 4) - grid.border2;
-        height = grid.centerZone.heightQuarter - grid.border2;
-        let y = grid.centerZone.y - textHeight;
-        grid.rightButton = { width, height, y, x: grid.width - width - grid.border2 };
-        grid.leftButton = { width, height, y: y, x: grid.rightButton.x - width - grid.border };
+        let width=100;
+        grid.resources = {
+            x:(grid.width/2) - (width/2), y:grid.centerZone.y, width:width, height:width
+        };
+        height=30;
+        grid.buttonEffect = { ...grid.resources, height,
+            y:grid.resources.y + grid.resources.height + 5, 
+        };
+        grid.buttonLogs = { ...grid.buttonEffect, y: grid.buttonEffect.y + grid.buttonEffect.height + 5};
+        grid.buttonEndTurn = {  ...grid.buttonEffect, y: grid.buttonLogs.y + grid.buttonLogs.height + 5};
+
 
         // Highlight center cards
         grid.textZone = { ...grid.player2Hand, width: grid.width - grid.border2 };

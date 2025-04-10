@@ -13,6 +13,8 @@ class setup {
         game.fields = [game.grid.player1Hand, game.grid.player1Field, game.grid.player2Hand, game.grid.player2Field];
 
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
+        game.player = playerOpponent;
+        game.resourcesMax = 2;
         playerOpponent.resourcesEx += 1;
 
         let tasks = [];

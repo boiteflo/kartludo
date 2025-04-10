@@ -507,6 +507,10 @@
     background: green !important;
 }
 
+.bgBlue, .bgBlueHover:hover{
+    background: #3F51B5 !important;
+}
+
 .bgGreenHover {
     background-color: #C5E1A5 !important;
     transition : background-color 0.5s ease;

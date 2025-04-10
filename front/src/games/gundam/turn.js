@@ -17,7 +17,7 @@ class turn {
         }
 
         game.isPlayer1 = !game.isPlayer1;
-        const newPlayer = this.getPlayerTurn();
+        game.player = this.getPlayerTurn();
         const playerId = game.isPlayer1 ? '1' : '2';
         this.startTasks(game);
 
@@ -30,23 +30,24 @@ class turn {
 
         this.removeOneTurnEffect(game);
 
-        if (newPlayer.resourcesMax < 1)
-            newPlayer.resourcesMax = 1;
-        else if (newPlayer.resourcesMax < 10)
-            newPlayer.resourcesMax += 1;
+        if (game.player.resourcesMax < 1)
+            game.player.resourcesMax = 1;
+        else if (game.player.resourcesMax < 10)
+            game.player.resourcesMax += 1;
 
-        newPlayer.resourcesAvailable = newPlayer.resourcesMax + newPlayer.resourcesEx;
+        game.player.resourcesAvailable = game.player.resourcesMax + game.player.resourcesEx;
+        game.resourcesMax = Math.max(game.player1.resourcesAvailable, game.player1.resourcesMax, game.player2.resourcesAvailable, game.player2.resourcesMax) + 1;
 
         this.setSelectableFalse();
 
-        newPlayer.field.forEach(x => {
+        game.player.field.forEach(x => {
             x.active = true;
             x.canAttack = true;
         });
 
-        const baseText = newPlayer.base.length > 0 ? newPlayer.base[0].hp + 'hp ' : '-';
+        const baseText = game.player.base.length > 0 ? game.player.base[0].hp + 'hp ' : '-';
         this.turnIndex++;
-        this.log(`-- Turn ${this.turnIndex}, player ${playerId}, ${newPlayer.resourcesAvailable}re, ${newPlayer.shield.length}sh, ${baseText}ba`);
+        this.log(`-- Turn ${this.turnIndex}, player ${playerId}, ${game.player.resourcesAvailable}re, ${game.player.shield.length}sh, ${baseText}ba`);
     }
 }
 

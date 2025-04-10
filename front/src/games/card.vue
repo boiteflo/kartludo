@@ -10,14 +10,15 @@
     border: card.fx ? '1px solid yellow' : ''
   }">
     <div v-if="!card">No card</div>
-    <img v-else-if="card.verso" :class="{ w100p: true, h100p: true, absolute:true }" draggable="false"
+    <img v-else-if="card.verso" :class="{ w100p: true, h100p: true, absolute: true }" draggable="false"
       :style="{ 'object-fit': 'cover', 'object-position': card.bgposition, 'pointer-events': 'none' }"
-      :src="require('@/assets/' + folder + 'empty.webp')"  />
-    <img v-else :class="{ w100p: true, h100p: true, shine: shine, absolute:true }" draggable="false"
+      :src="require('@/assets/' + folder + 'empty.webp')" />
+    <img v-else :class="{ w100p: true, h100p: true, shine: shine, absolute: true }" draggable="false"
       :style="{ 'object-fit': 'cover', 'object-position': card.bgposition, 'pointer-events': 'none' }"
       :src="require('@/assets/' + folder + card.id + '.webp')" @mouseover="$emit('mouseover', card)"
       @contextmenu.prevent="$emit('clickright', card)" />
-    <div v-if="!card.verso && !hidestat && (card.ap || card.hp)" class="absolute circle10px textVerticalCenter centerDiv colorBlack fontSize150em"
+    <div v-if="!card.verso && !hidestat && (card.ap || card.hp)"
+      class="absolute circle10px textVerticalCenter centerDiv colorBlack fontSize150em"
       style="width:70px; height:30px; top:-10px; background-color: #FFFFFFB0;">
       {{ card.ap }} - {{ card.hp }}
     </div>
@@ -31,6 +32,13 @@
 <script>
 export default {
   name: 'game-card',
-  props: ['card', 'folder', 'shine', 'hidestat']
+  props: ['card', 'folder', 'shine', 'hidestat'],
+  methods: {
+    getTextPosition(isPlayer1, percent) {
+      const left = percent * 150;
+      const top = percent * 150;
+      return { left: left + 'px', top: top + 'px'};
+    }
+  }
 }
 </script>

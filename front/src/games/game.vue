@@ -1,6 +1,5 @@
 <template>
     <div class="relative w100p mask h100p" :key="refreshG">
-
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
             style="top:50px" @cardclick="showCardDeckList" @cancel="showDeckList(null)" @validate="selectDeckList">
@@ -16,16 +15,6 @@
             </div>
         </div>
 
-        <!-- field
-        <div v-for="box in game?.fields.filter(x => x.show)" :key="box.zone" :id="box.zone" :class="{
-            absolute: true, bg3: box.zone.endsWith('2'), bg: box.zone.endsWith('1'), bg: box.zone.endsWith('0'), fontSize075em: true, textVerticalCenter: true, 'text-center': true,
-            bgYellow2: box.isPlayer1 == game.isPlayer1 && box.location === 'locationHand'
-        }" :style="getFieldStyle(box.x, box.y, box.width, box.height)" @dragover="onDragOver"
-            @drop="onDrop($event, box)">
-            {{ box.text }}
-        </div>
-         -->
-
         <span v-if="game">
             <!-- Drag and drop field-->
             <div class="absolute bg2" :style="getFieldStyleObj(game.grid.halfPlayer1)">
@@ -33,11 +22,7 @@
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)">
             </div>
 
-            <!--
-            <img class="w100p, absolute" :style="{ ...getFieldStyleObj(game.grid.centerZone), 'object-fit': 'cover' }"
-                :src="require('@/assets/Gundam/centerZone.png')" />
-        -->
-            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.centerButton)">
+            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEffect)">
                 <v-btn target="_blank"
                     :class="{ bg2: true, shine: !freeze && game.player1.hasEffects, fontSize075em: true, w100p: true, h100p: true }"
                     @click="useEffect" style="min-width:0px;">
@@ -45,6 +30,18 @@
                 </v-btn>
             </div>
 
+            <div class="absolute text-center textVerticalCenter" :style="getFieldStyleObj(game.grid.resources)">
+                Resources
+            </div>
+            <banana-bars 
+                :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx" 
+                :p1blue="game.player1.resourcesEx" 
+                :p1max="game.player1.resourcesMax" 
+                :p2yellow="game.player2.resourcesAvailable - game.player2.resourcesEx" 
+                :p2blue="game.player2.resourcesEx" 
+                :p2max="game.player2.resourcesMax" :max="game.resourcesMax"
+                :style="getFieldStyleObj(game.grid.resources)">
+            </banana-bars>
 
             <!-- Player 1 -->
             {{ game.player1.deckIcon }}
@@ -111,14 +108,14 @@
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.highlightCardRight)">
             </div>
 
-            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.rightButton)">
+            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEndTurn)">
                 <v-btn target="_blank"
                     :class="{ bg2: true, shine: !freeze, fontSize075em: true, w100p: true, h100p: true }"
                     @click="nextTurn" style="min-width:0px;">
-                    <span v-if="game.grid.rightButton.width > 50">End Turn</span><span v-else>End</span>
+                    <span v-if="game.grid.buttonEndTurn.width > 50">End Turn</span><span v-else>End</span>
                 </v-btn>
             </div>
-            <div class="absolute" :style="getFieldStyleObj(game.grid.leftButton)">
+            <div class="absolute" :style="getFieldStyleObj(game.grid.buttonLogs)">
                 <v-btn target="_blank" :class="{ bg: true, fontSize075em: true, w100p: true, h100p: true }"
                     @click="nextTurn" style="min-width:0px;">
                     Logs
@@ -153,18 +150,6 @@
             </gameCard>
         </div>
 
-        <!-- Sliders Resources -->
-        <div v-if="game" class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Resource), 'z-index': 10 }">
-            <slider-resource label="Resources :" :value1="game.player1.resourcesAvailable"
-                :value2="game.player1.resourcesEx" :valuemax="game.player1.resourcesMax">
-            </slider-resource>
-        </div>
-        <div v-if="game" class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Resource), 'z-index': 10 }">
-            <slider-resource label="Resources :" :value1="game.player2.resourcesAvailable"
-                :value2="game.player2.resourcesEx" :valuemax="game.player2.resourcesMax">
-            </slider-resource>
-        </div>
-
         <!-- End turn button -->
         <div v-if="game && false">
             <div class="bgYellow absolute circle10px"
@@ -185,8 +170,9 @@
             <div style="background-color: #FFFF00F0; width:100%; flex-direction: column-reverse" class="flex">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
-                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand" :style="{width:game?.grid.card100.height + 'px'}">
-                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1? '1' : '2' }}</div>
+                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand"
+                        :style="{ width: game?.grid.card100.height + 'px' }">
+                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1 ? '1' : '2' }}</div>
                         <img :style="{ ...getFieldStyleObj(game?.grid.card100), transform: 'rotate(' + card.position?.rotation ?? 0 + 'deg)' }"
                             @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
@@ -246,15 +232,15 @@ body {
 import helperAnimation from '../helpers/helperAnimation';
 import cards from '../data/gundamCards.json';
 import gameGundam from './gundam/game';
-import sliderResource from './sliderResource';
 import gameCard from './card';
 import deck from './deck';
 import deckList from './deckList';
+import bananaBars from './bananaBars.vue';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard, deck, deckList, sliderResource },
+    components: { gameCard, deck, deckList, bananaBars },
     data: () => ({
         refreshG: 0,
         aside: false,
@@ -281,8 +267,8 @@ export default {
         this.cardList = cards.cards;
         this.deckList = cards.decklist;
         if (this.quickstart) {
-            this.decklistPlayer1 = cards.decklist[4].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
-            this.decklistPlayer2 = cards.decklist[4].list;
+            this.decklistPlayer1 = cards.decklist[5].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
+            this.decklistPlayer2 = cards.decklist[5].list;
             this.start();
         }
     },
