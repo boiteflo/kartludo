@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask h100p" :key="refreshG">
+    <div class="relative w100p mask h100p bg3" :key="refreshG">
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
             style="top:50px" @cardclick="showCardDeckList" @cancel="showDeckList(null)" @validate="selectDeckList">
@@ -17,9 +17,9 @@
 
         <span v-if="game">
             <!-- Drag and drop field-->
-            <div class="absolute bg2" :style="getFieldStyleObj(game.grid.halfPlayer1)">
+            <div :class="{ absolute: true, bg: game.player.isPlayer1 }" :style="getFieldStyleObj(game.grid.halfPlayer1)">
             </div>
-            <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)">
+            <div :class="{ absolute: true, bg: !game.player.isPlayer1 }" :style="getFieldStyleObj(game.grid.halfPlayer2)">
             </div>
 
             <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEffect)">
@@ -33,18 +33,14 @@
             <div class="absolute text-center textVerticalCenter" :style="getFieldStyleObj(game.grid.resources)">
                 Resources
             </div>
-            <banana-bars 
-                :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx" 
-                :p1blue="game.player1.resourcesEx" 
-                :p1max="game.player1.resourcesMax" 
-                :p2yellow="game.player2.resourcesAvailable - game.player2.resourcesEx" 
-                :p2blue="game.player2.resourcesEx" 
-                :p2max="game.player2.resourcesMax" :max="game.resourcesMax"
+            <banana-bars :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx"
+                :p1blue="game.player1.resourcesEx" :p1max="game.player1.resourcesMax"
+                :p2yellow="game.player2.resourcesAvailable - game.player2.resourcesEx"
+                :p2blue="game.player2.resourcesEx" :p2max="game.player2.resourcesMax" :max="game.resourcesMax"
                 :style="getFieldStyleObj(game.grid.resources)">
             </banana-bars>
 
             <!-- Player 1 -->
-            {{ game.player1.deckIcon }}
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Base), 'object-fit': 'contain' }"
                 :src="require('@/assets/Gundam/' + game.player1.baseIcon)" />
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Shield), 'object-fit': 'contain' }"
@@ -53,6 +49,7 @@
                 :src="require('@/assets/Gundam/' + game.player1.deckIcon)" />
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Trash), 'object-fit': 'contain' }"
                 :src="require('@/assets/Gundam/' + game.player1.trashIcon)" />
+            <!--
             <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Base.text)">
                 Base
             </div>
@@ -65,6 +62,7 @@
             <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Trash.text)">
                 Trash {{ game.player1.trash.length }}
             </div>
+            -->
             <div v-if="game" class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
             <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
@@ -79,6 +77,7 @@
                 :src="require('@/assets/Gundam/' + game.player2.deckIcon)" />
             <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Trash), 'object-fit': 'contain' }"
                 :src="require('@/assets/Gundam/' + game.player2.trashIcon)" />
+            <!--
             <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Base.text)">
                 Base
             </div>
@@ -91,6 +90,7 @@
             <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Trash.text)">
                 Trash {{ game.player2.trash.length }}
             </div>
+        -->
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
             </div>
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player2Field)">

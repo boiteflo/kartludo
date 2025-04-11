@@ -47,7 +47,7 @@ class turn {
 
         const baseText = game.player.base.length > 0 ? game.player.base[0].hp + 'hp ' : '-';
         this.turnIndex++;
-        this.log(`-- Turn ${this.turnIndex}, player ${playerId}, ${game.player.resourcesAvailable}re, ${game.player.shield.length}sh, ${baseText}ba`);
+        this.log(`-- Turn ${this.turnIndex} for player ${playerId}, ${game.player.resourcesAvailable} resources, ${game.player.shield.length} shield, ${baseText} base`);
     }
 }
 

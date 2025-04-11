@@ -1,5 +1,5 @@
 <template>
-    <div class="relative" style="width: 100px; height: 100px;">
+    <div class="relative" style="width: 100%; height: 100%;">
         <div class="banana absolute" :style="getBananaStyle(true, '#F44336', p1max)"></div>
         <div class="banana absolute" :style="getBananaStyle(true, '#3F51B5', p1yellow + p1blue)"></div>
         <div class="banana absolute" :style="getBananaStyle(true, '#FFEB3B', p1yellow)"></div>
@@ -11,10 +11,12 @@
         <div class="text absolute text-center" :style="getTextStyle(true, p1yellow)">{{ p1yellow }}</div>
         <div class="text absolute text-center" :style="getTextStyle(false, p2yellow)">{{ p2yellow }}</div>
 
-        <div v-if="p1blue > 0" class="text absolute text-center bgBlue" :style="getTextStyle(true, p1yellow + p1blue)">{{
-            p1yellow + p1blue }}</div>
-        <div v-if="p2blue > 0" class="text absolute text-center bgBlue" :style="getTextStyle(false, p2yellow + p2blue)">{{
-            p2yellow + p2blue }}</div>
+        <div v-if="p1blue > 0" class="text absolute text-center bgBlue" :style="getTextStyle(true, p1yellow + p1blue)">
+            {{ p1yellow + p1blue }}
+        </div>
+        <div v-if="p2blue > 0" class="text absolute text-center bgBlue" :style="getTextStyle(false, p2yellow + p2blue)">
+            {{ p2yellow + p2blue }}
+        </div>
     </div>
 </template>
 
