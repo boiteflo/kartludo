@@ -490,7 +490,8 @@
     color: white !important
 }
 
-.bgRed, .bgRedHover:hover {
+.bgRed,
+.bgRedHover:hover {
     background-color: red !important;
 }
 
@@ -500,20 +501,22 @@
 
 .bgRedHover {
     background-color: #EF9A9A !important;
-    transition : background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
-.bgGreen, .bgGreenHover:hover{
+.bgGreen,
+.bgGreenHover:hover {
     background: green !important;
 }
 
-.bgBlue, .bgBlueHover:hover{
+.bgBlue,
+.bgBlueHover:hover {
     background: #3F51B5 !important;
 }
 
 .bgGreenHover {
     background-color: #C5E1A5 !important;
-    transition : background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 .bgYellow {
@@ -524,11 +527,11 @@
     background: #FFEB3B50 !important;
 }
 
-.parentHover:hover .bgYellowParentHover{
+.parentHover:hover .bgYellowParentHover {
     background-color: #FFEB3B !important;
 }
 
-.bgYellowHover:hover{
+.bgYellowHover:hover {
     background-color: #FFEB3B !important;
 }
 
@@ -665,6 +668,10 @@ h4 {
     visibility: visible;
 }
 
+.text-shadow-black {
+    text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 55px black, 0 0 75px black;
+}
+
 .colorWhite {
     color: white !important;
 }
@@ -777,18 +784,21 @@ h4 {
     border-radius: 25px;
 }
 
-.shine, .shineHover, .shineParentHover {
+.shine,
+.shineHover,
+.shineParentHover {
     -webkit-mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
     -webkit-mask-size: 200%;
     mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
     mask-size: 200%;
 }
 
-.shineHover:hover, .parentHover:hover .shineParentHover{
+.shineHover:hover,
+.parentHover:hover .shineParentHover {
     animation: shinefx 1s infinite;
 }
 
-.shine {    
+.shine {
     animation: shinefx 1s infinite;
 }
 
@@ -877,4 +887,10 @@ h4 {
 .centerDiv {
     left: 50%;
     transform: translate(-50%, 0%);
+}
+
+.diagonal-split {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #212A3C 50%, #374C5F 50%);
 }

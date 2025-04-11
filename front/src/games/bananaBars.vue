@@ -8,8 +8,10 @@
         <div class="banana absolute" :style="getBananaStyle(false, '#3F51B5', p2yellow + p2blue)"></div>
         <div class="banana absolute" :style="getBananaStyle(false, '#FFEB3B', p2yellow)"></div>
 
-        <div class="text absolute text-center" :style="getTextStyle(true, p1yellow)">{{ p1yellow }}</div>
-        <div class="text absolute text-center" :style="getTextStyle(false, p2yellow)">{{ p2yellow }}</div>
+        <div v-if="p1yellow > 0" class="text absolute text-center" :style="getTextStyle(true, p1yellow)">{{ p1yellow }}
+        </div>
+        <div v-if="p2yellow > 0" class="text absolute text-center" :style="getTextStyle(false, p2yellow)">{{ p2yellow }}
+        </div>
 
         <div v-if="p1blue > 0" class="text absolute text-center bgBlue" :style="getTextStyle(true, p1yellow + p1blue)">
             {{ p1yellow + p1blue }}
@@ -38,12 +40,12 @@
 <script>
 export default {
     name: 'banana-bars',
-    props: ['p1yellow', 'p1blue', 'p2yellow', 'p2blue', 'p1max', 'p2max', 'max'],
+    props: ['width', 'p1yellow', 'p1blue', 'p2yellow', 'p2blue', 'p1max', 'p2max', 'max'],
     methods: {
         getBananaStyle(isPlayer1, color, value) {
             const percent = value * 100 / this.max;
             const margin = 10;
-            const angle = isPlayer1 ? 270 : 90;
+            const angle = isPlayer1 ? 225 : 45;
             const anglePercent = percent * 180 / 100;
             const anglePercentMinusMargin = anglePercent - margin;
             return {
@@ -55,16 +57,21 @@ export default {
             };
         },
         getTextStyle(isPlayer1, value) {
-            const percent = value * 100 / this.max;
-            const leftValue = isPlayer1 ? percent - 15 : 70 - percent + 15;
-            const topValue = this.getParabolicY(isPlayer1, percent);
+            const percent = value / this.max;
+            const percentIncruise = this.width / 100;
+            let leftValue = isPlayer1 ? this.getParabolicY(15, 68, 76, percent) : this.getParabolicY(64, 11, 5, percent);
+            leftValue *= percentIncruise;
+
+            let topValue = isPlayer1 ? this.getParabolicY(70, 68, 14, percent) : this.getParabolicY(9, 12, 61, percent);
+            topValue *= percentIncruise;
+
             return { width: 25 + 'px', height: 25 + 'px', left: leftValue + 'px', top: topValue + 'px' };
         },
-        getParabolicY(isPlayer1, percent) {
-            const base = isPlayer1 ? 40 : 30;
-            const halfIndex = -0.02 * Math.pow(percent - 50, 2) + 50;
-            const sens = isPlayer1 ? 1 : -1;
-            return base + halfIndex * sens * 0.75;
+        getParabolicY(y0, y50, y100, t) {
+            const a = 2 * y0 - 4 * y50 + 2 * y100;
+            const b = -3 * y0 + 4 * y50 - y100;
+            const c = y0;
+            return a * t * t + b * t + c;
         }
     }
 }

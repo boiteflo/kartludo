@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask h100p bg3" :key="refreshG">
+    <div class="relative w100p mask h100p bg2" :key="refreshG">
         <!-- DeckList Show-->
         <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
             style="top:50px" @cardclick="showCardDeckList" @cancel="showDeckList(null)" @validate="selectDeckList">
@@ -17,80 +17,53 @@
 
         <span v-if="game">
             <!-- Drag and drop field-->
-            <div :class="{ absolute: true, bg: game.player.isPlayer1 }" :style="getFieldStyleObj(game.grid.halfPlayer1)">
+            <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)"></div>
+            <div class="absolute bg" :style="getFieldStyleObj(game.grid.centerZoneP2)"></div>
+            <div class="absolute bg2" :style="getFieldStyleObj(game.grid.halfPlayer1)"></div>
+            <div class="absolute diagonal-split" :style="getFieldStyleObj(game.grid.resources)">
             </div>
-            <div :class="{ absolute: true, bg: !game.player.isPlayer1 }" :style="getFieldStyleObj(game.grid.halfPlayer2)">
-            </div>
-
-            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEffect)">
-                <v-btn target="_blank"
-                    :class="{ bg2: true, shine: !freeze && game.player1.hasEffects, fontSize075em: true, w100p: true, h100p: true }"
-                    @click="useEffect" style="min-width:0px;">
-                    <span>Use Effect</span>
-                </v-btn>
-            </div>
-
-            <div class="absolute text-center textVerticalCenter" :style="getFieldStyleObj(game.grid.resources)">
+            <div class="absolute text-center textVerticalCenter fontSize075em"
+                :style="{...getFieldStyleObj(game.grid.resources), transform: 'rotate(-45deg)'}">
                 Resources
             </div>
             <banana-bars :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx"
                 :p1blue="game.player1.resourcesEx" :p1max="game.player1.resourcesMax"
                 :p2yellow="game.player2.resourcesAvailable - game.player2.resourcesEx"
                 :p2blue="game.player2.resourcesEx" :p2max="game.player2.resourcesMax" :max="game.resourcesMax"
-                :style="getFieldStyleObj(game.grid.resources)">
+                :style="getFieldStyleObj(game.grid.resources)" :width="game.grid.resources.width">
             </banana-bars>
 
             <!-- Player 1 -->
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Base), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player1.baseIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Shield), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player1.shieldIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Deck), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player1.deckIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player1Trash), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player1.trashIcon)" />
-            <!--
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Base.text)">
-                Base
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Shield.text)">
-                Shield {{ game.player1.shield.length }}
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Deck.text)">
-                Deck {{ game.player1.deck.length }}
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player1Trash.text)">
-                Trash {{ game.player1.trash.length }}
-            </div>
-            -->
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Deck)" text="Deck"
+                :length="game.player1.deck.length" :icon="game.player1.deckIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Trash)" text="Trash"
+                :length="game.player1.trash.length" :icon="game.player1.trashIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Base)" text="Base"
+                :icon="game.player1.baseIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" text="Shield"
+                :length="game.player1.shield.length" :icon="game.player1.shieldIcon">
+            </deck-icon>
             <div v-if="game" class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
             <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
             </div>
 
             <!-- Player 2-->
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Base), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player2.baseIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Shield), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player2.shieldIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Deck), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player2.deckIcon)" />
-            <img class="absolute" :style="{ ...getFieldStyleObj(game.grid.player2Trash), 'object-fit': 'contain' }"
-                :src="require('@/assets/Gundam/' + game.player2.trashIcon)" />
-            <!--
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Base.text)">
-                Base
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Shield.text)">
-                Shield {{ game.player2.shield.length }}
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Deck.text)">
-                Deck {{ game.player2.deck.length }}
-            </div>
-            <div class="absolute fontSize05em text-center" :style="getFieldStyleObj(game.grid.player2Trash.text)">
-                Trash {{ game.player2.trash.length }}
-            </div>
-        -->
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Deck)" text="Deck"
+                :length="game.player2.deck.length" :icon="game.player2.deckIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Trash)" text="Trash"
+                :length="game.player2.trash.length" :icon="game.player2.trashIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Base)" text="Base"
+                :icon="game.player2.baseIcon">
+            </deck-icon>
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Shield)" text="Shield"
+                :length="game.player2.shield.length" :icon="game.player2.shieldIcon">
+            </deck-icon>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
             </div>
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player2Field)">
@@ -108,15 +81,23 @@
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.highlightCardRight)">
             </div>
 
+            <!-- Buttons -->
             <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEndTurn)">
                 <v-btn target="_blank"
-                    :class="{ bg2: true, shine: !freeze, fontSize075em: true, w100p: true, h100p: true }"
+                    :class="{ bg: true, shine: !freeze, fontSize075em: true, w100p: true, h100p: true }"
                     @click="nextTurn" style="min-width:0px;">
                     <span v-if="game.grid.buttonEndTurn.width > 50">End Turn</span><span v-else>End</span>
                 </v-btn>
             </div>
+            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEffect)">
+                <v-btn target="_blank"
+                    :class="{ bg: true, shine: !freeze && game.player1.hasEffects, fontSize075em: true, w100p: true, h100p: true }"
+                    @click="useEffect" style="min-width:0px;">
+                    <span>Use Effect</span>
+                </v-btn>
+            </div>
             <div class="absolute" :style="getFieldStyleObj(game.grid.buttonLogs)">
-                <v-btn target="_blank" :class="{ bg: true, fontSize075em: true, w100p: true, h100p: true }"
+                <v-btn target="_blank" :class="{ bg2: true, fontSize075em: true, w100p: true, h100p: true }"
                     @click="nextTurn" style="min-width:0px;">
                     Logs
                 </v-btn>
@@ -236,11 +217,12 @@ import gameCard from './card';
 import deck from './deck';
 import deckList from './deckList';
 import bananaBars from './bananaBars.vue';
+import deckIcon from './deckIcon.vue';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard, deck, deckList, bananaBars },
+    components: { gameCard, deck, deckList, bananaBars, deckIcon },
     data: () => ({
         refreshG: 0,
         aside: false,

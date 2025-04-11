@@ -21,6 +21,11 @@ class positioner {
         grid.heightMargin = grid.height - (5 * grid.border);
         grid.boxHeight = (grid.height - (grid.border * 6)) / 5.5;
         grid.boxWidth = grid.boxHeight * 107 / 150;
+
+        grid.isVertical = grid.height > grid.width;
+
+        if(grid.boxWidth > grid.widthMargin / 7)
+            grid.boxWidth = grid.widthMargin / 7;
         grid.card100 = { width: grid.boxWidth, height: grid.boxHeight };
 
         // Player2 - Hand
@@ -39,6 +44,7 @@ class positioner {
         x = grid.border;
         grid.centerZone = { x, y, width: grid.widthMargin, height: grid.boxHeight };
         y += grid.border + grid.boxHeight;
+        grid.centerZoneP2= {...grid.centerZone, x:0, width: (grid.centerZone.width-100 )/2 + grid.border};
 
         // Player1 - Field
         grid.player1Field = { x, y, width, height, isPlayer1: true, location: this.locationField };
@@ -48,11 +54,97 @@ class positioner {
         height = grid.boxHeight;
         grid.player1Hand = { x, y, width, height, isPlayer1: true, location: this.locationHand };
 
-        // Player1 - Deck
-        x = grid.player1Field.x + grid.player1Field.width + grid.border;
-        y = grid.centerZone.y;
-        width = grid.boxWidth;
+        if(grid.isVertical)
+            this.createVerticalGrid(grid);
+        else
+            this.createHorizontalGrid(grid);
+
+        // Buttons
+        x = grid.player1Deck.x;
+        y = grid.player1Trash.y + grid.player1Trash.height + grid.border;
+        height = (grid.height - grid.border2 - y) / 2;
+        width = grid.isVertical ? grid.boxWidthVertical : grid.boxWidth;
+        grid.buttonEndTurn = { x, y, width, height };
+        y += height + grid.border;
+        grid.buttonEffect = { x, y, width, height };
+
+        width = 50;
+        x = grid.widthMargin - width;
+        y = grid.border;
+        height = grid.player2Hand.height;
+        grid.buttonLogs = { x, y, width, height };
+        
+        width = grid.boxHeight;
         height = grid.boxHeight;
+        grid.resources = { x: (grid.width / 2) - (width / 2), y: grid.centerZone.y, width, height };
+
+        grid.halfPlayer1 = { x: 0, y: grid.player1Field.y, width: grid.width, height: grid.height / 2 };
+        grid.halfPlayer2 = { x: 0, y: 0, width: grid.width, height: grid.centerZone.y };
+
+        grid.centerZone.heightQuarter = grid.centerZone.height / 5;
+
+        // Highlight center cards
+        grid.textZone = { ...grid.player2Hand, width: grid.width - grid.border2 };
+        grid.logZone = { ...grid.player2Hand, x: grid.width / 2 + grid.border };
+        grid.highlightCardCenter = { y: grid.player2Field.y, height: grid.height - grid.player2Field.y };
+        grid.highlightCardLeft = { ...this.getCardSize(grid.width, grid.highlightCardCenter.height, 2, 1), y: grid.highlightCardCenter.y };
+        grid.highlightCardRight = { ...grid.highlightCardLeft, x: grid.highlightCardLeft.x + grid.highlightCardLeft.width };
+        grid.highlightCardCenter = { ...this.getCardSize(grid.width, grid.highlightCardCenter.height, 1, 1), y: grid.highlightCardCenter.y };
+
+        return grid;
+    }
+
+    static createVerticalGrid(grid){
+        grid.boxWidthVertical = (grid.widthMargin - (8* grid.border)) / 5;
+        grid.boxHeightVertical = grid.boxWidthVertical * 150/107;
+
+        let x = grid.player1Field.x + grid.player1Field.width + grid.border;
+        let y = grid.centerZone.y;
+        let width = grid.boxWidthVertical;
+        let height = grid.boxHeightVertical;
+
+        // Player1 - Shield
+        grid.player1Shield = { x, y, width, height, isPlayer1: true, location: this.locationShield };
+
+        // Player1 - Base
+        x = x - width - grid.border;
+        grid.player1Base = { x, y, width, height, isPlayer1: true, location: this.locationBase };
+
+        // Player1 - Deck
+        x = grid.player1Shield.x;
+        y += height + grid.border;
+        grid.player1Deck = { x, y, width, height, isPlayer1: true, location: this.locationDeck };
+
+        // Player1 - Trash
+        y += height + grid.border;
+        grid.player1Trash = { x, y, width, height, isPlayer1: true, location: this.locationTrash };
+        y += height + grid.border;
+
+        // Player2 - Shield
+        y = grid.centerZone.y;
+        x = grid.border;
+        grid.player2Shield = { x, y, width, height, isPlayer1: true, location: this.locationShield };
+
+        // Player2 - Base
+        x = x + width + grid.border;
+        grid.player2Base = { x, y, width, height, isPlayer1: true, location: this.locationBase };
+
+        // Player2 - Deck
+        x = grid.border;
+        y = y - height - grid.border;
+        grid.player2Deck = { x, y, width, height, isPlayer1: false, location: this.locationDeck };
+
+        // Player2 - Trash
+        y = y - height - grid.border;
+        grid.player2Trash = { x, y, width, height, isPlayer1: true, location: this.locationTrash };
+    }
+
+    static createHorizontalGrid(grid){
+        // Player1 - Deck
+        let x = grid.player1Field.x + grid.player1Field.width + grid.border;
+        let y = grid.centerZone.y;
+        let width = grid.boxWidth;
+        let height = grid.boxHeight;
         grid.player1Deck = { x, y, width, height, isPlayer1: true, location: this.locationDeck };
         y += height + grid.border;
 
@@ -89,40 +181,6 @@ class positioner {
         // Player2 - Base
         x = x + width + grid.border;
         grid.player2Base = { x, y, width, height, isPlayer1: true, location: this.locationBase };
-
-
-        // Buttons
-        x = grid.player1Deck.x;
-        y = grid.player1Trash.y + grid.player1Trash.height + grid.border;
-        height = (grid.height - grid.border2 - y) / 2;
-        grid.buttonEndTurn = { x, y, width, height };
-        y += height + grid.border;
-        grid.buttonEffect = { x, y, width, height };
-
-        width = 50;
-        x = grid.widthMargin - width;
-        y = grid.border;
-        height = grid.player2Hand.height;
-        grid.buttonLogs = { x, y, width, height };
-        
-        width = 100;
-        height = 100;
-        grid.resources = { x: (grid.width / 2) - (width / 2), y: grid.centerZone.y, width, height };
-
-        grid.halfPlayer1 = { x: 0, y: grid.player1Field.y, width: grid.width, height: grid.height / 2 };
-        grid.halfPlayer2 = { x: 0, y: 0, width: grid.width, height: grid.centerZone.y };
-
-        grid.centerZone.heightQuarter = grid.centerZone.height / 5;
-
-        // Highlight center cards
-        grid.textZone = { ...grid.player2Hand, width: grid.width - grid.border2 };
-        grid.logZone = { ...grid.player2Hand, x: grid.width / 2 + grid.border };
-        grid.highlightCardCenter = { y: grid.player2Field.y, height: grid.height - grid.player2Field.y };
-        grid.highlightCardLeft = { ...this.getCardSize(grid.width, grid.highlightCardCenter.height, 2, 1), y: grid.highlightCardCenter.y };
-        grid.highlightCardRight = { ...grid.highlightCardLeft, x: grid.highlightCardLeft.x + grid.highlightCardLeft.width };
-        grid.highlightCardCenter = { ...this.getCardSize(grid.width, grid.highlightCardCenter.height, 1, 1), y: grid.highlightCardCenter.y };
-
-        return grid;
     }
 
     static getPairPosition(position) {
