@@ -118,6 +118,12 @@ const routes = [
             import ('../pages/pageError.vue')
     },
     {
+        path: '/test',
+        name: version + ' MDOS Test',
+        component: () =>
+            import ('../pages/pageTest.vue')
+    },
+    {
         path: '/success/:id',
         name: version + ' MDOS Error',
         component: () =>

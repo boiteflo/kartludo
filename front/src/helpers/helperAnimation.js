@@ -8,21 +8,52 @@ class helperAnimation {
         const startTime = performance.now();
 
         function update(currentTime) {
+            function getAnimValue(property, anim, time) {
+                let t = time;
+                let from = null;
+                let to = null;
+                let progress = 0;
+
+                if (anim.delay) {
+                    t = (t < 0.5) ? (t + 0.5) : (t - 0.5);
+                }
+
+                if (!anim.mid || !anim.mid[property]) {
+                    progress = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+                    from = anim.from;
+                    to = anim.to;
+                }
+                else if (t < 0.5) {
+                    t = t / 0.5;
+                    progress=t;
+                    from = anim.from;
+                    to = anim.mid;
+                } else {
+                    t = (t - 0.5) / 0.5;
+                    progress=t;
+                    from = anim.mid;
+                    to = anim.to;
+                }
+
+                return from[property] + (to[property] - from[property]) * progress;
+            }
+
             const elapsedTime = currentTime - startTime;
             const t = Math.min(elapsedTime / duration, 1); // de 0 à 1
-            const easedProgress = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
             animations.forEach(anim => {
-                const currentX = anim.from.x + (anim.to.x - anim.from.x) * easedProgress;
-                const currentY = anim.from.y + (anim.to.y - anim.from.y) * easedProgress;
-                const currentHeight = anim.from.height + (anim.to.height - anim.from.height) * easedProgress;
-                const currentWidth = anim.from.width + (anim.to.width - anim.from.width) * easedProgress;
-                const currentRotation = anim.from.rotation + (anim.to.rotation - anim.from.rotation) * easedProgress;
+                const currentX = getAnimValue('x', anim, t);
+                const currentY = getAnimValue('y', anim, t);
+                const currentWidth = getAnimValue('width', anim, t);
+                const currentHeight = getAnimValue('height', anim, t);
+                const currentRotation = getAnimValue('rotation', anim, t);
+                const currentOpacity = getAnimValue('opacity', anim, t);
 
                 anim.element.style.left = currentX + "px";
                 anim.element.style.top = currentY + "px";
                 anim.element.style.height = currentHeight + "px";
                 anim.element.style.width = currentWidth + "px";
+                anim.element.style.opacity = currentOpacity;
                 anim.element.style.transform = `rotate(${currentRotation}deg)`;
             });
 
@@ -38,8 +69,29 @@ class helperAnimation {
     }
 
     static add(val1, val2) {
-        return { x: val1.x + val2.x, y: val1.y + val2.y, rotation: val1.rotation + val2.rotation };
+        const properties = 'x,y,width,height,rotation,opacity';
+        const result = {};
+        properties.split(',').forEach(property => {
+            result[property] = val1[property];
+            const value = val2[property];
+            if (value)
+                result[property] += value;
+        });
+        return result;
     }
+
+    static setIfNull(from, mid) {
+        const properties = 'x,y,width,height,rotation,opacity';
+        const result = {};
+        properties.split(',').forEach(property => {
+            result[property] = from[property];
+            const value = mid[property];
+            if (value)
+                result[property] = value;
+        });
+        return result;
+    }
+
     static getRelativeTo0(val1, val2) {
         return { x: val2.x - val1.x, y: val2.y - val1.y };
     }
@@ -50,30 +102,31 @@ class helperAnimation {
     }
 
     static animateMultiple(animations, duration = -1) {
-        const animationsArray = [];
         animations.forEach(anim => {
             if (!anim.to) {
                 // console.log("to is missing for animation : " + anim.id);
                 return;
             }
-            const element = document.getElementById(anim.id);
-            if (!element) {
+            anim.element = document.getElementById(anim.id);
+            if (!anim.element) {
                 console.log("element can't be found : " + anim.id);
                 return;
             }
-            const from = anim.from ?? {
-                x: this.pxStringToInt(element.style.left),
-                y: this.pxStringToInt(element.style.top),
-                rotation: element.style.rotation,
-                height: element.style.height,
-                width: element.style.width
+            anim.from = anim.from ?? {
+                x: this.pxStringToInt(anim.element.style.left),
+                y: this.pxStringToInt(anim.element.style.top),
+                rotation: anim.element.style.rotation,
+                height: anim.element.style.height,
+                width: anim.element.style.width,
+                delay: false
             };
-            from.rotation = from.rotation ?? 0;
-            from.height = from.height ?? element.clientHeight;
-            const to = anim.isIncrement ? this.add(from, anim.to) : anim.to;
-            animationsArray.push({ element, from, to });
+            anim.from.rotation = anim.from.rotation ?? 0;
+            anim.from.opacity = anim.from.opacity ?? 1;
+            anim.from.height = anim.from.height ?? anim.element.clientHeight;
+            anim.to = anim.isIncrement ? this.add(anim.from, anim.to) : anim.to;
+            anim.mid = !anim.mid ? null : anim.isIncrement ? this.add(anim.from, anim.mid) : anim.mid;
         });
-        this.animateElements(animationsArray, duration);
+        this.animateElements(animations, duration);
     }
 
     /*const newSize = initialSize + (targetSize - initialSize) * easedProgress;

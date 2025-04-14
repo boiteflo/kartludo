@@ -768,6 +768,10 @@ h4 {
     place-items: center;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
 .circle5px {
     border-radius: 5px;
 }
@@ -782,34 +786,6 @@ h4 {
 
 .circle25px {
     border-radius: 25px;
-}
-
-.shine,
-.shineHover,
-.shineParentHover {
-    -webkit-mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
-    -webkit-mask-size: 200%;
-    mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
-    mask-size: 200%;
-}
-
-.shineHover:hover,
-.parentHover:hover .shineParentHover {
-    animation: shinefx 1s infinite;
-}
-
-.shine {
-    animation: shinefx 1s infinite;
-}
-
-@keyframes shinefx {
-    from {
-        -webkit-mask-position: -200%;
-    }
-
-    to {
-        -webkit-mask-position: 0%;
-    }
 }
 
 .hide {
@@ -893,4 +869,73 @@ h4 {
     width: 200px;
     height: 200px;
     background: linear-gradient(135deg, #212A3C 50%, #374C5F 50%);
+}
+
+.nodrag {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+}
+
+.pointCircle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color) 0%, transparent 70%);
+}
+
+.colorYellow {
+    --color: yellow;
+}
+
+.colorRed {
+    --color: red;
+}
+.colorGreen {
+    --color: green;
+}
+
+
+/* ---------- Animations */
+
+.fadeIn {
+    animation: fadeInFx 1s;
+}
+
+@keyframes fadeInFx {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.shine,
+.shineHover,
+.shineParentHover {
+    -webkit-mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
+    -webkit-mask-size: 200%;
+    mask-image: linear-gradient(-75deg, #000 20%, rgba(0, 0, 0, .5) 40%, #000 60%);
+    mask-size: 200%;
+}
+
+.shineHover:hover,
+.parentHover:hover .shineParentHover {
+    animation: shinefx 1s infinite;
+}
+
+.shine {
+    animation: shinefx 1s infinite;
+}
+
+@keyframes shinefx {
+    from {
+        -webkit-mask-position: -200%;
+    }
+
+    to {
+        -webkit-mask-position: 0%;
+    }
 }

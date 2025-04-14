@@ -14,6 +14,9 @@
                 </deck>
             </div>
         </div>
+        <arrow-anim :sourcex="250" :sourcey="250" :targetx="50" :targety="50"></arrow-anim>
+        <div class="absolute bgRed" style="top:45px; left:45px; width:10px; height:10px;"></div>
+        <div class="absolute bgYellow" style="top:245px; left:245px; width:10px; height:10px;"></div>
 
         <span v-if="game">
             <!-- Drag and drop field-->
@@ -218,11 +221,12 @@ import deck from './deck';
 import deckList from './deckList';
 import bananaBars from './bananaBars.vue';
 import deckIcon from './deckIcon.vue';
+import arrowAnim from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard, deck, deckList, bananaBars, deckIcon },
+    components: { gameCard, deck, deckList, bananaBars, deckIcon, arrowAnim },
     data: () => ({
         refreshG: 0,
         aside: false,
