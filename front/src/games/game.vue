@@ -14,9 +14,6 @@
                 </deck>
             </div>
         </div>
-        <arrow-anim :sourcex="250" :sourcey="250" :targetx="50" :targety="50"></arrow-anim>
-        <div class="absolute bgRed" style="top:45px; left:45px; width:10px; height:10px;"></div>
-        <div class="absolute bgYellow" style="top:245px; left:245px; width:10px; height:10px;"></div>
 
         <span v-if="game">
             <!-- Drag and drop field-->
@@ -26,7 +23,7 @@
             <div class="absolute diagonal-split" :style="getFieldStyleObj(game.grid.resources)">
             </div>
             <div class="absolute text-center textVerticalCenter fontSize075em"
-                :style="{...getFieldStyleObj(game.grid.resources), transform: 'rotate(-45deg)'}">
+                :style="{ ...getFieldStyleObj(game.grid.resources), transform: 'rotate(-45deg)' }">
                 Resources
             </div>
             <banana-bars :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx"
@@ -49,9 +46,9 @@
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" text="Shield"
                 :length="game.player1.shield.length" :icon="game.player1.shieldIcon">
             </deck-icon>
-            <div v-if="game" class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Hand)">
+            <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
-            <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Field)">
+            <div v-if="game" class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player1Field)">
             </div>
 
             <!-- Player 2-->
@@ -127,10 +124,9 @@
         </div>
 
         <!-- cards -->
-        <div v-for="card in cards" :key="'B' + card.index" @dragover="onDragOver" @drop="onDrop($event, card)">
+        <div v-for="card in cards" :key="'B' + card.index">
             <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
-                :hidestat="card.hidestat" @mouseover="showCardMouseOver(card)" @click="showCard(card)"
-                @dragover="onDragOver" @drop="onDrop($event, card)" draggable="true">
+                :hidestat="card.hidestat" @click="showCard(card)">
             </gameCard>
         </div>
 
@@ -149,19 +145,10 @@
 
         <!-- Popup -->
         <div v-if="game?.popup" class="textVerticalCenter h100p"
-            style="z-index:12; width:100%; position:fixed; left:0px;">
+            style="z-index:60; width:100%; position:fixed; left:0px;">
 
-            <div style="background-color: #FFFF00F0; width:100%; flex-direction: column-reverse" class="flex">
+            <div style="background-color: #FFFF00F0; width:100%; flex-direction: column" class="flex">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
-                <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
-                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand"
-                        :style="{ width: game?.grid.card100.height + 'px' }">
-                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1 ? '1' : '2' }}</div>
-                        <img :style="{ ...getFieldStyleObj(game?.grid.card100), transform: 'rotate(' + card.position?.rotation ?? 0 + 'deg)' }"
-                            @click="selectChoiceCard(card)"
-                            :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
-                    </div>
-                </div>
                 <span class="relative">
                     <span v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
                         <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
@@ -169,6 +156,15 @@
                         </v-btn>
                     </span>
                 </span>
+                <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
+                    <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand"
+                        :style="{ width: game?.grid.card100.height + 'px' }">
+                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1 ? '1' : '2' }}</div>
+                        <img :style="{ width: game?.grid.card100.width + 'px', 'aspect-ratio': '107/150', transform: 'rotate(' + card.position?.rotation ?? 0 + 'deg)' }"
+                            @click="selectChoiceCard(card)"
+                            :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -197,6 +193,13 @@
         <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)"
             style="z-index: 12;">
         </gameCard>
+
+        <div class="absolute" style="top:0px; left:0px;">
+            <!-- Debug -->
+        </div>
+
+        <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" :targets="targets">
+        </drag-drop-arrow>
     </div>
 
 </template>
@@ -221,12 +224,12 @@ import deck from './deck';
 import deckList from './deckList';
 import bananaBars from './bananaBars.vue';
 import deckIcon from './deckIcon.vue';
-import arrowAnim from './dragDropArrow.vue';
+import dragDropArrow from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
     props: [],
-    components: { gameCard, deck, deckList, bananaBars, deckIcon, arrowAnim },
+    components: { gameCard, deck, deckList, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
         aside: false,
@@ -242,6 +245,8 @@ export default {
         decklistPlayer2: null,
         decklistShow: null,
         deckList: [],
+        sources: [],
+        targets: [],
         quickstart: false
     }),
     mounted() {
@@ -257,6 +262,14 @@ export default {
             this.decklistPlayer2 = cards.decklist[5].list;
             this.start();
         }
+        const targets = [];
+        const width = 75;
+        const height = 75;
+        for (let y = 40; y < 500; y += 400)
+            for (let x = 40; x < 260; x = x + 100)
+                targets.push({ x, y, width, height, text: 'Point ' + x });
+
+        this.targets = targets;
     },
     methods: {
         showDeckList(decklist) {
@@ -300,6 +313,14 @@ export default {
             this.game = gameGundam.useEffect(this.game);
             this.continue();
         },
+        dropPoint(event) {
+            if (event.target.text === 'Play')
+                this.playCard(event.source.card, null, this.game.grid.player1Field);
+            if (event.target.text === 'Pair')
+                this.playCard(event.source.card, event.target.card, this.game.grid.player1Field);
+            if (event.target.text === 'Attack')
+                this.playCard(event.source.card, event.target.card, this.game.grid.player2Field);
+        },
         playCard(card1, card2, drop) {
             if (this.freeze)
                 return;
@@ -320,7 +341,7 @@ export default {
         refreshGame() {
             this.freeze = true;
             this.cards = this.game.cards;
-            setTimeout(() => { this.setDrag(); }, 10);
+            this.sources = this.game.player1.drags;
 
             this.showTextEffect(this.game.showTitle, 'title', 'divTitleParent', { height: 0 });
             this.showTextEffect(this.game.textEffect?.text, 'text', 'divTextEffect', { height: 0 });
@@ -363,10 +384,6 @@ export default {
         },
 
         // --------- showCard
-        showCardMouseOver(card) {
-            if (this.aside)
-                this.showCard(card);
-        },
         showCardDeckList(card) {
             const newCard = { ...card };
             newCard.position = { ...card.position, x: card.position.x + 300 };
@@ -402,111 +419,10 @@ export default {
 
         },
 
-        // --------- Drag and drop
-        setDrag() {
-            this.cards.forEach(card => {
-                const id = 'C' + card.index;
-                this.addEvent(id, 'dragstart', (event) => this.startDrag(event, card));
-                this.addEvent(id, 'dragover', (event) => this.moveCard(event, card));
-                this.addEvent(id, 'touchmove', (event) => this.moveCard(event, card));
-                this.addEvent(id, 'touchstart', (event) => this.touchStart(event, card));
-                this.addEvent(id, 'touchend', (event) => this.touchEnd(event, card));
-            });
-        },
-        addEvent(id, event, action) {
-            const element = document.getElementById(id);
-            if (element)
-                element.addEventListener(event, (event) => action(event));
-        },
-        moveCard(event, card) {
-            if (!card && card.isPlayer1 !== this.game.isPlayer1 || !card)
-                return;
-
-            let x = event.touches ? event.touches[0].clientX : event.clientX;
-            let y = event.touches ? event.touches[0].clientY : event.clientY;
-
-            x -= card.position.width / 2;
-            y -= card.position.height / 2;
-
-            const element = event.target;
-            element.style.left = `${x}px`;
-            element.style.top = `${y}px`;
-            card.positionDrag = { x, y };
-        },
-        startDrag(event, card) {
-            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
-                return;
-            event.dataTransfer.dropEffect = 'move';
-            event.dataTransfer.effectAllowed = 'move';
-            event.dataTransfer.setDragImage(new Image(), 0, 0);
-            event.dataTransfer.setData('card', card.index);
-            card.moving = true;
-            card.positionOld = this.clone(card.position);
-            event.target.style.zIndex = "1000";
-        },
-        onDragOver(event) {
-            event.preventDefault();
-        },
-        onDrop(event) {
-            if (this.freeze)
-                return;
-            event.preventDefault();
-            const x = event.clientX || event.pageX || (event.touches ? event.touches[0].clientX : null);
-            const y = event.clientY || event.pageY || (event.touches ? event.touches[0].clientY : null);
-
-            event.target.style.zIndex = "auto";
-            const data = event.dataTransfer.getData("card");
-            const card = this.getCard(data);
-            if (!card)
-                return;
-            card.moving = false;
-
-            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(x, y, ca.position) && !ca.pairedWith);
-            const zoneDrop = this.game.fields.find(zone => this.isInside(x, y, zone));
-            this.playCard(card, card2, zoneDrop);
-        },
-
-
-        // --------- Touch
-        touchStart(event, card) {
-            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
-                return;
-            card.moving = true;
-            card.positionOld = this.clone(card.position);
-            event.target.style.zIndex = "1000";
-        },
-        touchEnd(event, card) {
-            if (this.freeze || card.isPlayer1 !== this.game.isPlayer1 || !card)
-                return;
-            card.moving = false;
-            event.target.style.zIndex = "auto";
-            const touch = event.changedTouches[0];
-
-            const card2 = this.cards.find(ca => ca.index !== card.index && this.isInside(touch.clientX, touch.clientY, ca.position) && !ca.pairedWith);
-            const zone = this.game.fields.find(zone => this.isInside(touch.clientX, touch.clientY, zone));
-            this.playCard(card, card2, zone);
-        },
-        isInside(x, y, box) {
-            const minX = box.x;
-            const minY = box.y;
-            const maxX = minX + box.width;
-            const maxY = minY + box.height;
-            return (x >= minX && x <= maxX) && (y >= minY && y <= maxY);
-        },
-
         // Utils
         clone(obj) { return Object.assign({}, obj); },
-        showText(text) { alert(text); },
-        getGridX(i) { return this.game?.grid['x' + i]; },
-        getGridY(i) { return this.game?.grid['y' + i]; },
         getCard(index) {
             return this.cards.find(x => x.index == index);
-        },
-        getGridPlace(x, y) {
-            return {
-                width: this.game?.grid.box.width + 'px', height: this.game?.grid.box.height + 'px',
-                left: this.getGridX(x) + 'px', top: this.getGridY(y) + 'px'
-            };
         },
         getFieldStyleObj(size) {
             return this.getFieldStyle(size.x, size.y, size.width, size.height);

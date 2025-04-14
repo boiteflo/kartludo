@@ -7,6 +7,11 @@ class setup {
     static shieldStartLength = 6;
 
     static setupGame(game) {
+        if(this.quickstart){
+            this.resourceStart=8;
+            this.handStartLength = 15;
+        }
+
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = this.quickstart ? false : Math.floor(Math.random() * 2) == 1;

@@ -85,7 +85,7 @@ class effectsLuncher {
             const show = effects.filter(fx => !fx.hide).length > 0;
 
             if (show)
-                tasks.push({ ...task, id: this.showCards.name, text, delay: true });
+                tasks.push({ ...task, id: this.showCardsEffect.name, text });
 
             tasks = tasks.concat(effects.map(effect => { return { ...task, id: this.applyEffect.name, effect }; }));
 

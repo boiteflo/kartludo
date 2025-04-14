@@ -878,8 +878,6 @@ h4 {
 }
 
 .pointCircle {
-    width: 75px;
-    height: 75px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--color) 0%, transparent 70%);
 }

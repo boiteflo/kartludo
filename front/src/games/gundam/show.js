@@ -45,6 +45,10 @@ class title {
         task.delay = true;
         this.showCards(game, task);
     }
+
+    static showCardsEffect(game, task){
+        task.card1.fxRed=true;
+    }
 }
 
 

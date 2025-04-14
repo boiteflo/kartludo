@@ -113,8 +113,7 @@ class attack {
 
             const burstEffect = this.lunchEffectTriggerForOneCard(card1, this.trigger_burst);
             const tasks = [];
-            if (!burstEffect.isEffectExisting)
-                tasks.push({ id: this.showCards.name, card1, delay: 100 });
+            tasks.push({ id: this.showCards.name, card1, delay: 100 });
 
             if (!burstEffect.cancelMoveToTrash)
                 tasks.push({ id: this.spawnOrMove.name, card1, to: this.locationTrash });

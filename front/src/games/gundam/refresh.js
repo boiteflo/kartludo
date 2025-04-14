@@ -4,7 +4,7 @@ class refresh {
         this.refreshPlayerArea(player.hand, player.positions.hand, false, 7, false);
         this.refreshPlayerArea(player.field, player.positions.field, false, 3, true);
         this.refreshPlayerArea(player.base, player.positions.base, true);
-        
+
         const cardsToRemoveIndex = player.trash.filter(x => !x.to).map(x => x.index);
         game.cards = game.cards.filter(x => !cardsToRemoveIndex.includes(x.index));
 
@@ -15,10 +15,10 @@ class refresh {
         player.shieldIcon = this.getIcon(player.shield.length);
         player.deckIcon = this.getIcon(player.deck.length);
         player.trashIcon = this.getIcon(player.trash.length);
-        
+
         game.textEffect = task.textEffect;
     }
-    
+
     static refreshPlayerArea(cards, position, useZoneSize, wrapCut, centerEmptyZone) {
         let zoneHeight = position.height;
         if (position.location == this.locationField)
@@ -27,7 +27,7 @@ class refresh {
         cards.forEach((card, index) => {
             const degree = card.active ? 0 : 90;
             card.bgposition = '0 0';
-            card.fx=false;
+            card.fx = false;
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut, centerEmptyZone);
             card.location = position.location;
             if (position.location == this.locationField && card.pair)
@@ -35,13 +35,13 @@ class refresh {
         });
     }
 
-    static getIcon(length){
+    static getIcon(length) {
         return length < 1 ? 'deck6.png'
             : length < 2 ? 'deck5.png'
-            : length < 7 ? 'deck4.png'
-            : length < 15 ? 'deck3.png'
-            : length < 35 ? 'deck2.png'
-            : 'deck1.png';
+                : length < 7 ? 'deck4.png'
+                    : length < 15 ? 'deck3.png'
+                        : length < 35 ? 'deck2.png'
+                            : 'deck1.png';
     }
 
     static endAnimation(game) {
@@ -57,11 +57,69 @@ class refresh {
         game.refresh = true;
     }
 
-    static resetZIndex(game){
-        game.cards.forEach(card=> {
+    static resetZIndex(game) {
+        game.cards.forEach(card => {
             card.zindex = card.pairedWith ? 1 : 2;
         });
     }
+
+    static taskEndRefresh(game) {
+        if (!game.triggerRefreshAlreadyDone) {
+            this.lunchEffectTriggerMultiple(game.cards, this.trigger_refresh);
+            game.triggerRefreshAlreadyDone = true;
+        }
+
+        this.needTaskEndRefresh = false;
+        game.refreshOnlyTextEffect = false;
+        delete (game.textEffect);
+        this.cardHighlight = [];
+
+        const players = [game.player1, game.player2];
+        players.forEach(player => {
+            player.field.forEach(card => this.recalculateApHp(game, player, card));
+            this.refreshFieldAndHand(game, {}, player);
+        });
+
+        this.refreshDragAndDrop(game);
+
+        game.refresh = true;
+        game.taskAttack = null;
+    }
+
+    static refreshDragAndDrop(game) {
+        const drags = [];
+
+        // Hand
+        const unitWithoutPilots = game.player1.field.filter(x => !x.pair);
+        game.player1.hand.forEach(card => {
+            let drops = card.active ? [this.game.grid.player1Field.drop] : [];
+
+            if (card.active && this.isCardPilot(card)) {
+                drops = drops.concat(unitWithoutPilots.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Pair' }; }));
+            }
+
+            if (drops.length > 0)
+                drags.push({ ...this.getPos(card), card, show: false, targets: drops });
+        });
+
+        // Field
+        game.player1.field.forEach(attacker => {
+            let drops = attacker.active ? [this.game.grid.player2Field.drop] : [];
+
+            const ennemyTarget = game.player2.field.filter(x => this.isValidTarget(game.player2, attacker, x));
+            if (attacker.active && ennemyTarget.length > 0) {
+                drops = drops.concat(ennemyTarget.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Attack' }; }));
+            }
+
+            if (drops.length > 0)
+                drags.push({ ...this.getPos(attacker), card:attacker, show: false, targets: drops });
+        });
+
+
+        game.player1.drags = drags;
+    }
+
+    static getPos(card) { return card.to ? card.to : card.position; }
 }
 
 

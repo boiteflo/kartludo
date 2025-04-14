@@ -27,7 +27,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    mask-image: radial-gradient(rgba(0 0 0 /0) 35px, black 40px);
+    mask-image: radial-gradient(rgba(0 0 0 /0) 40%, black 45%);
 }
 
 .text {

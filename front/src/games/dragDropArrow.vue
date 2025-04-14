@@ -1,29 +1,45 @@
 <template>
-    <div :style="{ display: stop ? 'none' : '' }">
-        <div class="fadeIn" v-for="(point, index) in targets" :key="'target' + index">
-            <div :class="{ absolute: 1, pointCircle: 1, colorYellow: target != point, colorGreen: target == point }"
-                :style="{ top: (point.y - 37.5) + 'px', left: (point.x - 37.5) + 'px' }"
-                @mouseover="mouseoverCursor(point)" @mouseout="mouseoverCursor(null)">
-            </div>
-            <div class="absolute text-center textVerticalCenter text-shadow-black colorWhite"
-                :style="{ top: (point.y - 20) + 'px', left: (point.x - 40) + 'px', width: '80px', height: '40px', 'pointer-events': 'none' }">
-                {{ point.text }}
-            </div>
+    <div class="nodrag">
+        <div v-for="(point, index) in sources" :key="'source' + index" :id="'source' + index"
+            :class="{ absolute: 1, pointCircle: 1, colorYellow: point.show }"
+            :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }"
+            @mousedown="drag(point)">
         </div>
 
-        <div :style="{ 'pointer-events': 'none' }">
-            <div :id="'arrow0' + id" class="absolute" style="top:0px; left:0px; width:0px; height:0px;">
-                <arrow-div :color="color"></arrow-div>
+        <div :style="{ display: source ? '' : 'none' }">
+            <div class="" v-for="(point, index) in targets.filter(x=> x)" :key="'target' + index">
+                <div :class="{ absolute: 1, pointCircle: 1, colorYellow: target != point, colorGreen: target == point }"
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }">
+                </div>
+                <div class="absolute text-center textVerticalCenter text-shadow-black colorWhite"
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }">
+                    <div>{{ point.text }}</div>
+                </div>
             </div>
-            <div :id="'arrow1' + id" class="absolute" style="top:0px; left:0px; width:0px; height:0px;">
-                <arrow-div :color="color"></arrow-div>
-            </div>
-        </div>
 
+            <div :style="{ 'pointer-events': 'none' }">
+                <div :id="'arrow0' + id" class="absolute" style="top:0px; left:0px; width:0px; height:0px;">
+                    <arrow-div :color="color"></arrow-div>
+                </div>
+                <div :id="'arrow1' + id" class="absolute" style="top:0px; left:0px; width:0px; height:0px;">
+                    <arrow-div :color="color"></arrow-div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 
-<style scoped>
+<style>
+html {
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+body {
+    position: relative;
+}
+
 .arrow {
     width: 25px;
     height: 25px;
@@ -38,62 +54,78 @@ import arrowDiv from './arrowDiv.vue';
 
 export default {
     name: 'drag-drop-arrow',
-    props: ['id', 'source', 'targets'],
+    props: ['id', 'sources'],
     components: { arrowDiv },
     data: () => ({
         delay: 1500,
         animations: [],
         mouse: { x: 0, y: 0 },
         color: "red",
-        stop: true,
+        targets: [],
+        source: null,
         target: null
     }),
     watch: {
-        source() { this.reset(); }
+        sources() { this.resetSources(); }
     },
     mounted() {
         window.addEventListener('mousemove', this.updateMouse);
         window.addEventListener('mouseup', this.mouseUp);
-        this.reset();
+        window.addEventListener('touchmove', this.updateMouse);
+        window.addEventListener('touchend', this.mouseUp);
+        this.resetSources();
     },
     beforeUnmount() {
         window.removeEventListener('mousemove', this.updateMouse);
         window.removeEventListener('mouseup', this.mouseUp);
+        window.removeEventListener('touchmove', this.updateMouse);
+        window.removeEventListener('touchend', this.mouseUp);
     },
     methods: {
         updateMouse(e) {
-            this.mouse.x = e.clientX;
-            this.mouse.y = e.clientY;
+            const touch = e && e.touches && e.touches.length > 0 ? e.touches[0] : {};
+            this.mouse.x = e.clientX ? e.clientX : touch.clientX;
+            this.mouse.y = e.clientY ? e.clientY : touch.clientY;
             this.updateAnimation();
+        },
+        resetSources() {
+            this.sources.forEach((point, index) => {
+                const element = document.getElementById("source" + index);
+                element?.addEventListener('touchstart', () => this.drag(point));
+            });
+            this.animate();
+        },
+        drag(point) {
+            this.source = point;
+            this.targets = this.source.targets;
+            this.animate();
         },
         mouseUp() {
             if (!this.source || !this.animations || this.animations.length < 1)
                 return;
-            this.stop = true;
             this.$emit('drop', { mouse: this.mouse, source: this.source, target: this.target });
-        },
-        reset() {
-            if (!this.source)
-                return;
-            this.stop = false;
-            this.animate();
-            setInterval(() => {
-                this.animate();
-            }, this.delay + 15);
-        },
-        mouseoverCursor(target) {
-            this.target = target;
+            this.source = null;
         },
         animate() {
-            if (!this.source || this.stop)
+            if (!this.source)
                 return;
 
             this.updateAnimation();
 
             helperAnimation.animateMultiple(this.animations, this.delay - 5);
+            setTimeout(() => {
+                this.animate();
+            }, this.delay + 15);
+        },
+        isInside(x, y, box) {
+            const minX = box.x;
+            const minY = box.y;
+            const maxX = minX + box.width;
+            const maxY = minY + box.height;
+            return (x >= minX && x <= maxX) && (y >= minY && y <= maxY);
         },
         updateAnimation() {
-            if (!this.source || this.stop)
+            if (!this.source)
                 return;
 
             if (!this.animations || this.animations.length < 1) {
@@ -103,15 +135,19 @@ export default {
                 ];
             }
 
+            this.target = this.targets.find(box => this.isInside(this.mouse.x, this.mouse.y, box));
+
             this.color = this.target ? 'green' : 'red';
-            const destination = this.target ? this.target : this.mouse;
+            const from = { x: this.source.x + (this.source.width / 2), y: this.source.y + (this.source.height / 2) };
+            const destination = !this.target ? this.mouse
+                : { x: this.target.x + (this.target.width / 2), y: this.target.y + (this.target.height / 2) };
 
             this.animations.forEach(animation => {
-                const rotation = this.getAngleDeg(this.source, destination) + 135;
+                const rotation = this.getAngleDeg(from, destination) + 135;
                 const width = this.target ? 75 : 75;
                 const widthHalf = width / 2
-                animation.from.x = this.source.x;
-                animation.from.y = this.source.y;
+                animation.from.x = from.x;
+                animation.from.y = from.y;
                 animation.from.rotation = rotation;
                 animation.to.rotation = rotation;
                 animation.to.x = destination.x;

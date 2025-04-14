@@ -82,27 +82,6 @@ class tasks {
         game.triggerRefreshAlreadyDone=false;
         this.resetZIndex(game);
     }
-
-    static taskEndRefresh(game) {
-        if(!game.triggerRefreshAlreadyDone){        
-            this.lunchEffectTriggerMultiple(game.cards, this.trigger_refresh);
-            game.triggerRefreshAlreadyDone = true;
-        }
-
-        this.needTaskEndRefresh = false;
-        game.refreshOnlyTextEffect = false;
-        delete (game.textEffect);
-        this.cardHighlight = [];
-
-        const players = [game.player1, game.player2];
-        players.forEach(player => {            
-            player.field.forEach(card=> this.recalculateApHp(game, player,card));
-            this.refreshFieldAndHand(game, {}, player);
-        });
-
-        game.refresh = true;
-        game.taskAttack = null;
-    }
 }
 
 

@@ -62,10 +62,10 @@ class cardLife {
     }
 
     static hasAttribute(card, attribute) {
-        if (attribute.includes('['))
+        if (attribute && attribute.includes('['))
             return attribute.includes(card.name);
         else {
-            const targetStr = attribute.replace('(', '').replace(')', '').trim();
+            const targetStr = !attribute ? '' : attribute.replace('(', '').replace(')', '').trim();
             if (!targetStr && targetStr.length < 1)
                 return false;
             return card.attribute?.includes(targetStr);
