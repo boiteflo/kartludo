@@ -94,8 +94,15 @@ class refresh {
         game.player1.hand.forEach(card => {
             let drops = card.active ? [this.game.grid.player1Field.drop] : [];
 
-            if (card.active && this.isCardPilot(card)) {
-                drops = drops.concat(unitWithoutPilots.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Pair' }; }));
+            if (card.active) {
+                let targets = [];
+
+                if (this.isCardCommand(card))
+                    targets = game.player1.field;
+                else if (this.isCardPilot(card))
+                    targets = unitWithoutPilots;
+
+                drops = drops.concat(targets.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Pair' }; }));
             }
 
             if (drops.length > 0)
@@ -112,7 +119,7 @@ class refresh {
             }
 
             if (drops.length > 0)
-                drags.push({ ...this.getPos(attacker), card:attacker, show: false, targets: drops });
+                drags.push({ ...this.getPos(attacker), card: attacker, show: false, targets: drops });
         });
 
 

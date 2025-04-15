@@ -8,7 +8,7 @@ class setup {
 
     static setupGame(game) {
         if(this.quickstart){
-            this.resourceStart=8;
+            this.resourceStart=3;
             this.handStartLength = 15;
         }
 

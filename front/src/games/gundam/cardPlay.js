@@ -77,7 +77,7 @@ class cardPlay {
         if (this.isCardBase(task.card1)) {
             if (playCost)
                 this.playCardCost(player, task.card1.cost);
-            
+
             if (player.base.length > 0)
                 this.addTaskPos2({ id: this.move.name, card1: player.base[0], to: this.locationTrash });
 
@@ -121,6 +121,9 @@ class cardPlay {
     static askPilotOrCommand(player, task) {
         if (!task.card2 || !this.isCardPilot(task.card1) || !this.isCardCommand(task.card1))
             return;
+
+        if (task.card2.pair)
+            task.pilotOrCommand = 'Command';
 
         if (task.choice)
             task.pilotOrCommand = task.choice.text;

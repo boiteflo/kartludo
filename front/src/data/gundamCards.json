@@ -81,7 +81,8 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 3,
-            "color": "none"
+            "color": "none",
+            "isTemporaryCard":true
         },
         {
             "id": "EXBP-001",
@@ -842,7 +843,19 @@
             "effects": [
                 {
                     "trigger": "onpair",
-                    "id": "immune",
+                    "id": "immuneAp",
+                    "value": 4,
+                    "oneTurn": true,
+                    "conditions": [
+                        {
+                            "id": "unitHas",
+                            "value": "breach"
+                        }
+                    ]
+                },
+                {
+                    "trigger": "turn",
+                    "id": "immuneAp",
                     "value": 4,
                     "oneTurn": true,
                     "conditions": [
@@ -1558,7 +1571,8 @@
                 {
                     "trigger": "onplay",
                     "id": "placeExResource",
-                    "value": 1
+                    "value": 1,
+                    "delay":true
                 }
             ],
             "pilot": "",

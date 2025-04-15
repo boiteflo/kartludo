@@ -93,6 +93,19 @@ class game {
         return game;
     }
 
+    static showLocationCards(game, location, isPlayer1) {
+        const player = this.getPlayer(isPlayer1);
+        this.addTaskFirst({
+            id: this.popup.name,
+            cards: player[location],
+            task:{},
+            isPlayer1: true,
+            text: `${location} of player ${player.index}`,
+            choices: [{ text: 'ok' }]
+        });
+        return game;
+    }
+
     static endTurn(game, card1, card2, drop) {
         this.startTasks(game);
         game.tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });

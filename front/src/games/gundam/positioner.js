@@ -64,9 +64,9 @@ class positioner {
         y = grid.player1Trash.y + grid.player1Trash.height + grid.border;
         height = (grid.height - grid.border2 - y) / 2;
         width = grid.isVertical ? grid.boxWidthVertical : grid.boxWidth;
-        grid.buttonEndTurn = { x, y, width, height };
-        y += height + grid.border;
         grid.buttonEffect = { x, y, width, height };
+        y += height + grid.border;
+        grid.buttonEndTurn = { x, y, width, height };
 
         width = 50;
         x = grid.widthMargin - width;

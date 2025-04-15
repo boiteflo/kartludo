@@ -252,7 +252,7 @@ class effects {
         }
     }
 
-    static immune(game, task, player, opponent) {
+    static immuneAp(game, task, player, opponent) {
         if (!task.card2.immuneAp || task.card2.immuneAp < task.effect.value) {
             task.card2.immuneAp = task.effect.value;
             this.log(`${task.card2.name} is now immune to AP < ${task.effect.value}`);

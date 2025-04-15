@@ -2,17 +2,17 @@
     <div class="nodrag">
         <div v-for="(point, index) in sources" :key="'source' + index" :id="'source' + index"
             :class="{ absolute: 1, pointCircle: 1, colorYellow: point.show }"
-            :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }"
-            @mousedown="drag(point)">
+            :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 55 }"
+            @mousedown="drag(point)" @click="$emit('click', point)">
         </div>
 
         <div :style="{ display: source ? '' : 'none' }">
-            <div class="" v-for="(point, index) in targets.filter(x=> x)" :key="'target' + index">
+            <div class="" v-for="(point, index) in targets.filter(x => x)" :key="'target' + index">
                 <div :class="{ absolute: 1, pointCircle: 1, colorYellow: target != point, colorGreen: target == point }"
-                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }">
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 55 }">
                 </div>
                 <div class="absolute text-center textVerticalCenter text-shadow-black colorWhite"
-                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index':55 }">
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 55 }">
                     <div>{{ point.text }}</div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ import arrowDiv from './arrowDiv.vue';
 
 export default {
     name: 'drag-drop-arrow',
-    props: ['id', 'sources'],
+    props: ['id', 'sources', 'freeze'],
     components: { arrowDiv },
     data: () => ({
         delay: 1500,
@@ -96,12 +96,14 @@ export default {
             this.animate();
         },
         drag(point) {
+            if (this.freeze)
+                return;
             this.source = point;
             this.targets = this.source.targets;
             this.animate();
         },
         mouseUp() {
-            if (!this.source || !this.animations || this.animations.length < 1)
+            if (!this.source || !this.animations || this.animations.length < 1 || this.freeze)
                 return;
             this.$emit('drop', { mouse: this.mouse, source: this.source, target: this.target });
             this.source = null;
@@ -159,9 +161,9 @@ export default {
         createAnimation(id, delay) {
             const width = this.target ? 75 : 75;
             const from = {
+                opacity: 1,
                 width: 5,
-                height: 5,
-                opacity: 0
+                height: 5
             };
             const mid = {
                 opacity: 1,

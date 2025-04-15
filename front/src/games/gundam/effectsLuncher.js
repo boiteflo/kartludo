@@ -9,20 +9,16 @@ class effectsLuncher {
     static trigger_action = 'action';
     static trigger_ondestroyed = 'ondestroyed';
     static trigger_end = 'end';
-    static trigger_main = 'main';
+    static trigger_turn = 'turn';
+    static trigger_end = 'end';
 
     static lunchEffectTriggerMultiple(cards, trigger) {
-        const cardsList = cards.filter(x => x.effects && x.effects.find(y => y.trigger === trigger));
-        let tasks = [];
-
-        cardsList.forEach(card1 => {
-            tasks.push({ id: this.applyEffectCard.name, card1, trigger });
+        let isEffectExisting = false;
+        cards.forEach(card1 => {
+            const result = this.lunchEffectTriggerForOneCard(card1, trigger);
+            isEffectExisting = isEffectExisting || result.isEffectExisting;
         });
-
-        if (tasks.length > 0)
-            this.addTasksFirst(tasks);
-
-        return tasks.length > 0;
+        return isEffectExisting;
     }
 
     static lunchEffectTriggerForOneCard(card1, trigger) {
@@ -82,14 +78,18 @@ class effectsLuncher {
         if (effects.length > 0) {
             const text = effects.map(fx => this.getEffectText(fx)).join('<br>');
             let tasks = [];
+            let tasksDelay = [];
             const show = effects.filter(fx => !fx.hide).length > 0;
 
             if (show)
                 tasks.push({ ...task, id: this.showCardsEffect.name, text });
 
             tasks = tasks.concat(effects.map(effect => { return { ...task, id: this.applyEffect.name, effect }; }));
+            tasksDelay = tasks.filter(x => x.effect && x.effect.delay);
+            tasks = tasks.filter(x => !x.effect || !x.effect.delay);
 
-            this.addTasksFirst(tasks);
+            if (tasks.length > 0) this.addTasksFirst(tasks);
+            if (tasksDelay.length > 0) this.addTasks(tasksDelay);
         }
 
         if (task.card1.pair)
@@ -127,6 +127,7 @@ class effectsLuncher {
                 delete card[fx.id];
                 lost.push(fx.id);
             })
+            card.removeEndTurn = [];
             this.log(`${card.name} lost ${lost.join(', ')}`);
         });
     }

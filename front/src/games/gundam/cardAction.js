@@ -21,6 +21,7 @@ class cardAction {
         }
 
         if (task.cardChoice) {
+            this.playCardCost(player, task.cardChoice.cost);
             this.addTasksFirst([
                 { id: this.applyEffectCard.name, card1: task.cardChoice, trigger: this.trigger_action, taskAttack:task },
                 { id: this.move.name, card1: task.cardChoice, to: this.locationTrash }
@@ -31,7 +32,7 @@ class cardAction {
             return { stop: true };
         }
         
-        const actionCard = player.hand.filter(x => x.effects && x.effects.find(fx => fx.trigger === this.trigger_action));
+        const actionCard = player.hand.filter(x => x.effects && x.effects.find(fx => fx.trigger === this.trigger_action) && x.cost <= player.resourcesAvailable);
         if (actionCard.length > 0) {
             const playerIndex = player.isPlayer1 ? '1' : '2';
             game.tasks = [{

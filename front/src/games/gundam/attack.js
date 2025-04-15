@@ -82,6 +82,11 @@ class attack {
     }
 
     static selectCardOpponent(game, task, player, opponent) {
+        if(task.attacker.location !== this.locationField){
+            this.log(`Attack is canceled because ${task.attacker.name} is no longer on the field.`);
+            return {end:true};
+        }
+
         if (task.blocker) {
             task.target = task.blocker;
             return {};
@@ -161,7 +166,7 @@ class attack {
         
 
         damage = task.target.ap;
-        if (task.attacker.immuneAp && task.attacker < task.target.immuneAp)
+        if (task.attacker.immuneAp && damage < task.attacker.immuneAp)
             damage = 0;
         task.attacker.hp -= damage;
         task.attacker.hpOrigin -= damage;

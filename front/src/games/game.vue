@@ -35,16 +35,19 @@
 
             <!-- Player 1 -->
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Deck)" text="Deck"
-                :length="game.player1.deck.length" :icon="game.player1.deckIcon">
+                :length="game.player1.deck.length" :icon="game.player1.deckIcon"
+                @click="showLocationCards('deck', true)">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Trash)" text="Trash"
-                :length="game.player1.trash.length" :icon="game.player1.trashIcon">
+                :length="game.player1.trash.length" :icon="game.player1.trashIcon"
+                @click="showLocationCards('trash', true)">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Base)" text="Base"
                 :icon="game.player1.baseIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" text="Shield"
-                :length="game.player1.shield.length" :icon="game.player1.shieldIcon">
+                :length="game.player1.shield.length" :icon="game.player1.shieldIcon"
+                @click="showLocationCards('shield', true)">
             </deck-icon>
             <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
@@ -53,16 +56,19 @@
 
             <!-- Player 2-->
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Deck)" text="Deck"
-                :length="game.player2.deck.length" :icon="game.player2.deckIcon">
+                :length="game.player2.deck.length" :icon="game.player2.deckIcon"
+                @click="showLocationCards('deck', false)">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Trash)" text="Trash"
-                :length="game.player2.trash.length" :icon="game.player2.trashIcon">
+                :length="game.player2.trash.length" :icon="game.player2.trashIcon"
+                @click="showLocationCards('trash', false)">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Base)" text="Base"
                 :icon="game.player2.baseIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Shield)" text="Shield"
-                :length="game.player2.shield.length" :icon="game.player2.shieldIcon">
+                :length="game.player2.shield.length" :icon="game.player2.shieldIcon"
+                @click="showLocationCards('shield', false)">
             </deck-icon>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
             </div>
@@ -104,25 +110,6 @@
             </div>
         </span>
 
-        <!-- Show card -->
-        <div class="flex absolute" v-if="aside">
-            <div class="bg" style="width:300px; height:100%;">
-                <div class="relative">
-                    <gameCard :card="cardCenter" folder="Gundam/cards/"></gameCard>
-                </div>
-                <div style="height:420px"></div>
-                <v-btn target="_blank" text class="bg m5px" @click="start">
-                    <v-icon>mdi-arrow-right-thin</v-icon>
-                    Start
-                </v-btn>
-                <v-btn target="_blank" text class="bg m5px" @click="nextTurn">
-                    <v-icon>mdi-arrow-right-thin</v-icon>
-                    End Turn
-                </v-btn>
-                <div class="mp5px" v-html="game?.logs"></div>
-            </div>
-        </div>
-
         <!-- cards -->
         <div v-for="card in cards" :key="'B' + card.index">
             <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
@@ -130,46 +117,37 @@
             </gameCard>
         </div>
 
-        <!-- End turn button -->
-        <div v-if="game && false">
-            <div class="bgYellow absolute circle10px"
-                :style="{ left: game.grid.x0 + 'px', top: '30px', height: game.grid.hand.height - 25 + 'px', width: game.fields[0].width + 'px' }">
-
-                <v-btn target="_blank" text
-                    :class="{ bg: true, w100p: true, h100p: true, shine: !freeze, fontSize075em: true }"
-                    @click="nextTurn" style="min-width:0px;">
-                    End <br>Turn
-                </v-btn>
-            </div>
-        </div>
+        <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" @click="clickDrop" :targets="targets" :freeze="freeze || game?.popup">
+        </drag-drop-arrow>
 
         <!-- Popup -->
-        <div v-if="game?.popup" class="textVerticalCenter h100p"
-            style="z-index:60; width:100%; position:fixed; left:0px;">
+        <div v-if="game?.popup" class="textVerticalCenter"
+            style="z-index:60; width:100%; position:absolute; bottom:0px; left:0px;">
 
-            <div style="background-color: #FFFF00F0; width:100%; flex-direction: column" class="flex">
+            <div class="flex flex-wrap absolute" style="top:-50px">
+                <v-btn class="m10px" style="background-color: #FFFF00F0;"
+                    @click="showOrHidePopup(false)">
+                    <span v-if="popupShow">Hide Popup</span><span v-else>Show Popup</span>
+                </v-btn>
+                <div v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
+                    <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
+                        {{ choice.text }}
+                    </v-btn>
+                </div>
+            </div>
+            <div v-if="popupShow" class="flex" style="background-color: #FFFF00F0; width:100%; flex-direction: column">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
-                <span class="relative">
-                    <span v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
-                        <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
-                            {{ choice.text }}
-                        </v-btn>
-                    </span>
-                </span>
                 <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand"
                         :style="{ width: game?.grid.card100.height + 'px' }">
-                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1 ? '1' : '2' }}</div>
+                        <div class="text-center colorBlack">{{ card.location }} P{{ card.isPlayer1 ? '1' : '2' }}
+                        </div>
                         <img :style="{ width: game?.grid.card100.width + 'px', 'aspect-ratio': '107/150', transform: 'rotate(' + card.position?.rotation ?? 0 + 'deg)' }"
                             @click="selectChoiceCard(card)"
                             :src="require('@/assets/Gundam/cards/' + card.id + '.webp')" />
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div v-if="game && game.tasks" class="absolute hide" style="z-index:12;">
-            {{game.tasks.map(x => x.id)}}
         </div>
 
         <!-- textEffect -->
@@ -191,15 +169,12 @@
 
         <!-- Card center -->
         <gameCard id="cardCenter" :card="cardCenter" folder="Gundam/cards/" @click="showCard(null)"
-            style="z-index: 12;">
+            style="z-index: 70;">
         </gameCard>
 
         <div class="absolute" style="top:0px; left:0px;">
             <!-- Debug -->
         </div>
-
-        <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" :targets="targets">
-        </drag-drop-arrow>
     </div>
 
 </template>
@@ -232,13 +207,13 @@ export default {
     components: { gameCard, deck, deckList, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
-        aside: false,
         freeze: true,
         cards: [],
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
         title: null,
         text: null,
+        popupShow: true,
         ignoreEvent: [],
         cardList: null,
         decklistPlayer1: null,
@@ -259,7 +234,7 @@ export default {
         this.deckList = cards.decklist;
         if (this.quickstart) {
             this.decklistPlayer1 = cards.decklist[5].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
-            this.decklistPlayer2 = cards.decklist[5].list;
+            this.decklistPlayer2 = cards.decklist[2].list;
             this.start();
         }
         const targets = [];
@@ -314,6 +289,9 @@ export default {
             this.continue();
         },
         dropPoint(event) {
+            if (!event || !event.target || !event.target.text)
+                return;
+
             if (event.target.text === 'Play')
                 this.playCard(event.source.card, null, this.game.grid.player1Field);
             if (event.target.text === 'Pair')
@@ -337,6 +315,13 @@ export default {
             this.freeze = true;
             this.game = gameGundam.selectChoiceCard(this.game, card);
             this.refreshGame();
+        },
+        showLocationCards(location, isPlayer1) {
+            this.game = gameGundam.showLocationCards(this.game, location, isPlayer1);
+            this.refreshGame();
+        },
+        showOrHidePopup() {
+            this.popupShow = !this.popupShow;
         },
         refreshGame() {
             this.freeze = true;
@@ -388,6 +373,9 @@ export default {
             const newCard = { ...card };
             newCard.position = { ...card.position, x: card.position.x + 300 };
             this.showCard(newCard);
+        },
+        clickDrop(event) {
+            this.showCard(event.card);
         },
         showCard(card) {
             const center = this.game ? this.game.grid.highlightCardCenter : { x: 0, y: 0, width: 200, height: 280 };

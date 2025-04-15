@@ -43,7 +43,7 @@ class cardMove {
         if (!card)
             return;
 
-        if (!card.isTemporaryCard || (card.isTemporaryCard && locationTo === this.locationField))
+        if (!card.isTemporaryCard || (card.isTemporaryCard && (locationTo === this.locationField || locationTo === this.locationBase)))
             player[to] = this.addIn(player[to], card);
 
         if (from)
@@ -61,7 +61,7 @@ class cardMove {
         if (card.pair) {
             card.pair.pairedWith = null;
             card.pair.link = false;
-            this.moveCard(game, player, card.pair, locationFrom, locationTo);
+            this.moveCard(game, player, card.pair, locationFrom, this.locationTrash);
             delete (card.pair);
             card.link = false;
         }
