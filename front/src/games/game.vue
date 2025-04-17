@@ -1,20 +1,5 @@
 <template>
     <div class="relative w100p mask h100p bg2" :key="refreshG">
-        <!-- DeckList Show-->
-        <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
-            style="top:50px" @cardclick="showCardDeckList" @cancel="showDeckList(null)" @validate="selectDeckList">
-        </deck-list>
-
-        <!-- DeckLists -->
-        <div v-if="!game">
-            <h2>Select deck for the {{ decklistPlayer1 ? 'opponent' : 'player' }}</h2>
-            <div class="flex flex-wrap flex-space-around fontSize150em">
-                <deck v-for="(deck, index) in deckList" :key="'Deck' + index" :deck="deck" folder="Gundam/cards/"
-                    @click="showDeckList(deck)">
-                </deck>
-            </div>
-        </div>
-
         <span v-if="game">
             <!-- Drag and drop field-->
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)"></div>
@@ -117,7 +102,8 @@
             </gameCard>
         </div>
 
-        <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" @click="clickDrop" :targets="targets" :freeze="freeze || game?.popup">
+        <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" @click="clickDrop" :targets="targets"
+            :freeze="freeze || game?.popup">
         </drag-drop-arrow>
 
         <!-- Popup -->
@@ -125,8 +111,7 @@
             style="z-index:60; width:100%; position:absolute; bottom:0px; left:0px;">
 
             <div class="flex flex-wrap absolute" style="top:-50px">
-                <v-btn class="m10px" style="background-color: #FFFF00F0;"
-                    @click="showOrHidePopup(false)">
+                <v-btn class="m10px" style="background-color: #FFFF00F0;" @click="showOrHidePopup(false)">
                     <span v-if="popupShow">Hide Popup</span><span v-else>Show Popup</span>
                 </v-btn>
                 <div v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
@@ -195,16 +180,14 @@ import helperAnimation from '../helpers/helperAnimation';
 import cards from '../data/gundamCards.json';
 import gameGundam from './gundam/game';
 import gameCard from './card';
-import deck from './deck';
-import deckList from './deckList';
 import bananaBars from './bananaBars.vue';
 import deckIcon from './deckIcon.vue';
 import dragDropArrow from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
-    props: [],
-    components: { gameCard, deck, deckList, bananaBars, deckIcon, dragDropArrow },
+    props: ['deck1', 'deck2'],
+    components: { gameCard, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
         freeze: true,
@@ -218,12 +201,14 @@ export default {
         cardList: null,
         decklistPlayer1: null,
         decklistPlayer2: null,
-        decklistShow: null,
-        deckList: [],
         sources: [],
         targets: [],
-        quickstart: false
-    }),
+        quickstart: true
+    }),/*
+    watch: {
+        deck1() { this.setDecks();},
+        deck2() { this.setDecks();}
+    },*/
     mounted() {
         document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
@@ -231,33 +216,14 @@ export default {
         });
 
         this.cardList = cards.cards;
-        this.deckList = cards.decklist;
-        if (this.quickstart) {
-            this.decklistPlayer1 = cards.decklist[5].list; // Gundam, Mercury, Zeon, Unicorn, Seed, Wing
-            this.decklistPlayer2 = cards.decklist[2].list;
-            this.start();
-        }
-        const targets = [];
-        const width = 75;
-        const height = 75;
-        for (let y = 40; y < 500; y += 400)
-            for (let x = 40; x < 260; x = x + 100)
-                targets.push({ x, y, width, height, text: 'Point ' + x });
-
-        this.targets = targets;
+        this.setDecks();
     },
     methods: {
-        showDeckList(decklist) {
-            this.decklistShow = decklist;
-        },
-        selectDeckList(decklist) {
-            if (!this.decklistPlayer1)
-                this.decklistPlayer1 = decklist.list;
-            else {
-                this.decklistPlayer2 = decklist.list;
+        setDecks() {
+            this.decklistPlayer1 = this.deck1;
+            this.decklistPlayer2 = this.deck2;
+            if (this.decklistPlayer1 && this.decklistPlayer2)
                 this.start();
-            }
-            this.decklistShow = null;
         },
         start() {
             this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2, this.quickstart);
@@ -272,6 +238,10 @@ export default {
         continue() {
             this.freeze = false;
             this.game = gameGundam.continue(this.game);
+            if(this.game.end){
+                this.$emit('end', this.game.isVictory);
+                return;
+            }
             if (this.game.popup) {
                 this.freeze = true;
                 return;
@@ -369,11 +339,6 @@ export default {
         },
 
         // --------- showCard
-        showCardDeckList(card) {
-            const newCard = { ...card };
-            newCard.position = { ...card.position, x: card.position.x + 300 };
-            this.showCard(newCard);
-        },
         clickDrop(event) {
             this.showCard(event.card);
         },

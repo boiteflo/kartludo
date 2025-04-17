@@ -7,8 +7,8 @@ class setup {
     static shieldStartLength = 6;
 
     static setupGame(game) {
-        if(this.quickstart){
-            this.resourceStart=3;
+        if (this.quickstart) {
+            this.resourceStart = 8;
             this.handStartLength = 15;
         }
 
@@ -112,7 +112,8 @@ class setup {
                     tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
             }
 
-            tasks = tasks.concat(this.addShielsAndBase(game));
+            if (!this.quickstart)
+                tasks = tasks.concat(this.addShielsAndBase(game));
 
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });

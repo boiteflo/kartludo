@@ -104,6 +104,12 @@ const routes = [
             import ('../pages/gundam/index.vue')
     },
     {
+        path: '/gundamTcg',
+        name: version + ' Gundam TCG',
+        component: () =>
+            import ('../pages/gundam/GundamTcg.vue')
+    },
+    {
         path: '/gundamTcgFight',
         name: version + ' Gundam TCG',
         component: () =>

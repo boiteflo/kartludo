@@ -19,7 +19,7 @@
       <v-spacer></v-spacer>
 
       <link-button v-for="link in links" :key="'menuBarr' + link.Text" :url="link.Url" :external="link.external"
-        :text="$vuetify.breakpoint.width >= 1050 ? link.Text : ''" :icon="link.Icon" @click="unselect()">
+        :text="$vuetify.breakpoint.width >= 650 ? link.Text : ''" :icon="link.Icon" @click="unselect()">
       </link-button>
 
     </v-app-bar>
@@ -64,7 +64,7 @@ export default {
     showDrawer: false,
     links: [
       { Text: 'Encyclopédie', Icon: 'mdi-book', external:true, Url: 'https://docs.google.com/presentation/d/13EMZDLqcDxfhsLHIzuKSSBsFIvNwjc2QLpWlew3B8Bk/edit?usp=drive_link' },
-      { Text: 'Cartes', Icon: 'mdi-cards', Url: '/gundamTcgFight' },
+      { Text: 'Cartes', Icon: 'mdi-cards', Url: '/gundamTcg' },
     ]
   }),
   mounted(){

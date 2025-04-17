@@ -16,7 +16,7 @@
                     :image="require('@/assets/Gundam/EncyclopedieGundam.png')">
                 </button-big>
             </a>
-            <router-link to="/gundamTcgFight">
+            <router-link to="/gundamTcg">
                 <button-big 
                     text="Gundam TCG"
                     :image="require('@/assets/Gundam/CardsGundam.png')">

@@ -36,18 +36,19 @@ class game {
     static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart) {
         this.cards = cards.cards;
         this.quickstart = quickstart;
-        this.game = { logs: '', 
-            cards: [], 
-            tasks: [{ id: 'setupGame' }], 
-            cardList: cards.cards, 
-            gundamCards: cards, 
-            decklistPlayer1, decklistPlayer2, 
-            incruises:[],
+        this.game = {
+            logs: '',
+            cards: [],
+            tasks: [{ id: 'setupGame' }],
+            cardList: cards.cards,
+            gundamCards: cards,
+            decklistPlayer1, decklistPlayer2,
+            incruises: [],
             effects: []
         };
         utils.addFunction([
             tasks, utils, popup, setup, positioner, turn, refresh, selectable, show, mainEffects,
-            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack, 
+            cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack,
             ai, aiCombos, aiPlay, aiStrategy
         ], this);
         this.game.grid = this.createGrid(width, height);
@@ -63,12 +64,11 @@ class game {
         }
         this.endAnimation(game);
         let result = this.handleTasks(game);
-        if(!game.refresh && !game.isPlayer1)
-        {
-            this.addTask({id: this.newTurnForAI.name});
+        if (!game.refresh && !game.isPlayer1) {
+            this.addTask({ id: this.newTurnForAI.name });
             result = this.continue(game);
         }
-        
+
         return result;
     }
 
@@ -78,7 +78,7 @@ class game {
         return this.continue(game);
     }
 
-    static useEffect(game){
+    static useEffect(game) {
         this.startTasks(game);
         return this.lunchMainEffectCard(game);
     }
@@ -98,7 +98,7 @@ class game {
         this.addTaskFirst({
             id: this.popup.name,
             cards: player[location],
-            task:{},
+            task: {},
             isPlayer1: true,
             text: `${location} of player ${player.index}`,
             choices: [{ text: 'ok' }]
@@ -114,8 +114,8 @@ class game {
 
     static end(isPlayer1) {
         this.game.end = true;
+        this.game.isVictory = isPlayer1;
         const message = isPlayer1 ? 'Victory' : 'Defeat';
-        alert(message);
         return { end: true };
     }
 }
