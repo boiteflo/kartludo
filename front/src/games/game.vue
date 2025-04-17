@@ -203,7 +203,7 @@ export default {
         decklistPlayer2: null,
         sources: [],
         targets: [],
-        quickstart: true
+        quickstart: false
     }),/*
     watch: {
         deck1() { this.setDecks();},
