@@ -1,10 +1,12 @@
 <template>
-    <div class="absolute"
-        :style="{ width: card.position.width + 'px', top: card.position.y + 'px', left: card.position.x + 'px' }">
-        <img class="w100p" style="object-fit: cover;" :src="require('@/assets/' + folder + card.id + '.webp')"
+    <div class="m5px" style="width:100px; height: 180px;">
+        <div class="flex flex-space-around m5px text-center" style="height:30px">
+            <div @click="$emit('clickdown', card)" class="bgRedHover cursorHand flex-grow">-</div>
+            <div class="flex-grow">{{ card.quantity }}</div>
+            <div @click="$emit('clickup', card)" class="bgGreenHover cursorHand flex-grow">+</div>
+        </div>
+        <img class="w100p cursorHand" style="object-fit: cover; aspect-ratio: 107/150;" :src="require('@/assets/' + folder + card.id + '.webp')"
             @click="$emit('cardclick', card)">
-        <v-btn v-if="card.buttons" @click="$emit('clickdown', card)" class="bgRedHover absolute" style="bottom:0px; width:50%">-</v-btn>
-        <v-btn v-if="card.buttons" @click="$emit('clickup', card)" class="bgGreenHover absolute" style="bottom:0px; width:50%">+</v-btn>
     </div>
 </template>
 <script>

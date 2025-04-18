@@ -1,37 +1,50 @@
 <template>
-    <div class="w100p bg2 h100p">
-        <div class="relative w100p" style="margin-left:300px">
-            <decklist-card v-for="(card, index) in cardData" :key="'Decklist card ' + index" :card="card"
-                :folder="folder" @cardclick="$emit('cardclick', card)" @clickdown="incruise(card,-1)" @clickup="incruise(card,1)">
-            </decklist-card>
-        </div>
-        <div style="width: 300px;" class="m5px h100p bgWhite fontSize125em">
-            <v-btn class="w100p bg" style="height:45px" @click="$emit('cancel')">Back</v-btn>
+    <div class="w100p h100p flex">
+        <div style="width: 300px; flex-direction: column" class="m5px fontSize100em h100p flex">
+            <v-btn class="m5px" style="height:45px" @click="addCardPopup">Add card</v-btn>
+            <div class="flex" style="height:89px; margin-bottom:5px;">
+                <v-btn class="m5px flex-grow h100p"
+                    :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + decklist.card2 + '.webp') + ')' }"
+                    @click="setCard(2)">
+                </v-btn>
+                <v-btn class="m5px flex-grow h100p"
+                    :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + decklist.card1 + '.webp') + ')' }"
+                    @click="setCard(1)">
+                </v-btn>
+                <v-btn class="m5px flex-grow h100p"
+                    :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + decklist.card3 + '.webp') + ')' }"
+                    @click="setCard(3)">
+                </v-btn>
+            </div>
+            <v-btn class="m5px shine bg2" style="height:45px" @click="validate">Validate</v-btn>
             <div class="w100p text-center">{{ resume }}</div>
-            <deck :deck="decklist" :folder="folder" style="width:280px; height:238px"> </deck>
-            <v-btn class="w100p shine bg2" style="height:45px" @click="validate">Valider</v-btn>
-            <br>
-            <textarea class="w100p h100p" v-model="list" @input="setList">
-        </textarea>
+            <div class="w100p text-center">{{ resume2 }}</div>
+            <textarea class="w100p h100p" v-model="list" @input="setList" style="min-height: 300px;"></textarea>
+        </div>
+        <div class="w100p flex flex-wrap flex-space-around">
+            <decklist-card v-for="(card, index) in cardData" :key="'Decklist card ' + index" :card="card"
+                :folder="folder" @cardclick="cardclick" @clickdown="incruise(card, -1)" @clickup="incruise(card, 1)">
+            </decklist-card>
         </div>
     </div>
 </template>
 
 <script>
-import positioner from './gundam/positioner';
-import decklistCard from './deckListCard.vue';
-import deck from './deck';
+import decklistCard from './deckListCard';
+import cardLife from './gundam/cardLife';
 
 export default {
     name: 'deck-list',
-    components: { deck, decklistCard },
-    props: ['decklist', 'folder', 'cardlist'],
+    components: { decklistCard },
+    props: ['decklist', 'folder', 'cardlist', 'card'],
     data: () => ({
         list: '',
         resume: '',
+        resume2: '',
         listCorrect: '',
         cardData: null,
-        stopRefresh: false
+        stopRefresh: false,
+        cardIndexSet: 0
     }),
     mounted() {
         this.list = this.decklist.list.split(',').join('\n');
@@ -46,10 +59,10 @@ export default {
             const resultText = [];
             const cards = this.list.split('\n');
             const listCorrect = [];
-            let index=0;
+            let index = 0;
 
             cards.forEach(line => {
-                index+= line.length;
+                index += line.length;
                 let info = line.split('x');
                 let quantity = parseInt(info[0]);
                 if (info.length < 2 || isNaN(quantity) || quantity < 1) {
@@ -60,33 +73,37 @@ export default {
                     const card = this.cardlist?.find(x => x.id == id);
 
                     if (card) {
-                        result.push({ id, quantity, buttons:quantity===1 });
+                        result.push({ id, quantity, card});
                         listCorrect.push(`${quantity}x${id}`);
                         resultText.push(`${quantity}x ${id} ${card.name}`);
-                        if(!line.includes(' ')){
+                        if (!line.includes(' ')) {
                             this.list = this.insertStringAt(this.list, index, ' ' + card.name + '\n');
-                            index+= 2 + card.name.length;
+                            index += 2 + card.name.length;
                         }
-                    } 
+                    }
                 }
 
             });
-
-            const ratio = 107 / 220;
-            positioner.getWrapMaxPositions(this.$vuetify.breakpoint.width - 310, this.$vuetify.breakpoint.height - 10, result, ratio);
+            let unitLength=0;
+            let pilotLength=0;
+            let commandLength=0;
+            let baseLength=0;
+            let deckLength = 0;
             result.forEach(card => {
-                for (let i = 1; i < card.quantity; i++) {
-                    result.push({ 
-                        id: card.id, 
-                        buttons: i === card.quantity-1,
-                        position: { ...card.position, y: card.position.y + (i * 0.06 * card.position.height) } });
-                }
+                if(cardLife.isCardUnit(card.card)) unitLength+= card.quantity;
+                if(cardLife.isCardPilot(card.card)) pilotLength+= card.quantity;
+                if(cardLife.isCardCommand(card.card)) commandLength+= card.quantity;
+                if(cardLife.isCardBase(card.card)) baseLength+= card.quantity;
+                deckLength+=card.quantity;
             });
 
-            this.resume = `${result.length} cards`;
+
+            this.resume = `${deckLength} cards`;
+            this.resume2 = `${unitLength} Units, ${pilotLength} Pilots, ${commandLength} Commands, ${baseLength} Bases`;
             this.listCorrect = listCorrect.join(',');
             this.cardData = result;
         },
+        
         getId(str) {
             return str.trim().split(' ')[0];
         },
@@ -97,14 +114,30 @@ export default {
             this.refresh();
             this.stopRefresh = false;
         },
-        incruise(card, pitch){
+        incruise(card, pitch) {
             const index = this.list.indexOf(card.id);
-            const quantity = parseInt(this.list.charAt(index-2))+pitch;
-            this.list = this.insertStringAt(this.list, index-2, quantity);
+            const quantity = parseInt(this.list.charAt(index - 2)) + pitch;
+            this.list = this.insertStringAt(this.list, index - 2, quantity);
             this.setList();
         },
-        insertStringAt(content, index, str){
-            return content.substring(0, index) + str + content.substring(index+1);
+        insertStringAt(content, index, str) {
+            return content.substring(0, index) + str + content.substring(index + 1);
+        },
+        setCard(index) {
+            this.cardIndexSet = index;
+            this.$emit('popup', {title:'Select Card ' + index});
+        },
+        addCardPopup(){
+            this.$emit('popup', {title:'Select Card ', id:'allcards'});
+        },
+        cardclick(card) {
+            if (this.cardIndexSet > 0) {
+                this.$emit('setCard', { prop: 'card' + this.cardIndexSet, id: card.id });
+                this.cardIndexSet = 0;
+                this.$emit('popup', null);
+                return;
+            }
+            this.$emit('cardclick', card);
         }
     }
 }

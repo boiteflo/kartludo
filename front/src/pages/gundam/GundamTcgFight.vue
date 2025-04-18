@@ -1,8 +1,8 @@
 <template>
-  <div class="bg2 h100p w100p">
+  <div class="bg2 h100p w100p fadeIn3sec">
     <menu-bar-gundam :hide="true">
     </menu-bar-gundam>
-    <game v-if="deck1 && deck2" :deck1="deck1" :deck2="deck2" @end="end"></game>
+    <game v-if="deck1 && deck2" :deck1="deck1" :deck2="deck2" :quickstart="quickstart" @end="end"></game>
   </div>
 </template>
 <script>
@@ -24,7 +24,8 @@ import game from '../../games/game';
   data: () => ({
     store:storeMini,
     deck1: null,
-    deck2: null
+    deck2: null,
+    quickstart:false
    }),
   mounted(){
     this.deck1 = helperCookie.getCookieString('deck1').split('_').join(',');

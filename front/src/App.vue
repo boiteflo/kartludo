@@ -6,6 +6,9 @@
 </template>
 
 <style>
+.v-application--wrap {
+    background-color: black;
+}
 @import './style.css';
 </style>
 

@@ -186,7 +186,7 @@ import dragDropArrow from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
-    props: ['deck1', 'deck2'],
+    props: ['deck1', 'deck2', 'quickstart'],
     components: { gameCard, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
@@ -202,8 +202,7 @@ export default {
         decklistPlayer1: null,
         decklistPlayer2: null,
         sources: [],
-        targets: [],
-        quickstart: false
+        targets: []
     }),/*
     watch: {
         deck1() { this.setDecks();},
