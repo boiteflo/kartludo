@@ -100,7 +100,8 @@ class effects {
     static repair(game, task, player, opponent) {
         if (task.card2.hp < task.card2.hpMax) {
             this.log(`${task.card2.name} HP is repaired by ${task.effect.value}`);
-            task.card2.hp = Math.min(task.card2.hp + task.effect.value, task.card2.hpMax);
+            task.card2.hpOrigin = Math.min(task.card2.hpOrigin + task.effect.value, task.card2.hpMaxOrigin);
+            this.recalculateApHp(game, player, task.card2);
         }
     }
 
@@ -154,11 +155,6 @@ class effects {
     }
 
     static incruise(game, task, player, opponent) {
-        const alreadyDone = this.alreadyDone(task.card2.incruise, task.isConditionsAfterRespected);
-        if (alreadyDone)
-            return;
-
-        task.card2.incruise = task.isConditionsAfterRespected;
         const ap = task.isConditionsAfterRespected ? task.effect.ap : 0;
         const hp = task.isConditionsAfterRespected ? task.effect.hp : 0;
 

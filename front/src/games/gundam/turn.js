@@ -38,17 +38,16 @@ class turn {
         game.player.resourcesAvailable = game.player.resourcesMax + game.player.resourcesEx;
         game.resourcesMax = Math.max(game.player1.resourcesAvailable, game.player1.resourcesMax, game.player2.resourcesAvailable, game.player2.resourcesMax) + 1;
 
-        this.setSelectableFalse();
 
-        game.player.field.forEach(x => {
-            x.active = true;
-            x.canAttack = true;
-        });
+        game.player.field.concat(game.player.base)
+            .forEach(x => this.setActive(game, x, true));
+
+        this.setSelectableFalse();
 
         const baseText = game.player.base.length > 0 ? game.player.base[0].hp + 'hp ' : '-';
         this.turnIndex++;
         this.log(`-- Turn ${this.turnIndex} for player ${playerId}, ${game.player.resourcesAvailable} resources, ${game.player.shield.length} shield, ${baseText} base`);
-        
+
         this.lunchEffectTriggerMultiple(game.player.field, this.trigger_turn);
     }
 }

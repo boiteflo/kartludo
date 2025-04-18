@@ -112,7 +112,7 @@ class setup {
                     tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
             }
 
-            if (!this.quickstart)
+            // if (!this.quickstart)
                 tasks = tasks.concat(this.addShielsAndBase(game));
 
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });

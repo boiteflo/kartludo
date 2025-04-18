@@ -11,6 +11,7 @@ class effectsLuncher {
     static trigger_end = 'end';
     static trigger_turn = 'turn';
     static trigger_end = 'end';
+    static trigger_main = 'main';
 
     static lunchEffectTriggerMultiple(cards, trigger) {
         let isEffectExisting = false;

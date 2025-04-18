@@ -10,6 +10,10 @@ class mainEffects {
         else
             game.effects = game.effects.filter(x => x.index !== card.index);
 
+        this.refreshPlayersMainEffect(game);
+    }
+
+    static refreshPlayersMainEffect(game) {
         game.player1.hasEffects = game.effects.filter(fx => fx.card.isPlayer1 === true).length > 0;
         game.player2.hasEffects = game.effects.filter(fx => fx.card.isPlayer1 === false).length > 0;
     }

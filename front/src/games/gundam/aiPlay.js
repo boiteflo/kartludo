@@ -13,7 +13,9 @@ class aiPlay {
             return this.playCombo(player, combos.pilotLinkUnitsOnFieldWithEffects[0]);
 
         const combo = this.handleStrategy(game, player, cardsAvailable);
-        if(combo)
+        if (combo.stop || combo.taskAdded)
+            return combo;
+        if (combo && combo.unit)
             return this.playCombo(player, combo);
 
         const units = cardsAvailable.filter(card => this.isCardUnit(card))
@@ -44,23 +46,34 @@ class aiPlay {
         if (!attacker)
             return {};
 
-        const notEnoughShield = this.getNotEnoughShield(game, task, player, unitsThatCanAttack);
+        const notEnoughShield = this.getNotEnoughShield(game, task, player, unitsThatCanAttack, attacker);
         const target = this.getTarget(game, task, player, attacker, notEnoughShield);
         this.declareAiAttack(attacker, target);
         return { taskAdded: true };
     }
 
-    static getNotEnoughShield(game, task, player, unitsThatCanAttack) {
-        return game.player1.base.concat(game.player1.shield).length < unitsThatCanAttack.length;
+    static getNotEnoughShield(game, task, player, unitsThatCanAttack, attacker) {
+        let attackMinimimForWin = game.player1.shield.length + 1;
+        if (game.player1.base.length > 0) {
+            attackMinimimForWin += 1;
+            const base = game.player1.base[0];
+            if (base.hp > attacker.ap)
+                attackMinimimForWin += 1;
+        }
+        return attackMinimimForWin <= unitsThatCanAttack.length;
     }
 
     static getTarget(game, task, player, attacker, notEnoughShield) {
+        const targets = game.player1.field.filter(x => this.isValidTarget(game.player1, attacker, x) && x.hp <= attacker.ap);
+        const target = targets.length < 1 ? null : targets.sort((a, b) => b.level - a.level)[0];
+
+        if (target && attacker.breach)
+            return target;
+
         if (notEnoughShield)
             return null;
 
-        const targets = game.player1.field.filter(x => this.isValidTarget(game.player1, attacker, x) && x.hp <= attacker.ap);
-        if (targets.length > 0)
-            return targets.sort((a, b) => b.level - a.level)[0];
+        return target;
     }
 
     static getPlayCardTasks(player, card1, card2) {
