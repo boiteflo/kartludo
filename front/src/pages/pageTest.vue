@@ -8,7 +8,7 @@
             Ce texte doit s’adapter à la largeur !
         </div>
 
-        <div :class="{bgRed:1, 'anim-height':1, 'height0':popupShow}" style="width:500px; height: 500px;">
+        <div :class="{bgRed:1, 'anim-height':1, 'height0':popupShow}" style="width:500px; height: 500px; transform:scale(0.5)">
 
         </div>
     </div>

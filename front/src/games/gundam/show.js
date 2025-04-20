@@ -48,6 +48,10 @@ class title {
 
     static showCardsEffect(game, task){
         task.card1.fxRed=true;
+        task.card1.fxText = task.text;
+        task.card1.verso=false;
+        if (task.text)
+            this.taskTextShow(game, task);
     }
 }
 

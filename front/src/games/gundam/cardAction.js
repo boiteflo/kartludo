@@ -23,7 +23,7 @@ class cardAction {
         if (task.cardChoice) {
             this.playCardCost(player, task.cardChoice.cost);
             this.addTasksFirst([
-                { id: this.applyEffectCard.name, card1: task.cardChoice, trigger: this.trigger_action, taskAttack:task, delay:true },
+                { id: this.applyEffectCard.name, card1: task.cardChoice, trigger: this.trigger_action, taskAttack:task},
                 { id: this.move.name, card1: task.cardChoice, to: this.locationTrash }
             ]);
             task[property] = task.cardChoice;

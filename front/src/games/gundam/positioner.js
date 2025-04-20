@@ -229,15 +229,17 @@ class positioner {
 
     static getWrapPosition(position, cardSize, total, index, degree, wrapCut, centerEmptyZone) {
         const totalCards = centerEmptyZone ? total + 1 : total;
-        const mid = Math.floor(totalCards / 2);
+        const cardSizeModified = centerEmptyZone ? this.getCardSize(position.width, position.height, totalCards, position.cardHeightPercent) : cardSize;
+        let mid = Math.floor(totalCards / 2);
         const indexModified = centerEmptyZone && index >= mid ? index + 1 : index;
-        if (totalCards < wrapCut || position.height < cardSize.height * 2)
-            return this.getCardPositionXY(position, cardSize, totalCards, indexModified, degree);
+        if (totalCards < wrapCut || position.height < cardSizeModified.height * 2)
+            return this.getCardPositionXY(position, cardSizeModified, totalCards, indexModified, degree);
 
-        const indexLine = indexModified < mid ? indexModified : indexModified - mid;
-        const totalLine = totalCards - mid;
+        mid = Math.floor(total / 2);
+        const indexLine = index < mid ? index : index - mid;
+        const totalLine = total - mid;
         const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine, position.cardHeightPercent);
-        const positionLine = indexModified < mid ? position : { ...position, y: position.y + cardSizeLine.height };
+        const positionLine = index < mid ? position : { ...position, y: position.y + cardSizeLine.height };
         return this.getCardPositionXY(positionLine, cardSizeLine, totalLine, indexLine, degree);
     }
 

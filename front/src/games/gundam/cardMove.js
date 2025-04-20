@@ -46,11 +46,13 @@ class cardMove {
         const onField = [this.locationField, this.locationBase];
         if (!card.isTemporaryCard)
             player[to] = this.addIn(player[to], card);
-        else
-            if (onField.includes(card.to))
+        else{
+            
+            if (onField.includes(locationTo))
                 player[to] = this.addIn(player[to], card);
             else
                 card.fadeOut=true;
+        }
         
 
         if (from)

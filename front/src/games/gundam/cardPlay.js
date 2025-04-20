@@ -103,7 +103,7 @@ class cardPlay {
                 this.playCardCost(player, task.card1.cost);
 
             this.addTasksPos2([
-                { id: this.applyEffectCard.name, card1: task.card1, card2: task.card2, trigger: this.trigger_command, delay:true },
+                { id: this.applyEffectCard.name, card1: task.card1, card2: task.card2, trigger: this.trigger_command },
                 { id: this.move.name, card1: task.card1, to: this.locationTrash }
             ]);
             return;

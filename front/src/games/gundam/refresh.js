@@ -29,10 +29,24 @@ class refresh {
             card.bgposition = '0 0';
             card.fx = false;
             card.to = this.getWrapPosition(position, cardSize, cards.length, index, degree, wrapCut, centerEmptyZone);
+            card.to = this.adjustRotationSize(card.to, card.active);
             card.location = position.location;
             if (position.location == this.locationField && card.pair)
                 card.pair.to = this.getPairPosition(card.to);
         });
+    }
+
+    static adjustRotationSize(to, active, percent = 0.7) {
+        if (active)
+            return to.previous ? to.previous : to;
+
+        if (to.previous)
+            return to;
+
+        const reverPercentHalf = (1 - percent) / 2;
+        const loseX = to.width * reverPercentHalf;
+        const loseY = to.height * reverPercentHalf;
+        return { ...to, previous: to, x: to.x + loseX, y: to.y + loseY, width: to.width * percent, height: to.height * percent };
     }
 
     static getIcon(length) {
@@ -80,8 +94,8 @@ class refresh {
             this.refreshFieldAndHand(game, {}, player);
         });
 
-        game.cards.forEach(card=>{
-            card.fxRed=false;
+        game.cards.forEach(card => {
+            card.fxRed = false;
         });
 
         this.refreshDragAndDrop(game);

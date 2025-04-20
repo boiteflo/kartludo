@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask bg2" style="height: 100dvh" :key="refreshG">
+    <div class="relative w100p mask bg2" style="height: 100dvh" key="refreshG">
         <span v-if="game">
             <!-- Drag and drop field-->
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)"></div>
