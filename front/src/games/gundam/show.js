@@ -25,7 +25,7 @@ class title {
         task.card1.to = this.clone(destination);
         task.card1.to.rotation = 0;
         task.card1.zindex = 11;
-        task.card1.verso = task.verso;
+        task.card1.verso = false;
 
         if (task.card2) {
             this.spawnIfNot(task.card2);
@@ -33,7 +33,7 @@ class title {
             task.card2.to = this.clone(game.grid.highlightCardRight);
             task.card2.to.rotation = 0;
             task.card2.zindex = 11;
-            task.card2.verso = task.verso;
+            task.card2.verso = false;
         }
 
         if (task.text)

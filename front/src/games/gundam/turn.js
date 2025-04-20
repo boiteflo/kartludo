@@ -21,9 +21,11 @@ class turn {
         const playerId = game.isPlayer1 ? '1' : '2';
         this.startTasks(game);
 
+        const idTask = game.isPlayer1 ? this.taskMoveAndShowCenter.name : this.spawnOrMove.name;
+
         const tasks = [
             { id: this.showTitle.name, value: 'New turn for player ' + playerId, isPlayer1: game.isPlayer1, delay: true },
-            { id: this.taskMoveAndShowCenter.name, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand, verso: !game.isPlayer1 }
+            { id: idTask, isPlayer1: game.isPlayer1, from: this.locationDeck, to: this.locationHand }
         ];
 
         this.addTasks(tasks);

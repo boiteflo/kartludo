@@ -6,11 +6,10 @@ class effects {
         const tasks = [];
         for (let i = 0; i < value; i++)
             tasks.push({
-                id: this.taskMoveAndShowCenter.name,
+                id: this.spawnOrMove.name,
                 isPlayer1: player.isPlayer1,
                 from: this.locationDeck,
                 to: this.locationHand,
-                verso: !player.isPlayer1,
                 delay: true
             });
 

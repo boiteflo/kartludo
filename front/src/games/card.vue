@@ -45,7 +45,7 @@
     </div>
 
     <!-- red background-->
-    <div class="w100p h100p absolute shine circle15px" v-if="card && card.dead" style="background-color: #FF000050;">
+    <div class="w100p h100p absolute shine circle15px" v-if="card && card.dead" style="top:0px; background-color: #FF000050;">
     </div>
   </div>
 </template>
