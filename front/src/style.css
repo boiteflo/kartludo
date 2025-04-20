@@ -533,7 +533,7 @@
 }
 
 .bgYellow3 {
-    background: rgba(255,255,0,0.75) !important;
+    background: rgba(255, 255, 0, 0.75) !important;
 }
 
 .parentHover:hover .bgYellowParentHover {
@@ -911,29 +911,59 @@ h4 {
     --color: green;
 }
 
-.image-cover{
+.image-cover {
     object-fit: cover
+}
+
+.ignore-mouse {
+    pointer-events: 'none';
 }
 
 
 /* ---------- Animations */
 
+.anim-height {
+    transition: height 0.3s ease;
+}
+
+.anim-height.height0 {
+    height: 0 !important;
+}
+
 .blur-box {
     filter: blur(0px);
     transition: filter 0.5s ease;
 }
+
 .blurred {
     filter: blur(20px);
+}
+
+.fadeOut {
+    animation: fadeOutFx 1s;
+}
+.fadeOut3sec {
+    animation: fadeOutFx 3s;
+}
+.fadeOut5sec {
+    animation: fadeOutFx 5s;
+}
+@keyframes fadeOutFx {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .fadeIn {
     animation: fadeInFx 1s;
 }
-
 .fadeIn3sec {
     animation: fadeInFx 3s;
 }
-
 @keyframes fadeInFx {
     from {
         opacity: 0;

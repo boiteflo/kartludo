@@ -42,7 +42,7 @@ class cardLife {
     static destroyUnit(card1, delay = true) {
         card1.dead = true;
         return [
-            { id: this.applyEffectCard.name, card1, trigger: this.trigger_ondestroyed },
+            { id: this.applyEffectCard.name, card1, trigger: this.trigger_ondestroyed, delay:true },
             { id: this.move.name, delay, card1, to: this.locationTrash }
         ];
     }

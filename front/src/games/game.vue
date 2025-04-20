@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask h100p bg2" :key="refreshG">
+    <div class="relative w100p mask bg2" style="height: 100dvh" :key="refreshG">
         <span v-if="game">
             <!-- Drag and drop field-->
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)"></div>
@@ -73,23 +73,22 @@
             </div>
 
             <!-- Buttons -->
-            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEndTurn)">
+            <div class="absolute bgYellow circle10px fontSize075em" :style="getFieldStyleObj(game.grid.buttonEffect)">
                 <v-btn target="_blank"
-                    :class="{ bg: true, shine: !freeze, fontSize075em: true, w100p: true, h100p: true }"
-                    @click="nextTurn" style="min-width:0px;">
-                    <span v-if="game.grid.buttonEndTurn.width > 50">End Turn</span><span v-else>End</span>
-                </v-btn>
-            </div>
-            <div class="absolute bgYellow circle10px" :style="getFieldStyleObj(game.grid.buttonEffect)">
-                <v-btn target="_blank"
-                    :class="{ bg: true, shine: !freeze && game.player1.hasEffects, fontSize075em: true, w100p: true, h100p: true }"
+                    :class="{ bg: true, shine: !freeze && game.player1.hasEffects, w100p: true, h100p: true }"
                     @click="useEffect" style="min-width:0px;">
-                    <span>Use Effect</span>
+                    <span>Use<br>Effect</span>
                 </v-btn>
             </div>
-            <div class="absolute" :style="getFieldStyleObj(game.grid.buttonLogs)">
-                <v-btn target="_blank" :class="{ bg2: true, fontSize075em: true, w100p: true, h100p: true }"
-                    @click="nextTurn" style="min-width:0px;">
+            <div class="absolute bgYellow circle10px fontSize075em" :style="getFieldStyleObj(game.grid.buttonEndTurn)">
+                <v-btn target="_blank" :class="{ bg: true, shine: !freeze, w100p: true, h100p: true }"
+                    style="min-width:0px;" @click="nextTurn">
+                    <span v-if="game.grid.buttonEndTurn.width > 50">End<br>Turn</span><span v-else>End</span>
+                </v-btn>
+            </div>
+            <div class="absolute fontSize075em" :style="getFieldStyleObj(game.grid.buttonLogs)">
+                <v-btn target="_blank" :class="{ bg2: true, w100p: true, h100p: true }" @click="nextTurn"
+                    style="min-width:0px;">
                     Logs
                 </v-btn>
             </div>
@@ -107,20 +106,22 @@
         </drag-drop-arrow>
 
         <!-- Popup -->
-        <div v-if="game?.popup" class="textVerticalCenter"
-            style="z-index:60; width:100%; position:absolute; bottom:0px; left:0px;">
-
-            <div class="flex flex-wrap absolute" style="top:-50px">
-                <v-btn class="m10px" style="background-color: #FFFF00F0;" @click="showOrHidePopup(false)">
-                    <span v-if="popupShow">Hide Popup</span><span v-else>Show Popup</span>
-                </v-btn>
-                <div v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
-                    <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
-                        {{ choice.text }}
+        <div v-if="game && game.popup" class="absolute w100p h100p m5px"
+            style="top:0px; display: flex; overflow: hidden; flex-direction: column; z-index: 80;">
+            <div class="flex-grow" style="min-height: 10%;"> </div>
+            <div class="w100p">
+                <div class="flex flex-wrap w100p" style="justify-content:center">
+                    <v-btn class="m10px" style="background-color: #FFFF00F0;" @click="showOrHidePopup(false)">
+                        <span v-if="popupShow">Hide Popup</span><span v-else>Show Popup</span>
                     </v-btn>
+                    <div v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
+                        <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
+                            {{ choice.text }}
+                        </v-btn>
+                    </div>
                 </div>
             </div>
-            <div v-if="popupShow" class="flex" style="background-color: #FFFF00F0; width:100%; flex-direction: column">
+            <div v-if="popupShow" style="background-color: #FFFF00F0; width:100%; overflow-y: auto;">
                 <h3 class="text-center colorBlack textVerticalCenter w100p mp5px" v-html="game?.popup.text"></h3>
                 <div class="flex-wrap w100p horizontal-scroll" v-if="game?.popup.cards && game?.popup.cards.length > 0">
                     <div v-for="(card, index) in game?.popup.cards" :key="'PopUpCard' + index" class="mp5px cursorHand"
@@ -237,7 +238,7 @@ export default {
         continue() {
             this.freeze = false;
             this.game = gameGundam.continue(this.game);
-            if(this.game.end){
+            if (this.game.end) {
                 this.$emit('end', this.game.isVictory);
                 return;
             }

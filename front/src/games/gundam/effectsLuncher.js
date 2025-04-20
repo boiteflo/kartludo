@@ -30,7 +30,7 @@ class effectsLuncher {
 
         result.isEffectExisting = true;
         result.cancelMoveToTrash = this.getCancelMoveToTrash(effects);
-        this.addTaskFirst({ id: this.applyEffectCard.name, card1, trigger });
+        this.addTaskFirst({ id: this.applyEffectCard.name, card1, trigger, delay:true });
 
         return result;
     }
@@ -44,10 +44,10 @@ class effectsLuncher {
         const tasks = [];
 
         if (isExistingCard1Effect)
-            tasks.push({ id: this.applyEffectCard.name, card1, cardUnit: card1, cardPilot: card2, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1, cardUnit: card1, cardPilot: card2, trigger, delay:true });
 
         if (isExistingCard2Effect)
-            tasks.push({ id: this.applyEffectCard.name, card1: card2, cardUnit: card1, cardPilot: card2, trigger });
+            tasks.push({ id: this.applyEffectCard.name, card1: card2, cardUnit: card1, cardPilot: card2, trigger, delay:true });
 
         this.addTasksFirst(tasks);
         return tasks.length > 0;

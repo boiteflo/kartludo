@@ -80,6 +80,10 @@ class refresh {
             this.refreshFieldAndHand(game, {}, player);
         });
 
+        game.cards.forEach(card=>{
+            card.fxRed=false;
+        });
+
         this.refreshDragAndDrop(game);
 
         game.refresh = true;
