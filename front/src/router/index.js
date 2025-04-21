@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-let version = 'V3.4.08';
+let version = 'V3.4.09';
 
 Vue.use(VueRouter)
 
@@ -110,8 +110,14 @@ const routes = [
             import ('../pages/gundam/GundamTcg.vue')
     },
     {
+        path: '/gundamTcgTuto',
+        name: version + ' Gundam TCG Tuto',
+        component: () =>
+            import ('../pages/gundam/GundamTcgTuto.vue')
+    },
+    {
         path: '/gundamTcgFight',
-        name: version + ' Gundam TCG',
+        name: version + ' Gundam TCG Fight',
         component: () =>
             import ('../pages/gundam/GundamTcgFight.vue')
     },

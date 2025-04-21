@@ -59,6 +59,9 @@ class positioner {
         else
             this.createHorizontalGrid(grid);
 
+        grid.player1Field.cardSizeReduce=true;
+        grid.player2Field.cardSizeReduce=true;
+
         // Buttons
         x = grid.player1Deck.x;
         y = grid.player1Trash.y + grid.player1Trash.height + grid.border;
@@ -228,8 +231,12 @@ class positioner {
     }
 
     static getWrapPosition(position, cardSize, total, index, degree, wrapCut, centerEmptyZone) {
+        let zoneHeight = position.height;
+        if (position.cardSizeReduce)
+            zoneHeight *= 0.75;
+
         const totalCards = centerEmptyZone ? total + 1 : total;
-        const cardSizeModified = centerEmptyZone ? this.getCardSize(position.width, position.height, totalCards, position.cardHeightPercent) : cardSize;
+        const cardSizeModified = centerEmptyZone ? this.getCardSize(position.width, zoneHeight, totalCards, position.cardHeightPercent) : cardSize;
         let mid = Math.floor(totalCards / 2);
         const indexModified = centerEmptyZone && index >= mid ? index + 1 : index;
         if (totalCards < wrapCut || position.height < cardSizeModified.height * 2)
@@ -238,7 +245,7 @@ class positioner {
         mid = Math.floor(total / 2);
         const indexLine = index < mid ? index : index - mid;
         const totalLine = total - mid;
-        const cardSizeLine = this.getCardSize(position.width, position.height / 2, totalLine, position.cardHeightPercent);
+        const cardSizeLine = this.getCardSize(position.width, zoneHeight / 2, totalLine, position.cardHeightPercent);
         const positionLine = index < mid ? position : { ...position, y: position.y + cardSizeLine.height };
         return this.getCardPositionXY(positionLine, cardSizeLine, totalLine, indexLine, degree);
     }

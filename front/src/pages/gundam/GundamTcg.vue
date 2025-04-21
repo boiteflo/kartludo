@@ -18,7 +18,7 @@
                     :style="{ color: 'black', 'margin-top': '50px', 'margin-bottom': '30px' }">
                     GUNDAM TCG
                 </div>
-                <v-btn class="w100p" hide-details
+                <v-btn class="w100p" hide-details @click="tuto"
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
                     TUTORIEL
                 </v-btn>
@@ -166,6 +166,9 @@ export default {
                 this.setStep('menu');
                 this.task = null;
             }
+        },
+        tuto(){
+            window.location.href = `/gundamTcgTuto`;
         },
         addDeck() {
             const decklist = {

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w100p mask bg2" style="height: 100dvh" key="refreshG">
+    <div class="relative w100p mask bg2" style="height: 100dvh" :key="refreshG">
         <span v-if="game">
             <!-- Drag and drop field-->
             <div class="absolute bg" :style="getFieldStyleObj(game.grid.halfPlayer2)"></div>
@@ -158,6 +158,18 @@
             style="z-index: 70;">
         </gameCard>
 
+        <!-- Tuto Text -->
+        <div v-if="game && game.showTextTuto" class="absolute"
+            :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': 170 }">
+            <div class="w100p h100p  bg3 flex" style="flex-direction: column; justify-content: center;">
+                <div class="text-center">{{ game.showTextTuto.text }}</div>
+                <div class="m5px bg" style="align-self: flex-end;">
+                    <v-btn @click="tutoNext">Next</v-btn>
+                </div>
+
+            </div>
+        </div>
+
         <div class="absolute" style="top:0px; left:0px;">
             <!-- Debug -->
         </div>
@@ -187,7 +199,7 @@ import dragDropArrow from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
-    props: ['deck1', 'deck2', 'quickstart'],
+    props: ['deck1', 'deck2', 'quickstart', 'tuto'],
     components: { gameCard, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
@@ -226,7 +238,13 @@ export default {
                 this.start();
         },
         start() {
-            this.game = gameGundam.setup(this.$vuetify.breakpoint.width, this.$vuetify.breakpoint.height, cards, this.decklistPlayer1, this.decklistPlayer2, this.quickstart);
+            this.game = gameGundam.setup(this.$vuetify.breakpoint.width,
+                this.$vuetify.breakpoint.height,
+                cards,
+                this.decklistPlayer1,
+                this.decklistPlayer2,
+                this.quickstart,
+                this.tuto);
             this.refreshGame();
         },
         nextTurn() {
@@ -242,7 +260,7 @@ export default {
                 this.$emit('end', this.game.isVictory);
                 return;
             }
-            if (this.game.popup) {
+            if (this.game.popup || this.game.showTextTuto) {
                 this.freeze = true;
                 return;
             }
@@ -292,6 +310,9 @@ export default {
         },
         showOrHidePopup() {
             this.popupShow = !this.popupShow;
+        },
+        tutoNext() {
+            this.game = gameGundam.tutoNext(this.game);
         },
         refreshGame() {
             this.freeze = true;

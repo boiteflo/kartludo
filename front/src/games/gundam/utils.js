@@ -1,22 +1,25 @@
-class array {   
+class array {
 
     static test(message) {
         alert(message);
     }
-    
-    static wait(){}
+
+    static wait() { }
 
     static clone(obj) { return Object.assign({}, obj); }
 
-    static addFunction(cla, obj) {
+    static addFunction(cla, obj, useTuto) {
         const ignore = ['length', 'name', 'prototype'];
         cla.forEach(c => {
             Object.getOwnPropertyNames(c).forEach(method => {
-                if (!ignore.includes(method))
-                    if (obj[method]) 
-                        throw new Error(`cette fonction existe deja : ${c.name}.${method}`)
-                    else
+                if (!ignore.includes(method)) {
+                    if (obj[method] && !useTuto) {
+                        throw new Error(`cette fonction existe deja : ${c.name}.${method}`);
+                    }
+                    else {
                         obj[method] = c[method];
+                    }
+                }
             });
         });
     }
@@ -57,8 +60,8 @@ class array {
             return array.concat([card]);
     }
 
-    static alreadyDone(valueOld, valueNew){
-        if(valueOld === undefined && !valueNew)
+    static alreadyDone(valueOld, valueNew) {
+        if (valueOld === undefined && !valueNew)
             return true;
         return valueOld == valueNew;
     }

@@ -17,6 +17,7 @@ import tasks from './tasks';
 import utils from './utils';
 import show from './show';
 import turn from './turn';
+import tuto from './tuto';
 import pair from './pair';
 import ai from './ai';
 import aiCombos from './aiCombos';
@@ -33,7 +34,7 @@ class game {
     static isStart;
     static quickstart;
 
-    static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart) {
+    static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart, useTuto) {
         this.cards = cards.cards;
         this.quickstart = quickstart;
         this.game = {
@@ -44,13 +45,19 @@ class game {
             gundamCards: cards,
             decklistPlayer1, decklistPlayer2,
             incruises: [],
-            effects: []
+            effects: [],
+            tuto:useTuto
         };
-        utils.addFunction([
+
+        const scripts = [
             tasks, utils, popup, setup, positioner, turn, refresh, selectable, show, mainEffects,
             cardLife, cardMove, cardPlay, cardAction, effectsLuncher, effectsTarget, conditions, effects, pair, attack,
             ai, aiCombos, aiPlay, aiStrategy
-        ], this);
+        ];
+        if(useTuto)
+            scripts.push(tuto); // = [tuto].concat(scripts);
+
+        utils.addFunction(scripts, this, useTuto);
         this.game.grid = this.createGrid(width, height);
         this.continue(this.game);
         this.isStart = true;
@@ -91,6 +98,11 @@ class game {
     static selectChoiceCard(game, card) {
         game.popup.task.cardChoice = card;
         return game;
+    }
+
+    static tutoNext(game){
+        game.showTextTuto.next=true;
+        return this.continue(game);
     }
 
     static showLocationCards(game, location, isPlayer1) {

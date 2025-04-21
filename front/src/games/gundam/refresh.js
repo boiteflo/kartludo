@@ -21,7 +21,7 @@ class refresh {
 
     static refreshPlayerArea(cards, position, useZoneSize, wrapCut, centerEmptyZone) {
         let zoneHeight = position.height;
-        if (position.location == this.locationField)
+        if (position.cardSizeReduce)
             zoneHeight *= 0.75;
         const cardSize = useZoneSize ? position : this.getCardSize(position.width, zoneHeight, cards.length, position.cardHeightPercent);
         cards.forEach((card, index) => {
@@ -92,10 +92,6 @@ class refresh {
         players.forEach(player => {
             player.field.forEach(card => this.recalculateApHp(game, player, card));
             this.refreshFieldAndHand(game, {}, player);
-        });
-
-        game.cards.forEach(card => {
-            card.fxRed = false;
         });
 
         this.refreshDragAndDrop(game);

@@ -15,10 +15,6 @@ class ai {
     }
 
     static refreshAiTurn(game, task, player) {
-        if (this.quickstart) {
-            this.endTurn(game);
-            return {};
-        }
 
         const cardsAvailable = player.hand.filter(x => x.selectable);
         const combos = this.getAiCombos(game, task, player, cardsAvailable);

@@ -14,7 +14,7 @@ class title {
     }
 
     static showCards(game, task) {
-        if (!task.card1 || this.cardHighlight.find(x=> x.index === task.card1.index)){
+        if (!task.card1 || this.cardHighlight.find(x => x.index === task.card1.index)) {
             task.delay = null;
             return;
         }
@@ -46,12 +46,14 @@ class title {
         this.showCards(game, task);
     }
 
-    static showCardsEffect(game, task){
-        task.card1.fxRed=true;
+    static showCardsEffect(game, task) {
+        task.card1.fxRed = !task.hideFx;
         task.card1.fxText = task.text;
-        task.card1.verso=false;
-        if (task.text)
-            this.taskTextShow(game, task);
+        task.card1.verso = false;
+        if (!task.hideFx) {
+            this.log(`Apply effect of ${task.card1.name} : ${task.text}`);
+            this.addTaskPos2({ id: this.showCardsEffect.name, card1: task.card1, hideFx: true, delay: true });
+        }
     }
 }
 

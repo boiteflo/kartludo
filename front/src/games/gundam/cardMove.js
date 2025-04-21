@@ -46,13 +46,13 @@ class cardMove {
         const onField = [this.locationField, this.locationBase];
         if (!card.isTemporaryCard)
             player[to] = this.addIn(player[to], card);
-        else{            
+        else {
             if (onField.includes(locationTo))
                 player[to] = this.addIn(player[to], card);
             else
-                card.fadeOut=true;
+                card.fadeOut = true;
         }
-        
+
         if (from)
             card.position = card.position ? card.position : this.clone(player.positions[from]);
 
@@ -60,7 +60,7 @@ class cardMove {
         card.active = true;
         card.location = locationTo;
         card.hidestat = !onField.includes(card.location);
-        card.verso = card.location === this.locationHand && !card.isPlayer1;
+        card.verso = card.location === this.locationHand && !card.isPlayer1 && !card.pairedWith && !card.pair;
 
         this.handleMainEffectsCard(game, card, onField.includes(card.location));
 

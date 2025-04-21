@@ -789,6 +789,11 @@ h4 {
     place-items: center;
 }
 
+.text-center-vertical {
+    display: grid;
+    place-items: center;
+}
+
 .circle {
     border-radius: 50%;
 }
@@ -942,6 +947,24 @@ h4 {
 .blurred {
     filter: blur(20px);
 }
+
+
+.fadeInOut {
+    animation: fadeInOutFx 1s;
+}
+.fadeInOut3sec {
+    animation: fadeInOutFx 3s;
+}
+.fadeInOut5sec {
+    animation: fadeInOutFx 5s;
+}
+@keyframes fadeInOutFx {
+    0% { opacity: 0;}
+    50% { opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
 
 .fadeOut {
     animation: fadeOutFx 1s;
