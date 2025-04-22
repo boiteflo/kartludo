@@ -69,6 +69,9 @@ class refresh {
         delete (game.wait);
         delete (game.showTitle);
         game.refresh = true;
+        if (game.tuto) {            
+            this.continueTuto(game);
+        }
     }
 
     static resetZIndex(game) {

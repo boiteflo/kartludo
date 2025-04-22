@@ -29,8 +29,8 @@ class positioner {
         grid.card100 = { width: grid.boxWidth, height: grid.boxHeight };
 
         // Player2 - Hand
-        let x = grid.border + grid.boxWidth, y = grid.border;
-        let width = grid.widthMargin / 2 - grid.boxWidth, height = grid.boxHeight / 2;
+        let x = grid.border, y = grid.border;
+        let width = grid.widthMargin / 2 - grid.border2, height = grid.boxHeight / 2;
         grid.player2Hand = { x, y, width, height, isPlayer1: false, location: this.locationHand };
         y += grid.border + height;
 
@@ -70,12 +70,6 @@ class positioner {
         grid.buttonEffect = { x, y, width, height };
         y += height + grid.border;
         grid.buttonEndTurn = { x, y, width, height };
-
-        width = 50;
-        x = grid.widthMargin - width;
-        y = grid.border;
-        height = grid.player2Hand.height;
-        grid.buttonLogs = { x, y, width, height };
         
         width = grid.boxHeight;
         height = grid.boxHeight;

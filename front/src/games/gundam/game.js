@@ -100,8 +100,9 @@ class game {
         return game;
     }
 
-    static tutoNext(game){
-        game.showTextTuto.next=true;
+    static tutoNext(game, next=true){
+        game.showTextTuto.next=next;
+        this.continueTuto(game);
         return this.continue(game);
     }
 

@@ -60,18 +60,6 @@
             <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player2Field)">
             </div>
 
-            <!-- Highlight and TextZone-->
-            <div class="absolute vertical-scroll" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
-            </div>
-            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
-            </div>
-            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardCenter)">
-            </div>
-            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardLeft)">
-            </div>
-            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.highlightCardRight)">
-            </div>
-
             <!-- Buttons -->
             <div class="absolute bgYellow circle10px fontSize075em" :style="getFieldStyleObj(game.grid.buttonEffect)">
                 <v-btn target="_blank"
@@ -86,20 +74,45 @@
                     <span v-if="game.grid.buttonEndTurn.width > 50">End<br>Turn</span><span v-else>End</span>
                 </v-btn>
             </div>
-            <div class="absolute fontSize075em" :style="getFieldStyleObj(game.grid.buttonLogs)">
-                <v-btn target="_blank" :class="{ bg2: true, w100p: true, h100p: true }" @click="nextTurn"
-                    style="min-width:0px;">
-                    Logs
-                </v-btn>
+            <div class="absolute vertical-scroll" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
+            </div>
+
+            <!-- TutoMasks-->
+            <div v-for="(tutoMask, index) in game.tutoMasks" :key="'TutoMask' + index"
+                :class="{ absolute: 1, bg2: tutoMask.isPlayer1, bg: !tutoMask.isPlayer1 }"
+                :style="getFieldStyleObj(tutoMask)">
+            </div>
+
+            <!-- Tuto Text -->
+            <div v-if="game.showTextTuto" class="absolute fadeIn"
+                :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 0 }">
+                <div class="w100p h100p  bg3 flex" style="flex-direction: column; justify-content: center;">
+                    <div class="text-center">{{ game.showTextTuto.text }}</div>
+                    <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
+                        style="align-self: flex-end;">
+                        <v-btn class="bg2 shine" @click="tutoNext">Next</v-btn>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Highlight and TextZone-->
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardCenter)">
+            </div>
+            <div class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.highlightCardLeft)">
+            </div>
+            <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.highlightCardRight)">
+            </div>
+
+            <!-- cards -->
+            <div v-for="card in cards" :key="'B' + card.index">
+                <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
+                    :hidestat="card.hidestat" @click="showCard(card)">
+                </gameCard>
             </div>
         </span>
-
-        <!-- cards -->
-        <div v-for="card in cards" :key="'B' + card.index">
-            <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
-                :hidestat="card.hidestat" @click="showCard(card)">
-            </gameCard>
-        </div>
 
         <drag-drop-arrow id="0" :sources="sources" @drop="dropPoint" @click="clickDrop" :targets="targets"
             :freeze="freeze || game?.popup">
@@ -158,20 +171,9 @@
             style="z-index: 70;">
         </gameCard>
 
-        <!-- Tuto Text -->
-        <div v-if="game && game.showTextTuto" class="absolute"
-            :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': 170 }">
-            <div class="w100p h100p  bg3 flex" style="flex-direction: column; justify-content: center;">
-                <div class="text-center">{{ game.showTextTuto.text }}</div>
-                <div class="m5px bg" style="align-self: flex-end;">
-                    <v-btn @click="tutoNext">Next</v-btn>
-                </div>
-
-            </div>
-        </div>
-
         <div class="absolute" style="top:0px; left:0px;">
             <!-- Debug -->
+            {{ game?.tutoStep }}
         </div>
     </div>
 
@@ -260,10 +262,13 @@ export default {
                 this.$emit('end', this.game.isVictory);
                 return;
             }
-            if (this.game.popup || this.game.showTextTuto) {
+            if (this.game.popup || this.game.freeze) {
                 this.freeze = true;
                 return;
             }
+            if (this.game.freezeButtons)
+                this.freeze = true;
+
             if (this.game.refreshOnlyTextEffect)
                 this.animTextEffect();
 
@@ -311,8 +316,9 @@ export default {
         showOrHidePopup() {
             this.popupShow = !this.popupShow;
         },
-        tutoNext() {
-            this.game = gameGundam.tutoNext(this.game);
+        tutoNext(next = true) {
+            this.game = gameGundam.tutoNext(this.game, next);
+            this.refreshGame();
         },
         refreshGame() {
             this.freeze = true;
@@ -389,6 +395,8 @@ export default {
             setTimeout(() => {
                 this.cardCenter.position = this.cardCenter.to;
                 delete (this.cardCenter.to);
+                this.game.cardCenter = this.cardCenter.position.height > 0 ? this.cardCenter : null;
+                this.tutoNext(false);
             }, 510);
 
         },
