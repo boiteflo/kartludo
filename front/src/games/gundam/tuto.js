@@ -78,9 +78,9 @@ class tuto {
             // Show deck icon
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.player1.resourcesMax = 2;
+                game.player1.resourcesMax = 1;
                 game.player1.resourcesEx = 0;
-                game.player2.resourcesMax = 2;
+                game.player2.resourcesMax = 1;
                 game.player2.resourcesEx = 1;
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Deck' && x.id !== 'player2Deck');
                 game.isPlayer1 = false;
@@ -99,7 +99,7 @@ class tuto {
             }
         },
         {
-            // Play Zaku I unit
+            // Play Gm unit
             conditions: (context, game, task) => { 
                 return game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
              },
@@ -172,8 +172,30 @@ class tuto {
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
-                    ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.2, height: game.cardCenter.position.height * 0.8, zindex: 120, hideNext: true,
-                    text: "At the top left corner, you can see the level of the card (4) and the cost of the card (2). Click on the card to unzoom it"
+                    ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.2, height: game.cardCenter.position.height * 0.8, zindex: 120,
+                    text: "At the top left corner, you can see the level of the card (3) and the cost of the card (2)."
+                };
+            }
+        },
+        { 
+            // show tuto text on zoom card
+            conditions: (context, game, task) => { return false },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
+                game.showTextTuto = {
+                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.8, zindex: 120,
+                    text: "At the bottom left corner, you can see the link pilot conditions of this card : (White Base Team) Trait"
+                };
+            }
+        },
+        { 
+            // show tuto text on zoom card
+            conditions: (context, game, task) => { return false },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
+                game.showTextTuto = {
+                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.8, zindex: 120, hideNext: true,
+                    text: "At the bottom right corner, you can see the Attack point AP (2) and the Hip Point HP (3). Click on the card to unzoom it"
                 };
             }
         },
@@ -183,7 +205,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
-                    text: "This is the resources bar. The bottom one is yours, the other one for your ennemy. You have 4 ressources available."
+                    text: "This is the resources bar. The bottom one is yours, the other one for your ennemy. You have 3 ressources available."
                 };
             }
         },
@@ -193,7 +215,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 1),
-                    text: "Your opponent has 3 classical ressource (yellow) and one ex ressource (blue). The player 2 always start the game with one ex ressource."
+                    text: "Your opponent has 2 classical ressource (yellow) and one ex ressource (blue). The player 2 always start the game with one ex ressource."
                 };
             }
         },
@@ -203,12 +225,12 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position),
-                    text: "To play a level 4 card with a cost of 2, you need at least 4 resources with minimum 2 available."
+                    text: "To play a level 3 card with a cost of 2, you need at least 3 resources with minimum 2 available."
                 };
             }
         },
         {
-            // play Zaku II
+            // play GD01-004 Guncanon
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.freeze = false;
@@ -222,7 +244,7 @@ class tuto {
         {
             // show text tuto
             conditions: (context, game, task) => {
-                const isGood = task && task.card1.id === 'ST03-008'; // Zaku II
+                const isGood = task && task.card1.id === 'GD01-004'; // Guncanon
                 if (!isGood) { 
                     game.tasks = [];
                 }
@@ -232,7 +254,7 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
-                    text: "1 resource has been used. 3 is still available (yellow) but 1 unavailable (red)."
+                    text: "2 resource has been used. 1 is still available (yellow) but 2 unavailable (red)."
                 };
             }
         },
@@ -258,7 +280,7 @@ class tuto {
             }
         },
         {
-            // Zaku I attack
+            // Gm attack
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.freeze = false;
@@ -292,7 +314,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player2.base[0].position),
-                    text: "Above the card, you can see (0 - 2). It represent the AP (0) and HP (2) of the card."
+                    text: "Above the card, you can see (0 - 1). It represent the AP (0) and HP (1) of the card."
                 };
             }
         },
@@ -302,7 +324,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.player2.base[0].position, 300, game.grid.boxHeight * 1.5, 1),
-                    text: "The unit has attacked the enemy base. 1 AP damage was inflicted. The base originally had 3 HP, which has now been reduced to 2 HP."
+                    text: "The unit has attacked the enemy base. 2 AP damage was inflicted. The base originally had 3 HP, which has now been reduced to 1 HP."
                 };
             }
         },
@@ -376,7 +398,7 @@ class tuto {
         },
         // show text tuto
         {
-            conditions: (context, game, task) => { return task && task.id === this.newTurnForAI.name; },
+            conditions: (context, game, task) => { return task && task.id === context.newTurnForAI.name; },
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Trash' && x.id != 'player2Trash');
                 game.freeze = true;
