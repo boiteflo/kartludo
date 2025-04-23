@@ -64,11 +64,13 @@ class setup {
                 throw new Error("This card doesn't exist : " + id);
             for (let i = 0; i < quantity; i++)
                 result.push(this.createCard(card.id, isPlayer1));
-        })
+        });
 
-        this.createUniqueRare(game, result);
+        if(!game.tuto){
+            this.createUniqueRare(game, result);
+            result = this.sortRandom(result);
+        }
 
-        result = this.sortRandom(result);
         return result;
     }
 

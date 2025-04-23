@@ -1,11 +1,10 @@
+/* eslint-disable no-unused-vars */
+
 class tuto {
     static handStartLength = 0;
     static tutoStep = 0;
     static tutoStepDone = -1;
-    static tutoFullScreen(game) { return { x: 0, y: 0, width: game.grid.width, height: game.grid.height }; }
-    static tutoHalfScreen(game) { return { x: 0, y: 0, width: game.grid.width, height: game.grid.centerZoneP2.y }; }
     static tutoSmall(game) { return { ...game.grid.resources, x: game.grid.width / 2 - 150, width: 300 }; }
-    static tutoEnnemyFieldPosition(game) { return game.player2.positions.field; }
 
     static addTutoMask(game) {
         const properties = 'player1Shield,player1Base,player1Deck,player1Trash,player2Shield,player2Base,player2Deck,player2Trash';
@@ -27,270 +26,409 @@ class tuto {
         });
     }
 
-    static tutoAlignTextUpTo(game, pos) {
-        let x = pos.x;
-        let y = pos.y - game.grid.boxHeight - game.grid.border;
-        let width = 300;
-        const xOffset = x + width - game.grid.width;
-        if (xOffset > 0)
-            x = x - xOffset - game.grid.border2;
-
-        let height = game.grid.boxHeight;
-        return { x, y, width, height };
-    }
-
-    static tutoAlignTextNextTo(game, pos) {
-        let x = pos.x + pos.width + game.grid.border;
-        let y = pos.y;
-        let width = 300;
-        let height = game.grid.boxHeight;
-        if (x + width > game.grid.width)
-            x = pos.x - game.grid.border2 - width;
-
-        const yOffset = y + height - game.grid.height;
-        if (yOffset > 0)
-            y = y - yOffset - game.grid.border2;
-        return { x, y, width, height };
-    }
-
-    static refreshAiTurn(game) {
-        this.endTurn(game);
-        return {};
-    }
-
-    static mulligan(game) {
-        if (this.tutoStep < 2) {
-            game.freeze = true;
-            this.continueTuto(game);
-            return { stop: true };
-        }
-        game.player1.deck = [
-            this.createCard('ST03-007', true, this.locationDeck),
-            this.createCard('ST03-008', true, this.locationDeck),
-            this.createCard('GD01-026', true, this.locationDeck),
-            this.createCard('ST03-011', true, this.locationDeck),
-            this.createCard('ST03-008', true, this.locationDeck),
-            this.createCard('ST03-008', true, this.locationDeck),
-        ].concat(game.player1.deck.slice(0, 45));
-
-        const tasks = [];
-        for (let i = 0; i < 0; i++)
-            tasks.push({ id: this.spawnOrMove.name, from: this.locationDeck, to: this.locationHand, isPlayer1: true });
-
-        tasks.push({ id: this.nextTurn.name, isPlayer1: game.isPlayer1 });
-        this.addTasks(tasks);
-    }
-
-    static incruiseTutoStepIfConditions(game) {
-        let incruiseStep = false;
-
-        if (this.tutoStep == 2 && game.player1.hand.length > 0 && !game.player1.hand[0].to && this.cardHighlight.length < 1)
-            incruiseStep = true;
-
-        if (this.tutoStep == 3 && game.tasks.length == 1 && game.tasks[0].id === this.play.name)
-            incruiseStep = true;
-
-        if (this.tutoStep == 4 && game.player1.field.length === 1 && !game.player1.field[0].to)
-            incruiseStep = true;
-
-        if (this.tutoStep == 5 && game.player1.hand.length === 1 && !game.player1.hand[0].to && this.cardHighlight.length < 1)
-            incruiseStep = true;
-
-        if (this.tutoStep == 6 && game.tasks.length == 1 && game.tasks[0].id === this.nextTurn.name)
-            incruiseStep = true;
-
-        if (this.tutoStep == 7 && game.player1.hand.length > 0 && !game.player1.hand[0].to && this.cardHighlight.length < 1)
-            incruiseStep = true;
-
-        if (this.tutoStep == 8 && game.cardCenter)
-            incruiseStep = true;
-
-        if (this.tutoStep == 9 && !game.cardCenter)
-            incruiseStep = true;
-
-        if (this.tutoStep == 13 && game.tasks.length == 1) {
-            if (game.tasks[0].card1.id !== 'ST03-008') { // Zaku II
-                game.tasks = [];
-                return;
-            }
-            incruiseStep = true;
-        }
-
-        if (this.tutoStep == 14 && game.player2.base.length > 0 && !game.player2.base[0].to)
-            incruiseStep = true;
-
-        if (this.tutoStep == 16 && !game.player1.field.to)
-            incruiseStep = true;
-
-        if (incruiseStep)
-            this.tutoStep++;
-    }
+    static mulligan(game) { }
 
     static continueTuto(game) {
+        game.tutoStep = game.tutoStep ? game.tutoStep : 0;
+
         if (game.showTextTuto && game.showTextTuto.next) {
-            this.tutoStep++;
+            game.tutoStep++;
             game.showTextTuto.next = false;
         }
 
-        this.incruiseTutoStepIfConditions(game);
-
-        game.tutoStep = this.tutoStep;
-        if (this.tutoStepDone == this.tutoStep)
+        let step = this.tutoSteps[game.tutoStep];
+        if (!step)
             return;
 
-        this.tutoStepDone = this.tutoStep;
-
-        if (this.tutoStep == 0) {
-            if (this.tutoStep == 0)
-                this.log("This is the log section");
-            this.addTutoMask(game);
-            game.showTextTuto = {
-                ...this.tutoSmall(game),
-                text: 'Welcome to Gundam TCG.'
-            };
+        if (this.autoNextStep(game, step)) {
+            game.tutoStep++;
         }
 
-        else if (this.tutoStep == 1) {
-            game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Deck' && x.id !== 'player2Deck');
-            game.isPlayer1 = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.grid.player1Deck),
-                text: 'This is your deck with 50 cards'
-            };
-        }
+        step = this.tutoSteps[game.tutoStep];
+        if (!step || step.isDone)
+            return;
 
-        else if (this.tutoStep == 2) {
-            game.freeze = false;
-            game.showTextTuto = null;
-        }
-
-        else if (this.tutoStep == 3) {
-            game.freeze = false;
-            game.showTextTuto = {
-                ...game.grid.player1Field, hideNext: true,
-                text: 'This is a unit card that you can play. Select it and release it here'
-            };
-        }
-
-        else if (this.tutoStep == 4) {
-            game.showTextTuto = null;
-        }
-
-        else if (this.tutoStep == 5) {
-            game.freeze = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.player1.field[0].position),
-                text: "Without link Pilot, an unit can't attack the turn you play it. We will see link pilot in a few minutes."
-            };
-        }
-
-        else if (this.tutoStep == 6) {
-            game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEndTurn');
-            game.freeze = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.grid.buttonEndTurn), hideNext: true,
-                text: "You can't do anything more this turn, press the end turn button"
-            };
-        }
-
-        else if (this.tutoStep == 7) {
-            game.showTextTuto = null;
-            this.freezeButtons = true;
-            game.tutoMasks.push({
-                isPlayer1: true, id: 'buttonEndTurn',
-                x: game.grid.buttonEndTurn.x - 10, width: game.grid.buttonEndTurn.width + 20,
-                y: game.grid.buttonEndTurn.y - 10, height: game.grid.buttonEndTurn.height + 20
-            });
-        }
-
-        else if (this.tutoStep == 8) {
-            game.freeze = true;
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.player1.hand[0].position), hideNext: true,
-                text: "You can zoom on a card by doing a click on it"
-            };
-        }
-
-        else if (this.tutoStep == 9) {
-            game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
-            game.showTextTuto = {
-                ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.2, height: game.cardCenter.position.height * 0.8, zindex: 120, hideNext: true,
-                text: "On the top left corner, you can see the level of the card (2) and the cost of the card (1). Click on the card to unzoom it"
-            };
-        }
-
-        else if (this.tutoStep == 10) {
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.grid.resources),
-                text: "This is the resources bar. The bottom one is yours, the other one for your ennemy. You have 2 ressources available."
-            };
-        }
-
-        else if (this.tutoStep == 11) {
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.grid.resources),
-                text: "Your opponent has one classical ressource (yellow) and one ex ressource (blue). The player 2 always start the game with one ex ressource."
-            };
-        }
-
-        else if (this.tutoStep == 12) {
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.player1.hand[0].position),
-                text: "To play a level 2 card with a cost of 1, you need at least 2 resources with minimum 1 available."
-            };
-        }
-
-        else if (this.tutoStep == 13) {
-            game.freeze = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.player1.hand[0].position), hideNext: true,
-                text: "The conditions are respected, the card is shining with a yellow effect, you can play it like the previous one"
-            };
-        }
-
-        else if (this.tutoStep == 14) {
-            game.showTextTuto = {
-                ...this.tutoAlignTextUpTo(game, game.grid.resources),
-                text: "1 resource has been used. 1 is still available (yellow) but 1 unavailable (red)."
-            };
-        }
-
-        else if (this.tutoStep == 15) {
-            this.addShielsAndBase(game);
-            this.freeze = false;
-        }
-
-        else if (this.tutoStep == 16) {
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.player2.positions.base),
-                text: "This is the ennemy base. Each player start the game with this one"
-            };
-        }
-
-        else if (this.tutoStep == 17) {
-            this.freezeButtons = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.player1.field[0].position), hideNext: true,
-                text: "This unit is ready to attack. Select it and release it on the opponent field to attack"
-            };
-        }
-
-        else if (this.tutoStep == 18) {
-            this.freezeButtons = false;
-            game.showTextTuto = {
-                ...this.tutoAlignTextNextTo(game, game.player1.field[0].position),
-                text: "This unit has attack. It is now rested (90 degree rotation)"
-            };
-        }
-
-        else {
-            game.freeze = false;
-            game.showTextTuto = null;
-        }
-
-        if (game.showTextTuto && game.showTextTuto.text.length > 0 && this.tutoStep > 0)
-            this.log('Tuto : ' + game.showTextTuto.text);
+        step.isDone = true;
+        step.action(this, game);
     }
+
+    static autoNextStep(game, step) {
+        if (!step.isDone || game.tutoStep + 1 > this.tutoSteps.length)
+            return false;
+
+        const nextStep = this.tutoSteps[game.tutoStep + 1];
+        const task = game.tasks.length > 0 ? game.tasks[0] : null;
+        return nextStep.conditions(this, game, task);
+    }
+
+    static tutoSteps = [
+        {
+            // Show title
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = true;
+                context.addTutoMask(game);
+                game.showTextTuto = {
+                    ...context.tutoSmall(game),
+                    text: 'Welcome to Gundam TCG.'
+                };
+            }
+        },
+        {
+            // Show deck icon
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.player1.resourcesMax = 2;
+                game.player1.resourcesEx = 0;
+                game.player2.resourcesMax = 2;
+                game.player2.resourcesEx = 1;
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Deck' && x.id !== 'player2Deck');
+                game.isPlayer1 = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.grid.player1Deck),
+                    text: 'This is your deck with 50 cards'
+                };
+            }
+        },
+        {
+            // draw a card for the first turn
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // Play Zaku I unit
+            conditions: (context, game, task) => { 
+                return game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
+             },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...game.grid.player1Field, hideNext: true,
+                    text: 'The first turn began. You have drawned one card from your deck to your hand. This is a unit card that you can play. Select it and release it here'
+                };
+            }
+        },
+        {
+            // hide text tuto
+            conditions: (context, game, task) => { return task && task.id === context.play.name; },
+            action: (context, game) => {
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // show tuto text
+            conditions: (context, game, task) => { return game.player1.field.length === 1 && !game.player1.field[0].to; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position),
+                    text: "Without link Pilot, an unit can't attack the turn you play it. We will see link pilot in a few minutes."
+                };
+            }
+        },
+        {
+            // press end turn
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEndTurn');
+                game.freeze = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.grid.buttonEndTurn), hideNext: true,
+                    text: "You can't do anything more this turn, press the end turn button"
+                };
+            }
+        },
+        {
+            // unfreeze and mask end turn button
+            conditions: (context, game, task) => { return  task && task.id === context.nextTurn.name;},
+            action: (context, game) => {
+                game.showTextTuto = null;
+                game.freezeButtons = true;
+                game.tutoMasks.push({
+                    isPlayer1: true, id: 'buttonEndTurn',
+                    x: game.grid.buttonEndTurn.x - 10, width: game.grid.buttonEndTurn.width + 20,
+                    y: game.grid.buttonEndTurn.y - 10, height: game.grid.buttonEndTurn.height + 20
+                });
+            }
+        },
+        {
+            // zoom on a card
+            conditions: (context, game, task) => { 
+                return game.isPlayer1 && !task && game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
+            },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
+                    text: "You can zoom on a card by doing a click on it"
+                };
+            }
+        },
+        { 
+            // show tuto text on zoom card
+            conditions: (context, game, task) => { return game.cardCenter; },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
+                game.showTextTuto = {
+                    ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.2, height: game.cardCenter.position.height * 0.8, zindex: 120, hideNext: true,
+                    text: "At the top left corner, you can see the level of the card (4) and the cost of the card (2). Click on the card to unzoom it"
+                };
+            }
+        },
+        {
+            // show tuto text
+            conditions: (context, game, task) => { return !game.cardCenter; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
+                    text: "This is the resources bar. The bottom one is yours, the other one for your ennemy. You have 4 ressources available."
+                };
+            }
+        },
+        {
+            // show tuto text
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 1),
+                    text: "Your opponent has 3 classical ressource (yellow) and one ex ressource (blue). The player 2 always start the game with one ex ressource."
+                };
+            }
+        },
+        {
+            // show tuto text
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position),
+                    text: "To play a level 4 card with a cost of 2, you need at least 4 resources with minimum 2 available."
+                };
+            }
+        },
+        {
+            // play Zaku II
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.freezeButtons = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
+                    text: "The conditions are respected, the card is shining with a yellow effect, you can play it like the previous one"
+                };
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => {
+                const isGood = task && task.card1.id === 'ST03-008'; // Zaku II
+                if (!isGood) { 
+                    game.tasks = [];
+                }
+                return isGood;
+            },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
+                    text: "1 resource has been used. 3 is still available (yellow) but 1 unavailable (red)."
+                };
+            }
+        },
+        {
+            // animations base arriving
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = null;
+                context.addShielsAndBase(game);
+                game.freeze = false;
+                context.addTask({ id: context.taskEndRefresh.name });
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return game.tasks.length == 0 && game.player2.base.length > 0 && !game.player2.base[0].to; },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player2.positions.base),
+                    text: "This is the ennemy base. Each player start the game with this one"
+                };
+            }
+        },
+        {
+            // Zaku I attack
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position), hideNext: true,
+                    text: "This unit is ready to attack. Select it and release it on the opponent field to attack"
+                };
+            }
+        },
+        {
+            // hide text tuto
+            conditions: (context, game, task) => { return task && task.id === context.play.name; },
+            action: (context, game) => {
+                game.showTextTuto = null;
+                game.freezeButtons = true;
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return !task && !game.player1.field[0].to; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position),
+                    text: "This unit has attack. It is now rested (90 degree rotation)"
+                };
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return context.tutoStep == 18 && !task; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player2.base[0].position),
+                    text: "Above the card, you can see (0 - 2). It represent the AP (0) and HP (2) of the card."
+                };
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.player2.base[0].position, 300, game.grid.boxHeight * 1.5, 1),
+                    text: "The unit has attacked the enemy base. 1 AP damage was inflicted. The base originally had 3 HP, which has now been reduced to 2 HP."
+                };
+            }
+        },
+        {
+            // press end turn
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEndTurn');
+                game.freeze = false;
+                game.freezeButtons = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.grid.buttonEndTurn), hideNext: true,
+                    text: "You can't do anything more this turn, press the end turn button"
+                };
+            }
+        },
+        {
+            // prepare ai turn
+            conditions: (context, game, task) => { return  task && task.id === context.nextTurn.name;},
+            action: (context, game) => {
+                game.showTextTuto = null;
+                game.freezeButtons = true;
+                game.player2.resourcesMax = 2;
+                game.tutoMasks.push({
+                    isPlayer1: true, id: 'buttonEndTurn',
+                    x: game.grid.buttonEndTurn.x - 10, width: game.grid.buttonEndTurn.width + 20,
+                    y: game.grid.buttonEndTurn.y - 10, height: game.grid.buttonEndTurn.height + 20
+                });
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return game.player2.field.length > 0 && !task; },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player2.field[0].position),
+                    text: "Player 2 has played a unit with a link pilot, it can attack this turn."
+                };
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.base[0].position),
+                    text: "Player 2 can use his unit to attack our base"
+                };
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position),
+                    text: "Because this unit is rested, it can be attacked by the opponent's unit"
+                };
+            }
+        },
+        {
+            // hide text tuto
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = null;
+            }
+        },
+        // show text tuto
+        {
+            conditions: (context, game, task) => { return task && task.id === this.newTurnForAI.name; },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Trash' && x.id != 'player2Trash');
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.player1.positions.trash, 300, game.grid.boxHeight * 1.5, 2),
+                    text: "Our unit's HP have been reduced to 0. The unit have been send to trash."
+                };
+            }
+        },
+        {
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                context.addTask({ id: context.spawnOrMove.name, isPlayer1: true, from: context.locationDeck, to: context.locationHand });
+                game.showTextTuto = null;
+            }
+        },
+        {
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
+                    text: "This unit can be linked with a pilot. Play it"
+                };
+            }
+        },
+        {
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
+                    text: "You can pair this pilot with the unit you just played"
+                };
+            }
+        },
+        {
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[1].position), hideNext: true,
+                    text: "Now you can attack with it"
+                };
+            }
+        },
+        {
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = null;
+            }
+        }
+    ];
 }
 
 

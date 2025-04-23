@@ -9,10 +9,10 @@
         <div :style="{ display: source ? '' : 'none' }">
             <div class="" v-for="(point, index) in targets.filter(x => x)" :key="'target' + index">
                 <div :class="{ absolute: 1, pointCircle: 1, colorYellow: target != point, colorGreen: target == point }"
-                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 55 }">
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 60 }">
                 </div>
                 <div class="absolute text-center textVerticalCenter text-shadow-black colorWhite"
-                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 55 }">
+                    :style="{ top: point.y + 'px', left: point.x + 'px', width: point.width + 'px', height: point.height + 'px', 'z-index': 60 }">
                     <div>{{ point.text }}</div>
                 </div>
             </div>

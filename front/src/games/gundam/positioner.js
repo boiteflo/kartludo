@@ -301,6 +301,66 @@ class positioner {
         }
 
         return { width: widthDesired, height: heightDesired, wrapCut };
+    }    
+
+    static alignPositionNextTo(game, source, width = -1, height = -1) {
+        let sens = -1; // 0:Right, Up, Left, Down
+        const widthEdit = width != -1 ? width : 300 ;
+        const heightEdit = height != -1 ? height : game.grid.boxHeight;
+        let result = {isValid:false};
+        while(sens < 4 && !result.isValid){
+            sens++;
+            result = this.alignPositionNextToUsingSens(game, source, widthEdit, heightEdit, sens)
+        }
+        return result;
+    }
+
+    static alignPositionNextToUsingSens(game, source, width, height, sens) {
+        let x = sens === 0 ? source.x + source.width + game.grid.border
+            : sens === 2 ? source.x - width - game.grid.border
+                : source.x + (source.width / 2) - (width / 2);
+
+        let y = sens === 3 ? source.y + source.height + game.grid.border
+            : sens === 1 ? source.y - height - game.grid.border
+                : source.y + (source.height / 2) - (height / 2);
+
+        let isValid = true;    
+        const isHorizontal = (sens === 0 || sens === 2);
+        const isVertical = (sens === 1 || sens === 3);
+
+        // Right offset
+        let xOffset = x + width - game.grid.width;         
+        if(isVertical && xOffset > 0)
+             x = x - xOffset - game.grid.border2;
+
+        xOffset = x + width + game.grid.border - game.grid.width;  
+        if (xOffset > 0) 
+            isValid=false;
+        
+        // Left offset
+        if(isVertical && x < game.grid.border) 
+            x = game.grid.border;
+
+        if(x < game.grid.border) 
+            isValid=false;
+        
+        // Bottom offser
+        let yOffset = y + height - game.grid.height;
+        if (isHorizontal && yOffset > 0)
+            y = y - yOffset - game.grid.border2;
+
+        yOffset = y + height - game.grid.border - game.grid.height;
+        if (yOffset > 0) 
+            isValid=false;
+        
+        // Top offset
+        if(isHorizontal && y < game.grid.border) 
+            y = game.grid.border;
+
+        if(y < game.grid.border) 
+            isValid=false;
+
+        return { x, y, width, height, isValid };
     }
 }
 

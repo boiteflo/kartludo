@@ -83,19 +83,6 @@
                 :style="getFieldStyleObj(tutoMask)">
             </div>
 
-            <!-- Tuto Text -->
-            <div v-if="game.showTextTuto" class="absolute fadeIn"
-                :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 0 }">
-                <div class="w100p h100p  bg3 flex" style="flex-direction: column; justify-content: center;">
-                    <div class="text-center">{{ game.showTextTuto.text }}</div>
-                    <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
-                        style="align-self: flex-end;">
-                        <v-btn class="bg2 shine" @click="tutoNext">Next</v-btn>
-                    </div>
-
-                </div>
-            </div>
-
             <!-- Highlight and TextZone-->
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.textZone)">
             </div>
@@ -111,6 +98,20 @@
                 <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
                     :hidestat="card.hidestat" @click="showCard(card)">
                 </gameCard>
+            </div>
+
+            <!-- Tuto Text -->
+            <div v-if="game.showTextTuto" class="absolute fadeIn"
+                :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 56 }">
+                <div class="w100p h100p bgWhite colorBlack flex"
+                    style="flex-direction: column; justify-content: center;">
+                    <div class="text-center">{{ game.showTextTuto.text }}</div>
+                    <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
+                        style="align-self: flex-end;">
+                        <v-btn class="bg2 shine" @click="tutoNext">Next</v-btn>
+                    </div>
+
+                </div>
             </div>
         </span>
 
