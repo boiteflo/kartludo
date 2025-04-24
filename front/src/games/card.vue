@@ -10,7 +10,8 @@
       cursor: shine ? 'pointer' : '',
       border: card.fx ? '1px solid yellow' : ''
     }">
-    <div v-if="card.fxRed" class="bgRed circle absolute fadeInOut" :style="getRedFxStyle()">
+    <div v-if="card.fxRed" :class="{ bgRed: 1, circle: 1, absolute: 1, fadeInOut: !card.fxTextCancelFadeout }"
+      :style="getRedFxStyle(card)">
     </div>
 
 
@@ -28,8 +29,9 @@
       @contextmenu.prevent="$emit('clickright', card)" />
 
     <!-- fxText-->
-    <div v-if="card.fxText" class="absolute fadeInOut text-center text-center-vertical fontSize150em text-shadow-black" 
-      :style="{...getRedFxStyle(), 'mask-image':'', 'color':'red' }">
+    <div v-if="card.fxText"
+      :class="{ absolute: 1, 'text-center': 1, 'text-center-vertical': 1, fontSize150em: 1, 'text-shadow-black': 1, fadeInOut: !card.fxTextCancelFadeout }"
+      :style="{ ...getRedFxStyle(card), 'mask-image': '', 'color': 'red' }">
       {{ card.fxText }}
     </div>
 
@@ -56,9 +58,9 @@ export default {
   name: 'game-card',
   props: ['card', 'folder', 'shine', 'hidestat'],
   methods: {
-    getRedFxStyle() {
+    getRedFxStyle(card) {
       return {
-        opacity: 0,
+        opacity: card.fxTextCancelFadeout ? 1 : 0,
         left: '-100%',
         top: '-71.3%',
         width: (this.card.position.width * 3) + 'px', height: (this.card.position.width * 3) + 'px',

@@ -26,7 +26,8 @@ class tuto {
         });
     }
 
-    static mulligan(game) { }
+    static mulligan(game) { 
+    }
 
     static continueTuto(game) {
         game.tutoStep = game.tutoStep ? game.tutoStep : 0;
@@ -61,6 +62,80 @@ class tuto {
         return nextStep.conditions(this, game, task);
     }
 
+    static conditionNexTurn(context, game) {
+        return game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
+    }
+
+    static tutoText = {
+        used: null,
+        en: {
+            welcome: 'Welcome to Gundam TCG.',
+            deck: 'This is your deck. It contains 50 cards.',
+            playUnit: 'The first turn has begun. You’ve drawn one card from your deck. It’s a unit card you can play. Select it and place it here.',
+            cantAttack: "A unit can't attack the turn it's played unless it's linked with a pilot. We’ll learn about linking pilots shortly.",
+            endTurn: "You’ve done all you can this turn. Press the 'End Turn' button to proceed.",
+            zoom: "Click on a card to zoom in and see its details.",
+            showLevelCost: "In the top-left corner of a card, you can see its level (3) and cost (2).",
+            showLink: "In the bottom-left corner, you’ll find the card’s pilot link condition: (White Base Team) Trait.",
+            showApHp: "In the bottom-right corner, you’ll see the card’s Attack Points (AP: 2) and Hit Points (HP: 3). Click again to unzoom.",
+            showResources: "This is the 2 resource bars. The bottom bar is yours; the top one belongs to your opponent. You currently have 3 resources.",
+            showResources2: "Your opponent has 2 regular resources (yellow) and 1 EX resource (blue). Player 2 always starts with one EX resource.",
+            showResources3: "To play a card, you must pay its cost using your available resources. EX resources are always used first. At the start of each turn, you gain 1 additional resource.",
+            playLevel3: "To play a level 3 card that costs 2, you need at least 3 total resources, including 2 available ones.",
+            playIt: "The requirements are met. The card is glowing yellow, meaning you can play it. Do it like the previous one.",
+            resourcesUsed: "2 resources were used. You still have 1 available (yellow) and 2 unavailable (red).",
+            ennemyBase: "This is the enemy base. Each player starts the game with one.",
+            attack: "This unit is ready to attack. Select it and release it on the opponent’s field to launch an attack.",
+            rested: "This unit has attacked. It’s now rested (rotated 90 degrees).",
+            showApHp2: "Above the card, you see (0 - 1), indicating the card’s AP (0) and HP (1).",
+            showApHp3: "The unit attacked the enemy base, dealing 2 AP damage. The base had 3 HP and is now reduced to 1 HP.",
+            showEffect: "When a card’s effect activates, a red circle with text appears. For this card: 'repair 1'.",
+            p2LinkUnit: "Player 2 has played a unit with a linked pilot, so it can attack this turn.",
+            p2AttackBase: "Player 2 can now use this unit to attack our base.",
+            p2AttackUnit: "Alternatively, it can attack our rested units.",
+            unitTrash: "Our unit’s HP reached 0. It’s been sent to the trash.",
+            linkUnit: "This unit can be linked with a pilot. Play it now.",
+            linkPilot: "You can now pair this pilot with the unit you just played.",
+            attackLink: "Now you can attack using the linked unit."
+        },
+        fr: {
+            welcome: 'Bienvenue dans Gundam TCG.',
+            deck: 'Voici votre deck. Il contient 50 cartes.',
+            playUnit: 'Le premier tour commence. Vous avez pioché une carte de votre deck. C’est une carte unité que vous pouvez jouer. Sélectionnez-la et placez-la ici.',
+            cantAttack: "Une unité ne peut pas attaquer le tour où elle est jouée, sauf si elle est liée à un pilote. Nous verrons cela dans un instant.",
+            endTurn: "Vous ne pouvez plus rien faire ce tour-ci. Appuyez sur le bouton 'Fin du tour' pour continuer.",
+            zoom: "Cliquez sur une carte pour zoomer et voir ses détails.",
+            showLevelCost: "En haut à gauche d’une carte, vous pouvez voir son niveau (3) et son coût (2).",
+            showLink: "En bas à gauche, vous trouverez la condition de liaison de pilote : Trait (Équipe White Base).",
+            showApHp: "En bas à droite, vous verrez les Points d’Attaque (AP : 2) et les Points de Vie (HP : 3) de la carte. Cliquez à nouveau pour dézoomer.",
+            showResources: "Voici les 2 barres de ressources. Celle du bas est la vôtre ; celle du haut est celle de votre adversaire. Vous disposez actuellement de 3 ressources.",
+            showResources2: "Votre adversaire possède 2 ressources classiques (jaunes) et 1 ressource EX (bleue). Le joueur 2 commence toujours avec une ressource EX.",
+            showResources3: "Pour jouer une carte, vous devez en payer le coût avec vos ressources disponibles. Les ressources EX sont toujours utilisées en premier. Au début de chaque tour, vous gagnez une ressource supplémentaire.",
+            playLevel3: "Pour jouer une carte de niveau 3 avec un coût de 2, vous devez avoir au moins 3 ressources au total, dont 2 disponibles.",
+            playIt: "Les conditions sont remplies. La carte brille en jaune : vous pouvez la jouer, comme la précédente.",
+            resourcesUsed: "2 ressources ont été utilisées. Il vous en reste 1 disponible (jaune) et 2 indisponibles (rouges).",
+            ennemyBase: "Voici la base ennemie. Chaque joueur commence la partie avec une base.",
+            attack: "Cette unité est prête à attaquer. Sélectionnez-la et relâchez-la sur le terrain adverse pour lancer l’attaque.",
+            rested: "Cette unité a attaqué. Elle est maintenant engagée (pivotée à 90 degrés).",
+            showApHp2: "Au-dessus de la carte, vous voyez (0 - 1), indiquant les AP (0) et les HP (1).",
+            showApHp3: "L’unité a attaqué la base ennemie, infligeant 2 points de dégâts (AP). La base avait 3 HP, elle en a maintenant 1.",
+            showEffect: "Lorsqu’un effet de carte est activé, un cercle rouge avec du texte apparaît. Pour cette carte : 'Réparer 1'.",
+            p2LinkUnit: "Le joueur 2 a joué une unité avec un pilote lié. Elle peut donc attaquer ce tour-ci.",
+            p2AttackBase: "Le joueur 2 peut utiliser cette unité pour attaquer notre base.",
+            p2AttackUnit: "Ou bien il peut attaquer notre unité engagée.",
+            unitTrash: "Les PV de notre unité sont tombés à 0. Elle a été envoyée à la défausse.",
+            linkUnit: "Cette unité peut être liée à un pilote. Jouez-la maintenant.",
+            linkPilot: "Vous pouvez maintenant associer ce pilote à l’unité que vous venez de jouer.",
+            attackLink: "Vous pouvez maintenant attaquer avec cette unité liée."
+        }
+    }
+
+    static getTextTuto(prop){
+        if(!this.tutoText.used)
+            this.tutoText.used = this.tutoText.fr;
+        return this.tutoText.used[prop];
+    }
+
     static tutoSteps = [
         {
             // Show title
@@ -70,7 +145,7 @@ class tuto {
                 context.addTutoMask(game);
                 game.showTextTuto = {
                     ...context.tutoSmall(game),
-                    text: 'Welcome to Gundam TCG.'
+                    text: context.getTextTuto('welcome')
                 };
             }
         },
@@ -86,7 +161,7 @@ class tuto {
                 game.isPlayer1 = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.grid.player1Deck),
-                    text: 'This is your deck with 50 cards'
+                    text: context.getTextTuto('deck')
                 };
             }
         },
@@ -100,14 +175,15 @@ class tuto {
         },
         {
             // Play Gm unit
-            conditions: (context, game, task) => { 
-                return game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
-             },
+            conditions: (context, game, task) => {
+                return context.conditionNexTurn(context, game);
+            },
             action: (context, game) => {
                 game.showTextTuto = {
-                    ...game.grid.player1Field, hideNext: true,
-                    text: 'The first turn began. You have drawned one card from your deck to your hand. This is a unit card that you can play. Select it and release it here'
+                    ...game.grid.player1Field, y: game.grid.player1Field.y - game.grid.player1Field.height * 0.75, hideNext: true, sens: 1,
+                    text: context.getTextTuto('playUnit')
                 };
+                game.showTextTuto.arrow = context.addArrow(game.showTextTuto, game.grid.player1Field, 1);
             }
         },
         {
@@ -124,7 +200,7 @@ class tuto {
                 game.freeze = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[0].position),
-                    text: "Without link Pilot, an unit can't attack the turn you play it. We will see link pilot in a few minutes."
+                    text: context.getTextTuto('cantAttack')
                 };
             }
         },
@@ -136,13 +212,13 @@ class tuto {
                 game.freeze = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.grid.buttonEndTurn), hideNext: true,
-                    text: "You can't do anything more this turn, press the end turn button"
+                    text: context.getTextTuto('endTurn')
                 };
             }
         },
         {
             // unfreeze and mask end turn button
-            conditions: (context, game, task) => { return  task && task.id === context.nextTurn.name;},
+            conditions: (context, game, task) => { return task && task.id === context.nextTurn.name; },
             action: (context, game) => {
                 game.showTextTuto = null;
                 game.freezeButtons = true;
@@ -155,47 +231,47 @@ class tuto {
         },
         {
             // zoom on a card
-            conditions: (context, game, task) => { 
-                return game.isPlayer1 && !task && game.player1.hand.length > 0 && !game.player1.hand[0].to && context.cardHighlight.length < 1;
+            conditions: (context, game, task) => {
+                return context.conditionNexTurn(context, game);
             },
             action: (context, game) => {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
-                    text: "You can zoom on a card by doing a click on it"
+                    text: context.getTextTuto('zoom')
                 };
             }
         },
-        { 
+        {
             // show tuto text on zoom card
             conditions: (context, game, task) => { return game.cardCenter; },
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
-                    ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.2, height: game.cardCenter.position.height * 0.8, zindex: 120,
-                    text: "At the top left corner, you can see the level of the card (3) and the cost of the card (2)."
+                    ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.17, height: game.cardCenter.position.height * 0.83, zindex: 120,
+                    text: context.getTextTuto('showLevelCost')
                 };
             }
         },
-        { 
+        {
             // show tuto text on zoom card
             conditions: (context, game, task) => { return false },
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
-                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.8, zindex: 120,
-                    text: "At the bottom left corner, you can see the link pilot conditions of this card : (White Base Team) Trait"
+                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.9, zindex: 120,
+                    text: context.getTextTuto('showLink')
                 };
             }
         },
-        { 
+        {
             // show tuto text on zoom card
             conditions: (context, game, task) => { return false },
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
-                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.8, zindex: 120, hideNext: true,
-                    text: "At the bottom right corner, you can see the Attack point AP (2) and the Hip Point HP (3). Click on the card to unzoom it"
+                    ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.9, zindex: 120, hideNext: true,
+                    text: context.getTextTuto('showApHp')
                 };
             }
         },
@@ -204,8 +280,8 @@ class tuto {
             conditions: (context, game, task) => { return !game.cardCenter; },
             action: (context, game) => {
                 game.showTextTuto = {
-                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
-                    text: "This is the resources bar. The bottom one is yours, the other one for your ennemy. You have 3 ressources available."
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 3),
+                    text: context.getTextTuto('showResources')
                 };
             }
         },
@@ -215,7 +291,17 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 1),
-                    text: "Your opponent has 2 classical ressource (yellow) and one ex ressource (blue). The player 2 always start the game with one ex ressource."
+                    text: context.getTextTuto('showResources2')
+                };
+            }
+        },
+        {
+            // show tuto text
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 3),
+                    text: context.getTextTuto('showResources3')
                 };
             }
         },
@@ -225,7 +311,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position),
-                    text: "To play a level 3 card with a cost of 2, you need at least 3 resources with minimum 2 available."
+                    text: context.getTextTuto('playLevel3')
                 };
             }
         },
@@ -237,7 +323,7 @@ class tuto {
                 game.freezeButtons = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
-                    text: "The conditions are respected, the card is shining with a yellow effect, you can play it like the previous one"
+                    text: context.getTextTuto('playIt')
                 };
             }
         },
@@ -245,7 +331,7 @@ class tuto {
             // show text tuto
             conditions: (context, game, task) => {
                 const isGood = task && task.card1.id === 'GD01-004'; // Guncanon
-                if (!isGood) { 
+                if (!isGood) {
                     game.tasks = [];
                 }
                 return isGood;
@@ -254,7 +340,7 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight, 3),
-                    text: "2 resource has been used. 1 is still available (yellow) but 2 unavailable (red)."
+                    text: context.getTextTuto('resourcesUsed')
                 };
             }
         },
@@ -275,7 +361,7 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player2.positions.base),
-                    text: "This is the ennemy base. Each player start the game with this one"
+                    text: context.getTextTuto('ennemyBase')
                 };
             }
         },
@@ -286,7 +372,7 @@ class tuto {
                 game.freeze = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[0].position), hideNext: true,
-                    text: "This unit is ready to attack. Select it and release it on the opponent field to attack"
+                    text: context.getTextTuto('attack')
                 };
             }
         },
@@ -304,7 +390,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[0].position),
-                    text: "This unit has attack. It is now rested (90 degree rotation)"
+                    text: context.getTextTuto('rested')
                 };
             }
         },
@@ -314,7 +400,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player2.base[0].position),
-                    text: "Above the card, you can see (0 - 1). It represent the AP (0) and HP (1) of the card."
+                    text: context.getTextTuto('showApHp2')
                 };
             }
         },
@@ -324,7 +410,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.player2.base[0].position, 300, game.grid.boxHeight * 1.5, 1),
-                    text: "The unit has attacked the enemy base. 2 AP damage was inflicted. The base originally had 3 HP, which has now been reduced to 1 HP."
+                    text: context.getTextTuto('showApHp3')
                 };
             }
         },
@@ -335,15 +421,16 @@ class tuto {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEndTurn');
                 game.freeze = false;
                 game.freezeButtons = false;
+                game.player1.field[1].fxTextCancelFadeout = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.grid.buttonEndTurn), hideNext: true,
-                    text: "You can't do anything more this turn, press the end turn button"
+                    text: context.getTextTuto('endTurn')
                 };
             }
         },
         {
             // prepare ai turn
-            conditions: (context, game, task) => { return  task && task.id === context.nextTurn.name;},
+            conditions: (context, game, task) => { return task && task.id === context.nextTurn.name; },
             action: (context, game) => {
                 game.showTextTuto = null;
                 game.freezeButtons = true;
@@ -357,12 +444,33 @@ class tuto {
         },
         {
             // show text tuto
-            conditions: (context, game, task) => { return game.player2.field.length > 0 && !task; },
+            conditions: (context, game, task) => { return task && task.id === context.showCardsEffect.name && task.hideFx },
             action: (context, game) => {
                 game.freeze = true;
                 game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[1].position),
+                    text: context.getTextTuto('showEffect')
+                };
+            }
+        },
+        {
+            // prepare ai turn
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.showTextTuto = null;
+                game.freezeButtons = true;
+                game.freeze = false;
+            }
+        },
+        {
+            // show text tuto
+            conditions: (context, game, task) => { return game.player2.field.length > 0 && !task; },
+            action: (context, game) => {
+                game.freeze = true;
+                game.player1.field[1].fxTextCancelFadeout = false;
+                game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player2.field[0].position),
-                    text: "Player 2 has played a unit with a link pilot, it can attack this turn."
+                    text: context.getTextTuto('p2LinkUnit')
                 };
             }
         },
@@ -373,7 +481,7 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.base[0].position),
-                    text: "Player 2 can use his unit to attack our base"
+                    text: context.getTextTuto('p2AttackBase')
                 };
             }
         },
@@ -384,7 +492,7 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[0].position),
-                    text: "Because this unit is rested, it can be attacked by the opponent's unit"
+                    text: context.getTextTuto('p2AttackUnit')
                 };
             }
         },
@@ -404,12 +512,14 @@ class tuto {
                 game.freeze = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextToUsingSens(game, game.player1.positions.trash, 300, game.grid.boxHeight * 1.5, 2),
-                    text: "Our unit's HP have been reduced to 0. The unit have been send to trash."
+                    text: context.getTextTuto('unitTrash')
                 };
             }
         },
         {
-            conditions: (context, game, task) => { return false; },
+            conditions: (context, game, task) => {
+                return context.conditionNexTurn(context, game);
+            },
             action: (context, game) => {
                 game.freeze = false;
                 context.addTask({ id: context.spawnOrMove.name, isPlayer1: true, from: context.locationDeck, to: context.locationHand });
@@ -421,7 +531,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
-                    text: "This unit can be linked with a pilot. Play it"
+                    text: context.getTextTuto('linkUnit')
                 };
             }
         },
@@ -430,7 +540,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
-                    text: "You can pair this pilot with the unit you just played"
+                    text: context.getTextTuto('linkPilot')
                 };
             }
         },
@@ -439,7 +549,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[1].position), hideNext: true,
-                    text: "Now you can attack with it"
+                    text: context.getTextTuto('attackLink')
                 };
             }
         },

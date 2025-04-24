@@ -20,8 +20,7 @@
 
             <!-- Player 1 -->
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Deck)" text="Deck"
-                :length="game.player1.deck.length" :icon="game.player1.deckIcon"
-                @click="showLocationCards('deck', true)">
+                :length="game.player1.deck.length" :icon="game.player1.deckIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Trash)" text="Trash"
                 :length="game.player1.trash.length" :icon="game.player1.trashIcon"
@@ -31,8 +30,7 @@
                 :icon="game.player1.baseIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" text="Shield"
-                :length="game.player1.shield.length" :icon="game.player1.shieldIcon"
-                @click="showLocationCards('shield', true)">
+                :length="game.player1.shield.length" :icon="game.player1.shieldIcon">
             </deck-icon>
             <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Hand)">
             </div>
@@ -41,8 +39,7 @@
 
             <!-- Player 2-->
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Deck)" text="Deck"
-                :length="game.player2.deck.length" :icon="game.player2.deckIcon"
-                @click="showLocationCards('deck', false)">
+                :length="game.player2.deck.length" :icon="game.player2.deckIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Trash)" text="Trash"
                 :length="game.player2.trash.length" :icon="game.player2.trashIcon"
@@ -52,8 +49,7 @@
                 :icon="game.player2.baseIcon">
             </deck-icon>
             <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Shield)" text="Shield"
-                :length="game.player2.shield.length" :icon="game.player2.shieldIcon"
-                @click="showLocationCards('shield', false)">
+                :length="game.player2.shield.length" :icon="game.player2.shieldIcon">
             </deck-icon>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
             </div>
@@ -103,8 +99,13 @@
             <!-- Tuto Text -->
             <div v-if="game.showTextTuto" class="absolute fadeIn"
                 :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 56 }">
+                <!-- Arrow-->
+                <div class="bgWhite absolute" v-if="game.showTextTuto.arrow"
+                    :style="{ ...getFieldStyleObj(game.showTextTuto.arrow), transform: 'rotate(45deg)', 'z-index':-1 }"></div>
+
                 <div class="w100p h100p bgWhite colorBlack flex"
                     style="flex-direction: column; justify-content: center;">
+
                     <div class="text-center">{{ game.showTextTuto.text }}</div>
                     <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
                         style="align-self: flex-end;">

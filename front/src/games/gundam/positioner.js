@@ -24,7 +24,7 @@ class positioner {
 
         grid.isVertical = grid.height > grid.width;
 
-        if(grid.boxWidth > grid.widthMargin / 7)
+        if (grid.boxWidth > grid.widthMargin / 7)
             grid.boxWidth = grid.widthMargin / 7;
         grid.card100 = { width: grid.boxWidth, height: grid.boxHeight };
 
@@ -44,7 +44,7 @@ class positioner {
         x = grid.border;
         grid.centerZone = { x, y, width: grid.widthMargin, height: grid.boxHeight };
         y += grid.border + grid.boxHeight;
-        grid.centerZoneP2= {...grid.centerZone, x:0, width: (grid.centerZone.width-100 )/2 + grid.border};
+        grid.centerZoneP2 = { ...grid.centerZone, x: 0, width: (grid.centerZone.width - 100) / 2 + grid.border };
 
         // Player1 - Field
         grid.player1Field = { x, y, width, height, isPlayer1: true, location: this.locationField };
@@ -54,13 +54,13 @@ class positioner {
         height = grid.boxHeight;
         grid.player1Hand = { x, y, width, height, isPlayer1: true, location: this.locationHand };
 
-        if(grid.isVertical)
+        if (grid.isVertical)
             this.createVerticalGrid(grid);
         else
             this.createHorizontalGrid(grid);
 
-        grid.player1Field.cardSizeReduce=true;
-        grid.player2Field.cardSizeReduce=true;
+        grid.player1Field.cardSizeReduce = true;
+        grid.player2Field.cardSizeReduce = true;
 
         // Buttons
         x = grid.player1Deck.x;
@@ -70,7 +70,7 @@ class positioner {
         grid.buttonEffect = { x, y, width, height };
         y += height + grid.border;
         grid.buttonEndTurn = { x, y, width, height };
-        
+
         width = grid.boxHeight;
         height = grid.boxHeight;
         grid.resources = { x: (grid.width / 2) - (width / 2), y: grid.centerZone.y, width, height };
@@ -92,22 +92,22 @@ class positioner {
         width = grid.boxWidth;
         height = grid.boxHeight;
         grid.player1Field.drop = {
-            x: grid.player1Field.x + (grid.player1Field.width / 2) - (width /2),
-            y: grid.player1Field.y + (grid.player1Field.height / 2) - (height /2),
-            width, height, text:'Play'
+            x: grid.player1Field.x + (grid.player1Field.width / 2) - (width / 2),
+            y: grid.player1Field.y + (grid.player1Field.height / 2) - (height / 2),
+            width, height, text: 'Play'
         }
         grid.player2Field.drop = {
-            x: grid.player2Field.x + (grid.player2Field.width / 2) - (width /2),
-            y: grid.player2Field.y + (grid.player2Field.height / 2) - (height /2),
-            width, height, text:'Attack'
+            x: grid.player2Field.x + (grid.player2Field.width / 2) - (width / 2),
+            y: grid.player2Field.y + (grid.player2Field.height / 2) - (height / 2),
+            width, height, text: 'Attack'
         }
 
         return grid;
     }
 
-    static createVerticalGrid(grid){
-        grid.boxWidthVertical = (grid.widthMargin - (8* grid.border)) / 6;
-        grid.boxHeightVertical = grid.boxWidthVertical * 150/107;
+    static createVerticalGrid(grid) {
+        grid.boxWidthVertical = (grid.widthMargin - (8 * grid.border)) / 6;
+        grid.boxHeightVertical = grid.boxWidthVertical * 150 / 107;
 
         let x = grid.player1Field.x + grid.player1Field.width + grid.border;
         let y = grid.centerZone.y;
@@ -150,7 +150,7 @@ class positioner {
         grid.player2Trash = { x, y, width, height, isPlayer1: true, location: this.locationTrash };
     }
 
-    static createHorizontalGrid(grid){
+    static createHorizontalGrid(grid) {
         // Player1 - Deck
         let x = grid.player1Field.x + grid.player1Field.width + grid.border;
         let y = grid.centerZone.y;
@@ -301,14 +301,14 @@ class positioner {
         }
 
         return { width: widthDesired, height: heightDesired, wrapCut };
-    }    
+    }
 
     static alignPositionNextTo(game, source, width = -1, height = -1) {
         let sens = -1; // 0:Right, Up, Left, Down
-        const widthEdit = width != -1 ? width : 300 ;
+        const widthEdit = width != -1 ? width : 300;
         const heightEdit = height != -1 ? height : game.grid.boxHeight;
-        let result = {isValid:false};
-        while(sens < 4 && !result.isValid){
+        let result = { isValid: false };
+        while (sens < 4 && !result.isValid) {
             sens++;
             result = this.alignPositionNextToUsingSens(game, source, widthEdit, heightEdit, sens)
         }
@@ -324,43 +324,71 @@ class positioner {
             : sens === 1 ? source.y - height - game.grid.border
                 : source.y + (source.height / 2) - (height / 2);
 
-        let isValid = true;    
+        let isValid = true;
         const isHorizontal = (sens === 0 || sens === 2);
         const isVertical = (sens === 1 || sens === 3);
 
         // Right offset
-        let xOffset = x + width - game.grid.width;         
-        if(isVertical && xOffset > 0)
-             x = x - xOffset - game.grid.border2;
+        let xOffset = x + width - game.grid.width;
+        if (isVertical && xOffset > 0)
+            x = x - xOffset - game.grid.border2;
 
-        xOffset = x + width + game.grid.border - game.grid.width;  
-        if (xOffset > 0) 
-            isValid=false;
-        
+        xOffset = x + width + game.grid.border - game.grid.width;
+        if (xOffset > 0)
+            isValid = false;
+
         // Left offset
-        if(isVertical && x < game.grid.border) 
+        if (isVertical && x < game.grid.border)
             x = game.grid.border;
 
-        if(x < game.grid.border) 
-            isValid=false;
-        
+        if (x < game.grid.border)
+            isValid = false;
+
         // Bottom offser
         let yOffset = y + height - game.grid.height;
         if (isHorizontal && yOffset > 0)
             y = y - yOffset - game.grid.border2;
 
         yOffset = y + height - game.grid.border - game.grid.height;
-        if (yOffset > 0) 
-            isValid=false;
-        
+        if (yOffset > 0)
+            isValid = false;
+
         // Top offset
-        if(isHorizontal && y < game.grid.border) 
+        if (isHorizontal && y < game.grid.border)
             y = game.grid.border;
 
-        if(y < game.grid.border) 
-            isValid=false;
+        if (y < game.grid.border)
+            isValid = false;
 
-        return { x, y, width, height, isValid };
+        const result = { x, y, width, height, isValid, sens };
+        result.arrow = this.addArrow(result, source, sens);
+
+        return result;
+    }
+
+    static addArrow(from, to, sens) {
+        const size = 25;
+        // const toCenterX = to.x + to.width / 2;
+        // const toCenterY = to.y + to.height / 2;
+
+        let x = (to.x + (to.width / 2) - from.x) - size / 2;
+        let y = (to.y + (to.height / 2) - from.y) - size / 2;
+        switch (sens) {
+            case 0: // from est à droite de to
+                x = -1*size / 2;
+                break;
+            case 1: // from est au-dessus de to
+                y = from.height - size / 2;
+                break;
+            case 2: // from est à gauche de to
+                x = from.width - size / 2;
+                break;
+            case 3: // from est en dessous de to 
+                y = -1*size / 2;
+                break;
+        }
+
+        return { x, y, width: size, height: size, rotation: 45 }
     }
 }
 
