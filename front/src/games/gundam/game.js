@@ -101,6 +101,8 @@ class game {
     }
 
     static tutoNext(game, next=true){
+        if(!game.showTextTuto)
+            return game;
         game.showTextTuto.next=next;
         this.continueTuto(game);
         return this.continue(game);

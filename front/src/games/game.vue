@@ -106,8 +106,7 @@
 
                 <div class="w100p h100p bgWhite colorBlack flex"
                     style="flex-direction: column; justify-content: center;">
-
-                    <div class="text-center">{{ game.showTextTuto.text }}</div>
+                    <div class="text-center m5px">{{ game.showTextTuto.text }}</div>
                     <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
                         style="align-self: flex-end;">
                         <v-btn class="bg2 shine" @click="tutoNext">Next</v-btn>

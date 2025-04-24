@@ -153,10 +153,11 @@ class tuto {
             // Show deck icon
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.player1.resourcesMax = 2;
+                game.player1.resourcesMax = 1;
                 game.player1.resourcesEx = 0;
-                game.player2.resourcesMax = 2;
+                game.player2.resourcesMax = 1;
                 game.player2.resourcesEx = 1;
+                game.player1.deck[1].id = 'GD01-004';
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Deck' && x.id !== 'player2Deck');
                 game.isPlayer1 = false;
                 game.showTextTuto = {
@@ -199,7 +200,7 @@ class tuto {
             action: (context, game) => {
                 game.freeze = false;
                 game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.player1.field[0].position),
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position, 300, game.grid.boxHeight * 1.5),
                     text: context.getTextTuto('cantAttack')
                 };
             }
@@ -302,7 +303,7 @@ class tuto {
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.showTextTuto = {
-                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 1.5, 3),
+                    ...context.alignPositionNextToUsingSens(game, game.grid.resources, 300, game.grid.boxHeight * 2, 3),
                     text: context.getTextTuto('showResources3')
                 };
             }
@@ -318,7 +319,7 @@ class tuto {
             }
         },
         {
-            // play GD01-026 Zaku2 char
+            // play opponent unit
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.freeze = false;
@@ -350,7 +351,8 @@ class tuto {
             // animations base arriving
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.showTextTuto = null;
+                game.showTextTuto = null;                
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Base' && x.id != 'player2Base');                
                 context.addShielsAndBase(game);
                 game.freeze = false;
                 context.addTask({ id: context.taskEndRefresh.name });
@@ -561,6 +563,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = null;
                 context.addTask({ id: context.spawnOrMove.name, isPlayer1: true, from: context.locationDeck, to: context.locationHand });
+                context.addTask({ id: context.spawnOrMove.name, isPlayer1: false, from: context.locationDeck, to: context.locationHand });
             }
         },
         {
@@ -577,7 +580,7 @@ class tuto {
         {
             // Gundam is played
             conditions: (context, game, task) => {
-                const isGood = task && task.card1 && task.card1.id === 'ST01-002'; // Gundam
+                const isGood = task && task.card1 && task.card1.id.startsWith('ST01-001'); // Gundam
                 if (!isGood) {
                     game.tasks = [];
                 }
@@ -601,7 +604,7 @@ class tuto {
         {
             // Amuro is played
             conditions: (context, game, task) => {
-                const isGood = task && task.card1 && task.card1.id === 'ST01-010' && task.card2 && task.card2.id === 'ST01-002'; // Amuro on Gundam
+                const isGood = task && task.card1 && task.card1.id === 'ST01-010' && task.card2 && task.card2.id.startsWith('ST01-001'); // Amuro on Gundam
                 if (!isGood) {
                     game.tasks = [];
                 }
@@ -636,7 +639,7 @@ class tuto {
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Shield' && x.id != 'player2Shield');
                 game.showTextTuto = {
-                    ...context.alignPositionNextToUsingSens(game, game.player2.positions.shield, 300, game.grid.boxHeight, 1),
+                    ...context.alignPositionNextToUsingSens(game, game.player2.positions.shield, 300, game.grid.boxHeight*2, 1),
                     text: 'The ennemy base have been destroyed. To win this fight, we need now to destroy all shield cards and perform a final attack.'
                 };
             }
@@ -667,7 +670,7 @@ class tuto {
         },
         {
             // play base
-            conditions: (context, game, task) => { return context.conditionNexTurn(context, game) && game.player1.hand.length > 1 && !game.player1.hand[1].to },
+            conditions: (context, game, task) => { return context.conditionNexTurn(context, game)},
             action: (context, game) => {
                 game.freeze = false;
                 game.freezeButtons = false;
@@ -723,7 +726,6 @@ class tuto {
                 return isGood;
              },
             action: (context, game) => {
-                game.freeze = false;
                 game.showTextTuto = null;
             }
         },
@@ -745,7 +747,6 @@ class tuto {
                 return isGood;
             },
             action: (context, game) => {
-                game.freeze = false;
                 game.showTextTuto = null;
             }
         },
@@ -761,7 +762,7 @@ class tuto {
             }
         },
         {
-            // show text tuto play heero
+            // show text tuto play banagher
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.freezeButtons=false;
@@ -772,9 +773,9 @@ class tuto {
             }
         },
         {
-            // play heero
+            // play banagher
             conditions: (context, game, task) => {
-                const isGood = task && task.card1 && task.card1.id === 'ST02-010' && task.card2 && task.card2.id === 'T-002'; // Heero on token guncanon
+                const isGood = task && task.card1 && task.card1.id.startsWith('GD01-088') && task.card2 && task.card2.id === 'T-002'; // banagher on token guncanon
                 if (!isGood) {
                     game.tasks = [];
                 }
@@ -786,39 +787,52 @@ class tuto {
             }
         },
         {
-            // 
+            // Show text tuto banagher guncanon
             conditions: (context, game, task) => { return !task; },
             action: (context, game) => {
-                game.freeze = false;
-                game.freezeButtons = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[1].position, 300,  game.grid.boxHeight*1.5),
-                    text: "Theses cars are not linked, they are only paired. It means this unit can't attack this turn. But the AP and HP of the pilot have been added to the one of this unit"
+                    text: "Theses cards are not linked, they are only paired. It means this unit can't attack this turn. But the AP and HP of the pilot have been added to the one of this unit"
                 };
             }
         },
         {
-            // 
+            // Attack with gundam
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.freeze = false;
-                game.freezeButtons = false;
+                game.freezeButtons=true;
+                game.tutoMasks = [];
                 game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.grid.buttonEffect), hideNext: true,
-                    text: "Our base has an effect that we can activate here."
+                    ...context.tutoSmall(game),
+                    text: "It's time for you to play alone. Try to win this duel by attacking the ennemy where there is no shield or base left."
                 };
             }
         },
         {
-            // 
+            // hide text tuto
+            conditions: (context, game, task) => { return task && task.id === context.play.name; },
+            action: (context, game) => {
+                game.freezeButtons=false;
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // burst
+            conditions: (context, game, task) => { return task && task.id == context.applyEffectCard.name && task.card1 && task.card1.id=='ST01-010'; },
+            action: (context, game) => {
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.grid.player1Shield),
+                    text: "This card have a burst effect. these kind of effect is trigger when the card is reveal from the shield area"
+                };
+            }
+        },
+        {
+            // End
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.freeze = false;
                 game.freezeButtons = false;
-                game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.grid.buttonEffect), hideNext: true,
-                    text: "Our base has an effect that we can activate here."
-                };
+                game.showTextTuto = null;
             }
         }
     ];
