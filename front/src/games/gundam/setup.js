@@ -66,7 +66,7 @@ class setup {
                 result.push(this.createCard(card.id, isPlayer1));
         });
 
-        if(!game.tuto){
+        if (!game.tuto) {
             this.createUniqueRare(game, result);
             result = this.sortRandom(result);
         }
@@ -115,7 +115,7 @@ class setup {
             }
 
             // if (!this.quickstart)
-                tasks = tasks.concat(this.addShielsAndBase(game));
+            tasks = tasks.concat(this.addShielsAndBase(game));
 
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: true });
             tasks.push({ id: this.refreshFieldAndHand.name, isPlayer1: false });
@@ -125,7 +125,7 @@ class setup {
         }
     }
 
-    static addShielsAndBase(game) {
+    static addShielsAndBase(game, addBase = true) {
         let tasks = [];
 
         for (let i = 0; i < this.shieldStartLength; i++) {
@@ -133,8 +133,10 @@ class setup {
             tasks.push({ id: this.move.name, from: this.locationDeck, to: this.locationShield, isPlayer1: false });
         }
 
-        game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
-        game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        if (addBase) {
+            game.player1.base = [this.spawnIfNot(this.createCard('EXB-001', true, this.locationBase))];
+            game.player2.base = [this.spawnIfNot(this.createCard('EXB-001', false, this.locationBase))];
+        }
 
         return tasks;
     }

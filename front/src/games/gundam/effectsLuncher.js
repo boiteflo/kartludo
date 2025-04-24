@@ -108,7 +108,7 @@ class effectsLuncher {
         if (effect.effects)
             result = result.concat(effect.effects.map(x => this.getEffectText(x)).join(', '));
 
-        return result.filter(x => x && x.length > 0).join(' ');
+        return result.map(x=> x?.replace("gainEffects", "")).filter(x => x && x.length > 0).join(' ');
     }
 
     static removeOneTurnEffect(game) {

@@ -90,7 +90,7 @@
             </div>
 
             <!-- cards -->
-            <div v-for="card in cards" :key="'B' + card.index">
+            <div v-for="card in cards.filter(x=> !x.hide)" :key="'B' + card.index">
                 <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
                     :hidestat="card.hidestat" @click="showCard(card)">
                 </gameCard>
@@ -101,7 +101,8 @@
                 :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 56 }">
                 <!-- Arrow-->
                 <div class="bgWhite absolute" v-if="game.showTextTuto.arrow"
-                    :style="{ ...getFieldStyleObj(game.showTextTuto.arrow), transform: 'rotate(45deg)', 'z-index':-1 }"></div>
+                    :style="{ ...getFieldStyleObj(game.showTextTuto.arrow), transform: 'rotate(45deg)', 'z-index': -1 }">
+                </div>
 
                 <div class="w100p h100p bgWhite colorBlack flex"
                     style="flex-direction: column; justify-content: center;">
@@ -373,13 +374,17 @@ export default {
         },
         showCard(card) {
             const center = this.game ? this.game.grid.highlightCardCenter : { x: 0, y: 0, width: 200, height: 280 };
-            if (!card)
+            if (!card) {
+                if (this.game.freeze)
+                    return;
+
                 this.cardCenter = {
                     id: this.cardCenter.id,
                     position: this.cardCenter.position,
                     to: { ...this.cardCenter.position, height: 0 }
                 };
-            else
+            }
+            else {
                 this.cardCenter = {
                     id: card.id,
                     position: card.position,
@@ -391,6 +396,7 @@ export default {
                         rotation: 0
                     }
                 };
+            }
 
             const animations = [{ id: 'cardCenter', from: this.cardCenter.position, to: this.cardCenter.to, isIncrement: false }];
             helperAnimation.animateMultiple(animations, gameGundam.delay);
