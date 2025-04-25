@@ -90,7 +90,7 @@
             </div>
 
             <!-- cards -->
-            <div v-for="card in cards.filter(x => !x.hide)" :key="'B' + card.index">
+            <div v-for="card in game.cards.filter(x => !x.hide)" :key="'B' + card.index">
                 <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
                     :hidestat="card.hidestat" @click="showCard(card)">
                 </gameCard>
@@ -206,34 +206,32 @@ export default {
     components: { gameCard, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
+        resizeTimeout: null,
         freeze: true,
-        cards: [],
         cardCenter: { id: 'GD01-028', position: { width: 0 } },
         game: null,
         title: null,
         text: null,
         popupShow: true,
         ignoreEvent: [],
-        cardList: null,
         decklistPlayer1: null,
         decklistPlayer2: null,
         sources: [],
         targets: []
-    }),/*
-    watch: {
-        deck1() { this.setDecks();},
-        deck2() { this.setDecks();}
-    },*/
+    }),
     mounted() {
-        document.body.style.overflow = "hidden";
         window.addEventListener("resize", () => {
-            this.refreshG++;
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(this.resizeGame, 300);
         });
-
-        this.cardList = cards.cards;
+        
         this.setDecks();
     },
     methods: {
+        resizeGame() {
+            gameGundam.resize(this.game, this.$vuetify.breakpoint.width,
+                this.$vuetify.breakpoint.height);
+        },
         setDecks() {
             this.decklistPlayer1 = this.deck1;
             this.decklistPlayer2 = this.deck2;
@@ -253,12 +251,12 @@ export default {
         nextTurn() {
             if (this.freeze)
                 return;
-            this.game = gameGundam.endTurn(this.game);
+            gameGundam.endTurn(this.game);
             this.refreshGame();
         },
         continue() {
             this.freeze = false;
-            this.game = gameGundam.continue(this.game);
+            gameGundam.continue(this.game);
             if (this.game.end) {
                 this.$emit('end', this.game.isVictory);
                 return;
@@ -279,7 +277,7 @@ export default {
         useEffect() {
             if (this.freeze)
                 return;
-            this.game = gameGundam.useEffect(this.game);
+            gameGundam.useEffect(this.game);
             this.continue();
         },
         dropPoint(event) {
@@ -297,33 +295,32 @@ export default {
             if (this.freeze)
                 return;
             this.freeze = true;
-            this.game = gameGundam.playCard(this.game, card1, card2, drop);
+            gameGundam.playCard(this.game, card1, card2, drop);
             this.refreshGame();
         },
         selectChoice(choice) {
             this.freeze = true;
-            this.game = gameGundam.selectChoice(this.game, choice);
+            gameGundam.selectChoice(this.game, choice);
             this.refreshGame();
         },
         selectChoiceCard(card) {
             this.freeze = true;
-            this.game = gameGundam.selectChoiceCard(this.game, card);
+            gameGundam.selectChoiceCard(this.game, card);
             this.refreshGame();
         },
         showLocationCards(location, isPlayer1) {
-            this.game = gameGundam.showLocationCards(this.game, location, isPlayer1);
+            gameGundam.showLocationCards(this.game, location, isPlayer1);
             this.refreshGame();
         },
         showOrHidePopup() {
             this.popupShow = !this.popupShow;
         },
         tutoNext(next = true) {
-            this.game = gameGundam.tutoNext(this.game, next);
+            gameGundam.tutoNext(this.game, next);
             this.refreshGame();
         },
         refreshGame() {
             this.freeze = true;
-            this.cards = this.game.cards;
             this.sources = this.game.player1.drags;
 
             this.showTextEffect(this.game.showTitle, 'title', 'divTitleParent', { height: 0 });
@@ -338,7 +335,7 @@ export default {
         },
         beginAnimation() {
             let animationTime = gameGundam.delay;
-            const cardsToAnimate = this.cards.filter(x => x.to);
+            const cardsToAnimate = this.game.cards.filter(x => x.to);
             animationTime = cardsToAnimate.length < 1 && !this.game.showTitle && !this.game.textEffect ? 10 : gameGundam.delay;
             this.freeze = true;
             setTimeout(() => { this.endAnimation(); }, animationTime + 10);
@@ -410,7 +407,7 @@ export default {
         // Utils
         clone(obj) { return Object.assign({}, obj); },
         getCard(index) {
-            return this.cards.find(x => x.index == index);
+            return this.game.cards.find(x => x.index == index);
         },
         getFieldStyleObj(size) {
             return this.getFieldStyle(size.x, size.y, size.width, size.height);

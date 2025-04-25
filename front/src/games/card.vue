@@ -1,6 +1,6 @@
 <template>
   <div @click="$emit('click', card)"
-    :class="{ absolute: 1, bgYellow: 1, circle15px: 1, 'elevation-24': 1, fadeOut: card.fadeOut }" :style="{
+    :class="{ absolute: 1, bgYellow: 1, circle15px: 1, 'elevation-24': 1, fadeOut: card?.fadeOut }" :style="{
       left: card.position.x + 'px',
       top: card.position.y + 'px',
       width: card.position.width + 'px',
@@ -30,7 +30,7 @@
 
     <!-- fxText-->
     <div v-if="card.fxText"
-      :class="{ absolute: 1, 'text-center': 1, 'text-center-vertical': 1, fontSize150em: 1, 'text-shadow-black': 1, fadeInOut: !card.fxTextCancelFadeout }"
+      :class="{ absolute: 1, 'text-center': 1, 'text-center-vertical': 1, fontSize150em: 1, 'text-shadow-black': 1, fadeInOut: !card?.fxTextCancelFadeout }"
       :style="{ ...getRedFxStyle(card), 'mask-image': '', 'color': 'red' }">
       {{ card.fxText }}
     </div>
@@ -59,11 +59,13 @@ export default {
   props: ['card', 'folder', 'shine', 'hidestat'],
   methods: {
     getRedFxStyle(card) {
+      if (!card)
+        return {};
       return {
         opacity: card.fxTextCancelFadeout ? 1 : 0,
         left: '-100%',
         top: '-71.3%',
-        width: (this.card.position.width * 3) + 'px', height: (this.card.position.width * 3) + 'px',
+        width: (card.position.width * 3) + 'px', height: (card.position.width * 3) + 'px',
         'mask-image': 'radial-gradient(rgba(0 0 0 /0) 40%, black 45%, rgba(0 0 0 /0) 70%)'
       };
     }

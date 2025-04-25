@@ -108,6 +108,11 @@ class game {
         return this.continue(game);
     }
 
+    static resize(game, width, height){        
+        game.grid = this.createGrid(width, height);
+        this.taskEndRefresh(game);
+    }
+
     static showLocationCards(game, location, isPlayer1) {
         const player = this.getPlayer(isPlayer1);
         this.addTaskFirst({
