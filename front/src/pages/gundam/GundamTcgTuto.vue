@@ -21,8 +21,8 @@
       quickstart: false
      }),
     mounted(){
-      this.deck1 = '1xGD01-088,1xST01-010,1xST01-005,1xGD01-004,1xST01-010,1xST01-001,1xST01-015,1xGD01-099,44xST01-001';
-      this.deck2 = '2xST03-008,1xST03-011,1xGD01-031,1xGD01-026,1xST03-011,46xST03-008';
+      this.deck1 = '1xGD01-088,1xST01-002,1xST01-005,1xGD01-004,1xST01-010,1xST01-001,1xGD01-099,1xST01-015,1xST01-010,1xST01-015,42xST01-001';
+      this.deck2 = '2xST03-008,1xST03-011,1xGD01-031,3xST03-008,1xGD01-026,44xST03-008';
     },
     methods: { 
       end(isVictory){

@@ -90,7 +90,7 @@
             </div>
 
             <!-- cards -->
-            <div v-for="card in cards.filter(x=> !x.hide)" :key="'B' + card.index">
+            <div v-for="card in cards.filter(x => !x.hide)" :key="'B' + card.index">
                 <gameCard :id="'C' + card.index" :card="card" folder="Gundam/cards/" :shine="card.selectable && !freeze"
                     :hidestat="card.hidestat" @click="showCard(card)">
                 </gameCard>
@@ -101,11 +101,11 @@
                 :style="{ ...getFieldStyleObj(game.showTextTuto), 'z-index': game.showTextTuto.zindex ? game.showTextTuto.zindex : 56 }">
                 <!-- Arrow-->
                 <div class="bgWhite absolute" v-if="game.showTextTuto.arrow"
-                    :style="{ ...getFieldStyleObj(game.showTextTuto.arrow), transform: 'rotate(45deg)', 'z-index': -1 }">
+                    :style="{ ...getFieldStyleObj(game.showTextTuto.arrow), transform: 'rotate(45deg)', 'z-index': -1, border: 'solid blue 5px' }">
                 </div>
 
                 <div class="w100p h100p bgWhite colorBlack flex"
-                    style="flex-direction: column; justify-content: center;">
+                    style="flex-direction: column; justify-content: center; border: solid blue 5px">
                     <div class="text-center m5px">{{ game.showTextTuto.text }}</div>
                     <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
                         style="align-self: flex-end;">
@@ -175,7 +175,6 @@
 
         <div class="absolute" style="top:0px; left:0px;">
             <!-- Debug -->
-            {{ game?.tutoStep }}
         </div>
     </div>
 

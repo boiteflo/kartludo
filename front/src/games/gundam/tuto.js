@@ -30,6 +30,9 @@ class tuto {
     }
 
     static continueTuto(game) {
+        if (game.tutoDone)
+            return;
+
         game.tutoStep = game.tutoStep ? game.tutoStep : 0;
 
         if (game.showTextTuto && game.showTextTuto.next) {
@@ -54,7 +57,7 @@ class tuto {
     }
 
     static autoNextStep(game, step) {
-        if (!step.isDone || game.tutoStep + 1 > this.tutoSteps.length)
+        if (!step.isDone || game.tutoStep + 1 >= this.tutoSteps.length)
             return false;
 
         const nextStep = this.tutoSteps[game.tutoStep + 1];
@@ -71,7 +74,7 @@ class tuto {
         en: {
             welcome: 'Welcome to Gundam TCG.',
             deck: 'This is your deck. It contains 50 cards.',
-            playUnit: 'The first turn has begun. You’ve drawn one card from your deck. It’s a unit card you can play. Select it and place it here.',
+            playUnit: 'The first turn has begun. You’ve drawn one card from your deck. It’s a unit card you can play. Press and hold the card, then drag it here.',
             cantAttack: "A unit can't attack the turn it's played unless it's linked with a pilot. We’ll learn about linking pilots shortly.",
             endTurn: "You’ve done all you can this turn. Press the 'End Turn' button to proceed.",
             zoom: "Click on a card to zoom in and see its details.",
@@ -89,24 +92,37 @@ class tuto {
             rested: "This unit has attacked. It’s now rested (rotated 90 degrees).",
             showApHp2: "Above the card, you see (0 - 1), indicating the card’s AP (0) and HP (1).",
             showApHp3: "The unit attacked the enemy base, dealing 2 AP damage. The base had 3 HP and is now reduced to 1 HP.",
-            showEffect: "When a card’s effect activates, a red circle with text appears. For this card: 'repair 1'.",
+            showEffect: "When a card’s effect activates, a red circle with text appears.",
             p2LinkUnit: "Player 2 has played a unit with a linked pilot, so it can attack this turn.",
             p2AttackBase: "Player 2 can now use this unit to attack our base.",
             p2AttackUnit: "Alternatively, it can attack our rested units.",
             unitTrash: "Our unit’s HP reached 0. It’s been sent to the trash.",
             linkUnit: "This unit can be linked with a pilot. Play it now.",
             linkPilot: "You can now pair this pilot with the unit you just played.",
-            attackLink: "Now you can attack using the linked unit."
+            attackLink: "The pilot’s AP and HP values have been added to those of the unit. Additionally, you can now attack with this linked unit.",
+            revenge: "We’ll avenge it by attacking the Gelgoog with our unit. Select your unit and release it onto the opponent’s unit.",
+            famous: "Now it's time to link a unit with a pilot. To do that, I’m giving you a famous unit card.",
+            baseDestroyed: "The enemy base has been destroyed. To win this battle, you now need to destroy all shield cards and land a final attack.",
+            command: "This is a command card. When played, it activates its effect and is then sent to the trash.",
+            attackRested: "These opponent units are now rested. We can attack one of them.",
+            burst: "This shield card was revealed due to the Zaku II's attack. When that happens, its 'Burst' effect is triggered.",
+            playBase: "This is a base card. Play it now.",
+            oneBase: "Each player can only have one base on the field.",
+            useEffect: "Our base has an ability we can activate from here.",
+            whiteBase: "The White Base effect gives you a unit. This unit has no link condition.",
+            pairPilot: "However, we can still pair a pilot with it.",
+            showPairUnit: "These cards are paired, not linked. That means the unit can’t attack this turn. However, the pilot’s AP and HP have been added to the unit’s values.",
+            playAlone: "Now it’s your turn to play on your own. Try to win this duel by attacking where no shield or base remains."
         },
         fr: {
             welcome: 'Bienvenue dans Gundam TCG.',
-            deck: 'Voici votre deck. Il contient 50 cartes.',
-            playUnit: 'Le premier tour commence. Vous avez pioché une carte de votre deck. C’est une carte unité que vous pouvez jouer. Sélectionnez-la et placez-la ici.',
-            cantAttack: "Une unité ne peut pas attaquer le tour où elle est jouée, sauf si elle est liée à un pilote. Nous verrons cela dans un instant.",
+            deck: 'Voici votre Deck. Il contient 50 cartes.',
+            playUnit: 'Le premier tour commence. Vous avez pioché une carte de votre Deck. C’est une carte unité (Unit) que vous pouvez jouer. Appuyez longuement sur la carte, puis faites-la glisser ici.',
+            cantAttack: "Une unité ne peut pas attaquer le tour où elle est jouée, sauf si elle est liée à un pilote. Nous verrons cela dans quelques instants.",
             endTurn: "Vous ne pouvez plus rien faire ce tour-ci. Appuyez sur le bouton 'Fin du tour' pour continuer.",
             zoom: "Cliquez sur une carte pour zoomer et voir ses détails.",
-            showLevelCost: "En haut à gauche d’une carte, vous pouvez voir son niveau (3) et son coût (2).",
-            showLink: "En bas à gauche, vous trouverez la condition de liaison de pilote : (White Base Team) Trait.",
+            showLevelCost: "En haut à gauche d’une carte, vous pouvez voir son Level (3) et son Cost (2).",
+            showLink: "En bas à gauche, vous trouverez la condition de liaison de pilote (Link) : (White Base Team) Trait.",
             showApHp: "En bas à droite, vous verrez les Points d’Attaque (AP : 2) et les Points de Vie (HP : 3) de la carte. Cliquez à nouveau pour dézoomer.",
             showResources: "Voici les 2 barres de ressources. Celle du bas est la vôtre ; celle du haut est celle de votre adversaire. Vous disposez actuellement de 3 ressources.",
             showResources2: "Votre adversaire possède 2 ressources classiques (jaunes) et 1 ressource EX (bleue). Le joueur 2 commence toujours avec une ressource EX.",
@@ -116,17 +132,30 @@ class tuto {
             resourcesUsed: "2 ressources ont été utilisées. Il vous en reste 1 disponible (jaune) et 2 indisponibles (rouges).",
             ennemyBase: "Voici la base ennemie. Chaque joueur commence la partie avec une base.",
             attack: "Cette unité est prête à attaquer. Sélectionnez-la et relâchez-la sur le terrain adverse pour lancer l’attaque.",
-            rested: "Cette unité a attaqué. Elle est maintenant engagée (pivotée à 90 degrés).",
+            rested: "Cette unité a attaqué. Elle est maintenant engagée (Rest), pivotée à 90 degrés.",
             showApHp2: "Au-dessus de la carte, vous voyez (0 - 1), indiquant les AP (0) et les HP (1).",
-            showApHp3: "L’unité a attaqué la base ennemie, infligeant 2 points de dégâts (AP). La base avait 3 HP, elle en a maintenant 1.",
-            showEffect: "Lorsqu’un effet de carte est activé, un cercle rouge avec du texte apparaît. Pour cette carte : 'Réparer 1'.",
+            showApHp3: "L’unité a attaqué la base ennemie, infligeant 2 points de dégâts (AP). La base avait 3 HP avant l'attaque, elle n’en a plus qu’un maintenant.",
+            showEffect: "Lorsqu’un effet de carte est activé, un cercle rouge avec le tite de l'effet apparaît.",
             p2LinkUnit: "Le joueur 2 a joué une unité avec un pilote lié. Elle peut donc attaquer ce tour-ci.",
             p2AttackBase: "Le joueur 2 peut utiliser cette unité pour attaquer notre base.",
-            p2AttackUnit: "Ou bien il peut attaquer notre unité engagée.",
-            unitTrash: "Les PV de notre unité sont tombés à 0. Elle a été envoyée à la défausse.",
+            p2AttackUnit: "Ou bien il peut attaquer notre unité engagée (Rest).",
+            unitTrash: "Les PV de notre unité sont tombés à 0. Elle a été envoyée à la défausse (Trash).",
             linkUnit: "Cette unité peut être liée à un pilote. Jouez-la maintenant.",
             linkPilot: "Vous pouvez maintenant associer ce pilote à l’unité que vous venez de jouer.",
-            attackLink: "Vous pouvez maintenant attaquer avec cette unité liée."
+            attackLink: "Les valeurs d’AP et de HP du pilote ont été ajoutées à celles de l’unité. De plus, vous pouvez désormais attaquer avec cette unité liée.",
+            revenge: "Nous allons le venger en attaquant le Gelgoog avec notre unité. Sélectionnez votre unité et relâchez-la sur l’unité ennemie.",
+            famous: "Il est maintenant temps de lier une unité à un pilote. Pour cela, je vais vous donner une carte unité célèbre.",
+            baseDestroyed: "La base ennemie a été détruite. Pour remporter ce combat, vous devez maintenant détruire toutes les cartes Shield et lancer une attaque finale.",
+            command: "Ceci est une carte Command. Lorsqu'elle est jouée, son effet s’active, puis elle est envoyée à la défausse.",
+            attackRested: "Les unités adverses sont maintenant épuisées. Nous pouvons en attaquer une.",
+            burst: "Cette carte Shield a été révélée à cause de l’attaque du Zaku II. Lors de cette révélation, l’effet 'Burst' s’active.",
+            playBase: "Voici une carte Base. Jouez-la.",
+            oneBase: "Un joueur ne peut avoir qu’une seule base sur le terrain.",
+            useEffect: "Notre base possède un effet que nous pouvons activer ici.",
+            whiteBase: "L’effet de cette carte 'White Base' vous donne une unité. Cette unité n’a pas de condition de lien.",
+            pairPilot: "Mais nous pouvons tout de même associer (Pair) un pilote à cette unité.",
+            showPairUnit: "Ces cartes sont associées (Pair), mais non liées (Link). Cela signifie que l’unité ne peut pas attaquer ce tour-ci. Toutefois, les valeurs d’AP et de HP du pilote ont été ajoutées à celles de l’unité.",
+            playAlone: "C’est à vous de jouer seul maintenant. Essayez de remporter ce duel."
         }
     }
 
@@ -313,7 +342,7 @@ class tuto {
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
                 game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.player1.hand[0].position),
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position, 300, game.grid.boxHeight *1.5),
                     text: context.getTextTuto('playLevel3')
                 };
             }
@@ -351,8 +380,8 @@ class tuto {
             // animations base arriving
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.showTextTuto = null;                
-                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Base' && x.id != 'player2Base');                
+                game.showTextTuto = null;
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Base' && x.id != 'player2Base');
                 context.addShielsAndBase(game);
                 game.freeze = false;
                 context.addTask({ id: context.taskEndRefresh.name });
@@ -528,7 +557,7 @@ class tuto {
                 game.freezeButtons = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[0].position), hideNext: true,
-                    text: 'We will avenge it by attacking the gelgoog with our unit. Select it and release it on the opponent unit.'
+                    text: context.getTextTuto('revenge')
                 };
             }
         },
@@ -553,7 +582,7 @@ class tuto {
                 game.freezeButtons = true;
                 game.showTextTuto = {
                     ...context.tutoSmall(game),
-                    text: "Now it's time to link a unit and a pilot. For this purpose, I will give you one famous unit card."
+                    text: context.getTextTuto('famous')
                 };
             }
         },
@@ -563,6 +592,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = null;
                 context.addTask({ id: context.spawnOrMove.name, isPlayer1: true, from: context.locationDeck, to: context.locationHand });
+                context.addTask({ id: context.spawnOrMove.name, isPlayer1: false, from: context.locationDeck, to: context.locationHand });
                 context.addTask({ id: context.spawnOrMove.name, isPlayer1: false, from: context.locationDeck, to: context.locationHand });
             }
         },
@@ -639,8 +669,8 @@ class tuto {
             action: (context, game) => {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'player1Shield' && x.id != 'player2Shield');
                 game.showTextTuto = {
-                    ...context.alignPositionNextToUsingSens(game, game.player2.positions.shield, 300, game.grid.boxHeight*2, 1),
-                    text: 'The ennemy base have been destroyed. To win this fight, we need now to destroy all shield cards and perform a final attack.'
+                    ...context.alignPositionNextToUsingSens(game, game.player2.positions.shield, 300, game.grid.boxHeight * 2, 1),
+                    text: context.getTextTuto('baseDestroyed')
                 };
             }
         },
@@ -669,14 +699,110 @@ class tuto {
             }
         },
         {
-            // play base
-            conditions: (context, game, task) => { return context.conditionNexTurn(context, game)},
+            // play command
+            conditions: (context, game, task) => { return context.conditionNexTurn(context, game) },
             action: (context, game) => {
                 game.freeze = false;
                 game.freezeButtons = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
-                    text: "This is not a unit or a pilot. It's base. Play it"
+                    text: context.getTextTuto('command')
+                };
+            }
+        },
+        {
+            // Command is played
+            conditions: (context, game, task) => {
+                const isGood = task && task.card1 && task.card1.id === 'GD01-099'; // Command
+                if (!isGood) {
+                    game.tasks = [];
+                }
+                return isGood;
+            },
+            action: (context, game) => {
+                game.freezeButtons = true;
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // Show tuto text Attack with gundam
+            conditions: (context, game, task) => { return !task; },
+            action: (context, game) => {
+                game.cardFocus = null;
+                game.freezeButtons = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.field[0].position), hideNext: true,
+                    text: context.getTextTuto('attackRested')
+                };
+            }
+        },
+        {
+            // Gundam attack
+            conditions: (context, game, task) => {
+                const isGood = task && task.card1 && task.card1.id.startsWith('ST01-001') && task.card2 && task.card2.id.startsWith('ST03-008'); // Gundam attack zaku II
+                if (!isGood) {
+                    game.tasks = [];
+                }
+                return isGood;
+            },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // press end turn
+            conditions: (context, game, task) => { return !task },
+            action: (context, game) => {
+                game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEndTurn');
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.grid.buttonEndTurn), hideNext: true,
+                    text: context.getTextTuto('endTurn')
+                };
+            }
+        },
+        {
+            // unfreeze and mask end turn button
+            conditions: (context, game, task) => { return task && task.id === context.nextTurn.name; },
+            action: (context, game) => {
+                game.showTextTuto = null;
+                game.freezeButtons = true;
+                game.player1.shield[0].id = 'GD01-088';
+                game.tutoMasks.push({
+                    isPlayer1: true, id: 'buttonEndTurn',
+                    x: game.grid.buttonEndTurn.x - 10, width: game.grid.buttonEndTurn.width + 20,
+                    y: game.grid.buttonEndTurn.y - 10, height: game.grid.buttonEndTurn.height + 20
+                });
+            }
+        },
+        {
+            // show burst card
+            conditions: (context, game, task) => { return game.player1.hand.length > 0 && !game.player1.hand[0].to },
+            action: (context, game) => {
+                game.freeze = true;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position),
+                    text: context.getTextTuto('burst')
+                };
+            }
+        },
+        {
+            // finish opponent turn
+            conditions: (context, game, task) => { return false; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.showTextTuto = null;
+            }
+        },
+        {
+            // play base
+            conditions: (context, game, task) => { return game.player1.hand.length > 1 && !game.player1.hand[1].to && context.cardHighlight.length < 1; },
+            action: (context, game) => {
+                game.freeze = false;
+                game.freezeButtons = false;
+                game.showTextTuto = {
+                    ...context.alignPositionNextTo(game, game.player1.hand[1].position), hideNext: true,
+                    text: context.getTextTuto('playBase')
                 };
             }
         },
@@ -700,7 +826,7 @@ class tuto {
             action: (context, game) => {
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.base[0].position),
-                    text: "A player can only have one base. The previous one have been replaced."
+                    text: context.getTextTuto('oneBase')
                 };
             }
         },
@@ -712,19 +838,19 @@ class tuto {
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'buttonEffect');
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.grid.buttonEffect), hideNext: true,
-                    text: "Our base has an effect that we can activate here."
+                    text: context.getTextTuto('useEffect')
                 };
             }
         },
         {
             // use effect popup
-            conditions: (context, game, task) => { 
+            conditions: (context, game, task) => {
                 const isGood = task && task.id == context.lunchMainEffectCard.name;
                 if (!isGood) {
                     game.tasks = [];
                 }
                 return isGood;
-             },
+            },
             action: (context, game) => {
                 game.showTextTuto = null;
             }
@@ -736,9 +862,9 @@ class tuto {
                 if (task && task.id == context.popup.name)
                     return false;
                 if (!task) {
-                    game.tutoStep-=1;
-                    this.tutoSteps[game.tutoStep].isDone=false;
-                    this.tutoSteps[game.tutoStep+1].isDone=false;
+                    game.tutoStep -= 1;
+                    this.tutoSteps[game.tutoStep].isDone = false;
+                    this.tutoSteps[game.tutoStep + 1].isDone = false;
                     return false;
                 }
                 if (!isGood) {
@@ -757,7 +883,7 @@ class tuto {
                 game.freezeButtons = true;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.field[1].position),
-                    text: "The white base effect will give you one unit. This unit doesn't have a link condition"
+                    text: context.getTextTuto('whiteBase')
                 };
             }
         },
@@ -765,10 +891,10 @@ class tuto {
             // show text tuto play banagher
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.freezeButtons=false;
+                game.freezeButtons = false;
                 game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext:true,
-                    text: "But we can still pair this pilot to it"
+                    ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
+                    text: context.getTextTuto('pairPilot')
                 };
             }
         },
@@ -790,9 +916,10 @@ class tuto {
             // Show text tuto banagher guncanon
             conditions: (context, game, task) => { return !task; },
             action: (context, game) => {
+                game.freezeButtons = true;
                 game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.player1.field[1].position, 300,  game.grid.boxHeight*1.5),
-                    text: "Theses cards are not linked, they are only paired. It means this unit can't attack this turn. But the AP and HP of the pilot have been added to the one of this unit"
+                    ...context.alignPositionNextTo(game, game.player1.field[1].position, 300, game.grid.boxHeight * 1.5),
+                    text: context.getTextTuto('showPairUnit')
                 };
             }
         },
@@ -800,39 +927,21 @@ class tuto {
             // Attack with gundam
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.freezeButtons=true;
                 game.tutoMasks = [];
                 game.showTextTuto = {
                     ...context.tutoSmall(game),
-                    text: "It's time for you to play alone. Try to win this duel by attacking the ennemy where there is no shield or base left."
+                    text: context.getTextTuto('playAlone')
                 };
             }
         },
         {
             // hide text tuto
-            conditions: (context, game, task) => { return task && task.id === context.play.name; },
-            action: (context, game) => {
-                game.freezeButtons=false;
-                game.showTextTuto = null;
-            }
-        },
-        {
-            // burst
-            conditions: (context, game, task) => { return task && task.id == context.applyEffectCard.name && task.card1 && task.card1.id=='ST01-010'; },
-            action: (context, game) => {
-                game.showTextTuto = {
-                    ...context.alignPositionNextTo(game, game.grid.player1Shield),
-                    text: "This card have a burst effect. these kind of effect is trigger when the card is reveal from the shield area"
-                };
-            }
-        },
-        {
-            // End
             conditions: (context, game, task) => { return false; },
             action: (context, game) => {
-                game.freeze = false;
                 game.freezeButtons = false;
+                game.freeze = false;
                 game.showTextTuto = null;
+                game.tutoDone = true;
             }
         }
     ];

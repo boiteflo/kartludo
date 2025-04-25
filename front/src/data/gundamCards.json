@@ -926,32 +926,32 @@
             "effects": [
                 {
                     "trigger": "burst",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 6,
                     "id": "rest"
                 },
                 {
                     "trigger": "command",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 3,
                     "id": "rest"
                 },
                 {
                     "trigger": "command",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 3,
                     "id": "rest"
                 },
                 {
                     "trigger": "action",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 3,
                     "id": "rest",
                     "optional": true
                 },
                 {
                     "trigger": "action",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 3,
                     "id": "rest",
                     "optional": true
