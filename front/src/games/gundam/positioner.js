@@ -10,7 +10,7 @@ class positioner {
     static locationResource = 'resource';
     static locationPair = 'pair';
 
-    static createGrid(screenWidth, screenHeight) {
+    static createGrid(game, screenWidth, screenHeight) {
         const grid = {};
 
         grid.border = 5;
@@ -94,12 +94,12 @@ class positioner {
         grid.player1Field.drop = {
             x: grid.player1Field.x + (grid.player1Field.width / 2) - (width / 2),
             y: grid.player1Field.y + (grid.player1Field.height / 2) - (height / 2),
-            width, height, text: 'Play'
+            width, height, text: game.texts.play
         }
         grid.player2Field.drop = {
             x: grid.player2Field.x + (grid.player2Field.width / 2) - (width / 2),
             y: grid.player2Field.y + (grid.player2Field.height / 2) - (height / 2),
-            width, height, text: 'Attack'
+            width, height, text: game.texts.attack
         }
 
         return grid;

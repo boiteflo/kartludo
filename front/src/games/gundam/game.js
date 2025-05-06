@@ -34,7 +34,7 @@ class game {
     static isStart;
     static quickstart;
 
-    static setup(width, height, cards, decklistPlayer1, decklistPlayer2, quickstart, useTuto) {
+    static setup(width, height, cards, playerInfo, texts, decklistPlayer1, decklistPlayer2, quickstart, useTuto, campaign) {
         this.cards = cards.cards;
         this.quickstart = quickstart;
         this.game = {
@@ -46,7 +46,10 @@ class game {
             decklistPlayer1, decklistPlayer2,
             incruises: [],
             effects: [],
-            tuto:useTuto
+            tuto:useTuto,
+            campaign,
+            playerInfo,
+            texts
         };
 
         const scripts = [
@@ -58,7 +61,7 @@ class game {
             scripts.push(tuto); // = [tuto].concat(scripts);
 
         utils.addFunction(scripts, this, useTuto);
-        this.game.grid = this.createGrid(width, height);
+        this.game.grid = this.createGrid(this.game, width, height);
         this.continue(this.game);
         this.isStart = true;
         return this.game;

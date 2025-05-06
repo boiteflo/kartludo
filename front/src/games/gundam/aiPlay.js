@@ -3,36 +3,36 @@ class aiPlay {
         if (player.base.length < 1) {
             const bases = cardsAvailable.filter(card => this.isCardBase(card));
             if (bases.length > 0)
-                return this.playCombo(player, { unit: bases[0] });
+                return this.playCombo(game, player, { unit: bases[0] });
         }
 
         if (combos.pilotLinkUnits.length > 0)
-            return this.playCombo(player, combos.pilotLinkUnits[0]);
+            return this.playCombo(game, player, combos.pilotLinkUnits[0]);
 
         if (combos.pilotLinkUnitsOnFieldWithEffects.length > 0)
-            return this.playCombo(player, combos.pilotLinkUnitsOnFieldWithEffects[0]);
+            return this.playCombo(game, player, combos.pilotLinkUnitsOnFieldWithEffects[0]);
 
         const combo = this.handleStrategy(game, player, cardsAvailable);
         if (combo.stop || combo.taskAdded)
             return combo;
         if (combo && combo.unit)
-            return this.playCombo(player, combo);
+            return this.playCombo(game, player, combo);
 
         const units = cardsAvailable.filter(card => this.isCardUnit(card))
             .sort((a, b) => b.level - a.level);
         if (units.length > 0)
-            return this.playCombo(player, { unit: units[0] });
+            return this.playCombo(game, player, { unit: units[0] });
 
         return {};
     }
 
-    static playCombo(player, combo) {
+    static playCombo(game, player, combo) {
         let tasks = [];
         if (combo.unit && combo.unit.location === this.locationHand)
-            tasks = tasks.concat(this.getPlayCardTasks(player, combo.unit));
+            tasks = tasks.concat(this.getPlayCardTasks(game, player, combo.unit));
 
         if (combo.pilot && combo.pilot.location === this.locationHand)
-            tasks = tasks.concat(this.getPlayCardTasks(player, combo.pilot, combo.unit));
+            tasks = tasks.concat(this.getPlayCardTasks(game, player, combo.pilot, combo.unit));
 
         this.addTasksFirst(tasks);
         return { taskAdded: tasks.length > 0 };
@@ -48,7 +48,7 @@ class aiPlay {
 
         const notEnoughShield = this.getNotEnoughShield(game, task, player, unitsThatCanAttack, attacker);
         const target = this.getTarget(game, task, player, attacker, notEnoughShield);
-        this.declareAiAttack(attacker, target);
+        this.declareAiAttack(game, attacker, target);
         return { taskAdded: true };
     }
 
@@ -76,16 +76,22 @@ class aiPlay {
         return target;
     }
 
-    static getPlayCardTasks(player, card1, card2) {
-        const value = `I Play ${card1.name} ${card2 ? 'with ' + card2.name : ''}`;
+    /*"iPlay" : "I play ",
+        "with":" with ",
+        "iAttack" : "I attack with ",
+        "against" : " againt ",
+    */
+
+    static getPlayCardTasks(game, player, card1, card2) {
+        const value = `${game.texts.iPlay} ${card1.name} ${card2 ? game.texts.with + card2.name : ''}`;
         return [
             { id: this.showTitle.name, value, isPlayer1: false, delay: true },
             { id: this.play.name, card1, card2, zone: player.positions.field, regularPlay: true }
         ]
     }
 
-    static declareAiAttack(attacker, target) {
-        const value = `I attack with ${attacker.name} (Level ${attacker.level}, AP ${attacker.ap}) ${target ? 'against ' + target.name : ''}`;
+    static declareAiAttack(game, attacker, target) {
+        const value = `${game.texts.iAttack} ${attacker.name} ${target ? game.texts.against + target.name : ''}`;
         this.addTasksFirst([
             { id: this.showTitle.name, value, isPlayer1: false, delay: true },
             {

@@ -1,8 +1,8 @@
 <template>
-    <div class="bg2 h100p w100p fadeIn3sec">
+    <div class="bg2 h100p w100p fadeIn3sec" :key="refreshPage">
         <menu-bar-gundam></menu-bar-gundam>
 
-        <div class="w100p" style="height: calc(100% - 64px)">
+        <div v-if="texts" class="w100p" style="height: calc(100% - 64px)">
             <img v-if="isHorizontal" style="height: calc(100% - 64px)"
                 :class="{ w100p: 1, absolute: 1, 'image-cover': 1, 'blur-box': 1, 'blurred': step !== 'menu' }"
                 :src="require('@/assets/Gundam/wallpaper.webp')" />
@@ -18,33 +18,37 @@
                     :style="{ color: 'black', 'margin-top': '50px', 'margin-bottom': '30px' }">
                     GUNDAM TCG
                 </div>
+                <div v-if="playerInfo" class="w100p flex flex-space-around" style="height: 30px; ">
+                    <img :src="require('@/assets/en.png')" :style="saturateIfLang('en')" @click="selectLang('en')" class="cursorHand">
+                    <img :src="require('@/assets/fr.png')" :style="saturateIfLang('fr')" @click="selectLang('fr')" class="cursorHand">
+                </div>
                 <v-btn class="w100p" hide-details @click="tuto"
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
-                    TUTORIEL
+                    {{texts.tuto}}
                 </v-btn>
                 <v-btn class="w100p" hide-details @click="decklists"
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
-                    DECKLISTS
+                    {{texts.decklists}}
                 </v-btn>
                 <v-btn class="w100p" hide-details @click="arcade"
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
-                    ARCADE
+                    {{texts.arcade}}
                 </v-btn>
                 <v-btn class="w100p" hide-details
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
-                    CAMPAIGN
+                    {{texts.campaign}}
                 </v-btn>
                 <v-btn class="w100p" hide-details @click="duel"
                     style="margin-top:20px; height: 60px; background-color: rgba(200,200,200,0.75);">
-                    DUEL
+                    {{texts.duel}}
                 </v-btn>
                 <div class="w100p textVerticalCenter"
                     style="margin-top:20px; height:60px; background-color: rgba(200,200,200,0.75);">
-                    By FlorentOutan - 2025
+                    {{texts.byFlo}}
                 </div>
             </div>
 
-            <div v-else class="relative h100p fadeIn3sec">
+            <div v-else class="relative fadeIn3sec">
                 <div class="mp5px absolute">
                     <v-btn @click="back"><v-icon class="colorBlack">mdi-arrow-left</v-icon></v-btn>
                 </div>
@@ -52,21 +56,21 @@
 
                 <div v-if="step === 'decklist'">
                     <!-- DeckList Show-->
-                    <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/"
-                        style="top:0px;" @setCard="setDeckListCard3" @popup="popup"
-                        @cardclick="showCardDeckList" @cancel="back" @validate="setDeckList">
+                    <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/" style="top:0px;" 
+                        @cardclick="showCardDeckList" @cancel="back" @validate="setDeckList" @delete="deleteDecklist" @duplicate="duplicateDecklist">
                     </deck-list>
                 </div>
 
                 <div v-if="step === 'decklists'">
                     <!-- DeckLists -->
-                    <div class="mp5px">
-                        <v-btn v-if="deckListAdd" @click="addDeck">Add new deck</v-btn>
-                    </div>
                     <div class="flex flex-wrap flex-space-around fontSize150em">
                         <deck v-for="(deck, index) in deckList" :key="'Deck' + index" :deck="deck"
                             folder="Gundam/cards/" @click="selectDeckList(deck)" style="width: 15%">
                         </deck>
+                    </div>
+                    <br><br>
+                    <div class="mp5px flex flex-center">
+                        <v-btn v-if="deckListAdd" @click="addDeck">{{texts.addNewDeck}}</v-btn>
                     </div>
                 </div>
 
@@ -78,13 +82,13 @@
                     </deck>
                     <div style="height:30px"></div>
                     <div class="flex flex-space-around" style="width:50%; margin-left:25%">
-                        <v-btn class="mp5px" @click="back">Give up</v-btn>
-                        <v-btn v-if="!task.fight && task.battleResult == 'Victory'" class="mp5px"
+                        <v-btn class="mp5px" @click="back">{{texts.giveUp}}</v-btn>
+                        <v-btn v-if="!task.fight && task.battleResult == this.texts.victory" class="mp5px"
                             @click="continueProcess">
-                            Next Battle
+                            {{texts.nextBattle}}
                         </v-btn>
-                        <v-btn v-if="task.fight || task.battleResult != 'Victory'" class="mp5px bg2"
-                            @click="continueProcess">Battle</v-btn>
+                        <v-btn v-if="task.fight || task.battleResult != this.texts.victory" class="mp5px bg2"
+                            @click="continueProcess">{{texts.battle}}</v-btn>
                     </div>
                 </div>
 
@@ -93,10 +97,6 @@
                         {{ message }}
                     </div>
                     <v-btn class="mp5px centerDiv" @click="end">Menu</v-btn>
-                </div>                
-
-                <div v-if="popupData" class="w100p absolute bgYellow3 colorBlack" style="top:5px; right:5px; left:5px;">
-                    <div class="text-center w100p fontSize150em bold" style="height:45px">{{ popupData.title }}</div>
                 </div>
             </div>
 
@@ -109,6 +109,7 @@ import helperCookie from '../../helpers/helperCookie';
 import helperParamUrl from '../../helpers/helperParamUrl';
 import menuBarGundam from '../../components/menuBarGundam';
 import cards from '../../data/gundamCards.json';
+import gundamTexts from '../../data/gundamTexts.json';
 import deckList from '../../games/deckList';
 import deck from '../../games/deck';
 
@@ -118,16 +119,18 @@ export default {
     data: () => ({
         step: 'menu',
         task: null,
+        refreshPage:0,
+        texts: null,
         title: '',
         message: '',
-        popupData: null,
         opponents: null,
         opponent: null,
         isHorizontal: true,
         decklistShow: null,
         cardList: null,
         deckList: null,
-        deckListAdd: false
+        deckListAdd: false,
+        playerInfo: null
     }),
     mounted() {
         this.isHorizontal = this.$vuetify.breakpoint.width > this.$vuetify.breakpoint.height;
@@ -135,21 +138,21 @@ export default {
 
         this.playerInfo = helperCookie.getLocalStorage('playerInfo');
         if (!this.playerInfo || !this.playerInfo.decks || this.playerInfo.decks.length < 1) {
-            this.playerInfo = { date: new Date(), decks: cards.decklist };
+            this.playerInfo = { date: new Date(), decks: cards.decklist, lang:'en' };
             this.savePlayerInfo();
         }
         this.deckList = this.playerInfo.decks;
+        this.texts = gundamTexts[this.playerInfo.lang];
 
         const params = helperParamUrl.getParams();
         if (params.continue == '1')
             this.continueGame();
     },
     methods: {
-        savePlayerInfo(){
+        savePlayerInfo() {
+            this.playerInfo.decks.forEach((x,index)=> x.index = index);
             helperCookie.setLocalStorage('playerInfo', this.playerInfo);
-        },
-        popup(popup){
-            this.popupData = popup;
+            this.deckList = this.playerInfo.decks;
         },
         setStep(key, title) {
             this.step = key;
@@ -167,49 +170,23 @@ export default {
                 this.task = null;
             }
         },
-        tuto(){
-            window.location.href = `/gundamTcgTuto`;
-        },
-        addDeck() {
-            const decklist = {
-                name: 'New Deck',
-                date: new Date(),
-                card1: "EXB-001",
-                card2: "empty",
-                card3: "empty",
-                list: ""
-            };
-            this.playerInfo.decks.push(decklist);
-            helperCookie.setLocalStorage('playerInfo', this.playerInfo);
-            this.task.decklist = decklist;
-            this.continueGame();
-        },
-        decklists(back) {
-            this.deckListAdd = true;
-            if (!this.task || back) {
-                this.decklistShow = null;
-                this.task = { id: 'decklists' };
-            }
-            let step = 'decklists';
-            let title = 'Deck Lists';
-
-            if (this.task.decklist) {
-                step = "decklist";
-                title = 'Set Decklist';
-                this.task.back = true;
-                this.decklistShow = this.task.decklist;
-            }
-
-            return this.setStep(step, title);
-        },
         continueGame() {
             this.task = { id: 'arcade', show: true, decklistPlayer1: true }
             this.task.opponents = helperCookie.getCookieString('opponents').split('_');
             this.task.index = parseInt(helperCookie.getCookieString('index'));
             const victory = helperCookie.getCookieString('victory');
-            this.task.battleResult = victory == 'true' ? 'Victory'
-                : victory == 'false' ? 'Defeat' : '';
+            this.task.battleResult = victory == 'true' ? this.texts.victory
+                : victory == 'false' ? this.texts.defeat : '';
             this.arcade();
+        },
+        showCard(card) {
+            alert(card);
+        },
+        end() {
+            window.location.href = `/gundamTcg`;
+        },
+        tuto() {
+            window.location.href = `/gundamTcgTuto`;
         },
         arcade(back) {
             if (!this.task || back) {
@@ -225,7 +202,7 @@ export default {
                     this.task.decklist = null;
                 } else {
                     this.deckListAdd = false;
-                    return this.setStep('decklists', 'Select player deck')
+                    return this.setStep('decklists', this.texts.selectPlayerDeck)
                 }
             }
 
@@ -237,13 +214,13 @@ export default {
 
             if (this.task.show && this.task.index > -1) {
                 this.task.show = false;
-                this.task.fight = this.task.battleResult != 'Victory';
+                this.task.fight = this.task.battleResult != this.texts.victory;
             } else {
                 this.task.index++;
                 helperCookie.setCookieString('index', this.task.index);
 
                 if (this.task.index >= this.task.opponents.length) {
-                    this.message = "Congratulation";
+                    this.message = this.texts.congratulation;
                     this.step = 'message';
                     return;
                 }
@@ -253,8 +230,9 @@ export default {
 
             const opponentIndex = parseInt(this.task.opponents[this.task.index]);
             this.opponent = cards.decklist[opponentIndex];
-            this.message = !this.task.battleResult ? 'Next Battle' : this.task.battleResult;
+            this.message = !this.task.battleResult ? this.texts.nextBattle : this.task.battleResult;
             this.step = 'fight';
+            this.title = '';
         },
         duel(back) {
             this.deckListAdd = false;
@@ -268,7 +246,7 @@ export default {
                     this.task.decklist = null;
                     this.task.back = true;
                 } else {
-                    return this.setStep('decklists', 'Select player deck')
+                    return this.setStep('decklists', this.texts.selectPlayerDeck)
                 }
             }
 
@@ -279,34 +257,94 @@ export default {
                     this.task.decklist = null;
                     this.task.back = true;
                 } else {
-                    return this.setStep('decklists', 'Select opponent deck')
+                    return this.setStep('decklists', this.texts.selectOpponentDeck)
                 }
             }
 
             window.location.href = `/gundamTcgFight`;
+        },
+
+        /* 
+        ------------------------------ Handle Decklist
+         */
+        decklists(back) {
+            this.deckListAdd = true;
+            if (!this.task || back) {
+                this.decklistShow = null;
+                this.task = { id: 'decklists' };
+            }
+            let step = 'decklists';
+            let title = this.texts.decklists;
+
+            if (this.task.decklist) {
+                step = "decklist";
+                title = this.texts.setDeck;
+                this.task.back = true;
+                this.decklistShow = this.task.decklist;
+            }
+
+            return this.setStep(step, title);
         },
         showCardDeckList(card) {
             const newCard = { ...card };
             newCard.position = { ...card.position, x: card.position.x + 300 };
             this.showCard(newCard);
         },
-        setDeckListCard3(event){
-            this.task.decklist[event.prop] = event.id;
-        },
-        setDeckList(decklist){
+        setDeckList(decklist) {
+            this.task.decklist.name = decklist.name;
+            this.task.decklist.card1 = decklist.card1;
+            this.task.decklist.card2 = decklist.card2;
+            this.task.decklist.card3 = decklist.card3;
             this.task.decklist.list = decklist.list;
             this.savePlayerInfo();
             this.back();
+        },
+        deleteDecklist(decklist){
+            this.playerInfo.decks = this.playerInfo.decks.filter(x=> x.index !== decklist.index);
+            this.savePlayerInfo();
+            this.back();
+        },
+        addDeck() {
+            const decklist = {
+                date: new Date(),
+                name: this.texts.newDeck,
+                card1: "EXB-001",
+                card2: "empty",
+                card3: "empty",
+                list: ""
+            };
+            this.playerInfo.decks.push(decklist);
+            this.savePlayerInfo();
+            this.selectDeckList(decklist);
+        },
+        duplicateDecklist(list){
+            const decklist = {
+                date: new Date(),
+                name: this.texts.newDeck,
+                card1: list.card1,
+                card2: list.card2,
+                card3: list.card3,
+                list: list.list
+            };
+            this.playerInfo.decks.push(decklist);
+            this.savePlayerInfo();
+            this.selectDeckList(decklist);
+            this.refreshPage++;
         },
         selectDeckList(decklist) {
             this.task.decklist = decklist;
             this.continueProcess();
         },
-        showCard(card) {
-            alert(card);
+        selectLang(lang){
+            this.playerInfo.lang = lang;
+            this.savePlayerInfo();
+            this.texts = gundamTexts[this.playerInfo.lang];
         },
-        end(){
-            window.location.href = `/gundamTcg`;
+        saturateIfLang(target){
+            if(!this.playerInfo || !this.playerInfo.lang)
+                return {};
+            const percent = this.playerInfo.lang == target ? '1' : '0';
+            return {'filter': `saturate(${percent})`};
         }
     }
 };

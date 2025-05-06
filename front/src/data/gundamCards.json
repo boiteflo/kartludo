@@ -62,7 +62,8 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 3,
-            "color": "none"
+            "color": "none",
+            "hideInDecklist":true
         },
         {
             "id": "EXB-001",
@@ -82,7 +83,8 @@
             "ap": 0,
             "hp": 3,
             "color": "none",
-            "isTemporaryCard":true
+            "isTemporaryCard":true,
+            "hideInDecklist":true
         },
         {
             "id": "EXBP-001",
@@ -101,7 +103,8 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 3,
-            "color": "none"
+            "color": "none",
+            "hideInDecklist":true
         },
         {
             "id": "GD01-004",
@@ -1339,7 +1342,7 @@
             "effects": [
                 {
                     "trigger": "onpair",
-                    "target": "opponentUnitHpUnderValue",
+                    "target": "opponentActiveUnitHpUnderValue",
                     "value": 6,
                     "id": "rest"
                 },
@@ -2052,7 +2055,8 @@
             "ap": 3,
             "hp": 3,
             "color": "none",
-            "isTemporaryCard": true
+            "isTemporaryCard": true,
+            "hideInDecklist":true
         },
         {
             "id": "T-002",
@@ -2074,7 +2078,8 @@
             "ap": 2,
             "hp": 2,
             "color": "none",
-            "isTemporaryCard": true
+            "isTemporaryCard": true,
+            "hideInDecklist":true
         },
         {
             "id": "T-003",
@@ -2096,7 +2101,8 @@
             "ap": 1,
             "hp": 1,
             "color": "none",
-            "isTemporaryCard": true
+            "isTemporaryCard": true,
+            "hideInDecklist":true
         },
         {
             "id": "T-006",
@@ -2118,7 +2124,50 @@
             "ap": 3,
             "hp": 1,
             "color": "none",
-            "isTemporaryCard": true
+            "isTemporaryCard": true,
+            "hideInDecklist":true
+        },
+        {
+            "id": "C001",
+            "level": 1,
+            "cost": 1,
+            "name": "Leo",
+            "type": [
+                0
+            ],
+            "attribute": "(Basic)",
+            "link": "(Basic)",
+            "effectText": "xxx",
+            "effects": [],
+            "pilot": "xxx",
+            "burstText": "",
+            "burst": [],
+            "targetUnit": false,
+            "ap": 1,
+            "hp": 1,
+            "color": "green",
+            "hideInDecklist":true
+        },
+        {
+            "id": "C002",
+            "level": 2,
+            "cost": 1,
+            "name": "Oz Pilot",
+            "type": [
+                1
+            ],
+            "attribute": "(Basic)",
+            "link": "",
+            "effectText": "xxx",
+            "effects": [],
+            "pilot": "xxx",
+            "burstText": "",
+            "burst": [],
+            "targetUnit": false,
+            "ap": 1,
+            "hp": 1,
+            "color": "green",
+            "hideInDecklist":true
         },
         {
             "id": "xxx",
@@ -2138,7 +2187,8 @@
             "targetUnit": false,
             "ap": 0,
             "hp": 0,
-            "color": "none"
+            "color": "none",
+            "hideInDecklist":true
         }
     ]
 }

@@ -9,7 +9,7 @@
             </div>
             <div class="absolute text-center textVerticalCenter fontSize075em"
                 :style="{ ...getFieldStyleObj(game.grid.resources), transform: 'rotate(-45deg)' }">
-                Resources
+                {{texts.resources}}
             </div>
             <banana-bars :p1yellow="game.player1.resourcesAvailable - game.player1.resourcesEx"
                 :p1blue="game.player1.resourcesEx" :p1max="game.player1.resourcesMax"
@@ -19,17 +19,17 @@
             </banana-bars>
 
             <!-- Player 1 -->
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Deck)" text="Deck"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Deck)" :text="texts.deck"
                 :length="game.player1.deck.length" :icon="game.player1.deckIcon">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Trash)" text="Trash"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Trash)" :text="texts.trash"
                 :length="game.player1.trash.length" :icon="game.player1.trashIcon"
                 @click="showLocationCards('trash', true)">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Base)" text="Base"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Base)" :text="texts.base"
                 :icon="game.player1.baseIcon">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" text="Shield"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player1Shield)" :text="texts.shield"
                 :length="game.player1.shield.length" :icon="game.player1.shieldIcon">
             </deck-icon>
             <div v-if="game" class="absolute bgYellow hide" :style="getFieldStyleObj(game.grid.player1Hand)">
@@ -38,17 +38,17 @@
             </div>
 
             <!-- Player 2-->
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Deck)" text="Deck"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Deck)" :text="texts.deck"
                 :length="game.player2.deck.length" :icon="game.player2.deckIcon">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Trash)" text="Trash"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Trash)" :text="texts.trash"
                 :length="game.player2.trash.length" :icon="game.player2.trashIcon"
                 @click="showLocationCards('trash', false)">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Base)" text="Base"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Base)" :text="texts.base"
                 :icon="game.player2.baseIcon">
             </deck-icon>
-            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Shield)" text="Shield"
+            <deck-icon class="absolute" :style="getFieldStyleObj(game.grid.player2Shield)" :text="texts.shield"
                 :length="game.player2.shield.length" :icon="game.player2.shieldIcon">
             </deck-icon>
             <div class="absolute bgRed hide" :style="getFieldStyleObj(game.grid.player2Hand)">
@@ -61,13 +61,13 @@
                 <v-btn target="_blank"
                     :class="{ bg: true, shine: !freeze && game.player1.hasEffects, w100p: true, h100p: true }"
                     @click="useEffect" style="min-width:0px;">
-                    <span>Use<br>Effect</span>
+                    <span v-html="texts.useEffect"></span>
                 </v-btn>
             </div>
             <div class="absolute bgYellow circle10px fontSize075em" :style="getFieldStyleObj(game.grid.buttonEndTurn)">
                 <v-btn target="_blank" :class="{ bg: true, shine: !freeze, w100p: true, h100p: true }"
                     style="min-width:0px;" @click="nextTurn">
-                    <span v-if="game.grid.buttonEndTurn.width > 50">End<br>Turn</span><span v-else>End</span>
+                    <span v-if="game.grid.buttonEndTurn.width > 50" v-html="texts.endTurn"></span><span v-else v-html="texts.end"></span>
                 </v-btn>
             </div>
             <div class="absolute vertical-scroll" v-html="game.logs" :style="getFieldStyleObj(game.grid.logZone)">
@@ -109,7 +109,7 @@
                     <div class="text-center m5px">{{ game.showTextTuto.text }}</div>
                     <div v-if="!game.showTextTuto.hideNext" class="m5px bgYellow circle10px"
                         style="align-self: flex-end;">
-                        <v-btn class="bg2 shine" @click="tutoNext">Next</v-btn>
+                        <v-btn class="bg2 shine" @click="tutoNext">{{texts.next}}</v-btn>
                     </div>
 
                 </div>
@@ -127,7 +127,7 @@
             <div class="w100p">
                 <div class="flex flex-wrap w100p" style="justify-content:center">
                     <v-btn class="m10px" style="background-color: #FFFF00F0;" @click="showOrHidePopup(false)">
-                        <span v-if="popupShow">Hide Popup</span><span v-else>Show Popup</span>
+                        <span v-if="popupShow">{{texts.hidePopup}}</span><span v-else>{{texts.showPopup}}</span>
                     </v-btn>
                     <div v-for="(choice, index) in game?.popup.choices" :key="'Choice' + index">
                         <v-btn v-if="choice.text" class="m10px" @click="selectChoice(choice)">
@@ -202,7 +202,7 @@ import dragDropArrow from './dragDropArrow.vue';
 
 export default {
     name: 'game-vue',
-    props: ['deck1', 'deck2', 'quickstart', 'tuto'],
+    props: ['playerinfo', 'texts', 'deck1', 'deck2', 'quickstart', 'tuto', 'campaign'],
     components: { gameCard, bananaBars, deckIcon, dragDropArrow },
     data: () => ({
         refreshG: 0,
@@ -242,10 +242,13 @@ export default {
             this.game = gameGundam.setup(this.$vuetify.breakpoint.width,
                 this.$vuetify.breakpoint.height,
                 cards,
+                this.playerinfo,
+                this.texts,
                 this.decklistPlayer1,
                 this.decklistPlayer2,
                 this.quickstart,
-                this.tuto);
+                this.tuto,
+                this.campaign);
             this.refreshGame();
         },
         nextTurn() {
@@ -284,11 +287,11 @@ export default {
             if (!event || !event.target || !event.target.text)
                 return;
 
-            if (event.target.text === 'Play')
+            if (event.target.text === this.texts.play)
                 this.playCard(event.source.card, null, this.game.grid.player1Field);
-            if (event.target.text === 'Pair')
+            if (event.target.text === this.texts.pair)
                 this.playCard(event.source.card, event.target.card, this.game.grid.player1Field);
-            if (event.target.text === 'Attack')
+            if (event.target.text === this.texts.attack)
                 this.playCard(event.source.card, event.target.card, this.game.grid.player2Field);
         },
         playCard(card1, card2, drop) {
@@ -368,6 +371,8 @@ export default {
             this.showCard(event.card);
         },
         showCard(card) {
+            if(this.freeze)
+                return;
             const center = this.game ? this.game.grid.highlightCardCenter : { x: 0, y: 0, width: 200, height: 280 };
             if (!card) {
                 if (this.game.freeze)

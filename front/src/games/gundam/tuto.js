@@ -33,6 +33,7 @@ class tuto {
         if (game.tutoDone)
             return;
 
+        this.tutoText.used = this.tutoText[game.playerInfo.lang];
         game.tutoStep = game.tutoStep ? game.tutoStep : 0;
 
         if (game.showTextTuto && game.showTextTuto.next) {
@@ -160,8 +161,6 @@ class tuto {
     }
 
     static getTextTuto(prop) {
-        if (!this.tutoText.used)
-            this.tutoText.used = this.tutoText.fr;
         return this.tutoText.used[prop];
     }
 

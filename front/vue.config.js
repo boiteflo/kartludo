@@ -5,13 +5,17 @@ module.exports = {
 
     devServer: {
         proxy: {
-            '/api' : {
+            '/api': {
                 target: 'http://localhost:5000'
             }
         }
     },
 
     transpileDependencies: [
-      'vuetify'
-    ]
+        'vuetify'
+    ],
+
+    configureWebpack: {
+        devtool: 'source-map'
+    }
 }

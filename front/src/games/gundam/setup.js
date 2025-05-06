@@ -11,11 +11,24 @@ class setup {
             this.resourceStart = 8;
             this.handStartLength = 15;
         }
+        if (game.campaign) {
+            this.resourceStart = 0;
+            this.handStartLength = 2;
+            this.shieldStartLength = 0;
+        }
 
         game.player1 = this.createPlayer(game, true, game.decklistPlayer1);
         game.player2 = this.createPlayer(game, false, game.decklistPlayer2);
         game.isPlayer1 = this.quickstart ? false : Math.floor(Math.random() * 2) == 1;
         game.fields = [game.grid.player1Hand, game.grid.player1Field, game.grid.player2Hand, game.grid.player2Field];
+
+        if (game.campaign) {
+            this.resourceStart = 0;
+            this.handStartLength = 2;
+            this.shieldStartLength = 0;
+            game.player1.shield = [this.createCard('ST03-016', true, this.locationShield)];
+            game.player2.shield = [this.createCard('ST03-016', false, this.locationShield)];
+        }
 
         const playerOpponent = game.isPlayer1 ? game.player1 : game.player2;
         game.player = playerOpponent;
@@ -99,8 +112,8 @@ class setup {
                     id: this.popup.name,
                     isPlayer1: true,
                     task,
-                    text: 'Do you want to do a mulligan ?',
-                    choices: [{ id: 'yes', text: 'yes' }, { text: 'no' }]
+                    text: game.texts.mulligan,
+                    choices: [{ id: 'yes', text: game.texts.yes }, { text: game.texts.no }]
                 }
             );
         } else {

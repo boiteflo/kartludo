@@ -119,7 +119,7 @@ class refresh {
                 else if (this.isCardPilot(card))
                     targets = unitWithoutPilots;
 
-                drops = drops.concat(targets.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Pair' }; }));
+                drops = drops.concat(targets.map(unit => { return { ...this.getPos(unit), card: unit, text: game.texts.pair }; }));
             }
 
             if (drops.length > 0)
@@ -132,7 +132,7 @@ class refresh {
 
             const ennemyTarget = game.player2.field.filter(x => this.isValidTarget(game.player2, attacker, x));
             if (attacker.active && ennemyTarget.length > 0) {
-                drops = drops.concat(ennemyTarget.map(unit => { return { ...this.getPos(unit), card: unit, text: 'Attack' }; }));
+                drops = drops.concat(ennemyTarget.map(unit => { return { ...this.getPos(unit), card: unit, text: game.texts.attack }; }));
             }
 
             if (drops.length > 0)
