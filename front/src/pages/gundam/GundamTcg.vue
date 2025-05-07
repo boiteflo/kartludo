@@ -1,13 +1,11 @@
 <template>
     <div class="bg2 h100p w100p fadeIn3sec" :key="refreshPage">
-        <menu-bar-gundam></menu-bar-gundam>
-
-        <div v-if="texts" class="w100p" style="height: calc(100% - 64px)">
-            <img v-if="isHorizontal" style="height: calc(100% - 64px)"
+        <div v-if="texts" class="w100p" style="height: 100%">
+            <img v-if="isHorizontal" style="height: 100%"
                 :class="{ w100p: 1, absolute: 1, 'image-cover': 1, 'blur-box': 1, 'blurred': step !== 'menu' }"
                 :src="require('@/assets/Gundam/wallpaper.webp')" />
 
-            <img v-else style="height: calc(100% - 64px)"
+            <img v-else style="height: 100%"
                 :class="{ w100p: 1, h100p: 1, absolute: 1, 'image-cover': 1, 'blur-box': 1, 'blurred': step !== 'menu' }"
                 :src="require('@/assets/Gundam/wallpaper2.webp')" />
 
@@ -44,7 +42,7 @@
                 </v-btn>
                 <div class="w100p textVerticalCenter"
                     style="margin-top:20px; height:60px; background-color: rgba(200,200,200,0.75);">
-                    {{texts.byFlo}}
+                    {{texts.byflo}}
                 </div>
             </div>
 
@@ -56,7 +54,7 @@
 
                 <div v-if="step === 'decklist'">
                     <!-- DeckList Show-->
-                    <deck-list v-if="decklistShow" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/" style="top:0px;" 
+                    <deck-list v-if="decklistShow" :texts="texts" :decklist="decklistShow" :cardlist="cardList" folder="Gundam/cards/" style="top:0px;" 
                         @cardclick="showCardDeckList" @cancel="back" @validate="setDeckList" @delete="deleteDecklist" @duplicate="duplicateDecklist">
                     </deck-list>
                 </div>
@@ -107,7 +105,6 @@
 <script>
 import helperCookie from '../../helpers/helperCookie';
 import helperParamUrl from '../../helpers/helperParamUrl';
-import menuBarGundam from '../../components/menuBarGundam';
 import cards from '../../data/gundamCards.json';
 import gundamTexts from '../../data/gundamTexts.json';
 import deckList from '../../games/deckList';
@@ -115,7 +112,7 @@ import deck from '../../games/deck';
 
 export default {
     name: 'pageGundamTcgFight',
-    components: { menuBarGundam, deck, deckList },
+    components: { deck, deckList },
     data: () => ({
         step: 'menu',
         task: null,

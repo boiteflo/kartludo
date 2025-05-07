@@ -1,23 +1,23 @@
 <template>
-    <div class="w100p">
+    <div class="w100p" v-if="texts">
         <div class="w100p flex">
             <div style="width: 300px; flex-direction: column" class="m5px fontSize100em flex">
-                <input type="text" class="m5px bgBlack colorWhite text-center" style="height: 45px;" v-model="name">
-                <v-btn class="m5px" style="height:45px" @click="$emit('duplicate', decklist)">Duplicate</v-btn>
-                <v-btn class="m5px" style="height:45px" @click="addCardPopup">Add card</v-btn>
-                <v-btn class="m5px bgRed2" style="height:45px" @click="deleteDecklist">Delete</v-btn>
-                <v-btn class="m5px shine bg2" style="height:45px" @click="validate">Validate</v-btn>
+                <input type="text" class="m5px bgBlack colorWhite text-center" style="height: 45px; padding:16px; border:1px solid white" v-model="name">
+                <v-btn class="m5px" style="height:45px" @click="addCardPopup">{{texts.addCard}}</v-btn>
+                <v-btn class="m5px" style="height:45px" @click="$emit('duplicate', decklist)">{{texts.duplicate}}</v-btn>
+                <v-btn class="m5px bgRed2" style="height:45px" @click="deleteDecklist">{{texts.delete}}</v-btn>
+                <v-btn class="m5px shine bg2" style="height:45px" @click="validate">{{texts.validate}}</v-btn>
                 <div class="flex" style="height:89px; margin-bottom:5px;">
-                    <v-btn class="m5px flex-grow h100p"
-                        :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card2 + '.webp') + ')' }"
+                    <v-btn class="m5px flex-grow"
+                        :style="{ height:'89px', 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card2 + '.webp') + ')' }"
                         @click="setCard(2)">
                     </v-btn>
-                    <v-btn class="m5px flex-grow h100p"
-                        :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card1 + '.webp') + ')' }"
+                    <v-btn class="m5px flex-grow"
+                        :style="{ height:'89px','background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card1 + '.webp') + ')' }"
                         @click="setCard(1)">
                     </v-btn>
-                    <v-btn class="m5px flex-grow h100p"
-                        :style="{ 'background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card3 + '.webp') + ')' }"
+                    <v-btn class="m5px flex-grow"
+                        :style="{ height:'89px','background-size': 'cover', backgroundImage: 'url(' + require('@/assets/' + folder + card3 + '.webp') + ')' }"
                         @click="setCard(3)">
                     </v-btn>
                 </div>
@@ -34,11 +34,11 @@
         </div>
 
 
-        <div v-if="popup" class="w100p absolute bgYellow3 colorBlack" style="top:5px; right:5px; left:5px;">
+        <div v-if="popup" class="w100p h100p scroll absolute bgYellow3 colorBlack" style="top:5px; right:5px; left:5px;">
             <div class="text-center w100p fontSize150em bold" style="height:45px">{{ popup.title }}</div>
             <div class="flex flex-wrap m5px">
                 <img v-for="(card, index) in popup.cards" :key="'popupCard' + index" class="cursorHand"
-                    style="object-fit: cover; aspect-ratio: 107/150; width:10%;"
+                    style="object-fit: cover; aspect-ratio: 107/150; width:10%; min-width: 100px;"
                     :src="require('@/assets/Gundam/cards/' + card + '.webp')" @click="addCard(card)">
             </div>
             <div class="flex flex-space-around m5px">
@@ -57,7 +57,7 @@ import cardLife from './gundam/cardLife';
 export default {
     name: 'deck-list',
     components: { decklistCard },
-    props: ['decklist', 'folder', 'cardlist', 'card'],
+    props: ['texts', 'decklist', 'folder', 'cardlist', 'card'],
     data: () => ({
         list: '',
         resume: '',
@@ -125,9 +125,8 @@ export default {
                 deckLength += card.quantity;
             });
 
-
-            this.resume = `${deckLength} cards`;
-            this.resume2 = `${unitLength} Units, ${pilotLength} Pilots, ${commandLength} Commands, ${baseLength} Bases`;
+            this.resume = `${deckLength} ${this.texts.cards2}`;
+            this.resume2 = `${unitLength} ${this.texts.units}, ${pilotLength} ${this.texts.pilots}, ${commandLength} ${this.texts.commands}, ${baseLength} ${this.texts.bases}`;
             this.listCorrect = listCorrect.join(',');
             this.list = resultText.join('\n');
             this.cardData = result;
@@ -167,7 +166,7 @@ export default {
         // Set Card1 2 or 3
         setCard(index) {
             this.cardIndexSet = index;
-            this.showPopup({ title: 'Select Card ' + index });
+            this.showPopup({ title: this.texts.selectCard + ' ' + index });
         },
         cardclick(card) {
             if (this.cardIndexSet < 1)
@@ -184,7 +183,7 @@ export default {
         addCardPopup() {
             const alreadyUsed = this.cardData.map(x => x.id);
             const cards = this.cardlist.filter(x => !x.hideInDecklist && !alreadyUsed.includes(x.id)).map(x => x.id);
-            this.showPopup({ title: 'Select Card ', cards });
+            this.showPopup({ title: this.texts.selectCard, cards });
         },
         addCard(card) {
             this.popup=null;
@@ -194,10 +193,10 @@ export default {
         
         // Delete
         deleteDecklist() {
-            this.showPopup({ title: 'Do you realy want to delete this deck ?', choices: ['yes', 'no'] })
+            this.showPopup({ title: this.texts.confirmDelete, choices: [this.texts.yes, this.texts.no] })
         },
         selectChoice(choice) {
-            if (choice == 'yes')
+            if (choice == this.texts.yes)
                 this.$emit('delete', this.decklist);
             this.popup = null;
         }
