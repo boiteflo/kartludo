@@ -23,14 +23,14 @@ import gundamTexts from '../../data/gundamTexts.json';
     texts: null,
     deck1: null,
     deck2: null,
-    quickstart: false //"8xC001,4xC002"
+    quickstart: null //"7xST03-007,7xST03-008,6xST03-011,7xST03-016,7xGD01-026,7xGD01-030,6xGD01-031,6xGD01-105"
    }),
   mounted(){
     this.playerInfo = helperCookie.getLocalStorage('playerInfo');
     this.texts = gundamTexts[this.playerInfo.lang];
     this.deck1 = this.quickstart ? this.quickstart : helperCookie.getCookieString('deck1')?.split('_').join(',');
     this.deck2 = this.quickstart ? this.quickstart : helperCookie.getCookieString('deck2')?.split('_').join(','); 
-    this.campaign = this.quickstart ? this.quickstart : helperCookie.getCookieString('campaign')==1; 
+    this.campaign = false; // this.quickstart ? this.quickstart : helperCookie.getCookieString('campaign')==1; 
   },
   methods: { 
     end(isVictory){

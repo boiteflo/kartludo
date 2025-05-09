@@ -1,32 +1,75 @@
 <template>
     <div class="h100p w100p relative bgWhite">
+        <div class="div3d">
+            <div class="plan-incline"></div>
+        </div>
+
         <h2>Page Test</h2>
 
         <drag-drop-arrow id="0" :sources="points" @drop="dropPoint">
         </drag-drop-arrow>
-        <div v-fit-text style="width: 200px; font-size: 32px; overflow: hidden; z-index:200" class="bg">
-            Ce texte doit s’adapter à la largeur !
-        </div>
 
         <div :class="{ bgRed: 1, 'anim-height': 1, 'height0': popupShow }"
             style="width:500px; height: 500px; transform:scale(0.5)">
 
         </div>
+        <button id="moveButton">Bouge-moi !</button>
 
         <div class="bgYellow absolute" style=" top:50px; left:500px; width:300px; height: 150px;">
             <div class="relative w100p h100p">
-                <div class="bgRed absolute" style="width:25px; height:25px; transform:rotate(45deg); top:45%; right:-12.5px"></div>
-                <div class="bgRed absolute" style="width:25px; height:25px; transform:rotate(45deg); left:45%; top:-12.5px"></div>
-                <div class="bgRed absolute" style="width:25px; height:25px; transform:rotate(45deg); top:45%; left:-12.5px"></div>
-                <div class="bgRed absolute" style="width:25px; height:25px; transform:rotate(45deg); left:45%; bottom:-12.5px"></div>
+                <div class="bgRed absolute"
+                    style="width:25px; height:25px; transform:rotate(45deg); top:45%; right:-12.5px"></div>
+                <div class="bgRed absolute"
+                    style="width:25px; height:25px; transform:rotate(45deg); left:45%; top:-12.5px"></div>
+                <div class="bgRed absolute"
+                    style="width:25px; height:25px; transform:rotate(45deg); top:45%; left:-12.5px"></div>
+                <div class="bgRed absolute"
+                    style="width:25px; height:25px; transform:rotate(45deg); left:45%; bottom:-12.5px"></div>
             </div>
+        </div>
+
+        <div id="divToMove" class="absolute bgGreen" style="top:200px; left:200px; width:50px; height:50px;">
+
         </div>
     </div>
 </template>
 
-<style></style>
+<style>
+#moveButton {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: top 0.5s ease, left 0.5s ease;
+    background-color: red;
+}
+
+.div3d {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    perspective: 800px;
+    /* Important pour voir la transformation 3D */
+}
+
+.plan-incline {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom right, #3498db, #9b59b6);
+    transform: rotateX(45deg);
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+</style>
 
 <script>
+import helperAnimation from '../helpers/helperAnimation';
 import dragDropArrow from '../games/dragDropArrow.vue';
 
 export default {
@@ -61,6 +104,24 @@ export default {
         setTimeout(() => {
             this.popupShow = true;
         }, 2000);
+
+        const button = document.getElementById('moveButton');
+
+        button.addEventListener('click', () => {
+            const x = Math.floor(Math.random() * 401) + 100; // 100 à 500
+            const y = Math.floor(Math.random() * 401) + 100; // 100 à 500
+
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        });
+        
+        setInterval(() => {
+            const x = Math.floor(Math.random() * 401) + 100;
+            const y = Math.floor(Math.random() * 401) + 100;
+            const animations = [{ id: 'divToMove', to: {x, y, width:75, height:75, rotation:0, opacity:1}}];
+            helperAnimation.animateMultipleByCss(animations, 500);
+        }, 3000);
+
     },
     methods: {
         dropPoint(event) {

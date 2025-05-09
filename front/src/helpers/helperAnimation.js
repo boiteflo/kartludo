@@ -101,6 +101,34 @@ class helperAnimation {
         return this.animateMultiple([{ id, from, to, isIncrement }], duration);
     }
 
+    static animateMultipleByCss(animations, duration) {
+        animations.forEach(anim => {
+            if (!anim.to) return;
+    
+            anim.element = document.getElementById(anim.id);
+            if (!anim.element) {
+                console.log("element can't be found : " + anim.id);
+                return;
+            }
+    
+            let delay = "0." + duration + "s";
+            anim.element.style.transition = `top ${delay} ease, left ${delay} ease, height ${delay} ease, width ${delay} ease, opacity ${delay} ease, transform ${delay} ease`;
+        });
+    
+        // ⚠️ FORCER LE REPAINT / REFLOW
+        animations.forEach(anim => anim.element?.offsetHeight);
+    
+        // Maintenant appliquer les nouveaux styles
+        animations.filter(x => x.element).forEach(anim => {
+            anim.element.style.left = anim.to.x + "px";
+            anim.element.style.top = anim.to.y + "px";
+            anim.element.style.height = anim.to.height + "px";
+            anim.element.style.width = anim.to.width + "px";
+            anim.element.style.opacity = anim.to.opacity;
+            anim.element.style.transform = `rotate(${anim.to.rotation}deg)`;
+        });
+    }
+
     static animateMultiple(animations, duration = -1) {
         animations.forEach(anim => {
             if (!anim.to) {

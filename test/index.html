@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Card App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body style="width:100%; overflow: hidden;">
+  <div id="app" class="size100p">
+    <div v-if="game" class="perspective relative size100p">
+      <!-- Board -->
+      <rect-3d class="background-blue-purple shadow" :element="game?.board.board">
+        Board
+      </rect-3d>
+
+      <!-- Player 1 Hud -->
+      <rect-triangle :element="game?.board.player1Header">
+        Player 1
+      </rect-triangle>
+      <rect-3d :element="game?.board.player1Hand">
+        Hand
+      </rect-3d>
+
+      <!-- Buttons -->
+      <rect-3d :element="game?.board.buttonEndTurn">
+        End Turn
+      </rect-3d>
+      <rect-3d :element="game?.board.buttonEffect">
+        Use Effect
+      </rect-3d>
+
+      <!-- Cards -->
+      <game-card v-if="game && false" :element="game.board.board"></game-card>
+    </div>
+  </div>
+
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+    import { Game } from './scripts/_game.js';
+    import GameCard from './components/card-game.js';
+    import Rectangle3D from './components/rect-3d.js';
+    import RectangleTriangle from './components/rect-triangle.js';
+
+    const app = createApp({
+      data() {
+        return {
+          game: null
+        };
+      },
+      mounted() {
+        const game = {};
+        Game.setup(game, document.body.clientWidth, document.body.clientHeight);
+        this.game = game;
+      }
+    });
+
+    app.component('game-card', GameCard);
+    app.component('rect-3d', Rectangle3D);
+    app.component('rect-triangle', RectangleTriangle);
+    app.mount('#app');
+  </script>
+</body>
+
+</html>

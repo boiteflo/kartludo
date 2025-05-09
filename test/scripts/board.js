@@ -1,3 +1,47 @@
+export default class board {
+
+  static  createBoard(game, screenWidth, screenHeight) {
+    const result = {border:5};
+    result.border2 = result.border*2;
+    
+    // Board
+    let width = screenWidth * .8;
+    let height = screenHeight *.75;
+    let x = (screenWidth - width) /2;
+    let y=(screenHeight- height)/4;
+    let yaw=25;
+    result.board = {x, y, width, height, yaw};
+
+    const screenWidthBorder3 = screenWidth - (result.border*3);
+    const remainingHeight = screenHeight - height - y - (result.border*5);
+
+    // Player1Header
+    let color= "blue";
+    x = result.border;
+    y += height + (result.border*3);
+    width = screenWidthBorder3 / 3;
+    height = remainingHeight/2;
+    result.player1Header = {x, y, width, height, color};
+
+    // Player1Hand
+    x += result.border + width;
+    width = screenWidth - result.border - x;
+    height = remainingHeight + result.border;
+    result.player1Hand = {x, y, width, height, color};
+
+    // Buttons
+    x = result.player1Header.x;
+    y += result.player1Header.height + result.border;
+    width = (result.player1Header.width - result.border) /2;
+    height= result.player1Header.height;
+    result.buttonEndTurn = { x, y, width, height };
+    x+= width + result.border;
+    result.buttonEffect = { x, y, width, height };
+
+    game.board = result;
+  }
+}
+/*
 class positioner {
 
     static locationEmpty = 'empty';
@@ -395,3 +439,5 @@ class positioner {
 
 
 export default positioner;
+
+*/

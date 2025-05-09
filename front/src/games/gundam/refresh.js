@@ -60,11 +60,8 @@ class refresh {
 
     static endAnimation(game) {
         game.cards.forEach(card => {
-            if (card.positionDrag) card.position = { ...card.position, x: card.positionDrag.x, y: card.positionDrag.y };
             if (card.to) card.position = card.to;
             delete (card.to);
-            delete (card.positionOld);
-            delete (card.positionDrag);
         });
         delete (game.wait);
         delete (game.showTitle);
