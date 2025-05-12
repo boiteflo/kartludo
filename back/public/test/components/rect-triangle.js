@@ -20,7 +20,7 @@ export default {
             'aspect-ratio': '1 / 1',
             'right': '-' + Math.round(element.height) + 'px',
             'border-bottom': Math.round(element.height) + 'px solid transparent',
-            'border-left': Math.round(element.height) + 'px solid blue'
+            'border-left': Math.round(element.height) + 'px solid ' + element.color
             }">
           </div>
       </div>

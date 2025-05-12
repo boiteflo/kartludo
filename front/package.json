@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "copy:test": "node copyTestFolder.js",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build1": "vue-cli-service build",
+    "build": "npm run build1 && npm run copy:test",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

@@ -1,45 +1,127 @@
 export default class board {
 
-  static  createBoard(game, screenWidth, screenHeight) {
-    const result = {border:5};
-    result.border2 = result.border*2;
-    
-    // Board
-    let width = screenWidth * .8;
-    let height = screenHeight *.75;
-    let x = (screenWidth - width) /2;
-    let y=(screenHeight- height)/4;
-    let yaw=25;
-    result.board = {x, y, width, height, yaw};
+    static createBoard(game, screenWidth, screenHeight) {
+        const result = { border: 5 };
+        result.border2 = result.border * 2;
 
-    const screenWidthBorder3 = screenWidth - (result.border*3);
-    const remainingHeight = screenHeight - height - y - (result.border*5);
+        if (screenWidth < screenHeight)
+            this.createBoardVertical(game, result, screenWidth, screenHeight);
+        else
+            this.createBoardHorizontal(game, result, screenWidth, screenHeight);
 
-    // Player1Header
-    let color= "blue";
-    x = result.border;
-    y += height + (result.border*3);
-    width = screenWidthBorder3 / 3;
-    height = remainingHeight/2;
-    result.player1Header = {x, y, width, height, color};
+        game.board = result;
+    }
 
-    // Player1Hand
-    x += result.border + width;
-    width = screenWidth - result.border - x;
-    height = remainingHeight + result.border;
-    result.player1Hand = {x, y, width, height, color};
+    static createBoardVertical(game, result, screenWidth, screenHeight) {
+        // Board
+        let width = screenWidth * .8;
+        let height = screenHeight * .8;
+        let border3d = height * 0.11;
+        const remainingHeight = screenHeight - height;
+        let x = (screenWidth - width) / 2;
+        let y = remainingHeight/3 - border3d; //(screenHeight - height) / 2;
+        let yaw = 25;
+        result.board2d = { x, y, width, height };
+        y-= border3d;
+        result.board = { x, y: y, width, height, yaw };
 
-    // Buttons
-    x = result.player1Header.x;
-    y += result.player1Header.height + result.border;
-    width = (result.player1Header.width - result.border) /2;
-    height= result.player1Header.height;
-    result.buttonEndTurn = { x, y, width, height };
-    x+= width + result.border;
-    result.buttonEffect = { x, y, width, height };
+        // Buttons
+        let color = "blue";
+        x = result.border;
+        y += height + result.border;
+        height = remainingHeight / 3;
+        width = (screenWidth - result.border2) / 2;
+        result.buttonEndTurn = { x, y, width, height };
+        x += width + result.border;
+        result.buttonEffect = { x, y, width, height };
 
-    game.board = result;
-  }
+        // Player1Header
+        x = result.border;
+        y += height + result.border;
+        width = screenWidth - result.border2;
+        result.player1Header = { x, y, width, height, color };
+
+        // Player1Hand
+        x = result.border;
+        y += result.player1Header.height + result.border;
+        width = screenWidth - result.border2;
+        height = remainingHeight /1.5;
+        result.player1Hand = { x, y, width, height, color };
+
+        // Player2Header
+        color = "red";
+        y = result.border;
+        x = result.border;
+        width = screenWidth - result.border2;
+        height = remainingHeight / 3;
+        result.player2Header = { x, y, width, height, color };
+
+        // Logs
+        x += result.border + width;
+        y = result.border;
+        width = screenWidth - result.border - x;
+        height = remainingHeight + result.border;
+        result.logs = { x, y, width, height, color };
+    }
+
+
+    static createBoardHorizontal(game, result, screenWidth, screenHeight) {
+        // Board
+        let width = screenWidth * .8;
+        let height = screenHeight * .75;
+        let x = (screenWidth - width) / 2;
+        let y = (screenHeight - height) / 2;
+        let yaw = 25;
+        result.board2d = { x, y, width, height };
+        let border3d = height * 0.11;
+        result.board = { x, y: y - border3d, width, height, yaw };
+
+        const screenWidthBorder3 = screenWidth - (result.border * 3);
+        const remainingHeight = screenHeight - result.board.y - result.board.height - (4*result.border);
+
+        // Player1Header
+        let color = "blue";
+        x = result.border;
+        y = result.board.y + result.board2d.height + result.border;
+        width = screenWidthBorder3 / 3;
+        height = remainingHeight / 2;
+        result.player1Header = { x, y, width, height, color };
+
+        // Player1Hand
+        x += result.border + width;
+        width = screenWidth - result.border - x;
+        height = remainingHeight + result.border;
+        result.player1Hand = { x, y, width, height, color };
+
+        // Buttons
+        x = result.player1Header.x;
+        y += result.player1Header.height + result.border;
+        width = (result.player1Header.width - result.border) / 2;
+        height = result.player1Header.height;
+        result.buttonEndTurn = { x, y, width, height };
+        x += width + result.border;
+        result.buttonEffect = { x, y, width, height };
+
+
+        // Player2Header
+        color = "red";
+        y = result.border;
+        x = result.border;
+        width = screenWidthBorder3 / 3;
+        height = remainingHeight / 2;
+        result.player2Header = { x, y, width, height, color };
+
+        // Player2Hand
+        y += height + result.border;
+        result.player2Hand = { x, y, width, height, color };
+
+        // Logs
+        x += result.border + width;
+        y = result.border;
+        width = screenWidth - result.border - x;
+        height = remainingHeight + result.border;
+        result.logs = { x, y, width, height, color };
+    }
 }
 /*
 class positioner {

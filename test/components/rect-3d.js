@@ -11,6 +11,7 @@ export default {
         width: element.width + 'px',
         height: element.height + 'px',
         transform: 'rotateX(' + element.yaw + 'deg)',
+        'transform-origin': 'bottom center',
         'background-color':element.color ? element.color : 'gray'
       }"
     >

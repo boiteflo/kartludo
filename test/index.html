@@ -16,6 +16,10 @@
       <rect-3d class="background-blue-purple shadow" :element="game?.board.board">
         Board
       </rect-3d>
+      <rect-3d class="background-blue-purple shadow" :element="game?.board.board2d"
+        style="background: none; border: 2px solid yellow">
+        Board 2d
+      </rect-3d>
 
       <!-- Player 1 Hud -->
       <rect-triangle :element="game?.board.player1Header">
@@ -25,12 +29,23 @@
         Hand
       </rect-3d>
 
+      <!-- Player 2 Hud -->
+      <rect-triangle :element="game?.board.player2Header">
+        Player 2
+      </rect-triangle>
+      <rect-3d v-if="game?.board.player2Hand" :element="game?.board.player2Hand">
+        Hand
+      </rect-3d>
+
       <!-- Buttons -->
       <rect-3d :element="game?.board.buttonEndTurn">
         End Turn
       </rect-3d>
       <rect-3d :element="game?.board.buttonEffect">
         Use Effect
+      </rect-3d>
+      <rect-3d :element="game?.board.logs">
+        Logs
       </rect-3d>
 
       <!-- Cards -->
@@ -55,6 +70,16 @@
         const game = {};
         Game.setup(game, document.body.clientWidth, document.body.clientHeight);
         this.game = game;
+        window.addEventListener("resize", () => {
+          clearTimeout(this.resizeTimeout);
+          this.resizeTimeout = setTimeout(this.resizeGame, 300);
+        });
+      },
+      methods: {
+        resizeGame() {
+          console.log('resize');
+          Game.resize(this.game, document.body.clientWidth, document.body.clientHeight);
+        }
       }
     });
 
