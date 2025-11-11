@@ -73,6 +73,12 @@
             </div>
           </div>
         </div>
+        <div v-if="templatesCardImages && templatesCardImages.length > 0">
+          <h4>PDF</h4>
+          <v-btn class="bg2 s40 m5px" @click="generatePdf">
+            <v-icon> mdi-file-pdf-box</v-icon> Générer PDF
+          </v-btn>
+        </div>
       </div>
 
       <v-progress-linear :value="loadingCard"></v-progress-linear>
@@ -249,6 +255,7 @@ p {
   import html2canvas from 'html2canvas';
   import ServiceTemplate from '../../services/serviceTemplate';
   import serviceDaggerheart from '../../services/serviceDaggerheart';
+  import servicePdf from '../../services/servicePdf';
   
   import menuBarDaggerheart from '../../components/menuBarDaggerheart';
   import cardTemplate from '../../components/cards/cardTemplate';
@@ -409,6 +416,9 @@ p {
         const canvas = await html2canvas(div);
         const dataURL = canvas.toDataURL('image/png');
         return dataURL;
+    },
+    generatePdf(){
+      servicePdf.generateCardsPdf(this.templatesCardImages);
     }
   }
   };
