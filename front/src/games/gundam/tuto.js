@@ -264,7 +264,7 @@ class tuto {
                 return context.conditionNexTurn(context, game);
             },
             action: (context, game) => {
-                game.freeze = true;
+                game.freezeButtons = false;
                 game.showTextTuto = {
                     ...context.alignPositionNextTo(game, game.player1.hand[0].position), hideNext: true,
                     text: context.getTextTuto('zoom')
@@ -275,6 +275,8 @@ class tuto {
             // show tuto text on zoom card
             conditions: (context, game, task) => { return game.cardCenter; },
             action: (context, game) => {
+                game.freezeButtons = true;
+                game.freeze = true;
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
                     ...game.cardCenter.position, y: game.cardCenter.position.y + game.cardCenter.position.height * 0.17, height: game.cardCenter.position.height * 0.83, zindex: 120,
@@ -298,6 +300,7 @@ class tuto {
             conditions: (context, game, task) => { return false },
             action: (context, game) => {
                 game.freeze = false;
+                game.freezeButtons = false;
                 game.tutoMasks = game.tutoMasks.filter(x => x.id != 'resources');
                 game.showTextTuto = {
                     ...game.cardCenter.position, y: game.cardCenter.position.y, height: game.cardCenter.position.height * 0.9, zindex: 120, hideNext: true,
